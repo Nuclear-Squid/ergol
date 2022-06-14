@@ -12,12 +12,12 @@ clean:
 install:
 	@echo "Installer script for XKB (GNU/Linux). Requires super-user privileges."
 	@echo
-	xkalamine install layouts/qwerty*.yaml
+	xkalamine install layouts/ergol*.yaml
 
 uninstall:
 	@echo "Unistaller script for XKB (GNU/Linux). Requires super-user privileges."
 	@echo
-	xkalamine remove fr/lafayette
+	xkalamine remove fr/ergol
 	@echo
-	xkalamine remove fr/lafayette42
+	xkalamine remove fr/ergol42
 	@echo
