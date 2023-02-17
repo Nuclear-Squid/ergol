@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!-- French (Bepo42)
-  File          : bepo42.keylayout
+<!-- French (Bmp)
+  File          : bmp.keylayout
   Project page  : https://github.com/fabi1cazenave/qwerty-lafayette
   Author        : Fabien Cazenave
-  Version       : 0.8.0
-  Last change   : 2023-02-08
+  Version       : 0.0.0
+  Last change   : 2023-02-17
   License       : WTFPL - Do What The Fuck You Want Public License
   Reference     : http://developer.apple.com/library/mac/#technotes/tn2002/tn2056.html
 
@@ -29,23 +29,23 @@
 
   Base+Option layers
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
-  │     │     │     │     │     │     │     │     │     │     │     │     │     ┃          ┃
-  │     │     │     │     │     │     │  *^ │  *¤ │     │     │     │     │     ┃ ⌫        ┃
+  │     │ ¹ 1 │ ² 2 │ ³ 3 │ ⁴ 4 │ ⁵ 5 │ ⁶ 6 │ ⁷ 7 │ ⁸ 8 │ ⁹ 9 │ ⁰ 0 │     │     ┃          ┃
+  │     │ 1 1 │ 2 2 │ 3 3 │ 4 4 │ 5 5 │ 6 6 │ 7 7 │ 8 8 │ 9 9 │ 0 0 │     │     ┃ ⌫        ┃
   ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
   ┃        ┃ B   │ M « │ P » │ O € │ W ‰ │ Z*^ │ V   │ D × │ L*´ │ J ° │     │     ┃       ┃
   ┃ ↹      ┃   1 │   [ │   ] │   $ │   % │   ^ │   & │   * │   ' │   0 │     │     ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
-  ┃         ┃ A 1 │ U 2 │ I 3 │ E 4 │ ; 5 │ C 6 │ T 7 │ S 8 │ R 9 │ N 0 │     │     ┃      ┃
+  ┃         ┃ A 1 │ U 2 │ I 3 │ E 4 │   5 │ C 6 │ T 7 │ S 8 │ R 9 │ N 0 │     │     ┃      ┃
   ┃ ⇬       ┃   { │   ( │   ) │   } │ , = │   + │   - │   < │   > │   " │     │     ┃      ┃
   ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
   ┃      ┃     │ ! „ │ Y “ │ X ” │ : ÷ │ K ≠ │ ? ± │ Q − │ G*µ │ H ¬ │ F   ┃               ┃
-  ┃ ⇧    ┃     │ - ~ │   ` │   | │ . / │   \ │** @ │   _ │   # │   ! │   ? ┃ ⇧             ┃
+  ┃ ⇧    ┃     │ - ~ │   ` │   | │ . / │   \ │** @ │   ; │   # │   ! │   ? ┃ ⇧             ┃
   ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
   ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
   ┃ Ctrl  ┃ super ┃ Alt   ┃ ␣                              ┃ AltGr ┃ super ┃ menu  ┃ Ctrl  ┃
   ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
   -->
-<keyboard group="0" id="0" name="French (Bepo42)" maxout="1">
+<keyboard group="0" id="0" name="French (Bmp)" maxout="1">
   <layouts>
     <layout first="0" last="17" modifiers="commonModifiers" mapSet="ANSI" />
   </layouts>
@@ -207,16 +207,16 @@
     <!-- Shift -->
     <keyMap index="1">
       <!-- Digits -->
-      <key code="18"  output="&#x0010;" />
-      <key code="19"  output="&#x0010;" />
-      <key code="20"  output="&#x0010;" />
-      <key code="21"  output="&#x0010;" />
-      <key code="23"  output="&#x0010;" />
-      <key code="22"  output="&#x0010;" />
-      <key code="26"  output="&#x0010;" />
-      <key code="28"  output="&#x0010;" />
-      <key code="25"  output="&#x0010;" />
-      <key code="29"  output="&#x0010;" />
+      <key code="18"  output="¹" />
+      <key code="19"  output="²" />
+      <key code="20"  output="³" />
+      <key code="21"  output="⁴" />
+      <key code="23"  output="⁵" />
+      <key code="22"  output="⁶" />
+      <key code="26"  output="⁷" />
+      <key code="28"  output="⁸" />
+      <key code="25"  output="⁹" />
+      <key code="29"  output="⁰" />
 
       <!-- Letters, first row -->
       <key code="12"  action="B" />
@@ -235,7 +235,7 @@
       <key code="1"   action="U" />
       <key code="2"   action="I" />
       <key code="3"   action="E" />
-      <key code="5"   action=";" />
+      <key code="5"   action="shift + ," />
       <key code="4"   action="C" />
       <key code="38"  action="T" />
       <key code="40"  action="S" />
@@ -461,16 +461,16 @@
     <!-- Option -->
     <keyMap index="3">
       <!-- Digits -->
-      <key code="18"  output="&#x0010;" />
-      <key code="19"  output="&#x0010;" />
-      <key code="20"  output="&#x0010;" />
-      <key code="21"  output="&#x0010;" />
-      <key code="23"  output="&#x0010;" />
-      <key code="22"  action="dead_circumflex" />
-      <key code="26"  action="dead_currency" />
-      <key code="28"  output="&#x0010;" />
-      <key code="25"  output="&#x0010;" />
-      <key code="29"  output="&#x0010;" />
+      <key code="18"  action="1" />
+      <key code="19"  action="2" />
+      <key code="20"  action="3" />
+      <key code="21"  action="4" />
+      <key code="23"  action="5" />
+      <key code="22"  action="6" />
+      <key code="26"  action="7" />
+      <key code="28"  action="8" />
+      <key code="25"  action="9" />
+      <key code="29"  action="0" />
 
       <!-- Letters, first row -->
       <key code="12"  action="1" />
@@ -503,7 +503,7 @@
       <key code="9"   output="/" />
       <key code="11"  output="\" />
       <key code="45"  output="@" />
-      <key code="46"  output="_" />
+      <key code="46"  output=";" />
       <key code="43"  output="#" />
       <key code="47"  action="!" />
       <key code="44"  output="?" />
@@ -519,7 +519,7 @@
       <key code="10"  output="&#x0010;" />
 
       <!-- Space bar -->
-      <key code="49"  action="x0020" />
+      <key code="49"  output="_" />
 
       <!-- Other keys -->
       <key code="36"  output="&#x000D;" />
@@ -588,16 +588,16 @@
     <!-- Option + Shift -->
     <keyMap index="4">
       <!-- Digits -->
-      <key code="18"  output="&#x0010;" />
-      <key code="19"  output="&#x0010;" />
-      <key code="20"  output="&#x0010;" />
-      <key code="21"  output="&#x0010;" />
-      <key code="23"  output="&#x0010;" />
-      <key code="22"  output="&#x0010;" />
-      <key code="26"  output="&#x0010;" />
-      <key code="28"  output="&#x0010;" />
-      <key code="25"  output="&#x0010;" />
-      <key code="29"  output="&#x0010;" />
+      <key code="18"  action="1" />
+      <key code="19"  action="2" />
+      <key code="20"  action="3" />
+      <key code="21"  action="4" />
+      <key code="23"  action="5" />
+      <key code="22"  action="6" />
+      <key code="26"  action="7" />
+      <key code="28"  action="8" />
+      <key code="25"  action="9" />
+      <key code="29"  action="0" />
 
       <!-- Letters, first row -->
       <key code="12"  output="&#x0010;" />
@@ -1062,9 +1062,6 @@
     <action id="dead_circumflex">
       <when state="none" next="circumflex" />
     </action>
-    <action id="dead_currency">
-      <when state="none" next="currency" />
-    </action>
     <action id="dead_acute">
       <when state="none" next="acute" />
     </action>
@@ -1119,41 +1116,35 @@
       <when state="none"       output="b" />
       <when state="1dk"        output="â" />
       <when state="greek"      output="β" />
-      <when state="currency"   output="฿" />
     </action>
     <action id="B">
       <when state="none"       output="B" />
       <when state="1dk"        output="Â" />
       <when state="greek"      output="Β" />
-      <when state="currency"   output="₱" />
     </action>
     <action id="m">
       <when state="none"       output="m" />
       <when state="1dk"        output="û" />
       <when state="acute"      output="ḿ" />
       <when state="greek"      output="μ" />
-      <when state="currency"   output="₥" />
     </action>
     <action id="M">
       <when state="none"       output="M" />
       <when state="1dk"        output="Û" />
       <when state="acute"      output="Ḿ" />
       <when state="greek"      output="Μ" />
-      <when state="currency"   output="ℳ" />
     </action>
     <action id="p">
       <when state="none"       output="p" />
       <when state="1dk"        output="î" />
       <when state="acute"      output="ṕ" />
       <when state="greek"      output="π" />
-      <when state="currency"   output="₰" />
     </action>
     <action id="P">
       <when state="none"       output="P" />
       <when state="1dk"        output="Î" />
       <when state="acute"      output="Ṕ" />
       <when state="greek"      output="Π" />
-      <when state="currency"   output="₧" />
     </action>
     <action id="o">
       <when state="none"       output="o" />
@@ -1161,7 +1152,6 @@
       <when state="acute"      output="ó" />
       <when state="circumflex" output="ô" />
       <when state="greek"      output="ο" />
-      <when state="currency"   output="௹" />
     </action>
     <action id="O">
       <when state="none"       output="O" />
@@ -1169,7 +1159,6 @@
       <when state="acute"      output="Ó" />
       <when state="circumflex" output="Ô" />
       <when state="greek"      output="Ο" />
-      <when state="currency"   output="૱" />
     </action>
     <action id="w">
       <when state="none"       output="w" />
@@ -1177,7 +1166,6 @@
       <when state="acute"      output="ẃ" />
       <when state="circumflex" output="ŵ" />
       <when state="greek"      output="ω" />
-      <when state="currency"   output="₩" />
     </action>
     <action id="W">
       <when state="none"       output="W" />
@@ -1185,7 +1173,6 @@
       <when state="acute"      output="Ẃ" />
       <when state="circumflex" output="Ŵ" />
       <when state="greek"      output="Ω" />
-      <when state="currency"   output="₩" />
     </action>
     <action id="z">
       <when state="none"       output="z" />
@@ -1210,24 +1197,20 @@
     <action id="d">
       <when state="none"       output="d" />
       <when state="greek"      output="δ" />
-      <when state="currency"   output="₫" />
     </action>
     <action id="D">
       <when state="none"       output="D" />
       <when state="greek"      output="Δ" />
-      <when state="currency"   output="₯" />
     </action>
     <action id="l">
       <when state="none"       output="l" />
       <when state="acute"      output="ĺ" />
       <when state="greek"      output="λ" />
-      <when state="currency"   output="£" />
     </action>
     <action id="L">
       <when state="none"       output="L" />
       <when state="acute"      output="Ĺ" />
       <when state="greek"      output="Λ" />
-      <when state="currency"   output="₤" />
     </action>
     <action id="j">
       <when state="none"       output="j" />
@@ -1247,7 +1230,6 @@
       <when state="acute"      output="á" />
       <when state="circumflex" output="â" />
       <when state="greek"      output="α" />
-      <when state="currency"   output="؋" />
     </action>
     <action id="A">
       <when state="none"       output="A" />
@@ -1255,7 +1237,6 @@
       <when state="acute"      output="Á" />
       <when state="circumflex" output="Â" />
       <when state="greek"      output="Α" />
-      <when state="currency"   output="₳" />
     </action>
     <action id="u">
       <when state="none"       output="u" />
@@ -1263,7 +1244,6 @@
       <when state="acute"      output="ú" />
       <when state="circumflex" output="û" />
       <when state="greek"      output="υ" />
-      <when state="currency"   output="元" />
     </action>
     <action id="U">
       <when state="none"       output="U" />
@@ -1271,7 +1251,6 @@
       <when state="acute"      output="Ú" />
       <when state="circumflex" output="Û" />
       <when state="greek"      output="Υ" />
-      <when state="currency"   output="圓" />
     </action>
     <action id="i">
       <when state="none"       output="i" />
@@ -1279,7 +1258,6 @@
       <when state="acute"      output="í" />
       <when state="circumflex" output="î" />
       <when state="greek"      output="ι" />
-      <when state="currency"   output="﷼" />
     </action>
     <action id="I">
       <when state="none"       output="I" />
@@ -1287,7 +1265,6 @@
       <when state="acute"      output="Í" />
       <when state="circumflex" output="Î" />
       <when state="greek"      output="Ι" />
-      <when state="currency"   output="៛" />
     </action>
     <action id="e">
       <when state="none"       output="e" />
@@ -1295,7 +1272,6 @@
       <when state="acute"      output="é" />
       <when state="circumflex" output="ê" />
       <when state="greek"      output="ε" />
-      <when state="currency"   output="€" />
     </action>
     <action id="E">
       <when state="none"       output="E" />
@@ -1303,14 +1279,13 @@
       <when state="acute"      output="É" />
       <when state="circumflex" output="Ê" />
       <when state="greek"      output="Ε" />
-      <when state="currency"   output="₠" />
     </action>
     <action id=",">
       <when state="none"       output="," />
       <when state="1dk"        output="ê" />
     </action>
-    <action id=";">
-      <when state="none"       output=";" />
+    <action id="shift + ,">
+      <when state="none"       output="&#x202f;" />
       <when state="1dk"        output="Ê" />
     </action>
     <action id="c">
@@ -1318,25 +1293,21 @@
       <when state="1dk"        output="ç" />
       <when state="acute"      output="ć" />
       <when state="circumflex" output="ĉ" />
-      <when state="currency"   output="¢" />
     </action>
     <action id="C">
       <when state="none"       output="C" />
       <when state="1dk"        output="Ç" />
       <when state="acute"      output="Ć" />
       <when state="circumflex" output="Ĉ" />
-      <when state="currency"   output="₡" />
     </action>
     <action id="t">
       <when state="none"       output="t" />
       <when state="1dk"        output="™" />
       <when state="greek"      output="τ" />
-      <when state="currency"   output="৳" />
     </action>
     <action id="T">
       <when state="none"       output="T" />
       <when state="greek"      output="Τ" />
-      <when state="currency"   output="₮" />
     </action>
     <action id="s">
       <when state="none"       output="s" />
@@ -1344,7 +1315,6 @@
       <when state="acute"      output="ś" />
       <when state="circumflex" output="ŝ" />
       <when state="greek"      output="σ" />
-      <when state="currency"   output="₪" />
     </action>
     <action id="S">
       <when state="none"       output="S" />
@@ -1352,34 +1322,29 @@
       <when state="acute"      output="Ś" />
       <when state="circumflex" output="Ŝ" />
       <when state="greek"      output="Σ" />
-      <when state="currency"   output="$" />
     </action>
     <action id="r">
       <when state="none"       output="r" />
       <when state="1dk"        output="®" />
       <when state="acute"      output="ŕ" />
       <when state="greek"      output="ρ" />
-      <when state="currency"   output="₢" />
     </action>
     <action id="R">
       <when state="none"       output="R" />
       <when state="acute"      output="Ŕ" />
       <when state="greek"      output="Ρ" />
-      <when state="currency"   output="₨" />
     </action>
     <action id="n">
       <when state="none"       output="n" />
       <when state="1dk"        output="ñ" />
       <when state="acute"      output="ń" />
       <when state="greek"      output="ν" />
-      <when state="currency"   output="₦" />
     </action>
     <action id="N">
       <when state="none"       output="N" />
       <when state="1dk"        output="Ñ" />
       <when state="acute"      output="Ń" />
       <when state="greek"      output="Ν" />
-      <when state="currency"   output="₦" />
     </action>
 
     <!-- Letters, third row -->
@@ -1398,7 +1363,6 @@
       <when state="acute"      output="ý" />
       <when state="circumflex" output="ŷ" />
       <when state="greek"      output="ψ" />
-      <when state="currency"   output="¥" />
     </action>
     <action id="Y">
       <when state="none"       output="Y" />
@@ -1406,7 +1370,6 @@
       <when state="acute"      output="Ý" />
       <when state="circumflex" output="Ŷ" />
       <when state="greek"      output="Ψ" />
-      <when state="currency"   output="円" />
     </action>
     <action id="x">
       <when state="none"       output="x" />
@@ -1430,13 +1393,11 @@
       <when state="none"       output="k" />
       <when state="acute"      output="ḱ" />
       <when state="greek"      output="κ" />
-      <when state="currency"   output="₭" />
     </action>
     <action id="K">
       <when state="none"       output="K" />
       <when state="acute"      output="Ḱ" />
       <when state="greek"      output="Κ" />
-      <when state="currency"   output="₭" />
     </action>
     <action id="q">
       <when state="none"       output="q" />
@@ -1452,36 +1413,30 @@
       <when state="acute"      output="ǵ" />
       <when state="circumflex" output="ĝ" />
       <when state="greek"      output="γ" />
-      <when state="currency"   output="₲" />
     </action>
     <action id="G">
       <when state="none"       output="G" />
       <when state="acute"      output="Ǵ" />
       <when state="circumflex" output="Ĝ" />
       <when state="greek"      output="Γ" />
-      <when state="currency"   output="₲" />
     </action>
     <action id="h">
       <when state="none"       output="h" />
       <when state="circumflex" output="ĥ" />
       <when state="greek"      output="η" />
-      <when state="currency"   output="₴" />
     </action>
     <action id="H">
       <when state="none"       output="H" />
       <when state="circumflex" output="Ĥ" />
       <when state="greek"      output="Η" />
-      <when state="currency"   output="₴" />
     </action>
     <action id="f">
       <when state="none"       output="f" />
       <when state="greek"      output="φ" />
-      <when state="currency"   output="ƒ" />
     </action>
     <action id="F">
       <when state="none"       output="F" />
       <when state="greek"      output="Φ" />
-      <when state="currency"   output="₣" />
     </action>
 
     <!-- Pinky keys -->
@@ -1493,7 +1448,6 @@
       <when state="acute"      output="'" />
       <when state="circumflex" output="^" />
       <when state="greek"      output="µ" />
-      <when state="currency"   output="¤" />
     </action>
     <action id="x00a0">
       <when state="none"       output="&#x00a0;" />
@@ -1501,7 +1455,6 @@
       <when state="acute"      output="'" />
       <when state="circumflex" output="^" />
       <when state="greek"      output="µ" />
-      <when state="currency"   output="¤" />
     </action>
     <action id="x202f">
       <when state="none"       output="&#x202f;" />
@@ -1509,7 +1462,6 @@
       <when state="acute"      output="'" />
       <when state="circumflex" output="^" />
       <when state="greek"      output="µ" />
-      <when state="currency"   output="¤" />
     </action>
   </actions>
 
@@ -1518,6 +1470,5 @@
     <when state="acute"      output="´" />
     <when state="circumflex" output="^" />
     <when state="greek"      output="µ" />
-    <when state="currency"   output="¤" />
   </terminators>
 </keyboard>
