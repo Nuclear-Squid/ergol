@@ -5,7 +5,7 @@
   Project page  : https://github.com/fabi1cazenave/qwerty-lafayette
   Author        : Fabien Cazenave
   Version       : 0.0.0
-  Last change   : 2023-02-17
+  Last change   : 2023-03-22
   License       : WTFPL - Do What The Fuck You Want Public License
   Reference     : http://developer.apple.com/library/mac/#technotes/tn2002/tn2056.html
 
@@ -29,17 +29,17 @@
 
   Base+Option layers
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
-  │     │ ¹ 1 │ ² 2 │ ³ 3 │ ⁴ 4 │ ⁵ 5 │ ⁶ 6 │ ⁷ 7 │ ⁸ 8 │ ⁹ 9 │ ⁰ 0 │     │     ┃          ┃
+  │     │ 1 1 │ 2 2 │ 3 3 │ 4 4 │ 5 5 │ 6 6 │ 7 7 │ 8 8 │ 9 9 │ 0 0 │     │     ┃          ┃
   │     │ 1 1 │ 2 2 │ 3 3 │ 4 4 │ 5 5 │ 6 6 │ 7 7 │ 8 8 │ 9 9 │ 0 0 │     │     ┃ ⌫        ┃
   ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
-  ┃        ┃ B   │ M « │ P » │ O € │ W ‰ │ Z*^ │ V   │ D × │ L*´ │ J ° │     │     ┃       ┃
-  ┃ ↹      ┃   1 │   [ │   ] │   $ │   % │   ^ │   & │   * │   ' │   0 │     │     ┃       ┃
+  ┃        ┃ B ¬ │ M « │ P » │ O € │ W ‰ │ Z   │ V   │ D × │ L   │ J ° │     │     ┃       ┃
+  ┃ ↹      ┃   ! │   [ │   ] │   $ │   % │   ^ │   & │   * │   = │   @ │     │     ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
-  ┃         ┃ A 1 │ U 2 │ I 3 │ E 4 │   5 │ C 6 │ T 7 │ S 8 │ R 9 │ N 0 │     │     ┃      ┃
-  ┃ ⇬       ┃   { │   ( │   ) │   } │ , = │   + │   - │   < │   > │   " │     │     ┃      ┃
+  ┃         ┃ A 1 │ U 2 │ I 3 │ E 4 │   5 │ C 6 │ T 7 │ S 8 │ R 9 │ N 0 │     │     ┃      ┃
+  ┃ ⇬       ┃   { │   ( │   ) │   } │ , _ │   | │   + │   - │   ' │   " │     │     ┃      ┃
   ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
-  ┃      ┃     │ ! „ │ Y “ │ X ” │ : ÷ │ K ≠ │ ? ± │ Q − │ G*µ │ H ¬ │ F   ┃               ┃
-  ┃ ⇧    ┃     │ - ~ │   ` │   | │ . / │   \ │** @ │   ; │   # │   ! │   ? ┃ ⇧             ┃
+  ┃      ┃     │ ! „ │ Y “ │ X ” │ : ÷ │ K   │ ?   │ Q ± │ G − │ H ≠ │ F   ┃               ┃
+  ┃ ⇧    ┃     │ - ~ │   < │   > │ . / │   \ │** ` │   # │   ; │   : │   ? ┃ ⇧             ┃
   ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
   ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
   ┃ Ctrl  ┃ super ┃ Alt   ┃ ␣                              ┃ AltGr ┃ super ┃ menu  ┃ Ctrl  ┃
@@ -98,7 +98,7 @@
       <key code="15"  action="o" />
       <key code="17"  action="w" />
       <key code="16"  action="z" />
-      <key code="32"  action="v" />
+      <key code="32"  output="v" />
       <key code="34"  action="d" />
       <key code="31"  action="l" />
       <key code="35"  action="j" />
@@ -207,16 +207,16 @@
     <!-- Shift -->
     <keyMap index="1">
       <!-- Digits -->
-      <key code="18"  output="¹" />
-      <key code="19"  output="²" />
-      <key code="20"  output="³" />
-      <key code="21"  output="⁴" />
-      <key code="23"  output="⁵" />
-      <key code="22"  output="⁶" />
-      <key code="26"  output="⁷" />
-      <key code="28"  output="⁸" />
-      <key code="25"  output="⁹" />
-      <key code="29"  output="⁰" />
+      <key code="18"  action="1" />
+      <key code="19"  action="2" />
+      <key code="20"  action="3" />
+      <key code="21"  action="4" />
+      <key code="23"  action="5" />
+      <key code="22"  action="6" />
+      <key code="26"  action="7" />
+      <key code="28"  action="8" />
+      <key code="25"  action="9" />
+      <key code="29"  action="0" />
 
       <!-- Letters, first row -->
       <key code="12"  action="B" />
@@ -225,7 +225,7 @@
       <key code="15"  action="O" />
       <key code="17"  action="W" />
       <key code="16"  action="Z" />
-      <key code="32"  action="V" />
+      <key code="32"  output="V" />
       <key code="34"  action="D" />
       <key code="31"  action="L" />
       <key code="35"  action="J" />
@@ -235,7 +235,7 @@
       <key code="1"   action="U" />
       <key code="2"   action="I" />
       <key code="3"   action="E" />
-      <key code="5"   action="shift + ," />
+      <key code="5"   action="alpha x00a0" />
       <key code="4"   action="C" />
       <key code="38"  action="T" />
       <key code="40"  action="S" />
@@ -352,7 +352,7 @@
       <key code="15"  action="O" />
       <key code="17"  action="W" />
       <key code="16"  action="Z" />
-      <key code="32"  action="V" />
+      <key code="32"  output="V" />
       <key code="34"  action="D" />
       <key code="31"  action="L" />
       <key code="35"  action="J" />
@@ -473,7 +473,7 @@
       <key code="29"  action="0" />
 
       <!-- Letters, first row -->
-      <key code="12"  action="1" />
+      <key code="12"  action="!" />
       <key code="13"  output="[" />
       <key code="14"  output="]" />
       <key code="15"  output="$" />
@@ -481,31 +481,31 @@
       <key code="16"  output="^" />
       <key code="32"  output="&#x0026;" />
       <key code="34"  output="*" />
-      <key code="31"  output="'" />
-      <key code="35"  action="0" />
+      <key code="31"  output="=" />
+      <key code="35"  output="@" />
 
       <!-- Letters, second row -->
       <key code="0"   output="{" />
       <key code="1"   output="(" />
       <key code="2"   output=")" />
       <key code="3"   output="}" />
-      <key code="5"   output="=" />
-      <key code="4"   output="+" />
-      <key code="38"  action="-" />
-      <key code="40"  output="&#x003c;" />
-      <key code="37"  output="&#x003e;" />
+      <key code="5"   output="_" />
+      <key code="4"   output="|" />
+      <key code="38"  output="+" />
+      <key code="40"  action="-" />
+      <key code="37"  output="'" />
       <key code="41"  output="&#x0022;" />
 
       <!-- Letters, third row -->
       <key code="6"   output="~" />
-      <key code="7"   output="`" />
-      <key code="8"   output="|" />
+      <key code="7"   output="&#x003c;" />
+      <key code="8"   output="&#x003e;" />
       <key code="9"   output="/" />
       <key code="11"  output="\" />
-      <key code="45"  output="@" />
-      <key code="46"  output=";" />
-      <key code="43"  output="#" />
-      <key code="47"  action="!" />
+      <key code="45"  output="`" />
+      <key code="46"  output="#" />
+      <key code="43"  output=";" />
+      <key code="47"  action=":" />
       <key code="44"  output="?" />
 
       <!-- Pinky keys -->
@@ -519,7 +519,7 @@
       <key code="10"  output="&#x0010;" />
 
       <!-- Space bar -->
-      <key code="49"  output="_" />
+      <key code="49"  action="x0020" />
 
       <!-- Other keys -->
       <key code="36"  output="&#x000D;" />
@@ -600,15 +600,15 @@
       <key code="29"  action="0" />
 
       <!-- Letters, first row -->
-      <key code="12"  output="&#x0010;" />
+      <key code="12"  output="¬" />
       <key code="13"  output="«" />
       <key code="14"  output="»" />
       <key code="15"  output="€" />
       <key code="17"  output="‰" />
-      <key code="16"  action="dead_circumflex" />
+      <key code="16"  output="&#x0010;" />
       <key code="32"  output="&#x0010;" />
       <key code="34"  output="×" />
-      <key code="31"  action="dead_acute" />
+      <key code="31"  output="&#x0010;" />
       <key code="35"  output="°" />
 
       <!-- Letters, second row -->
@@ -628,11 +628,11 @@
       <key code="7"   output="“" />
       <key code="8"   output="”" />
       <key code="9"   output="÷" />
-      <key code="11"  output="≠" />
-      <key code="45"  output="±" />
-      <key code="46"  output="−" />
-      <key code="43"  action="dead_greek" />
-      <key code="47"  output="¬" />
+      <key code="11"  output="&#x0010;" />
+      <key code="45"  output="&#x0010;" />
+      <key code="46"  output="±" />
+      <key code="43"  output="−" />
+      <key code="47"  output="≠" />
       <key code="44"  output="&#x0010;" />
 
       <!-- Pinky keys -->
@@ -1062,8 +1062,8 @@
     <action id="dead_circumflex">
       <when state="none" next="circumflex" />
     </action>
-    <action id="dead_acute">
-      <when state="none" next="acute" />
+    <action id="dead_diaeresis">
+      <when state="none" next="diaeresis" />
     </action>
     <action id="dead_greek">
       <when state="none" next="greek" />
@@ -1125,74 +1125,60 @@
     <action id="m">
       <when state="none"       output="m" />
       <when state="1dk"        output="û" />
-      <when state="acute"      output="ḿ" />
       <when state="greek"      output="μ" />
     </action>
     <action id="M">
       <when state="none"       output="M" />
       <when state="1dk"        output="Û" />
-      <when state="acute"      output="Ḿ" />
       <when state="greek"      output="Μ" />
     </action>
     <action id="p">
       <when state="none"       output="p" />
       <when state="1dk"        output="î" />
-      <when state="acute"      output="ṕ" />
       <when state="greek"      output="π" />
     </action>
     <action id="P">
       <when state="none"       output="P" />
       <when state="1dk"        output="Î" />
-      <when state="acute"      output="Ṕ" />
       <when state="greek"      output="Π" />
     </action>
     <action id="o">
       <when state="none"       output="o" />
       <when state="1dk"        output="ô" />
-      <when state="acute"      output="ó" />
       <when state="circumflex" output="ô" />
+      <when state="diaeresis"  output="ö" />
       <when state="greek"      output="ο" />
     </action>
     <action id="O">
       <when state="none"       output="O" />
       <when state="1dk"        output="Ô" />
-      <when state="acute"      output="Ó" />
       <when state="circumflex" output="Ô" />
+      <when state="diaeresis"  output="Ö" />
       <when state="greek"      output="Ο" />
     </action>
     <action id="w">
       <when state="none"       output="w" />
       <when state="1dk"        output="æ" />
-      <when state="acute"      output="ẃ" />
       <when state="circumflex" output="ŵ" />
+      <when state="diaeresis"  output="ẅ" />
       <when state="greek"      output="ω" />
     </action>
     <action id="W">
       <when state="none"       output="W" />
       <when state="1dk"        output="Æ" />
-      <when state="acute"      output="Ẃ" />
       <when state="circumflex" output="Ŵ" />
+      <when state="diaeresis"  output="Ẅ" />
       <when state="greek"      output="Ω" />
     </action>
     <action id="z">
       <when state="none"       output="z" />
-      <when state="acute"      output="ź" />
       <when state="circumflex" output="ẑ" />
       <when state="greek"      output="ζ" />
     </action>
     <action id="Z">
       <when state="none"       output="Z" />
-      <when state="acute"      output="Ź" />
       <when state="circumflex" output="Ẑ" />
       <when state="greek"      output="Ζ" />
-    </action>
-    <action id="v">
-      <when state="none"       output="v" />
-      <when state="1dk"        output="ŭ" />
-    </action>
-    <action id="V">
-      <when state="none"       output="V" />
-      <when state="1dk"        output="Ŭ" />
     </action>
     <action id="d">
       <when state="none"       output="d" />
@@ -1204,12 +1190,10 @@
     </action>
     <action id="l">
       <when state="none"       output="l" />
-      <when state="acute"      output="ĺ" />
       <when state="greek"      output="λ" />
     </action>
     <action id="L">
       <when state="none"       output="L" />
-      <when state="acute"      output="Ĺ" />
       <when state="greek"      output="Λ" />
     </action>
     <action id="j">
@@ -1227,82 +1211,81 @@
     <action id="a">
       <when state="none"       output="a" />
       <when state="1dk"        output="à" />
-      <when state="acute"      output="á" />
       <when state="circumflex" output="â" />
+      <when state="diaeresis"  output="ä" />
       <when state="greek"      output="α" />
     </action>
     <action id="A">
       <when state="none"       output="A" />
       <when state="1dk"        output="À" />
-      <when state="acute"      output="Á" />
       <when state="circumflex" output="Â" />
+      <when state="diaeresis"  output="Ä" />
       <when state="greek"      output="Α" />
     </action>
     <action id="u">
       <when state="none"       output="u" />
       <when state="1dk"        output="ù" />
-      <when state="acute"      output="ú" />
       <when state="circumflex" output="û" />
+      <when state="diaeresis"  output="ü" />
       <when state="greek"      output="υ" />
     </action>
     <action id="U">
       <when state="none"       output="U" />
       <when state="1dk"        output="Ù" />
-      <when state="acute"      output="Ú" />
       <when state="circumflex" output="Û" />
+      <when state="diaeresis"  output="Ü" />
       <when state="greek"      output="Υ" />
     </action>
     <action id="i">
       <when state="none"       output="i" />
       <when state="1dk"        output="é" />
-      <when state="acute"      output="í" />
       <when state="circumflex" output="î" />
+      <when state="diaeresis"  output="ï" />
       <when state="greek"      output="ι" />
     </action>
     <action id="I">
       <when state="none"       output="I" />
       <when state="1dk"        output="É" />
-      <when state="acute"      output="Í" />
       <when state="circumflex" output="Î" />
+      <when state="diaeresis"  output="Ï" />
       <when state="greek"      output="Ι" />
     </action>
     <action id="e">
       <when state="none"       output="e" />
       <when state="1dk"        output="è" />
-      <when state="acute"      output="é" />
       <when state="circumflex" output="ê" />
+      <when state="diaeresis"  output="ë" />
       <when state="greek"      output="ε" />
     </action>
     <action id="E">
       <when state="none"       output="E" />
       <when state="1dk"        output="È" />
-      <when state="acute"      output="É" />
       <when state="circumflex" output="Ê" />
+      <when state="diaeresis"  output="Ë" />
       <when state="greek"      output="Ε" />
     </action>
     <action id=",">
       <when state="none"       output="," />
       <when state="1dk"        output="ê" />
     </action>
-    <action id="shift + ,">
-      <when state="none"       output="&#x202f;" />
+    <action id="alpha x00a0">
+      <when state="none"       output="&#x00a0;" />
       <when state="1dk"        output="Ê" />
     </action>
     <action id="c">
       <when state="none"       output="c" />
       <when state="1dk"        output="ç" />
-      <when state="acute"      output="ć" />
       <when state="circumflex" output="ĉ" />
     </action>
     <action id="C">
       <when state="none"       output="C" />
       <when state="1dk"        output="Ç" />
-      <when state="acute"      output="Ć" />
       <when state="circumflex" output="Ĉ" />
     </action>
     <action id="t">
       <when state="none"       output="t" />
       <when state="1dk"        output="™" />
+      <when state="diaeresis"  output="ẗ" />
       <when state="greek"      output="τ" />
     </action>
     <action id="T">
@@ -1312,38 +1295,31 @@
     <action id="s">
       <when state="none"       output="s" />
       <when state="1dk"        output="ß" />
-      <when state="acute"      output="ś" />
       <when state="circumflex" output="ŝ" />
       <when state="greek"      output="σ" />
     </action>
     <action id="S">
       <when state="none"       output="S" />
-      <when state="1dk"        output="ẞ" />
-      <when state="acute"      output="Ś" />
       <when state="circumflex" output="Ŝ" />
       <when state="greek"      output="Σ" />
     </action>
     <action id="r">
       <when state="none"       output="r" />
       <when state="1dk"        output="®" />
-      <when state="acute"      output="ŕ" />
       <when state="greek"      output="ρ" />
     </action>
     <action id="R">
       <when state="none"       output="R" />
-      <when state="acute"      output="Ŕ" />
       <when state="greek"      output="Ρ" />
     </action>
     <action id="n">
       <when state="none"       output="n" />
       <when state="1dk"        output="ñ" />
-      <when state="acute"      output="ń" />
       <when state="greek"      output="ν" />
     </action>
     <action id="N">
       <when state="none"       output="N" />
       <when state="1dk"        output="Ñ" />
-      <when state="acute"      output="Ń" />
       <when state="greek"      output="Ν" />
     </action>
 
@@ -1355,30 +1331,30 @@
     </action>
     <action id="!">
       <when state="none"       output="!" />
-      <when state="1dk"        output="–" />
+      <when state="1dk"        output="Ç" />
     </action>
     <action id="y">
       <when state="none"       output="y" />
-      <when state="1dk"        output="ŷ" />
-      <when state="acute"      output="ý" />
+      <when state="1dk"        next="circumflex" />
       <when state="circumflex" output="ŷ" />
+      <when state="diaeresis"  output="ÿ" />
       <when state="greek"      output="ψ" />
     </action>
     <action id="Y">
       <when state="none"       output="Y" />
-      <when state="1dk"        output="Ŷ" />
-      <when state="acute"      output="Ý" />
       <when state="circumflex" output="Ŷ" />
+      <when state="diaeresis"  output="Ÿ" />
       <when state="greek"      output="Ψ" />
     </action>
     <action id="x">
       <when state="none"       output="x" />
-      <when state="1dk"        output="œ" />
+      <when state="1dk"        next="diaeresis" />
+      <when state="diaeresis"  output="ẍ" />
       <when state="greek"      output="ξ" />
     </action>
     <action id="X">
       <when state="none"       output="X" />
-      <when state="1dk"        output="Œ" />
+      <when state="diaeresis"  output="Ẍ" />
       <when state="greek"      output="Ξ" />
     </action>
     <action id=".">
@@ -1391,12 +1367,12 @@
     </action>
     <action id="k">
       <when state="none"       output="k" />
-      <when state="acute"      output="ḱ" />
+      <when state="1dk"        output="¨" />
       <when state="greek"      output="κ" />
     </action>
     <action id="K">
       <when state="none"       output="K" />
-      <when state="acute"      output="Ḱ" />
+      <when state="1dk"        output="Ñ" />
       <when state="greek"      output="Κ" />
     </action>
     <action id="q">
@@ -1409,25 +1385,25 @@
     </action>
     <action id="g">
       <when state="none"       output="g" />
-      <when state="1dk"        output="©" />
-      <when state="acute"      output="ǵ" />
+      <when state="1dk"        next="greek" />
       <when state="circumflex" output="ĝ" />
       <when state="greek"      output="γ" />
     </action>
     <action id="G">
       <when state="none"       output="G" />
-      <when state="acute"      output="Ǵ" />
       <when state="circumflex" output="Ĝ" />
       <when state="greek"      output="Γ" />
     </action>
     <action id="h">
       <when state="none"       output="h" />
       <when state="circumflex" output="ĥ" />
+      <when state="diaeresis"  output="ḧ" />
       <when state="greek"      output="η" />
     </action>
     <action id="H">
       <when state="none"       output="H" />
       <when state="circumflex" output="Ĥ" />
+      <when state="diaeresis"  output="Ḧ" />
       <when state="greek"      output="Η" />
     </action>
     <action id="f">
@@ -1445,30 +1421,30 @@
     <action id="x0020">
       <when state="none"       output="&#x0020;" />
       <when state="1dk"        output="’" />
-      <when state="acute"      output="'" />
       <when state="circumflex" output="^" />
+      <when state="diaeresis"  output="&#x0022;" />
       <when state="greek"      output="µ" />
     </action>
     <action id="x00a0">
       <when state="none"       output="&#x00a0;" />
       <when state="1dk"        output="’" />
-      <when state="acute"      output="'" />
       <when state="circumflex" output="^" />
+      <when state="diaeresis"  output="&#x0022;" />
       <when state="greek"      output="µ" />
     </action>
     <action id="x202f">
       <when state="none"       output="&#x202f;" />
       <when state="1dk"        output="’" />
-      <when state="acute"      output="'" />
       <when state="circumflex" output="^" />
+      <when state="diaeresis"  output="&#x0022;" />
       <when state="greek"      output="µ" />
     </action>
   </actions>
 
   <terminators>
     <when state="1dk"        output="`" />
-    <when state="acute"      output="´" />
     <when state="circumflex" output="^" />
+    <when state="diaeresis"  output="¨" />
     <when state="greek"      output="µ" />
   </terminators>
 </keyboard>
