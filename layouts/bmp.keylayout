@@ -5,7 +5,7 @@
   Project page  : https://github.com/fabi1cazenave/qwerty-lafayette
   Author        : Fabien Cazenave
   Version       : 0.0.0
-  Last change   : 2023-03-22
+  Last change   : 2023-04-05
   License       : WTFPL - Do What The Fuck You Want Public License
   Reference     : http://developer.apple.com/library/mac/#technotes/tn2002/tn2056.html
 
@@ -1367,12 +1367,12 @@
     </action>
     <action id="k">
       <when state="none"       output="k" />
-      <when state="1dk"        output="¨" />
+      <when state="1dk"        output="œ" />
       <when state="greek"      output="κ" />
     </action>
     <action id="K">
       <when state="none"       output="K" />
-      <when state="1dk"        output="Ñ" />
+      <when state="1dk"        output="Œ" />
       <when state="greek"      output="Κ" />
     </action>
     <action id="q">
