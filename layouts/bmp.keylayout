@@ -5,7 +5,7 @@
   Project page  : https://github.com/fabi1cazenave/qwerty-lafayette
   Author        : Fabien Cazenave
   Version       : 0.0.0
-  Last change   : 2023-04-05
+  Last change   : 2023-04-10
   License       : WTFPL - Do What The Fuck You Want Public License
   Reference     : http://developer.apple.com/library/mac/#technotes/tn2002/tn2056.html
 
@@ -36,7 +36,7 @@
   ┃ ↹      ┃   ! │   [ │   ] │   $ │   % │   ^ │   & │   * │   = │   @ │     │     ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
   ┃         ┃ A 1 │ U 2 │ I 3 │ E 4 │   5 │ C 6 │ T 7 │ S 8 │ R 9 │ N 0 │     │     ┃      ┃
-  ┃ ⇬       ┃   { │   ( │   ) │   } │ , _ │   | │   + │   - │   ' │   " │     │     ┃      ┃
+  ┃ ⇬       ┃   { │   ( │   ) │   } │ , _ │   | │   + │   - │   " │   ' │     │     ┃      ┃
   ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
   ┃      ┃     │ ! „ │ Y “ │ X ” │ : ÷ │ K   │ ?   │ Q ± │ G − │ H ≠ │ F   ┃               ┃
   ┃ ⇧    ┃     │ - ~ │   < │   > │ . / │   \ │** ` │   # │   ; │   : │   ? ┃ ⇧             ┃
@@ -493,8 +493,8 @@
       <key code="4"   output="|" />
       <key code="38"  output="+" />
       <key code="40"  action="-" />
-      <key code="37"  output="'" />
-      <key code="41"  output="&#x0022;" />
+      <key code="37"  output="&#x0022;" />
+      <key code="41"  output="'" />
 
       <!-- Letters, third row -->
       <key code="6"   output="~" />
