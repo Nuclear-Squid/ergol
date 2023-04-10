@@ -840,7 +840,7 @@
       <key code="9"   output="√" />
       <key code="10"  output="§" />
       <key code="11"  output="∫" />
-      <key code="12"  output="œ" />
+      <key code="12"  output="æ" />
       <key code="13"  output="∑" />
       <key code="14"  output="´" />
       <key code="15"  output="®" />
@@ -867,7 +867,7 @@
       <key code="36"  output="&#x000D;" />
       <key code="37"  output="¬" />
       <key code="38"  output="∆" />
-      <key code="39"  output="æ" />
+      <key code="39"  output="œ" />
       <key code="40"  output="˚" />
       <key code="41"  output="…" />
       <key code="42"  output="«" />
@@ -1158,14 +1158,14 @@
     </action>
     <action id="w">
       <when state="none"       output="w" />
-      <when state="1dk"        output="æ" />
+      <when state="1dk"        output="œ" />
       <when state="circumflex" output="ŵ" />
       <when state="diaeresis"  output="ẅ" />
       <when state="greek"      output="ω" />
     </action>
     <action id="W">
       <when state="none"       output="W" />
-      <when state="1dk"        output="Æ" />
+      <when state="1dk"        output="Œ" />
       <when state="circumflex" output="Ŵ" />
       <when state="diaeresis"  output="Ẅ" />
       <when state="greek"      output="Ω" />
@@ -1367,12 +1367,12 @@
     </action>
     <action id="k">
       <when state="none"       output="k" />
-      <when state="1dk"        output="œ" />
+      <when state="1dk"        output="æ" />
       <when state="greek"      output="κ" />
     </action>
     <action id="K">
       <when state="none"       output="K" />
-      <when state="1dk"        output="Œ" />
+      <when state="1dk"        output="Æ" />
       <when state="greek"      output="Κ" />
     </action>
     <action id="q">
