@@ -5,7 +5,7 @@
   Project page  : https://github.com/fabi1cazenave/qwerty-lafayette
   Author        : Fabien Cazenave
   Version       : 0.0.0
-  Last change   : 2023-04-10
+  Last change   : 2023-05-16
   License       : WTFPL - Do What The Fuck You Want Public License
   Reference     : http://developer.apple.com/library/mac/#technotes/tn2002/tn2056.html
 
@@ -32,13 +32,13 @@
   │     │ 1 1 │ 2 2 │ 3 3 │ 4 4 │ 5 5 │ 6 6 │ 7 7 │ 8 8 │ 9 9 │ 0 0 │     │     ┃          ┃
   │     │ 1 1 │ 2 2 │ 3 3 │ 4 4 │ 5 5 │ 6 6 │ 7 7 │ 8 8 │ 9 9 │ 0 0 │     │     ┃ ⌫        ┃
   ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
-  ┃        ┃ B ¬ │ M « │ P » │ O € │ W ‰ │ Z   │ V   │ D × │ L   │ J ° │     │     ┃       ┃
+  ┃        ┃ B ¬ │ M « │ P » │ O € │ W ‰ │ Z   │ V   │ D × │ L ≠ │ J ° │     │     ┃       ┃
   ┃ ↹      ┃   ! │   [ │   ] │   $ │   % │   ^ │   & │   * │   = │   @ │     │     ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
   ┃         ┃ A 1 │ U 2 │ I 3 │ E 4 │   5 │ C 6 │ T 7 │ S 8 │ R 9 │ N 0 │     │     ┃      ┃
   ┃ ⇬       ┃   { │   ( │   ) │   } │ , _ │   | │   + │   - │   " │   ' │     │     ┃      ┃
   ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
-  ┃      ┃     │ ! „ │ Y “ │ X ” │ : ÷ │ K   │ ?   │ Q ± │ G − │ H ≠ │ F   ┃               ┃
+  ┃      ┃     │ ! „ │ Y “ │ X ” │ : ÷ │ K   │ ?   │ Q ± │ G − │ H   │ F   ┃               ┃
   ┃ ⇧    ┃     │ - ~ │   < │   > │ . / │   \ │** ` │   # │   ; │   : │   ? ┃ ⇧             ┃
   ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
   ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
@@ -608,7 +608,7 @@
       <key code="16"  output="&#x0010;" />
       <key code="32"  output="&#x0010;" />
       <key code="34"  output="×" />
-      <key code="31"  output="&#x0010;" />
+      <key code="31"  output="≠" />
       <key code="35"  output="°" />
 
       <!-- Letters, second row -->
@@ -632,7 +632,7 @@
       <key code="45"  output="&#x0010;" />
       <key code="46"  output="±" />
       <key code="43"  output="−" />
-      <key code="47"  output="≠" />
+      <key code="47"  output="&#x0010;" />
       <key code="44"  output="&#x0010;" />
 
       <!-- Pinky keys -->
