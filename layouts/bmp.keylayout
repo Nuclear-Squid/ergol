@@ -5,7 +5,7 @@
   Project page  : https://github.com/fabi1cazenave/qwerty-lafayette
   Author        : Fabien Cazenave
   Version       : 0.0.0
-  Last change   : 2023-05-16
+  Last change   : 2023-12-11
   License       : WTFPL - Do What The Fuck You Want Public License
   Reference     : http://developer.apple.com/library/mac/#technotes/tn2002/tn2056.html
 
@@ -27,19 +27,37 @@
   ┃ Ctrl  ┃ super ┃ Alt   ┃                             49 ┃ AltGr ┃ super ┃ menu  ┃ Ctrl  ┃
   ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
 
-  Base+Option layers
+  Base+1dk layer
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
-  │     │ 1 1 │ 2 2 │ 3 3 │ 4 4 │ 5 5 │ 6 6 │ 7 7 │ 8 8 │ 9 9 │ 0 0 │     │     ┃          ┃
-  │     │ 1 1 │ 2 2 │ 3 3 │ 4 4 │ 5 5 │ 6 6 │ 7 7 │ 8 8 │ 9 9 │ 0 0 │     │     ┃ ⌫        ┃
+  │     │ 1   │ 2   │ 3   │ 4   │ 5   │ 6   │ 7   │ 8   │ 9   │ 0   │     │     ┃          ┃
+  │     │ 1   │ 2   │ 3   │ 4   │ 5   │ 6   │ 7   │ 8   │ 9   │ 0   │     │     ┃ ⌫        ┃
   ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
-  ┃        ┃ B ¬ │ M « │ P » │ O € │ W ‰ │ Z   │ V   │ D × │ L ≠ │ J ° │     │     ┃       ┃
-  ┃ ↹      ┃   ! │   [ │   ] │   $ │   % │   ^ │   & │   * │   = │   @ │     │     ┃       ┃
+  ┃        ┃ B   │ M   │ P   │ O   │ W   │ Z   │ V   │ D   │ L   │ J   │     │     ┃       ┃
+  ┃ ↹      ┃   â │   û │   î │   ô │   œ │     │     │     │     │     │     │     ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
-  ┃         ┃ A 1 │ U 2 │ I 3 │ E 4 │   5 │ C 6 │ T 7 │ S 8 │ R 9 │ N 0 │     │     ┃      ┃
-  ┃ ⇬       ┃   { │   ( │   ) │   } │ , _ │   | │   + │   - │   " │   ' │     │     ┃      ┃
+  ┃         ┃ A   │ U   │ I   │ E   │ ,   │ C   │ T   │ S   │ R   │ N   │     │     ┃      ┃
+  ┃ ⇬       ┃   à │   ù │   é │   è │ , ê │   ç │   ™ │   ß │   ® │   ñ │     │     ┃      ┃
   ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
-  ┃      ┃     │ ! „ │ Y “ │ X ” │ : ÷ │ K   │ ?   │ Q ± │ G − │ H   │ F   ┃               ┃
-  ┃ ⇧    ┃     │ - ~ │   < │   > │ . / │   \ │** ` │   # │   ; │   : │   ? ┃ ⇧             ┃
+  ┃      ┃     │   – │ Y   │ X   │ : · │ K   │     │ Q   │ G   │ H   │ F   ┃               ┃
+  ┃ ⇧    ┃     │   — │  *^ │  *¨ │ . … │   æ │   ` │     │  *µ │     │     ┃ ⇧             ┃
+  ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
+  ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
+  ┃ Ctrl  ┃ super ┃ Alt   ┃ ␣                              ┃ AltGr ┃ super ┃ menu  ┃ Ctrl  ┃
+  ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
+
+  Option layer
+  ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
+  │     │     │     │     │     │     │     │     │     │     │     │     │     ┃          ┃
+  │     │     │     │     │     │     │     │     │     │     │     │     │     ┃ ⌫        ┃
+  ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
+  ┃        ┃     │   « │   » │   € │   ‰ ┃     │     │     │     │     │     │     ┃       ┃
+  ┃ ↹      ┃   @ │   [ │   ] │   $ │   % ┃   ^ │   & │   " │   ' │   ` │     │     ┃       ┃
+  ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
+  ┃         ┃     │     │     │     │     ┃     │   ± │   − │   × │   ¬ │     │     ┃      ┃
+  ┃ ⇬       ┃   { │   ( │   ) │   } │   _ ┃   | │   + │   - │   * │   ! │     │     ┃      ┃
+  ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
+  ┃      ┃     │   „ │   “ │   ” │   ≠ │   ° ┃     │   ÷ │     │     │     ┃               ┃
+  ┃ ⇧    ┃     │   ~ │   < │   > │   = │   # ┃   \ │   / │   ; │   : │   ? ┃ ⇧             ┃
   ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
   ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
   ┃ Ctrl  ┃ super ┃ Alt   ┃ ␣                              ┃ AltGr ┃ super ┃ menu  ┃ Ctrl  ┃
@@ -116,7 +134,7 @@
       <key code="41"  action="n" />
 
       <!-- Letters, third row -->
-      <key code="6"   action="-" />
+      <key code="6"   action="x202f" />
       <key code="7"   action="y" />
       <key code="8"   action="x" />
       <key code="9"   action="." />
@@ -138,7 +156,7 @@
       <key code="10"  output="&#x0010;" />
 
       <!-- Space bar -->
-      <key code="49"  action="x0020" />
+      <key code="49"  action="space" />
 
       <!-- Other keys -->
       <key code="36"  output="&#x000D;" />
@@ -235,7 +253,7 @@
       <key code="1"   action="U" />
       <key code="2"   action="I" />
       <key code="3"   action="E" />
-      <key code="5"   action="alpha x00a0" />
+      <key code="5"   action="shift comma" />
       <key code="4"   action="C" />
       <key code="38"  action="T" />
       <key code="40"  action="S" />
@@ -243,12 +261,12 @@
       <key code="41"  action="N" />
 
       <!-- Letters, third row -->
-      <key code="6"   action="!" />
+      <key code="6"   action="x00a0" />
       <key code="7"   action="Y" />
       <key code="8"   action="X" />
-      <key code="9"   action=":" />
+      <key code="9"   action="shift dot" />
       <key code="11"  action="K" />
-      <key code="45"  output="?" />
+      <key code="45"  output="&#x0010;" />
       <key code="46"  action="Q" />
       <key code="43"  action="G" />
       <key code="47"  action="H" />
@@ -265,7 +283,7 @@
       <key code="10"  output="&#x0010;" />
 
       <!-- Space bar -->
-      <key code="49"  action="x202f" />
+      <key code="49"  action="shift space" />
 
       <!-- Other keys -->
       <key code="36"  output="&#x000D;" />
@@ -370,7 +388,7 @@
       <key code="41"  action="N" />
 
       <!-- Letters, third row -->
-      <key code="6"   action="-" />
+      <key code="6"   action="x202f" />
       <key code="7"   action="Y" />
       <key code="8"   action="X" />
       <key code="9"   action="." />
@@ -392,7 +410,7 @@
       <key code="10"  output="&#x0010;" />
 
       <!-- Space bar -->
-      <key code="49"  action="x0020" />
+      <key code="49"  action="space" />
 
       <!-- Other keys -->
       <key code="36"  output="&#x000D;" />
@@ -473,16 +491,16 @@
       <key code="29"  action="0" />
 
       <!-- Letters, first row -->
-      <key code="12"  action="!" />
+      <key code="12"  output="@" />
       <key code="13"  output="[" />
       <key code="14"  output="]" />
       <key code="15"  output="$" />
       <key code="17"  output="%" />
       <key code="16"  output="^" />
       <key code="32"  output="&#x0026;" />
-      <key code="34"  output="*" />
-      <key code="31"  output="=" />
-      <key code="35"  output="@" />
+      <key code="34"  output="&#x0022;" />
+      <key code="31"  output="'" />
+      <key code="35"  output="`" />
 
       <!-- Letters, second row -->
       <key code="0"   output="{" />
@@ -492,20 +510,20 @@
       <key code="5"   output="_" />
       <key code="4"   output="|" />
       <key code="38"  output="+" />
-      <key code="40"  action="-" />
-      <key code="37"  output="&#x0022;" />
-      <key code="41"  output="'" />
+      <key code="40"  output="-" />
+      <key code="37"  output="*" />
+      <key code="41"  output="!" />
 
       <!-- Letters, third row -->
       <key code="6"   output="~" />
       <key code="7"   output="&#x003c;" />
       <key code="8"   output="&#x003e;" />
-      <key code="9"   output="/" />
-      <key code="11"  output="\" />
-      <key code="45"  output="`" />
-      <key code="46"  output="#" />
+      <key code="9"   output="=" />
+      <key code="11"  output="#" />
+      <key code="45"  output="\" />
+      <key code="46"  output="/" />
       <key code="43"  output=";" />
-      <key code="47"  action=":" />
+      <key code="47"  output=":" />
       <key code="44"  output="?" />
 
       <!-- Pinky keys -->
@@ -519,7 +537,7 @@
       <key code="10"  output="&#x0010;" />
 
       <!-- Space bar -->
-      <key code="49"  action="x0020" />
+      <key code="49"  action="space" />
 
       <!-- Other keys -->
       <key code="36"  output="&#x000D;" />
@@ -600,38 +618,38 @@
       <key code="29"  action="0" />
 
       <!-- Letters, first row -->
-      <key code="12"  output="¬" />
+      <key code="12"  output="&#x0010;" />
       <key code="13"  output="«" />
       <key code="14"  output="»" />
       <key code="15"  output="€" />
       <key code="17"  output="‰" />
       <key code="16"  output="&#x0010;" />
       <key code="32"  output="&#x0010;" />
-      <key code="34"  output="×" />
-      <key code="31"  output="≠" />
-      <key code="35"  output="°" />
+      <key code="34"  output="&#x0010;" />
+      <key code="31"  output="&#x0010;" />
+      <key code="35"  output="&#x0010;" />
 
       <!-- Letters, second row -->
-      <key code="0"   action="1" />
-      <key code="1"   action="2" />
-      <key code="2"   action="3" />
-      <key code="3"   action="4" />
-      <key code="5"   action="5" />
-      <key code="4"   action="6" />
-      <key code="38"  action="7" />
-      <key code="40"  action="8" />
-      <key code="37"  action="9" />
-      <key code="41"  action="0" />
+      <key code="0"   output="&#x0010;" />
+      <key code="1"   output="&#x0010;" />
+      <key code="2"   output="&#x0010;" />
+      <key code="3"   output="&#x0010;" />
+      <key code="5"   output="&#x0010;" />
+      <key code="4"   output="&#x0010;" />
+      <key code="38"  output="±" />
+      <key code="40"  output="−" />
+      <key code="37"  output="×" />
+      <key code="41"  output="¬" />
 
       <!-- Letters, third row -->
       <key code="6"   output="„" />
       <key code="7"   output="“" />
       <key code="8"   output="”" />
-      <key code="9"   output="÷" />
-      <key code="11"  output="&#x0010;" />
+      <key code="9"   output="≠" />
+      <key code="11"  output="°" />
       <key code="45"  output="&#x0010;" />
-      <key code="46"  output="±" />
-      <key code="43"  output="−" />
+      <key code="46"  output="÷" />
+      <key code="43"  output="&#x0010;" />
       <key code="47"  output="&#x0010;" />
       <key code="44"  output="&#x0010;" />
 
@@ -646,7 +664,7 @@
       <key code="10"  output="&#x0010;" />
 
       <!-- Space bar -->
-      <key code="49"  action="x00a0" />
+      <key code="49"  action="shift space" />
 
       <!-- Other keys -->
       <key code="36"  output="&#x000D;" />
@@ -1268,8 +1286,8 @@
       <when state="none"       output="," />
       <when state="1dk"        output="ê" />
     </action>
-    <action id="alpha x00a0">
-      <when state="none"       output="&#x00a0;" />
+    <action id="shift comma">
+      <when state="none"       output="," />
       <when state="1dk"        output="Ê" />
     </action>
     <action id="c">
@@ -1324,14 +1342,13 @@
     </action>
 
     <!-- Letters, third row -->
-    <action id="-">
-      <when state="none"       output="-" />
+    <action id="x202f">
+      <when state="none"       output="&#x202f;" />
       <when state="1dk"        output="—" />
-      <when state="circumflex" output="⁻" />
     </action>
-    <action id="!">
-      <when state="none"       output="!" />
-      <when state="1dk"        output="Ç" />
+    <action id="x00a0">
+      <when state="none"       output="&#x00a0;" />
+      <when state="1dk"        output="&#x2013;" />
     </action>
     <action id="y">
       <when state="none"       output="y" />
@@ -1361,8 +1378,8 @@
       <when state="none"       output="." />
       <when state="1dk"        output="…" />
     </action>
-    <action id=":">
-      <when state="none"       output=":" />
+    <action id="shift dot">
+      <when state="none"       output="." />
       <when state="1dk"        output="·" />
     </action>
     <action id="k">
@@ -1418,23 +1435,16 @@
     <!-- Pinky keys -->
 
     <!-- Space bar -->
-    <action id="x0020">
+    <action id="space">
       <when state="none"       output="&#x0020;" />
       <when state="1dk"        output="’" />
       <when state="circumflex" output="^" />
       <when state="diaeresis"  output="&#x0022;" />
       <when state="greek"      output="µ" />
     </action>
-    <action id="x00a0">
-      <when state="none"       output="&#x00a0;" />
-      <when state="1dk"        output="’" />
-      <when state="circumflex" output="^" />
-      <when state="diaeresis"  output="&#x0022;" />
-      <when state="greek"      output="µ" />
-    </action>
-    <action id="x202f">
+    <action id="shift space">
       <when state="none"       output="&#x202f;" />
-      <when state="1dk"        output="’" />
+      <when state="1dk"        output="&#x2018;" />
       <when state="circumflex" output="^" />
       <when state="diaeresis"  output="&#x0022;" />
       <when state="greek"      output="µ" />
