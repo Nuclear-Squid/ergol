@@ -66,7 +66,12 @@ function getKeySequence(keyMap, dkDict, str = '') {
       rv.push(getKeyList(keyMap, dk.base)[0]);
     } else { // not available
       rv.push({});
-      console.error('char not found:', char); // eslint-disable-line
+      // console.error('char not found:', char); // eslint-disable-line
+      // Logging this error is disabled for performance reasons. According to
+      // Firefox’s profiler, more than half of the time (~550ms) calculating and
+      // displaying stats is spent logging this error on english layouts with
+      // the french corpus. Unsupported characters are already handled by
+      // 'heatmap.js', so we are not loosing any features.
     }
   });
   return rv;

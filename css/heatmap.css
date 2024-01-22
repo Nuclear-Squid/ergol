@@ -36,6 +36,12 @@ div {
   text-align: center;
 }
 
+p#imprecise-data {
+  display: none;
+  text-align: center;
+  margin-bottom: -0.75em;
+}
+
 input {
   box-sizing: border-box;
   width: 100%;
@@ -62,7 +68,7 @@ th {
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .row table {

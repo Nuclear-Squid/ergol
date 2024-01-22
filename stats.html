@@ -9,7 +9,9 @@
   <link type="text/css" rel="stylesheet" href="css/heatmap.css" />
   <link type="image/svg+xml" rel="icon" href="favicon.svg" sizes="any" />
   <script src="js/x-keyboard.js" type="module"></script>
+  <script src="js/demo.js"></script>
   <script src="js/heatmap.js" type="text/javascript"></script>
+  <script defer src="js/collapsable-table.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -19,8 +21,12 @@
     <p> Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès. </p>
   </header>
 
-  <div id="selector">
+  <div id="demo">
+    <input spellcheck="false">
     <x-keyboard id="keyboard"></x-keyboard>
+  </div>
+
+  <div style="align-items: center; position: sticky; top: 0; z-index: 999;">
     <form>
       <select id="layout">
         <option disabled>  [en]       </option>
@@ -52,6 +58,11 @@
     </form>
   </div>
 
+  <p id="imprecise-data"> <small>
+    Cette disposition ne sait pas générer un nombre non-négligeable de symboles,
+    les résultats sont peu fiables.
+  </small> </p>
+
   <h3> Charge des doigts </h3>
   <small><span id="load-left"></span> / <span id="load-right"></span></small>
   <div id="load">
@@ -73,32 +84,45 @@
     <table></table>
   </div>
 
-  <h3> Achoppements </h3>
-  <div class="row">
-    <table></table>
-    <table id="unsupported"></table>
-    <table></table>
-    <table id="sfu-digrams"></table>
-    <table></table>
-    <table id="sku-digrams"></table>
-    <table></table>
-  </div>
+  <collapsable-table id="Achoppements">
+    <small>
+      <span id="unsupported-all"></span>
+      / <span id="sfu-all"></span>
+      / <span id="extensions-all"></span>
+      / <span id="scisors-all"></span>
+    </small>
 
-  <h3> Roulements </h3>
-  <small>
-    <span id="inward-all"></span>
-    / <span id="outward-all"></span>
-    / <span id="redirect-all"></span>
-  </small>
-  <div class="row">
-    <table></table>
+    <table id="unsupported"></table>
+    <table id="sfu-digrams"></table>
+    <table id="extended-rolls"></table>
+    <table id="scisors"></table>
+  </collapsable-table>
+
+  <collapsable-table id="Digrammes">
+    <small>
+      <span id="sku-all"></span>
+      / <span id="inward-all"></span>
+      / <span id="outward-all"></span>
+    </small>
+
+    <table id="sku-digrams"></table>
     <table id="inward"></table>
-    <table></table>
     <table id="outward"></table>
-    <table></table>
+  </collapsable-table>
+
+  <collapsable-table id="Trigrammes">
+    <small>
+      <span id="almost-skb-all"></span>
+      / <span id="almost-sfb-all"></span>
+      / <span id="redirect-all"></span>
+      / <span id="bad-redirect-all"></span>
+    </small>
+
+    <table id="almost-skbs"></table>
+    <table id="almost-sfbs"></table>
     <table id="redirect"></table>
-    <table></table>
-  </div>
+    <table id="bad-redirect"></table>
+  </collapsable-table>
 
   <footer>
     <small>
