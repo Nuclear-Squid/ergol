@@ -45,7 +45,7 @@ div {
 input {
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   text-align: center;
   font-size: 1.3em;
 }

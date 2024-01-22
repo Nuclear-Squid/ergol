@@ -1,135 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta charset="utf-8" />
-  <meta name="description" content="Une disposition de clavier francophone de type Colemak, optimisée pour le français, l’anglais et la programmation" />
-  <title> Ergo-L </title>
-  <link type="text/css" rel="stylesheet" href="css/layout.css" />
-  <link type="text/css" rel="stylesheet" href="css/demo.css" />
-  <link type="text/css" rel="stylesheet" href="css/heatmap.css" />
-  <link type="image/svg+xml" rel="icon" href="favicon.svg" sizes="any" />
-  <script src="js/x-keyboard.js" type="module"></script>
-  <script src="js/demo.js"></script>
-  <script src="js/heatmap.js" type="text/javascript"></script>
-  <script defer src="js/collapsable-table.js" type="text/javascript"></script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Une disposition de clavier francophone de type Colemak, optimisée pour le français, l’anglais et la programmation"
+    />
+    <title>Ergo-L</title>
+    <link type="text/css" rel="stylesheet" href="css/layout.css" />
+    <link type="text/css" rel="stylesheet" href="css/demo.css" />
+    <link type="text/css" rel="stylesheet" href="css/heatmap.css" />
+    <link type="image/svg+xml" rel="icon" href="favicon.svg" sizes="any" />
+    <script src="js/x-keyboard.js" type="module"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/heatmap.js" type="text/javascript"></script>
+    <script defer src="js/collapsable-table.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" style="float: right; margin-top: 2em"> « accueil </a>
+      <h1>Heatmap</h1>
+      <p>
+        Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès.
+      </p>
+    </header>
 
-  <header>
-    <a href="index.html" style="float: right; margin-top: 2em"> « accueil </a>
-    <h1> Heatmap </h1>
-    <p> Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès. </p>
-  </header>
+    <div id="demo">
+      <input spellcheck="false" />
+      <x-keyboard id="keyboard"></x-keyboard>
+    </div>
 
-  <div id="demo">
-    <input spellcheck="false">
-    <x-keyboard id="keyboard"></x-keyboard>
-  </div>
+    <div style="align-items: center; position: sticky; top: 0; z-index: 999">
+      <form>
+        <select id="layout">
+          <option disabled>  [en]</option>
+          <option>qwerty</option>
+          <option>dvorak</option>
+          <option>colemak</option>
+          <option>colemak-dh</option>
+          <option>workman</option>
+          <option>ISRT</option>
+          <option>MTGAP</option>
+          <option disabled>  [fr]</option>
+          <option>azerty</option>
+          <option>lafayette</option>
+          <option selected>ergol</option>
+          <option>ergol_dev</option>
+          <option>bepo</option>
+        </select>
+        <select id="geometry">
+          <option value="iso">ISO</option>
+          <option value="ansi" selected>ANSI</option>
+          <option value="ol60">TMx</option>
+          <option value="ol50">50%</option>
+          <option value="ol40">40%</option>
+        </select>
+        <select id="corpus">
+          <option>en</option>
+          <option selected>en+fr</option>
+          <option>fr</option>
+        </select>
+      </form>
+    </div>
 
-  <div style="align-items: center; position: sticky; top: 0; z-index: 999;">
-    <form>
-      <select id="layout">
-        <option disabled>  [en]       </option>
-        <option>          qwerty      </option>
-        <option>          dvorak      </option>
-        <option>          colemak     </option>
-        <option>          colemak-dh  </option>
-        <option>          workman     </option>
-        <option>          ISRT        </option>
-        <option>          MTGAP       </option>
-        <option disabled>  [fr]       </option>
-        <option>          azerty      </option>
-        <option>          lafayette   </option>
-        <option selected> ergol       </option>
-        <option>          bepo        </option>
-      </select>
-      <select id="geometry">
-        <option value="iso">           ISO   </option>
-        <option value="ansi" selected> ANSI  </option>
-        <option value="ol60">          TMx   </option>
-        <option value="ol50">          50%   </option>
-        <option value="ol40">          40%   </option>
-      </select>
-      <select id="corpus">
-        <option>          en    </option>
-        <option selected> en+fr </option>
-        <option>             fr </option>
-      </select>
-    </form>
-  </div>
+    <p id="imprecise-data">
+      <small>
+        Cette disposition ne sait pas générer un nombre non-négligeable de
+        symboles, les résultats sont peu fiables.
+      </small>
+    </p>
 
-  <p id="imprecise-data"> <small>
-    Cette disposition ne sait pas générer un nombre non-négligeable de symboles,
-    les résultats sont peu fiables.
-  </small> </p>
+    <h3>Charge des doigts</h3>
+    <small><span id="load-left"></span> / <span id="load-right"></span></small>
+    <div id="load">
+      <canvas></canvas>
+      <table></table>
+    </div>
 
-  <h3> Charge des doigts </h3>
-  <small><span id="load-left"></span> / <span id="load-right"></span></small>
-  <div id="load">
-    <canvas></canvas>
-    <table></table>
-  </div>
+    <h3>Digrammes à un doigt</h3>
+    <small><span id="sfu-all"></span></small>
+    <div id="sfu">
+      <canvas></canvas>
+      <table></table>
+    </div>
 
-  <h3> Digrammes à un doigt </h3>
-  <small><span id="sfu-all"></span></small>
-  <div id="sfu">
-    <canvas></canvas>
-    <table></table>
-  </div>
+    <h3>Touches doublées</h3>
+    <small><span id="sku-all"></span></small>
+    <div id="sku">
+      <canvas></canvas>
+      <table></table>
+    </div>
 
-  <h3> Touches doublées </h3>
-  <small><span id="sku-all"></span></small>
-  <div id="sku">
-    <canvas></canvas>
-    <table></table>
-  </div>
+    <collapsable-table id="Achoppements">
+      <small>
+        <span id="unsupported-all"></span>
+        / <span id="sfu-all"></span> / <span id="extensions-all"></span> /
+        <span id="scisors-all"></span>
+      </small>
 
-  <collapsable-table id="Achoppements">
-    <small>
-      <span id="unsupported-all"></span>
-      / <span id="sfu-all"></span>
-      / <span id="extensions-all"></span>
-      / <span id="scisors-all"></span>
-    </small>
+      <table id="unsupported"></table>
+      <table id="sfu-digrams"></table>
+      <table id="extended-rolls"></table>
+      <table id="scisors"></table>
+    </collapsable-table>
 
-    <table id="unsupported"></table>
-    <table id="sfu-digrams"></table>
-    <table id="extended-rolls"></table>
-    <table id="scisors"></table>
-  </collapsable-table>
+    <collapsable-table id="Digrammes">
+      <small>
+        <span id="sku-all"></span>
+        / <span id="inward-all"></span> / <span id="outward-all"></span>
+      </small>
 
-  <collapsable-table id="Digrammes">
-    <small>
-      <span id="sku-all"></span>
-      / <span id="inward-all"></span>
-      / <span id="outward-all"></span>
-    </small>
+      <table id="sku-digrams"></table>
+      <table id="inward"></table>
+      <table id="outward"></table>
+    </collapsable-table>
 
-    <table id="sku-digrams"></table>
-    <table id="inward"></table>
-    <table id="outward"></table>
-  </collapsable-table>
+    <collapsable-table id="Trigrammes">
+      <small>
+        <span id="almost-skb-all"></span>
+        / <span id="almost-sfb-all"></span> / <span id="redirect-all"></span> /
+        <span id="bad-redirect-all"></span>
+      </small>
 
-  <collapsable-table id="Trigrammes">
-    <small>
-      <span id="almost-skb-all"></span>
-      / <span id="almost-sfb-all"></span>
-      / <span id="redirect-all"></span>
-      / <span id="bad-redirect-all"></span>
-    </small>
+      <table id="almost-skbs"></table>
+      <table id="almost-sfbs"></table>
+      <table id="redirect"></table>
+      <table id="bad-redirect"></table>
+    </collapsable-table>
 
-    <table id="almost-skbs"></table>
-    <table id="almost-sfbs"></table>
-    <table id="redirect"></table>
-    <table id="bad-redirect"></table>
-  </collapsable-table>
-
-  <footer>
-    <small>
-      powered by <a href="https://fabi1cazenave.github.io/x-keyboard/">x-keyboard</a>
-    </small>
-    <a href="./">« ErgoL</a>
-  </footer>
-
-</body>
+    <footer>
+      <small>
+        powered by
+        <a href="https://fabi1cazenave.github.io/x-keyboard/">x-keyboard</a>
+      </small>
+      <a href="./">« ErgoL</a>
+    </footer>
+  </body>
 </html>

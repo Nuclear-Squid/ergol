@@ -26,7 +26,8 @@ h1 + p {
   color: #c8a;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: brown;
   border-bottom: 1px inset;
 }
@@ -35,7 +36,8 @@ img {
   max-width: 100%;
 }
 
-dd, dt {
+dd,
+dt {
   margin-bottom: 0.5em;
 }
 
@@ -69,10 +71,12 @@ a {
  * Dark Mode
  */
 
-input, select { color-scheme: light dark; }
+input,
+select {
+  color-scheme: light dark;
+}
 
 @media (prefers-color-scheme: dark) {
-
   html {
     background-color: #111;
   }
@@ -84,8 +88,18 @@ input, select { color-scheme: light dark; }
     color: #ccc;
   }
 
-  h1, h2, header, a { color: #e74; }
-  h1, h2, footer { border-color: #e74; }
-  h1 + p { color: #e74b; }
-
+  h1,
+  h2,
+  header,
+  a {
+    color: #e74;
+  }
+  h1,
+  h2,
+  footer {
+    border-color: #e74;
+  }
+  h1 + p {
+    color: #e74b;
+  }
 }
