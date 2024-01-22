@@ -36,7 +36,7 @@ div {
   text-align: center;
 }
 
-p#imprecise-data {
+#imprecise-data {
   display: none;
   text-align: center;
   margin-bottom: -0.75em;

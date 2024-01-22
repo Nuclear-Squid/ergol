@@ -36,17 +36,17 @@ window.addEventListener('DOMContentLoaded', () => {
   input.onkeydown = (event) => {
     pressedKeys[event.code] = true;
     const value = keyboard.keyDown(event);
-    if (value) {
-      event.target.value += value;
-    } else if (event.code === 'Enter') { // clear text input on <Enter>
+
+    if (event.code === 'Enter') { // clear text input on <Enter>
       event.target.value = '';
-    } else if ((event.code === 'Tab') || (event.code === 'Escape')) {
-      setTimeout(close, 100);
+    } else if (value) {
+      event.target.value += value;
     } else {
       return true; // don't intercept special keys or key shortcuts
     }
     return false; // event has been consumed, stop propagation
   };
+
   input.addEventListener('keyup', (event) => {
     if (pressedKeys[event.code]) { // expected behavior
       keyboard.keyUp(event);

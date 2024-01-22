@@ -66,7 +66,8 @@ class CollapsableTable extends HTMLElement {
     const smallElement = this.querySelector('small');
     const wrapper = shadow.getElementById('wrapper');
     if (smallElement) {
-      // Placing the 'small' element in a wrapper div, because css is stupid
+      // Placing the 'small' element in a wrapper div, otherwise the 'text-align'
+      // and 'margin-top' css properties don’t do anything.
       const smallElementWrapper = document.createElement('div');
       smallElementWrapper.id = 'header';
       smallElementWrapper.appendChild(smallElement.cloneNode(true));
@@ -82,7 +83,7 @@ class CollapsableTable extends HTMLElement {
     // Setting up the `see more` button
     // Using 'function' to set 'this' to the button (self is the web component)
     const self = this;
-    shadow.querySelector('button').onclick = function() {
+    shadow.querySelector('button').addEventListener("click", function() {
       const wrapper = shadow.getElementById('wrapper');
       if (wrapper.style.maxHeight == `${self.maxHeightCollapsed}px`) {
         wrapper.style.maxHeight = `${wrapper.children[0].offsetHeight}px`;
@@ -92,7 +93,7 @@ class CollapsableTable extends HTMLElement {
         wrapper.style.maxHeight = `${self.maxHeightCollapsed}px`;
         this.innerText = 'show more';
       }
-    }
+    });
   }
 
   updateTableData(tableSelector, title, values, precision) {
