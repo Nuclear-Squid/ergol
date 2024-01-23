@@ -64,7 +64,7 @@ and you should be good to go !
 Install ErgoL under Arch Linux X.Org
 --------------------------------------------------------------------------------
 
-### Create [pyenv][https://wiki.archlinux.org/title/Python/Virtual_environment]
+### Create [pyenv](https://wiki.archlinux.org/title/Python/Virtual_environment)
 
 ```bash
 python -m venv /path/to/pyenv      # Create a pyenv if you don't already have one
