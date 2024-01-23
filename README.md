@@ -61,17 +61,17 @@ and you should be good to go !
 [4]: https://github.com/Nuclear-Squid/ergol/blob/master/layouts/ergol.toml
 
 
-Install ErgoL under Arch Linux X.Org(with pyenv)
+Install ErgoL under Arch Linux X.Org
 --------------------------------------------------------------------------------
 
-### Create pyenv
+### Create [pyenv][https://wiki.archlinux.org/title/Python/Virtual_environment]
 
 ```bash
 python -m venv /path/to/pyenv      # Create a pyenv if you don't already have one
 cd /path/to/pyenv/bin
 sudo su                            
 ./python -m pip install kalamine --break-system-packages  # Install kalamine in the acutal pyenv
-exit                               # Sortir du mode administrateur # Get out of admin mode
+exit                               # Get out of admin mode
 
 cd ~/.local/bin                    
 ln -s /path/to/pyenv/bin/kalamine  # Create a link to kalamine
