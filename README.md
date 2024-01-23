@@ -61,34 +61,35 @@ and you should be good to go !
 [4]: https://github.com/Nuclear-Squid/ergol/blob/master/layouts/ergol.toml
 
 
-Installation de ErgoL sous Arch Linux X.Org(pyenv)
+Install ErgoL under Arch Linux X.Org(with pyenv)
 --------------------------------------------------------------------------------
 
-### Création d'un pyenv
+### Create pyenv
 
 ```bash
-python -m venv /path/to/pyenv      # Créer un pyenv si vous en aviez pas déjà un
+python -m venv /path/to/pyenv      # Create a pyenv if you don't already have one
 cd /path/to/pyenv/bin
-sudo su                            # Vous administrer les permissions administrateur
-./python -m pip install kalamine --break-system-packages  # Installer kalamine dans le pyenv
-exit                               # Sortir du mode administrateur
-cd ~/.local/bin                    # Symlink les executables dans le $PATH dir
-ln -s /path/to/pyenv/bin/kalamine
-ln -s /path/to/pyenv/bin/xkalamine
+sudo su                            
+./python -m pip install kalamine --break-system-packages  # Install kalamine in the acutal pyenv
+exit                               # Sortir du mode administrateur # Get out of admin mode
+
+cd ~/.local/bin                    
+ln -s /path/to/pyenv/bin/kalamine  # Create a link to kalamine
+ln -s /path/to/pyenv/bin/xkalamine # Create a link to xkalamine
 ```
 
 
-### Installation du layout
+### Install the layout
 
 ```bash
-kalamine ergol.toml                # Ceci va créer un dossier "dist" avec tous les drivers dedans
-sudo xkalamine install ergol.toml  # Installation du layout avec xkb
+kalamine ergol.toml                # Build the layout
+sudo xkalamine install ergol.toml  # Install the layout
 ```
 
-### Utilisation de ErgoL
+### Set the layout
 
 ```bash
-setxkbmap fr -variant ergol        # Pour basculer en ErgoL
+setxkbmap fr -variant ergol        # Set the layout
 ```
 
 Make Your Own !
