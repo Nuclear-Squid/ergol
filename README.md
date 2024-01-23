@@ -64,8 +64,9 @@ and you should be good to go !
 Installation de ErgoL sous Arch Linux X.Org(pyenv)
 --------------------------------------------------------------------------------
 
-## Création d'un pyenv
+### Création d'un pyenv
 
+```
 python -m venv /path/to/pyenv      # Créer un pyenv si vous en aviez pas déjà un
 cd /path/to/pyenv/bin
 sudo su                            # Vous administrer les permissions administrateur
@@ -74,13 +75,15 @@ exit                               # Sortir du mode administrateur
 cd ~/.local/bin                    # Symlink les executables dans le $PATH dir
 ln -s /path/to/pyenv/bin/kalamine
 ln -s /path/to/pyenv/bin/xkalamine
+```
 
-## Installation du layout
+
+### Installation du layout
 
 kalamine ergol.toml                # Ceci va créer un dossier "dist" avec tous les drivers dedans
 sudo xkalamine install ergol.toml  # Installation du layout avec xkb
 
-## Utilisation de ErgoL
+### Utilisation de ErgoL
 
 setxkbmap fr -variant ergol        # Pour basculer en ErgoL
 
