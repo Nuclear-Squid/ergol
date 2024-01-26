@@ -2,8 +2,8 @@ window.addEventListener('DOMContentLoaded', () => {
   'use strict'; // eslint-disable-line
 
   const keyboard = document.querySelector('x-keyboard');
-  const button   = document.querySelector('button');
-  const input    = document.querySelector('input');
+  const button = document.querySelector('button');
+  const input = document.querySelector('input');
   const geometry = document.querySelector('select');
 
   if (!keyboard.layout) {
@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
       button.focus();
     });
 
-  geometry.onchange = (event) => {
+  geometry.onchange = event => {
     keyboard.geometry = event.target.value;
   };
 
@@ -33,11 +33,12 @@ window.addEventListener('DOMContentLoaded', () => {
   const pressedKeys = {};
 
   // highlight keyboard keys and emulate the selected layout
-  input.onkeydown = (event) => {
+  input.onkeydown = event => {
     pressedKeys[event.code] = true;
     const value = keyboard.keyDown(event);
 
-    if (event.code === 'Enter') { // clear text input on <Enter>
+    if (event.code === 'Enter') {
+      // clear text input on <Enter>
       event.target.value = '';
     } else if (value) {
       event.target.value += value;
@@ -47,8 +48,9 @@ window.addEventListener('DOMContentLoaded', () => {
     return false; // event has been consumed, stop propagation
   };
 
-  input.addEventListener('keyup', (event) => {
-    if (pressedKeys[event.code]) { // expected behavior
+  input.addEventListener('keyup', event => {
+    if (pressedKeys[event.code]) {
+      // expected behavior
       keyboard.keyUp(event);
       delete pressedKeys[event.code];
     } else {
@@ -71,9 +73,11 @@ window.addEventListener('DOMContentLoaded', () => {
    * Not sure wether this is a bug or not -- but this is not the behavior we
    * want for a keyboard layout emulation. The code below works around that.
    */
-  input.addEventListener('input', (event) => {
-    if (event.inputType === 'insertCompositionText'
-      || event.inputType === 'insertText') {
+  input.addEventListener('input', event => {
+    if (
+      event.inputType === 'insertCompositionText' ||
+      event.inputType === 'insertText'
+    ) {
       event.target.value = event.target.value.slice(0, -event.data.length);
     }
   });
