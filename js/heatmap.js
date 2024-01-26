@@ -126,25 +126,24 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Index Inner or outside of 3×10 matrix.
     const requiresExtension = keyCode =>
-      Array.from('TGBNHY').some(l => l == keyCode.at(3)) || // IndexInner
+      Array.from('TGBNHY').some(l => l == keyCode.at(3)) ||
       !(
-        // Not in 3×10 matrix
-        (
-          keyCode.startsWith('Key') ||
-          ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode)
-        )
-      );
+        keyCode.startsWith('Key') ||
+        ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode)
+      )
+      ;
 
     const getKeyRow = keyCode => {
-      if (keyCode == 'Space') return 0;
+      if (keyCode === 'Space') return 0;
       if (keyCode.startsWith('Digit')) return 4;
 
       if (keyCode.startsWith('Key')) {
         const letter = keyCode.at(3);
-        if (Array.from('QWERTYUIOP').some(l => l == letter)) return 3;
-        if (Array.from('ASDFGHJKL').some(l => l == letter)) return 2;
-        if (Array.from('ZXCVBNM').some(l => l == letter)) return 1;
+        if (Array.from('QWERTYUIOP').indexOf(letter) >= 0) return 3;
+        if (Array.from('ASDFGHJKL').indexOf(letter) >= 0) return 2;
+        if (Array.from('ZXCVBNM').indexOf(letter) >= 0) return 1;
       }
 
       if (['Backquote', 'Minus'].some(kc => kc == keyCode)) return 4;
