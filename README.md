@@ -40,7 +40,7 @@ Install
 --------------------------------------------------------------------------------
 
 You’ll need the latest version of [Kalamine][2] to build your own layout. By far
-the easiest way to install kalamine is to use [`pipx`][1], then just run the 
+the easiest way to install kalamine is to use [pipx][5], install it then run the
 following line :
 
 ```bash
@@ -58,16 +58,17 @@ You’ll get a `dist` folder containing all of the drivers.
 Then, to install Ergo‑L, follow the [install section of Kalamine’s repo][3],
 and you should be good to go !
 
-[1]: https://github.com/pypa/pipx?tab=readme-ov-file#install-pipx
 [2]: https://github.com/fabi1cazenave/kalamine
 [3]: https://github.com/fabi1cazenave/kalamine#installing-distributable-layouts
 [4]: https://github.com/Nuclear-Squid/ergol/blob/master/layouts/ergol.toml
+[5]: https://github.com/pypa/pipx?tab=readme-ov-file#install-pipx
 
 
 ### Install (Linux only)
 
-`xkalamine` is a linux‑specific tool to easily install layouts. You can drop
-`sudo` if you use wayland, but is required on Xorg.
+`xkalamine` is a linux‑specific tool (shipped with `kalamine`) to easily
+install layouts on Linux. You can drop `sudo` if you use wayland, but it’s
+required on Xorg.
 
 ```bash
 sudo xkalamine install ergol.toml  # Install the layout
@@ -76,7 +77,8 @@ sudo xkalamine install ergol.toml  # Install the layout
 Then switch to ergol using the following command :
 
 ```bash
-setxkbmap fr -variant ergol        # Set the layout
+setxkbmap us  # switch to your usual layout, to go back to it with a simple ctrl-r
+setxkbmap fr -variant ergol  # Switch your keyboard layout to ergol
 ```
 
 Make Your Own !
