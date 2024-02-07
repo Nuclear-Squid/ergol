@@ -39,9 +39,9 @@ The default layout allows to write in English, French, German and Esperanto easi
 Install
 --------------------------------------------------------------------------------
 
-You’ll need the latest version of [Kalamine][2] to build your own layout. By far
-the easiest way to install kalamine is to use [pipx][5], install it then run the
-following line :
+You’ll need the latest version of [Kalamine][2] to build your own layout. We
+*highly* recommend using [pipx][5], once you have it installed (by following
+their guide), you can just run the following command:
 
 ```bash
 pipx install kalamine
@@ -67,17 +67,16 @@ and you should be good to go !
 ### Install (Linux only)
 
 `xkalamine` is a linux‑specific tool (shipped with `kalamine`) to easily
-install layouts on Linux. You can drop `sudo` if you use wayland, but it’s
-required on Xorg.
+install keyboard layouts on Linux. You can drop `sudo` if you use wayland, but
+it’s required on Xorg.
 
 ```bash
 sudo xkalamine install ergol.toml  # Install the layout
 ```
 
-Then switch to ergol using the following command :
+Then switch to Ergo‑L using the following command:
 
 ```bash
-setxkbmap us  # switch to your usual layout, to go back to it with a simple ctrl-r
 setxkbmap fr -variant ergol  # Switch your keyboard layout to ergol
 ```
 
