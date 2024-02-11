@@ -12,6 +12,7 @@
     <link type="image/svg+xml" rel="icon" href="favicon.svg" sizes="any" />
     <script src="js/x-keyboard.js" type="module"></script>
     <script src="js/demo.js" type="text/javascript"></script>
+    <script src="js/svg.js " type="text/javascript"></script>
   </head>
   <body>
     <h1>Ergo‑L</h1>
@@ -20,24 +21,27 @@
       l’anglais et la programmation.
     </p>
 
-    <div id="demo">
+    <div class="keyboard">
+      <img src="img/ergol.svg">
+      <p style="text-align: right;">
+        <span style="float: left;"> <small>powered by <a
+              href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>
+        </span> géométrie</small> :
+        <select>
+          <option value="dk iso">ISO</option>
+        </select>
+      </p>
+      <p class="menu">
+        <a hidden href="dactylo">⌨ Apprendre</a>
+        <button hidden>⇪ Tester !</button>
+        <a hidden href="lts">⇣ Installer</a>
+      </p>
+    </div>
+
+    <div id="demo" hidden>
       <div>
         <input spellcheck="false" placeholder="zone de saisie Ergo‑L" />
         <x-keyboard src="layouts/ergol.json"></x-keyboard>
-        <p>
-          <span>
-            powered by
-            <a href="https://fabi1cazenave.github.io/x-keyboard/">x-keyboard</a>
-          </span>
-          géométrie :
-          <select>
-            <option value="iso">ISO</option>
-            <option value="ansi">ANSI</option>
-            <option value="ol60">TMx</option>
-            <option value="ol50">50%</option>
-            <option value="ol40">40%</option>
-          </select>
-        </p>
       </div>
     </div>
 
@@ -47,7 +51,7 @@
         disposition <strong>optimisée pour le français et l’anglais</strong>
       </li>
       <li>
-        couche AltGr optimisée pour l’enchaînement des symboles de programmation
+        couche AltGr optionnelle, optimisée pour l’enchaînement des symboles de programmation
       </li>
       <li>
         <strong>conservation des raccourcis usuels</strong> :

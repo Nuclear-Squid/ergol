@@ -2,8 +2,8 @@ window.addEventListener('DOMContentLoaded', () => {
   'use strict'; // eslint-disable-line
 
   const keyboard = document.querySelector('x-keyboard');
-  const button = document.querySelector('button');
-  const input = document.querySelector('input');
+  const button   = document.querySelector('button');
+  const input    = document.querySelector('input');
   const geometry = document.querySelector('select');
 
   if (!keyboard.layout) {
@@ -11,18 +11,41 @@ window.addEventListener('DOMContentLoaded', () => {
     return; // the web component has not been loaded
   }
 
+  const getGeometry = () => geometry.value.split(' ')[1];
+
   fetch(keyboard.getAttribute('src'))
     .then(response => response.json())
     .then(data => {
-      const shape = data.geometry.replace('ergo', 'ol60').toLowerCase();
-      keyboard.setKeyboardLayout(data.keymap, data.deadkeys, shape);
+      const shape = geometry.value.split(' ')[1];
+      keyboard.setKeyboardLayout(data.keymap, data.deadkeys, getGeometry());
       geometry.value = shape;
       button.hidden = false;
       button.focus();
     });
 
-  geometry.onchange = event => {
-    keyboard.geometry = event.target.value;
+  geometry.addEventListener('change', event => {
+    keyboard.geometry = getGeometry();
+  });
+
+  /**
+   * Open/Close modal
+   */
+  const open = () => {
+    document.body.classList.add('demo');
+    demo.hidden = false;
+    input.value = '';
+    input.focus();
+  }
+  const close = () => {
+    keyboard.clearStyle()
+    document.body.classList.remove('demo');
+    demo.hidden = true;
+  }
+  button.onclick = open;
+  demo.onclick = (event) => {
+    if (event.target.id === 'demo') {
+      close();
+    }
   };
 
   /**
@@ -37,11 +60,12 @@ window.addEventListener('DOMContentLoaded', () => {
     pressedKeys[event.code] = true;
     const value = keyboard.keyDown(event);
 
-    if (event.code === 'Enter') {
-      // clear text input on <Enter>
-      event.target.value = '';
-    } else if (value) {
+    if (value) {
       event.target.value += value;
+    } else if (event.code === 'Enter') { // clear text input on <Enter>
+      event.target.value = '';
+    } else if ((event.code === 'Tab') || (event.code === 'Escape')) {
+      setTimeout(close, 100);
     } else {
       return true; // don't intercept special keys or key shortcuts
     }
