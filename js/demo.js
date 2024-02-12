@@ -1,10 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
   'use strict'; // eslint-disable-line
 
-  const keyboard = document.querySelector('x-keyboard');
-  const button   = document.querySelector('button');
-  const input    = document.querySelector('input');
-  const geometry = document.querySelector('select');
+  const dialog   = document.querySelector('dialog');
+  const keyboard = document.querySelector('dialog x-keyboard');
+  const input    = document.querySelector('dialog input');
+  const geometry = document.querySelector('.keyboard select');
+  const button   = document.querySelector('.keyboard button');
 
   if (!keyboard.layout) {
     console.warn('web components are not supported');
@@ -30,23 +31,15 @@ window.addEventListener('DOMContentLoaded', () => {
   /**
    * Open/Close modal
    */
-  const open = () => {
-    document.body.classList.add('demo');
-    demo.hidden = false;
+  button.onclick = () => {
+    dialog.showModal();
     input.value = '';
     input.focus();
   }
-  const close = () => {
+  input.onblur = () => {
     keyboard.clearStyle()
-    document.body.classList.remove('demo');
-    demo.hidden = true;
+    dialog.close();
   }
-  button.onclick = open;
-  demo.onclick = (event) => {
-    if (event.target.id === 'demo') {
-      close();
-    }
-  };
 
   /**
    * Keyboard highlighting & layout emulation
@@ -64,8 +57,6 @@ window.addEventListener('DOMContentLoaded', () => {
       event.target.value += value;
     } else if (event.code === 'Enter') { // clear text input on <Enter>
       event.target.value = '';
-    } else if ((event.code === 'Tab') || (event.code === 'Escape')) {
-      setTimeout(close, 100);
     } else {
       return true; // don't intercept special keys or key shortcuts
     }

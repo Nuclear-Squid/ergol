@@ -1,11 +1,12 @@
 .keyboard { margin-bottom: 2.5em; }
 .keyboard p { margin: 0; }
 
-.menu {
+.keyboard nav {
   text-align: center;
 }
 
-.menu a, .menu button {
+.keyboard nav a,
+.keyboard nav button {
   display: inline-block;
   margin: 0 1.6em 0 0;
   padding: 10px;
@@ -17,37 +18,30 @@
   background-color: #e4e4e4;
   border: 1px solid #6668;
   border-radius: 5px;
+}
+
+.keyboard nav button {
+  font-weight: bold;
   cursor: pointer;
 }
 
-.menu button {
-  font-weight: bold;
-}
-
-#demo[hidden], .keyboard [hidden] {
+.keyboard [hidden] {
   display: none;
 }
 
-#demo {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #8888;
-  z-index: 2;
-  text-align: center;
+dialog::backdrop {
+  backdrop-filter: blur(5px);
 }
 
-#demo div {
+#demo {
+  max-width: 70em;
   width: 100%;
-  max-width: 64em;
   padding: 2em;
   margin: auto;
   border-radius: 10px;
   box-sizing: border-box;
   background-color: #fff;
+  border: 5px solid #fff4;
 }
 
 #demo input {
@@ -72,18 +66,16 @@
 
 @media (prefers-color-scheme: dark) {
 
-  .menu a, .menu button {
+  .keyboard nav a,
+  .keyboard nav button {
     color: #ccc;
     background-color: #444;
     border: 1px solid #7778;
   }
 
   #demo {
-    background-color: #4448;
-  }
-
-  #demo div {
     background-color: #222;
+    border: 5px solid #0004;
   }
 
 }

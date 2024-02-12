@@ -31,19 +31,17 @@
           <option value="dk iso">ISO</option>
         </select>
       </p>
-      <p class="menu">
+      <nav>
         <a hidden href="dactylo">⌨ Apprendre</a>
         <button hidden>⇪ Tester !</button>
         <a hidden href="lts">⇣ Installer</a>
-      </p>
+      </nav>
     </div>
 
-    <div id="demo" hidden>
-      <div>
-        <input spellcheck="false" placeholder="zone de saisie Ergo‑L" />
-        <x-keyboard src="layouts/ergol.json"></x-keyboard>
-      </div>
-    </div>
+    <dialog id="demo">
+      <input spellcheck="false" placeholder="zone de saisie Ergo‑L" />
+      <x-keyboard src="layouts/ergol.json"></x-keyboard>
+    </dialog>
 
     <h2 id="objectifs">Objectifs</h2>
     <ul>
