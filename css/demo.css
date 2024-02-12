@@ -44,7 +44,8 @@ dialog::backdrop {
   border: 5px solid #fff4;
 }
 
-#demo input {
+#demo input,
+.keyboard input {
   box-sizing: border-box;
   border-radius: 6px;
   width: 100%;
@@ -52,6 +53,35 @@ dialog::backdrop {
   text-align: center;
   font-size: 1.5em;
   margin-bottom: 1em;
+}
+
+.keyboard #lesson {
+  text-align: left;
+  font-family: monospace;
+  font-size: 2.5em;
+  height: 4em;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  text-wrap: break;
+}
+
+.keyboard #lesson { color: #444; }
+.keyboard .done   { color: gray; }
+.keyboard .error  { color: red; }
+.keyboard .space  { display: inline-block; }
+.keyboard .space::before { content: "·"; }
+
+.key_list kbd {
+  font-family: monospace;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.key_list kbd.inactive {
+  color: gray;
 }
 
 #demo p {
@@ -72,6 +102,8 @@ dialog::backdrop {
     background-color: #444;
     border: 1px solid #7778;
   }
+
+  .keyboard #lesson { color: white; }
 
   #demo {
     background-color: #222;

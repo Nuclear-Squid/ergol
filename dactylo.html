@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description"
+    content="Une disposition de clavier francophone de type Colemak, optimisée pour le français, l’anglais et la programmation" />
+  <title>Ergo‑L</title>
+  <link type="text/css" rel="stylesheet" href="css/layout.css" />
+  <link type="text/css" rel="stylesheet" href="css/demo.css" />
+  <link type="image/svg+xml" rel="icon" href="favicon.svg" sizes="any" />
+  <script src="js/x-keyboard.js" type="module"></script>
+  <script src="js/dactylo.js" type="text/javascript"></script>
+</head>
+<body>
+  <header>
+    <h1 class="key_list">·</h1>
+    <p class="status"> 🦆 </p>
+  </header>
+
+  <div class="keyboard">
+    <input hidden spellcheck="false" />
+    <p id="lesson"></p>
+    <x-keyboard></x-keyboard>
+    <p style="text-align: right;">
+      <span style="float: left;">
+        <select id="layout">
+          <option selected>ergol</option>
+          <!-- <option>erglace</option> -->
+          <option>bepo</option>
+          <option>azerty</option>
+          <option>lafayette</option>
+        </select>
+        <select id="dict">
+          <option selected>french_1k</option>
+          <option>french_10k</option>
+          <option>english_1k</option>
+          <option>english_10k</option>
+        </select>
+      </span>
+      <select id="geometry">
+        <option value="iso" selected> ISO </option>
+        <option value="ansi">        ANSI </option>
+        <option value="ol60">         TMx </option>
+        <option value="ol50">         4×6 </option>
+        <option value="ol40">         3×6 </option>
+      </select>
+    </p>
+  </div>
+
+  <footer>
+    <span style="float: left;"> <small>powered by <a
+          href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>,
+        inspired by <a href="">keyzen</a>
+        and <a href="https://github.com/aradzie/keybr.com">keybr</a>
+      </small> </span>
+    <a href="https://github.com/Nuclear-Squid/ErgoL">GitHub</a> |
+    <a href="https://discord.gg/5xR5K3nAFX">Discord</a> |
+    <a href=".">Ergo‑L »</a>
+  </footer>
+</body>
+</html>
