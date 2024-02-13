@@ -97,7 +97,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
       return true;
     });
-    console.log(gLessonWords);
 
     showLesson();
     showKeys();
@@ -121,11 +120,15 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const showLesson = () => {
+    gLesson.innerHTML = '';
+    if (gLessonWords.length === 0) {
+      return;
+    }
+
     let lesson_text = '';
     while(lesson_text.length < 120) {
       lesson_text += gLessonWords[gLessonWords.length * Math.random() | 0] + ' ';
     }
-    gLesson.innerHTML = '';
     for (const char of lesson_text.slice(0, -1)) {
       gLesson.innerHTML += (char == ' ') ?
         '<span class="space"></span>' : `<span>${char}</span>`;
