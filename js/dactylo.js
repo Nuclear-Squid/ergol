@@ -120,6 +120,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const showLesson = () => {
+    gLessonStartTime = undefined;
     gLesson.innerHTML = '';
     if (gLessonWords.length === 0) {
       return;
