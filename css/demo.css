@@ -66,11 +66,20 @@ dialog::backdrop {
   text-wrap: break;
 }
 
+.keyboard #current {
+  border-bottom: 2px solid;
+}
+.keyboard span {
+  box-sizing: border-box;
+ }
 .keyboard #lesson { color: #444; }
 .keyboard .done   { color: gray; }
 .keyboard .error  { color: red; }
-.keyboard .space  { display: inline-block; }
-.keyboard .space::before { content: "·"; }
+.keyboard .fixed  { color: green; }
+.keyboard .space::before {
+  content: "·";
+  word-break: break-all;
+}
 
 .key_list kbd {
   font-family: monospace;
@@ -104,6 +113,8 @@ dialog::backdrop {
   }
 
   .keyboard #lesson { color: white; }
+  .keyboard .error  { color: #f44; }
+  .keyboard .fixed  { color: #9e1; }
 
   #demo {
     background-color: #222;

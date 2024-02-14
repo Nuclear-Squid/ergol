@@ -87,7 +87,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const lessonLetters = rawLetters.concat(!has1dk ? [] :
       rawLetters.flatMap(letter => (letter in odk ? [odk[letter]] : [])));
 
-    // XXX we **definitely** need a progress bar here
     gLessonLevel = level;
     gLessonWords = gDictionary.filter(word => {
       for (const letter of word) {
@@ -126,15 +125,16 @@ window.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    let lesson_text = '';
-    while(lesson_text.length < 120) {
-      lesson_text += gLessonWords[gLessonWords.length * Math.random() | 0] + ' ';
+    let lessonText = '';
+    while(lessonText.length < 120) {
+      lessonText += gLessonWords[gLessonWords.length * Math.random() | 0] + ' ';
     }
-    for (const char of lesson_text.slice(0, -1)) {
+    for (const char of lessonText.slice(0, -1)) {
       gLesson.innerHTML += (char == ' ') ?
         '<span class="space"></span>' : `<span>${char}</span>`;
     }
     gLessonCurrent = gLesson.firstElementChild;
+    gLessonCurrent.id = 'current';
     gPendingError = false;
   };
 
@@ -145,10 +145,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if ((gLessonCurrent.innerText === value) ||
         (gLessonCurrent.innerText === '' && value === ' ')) {
-      gLessonCurrent.className += gPendingError ? ' error' : ' done';
+      gLessonCurrent.classList.add(gPendingError ? 'fixed' : 'done');
+      gLessonCurrent.id = '';
       gLessonCurrent = gLessonCurrent.nextSibling;
       gPendingError = false;
     } else {
+      gLessonCurrent.classList.add('error');
       gPendingError = true;
     }
 
@@ -170,6 +172,8 @@ window.addEventListener('DOMContentLoaded', () => {
       gStatus.innerText = `${wpm} wpm, ${cpm} cpm, ${100 - err} %`;
       gLessonStartTime = undefined;
       setTimeout(showLesson, 500);
+    } else {
+      gLessonCurrent.id = 'current';
     }
   };
 
