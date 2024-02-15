@@ -84,18 +84,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const odk = gKeyLayout.deadkeys['**'];
     const has1dk = keys.some(key => gKeyLayout.keymap[key].indexOf('**') >= 0);
-    const lessonLetters = rawLetters.concat(!has1dk ? [] :
-      rawLetters.flatMap(letter => (letter in odk ? [odk[letter]] : [])));
+    const deadkeyLetters = !has1dk ? [] :
+      rawLetters
+        .filter(letter => letter in odk)
+        .map(letter => odk[letter]);
+    const lessonLetters = rawLetters.concat(deadkeyLetters);
 
     gLessonLevel = level;
-    gLessonWords = gDictionary.filter(word => {
-      for (const letter of word) {
-        if (lessonLetters.indexOf(letter) < 0) {
-          return false;
-        }
-      }
-      return true;
-    });
+    gLessonWords = gDictionary.filter(word =>
+      Array.from(word).every(letter => lessonLetters.indexOf(letter) >= 0));
 
     showLesson();
     showKeys();
