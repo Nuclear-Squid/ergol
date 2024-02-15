@@ -99,13 +99,13 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const showKeys = () => {
-    gKeyList.innerHTML = g30Keys
-      .map(key => gKeyLayout.keymap[key][0])
-      .map(char => char === '**' ? '★' : char) // 1dk/odk a.k.a. OneDeadKey
-      .map(char => char.length > 1 ? char.slice(1) : char) // other dead key
-      .map((char, idx) => `<kbd data-level="${idx + 1}"
-        class="${idx < gLessonLevel ? '' : 'inactive'}">${char}</kbd>`)
-      .join('');
+    const serializeKey = (key, idx) => {
+      const action = gKeyLayout.keymap[key][0];
+      const char = action === '**' ? '★' : action.slice(-1);
+      const state = idx < gLessonLevel ? '' : 'inactive';
+      return `<kbd data-level="${idx + 1}" class="${state}">${char}</kbd>`;
+    };
+    gKeyList.innerHTML = g30Keys.map(serializeKey).join('');
   };
 
   const showLesson = () => {
