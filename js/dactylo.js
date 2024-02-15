@@ -99,20 +99,13 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const showKeys = () => {
-    gKeyList.innerHTML = '';
-    let level = 0;
-    for (let char of g30Keys.map(key => gKeyLayout.keymap[key][0])) {
-      if (char.length > 1) {
-        if (char = "**") {
-          char = "★";
-        } else {
-          char = char.slice(1);
-        }
-      }
-      const className = gKeyList.children.length < gLessonLevel ? '' : 'inactive';
-      gKeyList.innerHTML +=
-        `<kbd class='${className}' data-level="${++level}">${char}</kbd>`;
-    }
+    gKeyList.innerHTML = g30Keys
+      .map(key => gKeyLayout.keymap[key][0])
+      .map(char => char === '**' ? '★' : char) // 1dk/odk a.k.a. OneDeadKey
+      .map(char => char.length > 1 ? char.slice(1) : char) // other dead key
+      .map((char, idx) => `<kbd data-level="${idx + 1}"
+        class="${idx < gLessonLevel ? '' : 'inactive'}">${char}</kbd>`)
+      .join('');
   };
 
   const showLesson = () => {
