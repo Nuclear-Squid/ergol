@@ -119,10 +119,11 @@ window.addEventListener('DOMContentLoaded', () => {
     while(lessonText.length < 120) {
       lessonText += gLessonWords[gLessonWords.length * Math.random() | 0] + ' ';
     }
-    for (const char of lessonText.slice(0, -1)) {
-      gLesson.innerHTML += (char == ' ') ?
-        '<span class="space"></span>' : `<span>${char}</span>`;
-    }
+    gLesson.innerHTML = Array.from(lessonText.slice(0, -1))
+      .map(char => char == ' ' ? '<span class="space"></span>'
+                               : `<span>${char}</span>`)
+      .join('');
+
     gLessonCurrent = gLesson.firstElementChild;
     gLessonCurrent.id = 'current';
     gPendingError = false;
