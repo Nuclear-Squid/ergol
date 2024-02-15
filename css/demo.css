@@ -72,8 +72,8 @@ dialog::backdrop {
 .keyboard span {
   box-sizing: border-box;
  }
-.keyboard #lesson { color: #444; }
-.keyboard .done   { color: gray; }
+.keyboard #lesson { color: #333; }
+.keyboard .done   { color: #999; }
 .keyboard .error  { color: red; }
 .keyboard .fixed  { color: green; }
 .keyboard .space::before {
