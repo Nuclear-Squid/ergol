@@ -97,8 +97,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const setLessonLevel = () => {
     const keys = ALL_30_KEYS.slice(0, gLessonLevel);
-    // const rawLetters = keys.flatMap(key => gKeyLayout.keymap[key]);
     const rawLetters = keys.map(key => gKeyLayout.keymap[key][0]);
+    const altLetters = keys.flatMap(key => gKeyLayout.keymap[key]);
 
     const odk = gKeyLayout.deadkeys['**'];
     const has1dk = keys.some(key => gKeyLayout.keymap[key].indexOf('**') >= 0);
@@ -126,13 +126,19 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const showKeys = () => {
+    const isActive = idx => idx >= 0 && idx < gLessonLevel;
+
     const serializeKey = (key, idx) => {
       const action = gKeyLayout.keymap[key][0];
       const char = action === '**' ? '★' : action.slice(-1);
-      const state = idx < gLessonLevel ? '' : 'inactive';
+      const state = isActive(idx) ? '' : 'inactive';
       return `<kbd data-level="${idx + 1}" class="${state}">${char}</kbd>`;
     };
     gKeyList.innerHTML = ALL_30_KEYS.map(serializeKey).join('');
+
+    gKeyboard.keys.forEach(key => {
+      key.style.opacity = isActive(ALL_30_KEYS.indexOf(key.id)) ? 1.0 : 0.6;
+    });
   };
 
   const showLesson = () => {

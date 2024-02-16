@@ -1085,13 +1085,24 @@ class Keyboard extends HTMLElement {
     this.root.querySelector('svg').setAttribute('theme', value);
   }
 
-  setCustomColors(keymap) {
+  setCustomColors(keymap) { // XXX drop in favor of .keys?
     Object.entries(keymap).forEach(([id, color]) => {
       this.root
         .getElementById(id)
         .querySelectorAll('rect')
-        .forEach(key => {
-          key.style.fill = color;
+        .forEach(rect => {
+          rect.style.fill = color;
+        });
+    });
+  }
+
+  setCustomOpacity(keymap) { // XXX drop in favor of .keys?
+    Object.entries(keymap).forEach(([id, opacity]) => {
+      this.root
+        .getElementById(id)
+        .querySelectorAll('rect')
+        .forEach(rect => {
+          rect.style.opacity = opacity;
         });
     });
   }
@@ -1172,15 +1183,21 @@ class Keyboard extends HTMLElement {
     const fingers = ['l5', 'l4', 'l3', 'l2', 'r2', 'r2', 'r3', 'r4', 'r5'];
     const keys = {};
     fingers.forEach(f => {
-      keys[f] = Array.from(this.root.querySelectorAll(`[finger=${f}]`)).map(
-        element => element.id,
-      );
+      keys[f] = Array
+        .from(this.root.querySelectorAll(`[finger=${f}]`))
+        .map(element => element.id);
     });
     return keys;
   }
 
   setKeyboardLayout(keyMap, deadKeys, geometry) {
     this.layout = newKeyboardLayout(keyMap, deadKeys, geometry);
+  }
+
+  get keys() { // XXX return IDs only and rely on setCustom{Colors,Opacity}?
+    return Array
+      .from(this.root.querySelectorAll('[id]'))
+      .filter(element => !element.id.startsWith('row_'));
   }
 
   /**
