@@ -186,8 +186,14 @@ window.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    if ((gLessonCurrent.innerText === value) ||
-        (gLessonCurrent.innerText === '' && value === ' ')) {
+    const correctChar = gLessonCurrent.innerText === value ||
+      (value === ' ' && gLessonCurrent.innerText === '');
+
+    if (!correctChar && !gLessonStartTime) {
+      return; // ignore errors on first char
+    }
+
+    if (correctChar) {
       gLessonCurrent.classList.add(gPendingError ? 'fixed' : 'done');
       gLessonCurrent.id = '';
       gLessonCurrent = gLessonCurrent.nextSibling;
