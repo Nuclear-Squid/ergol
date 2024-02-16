@@ -1,10 +1,10 @@
 const QUACK = new Audio('quack.mp3');
-const MIN_PRECISION   = 98;  // percentage of correct keys
-const MIN_CPM_SPEED   = 100; // characters per minute
-const QUACK_THRESHOLD = 5;
+const MIN_PRECISION  = 98;  // percentage of correct keys
+const MIN_CPM_SPEED  = 100; // characters per minute
+const MIN_WIN_STREAK = 5;
 
-const STARTING_LEVEL  = 4;   // number of keys to begin with
-const MIN_WORD_COUNT  = 42;  // nim number or words/ngrams we want for a lesson
+const STARTING_LEVEL = 4;   // number of keys to begin with
+const MIN_WORD_COUNT = 42;  // nim number or words/ngrams we want for a lesson
 const ALL_30_KEYS = [
   'KeyF', 'KeyJ',
   'KeyD', 'KeyK',
@@ -44,12 +44,18 @@ window.addEventListener('DOMContentLoaded', () => {
     bigrams:  undefined,
   };
 
-  let gLessonLevel     = STARTING_LEVEL;
   let gLessonWords     = [];
   let gLessonCurrent   = undefined;
   let gLessonStartTime = undefined;
+  let gLessonLevel     = Number(localStorage.getItem('level')) || STARTING_LEVEL;
+  let gQuackCount      = Number(localStorage.getItem('quacks')) || 4;
   let gPendingError    = false;
-  let gQuackCount      = 4;
+
+  ['layout', 'dict', 'geometry']
+    .filter(id => localStorage.getItem(id))
+    .forEach(id => {
+      document[id].value = localStorage.getItem(id);
+    });
 
   // fetch a kalamine corpus: symbols, bigrams, trigrams
   const fetchNgrams = () => {
@@ -84,14 +90,17 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   gLayout.addEventListener('change', () => {
+    localStorage.setItem('layout', gLayout.value);
     fetchLayout().then(setLessonLevel);
   });
 
   gDict.addEventListener('change', () => {
+    localStorage.setItem('dict', gDict.value);
     Promise.all([fetchNgrams(), fetchWords()]).then(setLessonLevel);
   });
 
   gGeometry.addEventListener('change', event => {
+    localStorage.setItem('geometry', gGeometry.value);
     gKeyboard.geometry = gGeometry.value;
   });
 
@@ -103,6 +112,8 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   const setLessonLevel = () => {
+    localStorage.setItem('level', gLessonLevel);
+
     const keys = ALL_30_KEYS.slice(0, gLessonLevel);
     const rawLetters = keys.map(key => gKeyLayout.keymap[key][0]);
     const altLetters = keys.flatMap(key => gKeyLayout.keymap[key]);
@@ -216,9 +227,9 @@ window.addEventListener('DOMContentLoaded', () => {
       gQuackCount = Math.max(1, gQuackCount -1);
     }
 
-    if (gQuackCount >= QUACK_THRESHOLD) {
+    if (gQuackCount >= MIN_WIN_STREAK) {
       gQuackCount = 1;
-      gLessonLevel += 2;
+      gLessonLevel = 2 * (Math.floor(gLessonLevel / 2) + 1); // next even number
       setTimeout(setLessonLevel, 500);
     } else {
       setTimeout(showLesson, 500);
@@ -226,6 +237,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const showQuackStatus = () => {
+    localStorage.setItem('quacks', gQuackCount);
     gQuacks.innerText = Array(gQuackCount).fill('🦆').join('');
   };
 
