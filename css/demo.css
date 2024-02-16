@@ -55,6 +55,10 @@ dialog::backdrop {
   margin-bottom: 1em;
 }
 
+h1 .quacks {
+  float: right;
+}
+
 .keyboard #lesson {
   text-align: left;
   font-family: monospace;

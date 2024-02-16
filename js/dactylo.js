@@ -1,5 +1,10 @@
-const STARTING_LEVEL = 4;
-const MIN_WORD_COUNT = 42;
+const QUACK = new Audio('quack.mp3');
+const MIN_PRECISION   = 98;  // percentage of correct keys
+const MIN_CPM_SPEED   = 100; // characters per minute
+const QUACK_THRESHOLD = 5;
+
+const STARTING_LEVEL  = 4;   // number of keys to begin with
+const MIN_WORD_COUNT  = 42;  // nim number or words/ngrams we want for a lesson
 const ALL_30_KEYS = [
   'KeyF', 'KeyJ',
   'KeyD', 'KeyK',
@@ -28,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const gKeyList  = document.querySelector('header .key_list');
   const gStatus   = document.querySelector('header .status');
+  const gQuacks   = document.querySelector('header .quacks');
   const gLesson   = document.querySelector('#lesson');
   const gInput    = document;
 
@@ -43,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let gLessonCurrent   = undefined;
   let gLessonStartTime = undefined;
   let gPendingError    = false;
+  let gQuackCount      = 4;
 
   // fetch a kalamine corpus: symbols, bigrams, trigrams
   const fetchNgrams = () => {
@@ -121,6 +128,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    showQuackStatus();
     showLesson();
     showKeys();
   };
@@ -137,7 +145,7 @@ window.addEventListener('DOMContentLoaded', () => {
     gKeyList.innerHTML = ALL_30_KEYS.map(serializeKey).join('');
 
     gKeyboard.keys.forEach(key => {
-      key.style.opacity = isActive(ALL_30_KEYS.indexOf(key.id)) ? 1.0 : 0.6;
+      key.style.opacity = isActive(ALL_30_KEYS.indexOf(key.id)) ? 1.0 : 0.5;
     });
   };
 
@@ -178,27 +186,47 @@ window.addEventListener('DOMContentLoaded', () => {
       gPendingError = true;
     }
 
-    // first char?
-    if (!gLessonStartTime) {
+    if (!gLessonStartTime) { // first char?
       gLessonStartTime = performance.now()
-      gStatus.innerText = '🦆';
+      gStatus.innerText = '…';
+    }
+    if (gLessonCurrent) { // next char
+      gLessonCurrent.id = 'current';
+    } else { // last char, compute stats
+      showLessonStatus(performance.now());
+      showQuackStatus();
+      gLessonStartTime = undefined;
+    }
+  };
+
+  const showLessonStatus = (now) => {
+    const elapsed = (now - gLessonStartTime) / 60000;
+    const errors = gLesson.querySelectorAll('.error').length;
+    const words = gLesson.querySelectorAll('.space').length + 1;
+    const chars = gLesson.children.length;
+    const cpm = Math.round(chars / elapsed);
+    const wpm = Math.round(words / elapsed);
+    const prc = 100 - Math.round(1000 * errors / chars) / 10;
+    gStatus.innerText = `${wpm} wpm, ${cpm} cpm, ${prc} %`;
+
+    if (cpm >= MIN_CPM_SPEED && prc >= MIN_PRECISION) {
+      QUACK.play();
+      gQuackCount++;
+    } else {
+      gQuackCount = Math.max(1, gQuackCount -1);
     }
 
-    // last char?
-    if (!gLessonCurrent) {
-      const elapsed = (performance.now() - gLessonStartTime) / 60000;
-      const errors = gLesson.querySelectorAll('.error').length;
-      const words = gLesson.querySelectorAll('.space').length + 1;
-      const chars = gLesson.children.length;
-      const cpm = Math.round(chars / elapsed);
-      const wpm = Math.round(words / elapsed);
-      const err = Math.round(1000 * errors / chars) / 10;
-      gStatus.innerText = `${wpm} wpm, ${cpm} cpm, ${100 - err} %`;
-      gLessonStartTime = undefined;
-      setTimeout(showLesson, 500);
+    if (gQuackCount >= QUACK_THRESHOLD) {
+      gQuackCount = 1;
+      gLessonLevel += 2;
+      setTimeout(setLessonLevel, 500);
     } else {
-      gLessonCurrent.id = 'current';
+      setTimeout(showLesson, 500);
     }
+  };
+
+  const showQuackStatus = () => {
+    gQuacks.innerText = Array(gQuackCount).fill('🦆').join('');
   };
 
   // startup
