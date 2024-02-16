@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
   ['layout', 'dict', 'geometry']
     .filter(id => localStorage.getItem(id))
     .forEach(id => {
-      document[id].value = localStorage.getItem(id);
+      document.getElementById(id).value = localStorage.getItem(id);
     });
 
   // fetch a kalamine corpus: symbols, bigrams, trigrams
