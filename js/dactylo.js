@@ -67,15 +67,9 @@ window.addEventListener('DOMContentLoaded', () => {
   let gLessonWords     = [];
   let gLessonCurrent   = undefined;
   let gLessonStartTime = undefined;
-  let gLessonLevel     = Number(localStorage.getItem('level')) || STARTING_LEVEL;
-  let gQuackCount      = Number(localStorage.getItem('quacks')) || 1;
+  let gLessonLevel     = undefined;
+  let gQuackCount      = undefined
   let gPendingError    = false;
-
-  ['layout', 'dict', 'geometry']
-    .filter(id => localStorage.getItem(id))
-    .forEach(id => {
-      document.getElementById(id).value = localStorage.getItem(id);
-    });
 
   // fetch a kalamine corpus: symbols, bigrams, trigrams
   const fetchNgrams = () => {
@@ -110,8 +104,8 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   gLayout.addEventListener('change', () => {
-    localStorage.setItem('layout', gLayout.value);
-    fetchLayout().then(setLessonLevel);
+    window.location.hash = `${gLayout.value}`;
+    init();
   });
 
   gDict.addEventListener('change', () => {
@@ -254,13 +248,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const moreQuacks = () => {
     QUACK.play();
-    gQuackCount++;
+    localStorage.setItem(`${gLayout.value}.quacks`, ++gQuackCount);
     showQuackStatus();
 
     if (gQuackCount >= MIN_WIN_STREAK) {
       gLessonLevel = 2 * (Math.floor(gLessonLevel / 2) + 1); // next even number
       gQuacks.parentNode.classList.add('active');
       gQuackCount = 1;
+      localStorage.setItem(`${gLayout.value}.quacks`, 1);
+      localStorage.setItem(`${gLayout.value}.level`, gLessonLevel);
       setTimeout(setLessonLevel, 500);
     } else {
       setTimeout(showLesson, 500);
@@ -269,6 +265,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const lessQuacks = () => {
     gQuackCount = Math.max(1, gQuackCount -1);
+    localStorage.setItem(`${gLayout.value}.quacks`, gQuackCount);
     showQuackStatus();
     setTimeout(showLesson, 500);
   };
@@ -283,9 +280,31 @@ window.addEventListener('DOMContentLoaded', () => {
   gQuacks.addEventListener('dblclick', moreQuacks); // cheat code!
 
   // startup
-  Promise.all([fetchNgrams(), fetchWords(), fetchLayout()])
-    .then(setLessonLevel);
+  const init = () => {
+    ['layout', 'dict', 'geometry']
+      .filter(id => localStorage.getItem(id))
+      .forEach(id => {
+        document.getElementById(id).value = localStorage.getItem(id);
+      });
 
+    const layout = window.location.hash.slice(1);
+    if (layout) {
+      gLayout.value = layout;
+      localStorage.setItem('layout', layout);
+    }
+
+    const level  = localStorage.getItem(`${gLayout.value}.level`);
+    const quacks = localStorage.getItem(`${gLayout.value}.quacks`);
+
+    gLessonLevel = level  ? Number(level)  : STARTING_LEVEL;
+    gQuackCount  = quacks ? Number(quacks) : 1;
+
+    Promise.all([fetchNgrams(), fetchWords(), fetchLayout()])
+      .then(setLessonLevel);
+  };
+
+  window.addEventListener('hashchange', init);
+  init();
 
   /**
    * Keyboard highlighting & layout emulation
@@ -340,5 +359,4 @@ window.addEventListener('DOMContentLoaded', () => {
       event.target.value = event.target.value.slice(0, -event.data.length);
     }
   });
-
 });
