@@ -103,26 +103,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   };
 
-  gLayout.addEventListener('change', loadLayout);
-  window.addEventListener('hashchange', loadLayout);
-
-  gDict.addEventListener('change', () => {
-    localStorage.setItem('dict', gDict.value);
-    Promise.all([fetchNgrams(), fetchWords()]).then(setLessonLevel);
-  });
-
-  gGeometry.addEventListener('change', event => {
-    localStorage.setItem('geometry', gGeometry.value);
-    gKeyboard.geometry = gGeometry.value;
-  });
-
-  gKeyList.addEventListener('click', event => {
-    if (event.target.nodeName.toLowerCase() == 'kbd') {
-      gLessonLevel = event.target.dataset.level;
-      setLessonLevel();
-    }
-  });
-
   const setLessonLevel = () => {
     localStorage.setItem(`${gLayout.value}.level`, gLessonLevel);
 
@@ -277,7 +257,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // startup
   const loadLayout = () => {
-    gLayout.value = window.location.hash.split('/')[1];
+    gLayout.value = window.location.hash.slice(1);
 
     const dict     = localStorage.getItem('dict');
     const geometry = localStorage.getItem('geometry');
@@ -292,6 +272,26 @@ window.addEventListener('DOMContentLoaded', () => {
     Promise.all([fetchNgrams(), fetchWords(), fetchLayout()])
       .then(setLessonLevel);
   };
+
+  window.addEventListener('hashchange', loadLayout);
+  gLayout.addEventListener('change', loadLayout);
+
+  gDict.addEventListener('change', () => {
+    localStorage.setItem('dict', gDict.value);
+    Promise.all([fetchNgrams(), fetchWords()]).then(setLessonLevel);
+  });
+
+  gGeometry.addEventListener('change', event => {
+    localStorage.setItem('geometry', gGeometry.value);
+    gKeyboard.geometry = gGeometry.value;
+  });
+
+  gKeyList.addEventListener('click', event => {
+    if (event.target.nodeName.toLowerCase() == 'kbd') {
+      gLessonLevel = event.target.dataset.level;
+      setLessonLevel();
+    }
+  });
 
   loadLayout();
 
