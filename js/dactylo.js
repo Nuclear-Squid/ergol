@@ -103,10 +103,8 @@ window.addEventListener('DOMContentLoaded', () => {
       });
   };
 
-  gLayout.addEventListener('change', () => {
-    window.location.hash = `${gLayout.value}`;
-    init();
-  });
+  gLayout.addEventListener('change', loadLayout);
+  window.addEventListener('hashchange', loadLayout);
 
   gDict.addEventListener('change', () => {
     localStorage.setItem('dict', gDict.value);
@@ -249,17 +247,17 @@ window.addEventListener('DOMContentLoaded', () => {
   const moreQuacks = () => {
     QUACK.play();
     gQuackCount++;
+    showQuackStatus();
 
     if (gQuackCount >= MIN_WIN_STREAK) {
       gLessonLevel = 2 * (Math.floor(gLessonLevel / 2) + 1); // next even number
-      gQuacks.parentNode.classList.add('active');
       gQuackCount = 1;
+      gQuacks.parentNode.classList.add('active');
       setTimeout(setLessonLevel, 500);
     } else {
       setTimeout(showLesson, 500);
     }
 
-    showQuackStatus();
   };
 
   const lessQuacks = () => {
@@ -278,22 +276,16 @@ window.addEventListener('DOMContentLoaded', () => {
   gQuacks.addEventListener('dblclick', moreQuacks); // cheat code!
 
   // startup
-  const init = () => {
-    ['layout', 'dict', 'geometry']
-      .filter(id => localStorage.getItem(id))
-      .forEach(id => {
-        document.getElementById(id).value = localStorage.getItem(id);
-      });
+  const loadLayout = () => {
+    gLayout.value = window.location.hash.split('/')[1];
 
-    const layout = window.location.hash.slice(1);
-    if (layout) {
-      gLayout.value = layout;
-      localStorage.setItem('layout', layout);
-    }
+    const dict     = localStorage.getItem('dict');
+    const geometry = localStorage.getItem('geometry');
+    const level    = localStorage.getItem(`${gLayout.value}.level`);
+    const quacks   = localStorage.getItem(`${gLayout.value}.quacks`);
 
-    const level  = localStorage.getItem(`${gLayout.value}.level`);
-    const quacks = localStorage.getItem(`${gLayout.value}.quacks`);
-
+    if (dict) gDict.value = dict;
+    if (geometry) gGeometry.value = geometry;
     gLessonLevel = level  ? Number(level)  : STARTING_LEVEL;
     gQuackCount  = quacks ? Number(quacks) : 1;
 
@@ -301,8 +293,7 @@ window.addEventListener('DOMContentLoaded', () => {
       .then(setLessonLevel);
   };
 
-  window.addEventListener('hashchange', init);
-  init();
+  loadLayout();
 
   /**
    * Keyboard highlighting & layout emulation
