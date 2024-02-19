@@ -126,7 +126,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   const setLessonLevel = () => {
-    localStorage.setItem('level', gLessonLevel);
+    localStorage.setItem(`${gLayout.value}.level`, gLessonLevel);
 
     const keys = ALL_30_KEYS.slice(0, gLessonLevel);
     const rawLetters = keys.map(key => gKeyLayout.keymap[key][0]);
@@ -248,30 +248,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const moreQuacks = () => {
     QUACK.play();
-    localStorage.setItem(`${gLayout.value}.quacks`, ++gQuackCount);
-    showQuackStatus();
+    gQuackCount++;
 
     if (gQuackCount >= MIN_WIN_STREAK) {
       gLessonLevel = 2 * (Math.floor(gLessonLevel / 2) + 1); // next even number
       gQuacks.parentNode.classList.add('active');
       gQuackCount = 1;
-      localStorage.setItem(`${gLayout.value}.quacks`, 1);
-      localStorage.setItem(`${gLayout.value}.level`, gLessonLevel);
       setTimeout(setLessonLevel, 500);
     } else {
       setTimeout(showLesson, 500);
     }
+
+    showQuackStatus();
   };
 
   const lessQuacks = () => {
     gQuackCount = Math.max(1, gQuackCount -1);
-    localStorage.setItem(`${gLayout.value}.quacks`, gQuackCount);
     showQuackStatus();
     setTimeout(showLesson, 500);
   };
 
   const showQuackStatus = () => {
-    localStorage.setItem('quacks', gQuackCount);
+    localStorage.setItem(`${gLayout.value}.quacks`, gQuackCount);
     gQuacks.parentNode.classList.remove('active');
     gQuacks.innerText = Array(gQuackCount).fill('🦆').join('');
   };
