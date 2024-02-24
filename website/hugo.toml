@@ -1,9 +1,10 @@
-baseURL = "https://ergol.org/"
+baseURL = "."
 languageCode = "fr"
 title = "Ergo‑L"
 
 [params]
 description = "Une disposition de clavier ergonomique optimisée pour le français, l’anglais et le code."
+relativeURLs = true
 
 [security.exec]
 allow = ["pandoc"]
