@@ -1,0 +1,12 @@
+baseURL = 'https://example.org/'
+languageCode = 'fr'
+title = 'Ergo‑L'
+
+[params]
+description = "Une disposition de clavier ergonomique optimisée pour le français, l’anglais et le code."
+
+[security.exec]
+allow = ['pandoc']
+
+[markup]
+defaultMarkdownHandler = 'pandoc'

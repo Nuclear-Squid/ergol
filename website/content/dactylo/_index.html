@@ -1,0 +1,48 @@
++++
+title = "dactylo"
+
+[params]
+extraCss  = ['css/demo.css']
+jsModules = ['js/x-keyboard.js']
+jsScripts = ['js/dactylo.js']
++++
+
+<h1><span class="key_list"></span><span class="quacks">🦆</span></h1>
+<p class="status">·</p>
+
+<div class="keyboard">
+  <input hidden spellcheck="false" />
+  <p id="lesson"></p>
+  <x-keyboard></x-keyboard>
+  <p style="text-align: right;">
+    <span style="float: left;">
+      <select id="layout">
+        <option value="ergol" selected>Ergo‑L</option>
+        <option value="erglace">Erglace</option>
+        <option value="bepo">Bépo</option>
+        <option value="azerty">Azerty</option>
+        <option value="lafayette">Lafayette</option>
+      </select>
+      <select id="dict">
+        <option value="fr,french_1k">Français 1k</option>
+        <option value="fr,french_10k" selected>Français 10k</option>
+        <option value="en,english_1k">English 1k</option>
+        <option value="en,english_10k">English 10k</option>
+      </select>
+    </span>
+    <select id="geometry">
+      <option value="iso" selected>ISO</option>
+      <option value="ansi">ANSI</option>
+      <option value="ol60">TMx</option>
+      <option value="ol50">4×6</option>
+      <option value="ol40">3×6</option>
+    </select>
+  </p>
+</div>
+
+<span style="float: left"> <small>powered by <a
+      href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>,
+    inspired by <a href="https://github.com/wwwtyro/keyzen">keyzen</a>
+    and <a href="https://github.com/aradzie/keybr.com">keybr</a>, fuelled by
+    <a href="https://github.com/monkeytypegame/monkeytype">MonkeyType</a>
+  </small> </span>

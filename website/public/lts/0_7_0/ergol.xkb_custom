@@ -1,0 +1,117 @@
+// Project page  : https://github.com/Nuclear-Squid/ergol
+// Author        : NuclearSquid
+// Version       : 0.7.0 LTS
+// Last change   : 2024-02-05
+// License       : WTFPL - Do What The Fuck You Want Public License
+//
+// French (Ergo-L)
+//
+// Base layer + dead key
+// ╭╌╌╌╌╌┰─────┬─────┬─────┬─────┬─────┰─────┬─────┬─────┬─────┬─────┰╌╌╌╌╌┬╌╌╌╌╌╮
+// ┆ ~   ┃ ! ¡ │ @ « │ # » │ $ ¢ │ % ‰ ┃ ^   │ &   │ *   │ (   │ )   ┃ _ – ┆ + ± ┆
+// ┆ `   ┃ 1 „ │ 2 “ │ 3 ” │ 4 £ │ 5 € ┃ 6 ¥ │ 7 ¤ │ 8 § │ 9 ¶ │ 0 ° ┃ / ÷ ┆ = ≠ ┆
+// ╰╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+//       ┃ Q   │ C   │ O   │ P   │ W   ┃ J   │ M   │ D _ │***¨ │ F   ┃ {   ┆ }   ┆
+//       ┃   â │   ç │   œ │   ô │   – ┃     │   µ │   _ │***¨ │   û ┃ [   ┆ ]   ┆
+//       ┠─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+//       ┃ A   │ S   │ E   │ N   │ ; • ┃ L   │ R   │ T   │ I   │ U   ┃ "   ┆ |   ┆
+//       ┃   à │   é │   è │   ê │ , · ┃     │     │   î │   ï │   ù ┃ '   ┆ \   ┆
+// ╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
+// ┆ >   ┃ Z   │ X   │ ? ¿ │ V   │ B   ┃ :   │ H   │ G   │ Y   │ K   ┃
+// ┆ <   ┃   æ │   ß │ - ‑ │   ñ │   — ┃ . … │     │  *µ │   ÿ │   ŭ ┃
+// ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚
+//
+// AltGr layer
+// ╭╌╌╌╌╌┰─────┬─────┬─────┬─────┬─────┰─────┬─────┬─────┬─────┬─────┰╌╌╌╌╌┬╌╌╌╌╌╮
+// ┆     ┃   ¹ │   ² │   ³ │   ⁴ │   ⁵ ┃   ⁶ │   ⁷ │   ⁸ │   ⁹ │   ⁰ ┃     ┆     ┆
+// ┆     ┃   ₁ │   ₂ │   ₃ │   ₄ │   ₅ ┃   ₆ │   ₇ │   ₈ │   ₉ │   ₀ ┃     ┆     ┆
+// ╰╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+//       ┃     │     │     │  *¤ │   ‰ ┃  *^ │     │   × │  *´ │  *` ┃     ┆     ┆
+//       ┃   @ │   < │   > │   $ │   % ┃   ^ │   & │   * │   ' │   ` ┃     ┆     ┆
+//       ┠─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+//       ┃     │   ⁽ │   ⁾ │     │   ≠ ┃  */ │   ± │   — │   ÷ │  *¨ ┃     ┆     ┆
+//       ┃   { │   ( │   ) │   } │   = ┃   \ │   + │   - │   / │   " ┃     ┆     ┆
+// ╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
+// ┆     ┃  *~ │     │     │   – │     ┃     │   ¬ │  *¸ │     │     ┃
+// ┆     ┃   ~ │   [ │   ] │   _ │   # ┃   | │   ! │   ; │   : │   ? ┃
+// ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "ergol" {
+    name[group1]= "French (Ergo-L)";
+    key.type[group1] = "EIGHT_LEVEL";
+
+    // Digits
+    key <AE01> {[ 1               , exclam          , U2081           , onesuperior     , U201E           , exclamdown      , VoidSymbol      , VoidSymbol      ]}; // 1 ! „ ¡ ₁ ¹
+    key <AE02> {[ 2               , at              , U2082           , twosuperior     , U201C           , guillemotleft   , VoidSymbol      , VoidSymbol      ]}; // 2 @ “ « ₂ ²
+    key <AE03> {[ 3               , numbersign      , U2083           , threesuperior   , U201D           , guillemotright  , VoidSymbol      , VoidSymbol      ]}; // 3 # ” » ₃ ³
+    key <AE04> {[ 4               , dollar          , U2084           , U2074           , sterling        , cent            , VoidSymbol      , VoidSymbol      ]}; // 4 $ £ ¢ ₄ ⁴
+    key <AE05> {[ 5               , percent         , U2085           , U2075           , EuroSign        , U2030           , VoidSymbol      , VoidSymbol      ]}; // 5 % € ‰ ₅ ⁵
+    key <AE06> {[ 6               , asciicircum     , U2086           , U2076           , yen             , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 6 ^ ¥   ₆ ⁶
+    key <AE07> {[ 7               , ampersand       , U2087           , U2077           , currency        , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 7 & ¤   ₇ ⁷
+    key <AE08> {[ 8               , asterisk        , U2088           , U2078           , section         , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 8 * §   ₈ ⁸
+    key <AE09> {[ 9               , parenleft       , U2089           , U2079           , paragraph       , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 9 ( ¶   ₉ ⁹
+    key <AE10> {[ 0               , parenright      , U2080           , U2070           , degree          , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // 0 ) °   ₀ ⁰
+
+    // Letters, first row
+    key <AD01> {[ q               , Q               , at              , VoidSymbol      , acircumflex     , Acircumflex     , VoidSymbol      , VoidSymbol      ]}; // q Q â Â @
+    key <AD02> {[ c               , C               , less            , lessthanequal   , ccedilla        , Ccedilla        , VoidSymbol      , VoidSymbol      ]}; // c C ç Ç < ≤
+    key <AD03> {[ o               , O               , greater         , greaterthanequal, oe              , OE              , VoidSymbol      , VoidSymbol      ]}; // o O œ Œ > ≥
+    key <AD04> {[ p               , P               , dollar          , dead_currency   , ocircumflex     , Ocircumflex     , VoidSymbol      , VoidSymbol      ]}; // p P ô Ô $ ¤
+    key <AD05> {[ w               , W               , percent         , U2030           , endash          , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // w W –   % ‰
+    key <AD06> {[ j               , J               , asciicircum     , dead_circumflex , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // j J     ^ ^
+    key <AD07> {[ m               , M               , ampersand       , VoidSymbol      , mu              , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // m M µ   &
+    key <AD08> {[ d               , D               , asterisk        , multiply        , underscore      , underscore      , VoidSymbol      , VoidSymbol      ]}; // d D _ _ * ×
+    key <AD09> {[ ISO_Level5_Latch, ISO_Level5_Latch, apostrophe      , dead_acute      , dead_diaeresis  , dead_diaeresis  , VoidSymbol      , VoidSymbol      ]}; // *¨ *¨ ¨ ¨ ' ´
+    key <AD10> {[ f               , F               , grave           , dead_grave      , ucircumflex     , Ucircumflex     , VoidSymbol      , VoidSymbol      ]}; // f F û Û ` `
+
+    // Letters, second row
+    key <AC01> {[ a               , A               , braceleft       , VoidSymbol      , agrave          , Agrave          , VoidSymbol      , VoidSymbol      ]}; // a A à À {
+    key <AC02> {[ s               , S               , parenleft       , U207D           , eacute          , Eacute          , VoidSymbol      , VoidSymbol      ]}; // s S é É ( ⁽
+    key <AC03> {[ e               , E               , parenright      , U207E           , egrave          , Egrave          , VoidSymbol      , VoidSymbol      ]}; // e E è È ) ⁾
+    key <AC04> {[ n               , N               , braceright      , VoidSymbol      , ecircumflex     , Ecircumflex     , VoidSymbol      , VoidSymbol      ]}; // n N ê Ê }
+    key <AC05> {[ comma           , semicolon       , equal           , notequal        , periodcentered  , U2022           , VoidSymbol      , VoidSymbol      ]}; // , ; · • = ≠
+    key <AC06> {[ l               , L               , backslash       , dead_stroke     , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // l L     \ /
+    key <AC07> {[ r               , R               , plus            , plusminus       , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // r R     + ±
+    key <AC08> {[ t               , T               , minus           , emdash          , icircumflex     , Icircumflex     , VoidSymbol      , VoidSymbol      ]}; // t T î Î - —
+    key <AC09> {[ i               , I               , slash           , division        , idiaeresis      , Idiaeresis      , VoidSymbol      , VoidSymbol      ]}; // i I ï Ï / ÷
+    key <AC10> {[ u               , U               , quotedbl        , dead_diaeresis  , ugrave          , Ugrave          , VoidSymbol      , VoidSymbol      ]}; // u U ù Ù " ¨
+
+    // Letters, third row
+    key <AB01> {[ z               , Z               , asciitilde      , dead_tilde      , ae              , AE              , VoidSymbol      , VoidSymbol      ]}; // z Z æ Æ ~ ~
+    key <AB02> {[ x               , X               , bracketleft     , VoidSymbol      , ssharp          , U1E9E           , VoidSymbol      , VoidSymbol      ]}; // x X ß ẞ [
+    key <AB03> {[ minus           , question        , bracketright    , VoidSymbol      , U2011           , questiondown    , VoidSymbol      , VoidSymbol      ]}; // - ? ‑ ¿ ]
+    key <AB04> {[ v               , V               , underscore      , endash          , ntilde          , Ntilde          , VoidSymbol      , VoidSymbol      ]}; // v V ñ Ñ _ –
+    key <AB05> {[ b               , B               , numbersign      , VoidSymbol      , emdash          , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // b B —   #
+    key <AB06> {[ period          , colon           , bar             , brokenbar       , ellipsis        , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // . : …   | ¦
+    key <AB07> {[ h               , H               , exclam          , notsign         , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // h H     ! ¬
+    key <AB08> {[ g               , G               , semicolon       , dead_cedilla    , dead_greek      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // g G µ   ; ¸
+    key <AB09> {[ y               , Y               , colon           , VoidSymbol      , ydiaeresis      , Ydiaeresis      , VoidSymbol      , VoidSymbol      ]}; // y Y ÿ Ÿ :
+    key <AB10> {[ k               , K               , question        , VoidSymbol      , ubreve          , Ubreve          , VoidSymbol      , VoidSymbol      ]}; // k K ŭ Ŭ ?
+
+    // Pinky keys
+    key <AE11> {[ slash           , underscore      , VoidSymbol      , VoidSymbol      , division        , endash          , VoidSymbol      , VoidSymbol      ]}; // / _ ÷ –
+    key <AE12> {[ equal           , plus            , VoidSymbol      , VoidSymbol      , notequal        , plusminus       , VoidSymbol      , VoidSymbol      ]}; // = + ≠ ±
+    key <AE13> {[ VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; //
+    key <AD11> {[ bracketleft     , braceleft       , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // [ {
+    key <AD12> {[ bracketright    , braceright      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // ] }
+    key <AC11> {[ apostrophe      , quotedbl        , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // ' "
+    key <AB11> {[ VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; //
+    key <TLDE> {[ grave           , asciitilde      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // ` ~
+    key <BKSL> {[ backslash       , bar             , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // \ |
+    key <LSGT> {[ less            , greater         , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // < >
+
+    // Space bar
+    key <SPCE> {[ space           , U202F           , space           , nobreakspace    , U2019           , U2019           , VoidSymbol      , VoidSymbol      ]}; //     ’ ’
+
+    // The AltGr key is an ISO_Level3_Shift:
+    include "level3(ralt_switch)"
+
+    // The “OneDeadKey” is an ISO_Level5_Latch, which is activated by this:
+    // (note: MDSW [Mode_switch] is an alias for LVL5 on recent versions of XKB)
+    replace key <MDSW> {
+        type[Group1] = "ONE_LEVEL",
+        symbols[Group1] = [ ISO_Level5_Shift ]
+    };
+    modifier_map Mod3 { <MDSW> };
+};

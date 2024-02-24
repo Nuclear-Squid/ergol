@@ -1,0 +1,142 @@
+###
+# A QWERTY-Lafayette variant for compact keyboards (40%, 42 keys, 34 keys…):
+#   - all accented chars can be made with the dead key and the 3×10 main keys;
+#   - all programming symbols can be made with AltGr and the 3×10 main keys;
+#   - on a full-size ISO keyboard, AltGr is handy but not required.
+##
+
+name: Lafayette42
+name8: q42-fr
+locale: fr
+variant: lafayette42
+description: French (Qwerty-Lafayette, compact variant)
+url: https://github.com/fabi1cazenave/qwerty-lafayette
+geometry: ERGO
+version: 0.8.0
+
+# To fit on 40% keyboards, all diacritics require a single dead key (1dk):
+#   - 1dk + vowel         = grave accent / alt   (à, è, ù, ç, œ, æ, ñ, ß)
+#   - 1dk + key left      = acute accent         (é)
+#   - 1dk + key below     = circumflex accent    (â, ê, ŷ, û, î, ô)
+#   - shift + 1dk + vowel = diaeresis            (ä, ë, ÿ, ü, ï, ö)
+#   - 1dk + number        = symbol or quote sign («, », „, “, ”)
+# Possible improvements:
+#   - the dash key [-_] is a PITA in French (e.g. « y a-t-il… »)
+#       -> to be swapped with the [/?] key?
+#   - French quotes («») are not as natural as in Lafayette
+#       -> to be put on shift+2/3, and leave @# to AltGr?
+#       -> to be put on shift+9/0, and leave () to AltGr?
+
+base: |
+  ╭╌╌╌╌╌┰─────┬─────┬─────┬─────┬─────┰─────┬─────┬─────┬─────┬─────┰╌╌╌╌╌┬╌╌╌╌╌╮
+  ┆ ~   ┃ ! „ │ @ “ │ # ” │ $ ¢ │ % ‰ ┃ ^   │ &   │ *   │ (   │ )   ┃ _ – ┆ + ± ┆
+  ┆ `   ┃ 1 ¡ │ 2 « │ 3 » │ 4 £ │ 5 € ┃ 6 ¥ │ 7 ¤ │ 8 § │ 9 ¶ │ 0 ° ┃ - — ┆ = ≠ ┆
+  ╰╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+  ·     ┃ Q   │ W   │ E   │ R   │ T   ┃ Y   │ U   │ I   │ O   │ P   ┃ {   ┆ }   ┆
+  ·     ┃   æ │   é │   è │   ® │   ™ ┃     │   ù │   ĳ │   œ │     ┃ [   ┆ ]   ┆
+  ·     ┠─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+  ·     ┃ A   │ S   │ D   │ F ª │ G   ┃ H   │ J   │ K   │ L   │*¨   ┃ "   ┆ |   ┆
+  ·     ┃   à │   ß │   ê │   ſ │   © ┃   ŷ │   û │   î │   ô │** ` ┃ '   ┆ \   ┆
+  ╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
+  ┆ >   ┃ Z   │ X   │ C   │ V   │ B   ┃ N   │ M º │ ; • │ :   │ ? ÷ ┃           ·
+  ┆ <   ┃   â │   × │   ç │   ŭ │   † ┃   ñ │   µ │ , · │ . … │ / ¿ ┃           ·
+  ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚ · · · · · ·
+
+# The AltGr layer focuses on the 28 programming symbols:
+#   - 10 symbols over the numbers
+#   - 2×8 symbols on the extra pinky keys (base and shift layers)
+#   - 2 symbols on the lower-right key (/?)
+#   -> the 3×10 alpha pad can fit these 28 symbols + 0 and 1
+# Rationale:
+#   - block signs {()}[] on ASDFWE (= most comfortable positions)
+#   - 1st row: main chars in the number row ($%^&* below 45678, 01 below 01)
+#   - 2nd row: comparison / arrow signs (<> above their Qwerty-US positions)
+#   - 3rd row: bash / shell signs
+# Efficiency:
+#   - no symbols outside of the 3×10 alpha pad
+#   - no symbol that must be doubled is under a pinky
+#   - most digrams seem comfortable to type
+# Possible improvements:
+#   - `@` is on a way too good position, maybe switch with `'`?
+#   - Go developers might prefer `!` on the Q key and `:` on the dot key
+
+altgr: |
+  ╭╌╌╌╌╌┰─────┬─────┬─────┬─────┬─────┰─────┬─────┬─────┬─────┬─────┰╌╌╌╌╌┬╌╌╌╌╌╮
+  ┆     ┃     │     │     │     │     ┃     │     │     │     │     ┃     ┆     ┆
+  ┆     ┃     │     │     │     │     ┃     │     │     │     │     ┃     ┆     ┆
+  ╰╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+  ·     ┃     │     │     │     │   ‰ ┃  *^ │     │   × │  *´ │     ┃     ┆     ┆
+  ·     ┃   1 │   [ │   ] │   $ │   % ┃   ^ │   & │   * │   ' │   0 ┃     ┆     ┆
+  ·     ┠─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+  ·     ┃     │   ⁽ │   ⁾ │     │   ≠ ┃   ± │   — │   ≤ │   ≥ │  *¨ ┃     ┆     ┆
+  ·     ┃   { │   ( │   ) │   } │   = ┃   + │   - │   < │   > │   " ┃     ┆     ┆
+  ╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
+  ┆     ┃  *~ │  *` │   ¦ │   – │   ÷ ┃     │     │  *¸ │   ¬ │     ┃           ·
+  ┆     ┃   ~ │   ` │   | │   _ │   / ┃   \ │   @ │   # │   ! │   ? ┃           ·
+  ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚ · · · · · ·
+
+# The AltGr layer is only intended for full-size keyboards.
+# Compact keyboards (down to 3×10 keys) should use a physical “prog” layer
+# instead, along with “nav” and “num”, as explained below.
+
+spacebar:
+  shift:       "\u202f"  # NARROW NO-BREAK SPACE
+  altgr:       "\u0020"  # SPACE
+  altgr_shift: "\u00a0"  # NO-BREAK SPACE
+  1dk:         "\u2019"  # RIGHT SINGLE QUOTATION MARK
+  1dk_shift:   "\u2019"  # RIGHT SINGLE QUOTATION MARK
+
+
+###
+# Suggested layers for compact, programmable keyboards
+#   - 4×6 keyboards => one prog layer matching the AltGr layer:
+#       4×10 keys + prog layer + space bar = 42 keys
+#   - 3×5 keyboards => one prog/altgr layer and one number layer:
+#       3×10 keys + prog layer + num layer + space bar = 33 keys
+##
+
+# Rather than just using an AltGr key, it is recommended to  mirror the whole
+# AltGr layer to a “prog” layer in order to enable special keyboard shortcuts
+# (e.g. Ctrl-]) — and you might want to set the Shift+Prog combo on Shift+AltGr
+prog: |
+  ······┏━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┓ ┏━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┓······
+  ·     ┃ 1   │ [   │ ]   │ $   │ %   ┃ ┃ ^   │ &   │ *   │ '   │ 0   ┃     ·
+  ·     ┃     │     │     │     │     ┃ ┃     │     │     │     │     ┃     ·
+  ······┠─────┼─────┼─────┼─────┼─────┨ ┠─────┼─────┼─────┼─────┼─────┨······
+  ·     ┃ {   │ (   │ )   │ }   │ =   ┃ ┃ +   │ -   │ <   │ >   │ "   ┃     ·
+  ·     ┃     │     │     │     │     ┃ ┃     │     │     │     │     ┃     ·
+  ······┠─────┼─────┼─────┼─────┼─────┨ ┠─────┼─────┼─────┼─────┼─────┨······
+  ·     ┃ ~   │ `   │ |   │ _   │ /   ┃ ┃ \   │ @   │ #   │ !   │ ?   ┃     ·
+  ·     ┃     │     │     │     │     ┃ ┃     │     │     │     │     ┃     ·
+  ······┗━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛ ┗━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛······
+
+# On keyboards with no number row, a numeric layer is required.
+# Rather tnan using a numpad layer, a dedicated “numrow” layer can fit all
+# punctuation and number signs thanks to 1dk+[number] macros
+# (you’ll probably want to map the space key to shift+space here)
+numrow: |
+  ······┏━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┓ ┏━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┓······
+  ·     ┃ !   │ «   │ »   │ €   │ %   ┃ ┃ ¥   │ ¤   │ §   │ ¶   │ °   ┃     ·
+  ·     ┃     │     │     │     │     ┃ ┃     │     │     │     │     ┃     ·
+  ······┠─────┼─────┼─────┼─────┼─────┨ ┠─────┼─────┼─────┼─────┼─────┨······
+  ·     ┃ 1   │ 2   │ 3   │ 4   │ 5   ┃ ┃ 6   │ 7   │ 8   │ 9   │ 0   ┃     ·
+  ·     ┃     │     │     │     │     ┃ ┃     │     │     │     │     ┃     ·
+  ······┠─────┼─────┼─────┼─────┼─────┨ ┠─────┼─────┼─────┼─────┼─────┨······
+  ·     ┃ „   │ “   │ ”   │ ¢   │ ‰   ┃ ┃ —   │ -   │ ;   │ :   │ ?   ┃     ·
+  ·     ┃     │     │     │     │     ┃ ┃     │     │     │     │     ┃     ·
+  ······┗━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛ ┗━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛······
+
+# As an alternative for 3×6 keyboards, all symbols in the 10 number keys +
+# 8 pinky keys (base and shift levels) can fit in a single prog-and-num layer.
+# Not as optimized as the Lafayette AltGr layer, but still better than Qwerty.
+alt42: |
+  ╭╌╌╌╌╌┏━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┓ ┏━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┓╌╌╌╌╌╮
+  ┆ ~   ┃ !   │ @   │ #   │ $   │ %   ┃ ┃ ^   │ &   │ *   │ (   │ )   ┃ "   ┆
+  ┆     ┃     │     │     │     │     ┃ ┃     │     │     │     │     ┃     ┆
+  ┆╌╌╌╌╌┠─────┼─────┼─────┼─────┼─────┨ ┠─────┼─────┼─────┼─────┼─────┨╌╌╌╌╌┆
+  ┆ `   ┃ 1   │ 2   │ 3   │ 4   │ 5   ┃ ┃ 6   │ 7   │ 8   │ 9   │ 0   ┃ '   ┆
+  ┆     ┃     │     │     │     │     ┃ ┃     │     │     │     │     ┃     ┆
+  ┆╌╌╌╌╌┠─────┼─────┼─────┼─────┼─────┨ ┠─────┼─────┼─────┼─────┼─────┨╌╌╌╌╌┆
+  ┆ <   ┃ {   │ [   │ ]   │ }   │ >   ┃ ┃ \   │ =   │ -   │ +   │ _   ┃ |   ┆
+  ┆     ┃     │     │     │     │     ┃ ┃     │     │     │     │     ┃     ┆
+  ╰╌╌╌╌╌┗━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛ ┗━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛╌╌╌╌╌╯

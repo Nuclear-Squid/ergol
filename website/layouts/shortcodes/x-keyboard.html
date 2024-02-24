@@ -1,0 +1,33 @@
+<div class="keyboard">
+  {{ with .Get "image" }}
+    <img src="{{ . | relURL }}">
+    <p style="text-align: right;">
+    <span style="float: left;"> <small>powered by <a
+                href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>
+        </small></span>
+        <small>géométrie :</small>
+        <select>
+            <option value="dk iso">ISO</option>
+        </select>
+    </p>
+  {{ end }}
+  <nav>
+    {{ with .Get "src" }}
+      <a href="dactylo#{{ . }}">⌨ Apprendre</a>
+      <button hidden>⇪ Tester !</button>
+    {{ end }}
+    {{ with .Get "download" }}
+      <a href="{{ . }}">⇣ Installer</a>
+    {{ end }}
+  </nav>
+</div>
+
+{{ $name := .Get "name" }}
+
+{{ with .Get "src" }}
+  <dialog id="demo">
+      <input spellcheck="false" placeholder='zone de saisie {{ or $name . }}' />
+    <x-keyboard src="data/layouts/{{ . }}.json"></x-keyboard>
+  </dialog>
+{{ end }}
+

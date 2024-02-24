@@ -1,0 +1,111 @@
+html {
+  background-color: #ccc;
+}
+
+body {
+  max-width: 58em;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.4em;
+  font-family: sans-serif;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 1px 10px #888;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+h1 + p {
+  margin-top: 0.5em;
+  color: #c8a;
+}
+
+h1,
+h2 {
+  color: brown;
+  border-bottom: 1px inset;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 2em 0;
+  text-align: center;
+}
+
+dd,
+dt {
+  margin-bottom: 0.5em;
+}
+
+li {
+  margin: 0.2em 0;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  /* font-weight: normal; */
+}
+
+footer {
+  border-top: 1px solid brown;
+  text-align: right;
+  padding: 0.2rem 0 0.5rem;
+}
+
+footer small {
+  float: left;
+}
+
+a {
+  color: brown;
+}
+
+/******************************************************************************
+ * Dark Mode
+ */
+
+input,
+select {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #111;
+  }
+
+  body {
+    background-color: #222;
+    border-color: #111;
+    box-shadow: 0px 1px 10px #111;
+    color: #ccc;
+  }
+
+  h1,
+  h2,
+  header,
+  a {
+    color: #e74;
+  }
+  h1,
+  h2,
+  footer {
+    border-color: #e74;
+  }
+  h1 + p {
+    color: #e74b;
+  }
+}

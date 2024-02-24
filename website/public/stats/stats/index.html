@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Heatmap | Ergo‑L</title>
+<meta name="description" content="">
+<link type="image/svg+xml" rel="icon" href="http://localhost:1313/favicon.svg" sizes="any" />
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/layout.css">
+
+
+
+
+
+</head>
+<body>
+  <header>
+    <h1>Ergo‑L</h1>
+<p>Une disposition de clavier ergonomique optimisée pour le français, l’anglais et le code.</p>
+
+
+
+
+  </header>
+  <main>
+    
+  
+<div id="demo">
+  <input spellcheck="false" />
+  <x-keyboard id="keyboard"></x-keyboard>
+</div>
+
+<div id="sticky-select" class="keyboard">
+  <form>
+    <select id="layout">
+      <option disabled>  [en]</option>
+      <option>qwerty</option>
+      <option>dvorak</option>
+      <option>colemak</option>
+      <option>colemak-dh</option>
+      <option>workman</option>
+      <option>ISRT</option>
+      <option>MTGAP</option>
+      <option>sturdy</option>
+      <option disabled>  [fr]</option>
+      <option>azerty</option>
+      <option>lafayette</option>
+      <option selected>ergol</option>
+      <option>erglace</option>
+      <option>bepo</option>
+    </select>
+    <select id="geometry">
+      <option value="iso">ISO</option>
+      <option value="ansi" selected>ANSI</option>
+      <option value="ol60">TMx</option>
+      <option value="ol50">50%</option>
+      <option value="ol40">40%</option>
+    </select>
+    <select id="corpus">
+      <option>en</option>
+      <option selected>en+fr</option>
+      <option>fr</option>
+    </select>
+  </form>
+</div>
+
+<p id="imprecise-data">
+  <small>
+    Cette disposition ne sait pas générer un nombre non-négligeable de
+    symboles, les résultats sont peu fiables.
+  </small>
+</p>
+
+<h3>Charge des doigts</h3>
+<small><span id="load-left"></span> / <span id="load-right"></span></small>
+<div id="load">
+  <canvas></canvas>
+  <table></table>
+</div>
+
+<h3>Digrammes à un doigt</h3>
+<small><span id="sfu-all"></span></small>
+<div id="sfu">
+  <canvas></canvas>
+  <table></table>
+</div>
+
+<h3>Touches doublées</h3>
+<small><span id="sku-all"></span></small>
+<div id="sku">
+  <canvas></canvas>
+  <table></table>
+</div>
+
+<collapsable-table id="Achoppements">
+  <small>
+    <span id="unsupported-all"></span>
+    / <span id="sfu-all"></span> / <span id="extensions-all"></span> /
+    <span id="scisors-all"></span>
+  </small>
+
+  <table id="unsupported"></table>
+  <table id="sfu-digrams"></table>
+  <table id="extended-rolls"></table>
+  <table id="scisors"></table>
+</collapsable-table>
+
+<collapsable-table id="Digrammes">
+  <small>
+    <span id="sku-all"></span>
+    / <span id="inward-all"></span> / <span id="outward-all"></span>
+  </small>
+
+  <table id="sku-digrams"></table>
+  <table id="inward"></table>
+  <table id="outward"></table>
+</collapsable-table>
+
+<collapsable-table id="Trigrammes">
+  <small>
+    <span id="almost-skb-all"></span>
+    / <span id="almost-sfb-all"></span> / <span id="redirect-all"></span> /
+    <span id="bad-redirect-all"></span>
+  </small>
+
+  <table id="almost-skbs"></table>
+  <table id="almost-sfbs"></table>
+  <table id="redirect"></table>
+  <table id="bad-redirect"></table>
+</collapsable-table>
+
+
+  </main>
+  <footer>
+    <a href="https://github.com/Nuclear-Squid/ErgoL">dépôt GitHub</a> |
+<a href="https://discord.gg/5xR5K3nAFX">serveur Discord</a>
+
+  </footer>
+</body>
+</html>
