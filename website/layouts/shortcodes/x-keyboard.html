@@ -3,12 +3,12 @@
     <img src="{{ . | relURL }}">
     <p style="text-align: right;">
     <span style="float: left;"> <small>powered by <a
-                href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>
-        </small></span>
-        <small>géométrie :</small>
-        <select>
-            <option value="dk iso">ISO</option>
-        </select>
+          href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>
+      </small></span>
+      <small>géométrie :</small>
+      <select>
+        <option value="dk iso">ISO</option>
+      </select>
     </p>
   {{ end }}
   <nav>
@@ -26,7 +26,7 @@
 
 {{ with .Get "src" }}
   <dialog id="demo">
-      <input spellcheck="false" placeholder='zone de saisie {{ or $name . }}' />
+    <input spellcheck="false" placeholder="zone de saisie {{ or $name . }}" />
     <x-keyboard src="data/layouts/{{ . }}.json"></x-keyboard>
   </dialog>
 {{ end }}
