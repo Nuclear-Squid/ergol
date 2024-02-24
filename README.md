@@ -125,6 +125,3 @@ can confirm it’s exactly what we have in mind:
 Additionally, the tools that have been developed to create, optimize and build
 this layout are available under the MIT license and maintained by the
 [OneDeadKey](https://github.com/OneDeadKey) team.
-
-The books we’ve used to evaluate this keyboard layout come from [Project
-Gutenberg](https://www.gutenberg.org/).
