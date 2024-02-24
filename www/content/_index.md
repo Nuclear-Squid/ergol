@@ -39,12 +39,12 @@ Ergo‑L est meilleur que Bépo pour le Français, meilleur que Dvorak pour
 l’Anglais et meilleur que Qwerty pour la programmation !
 
 
-<a href="stats/#ergol/iso/fr">
+<a href="stats/#/ergol/iso/fr">
 
 ![fréquence des touches en français](img/ergol_fr.svg)
 
 </a>
-<a href="stats/#ergol/iso/en">
+<a href="stats/#/ergol/iso/en">
 
 ![fréquence des touches en anglais](img/ergol_en.svg)
 
@@ -244,19 +244,19 @@ façon différente.
   </tr>
   <tr>
     <th> fr </th>
-    <td> <a href="stats#/ergol/iso/fr"><img src="img/charge_ergol_fr.png"/></a> </td>
-    <td> <a href="stats#/bepo/iso/fr"> <img src="img/charge_bepo_fr.png" /></a> </td>
+    <td> <a href="stats/#/ergol/iso/fr"><img src="img/charge_ergol_fr.png"/></a> </td>
+    <td> <a href="stats/#/bepo/iso/fr"> <img src="img/charge_bepo_fr.png" /></a> </td>
   </tr>
   <tr>
     <th> fr<br>en </th>
-    <td> <a href="stats#/ergol/iso/en+fr"><img src="img/charge_ergol_en_fr.png"/></a> </td>
-    <td> <a href="stats#/bepo/iso/en+fr"> <img src="img/charge_bepo_en_fr.png"/></a>
+    <td> <a href="stats/#/ergol/iso/en+fr"><img src="img/charge_ergol_en_fr.png"/></a> </td>
+    <td> <a href="stats/#/bepo/iso/en+fr"> <img src="img/charge_bepo_en_fr.png"/></a>
     </td>
   </tr>
   <tr>
     <th> en </th>
-    <td> <a href="stats#/ergol/iso/en"><img src="img/charge_ergol_en.png"/></a> </td>
-    <td> <a href="stats#/bepo/iso/en"> <img src="img/charge_bepo_en.png" /></a> </td>
+    <td> <a href="stats/#/ergol/iso/en"><img src="img/charge_ergol_en.png"/></a> </td>
+    <td> <a href="stats/#/bepo/iso/en"> <img src="img/charge_bepo_en.png" /></a> </td>
   </tr>
 </table>
 
