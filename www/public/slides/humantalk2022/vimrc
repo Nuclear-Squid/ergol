@@ -1,0 +1,30 @@
+" coloration syntaxique
+syntax on
+colorscheme desert
+set background=dark
+
+" aides visuelles
+set number
+set ruler
+set showcmd
+
+" recherche incrémentale
+set hlsearch
+set incsearch
+set inccommand=nosplit " Neovim only
+
+" auto-indentation à 2 espaces
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" compléter avec <Tab> en mode commande
+set wildmenu
+set wildmode=longest,full
+
+" options honteuses (pour les faibles)
+set mouse=a
+set clipboard=unnamedplus
+
