@@ -1,10 +1,10 @@
-baseURL = "."
+# baseURL = "https://ergol.org"
+# baseURL = "http://localhost/kbd/ergol/website/public"
+# baseURL = "."
+relativeURLs = true
 languageCode = "fr"
 title = "Ergo‑L"
-relativeURLs = true
 
-# Cette section déclare les options customs du site web. On peut les récupérer
-# après dans .Params.<champ>`
 [params]
 description = "Une disposition de clavier ergonomique optimisée pour le français, l’anglais et le code."
 

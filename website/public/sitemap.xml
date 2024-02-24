@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>./</loc>
+    <loc>/</loc>
   </url><url>
-    <loc>./categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>./dactylo/</loc>
+    <loc>/dactylo/</loc>
   </url><url>
-    <loc>./stats/</loc>
+    <loc>/lts/</loc>
   </url><url>
-    <loc>./lts/</loc>
+    <loc>/stats/</loc>
   </url><url>
-    <loc>./tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>
