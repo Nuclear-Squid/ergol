@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // fetch a kalamine corpus: symbols, bigrams, trigrams
   const fetchNgrams = () => {
     const ngrams = gDict.value.split(',')[0];
-    return fetch(`/data/corpus/${ngrams}.json`)
+    return fetch(`../corpus/${ngrams}.json`)
       .then(response => response.json())
       .then(data => {
         gDictionary.trigrams = Object.keys(data.trigrams);
@@ -85,7 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // fetch MonkeyType words
   const fetchWords = () => {
     const words = gDict.value.split(',')[1];
-    return fetch(`/data/dicts/${words}.json`)
+    return fetch(`./${words}.json`)
       .then(response => response.json())
       .then(data => {
         gDictionary.words = data.words;
@@ -94,7 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // fetch a kalamine keyboard layout
   const fetchLayout = () => {
-    return fetch(`/data/layouts/${gLayout.value}.json`)
+    return fetch(`../layouts/${gLayout.value}.json`)
       .then(response => response.json())
       .then(layout => {
         gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, gGeometry.value);
