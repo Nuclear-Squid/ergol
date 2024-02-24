@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dactylo on Ergo‑L</title>
-    <link>http://localhost:1313/dactylo/</link>
+    <link>./dactylo/</link>
     <description>Recent content in dactylo on Ergo‑L</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <atom:link href="http://localhost:1313/dactylo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="./dactylo/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
