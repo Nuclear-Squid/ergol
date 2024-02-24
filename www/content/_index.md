@@ -6,7 +6,7 @@ jsScripts = ['js/demo.js', 'js/svg.js']
 +++
 
 {{< x-keyboard
-    src="ergol"
+    src="./layouts/ergol.json"
     name="Ergo‑L"
     download="lts"
     image="img/ergol.svg" >}}

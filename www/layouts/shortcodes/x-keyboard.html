@@ -26,8 +26,8 @@
 
 {{ with .Get "src" }}
   <dialog id="demo">
-    <input spellcheck="false" placeholder="zone de saisie {{ or $name . }}" />
-    <x-keyboard src="data/layouts/{{ . }}.json"></x-keyboard>
+      <input spellcheck="false" placeholder='{{ if $name }} {{ printf "zone de saisie %s" $name }} {{ end }}' />
+    <x-keyboard src="{{ . }}"></x-keyboard>
   </dialog>
 {{ end }}
 
