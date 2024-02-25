@@ -1,12 +1,11 @@
 # baseURL = "https://ergol.org"
-# baseURL = "http://localhost/kbd/ergol/website/public"
-# baseURL = "."
 relativeURLs = true
 languageCode = "fr"
 title = "Ergo‑L"
 
 [params]
-description = "Une disposition de clavier ergonomique optimisée pour le français, l’anglais et le code."
+subtitle = "Ergonomie optimisée pour le français, l’anglais, le code."
+description = "Une disposition de clavier ergonomique de type Colemak, optimisée pour le français, l’anglais et le code."
 
 [security.exec]
 allow = ["pandoc"]

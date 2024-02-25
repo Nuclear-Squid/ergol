@@ -1,8 +1,8 @@
 +++
 [params]
-extraCss  = ['/css/demo.css']
-jsModules = ['js/x-keyboard.js']
-jsScripts = ['js/demo.js', 'js/svg.js']
+extraCss  = ["/css/demo.css"]
+jsModules = ["js/x-keyboard.js"]
+jsScripts = ["js/demo.js", "js/svg.js"]
 +++
 
 {{< x-keyboard
@@ -298,7 +298,7 @@ façon différente.
 ### Expériences rejetées et évolutions possibles
 
 Le layout est encore en cours de développement, notamment pour corriger certains
-enchaînements inconfortables, comme `if` et `my`. Vous pouvez participer aux
+enchaînements inconfortables comme `if` et `my`. Vous pouvez participer aux
 travaux en rejoignant le [serveur Discord](https://discord.gg/5xR5K3nAFX) dédié.
 
 On a envisagé par le passé de placer le [E]{.kbd} sous l’index, comme en Bépo,

@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-<meta name="description" content="{{ .Description }}">
+<meta name="description" content="{{ .Site.Params.description }}">
 <link type="image/svg+xml" rel="icon" href="{{ absURL "favicon.svg" }}" sizes="any" />
 
 {{ partial "head/js.html" . }}
