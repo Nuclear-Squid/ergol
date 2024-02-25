@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ergo‑L</title>
-    <link>/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content on Ergo‑L</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>/slides/capitoledulibre2023/</link>
+      <link>//localhost:1313/slides/capitoledulibre2023/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/slides/capitoledulibre2023/</guid>
+      <guid>//localhost:1313/slides/capitoledulibre2023/</guid>
       <description>&lt;!DOCTYPE html&gt; Ergonomie des dispositions de claviers : l’ère post-Dvorak name: inverse layout: true class: center, middle, inverse --- layout: false class: middle, inverse # Ergonomie des dispositions de claviers : l’ère post-Dvorak --- ## Qui suis-je? - pseudo courant : Nuclear-Squid - vrai nom : Léo Cazenave - étudiant en informatique et électronique à Grenoble - je traîne sur r/keyboard_layouts comme d’autres traînent sur pornhub - dirige le projet Ergo-L --- class: middle, inverse # L’ère de Dvorak --- ## Qwerty (1878) !</description>
     </item>
     <item>
       <title></title>
-      <link>/slides/humantalk2022/</link>
+      <link>//localhost:1313/slides/humantalk2022/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/slides/humantalk2022/</guid>
+      <guid>//localhost:1313/slides/humantalk2022/</guid>
       <description>&lt;!DOCTYPE html&gt; Ergonomie holistique du clavier name: inverse layout: true class: center, middle, inverse --- template: inverse # Ergo-L : une disposition de clavier ergonomique et moderne --- layout: false ## Qui suis-je? - Léo Cazenave (mon vrai nom) - Nuclear Squid (mon pseudo un peu partout) - étudiant en L2 maths/info à Grenoble - code principalement en OCaml et en Rust - considère que le bon nombre de claviers est &#34;</description>
     </item>
     <item>
       <title></title>
-      <link>/slides/jdll2022/</link>
+      <link>//localhost:1313/slides/jdll2022/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/slides/jdll2022/</guid>
+      <guid>//localhost:1313/slides/jdll2022/</guid>
       <description>&lt;!DOCTYPE html&gt; Ergol : une disposition de clavier ergonomique et moderne name: inverse layout: true class: center, middle, inverse --- layout: false # Ergol : une disposition de clavier ergonomique et moderne --- ## Qui suis-je? - léo Cazenave - (imbécile à haute vélocité) - étudiant en informatique à Grenoble - je traîne sur r/keyboard_layouts comme d’autres traînent sur pornhub --- ## Enfance martyre - éduqué par Kazé - contraint à taper avec Qwerty-Lafayette - premier clavier : TypeMatrix - premier éditeur : Vim (aujourd’hui Neovim) - OS : ubuntu studio - bureau : i3 --- ## Posture générale — desktop - dos droit, haut de l’écran à hauteur des yeux - bras, bassin et genoux à &amp;gt; 90° - pauses régulières (changement de position) !</description>
     </item>
     <item>
       <title>dactylo</title>
-      <link>/dactylo/</link>
+      <link>//localhost:1313/dactylo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/dactylo/</guid>
+      <guid>//localhost:1313/dactylo/</guid>
       <description> 🦆 ·&#xA;Ergo‑L Erglace Bépo Azerty Lafayette Français 1k Français 10k English 1k English 10k ISO ANSI TMx 4×6 3×6 powered by x-keyboard, inspired by keyzen and keybr, fuelled by MonkeyType </description>
     </item>
     <item>
       <title>Ergo‑L v0.7 LTS</title>
-      <link>/lts/</link>
+      <link>//localhost:1313/lts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/lts/</guid>
+      <guid>//localhost:1313/lts/</guid>
       <description> powered by x-keyboard géométrie : ISO Téléchargement Windows, installeur : ergol_KbdEditInstaller.exe Exécuter l’installeur et relancer la session. La disposition de clavier apparaît dans la barre de langues (indicateur de la barre des tâches). Windows, version portable : ergol_ahk.exe Après lancement, un indicateur apparaît dans la barre des tâches. Le pilote peut être activé / désactivé avec le raccourci Alt+AltGr</description>
     </item>
     <item>
       <title>Heatmap</title>
-      <link>/stats/</link>
+      <link>//localhost:1313/stats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/stats/</guid>
+      <guid>//localhost:1313/stats/</guid>
       <description> [en] qwerty dvorak colemak colemak-dh workman ISRT MTGAP sturdy [fr] azerty lafayette ergol erglace bepo ISO ANSI TMx 50% 40% en en+fr fr Cette disposition ne sait pas générer un nombre non-négligeable de symboles, les résultats sont peu fiables. Charge des doigts / Digrammes à un doigt Touches doublées / / / / / / / / </description>
     </item>
   </channel>

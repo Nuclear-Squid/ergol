@@ -104,7 +104,7 @@ en français (ESANITRUO) et en anglais (ETAOHNISR) :
 Ergo‑L place donc ces lettres aux emplacements les plus confortables (au sens de
 Workman) et fait en sorte qu’aucun enchaînement fréquent en français ou en
 anglais ne soit rédhibitoire. On obtient donc une efficacité supérieure à Bépo
-ou Dvorak-fr, sans sacrifier le code ni l’anglais.
+ou Dvorak-fr, sans sacrifier ni le code ni l’anglais.
 
 
 ### Gestion des accents
@@ -155,7 +155,7 @@ manque de confort et de précision causé par les extensions. Cela implique que�
       en accès rapide.
     - Faire shift + voyelle **après** la touche morte permet d’avoir les lettres
       accentuées en majuscule. Oubliez vos alt codes !
-    - Une exception : le `é` se fait en touche morte → `s` pour garder
+    - Une exception : le `é` se fait en touche morte → `s` pour garder
       l’enchaînement `ée` efficace.
 - La couche AltGr (voir ci-dessous) est réservée aux symboles de programmation :
     - tous les symboles de programmation sont en AltGr. Accolades, chevrons et
@@ -234,29 +234,63 @@ façon différente.
 <!-- Bon, j’ai beau adorer pandoc-md, ce tableau il *reste en HTML* -->
 <table>
   <caption style="caption-side: bottom">
-    Comparaison des charges des doigts entre Ergo‑L et Bépo<br>
-    <small> (cliquer sur l’image pour plus d’infos) </small>
+    Comparaison des charges des doigts entre Bépo et Ergo‑L<br>
+    <small> (cliquer sur l’histogramme pour plus d’infos) </small>
   </caption>
+
   <tr>
+    <th> Bépo </th>
     <th></th>
     <th> Ergo‑L </th>
-    <th> Bépo </th>
   </tr>
   <tr>
+    <td> <a href="stats/#/bepo/iso/fr"> <img src="img/charge_bepo_fr.png" /></a> </td>
     <th> fr </th>
     <td> <a href="stats/#/ergol/iso/fr"><img src="img/charge_ergol_fr.png"/></a> </td>
-    <td> <a href="stats/#/bepo/iso/fr"> <img src="img/charge_bepo_fr.png" /></a> </td>
   </tr>
   <tr>
-    <th> fr<br>en </th>
+    <td> <a href="stats/#/bepo/iso/en+fr"> <img src="img/charge_bepo_en_fr.png"/></a> </td>
+    <th> fr‑en </th>
     <td> <a href="stats/#/ergol/iso/en+fr"><img src="img/charge_ergol_en_fr.png"/></a> </td>
-    <td> <a href="stats/#/bepo/iso/en+fr"> <img src="img/charge_bepo_en_fr.png"/></a>
-    </td>
   </tr>
   <tr>
+    <td> <a href="stats/#/bepo/iso/en"> <img src="img/charge_bepo_en.png" /></a> </td>
     <th> en </th>
     <td> <a href="stats/#/ergol/iso/en"><img src="img/charge_ergol_en.png"/></a> </td>
-    <td> <a href="stats/#/bepo/iso/en"> <img src="img/charge_bepo_en.png" /></a> </td>
+  </tr>
+
+  <tr style="text-align: right; font-size: 10px;">
+    <td>
+      <table><tr>
+        <td width="9%"> </td>
+        <td width="9%"> 9.6 %</td>
+        <td width="9%"> 8.0 %</td>
+        <td width="9%"> 9.7 %</td>
+        <td width="9%">23.0 %</td>
+        <td width="9%"> </td>
+        <td width="9%">15.2 %</td>
+        <td width="9%">12.3 %</td>
+        <td width="9%">15.6 %</td>
+        <td width="9%">13.7 %</td>
+        <td width="9%"> </td>
+      </tr></table>
+    </td>
+    <td style="text-align: center; font-size: 12px;"> max. </td>
+    <td>
+      <table><tr>
+        <td width="9%"> </td>
+        <td width="9%"> 9.2 %</td>
+        <td width="9%">12.0 %</td>
+        <td width="9%">19.5 %</td>
+        <td width="9%">14.8 %</td>
+        <td width="9%"> </td>
+        <td width="9%">18.6 %</td>
+        <td width="9%">15.2 %</td>
+        <td width="9%">11.1 %</td>
+        <td width="9%"> 6.9 %</td>
+        <td width="9%"> </td>
+      </tr></table>
+    </td>
   </tr>
 </table>
 

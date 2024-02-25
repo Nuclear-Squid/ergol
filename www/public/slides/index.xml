@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slides on Ergo‑L</title>
-    <link>/slides/</link>
+    <link>//localhost:1313/slides/</link>
     <description>Recent content in Slides on Ergo‑L</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <atom:link href="/slides/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/slides/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>/slides/capitoledulibre2023/</link>
+      <link>//localhost:1313/slides/capitoledulibre2023/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/slides/capitoledulibre2023/</guid>
+      <guid>//localhost:1313/slides/capitoledulibre2023/</guid>
       <description>&lt;!DOCTYPE html&gt; Ergonomie des dispositions de claviers : l’ère post-Dvorak name: inverse layout: true class: center, middle, inverse --- layout: false class: middle, inverse # Ergonomie des dispositions de claviers : l’ère post-Dvorak --- ## Qui suis-je? - pseudo courant : Nuclear-Squid - vrai nom : Léo Cazenave - étudiant en informatique et électronique à Grenoble - je traîne sur r/keyboard_layouts comme d’autres traînent sur pornhub - dirige le projet Ergo-L --- class: middle, inverse # L’ère de Dvorak --- ## Qwerty (1878) !</description>
     </item>
     <item>
       <title></title>
-      <link>/slides/humantalk2022/</link>
+      <link>//localhost:1313/slides/humantalk2022/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/slides/humantalk2022/</guid>
+      <guid>//localhost:1313/slides/humantalk2022/</guid>
       <description>&lt;!DOCTYPE html&gt; Ergonomie holistique du clavier name: inverse layout: true class: center, middle, inverse --- template: inverse # Ergo-L : une disposition de clavier ergonomique et moderne --- layout: false ## Qui suis-je? - Léo Cazenave (mon vrai nom) - Nuclear Squid (mon pseudo un peu partout) - étudiant en L2 maths/info à Grenoble - code principalement en OCaml et en Rust - considère que le bon nombre de claviers est &#34;</description>
     </item>
     <item>
       <title></title>
-      <link>/slides/jdll2022/</link>
+      <link>//localhost:1313/slides/jdll2022/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/slides/jdll2022/</guid>
+      <guid>//localhost:1313/slides/jdll2022/</guid>
       <description>&lt;!DOCTYPE html&gt; Ergol : une disposition de clavier ergonomique et moderne name: inverse layout: true class: center, middle, inverse --- layout: false # Ergol : une disposition de clavier ergonomique et moderne --- ## Qui suis-je? - léo Cazenave - (imbécile à haute vélocité) - étudiant en informatique à Grenoble - je traîne sur r/keyboard_layouts comme d’autres traînent sur pornhub --- ## Enfance martyre - éduqué par Kazé - contraint à taper avec Qwerty-Lafayette - premier clavier : TypeMatrix - premier éditeur : Vim (aujourd’hui Neovim) - OS : ubuntu studio - bureau : i3 --- ## Posture générale — desktop - dos droit, haut de l’écran à hauteur des yeux - bras, bassin et genoux à &amp;gt; 90° - pauses régulières (changement de position) !</description>
     </item>
   </channel>
