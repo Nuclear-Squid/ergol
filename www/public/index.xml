@@ -36,6 +36,13 @@
       <description> 🦆 ·&#xA;Ergo‑L Erglace Bépo Azerty Lafayette Français 1k Français 10k English 1k English 10k ISO ANSI TMx 4×6 3×6 </description>
     </item>
     <item>
+      <title>Erglace</title>
+      <link>//localhost:1313/erglace/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/erglace/</guid>
+      <description>powered by x-keyboard géométrie : ISO ⌨ Apprendre ⇪ Tester ! ⇣ Installer Ressources utilisées Keyboard Layouts Doc, ressource théorique très complète La page de statistiques d’Ergo-L Layout playground, pour des statistiques complémentaires (LSB, BadRedirects) et du prototypage rapide Les statistiques de fréquence de Ergo-L pour le français et l’anglais Heatmap d’effort des touches du clavier, développée pour Colmak-DH Les retours sur le discord d’Ergo-L Notes de conception Le point de départ était de faire une disposition avec moins de redirections qu’Ergo‑L.</description>
+    </item>
+    <item>
       <title>Ergo‑L ou Bépo ?</title>
       <link>//localhost:1313/bepo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
