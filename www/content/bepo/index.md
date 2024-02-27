@@ -7,6 +7,12 @@ jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/demo.js", "/js/svg.js"]
 +++
 
+{{< x-keyboard
+    name="Bépo"
+    download="https://bepo.fr"
+    src="/layouts/bepo.json"
+    image="/img/bepo.svg" >}}
+
 
 Ergonomie
 --------------------------------------------------------------------------------
@@ -14,32 +20,38 @@ Ergonomie
 ### Bépo
 
 Conservant l’approche AZERTY d’avoir certaines lettres accentuées en direct
-(`ÉÈÀÇ`), Bépo a manqué de place pour placer toutes les lettres et a choisi
-d’occuper les colonnes excentrées pour des lettres jugées moins fréquentes
-(`MZWÇ`). Il en résulte une incompatibilité avec la plupart des claviers
-ergonomiques du marché, qui ne proposent que 6 colonnes de touches par main pour
-respecter le principe 1DFH.
+(`É`, `È`, `À`, `Ç`), Bépo a manqué de place pour placer toutes les lettres et a
+choisi d’occuper les colonnes excentrées pour des lettres jugées moins
+fréquentes (`M`, `Z`, `W`, `Ç`). Il en résulte une incompatibilité avec la
+plupart des claviers ergonomiques du marché, qui ne proposent que 6 colonnes de
+touches par main pour respecter le principe 1DFH.
 
 Par ailleurs, la charge des doigts est mal répartie :
 
 - la charge de l’index gauche est très élevée (> 23 % en français), et c’est
-  d’autant plus gênant que ce doigt gère à lui seul la moitié des digrammes de
-  même doigt (voir plus bas) ;
+  d’autant plus gênant que ce doigt gère à lui seul la moitié des [digrammes de
+  même doigt](#optimisation) ;
 - plus grave, la charge de l’auriculaire droit (> 11 % en français) est bien
   plus élevée que dans toutes les dispositions de clavier francophones,
   optimisées ou non ;
 - une grande partie des touches doublées se trouvent sous l’auriculaire droit —
   et souvent en extension !
 
-D’inspiration [Dvorak][], Bépo a renoncé aux raccourcis clavier positionnels
-[Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
+C’est notamment le cas du `M` : 13e lettre la plus fréquente en français (2.7 %
+de fréquence, soit plus que tous les caractères accentués cumulés), fréquemment
+doublé (0.2 % du temps) et en extension latérale sur l’auriculaire droit. Cela
+favorise grandement les déviations ulnaires, qui sont la principale cause de
+développement de troubles musculo-squelettiques associés à la saisie au clavier.
+
+Enfin, par inspiration [Dvorak][], Bépo a renoncé aux raccourcis clavier
+positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
 
 ### Ergo‑L
 
 Ergo‑L se veut « ergonomique avant tout ». À ce titre, il suit une approche 1DFH
 stricte, plaçant les 26 lettres et les 4 principales ponctuations dans le pavé
 central de 3×10 touches, garantissant une compatibilité parfaite avec tous les
-claviers de 33 a 105 touches, ergonomiques ou non.
+claviers de 33 à 105 touches, ergonomiques ou non.
 
 Cette approche permet aussi de garder les chiffres en direct, rendant le pavé
 numérique inutile. On peut ainsi utiliser des claviers compacts qui favorisent
@@ -50,6 +62,9 @@ Les auriculaires sont préservés, en particulier le droit qui est en charge des
 touches [Entrée]{.kbd} et [Backspace]{.kbd} sur la plupart des claviers (et qui
 ne sont pas comptées dans ces métriques).
 
+Les lettres fréquemment doublées (e.g. [L]{.kbd}, [N]{.kbd} et [M]{.kbd}) sont
+placées sous les index.
+
 Les raccourcis clavier positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}
 ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
 [C]{.kbd} a été déplacé pour permettre un gain d’optimisation très sensible.
@@ -57,7 +72,7 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
 <!-- Bon, j’ai beau adorer pandoc-md, ce tableau il *reste en HTML* -->
 <table>
   <caption style="caption-side: bottom">
-    Comparaison des charges des doigts entre Bépo et Ergo‑L<br>
+    Comparaison des charges des doigts entre Bépo et Ergo‑L.<br>
     <small> (cliquer sur l’histogramme pour plus d’infos) </small>
   </caption>
 
@@ -67,19 +82,19 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
     <th> Ergo‑L </th>
   </tr>
   <tr>
-    <td> <a href="../stats/#/bepo/iso/fr"><img src="./charge_bepo_fr.png" /></a> </td>
+    <td> <a href="/stats/#/bepo/iso/fr"><img src="./charge_bepo_fr.png" /></a> </td>
     <th> fr </th>
-    <td> <a href="../stats/#/ergol/iso/fr"><img src="./charge_ergol_fr.png"/></a> </td>
+    <td> <a href="/stats/#/ergol/iso/fr"><img src="./charge_ergol_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="../stats/#/bepo/iso/en+fr"><img src="./charge_bepo_en_fr.png"/></a> </td>
+    <td> <a href="/stats/#/bepo/iso/en+fr"><img src="./charge_bepo_en_fr.png"/></a> </td>
     <th> fr‑en </th>
-    <td> <a href="../stats/#/ergol/iso/en+fr"><img src="./charge_ergol_en_fr.png"/></a> </td>
+    <td> <a href="/stats/#/ergol/iso/en+fr"><img src="./charge_ergol_en_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="../stats/#/bepo/iso/en"><img src="./charge_bepo_en.png" /></a> </td>
+    <td> <a href="/stats/#/bepo/iso/en"><img src="./charge_bepo_en.png" /></a> </td>
     <th> en </th>
-    <td> <a href="../stats/#/ergol/iso/en"><img src="./charge_ergol_en.png"/></a> </td>
+    <td> <a href="/stats/#/ergol/iso/en"><img src="./charge_ergol_en.png"/></a> </td>
   </tr>
 
   <tr style="text-align: right; font-size: 10px;">
@@ -171,17 +186,19 @@ même doigt :
 <style>
 .sfu table th,
 .sfu table td { padding: 0.2em 0; }
-.sfu table tr :nth-child(4) { background-color: #f884; }
+.sfu table tr td:nth-child(4) { background-color: #f884; }
+.sfu table caption { caption-side: bottom; margin-top: 0.5em; font-size: smaller; }
 .sfu table { margin: 1em auto; max-width: 50em; border-collapse: collapse; }
 .sfu a:hover { text-decoration: underline; }
 .sfu a       { text-decoration: none; }
 </style>
 
 :::{.sfu}
-|      |  AZERTY                            |  Bépo                            |  Ergo‑L                           |  Dvorak                            |  QWERTY                            |
-|    -:|:----------------------------------:|:--------------------------------:|:---------------------------------:|:----------------------------------:|:----------------------------------:|
-|**fr**| [7.97 %](../stats/#/azerty/iso/fr) | [2.55 %](../stats/#/bepo/iso/fr) | [1.23 %](../stats/#/ergol/iso/fr) | [3.31 %](../stats/#/dvorak/iso/fr) | [7.16 %](../stats/#/qwerty/iso/fr) |
-|**en**| [6.31 %](../stats/#/azerty/iso/en) | [3.01 %](../stats/#/bepo/iso/en) | [1.40 %](../stats/#/ergol/iso/en) | [2.62 %](../stats/#/dvorak/iso/en) | [5.76 %](../stats/#/qwerty/iso/en) |
+|      |  AZERTY                          |  Bépo                          |  Ergo‑L                         |  Dvorak                          |  QWERTY                          |
+|    -:|:--------------------------------:|:------------------------------:|:-------------------------------:|:--------------------------------:|:--------------------------------:|
+|**fr**| [7.97 %](/stats/#/azerty/iso/fr) | [2.55 %](/stats/#/bepo/iso/fr) | [1.23 %](/stats/#/ergol/iso/fr) | [3.31 %](/stats/#/dvorak/iso/fr) | [7.16 %](/stats/#/qwerty/iso/fr) |
+|**en**| [6.31 %](/stats/#/azerty/iso/en) | [3.01 %](/stats/#/bepo/iso/en) | [1.40 %](/stats/#/ergol/iso/en) | [2.62 %](/stats/#/dvorak/iso/en) | [5.76 %](/stats/#/qwerty/iso/en) |
+: Taux de digrammes de même doigts en français et anglais.
 :::
 
 **De notre point de vue** : l’optimisation de Bépo est faite au détriment de
@@ -235,17 +252,27 @@ mais pour les autres caractères spéciaux Ergo‑L se contente des touches mort
 standard définies dans XKB afin de proposer des pilotes plus robustes.
 Les autres caractères spéciaux sont laissés à la touche Compose.
 
-**De notre point de vue** : les deux dispostions se valent sur ce point.
-L’approche Bépo est probablement plus intuitive, celle d’Ergo‑L plus fluide une
-fois l’apprentissage effectué.
+![La couche Typo d’Ergo‑L.](/img/ergol_1dk.svg)
+
+**De notre point de vue** : la saisie de la plupart des caractères accentués
+est plus intuitive avec Bépo. L’approche d’Ergo‑L permet d’éviter les extensions
+de doigts mais nécessite un apprentissage.
 
 
 Programmation
 --------------------------------------------------------------------------------
 
-Avec son optimisation pour l’anglais et son support de symboles de programmation
-soit à leur position QWERTY, soit dans la couche [AltGr]{.kbd} optimisée pour
-cet usage, Ergo‑L est de loin la disposition la plus adaptée à la programmation.
+Avec son optimisation pour l’anglais et sa couche dédiée aux symboles de
+programmation en [AltGr]{.kbd}, Ergo‑L est de loin la disposition la plus
+adaptée à la programmation. Comme pour les lettres en français et en anglais,
+les symboles sont placés de façon à faciliter les enchaînements et éviter les
+touches répétées sous les auriculaires.
+
+![La couche Symboles d’Ergo‑L.](/img/ergol_altgr.svg)
+
+La touche [AltGr]{.kbd} reste facultative, les symboles étant également
+disponibles aux emplacements du QWERTY ANSI, qui est perçu comme efficace pour
+cet usage.
 
 
 Variantes de Bépo
@@ -258,8 +285,7 @@ repris la philosophie initiale :
 - les lettres sont étalées sur toutes les colonnes du clavier ;
 - les chiffres restent en Shift.
 
-Et très logiquement, ces variantes présentent les mêmes principaux défauts
-d’ergonomie que Bépo :
+Et très logiquement, ces variantes présentent les mêmes défauts d’ergonomie :
 
 - compatibilité délicate avec la quasi-totalité des claviers ergonomiques ;
 - surcharge importante de l’auriculaire droit ;
@@ -285,104 +311,7 @@ que très marginalement :
   personnes qui ont des difficultés avec Bépo.
 
 
-<!--
-## Principes d’ergonomie
-
-### Une approche moderne de la saisie de texte
-
-Il n’y a pas de lettres à l’extérieur des 3×10 touches du centre pour éviter le
-manque de confort et de précision causé par les extensions. Cela implique que :
-
-- Les lettres accentuées et ponctuations spéciales soient obtenues avec une
-  touche morte :
-    - c’est moins intuitif qu’une couche [AltGr]{.kbd}, mais favorise les
-      enchaînements et l’apprentissage en mémoire musculaire.
-    - La touche morte ajoute aux voyelles qui suivent un accent grave (ou les
-      transforme en leur diacritique principal si elles n’ont pas d’accent
-      grave).
-    - Les accents circonflexes se font avec une touche à côté de la touche de la
-      voyelle, et les trémas avec double touche morte, puis la voyelle. Ce n’est
-      pas du tout intuitif, mais ça permet de garder tous les accents courants
-      en accès rapide.
-    - Faire shift + voyelle **après** la touche morte permet d’avoir les lettres
-      accentuées en majuscule. Oubliez vos alt codes !
-    - Une exception : le `é` se fait en touche morte → `s` pour garder
-      l’enchaînement `ée` efficace.
-- La couche AltGr (voir ci-dessous) est réservée aux symboles de programmation :
-    - tous les symboles de programmation sont en AltGr. Accolades, chevrons et
-      parenthèses sont sur les 6 touches les plus accessibles.
-    - La disposition est optimisée pour les enchaînements fréquents en
-      programmation : `-> >= </> != (); ~/ ['']` …
-
-La touche morte et la couche AltGr rendent la disposition **compatible avec les
-claviers ultra compacts** (33 touches minimum).
-
-![La touche morte d’Ergo‑L.](img/ergol_1dk.svg)
-
-![La couche AltGr d’Ergo‑L.](img/ergol_altgr.svg)
-
-Les chiffres sont en accès direct, sans [Shift]{.kbd}, pour faciliter leur
-enchaînement (= la saisie de nombres). Oubliez votre pavé numérique !
-
-Les raccourcis usuels [Ctrl]{.kbd}‑{[Q]{.kbd}, [A]{.kbd}, [S]{.kbd}, [Z]{.kbd},
-[X]{.kbd}, [V]{.kbd}} ont été conservés car le gain marginal d’ergonomie en
-mettant une autre lettre à la place n’est pas suffisant pour compenser la perte
-de ces raccourcis — loin s’en faut (une exception : [Ctrl]{.kbd}‑[C]{.kbd} qui a
-permis un gain important d’ergonomie, et a été modifié de sorte à gêner le moins
-possible).
-
-Beaucoup d’attention a été portée sur les enchaînements de lettres, avec la
-plupart des enchaînements fréquents qui se font soit avec une alternance main
-gauche / main droite, soit avec un roulement intérieur (se terminant sur le
-majeur ou l’index). Les lettres fréquemment doublées (e.g. [L]{.kbd}, [N]{.kbd}
-et [M]{.kbd}) sont placées sous les index. **On privilégie le confort sur la
-vitesse** : il est possible de taper vite avec n’importe quelle disposition de
-clavier.
-
-
-### Ergo‑L vs Bépo
-
-Ergo‑L poursuit les mêmes objectifs que [Bépo][4] pour le français, mais d’une
-façon différente.
-
-- *Heatmap* :
-    - Bépo est typé « Dvorak », i.e. les touches fréquentes sont étalées sur
-      toute la *home row* ;
-    - Ergo‑L est typé « Workman », i.e. on évite les deux colonnes du centre
-      pour limiter les extensions de l’index.
-- Charge des doigts :
-    - Bépo charge surtout les index et les auriculaires (notamment l’auriculaire
-      droit) ;
-    - Ergo‑L répartit la charge sur tous les doigts, en mettant plus de charge
-      sur les doigts forts (index, majeur) et en allégeant les auriculaires —
-      surtout l’auriculaire droit, déjà très sollicité par [Shift]{.kbd} /
-      [Entrée]{.kbd} / [Backspace]{.kbd}.
-- Enchaînements :
-    - Bépo privilégie les accès directs et étale les lettres sur tout le
-      clavier, quitte à requérir des extensions de doigts ([MZWÇÊ]{.kbd}) ou
-      l’utilisation de [AltGr]{.kbd} (`ù`, tréma, ponctuation…) ;
-    - Ergo‑L privilégie la fluidité et ne place aucune lettre hors de la zone
-      principale de 3×10 touches ou dans la couche [AltGr]{.kbd}.
-- Typographie :
-    - Bépo permet une typographie soignée à condition de s’en donner la peine
-      (beaucoup de symboles en [AltGr]{.kbd}) ;
-    - Ergo‑L hérite du Qwerty-Lafayette la facilité de soigner la typo — les
-      ponctuations spéciales sont toutes derrière la touche morte, comme
-      l’apostrophe typographique en touche morte + espace, le point médian en
-      touche morte + virgule, le point de suspension en touche morte + point,
-      etc.
-- <abbr title="La proportion totale d’enchaînements effectués avec le même
-  doigt, un type d’enchaînement très inconfortable"> SFU (same finger usage)
-  </abbr> :
-    - Bépo a environ 2.55% de SFU en Français, dont la moitié sont retrouvés sur
-      l’index gauche, qui est déjà trop chargé (23% de la charge totale), et
-      0.3% se trouvent sur l’auriculaire gauche, trop pour un doigt aussi
-      faible. De plus, une grande partie des touches doublées se trouvent sur
-      l’auriculaire droit (et souvent en extension !)
-    - Ergo‑L n’a que 1.36% de SFU en Français, et aucun doigt ne fait trop
-      d’effort. Les auriculaires n’ont pratiquement pas de touches doublées.
-
--->
-
-[dvorak]:  https://fr.wikipedia.org/wiki/Disposition_Dvorak
 [bépo]:    https://bepo.fr
+[dvorak]:  https://fr.wikipedia.org/wiki/Disposition_Dvorak
+[workman]: https://workmanlayout.org
+[colemak]: https://colemak.com
