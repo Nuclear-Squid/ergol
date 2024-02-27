@@ -15,10 +15,12 @@ footer = """
 +++
 
 <style>
-  html { height: 100%; }
-  body { padding: 0 20px; min-height: 100%; }
+  /* compact view: let the flex magic handle the vertical margins */
+  body { padding: 0 20px; }
   header h1, #banner { display: none; }
   header nav { border: none; }
+  .keyboard { margin-bottom: 0; }
+  h2, footer { margin-top: 0; }
 
   h1 .quacks,
   h2 .quacks {
@@ -34,7 +36,6 @@ footer = """
   }
 
   h2 {
-    margin-top: 1em;
     font-size: 2em;
   }
 

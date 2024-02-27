@@ -9,13 +9,6 @@
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>//localhost:1313/old/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/old/</guid>
-      <description>Optimisation L’optimisation d’une disposition de clavier francophone comprend deux difficultés :&#xA;le placement des lettres, selon une méthode de type Dvorak ou Colemak ; la gestion des caractères accentués — accès direct, AltGr, touche morte ? TL;PL: Ergo‑L est une disposition optimisée façon Colemak / Workman, utilisant une touch morte de type Lafayette pour les caractères accentués.&#xA;Ergo‑L est meilleur que Bépo pour le Français, meilleur que Dvorak pour l’Anglais et meilleur que Qwerty pour la programmation !</description>
-    </item>
-    <item>
-      <title></title>
       <link>//localhost:1313/slides/capitoledulibre2023/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/slides/capitoledulibre2023/</guid>

@@ -51,10 +51,12 @@
     
   
 <style>
-  html { height: 100%; }
-  body { padding: 0 20px; min-height: 100%; }
+  /* compact view: let the flex magic handle the vertical margins */
+  body { padding: 0 20px; }
   header h1, #banner { display: none; }
   header nav { border: none; }
+  .keyboard { margin-bottom: 0; }
+  h2, footer { margin-top: 0; }
 
   h1 .quacks,
   h2 .quacks {
@@ -70,7 +72,6 @@
   }
 
   h2 {
-    margin-top: 1em;
     font-size: 2em;
   }
 
@@ -158,8 +159,8 @@
   </main>
   <footer>
     <span style="float: left"><small>powered by <a href="https://onedeadkey.github.io/x-keyboard">x-keyboard</a>, inspired by <a href="https://github.com/wwwtyro/keyzen">keyzen</a> and <a href="https://github.com/aradzie/keybr.com">keybr</a>, fuelled by <a href="https://github.com/monkeytypegame/monkeytype">MonkeyType</a></small></span>
-<a href="https://github.com/Nuclear-Squid/ErgoL">dépôt GitHub</a> |
-<a href="https://discord.gg/5xR5K3nAFX">serveur Discord</a>
+<a href="https://github.com/Nuclear-Squid/ErgoL">GitHub</a> |
+<a href="https://discord.gg/5xR5K3nAFX">Discord</a>
 
   </footer>
 </body>
