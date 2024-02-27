@@ -1,4 +1,17 @@
-<h1><a href="/">{{ site.Title }}</a></h1>
-<p>{{ .Site.Params.subtitle }}</p>
+<div id="banner">
+  <p class="title"><a href="/">{{ site.Title }}</a></p>
+  <p>{{ .Site.Params.subtitle }}</p>
+</div>
+
+<nav>
+  <a href="/">Ergo‑L</a>
+  | <a href="/bepo">Bépo ?</a>
+  <!-- | <a href="">Erglace !</a> -->
+  <!-- | <a href="">Lafayette</a> -->
+  | <a href="/stats">Stats</a>
+  | <a href="/dactylo">Apprendre</a>
+</nav>
 
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+
+<h1>{{ .Title }}</h1>

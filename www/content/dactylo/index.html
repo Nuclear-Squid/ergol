@@ -1,13 +1,91 @@
 +++
-title = "dactylo"
+title = "Duck Typist"
 
 [params]
-extraCss  = ['css/demo.css']
-jsModules = ['js/x-keyboard.js']
-jsScripts = ['js/dactylo.js']
+cssSheets = ["/css/keyboard.css"]
+jsModules = ["/js/x-keyboard.js"]
+jsScripts = ["/js/duck-typist.js"]
+
+footer = """
+  powered by [x-keyboard](https://onedeadkey.github.io/x-keyboard),
+  inspired by [keyzen](https://github.com/wwwtyro/keyzen)
+  and [keybr](https://github.com/aradzie/keybr.com),
+  fuelled by [MonkeyType](https://github.com/monkeytypegame/monkeytype)
+"""
 +++
 
-<h1><span class="key_list"></span><span class="quacks">🦆</span></h1>
+<style>
+  html { height: 100%; }
+  body { padding: 0 20px; min-height: 100%; }
+  header h1, #banner { display: none; }
+  header nav { border: none; }
+
+  h1 .quacks,
+  h2 .quacks {
+    float: right;
+    transition: transform 1s;
+    user-select: none;
+    cursor: grab;
+  }
+
+  h1.active .quacks,
+  h2.active .quacks {
+    transform: translateX(-1000%);
+  }
+
+  h2 {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+
+  .keyboard #lesson {
+    text-align: left;
+    font-family: monospace;
+    font-size: 2.5em;
+    height: 4em;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    text-wrap: break;
+  }
+
+  .keyboard #current {
+    border-bottom: 2px solid;
+  }
+
+  .keyboard span {
+    box-sizing: border-box;
+  }
+
+  .keyboard #lesson { color: #333; }
+  .keyboard .done   { color: #999; }
+  .keyboard .error  { color: red; }
+  .keyboard .fixed  { color: green; }
+  .keyboard .space::before {
+    content: "·";
+    word-break: break-all;
+  }
+
+  .key_list kbd {
+    font-family: monospace;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 2px;
+    cursor: pointer;
+  }
+
+  .key_list kbd.inactive {
+    color: gray;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .keyboard #lesson { color: white; }
+    .keyboard .error  { color: #f44; }
+    .keyboard .fixed  { color: #9e1; }
+  }
+</style>
+
+<h2><span class="key_list"></span><span class="quacks">🦆</span></h2>
 <p class="status">·</p>
 
 <div class="keyboard">
@@ -39,10 +117,3 @@ jsScripts = ['js/dactylo.js']
     </select>
   </p>
 </div>
-
-<span style="float: left"> <small>powered by <a
-      href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>,
-    inspired by <a href="https://github.com/wwwtyro/keyzen">keyzen</a>
-    and <a href="https://github.com/aradzie/keybr.com">keybr</a>, fuelled by
-    <a href="https://github.com/monkeytypegame/monkeytype">MonkeyType</a>
-  </small> </span>

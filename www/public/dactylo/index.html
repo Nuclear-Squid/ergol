@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>dactylo | Ergo‑L</title>
+<title>Duck Typist | Ergo‑L</title>
 <meta name="description" content="Une disposition de clavier ergonomique de type Colemak, optimisée pour le français, l’anglais et le code.">
-<link type="image/svg+xml" rel="icon" href="../favicon.svg" sizes="any" />
+<link type="image/svg+xml" rel="icon" href="//localhost:1313/favicon.svg" sizes="any" />
 
 
-        <script src="../js/x-keyboard.min.b7ad5a10b3c6a1428503fdb23cbf3b6074412cd64c7b423367940b84ac9ba4ff.js" integrity="sha256-t61aELPGoUKFA/2yPL87YHRBLNZMe0IzZ5QLhKybpP8=" crossorigin="anonymous" type="module"></script>
-
-
-
-        <script src="../js/dactylo.min.ff988712fc7ae76d6190f3fe926d432afcd394f7925577f4f9ba00cf436b3119.js" integrity="sha256-/5iHEvx6521hkPP&#43;km1DKvzTlPeSVXf0&#43;boAz0NrMRk=" crossorigin="anonymous" type="text/javascript"></script>
+      <script src="../js/x-keyboard.js" type="module"></script>
 
 
 
-      <link rel="stylesheet" href="../css/layout.min.3e731c1175f55852c6fef5ee6261b96da0c26d603ff0750bfdc7569cb6dec30c.css" integrity="sha256-PnMcEXX1WFLG/vXuYmG5baDCbWA/8HUL/cdWnLbewww=" crossorigin="anonymous">
+      <script src="../js/duck-typist.js" type="text/javascript"></script>
 
 
-        <link rel="stylesheet" href="../css/demo.min.06e32ea2e67bec0d256bb61a2b9492ad1345b8d99c1b1fa6b3a2565e07f698a9.css" integrity="sha256-BuMuouZ77A0la7YaK5SSrRNFuNmcGx&#43;ms6JWXgf2mKk=" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/layout.css">
+
+
+      <link rel="stylesheet" href="../css/keyboard.css">
 
 
 
@@ -27,17 +27,101 @@
 </head>
 <body>
   <header>
-    <h1><a href="../">Ergo‑L</a></h1>
-<p>Ergonomie optimisée pour le français, l’anglais, le code.</p>
+    <div id="banner">
+  <p class="title"><a href="../">Ergo‑L</a></p>
+  <p>Ergonomie optimisée pour le français, l’anglais, le code.</p>
+</div>
+
+<nav>
+  <a href="../">Ergo‑L</a>
+  | <a href="../bepo">Bépo ?</a>
+  
+  
+  | <a href="../stats">Stats</a>
+  | <a href="../dactylo">Apprendre</a>
+</nav>
 
 
 
+
+<h1>Duck Typist</h1>
 
   </header>
   <main>
     
   
-<h1><span class="key_list"></span><span class="quacks">🦆</span></h1>
+<style>
+  html { height: 100%; }
+  body { padding: 0 20px; min-height: 100%; }
+  header h1, #banner { display: none; }
+  header nav { border: none; }
+
+  h1 .quacks,
+  h2 .quacks {
+    float: right;
+    transition: transform 1s;
+    user-select: none;
+    cursor: grab;
+  }
+
+  h1.active .quacks,
+  h2.active .quacks {
+    transform: translateX(-1000%);
+  }
+
+  h2 {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+
+  .keyboard #lesson {
+    text-align: left;
+    font-family: monospace;
+    font-size: 2.5em;
+    height: 4em;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    text-wrap: break;
+  }
+
+  .keyboard #current {
+    border-bottom: 2px solid;
+  }
+
+  .keyboard span {
+    box-sizing: border-box;
+  }
+
+  .keyboard #lesson { color: #333; }
+  .keyboard .done   { color: #999; }
+  .keyboard .error  { color: red; }
+  .keyboard .fixed  { color: green; }
+  .keyboard .space::before {
+    content: "·";
+    word-break: break-all;
+  }
+
+  .key_list kbd {
+    font-family: monospace;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 2px;
+    cursor: pointer;
+  }
+
+  .key_list kbd.inactive {
+    color: gray;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .keyboard #lesson { color: white; }
+    .keyboard .error  { color: #f44; }
+    .keyboard .fixed  { color: #9e1; }
+  }
+</style>
+
+<h2><span class="key_list"></span><span class="quacks">🦆</span></h2>
 <p class="status">·</p>
 
 <div class="keyboard">
@@ -70,17 +154,11 @@
   </p>
 </div>
 
-<span style="float: left"> <small>powered by <a
-      href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>,
-    inspired by <a href="https://github.com/wwwtyro/keyzen">keyzen</a>
-    and <a href="https://github.com/aradzie/keybr.com">keybr</a>, fuelled by
-    <a href="https://github.com/monkeytypegame/monkeytype">MonkeyType</a>
-  </small> </span>
-
 
   </main>
   <footer>
-    <a href="https://github.com/Nuclear-Squid/ErgoL">dépôt GitHub</a> |
+    <span style="float: left"><small>powered by <a href="https://onedeadkey.github.io/x-keyboard">x-keyboard</a>, inspired by <a href="https://github.com/wwwtyro/keyzen">keyzen</a> and <a href="https://github.com/aradzie/keybr.com">keybr</a>, fuelled by <a href="https://github.com/monkeytypegame/monkeytype">MonkeyType</a></small></span>
+<a href="https://github.com/Nuclear-Squid/ErgoL">dépôt GitHub</a> |
 <a href="https://discord.gg/5xR5K3nAFX">serveur Discord</a>
 
   </footer>

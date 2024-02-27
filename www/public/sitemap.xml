@@ -2,24 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>//localhost:1313/</loc>
   </url><url>
-    <loc>/slides/capitoledulibre2023/</loc>
+    <loc>//localhost:1313/old/</loc>
   </url><url>
-    <loc>/slides/humantalk2022/</loc>
+    <loc>//localhost:1313/slides/capitoledulibre2023/</loc>
   </url><url>
-    <loc>/slides/jdll2022/</loc>
+    <loc>//localhost:1313/slides/humantalk2022/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>//localhost:1313/slides/jdll2022/</loc>
   </url><url>
-    <loc>/dactylo/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>/lts/</loc>
+    <loc>//localhost:1313/dactylo/</loc>
   </url><url>
-    <loc>/stats/</loc>
+    <loc>//localhost:1313/bepo/</loc>
   </url><url>
-    <loc>/slides/</loc>
+    <loc>//localhost:1313/lts/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>//localhost:1313/stats/</loc>
+  </url><url>
+    <loc>//localhost:1313/slides/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>

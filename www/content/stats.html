@@ -3,9 +3,10 @@ title = "Heatmap"
 
 [params]
 description = "Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès."
-extraCss  = ['css/demo.css', 'css/heatmap.css']
-jsModules = ['js/x-keyboard.js', 'js/collapsable-table.js']
-jsScripts = ['js/heatmap.js', 'js/demo.js']
+cssSheets = ["/css/heatmap.css"]
+jsModules = ["/js/x-keyboard.js", "/js/collapsable-table.js"]
+jsScripts = ["/js/layout-analyzer.js", "/js/demo.js"]
+footer = "powered by [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
 <div id="demo">
@@ -48,11 +49,13 @@ jsScripts = ['js/heatmap.js', 'js/demo.js']
 </div>
 
 <p id="imprecise-data">
-  <small>
-    Cette disposition ne sait pas générer un nombre non-négligeable de
-    symboles, les résultats sont peu fiables.
-  </small>
+<small>
+Cette disposition ne sait pas générer un nombre non-négligeable de
+symboles, les résultats sont peu fiables.
+</small>
 </p>
+
+<h2>Métriques</h2>
 
 <h3>Charge des doigts</h3>
 <small><span id="load-left"></span> / <span id="load-right"></span></small>
@@ -82,7 +85,6 @@ jsScripts = ['js/heatmap.js', 'js/demo.js']
     <span id="extensions-all"></span> /
     <span id="scisors-all"></span>
   </small>
-
   <table id="unsupported"></table>
   <table id="sfu-digrams"></table>
   <table id="extended-rolls"></table>
@@ -95,7 +97,6 @@ jsScripts = ['js/heatmap.js', 'js/demo.js']
     <span id="inward-all"></span> /
     <span id="outward-all"></span>
   </small>
-
   <table id="sku-digrams"></table>
   <table id="inward"></table>
   <table id="outward"></table>
@@ -108,9 +109,37 @@ jsScripts = ['js/heatmap.js', 'js/demo.js']
     <span id="redirect-all"></span> /
     <span id="bad-redirect-all"></span>
   </small>
-
   <table id="almost-skbs"></table>
   <table id="almost-sfbs"></table>
   <table id="redirect"></table>
   <table id="bad-redirect"></table>
 </collapsable-table>
+
+<!-- <h2>Analyseurs de layouts</h2> -->
+<!-- <p>TODO</p> -->
+
+<!-- <h2>Lexique</h2> -->
+<!-- <p>TODO</p> -->
+
+<h2>Mise en garde</h2>
+<p><strong>Ces métriques ne sont pas des cibles d’optimisation !</strong></p>
+
+<blockquote cite="https://fr.wikipedia.org/wiki/Loi_de_Goodhart">
+  <p>Lorsqu'une métrique devient un objectif, elle cesse d'être une bonne métrique.</p>
+  <p style="text-align: right;">— <a
+    href="https://fr.wikipedia.org/wiki/Loi_de_Goodhart">loi de Goodhart</a></p>
+</blockquote>
+
+<blockquote>
+  <p>Les chiffres sont aux analystes ce que les lampadaires sont aux ivrognes :
+  ils fournissent bien plus un appui qu'un éclairage.
+  <p style="text-align: right;">— Jean Dion</p>
+  <!-- Le Devoir - 4 juin 1997 -->
+</blockquote>
+
+<p> Notre recommandation : utilisez ces métriques non pour mesurer les qualités
+d’une disposition de clavier, mais pour essayer d’en évaluer le défaut le plus
+gênant. Puis itérez sur votre layout jusqu’à ce que ce que ce défaut soit
+suffisamment réduit… sans en créer un pire ailleurs. </p>
+
+<p> Et recommencez. :-) </p>

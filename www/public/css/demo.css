@@ -63,17 +63,6 @@ dialog::backdrop {
   margin-bottom: 1em;
 }
 
-h1 .quacks {
-  float: right;
-  transition: transform 1s;
-  user-select: none;
-  cursor: grab;
-}
-
-h1.active .quacks {
-  transform: translateX(-1000%);
-}
-
 .keyboard #lesson {
   text-align: left;
   font-family: monospace;
@@ -100,18 +89,6 @@ h1.active .quacks {
   word-break: break-all;
 }
 
-.key_list kbd {
-  font-family: monospace;
-  text-transform: uppercase;
-  display: inline-block;
-  margin: 0 2px;
-  cursor: pointer;
-}
-
-.key_list kbd.inactive {
-  color: gray;
-}
-
 #demo p {
   margin: 1em 0;
   text-align: right;
@@ -123,21 +100,14 @@ h1.active .quacks {
 }
 
 @media (prefers-color-scheme: dark) {
-
+  #demo {
+    background-color: #222;
+    border: 5px solid #0004;
+  }
   .keyboard nav a,
   .keyboard nav button {
     color: #ccc;
     background-color: #444;
     border: 1px solid #7778;
   }
-
-  .keyboard #lesson { color: white; }
-  .keyboard .error  { color: #f44; }
-  .keyboard .fixed  { color: #9e1; }
-
-  #demo {
-    background-color: #222;
-    border: 5px solid #0004;
-  }
-
 }

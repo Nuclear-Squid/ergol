@@ -1,12 +1,11 @@
 +++
+title = "Ergo‑L ou Bépo ?"
+
 [params]
-extraCss  = ["/css/demo.css"]
-jsModules = ["js/x-keyboard.js"]
-jsScripts = ["js/demo.js", "js/svg.js"]
+cssSheets = ["/css/keyboard.css"]
+jsModules = ["/js/x-keyboard.js"]
+jsScripts = ["/js/demo.js", "/js/svg.js"]
 +++
-
-
-Ergo‑L vs Bépo
 
 
 Ergonomie
@@ -68,17 +67,17 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
     <th> Ergo‑L </th>
   </tr>
   <tr>
-    <td> <a href="../stats/#/bepo/iso/fr"> <img src="./charge_bepo_fr.png" /></a> </td>
+    <td> <a href="../stats/#/bepo/iso/fr"><img src="./charge_bepo_fr.png" /></a> </td>
     <th> fr </th>
     <td> <a href="../stats/#/ergol/iso/fr"><img src="./charge_ergol_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="../stats/#/bepo/iso/en+fr"> <img src="./charge_bepo_en_fr.png"/></a> </td>
+    <td> <a href="../stats/#/bepo/iso/en+fr"><img src="./charge_bepo_en_fr.png"/></a> </td>
     <th> fr‑en </th>
     <td> <a href="../stats/#/ergol/iso/en+fr"><img src="./charge_ergol_en_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="../stats/#/bepo/iso/en"> <img src="./charge_bepo_en.png" /></a> </td>
+    <td> <a href="../stats/#/bepo/iso/en"><img src="./charge_bepo_en.png" /></a> </td>
     <th> en </th>
     <td> <a href="../stats/#/ergol/iso/en"><img src="./charge_ergol_en.png"/></a> </td>
   </tr>
@@ -169,7 +168,16 @@ français **et** anglais, Ergo‑L affiche de meilleures métriques d’optimisa
 tant sur la charge des doigts (voir ci-dessus) que sur le taux de digrammes de
 même doigt :
 
-:::{ style="margin: 0 3em" }
+<style>
+.sfu table th,
+.sfu table td { padding: 0.2em 0; }
+.sfu table tr :nth-child(4) { background-color: #f884; }
+.sfu table { margin: 1em auto; max-width: 50em; border-collapse: collapse; }
+.sfu a:hover { text-decoration: underline; }
+.sfu a       { text-decoration: none; }
+</style>
+
+:::{.sfu}
 |      |  AZERTY                            |  Bépo                            |  Ergo‑L                           |  Dvorak                            |  QWERTY                            |
 |    -:|:----------------------------------:|:--------------------------------:|:---------------------------------:|:----------------------------------:|:----------------------------------:|
 |**fr**| [7.97 %](../stats/#/azerty/iso/fr) | [2.55 %](../stats/#/bepo/iso/fr) | [1.23 %](../stats/#/ergol/iso/fr) | [3.31 %](../stats/#/dvorak/iso/fr) | [7.16 %](../stats/#/qwerty/iso/fr) |
@@ -269,15 +277,13 @@ que très marginalement :
   utilise des symboles de programmation (dont l’accès recommandé par l’auteur se
   fait via la touche morte circonflexe, placée sous l’auriculaire en extension).
 
-**De notre point de vue**, les deux dispositions portent bien leur nom : Optimot
-est une alternative **opti**misée de Bépo, alors qu’Ergo‑L est **ergo**nomique
-avant tout.
+**De notre point de vue**, les deux dispositions portent bien leur nom :
 
-Les Bépoètes qui ont proposé des variantes se sont tous accomodés des
-particularités de Bépo (charge de l’auriculaire, compatibilité claviers
-ergonomiques) et n’ont pas perçu la nécessité de les corriger. Ergo‑L, à
-l’inverse, apporte une solution radicale à ces points-là et pourrait convenir
-aux personnes qui ont des difficultés avec Bépo.
+- Optimot est une **opti**misation de Bépo qui apportera un gain de confort aux
+  utilisateurs satisfaits de Bépo ;
+- Ergo‑L est **ergo**nomique avant tout, et apportera une solution radicale aux
+  personnes qui ont des difficultés avec Bépo.
+
 
 <!--
 ## Principes d’ergonomie
