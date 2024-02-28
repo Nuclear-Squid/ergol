@@ -150,7 +150,7 @@ charge des doigts que sur le taux de digrammes de même doigt :
 Impeccable en français
 --------------------------------------------------------------------------------
 
-### La gestion des accents
+### Caractères accentués
 
 La gestion des accents, diacritiques et symboles typographiques français
 nécessite traditionnellement l’usage de touches excentrées (ce qui irait à
