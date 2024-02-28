@@ -29,6 +29,13 @@
       <description>&lt;!DOCTYPE html&gt; Ergol : une disposition de clavier ergonomique et moderne name: inverse layout: true class: center, middle, inverse --- layout: false # Ergol : une disposition de clavier ergonomique et moderne --- ## Qui suis-je? - léo Cazenave - (imbécile à haute vélocité) - étudiant en informatique à Grenoble - je traîne sur r/keyboard_layouts comme d’autres traînent sur pornhub --- ## Enfance martyre - éduqué par Kazé - contraint à taper avec Qwerty-Lafayette - premier clavier : TypeMatrix - premier éditeur : Vim (aujourd’hui Neovim) - OS : ubuntu studio - bureau : i3 --- ## Posture générale — desktop - dos droit, haut de l’écran à hauteur des yeux - bras, bassin et genoux à &amp;gt; 90° - pauses régulières (changement de position) !</description>
     </item>
     <item>
+      <title>Adaptations type « Lafayette »</title>
+      <link>//localhost:1313/lafayette/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/lafayette/</guid>
+      <description>Une série de disposition de clavier été adaptées au français et/ou aux claviers compacts via une touche « Typo ».&#xA;QWERTY-Lafayette powered by x-keyboard géométrie : ISO ⌨ Apprendre ⇪ Tester ! ⇣ Installer La disposition de clavier par laquelle tout a commencé !&#xA;Publiée en 2010, Lafayette est une simple adaptation du QWERTY ANSI au français. Aucune optimisation : on a HJKL sur la homerow et c’est très bien ainsi !</description>
+    </item>
+    <item>
       <title>Duck Typist</title>
       <link>//localhost:1313/dactylo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -36,18 +43,18 @@
       <description> 🦆 ·&#xA;Ergo‑L Erglace Bépo Azerty Lafayette Français 1k Français 10k English 1k English 10k ISO ANSI TMx 4×6 3×6 </description>
     </item>
     <item>
-      <title>Erglace</title>
+      <title>Erglace (WiP)</title>
       <link>//localhost:1313/erglace/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/erglace/</guid>
-      <description>powered by x-keyboard géométrie : ISO ⌨ Apprendre ⇪ Tester ! ⇣ Installer Ressources utilisées Keyboard Layouts Doc, ressource théorique très complète La page de statistiques d’Ergo-L Layout playground, pour des statistiques complémentaires (LSB, BadRedirects) et du prototypage rapide Les statistiques de fréquence de Ergo-L pour le français et l’anglais Heatmap d’effort des touches du clavier, développée pour Colmak-DH Les retours sur le discord d’Ergo-L Notes de conception Le point de départ était de faire une disposition avec moins de redirections qu’Ergo‑L.</description>
+      <description>powered by x-keyboard géométrie : ISO ⌨ Apprendre ⇪ Tester ! ⇣ Installer Notes de conception Le point de départ était de faire une disposition avec moins de redirections qu’Ergo‑L. Nous nous sommes vite rendu compte qu’il fallait pour cela isoler les voyelles de consonnes. Les lettres de la home row sont les lettres les plus utilisées du français et de l’anglais.&#xA;Pour l’ordre des consonnes de la home row, nous avons cherché à maximiser les roulements, tout en s’assurant d’une bonne répartition de la charge.</description>
     </item>
     <item>
       <title>Ergo‑L ou Bépo ?</title>
       <link>//localhost:1313/bepo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/bepo/</guid>
-      <description>powered by x-keyboard géométrie : ISO ⌨ Apprendre ⇪ Tester ! ⇣ Installer Ergonomie Bépo Conservant l’approche AZERTY d’avoir certaines lettres accentuées en direct (É, È, À, Ç), Bépo a manqué de place pour placer toutes les lettres et a choisi d’occuper les colonnes excentrées pour des lettres jugées moins fréquentes (M, Z, W, Ç). Il en résulte une incompatibilité avec la plupart des claviers ergonomiques du marché, qui ne proposent que 6 colonnes de touches par main pour respecter le principe 1DFH.</description>
+      <description>powered by x-keyboard géométrie : ISO ⌨ Apprendre ⇪ Tester ! ⇣ Installer Ergonomie une priorité pour Ergo‑L bien plus que pour Bépo Optimisation Dvorak pour Bépo, Colemak/Workman pour Ergo‑L Typographie deux approches différentes Programmation la spécialité d’Ergo‑L Variantes de Bépo Ergonomie Bépo Conservant l’approche AZERTY d’avoir certaines lettres accentuées en direct (É, È, À, Ç), Bépo a manqué de place pour placer toutes les lettres et a choisi d’occuper les colonnes excentrées pour des lettres jugées moins fréquentes (M, Z, W, Ç).</description>
     </item>
     <item>
       <title>Ergo‑L v0.7 LTS</title>

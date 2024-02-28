@@ -13,6 +13,17 @@ jsScripts = ["/js/demo.js", "/js/svg.js"]
     src="/layouts/bepo.json"
     image="/img/bepo.svg" >}}
 
+:::{.highlight style="max-width: 32em;"}
+- [Ergonomie]
+  <br> une priorité pour Ergo‑L bien plus que pour Bépo
+- [Optimisation]
+  <br> Dvorak pour Bépo, Colemak/Workman pour Ergo‑L
+- [Typographie]
+  <br> deux approches différentes
+- [Programmation]
+  <br> la spécialité d’Ergo‑L
+- [Variantes de Bépo]
+:::
 
 Ergonomie
 --------------------------------------------------------------------------------
@@ -24,7 +35,7 @@ Conservant l’approche AZERTY d’avoir certaines lettres accentuées en direct
 choisi d’occuper les colonnes excentrées pour des lettres jugées moins
 fréquentes (`M`, `Z`, `W`, `Ç`). Il en résulte une incompatibilité avec la
 plupart des claviers ergonomiques du marché, qui ne proposent que 6 colonnes de
-touches par main pour respecter le principe 1DFH.
+touches par main pour respecter le principe [1DFH](#dfh-1u-distance-from-home).
 
 Par ailleurs, la charge des doigts est mal répartie :
 
@@ -48,10 +59,11 @@ positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
 
 ### Ergo‑L
 
-Ergo‑L se veut « ergonomique avant tout ». À ce titre, il suit une approche 1DFH
-stricte, plaçant les 26 lettres et les 4 principales ponctuations dans le pavé
-central de 3×10 touches, garantissant une compatibilité parfaite avec tous les
-claviers de 33 à 105 touches, ergonomiques ou non.
+Ergo‑L se veut [ergonomique avant tout](/#ergonomique-avant-tout). À ce titre,
+il suit une approche 1DFH stricte, plaçant les 26 lettres et les 4 principales
+ponctuations dans le pavé central de 3×10 touches, garantissant une
+compatibilité parfaite avec tous les claviers de 33 à 105 touches, ergonomiques
+ou non.
 
 Cette approche permet aussi de garder les chiffres en direct, rendant le pavé
 numérique inutile. On peut ainsi utiliser des claviers compacts qui favorisent
@@ -192,7 +204,6 @@ même doigt :
 .sfu a:hover { text-decoration: underline; }
 .sfu a       { text-decoration: none; }
 </style>
-
 :::{.sfu}
 |      |  AZERTY                          |  Bépo                          |  Ergo‑L                         |  Dvorak                          |  QWERTY                          |
 |    -:|:--------------------------------:|:------------------------------:|:-------------------------------:|:--------------------------------:|:--------------------------------:|
