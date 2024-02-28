@@ -148,6 +148,8 @@ charge des doigts que sur le taux de digrammes de même doigt :
 Impeccable en français
 --------------------------------------------------------------------------------
 
+### La gestion des accents
+
 La gestion des accents, diacritiques et symboles typographiques français
 nécessite traditionnellement l’usage de touches excentrées (ce qui irait à
 l’encontre de la philosophie 1DFH d’Ergo‑L) ou de [AltGr]{.kbd} (qui est prone à
@@ -162,24 +164,46 @@ gain de confort que cela apporte.
 
 Maintenir shift après avoir actionné la touche typo permet de saisir des
 lettres accentuées en majuscule (★ → [Shift]{.kbd} + `a` = `À`). Oubliez vos
-alt codes !
+alt codes ! Cette touche typo peut *parfois* donner l’accès à une autre touche
+morte, comme le tréma mort, accessible en double‑cliquant la touche typo (donc
+★ → ★ → `E` = `Ë`)
 
 ![La touche morte d’Ergo‑L.](img/ergol_1dk.svg)
+
+### Placement des lettres
 
 En français, les huit lettres les plus fréquentes (`esanitru`) sont toutes
 réparties sur la position de repos des doigts, et le reste des lettres
 fréquentes sont réparties sur les autres touches faciles d’accès.
 
-<!-- ptn ce paragraphe est à chier -->
-Une grande attention à été portée sur les enchaînements de lettres. Les
-digrammes `OE` / `EO` étant très rares en français et anglais, les lettres `E`
-et `O` sont sur la même colonne. La touche morte est placée sur la main opposée de `EAC`, qui sont les lettres les plus souvent diacritées en français. Pratiquement aucun enchaînement courant en français ne demande trop d’effort.
+Une grande attention à été portée sur les enchaînements de lettres :
+
+- Les voyelles s’enchaînent fréquemment avec toutes les consonnes importantes,
+  donc elles sont soit :
+    - placées sur les auriculaires, avec des consonnes peu fréquentes autour
+      (comme `QAZ` et `FUK`)
+    - empilées sur des doigts forts pour celles qui ne s’enchaînent pas
+      ensemble (comme `EO` et ★`IY`).
+- Le placement des lettres sur les positions de repos maximise les roulements
+  vers l’intérieur et minimise les redirections, qui sont source d’erreur à
+  haute vitesse.
+- Le reste des lettres fréquentes sont placées de sorte à minimiser les SFU
+  (par exemple, `D` et `G` s’enchaînent très souvent avec `N` ou `R`, mais très
+  peu avec `T`)
+- La touche morte est placée sur la main opposée à `EAC`, qui sont les lettres
+  les plus souvent diacritées en français.
+
+Pratiquement aucun enchaînement courant en français ne demande trop d’effort.
 
 :::{ style="text-align: center;" }
 <a href="stats/#/Ergo‑L/iso/fr">
+
 ![fréquence d’utilisation des touches en français](img/ergol_fr.svg)
-  fréquence d’utilisation des touches en français</a>
+
+</a>
 :::
+
+### Typographie
 
 Soigner la typographie demande souvent un effort (physique et mental)
 supplémentaire non négligeable. Beaucoup l’ignore, ou laisse leur éditeur de
@@ -195,26 +219,57 @@ effort supplémentaire :
 Efficace en anglais
 --------------------------------------------------------------------------------
 
+### Quelques compromis
+
 Ergo‑L porte la même attention au confort de la saisie de texte en anglais qu’en
 français, mais doit faire quelques compromis pour faire cohabiter les deux
-langues. Typiquement, le [U]{.kbd} et la touche typo sont relativement peu
-fréquents en anglais, mais le [H]{.kbd} est très important.
+langues. Certaines lettres sont beaucoup plus fréquentes dans une langue que
+l’autre, (comme le [U]{.kbd} et la touche typo en français et le [H]{.kbd} en
+anglais) et les enchaînements courrant peuvent être très différents.
 
-Ces compromis ne causent pas de problèmes majeurs, tous les enchaînements
-fréquents avec le [H]{.kbd} sont confortable, et il occupe une place dont on
-peut facilement se passer en français.
+Ergo‑L optimise le plus possible la saisie de texte anglais et français sans
+causer de problèmes rédhibitoires dans une de ces deux langues. Par exemple,
+l’enchaînement `TH` (*le* digramme le plus fréquent en anglais, avec 3.2%
+d’occurences) est très confortable, mais le `H` occupe une place dont on peut
+se dispenser en français. De même, `U` et ★ sont très fréquent en français,
+mais peu fréquent en anglais, ce qui a été pris en compte pour leur placement.
 
 :::{ style="text-align: center;" }
 <a href="stats/#/Ergo‑L/iso/en">
+
 ![fréquence d’utilisation des touches en anglais](img/ergol_en.svg)
-  fréquence d’utilisation des touches en anglais</a>
+
+</a>
 :::
 
 Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de
 nombreuses dispositions dédiés exclusivement à l’anglais soient plus efficace
-qu’Ergo‑L dans cette langue. Ergo‑L est *la première disposition **reéellement**
+qu’Ergo‑L dans cette langue, Ergo‑L est *la première disposition **reéellement**
 optimisée pour le français **et** l’anglais*.
 
+### Les autres lagues européennes
+
+Ergo‑L est capable de saisir du texte dans presque toutes le langues
+européennes, mais ne cherche pas a optimiser la saisie de texte dans d’autres
+langues que le français et l’anglais. Certains caractères sont disponible en
+touche typo, comme `ß` ou `ñ` (placés sous ★ → {`X`, `V`}, respectivement), et
+il existe de nombreuses touches mortes en [AltGr-Shift]{.kbd} (par exemple
+[Shift]{.kbd} + `^` en [AltGr]{.kbd} donc un accent circonflexe mort).
+
+C’est loin d’être idéal, mais la disposition est conçue pour être *simple à
+modifier*. Le répo github d’Ergo‑L contient le fichier source de la disposition
+(un fichier `.toml` facile à lire et modifier), ainsi que des instructions pour
+builder votre dispo custom, ou évaluer la qualité des enchaînements de votre
+variante. Remplacer les caractères de la touche morte par ceux dont vous avez
+besoin devrait être relativement simple.
+
+Si vous voulez adapter Ergo‑L à une langue étrangère, nous vous recommandons de
+consevoir la couche typo uniquement pour cette langue, et d’installer votre
+adaptation en même temps qu’ergol (en lui donnant un autre nom, comme
+« ergol-de » pour l’allemand, par exemple), afin de pouvoir rapidement changer
+de disposition dans vos paramètres clavier.
+
+![Un exemple d’adaptation d’ergol pour l’allemand](img/ergol_1dk_de.svg)
 
 Redoutable pour le code
 --------------------------------------------------------------------------------
@@ -245,8 +300,7 @@ regroupés par « blocs ». On y retrouve :
 - les délimiteurs `(){}[]<>`
 - les délimiteurs de chaîne de caractères ``'`"``
 - les symboles arithmétiques `+-/*`
-- les ponctuations `!;:?`
-<!-- - les symboles de (dé)référencement `&*` -->
+- les ponctuations `!;:?` (de plus, `;:` sont à leur emplacement en Qwerty Européen)
 - `$%^&*` sont à leur position en [Shift]{.kbd} + chiffres, mais une rangée plus bas.
 
 Comme pour l’emplacement des lettres de la disposition, une grande attention à
