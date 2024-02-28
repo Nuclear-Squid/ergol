@@ -56,6 +56,7 @@ aucune touche en dehors du pavé de 3×10 touches centrales pour les lettres et
 symboles de programation. Ergo‑L est ainsi compatible avec les claviers les
 plus compacts (minimum 33 touches) sans ajustement majeur.
 
+
 ### Adapté à la bureautique
 
 Les raccourcis claviers usuels
@@ -70,6 +71,7 @@ conserver ces raccourcis tout en obtenant de meilleures métriques que Dvorak.
 Ergo‑L suit cette approche [Colemak][] / [Workman][] et comme eux, s’autorise un
 changement : le [C]{.kbd} est ainsi déplacé pour favoriser les enchaînements,
 mais [Ctrl]{.kbd}‑[C]{.kbd} reste faisable d’une main à gauche.
+
 
 ### Réduction de la fatigue de saisie
 
@@ -117,11 +119,11 @@ exception près, les 9 lettres les plus fréquentes sont les mêmes en français
 : Fréquence des lettres les plus utilisées en français et en anglais.
 :::
 
-Ergo‑L place donc ces lettres aux emplacements les plus confortables (au sens
-de [Workman][]) et fait en sorte qu’aucun enchaînement fréquent en français ou
-en anglais ne soit rédhibitoire. Comme [Colemak][], on cherche à limiter le
-plus possible le taux de SFU, en favorisant les roulements au même titre que
-les alternances de mains.
+Ergo‑L place donc ces lettres aux emplacements les plus confortables (au sens de
+[Workman][]) et fait en sorte qu’aucun enchaînement fréquent en français ou en
+anglais ne soit rédhibitoire. Comme [Colemak][], on cherche à limiter le plus
+possible le taux de digrammes de même doigt, en favorisant les roulements au
+même titre que les alternances de mains.
 
 Malgré le fait qu’il soit optimisé pour les **deux** langues, français **et**
 anglais, Ergo‑L affiche de meilleures métriques d’optimisation, tant sur la
@@ -162,13 +164,14 @@ touches **sans** utiliser [AltGr]{.kbd}. Cela occasionne environ 4 % de frappe
 supplémentaires pour un texte francophone, ce qui est négligeable comparé au
 gain de confort que cela apporte.
 
+![La touche morte d’Ergo‑L.](img/ergol_1dk.svg)
+
 Maintenir shift après avoir actionné la touche typo permet de saisir des
 lettres accentuées en majuscule (★ → [Shift]{.kbd} + `a` = `À`). Oubliez vos
 alt codes ! Cette touche typo peut *parfois* donner l’accès à une autre touche
 morte, comme le tréma mort, accessible en double‑cliquant la touche typo (donc
 ★ → ★ → `E` = `Ë`)
 
-![La touche morte d’Ergo‑L.](img/ergol_1dk.svg)
 
 ### Placement des lettres
 
@@ -182,14 +185,14 @@ Une grande attention à été portée sur les enchaînements de lettres :
   donc elles sont soit :
     - placées sur les auriculaires, avec des consonnes peu fréquentes autour
       (comme `QAZ` et `FUK`)
-    - empilées sur des doigts forts pour celles qui ne s’enchaînent pas
-      ensemble (comme `EO` et ★`IY`).
+    - empilées sur des doigts forts pour celles qui ne s’enchaînent pas ensemble
+      (comme `EO` et ★`IY`).
 - Le placement des lettres sur les positions de repos maximise les roulements
   vers l’intérieur et minimise les redirections, qui sont source d’erreur à
   haute vitesse.
-- Le reste des lettres fréquentes sont placées de sorte à minimiser les SFU
-  (par exemple, `D` et `G` s’enchaînent très souvent avec `N` ou `R`, mais très
-  peu avec `T`)
+- Le reste des lettres fréquentes sont placées de sorte à minimiser les
+  digrammes de même doigt (par exemple, `D` et `G` s’enchaînent très souvent
+  avec `N` ou `R`, mais très peu avec `T`)
 - La touche morte est placée sur la main opposée à `EAC`, qui sont les lettres
   les plus souvent diacritées en français.
 
@@ -197,11 +200,10 @@ Pratiquement aucun enchaînement courant en français ne demande trop d’effort
 
 :::{ style="text-align: center;" }
 <a href="stats/#/Ergo‑L/iso/fr">
-
 ![fréquence d’utilisation des touches en français](img/ergol_fr.svg)
-
-</a>
+  fréquence d’utilisation des touches en français</a>
 :::
+
 
 ### Typographie
 
@@ -219,7 +221,7 @@ effort supplémentaire :
 Efficace en anglais
 --------------------------------------------------------------------------------
 
-### Quelques compromis
+### Même optimisation qu’en français
 
 Ergo‑L porte la même attention au confort de la saisie de texte en anglais qu’en
 français, mais doit faire quelques compromis pour faire cohabiter les deux
@@ -236,10 +238,8 @@ mais peu fréquent en anglais, ce qui a été pris en compte pour leur placement
 
 :::{ style="text-align: center;" }
 <a href="stats/#/Ergo‑L/iso/en">
-
 ![fréquence d’utilisation des touches en anglais](img/ergol_en.svg)
-
-</a>
+  fréquence d’utilisation des touches en anglais</a>
 :::
 
 Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de
@@ -247,29 +247,36 @@ nombreuses dispositions dédiés exclusivement à l’anglais soient plus effica
 qu’Ergo‑L dans cette langue, Ergo‑L est *la première disposition **reéellement**
 optimisée pour le français **et** l’anglais*.
 
-### Les autres lagues européennes
+
+### Et les autres langues ?
 
 Ergo‑L est capable de saisir du texte dans presque toutes le langues
 européennes, mais ne cherche pas a optimiser la saisie de texte dans d’autres
-langues que le français et l’anglais. Certains caractères sont disponible en
-touche typo, comme `ß` ou `ñ` (placés sous ★ → {`X`, `V`}, respectivement), et
-il existe de nombreuses touches mortes en [AltGr-Shift]{.kbd} (par exemple
-[Shift]{.kbd} + `^` en [AltGr]{.kbd} donc un accent circonflexe mort).
+langues que le français et l’anglais. Certains caractères sont disponibles en
+touche typo, comme `ß` ou `ñ`, et il existe de nombreuses touches mortes en
+[AltGr-Shift]{.kbd} : par exemple, `^` étant en [AltGr]{.kbd}[J]{.kbd},
+[Shift]{.kbd}[AltGr]{.kbd}[J]{.kbd} produit un accent circonflexe mort, ce qui
+est suffisant pour la saisie occasionnelle de caractères spéciaux.
 
-C’est loin d’être idéal, mais la disposition est conçue pour être *simple à
-modifier*. Le répo github d’Ergo‑L contient le fichier source de la disposition
-(un fichier `.toml` facile à lire et modifier), ainsi que des instructions pour
-builder votre dispo custom, ou évaluer la qualité des enchaînements de votre
-variante. Remplacer les caractères de la touche morte par ceux dont vous avez
-besoin devrait être relativement simple.
+Pour des usages plus réguliers, plutôt que de chercher à couvrir tous les cas
+possibles nous avons préféré faire en sorte que la disposition soit **simple à
+modifier**. Le [dépôt github d’Ergo‑L](https://github.com/Nuclear-Squid/ErgoL)
+contient le fichier source de la disposition (un fichier `.toml` facile à lire
+et modifier) ainsi que des instructions pour construire votre disposition
+personnalisée ou évaluer la qualité des enchaînements de votre variante.
+Remplacer les caractères de la touche morte par ceux dont vous avez besoin
+devrait être relativement simple, et le résultat sera bien plus efficace que
+n’importe quelle disposition de clavier cherchant à couvrir toutes les langues !
+
+![Un exemple d’adaptation d’Ergo‑L pour l’allemand](img/ergol_1dk_de.svg)
 
 Si vous voulez adapter Ergo‑L à une langue étrangère, nous vous recommandons de
-consevoir la couche typo uniquement pour cette langue, et d’installer votre
-adaptation en même temps qu’ergol (en lui donnant un autre nom, comme
-« ergol-de » pour l’allemand, par exemple), afin de pouvoir rapidement changer
-de disposition dans vos paramètres clavier.
+concevoir la couche typo uniquement pour cette langue et d’installer votre
+adaptation en même temps qu’Ergo‑L en lui donnant un autre nom (comme
+« ergol-de » pour l’allemand, par exemple). Tous les bureaux modernes proposent
+un raccourci clavier pour basculer d’une langue à l’autre, et vous pourrez ainsi
+basculer d’Ergo‑L à votre variante spécifique en un clin d’œil.
 
-![Un exemple d’adaptation d’ergol pour l’allemand](img/ergol_1dk_de.svg)
 
 Redoutable pour le code
 --------------------------------------------------------------------------------
@@ -312,6 +319,7 @@ alternance de main (`~/`, `);`, `</>`, `+=`, `['']`, …) soit avec un roulement
 
 Comme pour la saisie de texte en français ou anglais, la couche [AltGr]{.kbd}
 d’Ergo‑L ne contient pratiquement aucun enchaînement inconfortable.
+
 
 ### Compatibilité Vim
 

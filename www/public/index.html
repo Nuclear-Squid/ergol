@@ -172,7 +172,7 @@ différents d’une même main, comme 'df' en AZERTY">roulements</abbr>, alors q
 </tbody>
 </table>
 </div>
-<p>Ergo‑L place donc ces lettres aux emplacements les plus confortables (au sens de <a href="https://workmanlayout.org">Workman</a>) et fait en sorte qu’aucun enchaînement fréquent en français ou en anglais ne soit rédhibitoire. Comme <a href="https://colemak.com">Colemak</a>, on cherche à limiter le plus possible le taux de SFU, en favorisant les roulements au même titre que les alternances de mains.</p>
+<p>Ergo‑L place donc ces lettres aux emplacements les plus confortables (au sens de <a href="https://workmanlayout.org">Workman</a>) et fait en sorte qu’aucun enchaînement fréquent en français ou en anglais ne soit rédhibitoire. Comme <a href="https://colemak.com">Colemak</a>, on cherche à limiter le plus possible le taux de digrammes de même doigt, en favorisant les roulements au même titre que les alternances de mains.</p>
 <p>Malgré le fait qu’il soit optimisé pour les <strong>deux</strong> langues, français <strong>et</strong> anglais, Ergo‑L affiche de meilleures métriques d’optimisation, tant sur la charge des doigts que sur le taux de digrammes de même doigt :</p>
 <style>
 .sfu table th,
@@ -217,18 +217,31 @@ différents d’une même main, comme 'df' en AZERTY">roulements</abbr>, alors q
 </table>
 </div>
 <h2 id="impeccable-en-français">Impeccable en français</h2>
+<h3 id="la-gestion-des-accents">La gestion des accents</h3>
 <p>La gestion des accents, diacritiques et symboles typographiques français nécessite traditionnellement l’usage de touches excentrées (ce qui irait à l’encontre de la philosophie 1DFH d’Ergo‑L) ou de <kbd>AltGr</kbd> (qui est prone à l’erreur à haute vitesse car il faut relâcher la touche au bon moment)</p>
 <p>Ergo‑L utilise une touche morte de type <a href="https://qwerty-lafayette.org/">Lafayette</a> (notée ★) pour tous les caractères accentués, diacritiques et ponctuations spéciales. Actionner cette « touche typo » donne accès à <strong>tous</strong> ces symboles dans le pavé de 3×10 touches <strong>sans</strong> utiliser <kbd>AltGr</kbd>. Cela occasionne environ 4 % de frappes supplémentaires pour un texte francophone, ce qui est négligeable comparé au gain de confort que cela apporte.</p>
-<p>Maintenir shift après avoir actionné la touche typo permet de saisir des lettres accentuées en majuscule (★ → <kbd>Shift</kbd> + <code>a</code> = <code>À</code>). Oubliez vos alt codes !</p>
 <figure>
 <img src="img/ergol_1dk.svg" alt="" /><figcaption>La touche morte d’Ergo‑L.</figcaption>
 </figure>
+<p>Maintenir shift après avoir actionné la touche typo permet de saisir des lettres accentuées en majuscule (★ → <kbd>Shift</kbd> + <code>a</code> = <code>À</code>). Oubliez vos alt codes ! Cette touche typo peut <em>parfois</em> donner l’accès à une autre touche morte, comme le tréma mort, accessible en double‑cliquant la touche typo (donc ★ → ★ → <code>E</code> = <code>Ë</code>)</p>
+<h3 id="placement-des-lettres">Placement des lettres</h3>
 <p>En français, les huit lettres les plus fréquentes (<code>esanitru</code>) sont toutes réparties sur la position de repos des doigts, et le reste des lettres fréquentes sont réparties sur les autres touches faciles d’accès.</p>
-<!-- ptn ce paragraphe est à chier -->
-<p>Une grande attention à été portée sur les enchaînements de lettres. Les digrammes <code>OE</code> / <code>EO</code> étant très rares en français et anglais, les lettres <code>E</code> et <code>O</code> sont sur la même colonne. La touche morte est placée sur la main opposée de <code>EAC</code>, qui sont les lettres les plus souvent diacritées en français. Pratiquement aucun enchaînement courant en français ne demande trop d’effort.</p>
+<p>Une grande attention à été portée sur les enchaînements de lettres :</p>
+<ul>
+<li>Les voyelles s’enchaînent fréquemment avec toutes les consonnes importantes, donc elles sont soit :
+<ul>
+<li>placées sur les auriculaires, avec des consonnes peu fréquentes autour (comme <code>QAZ</code> et <code>FUK</code>)</li>
+<li>empilées sur des doigts forts pour celles qui ne s’enchaînent pas ensemble (comme <code>EO</code> et ★<code>IY</code>).</li>
+</ul></li>
+<li>Le placement des lettres sur les positions de repos maximise les roulements vers l’intérieur et minimise les redirections, qui sont source d’erreur à haute vitesse.</li>
+<li>Le reste des lettres fréquentes sont placées de sorte à minimiser les digrammes de même doigt (par exemple, <code>D</code> et <code>G</code> s’enchaînent très souvent avec <code>N</code> ou <code>R</code>, mais très peu avec <code>T</code>)</li>
+<li>La touche morte est placée sur la main opposée à <code>EAC</code>, qui sont les lettres les plus souvent diacritées en français.</li>
+</ul>
+<p>Pratiquement aucun enchaînement courant en français ne demande trop d’effort.</p>
 <div style="text-align: center;">
 <p><a href="stats/#/Ergo‑L/iso/fr"> <img src="img/ergol_fr.svg" alt="fréquence d’utilisation des touches en français" /> fréquence d’utilisation des touches en français</a></p>
 </div>
+<h3 id="typographie">Typographie</h3>
 <p>Soigner la typographie demande souvent un effort (physique et mental) supplémentaire non négligeable. Beaucoup l’ignore, ou laisse leur éditeur de texte la gérer pour eux. Ergo‑L permet de soigner la typographie sans aucun effort supplémentaire :</p>
 <ul>
 <li><kbd>Shift</kbd> + <kbd>Espace</kbd> = espace insécable fine</li>
@@ -236,12 +249,20 @@ différents d’une même main, comme 'df' en AZERTY">roulements</abbr>, alors q
 <li>les guillemets typographiques et ponctuations doublées (<code>:;?!</code>) en <kbd>Shift</kbd> pour faciliter leur enchaînement avec l’insécable fine.</li>
 </ul>
 <h2 id="efficace-en-anglais">Efficace en anglais</h2>
-<p>Ergo‑L porte la même attention au confort de la saisie de texte en anglais qu’en français, mais doit faire quelques compromis pour faire cohabiter les deux langues. Typiquement, le <kbd>U</kbd> et la touche typo sont relativement peu fréquents en anglais, mais le <kbd>H</kbd> est très important.</p>
-<p>Ces compromis ne causent pas de problèmes majeurs, tous les enchaînements fréquents avec le <kbd>H</kbd> sont confortable, et il occupe une place dont on peut facilement se passer en français.</p>
+<h3 id="même-optimisation-quen-français">Même optimisation qu’en français</h3>
+<p>Ergo‑L porte la même attention au confort de la saisie de texte en anglais qu’en français, mais doit faire quelques compromis pour faire cohabiter les deux langues. Certaines lettres sont beaucoup plus fréquentes dans une langue que l’autre, (comme le <kbd>U</kbd> et la touche typo en français et le <kbd>H</kbd> en anglais) et les enchaînements courrant peuvent être très différents.</p>
+<p>Ergo‑L optimise le plus possible la saisie de texte anglais et français sans causer de problèmes rédhibitoires dans une de ces deux langues. Par exemple, l’enchaînement <code>TH</code> (<em>le</em> digramme le plus fréquent en anglais, avec 3.2% d’occurences) est très confortable, mais le <code>H</code> occupe une place dont on peut se dispenser en français. De même, <code>U</code> et ★ sont très fréquent en français, mais peu fréquent en anglais, ce qui a été pris en compte pour leur placement.</p>
 <div style="text-align: center;">
 <p><a href="stats/#/Ergo‑L/iso/en"> <img src="img/ergol_en.svg" alt="fréquence d’utilisation des touches en anglais" /> fréquence d’utilisation des touches en anglais</a></p>
 </div>
-<p>Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de nombreuses dispositions dédiés exclusivement à l’anglais soient plus efficace qu’Ergo‑L dans cette langue. Ergo‑L est <em>la première disposition <strong>reéellement</strong> optimisée pour le français <strong>et</strong> l’anglais</em>.</p>
+<p>Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de nombreuses dispositions dédiés exclusivement à l’anglais soient plus efficace qu’Ergo‑L dans cette langue, Ergo‑L est <em>la première disposition <strong>reéellement</strong> optimisée pour le français <strong>et</strong> l’anglais</em>.</p>
+<h3 id="et-les-autres-langues">Et les autres langues ?</h3>
+<p>Ergo‑L est capable de saisir du texte dans presque toutes le langues européennes, mais ne cherche pas a optimiser la saisie de texte dans d’autres langues que le français et l’anglais. Certains caractères sont disponibles en touche typo, comme <code>ß</code> ou <code>ñ</code>, et il existe de nombreuses touches mortes en <kbd>AltGr-Shift</kbd> : par exemple, <code>^</code> étant en <kbd>AltGr</kbd><kbd>J</kbd>, <kbd>Shift</kbd><kbd>AltGr</kbd><kbd>J</kbd> produit un accent circonflexe mort, ce qui est suffisant pour la saisie occasionnelle de caractères spéciaux.</p>
+<p>Pour des usages plus réguliers, plutôt que de chercher à couvrir tous les cas possibles nous avons préféré faire en sorte que la disposition soit <strong>simple à modifier</strong>. Le <a href="https://github.com/Nuclear-Squid/ErgoL">dépôt github d’Ergo‑L</a> contient le fichier source de la disposition (un fichier <code>.toml</code> facile à lire et modifier) ainsi que des instructions pour construire votre disposition personnalisée ou évaluer la qualité des enchaînements de votre variante. Remplacer les caractères de la touche morte par ceux dont vous avez besoin devrait être relativement simple, et le résultat sera bien plus efficace que n’importe quelle disposition de clavier cherchant à couvrir toutes les langues !</p>
+<figure>
+<img src="img/ergol_1dk_de.svg" alt="" /><figcaption>Un exemple d’adaptation d’Ergo‑L pour l’allemand</figcaption>
+</figure>
+<p>Si vous voulez adapter Ergo‑L à une langue étrangère, nous vous recommandons de concevoir la couche typo uniquement pour cette langue et d’installer votre adaptation en même temps qu’Ergo‑L en lui donnant un autre nom (comme « ergol-de » pour l’allemand, par exemple). Tous les bureaux modernes proposent un raccourci clavier pour basculer d’une langue à l’autre, et vous pourrez ainsi basculer d’Ergo‑L à votre variante spécifique en un clin d’œil.</p>
 <h2 id="redoutable-pour-le-code">Redoutable pour le code</h2>
 <h3 id="héritage-qwerty-us">Héritage QWERTY-US</h3>
 <p>La grande majorité des touches en dehors du pavé de 3×10 sont identiques à celles de Qwerty‑US. Cela implique que les chiffres sont en accès direct (sans <kbd>Shift</kbd>), ce qui facilite grandement la saisie de nombres.</p>
@@ -256,7 +277,7 @@ différents d’une même main, comme 'df' en AZERTY">roulements</abbr>, alors q
 <li>les délimiteurs <code>(){}[]&lt;&gt;</code></li>
 <li>les délimiteurs de chaîne de caractères <code>'`"</code></li>
 <li>les symboles arithmétiques <code>+-/*</code></li>
-<li>les ponctuations <code>!;:?</code> <!-- - les symboles de (dé)référencement `&*` --></li>
+<li>les ponctuations <code>!;:?</code> (de plus, <code>;:</code> sont à leur emplacement en Qwerty Européen)</li>
 <li><code>$%^&amp;*</code> sont à leur position en <kbd>Shift</kbd> + chiffres, mais une rangée plus bas.</li>
 </ul>
 <p>Comme pour l’emplacement des lettres de la disposition, une grande attention à été portée au placement des symboles de prog et aux enchaînements courrants. Les symboles peu courrants (<code>~@#%^`|</code>) sont loins des positions de repos, et la grande majorité des enchaînements de symboles de prog se fait soit avec une alternance de main (<code>~/</code>, <code>);</code>, <code>&lt;/&gt;</code>, <code>+=</code>, <code>['']</code>, …) soit avec un roulement (<code>&gt;=</code>, <code>/*</code>, <code>";</code>, <code>()</code>, <code>\"</code>, …).</p>
