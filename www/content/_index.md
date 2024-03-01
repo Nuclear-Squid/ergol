@@ -339,9 +339,8 @@ nous avons développée. Elle a été reprise dans d’autres projets, notamment
 Licence
 --------------------------------------------------------------------------------
 
-[WTFPL][] – Do What The Fuck You Want To Public License. Bien qu’il existe des
-licences mieux réputées, nous avons choisi d’en utiliser une dont on comprend
-tous les mots.
+[WTFPL][] – Do What The Fuck You Want To Public License. Il existe des licences
+mieux réputées, mais on en a choisi une dont on comprend tous les mots.
 
 
 <!--
