@@ -289,8 +289,9 @@ cet usage.
 Variantes de Bépo
 --------------------------------------------------------------------------------
 
-De par son ancienneté, Bépo a vu naître beaucoup de variantes qui ont toutes
-repris la philosophie initiale :
+De par son ancienneté, Bépo a vu naître [de nombreuses variantes
+libres](https://bepo.fr/wiki/Variantes_du_b%C3%A9po) qui ont repris la
+philosophie initiale :
 
 - toutes les voyelles à gauche (approche Dvorak) ;
 - les lettres sont étalées sur toutes les colonnes du clavier ;
@@ -302,17 +303,22 @@ Et très logiquement, ces variantes présentent les mêmes défauts d’ergonomi
 - surcharge importante de l’auriculaire droit ;
 - perte des raccourcis claviers positionnels.
 
-Optimot est une variante non-libre de Bépo qui l’optimise très nettement : le
-taux de digrammes de même doigt est divisé par deux en anglais et par trois en
-français ! Mais les défauts d’ergonomie restent les mêmes, ou ne sont atténués
-que très marginalement :
+[Optimot][] est une variante non-libre de Bépo qui l’optimise très nettement :
+le taux de digrammes de même doigt est divisé par deux en anglais et par trois
+en français ! Mais les défauts d’ergonomie restent les mêmes, ou ne sont
+atténués que très marginalement :
 
 - les lettres excentrées posent toujours le même problème de compatibilité avec
   les claviers ergonomiques ;
 - la charge de l’auriculaire droit est diminuée en anglais mais reste
-  strictement identique pour le français littéraire, et s’accroît dès que l’on
-  utilise des symboles de programmation (dont l’accès recommandé par l’auteur se
-  fait via la touche morte circonflexe, placée sous l’auriculaire en extension).
+  strictement identique pour le français littéraire (11.0 %) et s’accroît dès
+  que l’on utilise des symboles de programmation, dont l’accès recommandé par
+  l’auteur se fait via une touche morte placée sous l’auriculaire en extension.
+
+*[EDIT] :* l’auteur d’Optimot précise qu’il mesure 10.3 % de charge sur
+l’auriculaire droit et non 11.0 % comme vu par notre analyseur, mais fait valoir
+son droit au secret concernant le corpus et la méthode utilisés. Cela reste
+beaucoup trop élevé à notre avis — à comparer aux 6.9 % pour Ergo‑L. *[/EDIT]*
 
 **De notre point de vue**, les deux dispositions portent bien leur nom :
 
@@ -326,3 +332,4 @@ que très marginalement :
 [dvorak]:  https://fr.wikipedia.org/wiki/Disposition_Dvorak
 [workman]: https://workmanlayout.org
 [colemak]: https://colemak.com
+[optimot]: https://optimot.fr
