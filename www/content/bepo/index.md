@@ -312,12 +312,12 @@ atténués que très marginalement :
 - les lettres excentrées posent toujours le même problème de compatibilité avec
   les claviers ergonomiques ;
 - la charge de l’auriculaire droit est diminuée en anglais mais reste
-  strictement identique pour le français littéraire (11.0 %) et s’accroît dès
+  strictement identique pour le français littéraire (11.2 %) et s’accroît dès
   que l’on utilise des symboles de programmation, dont l’accès recommandé par
   l’auteur se fait via une touche morte placée sous l’auriculaire en extension.
 
 *[EDIT] :* l’auteur d’Optimot précise qu’il mesure 10.3 % de charge sur
-l’auriculaire droit et non 11.0 % comme vu par notre analyseur, mais fait valoir
+l’auriculaire droit et non 11.2 % comme vu par notre analyseur, mais fait valoir
 son droit au secret concernant le corpus et la méthode utilisés. Cela reste
 beaucoup trop élevé à notre avis — à comparer aux 6.9 % pour Ergo‑L. *[/EDIT]*
 
