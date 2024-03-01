@@ -44,7 +44,8 @@ class CollapsableTable extends HTMLElement {
       }
 
       th { font-weight: normal; }
-      td { width: 4em; }
+      td:nth-child(1) { width: 2em; text-align: center; }
+      td:nth-child(2) { width: 4em; text-align: right; }
 
       button {
         width: 30%;

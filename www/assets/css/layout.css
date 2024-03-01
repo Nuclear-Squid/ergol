@@ -9,7 +9,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 25px;
   margin: auto;
   max-width: 58em;
   min-height: 100%;
@@ -43,7 +42,6 @@ dialog::backdrop {
   max-width: 42em;
   margin: auto;
   padding: 1em;
-  border-radius: 1em;
   background-color: #8882;
 }
 
@@ -69,12 +67,25 @@ table {
   width: 100%;
 }
 
+th, td {
+  padding: 0.2em 0.5em;
+}
+
 table caption {
   caption-side: bottom;
 }
 
+ul {
+  padding-left: 1.5em;
+}
+
 a {
   color: brown;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 
@@ -83,12 +94,12 @@ a {
  */
 
 #banner {
-  margin: 1em 0 0;
-  box-sizing: border-box;
-  background: left center no-repeat url(../favicon.svg);
-  background-size: 50px;
+  padding: .5em 0 0.5em 64px;
   min-height: 50px;
-  padding-left: 60px;
+  box-sizing: border-box;
+  background: left 6px center no-repeat url(../favicon.svg);
+  background-size: 50px;
+  background-color: #8882;
 }
 
 #banner p.title {
@@ -100,25 +111,18 @@ a {
   margin: 0.4em 0 0;
 }
 
-header, header a,
-footer, footer a {
+#banner, #banner a {
   color: #544; /* matches the favicon #rocket color */
-  text-decoration: none;
-}
-
-header a:hover,
-footer a:hover {
-  text-decoration: underline;
 }
 
 header h1 {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
+  margin: 1.2em auto;
 }
 
 header nav {
   border-top: 1px solid;
-  border-color: #544f; /* matches the favicon #rocket color */
   text-align: right;
 }
 
@@ -154,15 +158,37 @@ select {
     color: #ccc;
   }
 
-  header, header a, header nav,
-  footer, footer a, footer nav {
+  #banner,
+  #banner a,
+  header nav,
+  footer {
     /* matches the favicon #rocket color */
-    border-color: #cbb4;
+    border-color: #cbb6;
     color: #cbb;
   }
 
   h2, a {
     color: #f96;
     border-color: #f96;
+  }
+}
+
+
+/******************************************************************************
+ * Desktop Mode
+ */
+
+@media only screen and (min-width: 768px) {
+  header nav,
+  footer nav,
+  main {
+    padding: 0 25px;
+  }
+  #banner {
+    padding-left: calc(25px + 64px);
+    background-position: left 25px center;
+  }
+  .highlight {
+    border-radius: 6px;
   }
 }
