@@ -280,7 +280,7 @@ Redoutable pour le code
 ### Héritage QWERTY-US
 
 La grande majorité des touches en dehors du pavé de 3×10 sont identiques à
-celles de Qwerty‑US. Cela implique que les chiffres sont en accès direct (sans
+celles de QWERTY‑US. Cela implique que les chiffres sont en accès direct (sans
 [Shift]{.kbd}), ce qui facilite grandement la saisie de nombres.
 
 QWERTY‑US est réputé pour son efficacité dans la saisie de symboles de
@@ -303,7 +303,7 @@ regroupés par « blocs ». On y retrouve :
 - les délimiteurs `(){}[]<>`
 - les délimiteurs de chaîne de caractères ``'`"``
 - les symboles arithmétiques `+-/*`
-- les ponctuations `!;:?` (de plus, `;:` sont à leur emplacement en Qwerty Européen)
+- les ponctuations `!;:?` (de plus, `;:` sont à leur emplacement en QWERTY Européen)
 - `$%^&*` sont à leur position en [Shift]{.kbd} + chiffres, mais une rangée plus bas.
 
 Comme pour l’emplacement des lettres de la disposition, une grande attention à

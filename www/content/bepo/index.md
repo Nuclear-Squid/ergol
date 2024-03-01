@@ -206,7 +206,7 @@ même doigt :
 .sfu a:hover { text-decoration: underline; }
 .sfu a       { text-decoration: none; }
 </style>
-:::{.sfu}
+:::{.sfu style="overflow: scroll;" }
 |      |  AZERTY                          |  Bépo                          |  Ergo‑L                         |  Dvorak                          |  QWERTY                          |
 |    -:|:--------------------------------:|:------------------------------:|:-------------------------------:|:--------------------------------:|:--------------------------------:|
 |**fr**| [7.97 %](/stats/#/azerty/iso/fr) | [2.55 %](/stats/#/bepo/iso/fr) | [1.23 %](/stats/#/ergol/iso/fr) | [3.31 %](/stats/#/dvorak/iso/fr) | [7.16 %](/stats/#/qwerty/iso/fr) |
@@ -245,7 +245,7 @@ prix d’une certaine complexité des pilotes de clavier :
 
 ### Ergo‑L
 
-À l’inverse, Ergo‑L utilise une touche morte de type [Qwerty-Lafayette][3] pour
+À l’inverse, Ergo‑L utilise une touche morte de type [QWERTY-Lafayette][3] pour
 tous les caractères accentués et ponctuations spéciales : la fluditié des
 enchaînements est préservée, et la touche [AltGr]{.kbd} peut être dédiée aux
 seuls symboles de programmation.
