@@ -284,7 +284,14 @@ Redoutable pour le code
 ### Héritage QWERTY-US
 
 La grande majorité des touches en dehors du pavé de 3×10 sont identiques à
-celles de Qwerty‑US. Cela implique que les chiffres sont en accès direct (sans
+celles de QWERTY‑US. Les seules exceptions sont :
+
+- les chevrons `<` et `>` sur la touche ISO, entre [Shift]{.kbd} et [Z]{.kbd}
+- les signes `-` et `/` qui sont échangés, le tiret étant très fréquent en français
+- les signes `;` et `:` qui sont déplacés en [Shift]{.kbd} + [,]{.kbd} et
+  [.]{.kbd} respectivement
+
+Cet héritage implique aussi que les chiffres sont en accès direct (sans
 [Shift]{.kbd}), ce qui facilite grandement la saisie de nombres.
 
 QWERTY‑US est réputé pour son efficacité dans la saisie de symboles de

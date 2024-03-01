@@ -282,8 +282,8 @@ touches répétées sous les auriculaires.
 ![La couche Symboles d’Ergo‑L.](/img/ergol_altgr.svg)
 
 La touche [AltGr]{.kbd} reste facultative, les symboles étant également
-disponibles aux emplacements du QWERTY ANSI, qui est perçu comme efficace pour
-cet usage.
+disponibles [aux emplacements du QWERTY ANSI](/#héritage-qwerty-us), une
+disposition de clavier perçue comme efficace pour cet usage.
 
 
 Variantes de Bépo
