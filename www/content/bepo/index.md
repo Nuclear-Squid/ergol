@@ -81,6 +81,7 @@ Les raccourcis clavier positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V
 ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
 [C]{.kbd} a été déplacé pour permettre un gain d’optimisation très sensible.
 
+:::{ style="overflow: scroll;" }
 <!-- Bon, j’ai beau adorer pandoc-md, ce tableau il *reste en HTML* -->
 <table>
   <caption style="caption-side: bottom">
@@ -143,6 +144,7 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
     </td>
   </tr>
 </table>
+:::
 
 **De notre point de vue** : Bépo a été optimisée au détriment de l’ergonomie,
 notamment en surchargeant beaucoup trop l’auriculaire droit et en s’aliénant la
