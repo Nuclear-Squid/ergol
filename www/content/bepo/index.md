@@ -168,6 +168,7 @@ mesurons à 2.6 % en français contre 8.0 % pour l’AZERTY. C’est un scor
 proche de celui obtenu par Dvorak en anglais, là où QWERTY est à 7.2 %.
 
 Cette optimisation est faite au détriment de l’anglais :
+
 - la charge de l’auriculaire droit grimpe à 13.7 % ;
 - certains digrammes, notamment `WH`, sont rédhibitoires.
 
@@ -192,7 +193,7 @@ et [Workman][] :
 
 Malgré ces compromis et le fait qu’il soit optimisé pour les **deux** langues,
 français **et** anglais, Ergo‑L affiche de meilleures métriques d’optimisation,
-tant sur la charge des doigts (voir ci-dessus) que sur le taux de digrammes de
+tant sur la charge des doigts (voir § précédent) que sur le taux de digrammes de
 même doigt :
 
 <style>
