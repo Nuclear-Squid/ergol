@@ -111,7 +111,7 @@ respectivement), et sont très inconfortables dans l’autre. Pourtant, à une
 exception près, les 9 lettres les plus fréquentes sont les mêmes en français
 (ESANITRUO) et en anglais (ETAOHNISR) :
 
-:::{}
+:::{ style="overflow: scroll;" }
 |      |      E |      S |      A |      N |      I |      T |      R |      U |      O |      H |
 |    -:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 |**fr**| 14.4 % |  7.2 % |  7.1 % |  6.8 % |  6.7 % |  6.7 % |  6.5 % |  6.1 % |  5.3 % |  1.0 % |
@@ -130,15 +130,11 @@ anglais, Ergo‑L affiche de meilleures métriques d’optimisation, tant sur la
 charge des doigts que sur le taux de digrammes de même doigt :
 
 <style>
-.sfu table th,
-.sfu table td { padding: 0.2em 0; }
 .sfu table tr td:nth-child(4) { background-color: #f884; }
 .sfu table caption { margin-top: 0.5em; font-size: smaller; }
 .sfu table { margin: 1em auto; max-width: 50em; border-collapse: collapse; }
-.sfu a:hover { text-decoration: underline; }
-.sfu a       { text-decoration: none; }
 </style>
-:::{.sfu}
+:::{.sfu style="overflow: scroll;" }
 |      |  AZERTY                          |  Bépo                          |  Ergo‑L                         |  Dvorak                          |  QWERTY                          |
 |    -:|:--------------------------------:|:------------------------------:|:-------------------------------:|:--------------------------------:|:--------------------------------:|
 |**fr**| [7.97 %](/stats/#/azerty/iso/fr) | [2.55 %](/stats/#/bepo/iso/fr) | [1.23 %](/stats/#/Ergo‑L/iso/fr) | [3.31 %](/stats/#/dvorak/iso/fr) | [7.16 %](/stats/#/qwerty/iso/fr) |
@@ -208,7 +204,7 @@ Pratiquement aucun enchaînement courant en français ne demande trop d’effort
 ### Typographie
 
 Soigner la typographie demande souvent un effort (physique et mental)
-supplémentaire non négligeable. Beaucoup l’ignore, ou laisse leur éditeur de
+supplémentaire non négligeable. Beaucoup l’ignorent, ou laissent leur éditeur de
 texte la gérer pour eux. Ergo‑L permet de soigner la typographie sans aucun
 effort supplémentaire :
 
@@ -227,14 +223,14 @@ Ergo‑L porte la même attention au confort de la saisie de texte en anglais qu
 français, mais doit faire quelques compromis pour faire cohabiter les deux
 langues. Certaines lettres sont beaucoup plus fréquentes dans une langue que
 l’autre, (comme le [U]{.kbd} et la touche typo en français et le [H]{.kbd} en
-anglais) et les enchaînements courrant peuvent être très différents.
+anglais) et les enchaînements courants peuvent être très différents.
 
 Ergo‑L optimise le plus possible la saisie de texte anglais et français sans
 causer de problèmes rédhibitoires dans une de ces deux langues. Par exemple,
 l’enchaînement `TH` (*le* digramme le plus fréquent en anglais, avec 3.2%
 d’occurences) est très confortable, mais le `H` occupe une place dont on peut
-se dispenser en français. De même, `U` et ★ sont très fréquent en français,
-mais peu fréquent en anglais, ce qui a été pris en compte pour leur placement.
+se dispenser en français. De même, `U` et ★ sont très fréquents en français,
+mais peu fréquents en anglais, ce qui a été pris en compte pour leur placement.
 
 :::{ style="text-align: center;" }
 <a href="stats/#/Ergo‑L/iso/en">
@@ -243,7 +239,7 @@ mais peu fréquent en anglais, ce qui a été pris en compte pour leur placement
 :::
 
 Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de
-nombreuses dispositions dédiés exclusivement à l’anglais soient plus efficace
+nombreuses dispositions dédiées exclusivement à l’anglais soient plus efficace
 qu’Ergo‑L dans cette langue, Ergo‑L est *la première disposition **reéellement**
 optimisée pour le français **et** l’anglais*.
 
@@ -251,7 +247,7 @@ optimisée pour le français **et** l’anglais*.
 ### Et les autres langues ?
 
 Ergo‑L est capable de saisir du texte dans presque toutes le langues
-européennes, mais ne cherche pas a optimiser la saisie de texte dans d’autres
+européennes, mais ne cherche pas à optimiser la saisie de texte dans d’autres
 langues que le français et l’anglais. Certains caractères sont disponibles en
 touche typo, comme `ß` ou `ñ`, et il existe de nombreuses touches mortes en
 [AltGr-Shift]{.kbd} : par exemple, `^` étant en [AltGr]{.kbd}[J]{.kbd},
@@ -284,7 +280,7 @@ Redoutable pour le code
 ### Héritage QWERTY-US
 
 La grande majorité des touches en dehors du pavé de 3×10 sont identiques à
-celles de Qwerty‑US. Cela implique que les chiffres sont en accès direct (sans
+celles de QWERTY‑US. Cela implique que les chiffres sont en accès direct (sans
 [Shift]{.kbd}), ce qui facilite grandement la saisie de nombres.
 
 QWERTY‑US est réputé pour son efficacité dans la saisie de symboles de
@@ -307,12 +303,12 @@ regroupés par « blocs ». On y retrouve :
 - les délimiteurs `(){}[]<>`
 - les délimiteurs de chaîne de caractères ``'`"``
 - les symboles arithmétiques `+-/*`
-- les ponctuations `!;:?` (de plus, `;:` sont à leur emplacement en Qwerty Européen)
+- les ponctuations `!;:?` (de plus, `;:` sont à leur emplacement en QWERTY Européen)
 - `$%^&*` sont à leur position en [Shift]{.kbd} + chiffres, mais une rangée plus bas.
 
 Comme pour l’emplacement des lettres de la disposition, une grande attention à
-été portée au placement des symboles de prog et aux enchaînements courrants. Les
-symboles peu courrants (``~@#%^`|``) sont loins des positions de repos, et la
+été portée au placement des symboles de prog et aux enchaînements courants. Les
+symboles peu courants (``~@#%^`|``) sont loin des positions de repos, et la
 grande majorité des enchaînements de symboles de prog se fait soit avec une
 alternance de main (`~/`, `);`, `</>`, `+=`, `['']`, …) soit avec un roulement
 (`>=`, `/*`, `";`, `()`, `\"`, …).
@@ -339,9 +335,8 @@ nous avons développée. Elle a été reprise dans d’autres projets, notamment
 Licence
 --------------------------------------------------------------------------------
 
-[WTFPL][] – Do What The Fuck You Want To Public License. Bien qu’il existe des
-licences mieux réputées, nous avons choisi d’en utiliser une dont on comprend
-tous les mots.
+[WTFPL][] – Do What The Fuck You Want To Public License. Il existe des licences
+mieux réputées, mais on en a choisi une dont on comprend tous les mots.
 
 
 <!--

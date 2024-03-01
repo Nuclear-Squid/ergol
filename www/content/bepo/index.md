@@ -81,6 +81,7 @@ Les raccourcis clavier positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V
 ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
 [C]{.kbd} a été déplacé pour permettre un gain d’optimisation très sensible.
 
+:::{ style="overflow: scroll;" }
 <!-- Bon, j’ai beau adorer pandoc-md, ce tableau il *reste en HTML* -->
 <table>
   <caption style="caption-side: bottom">
@@ -143,6 +144,7 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
     </td>
   </tr>
 </table>
+:::
 
 **De notre point de vue** : Bépo a été optimisée au détriment de l’ergonomie,
 notamment en surchargeant beaucoup trop l’auriculaire droit et en s’aliénant la
@@ -205,7 +207,7 @@ même doigt :
 .sfu a:hover { text-decoration: underline; }
 .sfu a       { text-decoration: none; }
 </style>
-:::{.sfu}
+:::{.sfu style="overflow: scroll;" }
 |      |  AZERTY                          |  Bépo                          |  Ergo‑L                         |  Dvorak                          |  QWERTY                          |
 |    -:|:--------------------------------:|:------------------------------:|:-------------------------------:|:--------------------------------:|:--------------------------------:|
 |**fr**| [7.97 %](/stats/#/azerty/iso/fr) | [2.55 %](/stats/#/bepo/iso/fr) | [1.23 %](/stats/#/ergol/iso/fr) | [3.31 %](/stats/#/dvorak/iso/fr) | [7.16 %](/stats/#/qwerty/iso/fr) |
