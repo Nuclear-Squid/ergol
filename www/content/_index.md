@@ -133,8 +133,6 @@ charge des doigts que sur le taux de digrammes de même doigt :
 .sfu table tr td:nth-child(4) { background-color: #f884; }
 .sfu table caption { margin-top: 0.5em; font-size: smaller; }
 .sfu table { margin: 1em auto; max-width: 50em; border-collapse: collapse; }
-.sfu a:hover { text-decoration: underline; }
-.sfu a       { text-decoration: none; }
 </style>
 :::{.sfu style="overflow: scroll;" }
 |      |  AZERTY                          |  Bépo                          |  Ergo‑L                         |  Dvorak                          |  QWERTY                          |

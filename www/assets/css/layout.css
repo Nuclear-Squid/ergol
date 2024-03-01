@@ -81,6 +81,11 @@ ul {
 
 a {
   color: brown;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 
@@ -106,15 +111,8 @@ a {
   margin: 0.4em 0 0;
 }
 
-header, header a,
-footer, footer a {
+#banner, #banner a {
   color: #544; /* matches the favicon #rocket color */
-  text-decoration: none;
-}
-
-header a:hover,
-footer a:hover {
-  text-decoration: underline;
 }
 
 header h1 {
@@ -125,7 +123,6 @@ header h1 {
 
 header nav {
   border-top: 1px solid;
-  border-color: #544f; /* matches the favicon #rocket color */
   text-align: right;
 }
 
@@ -161,10 +158,12 @@ select {
     color: #ccc;
   }
 
-  header, header a, header nav,
-  footer, footer a, footer nav {
+  #banner,
+  #banner a,
+  header nav,
+  footer {
     /* matches the favicon #rocket color */
-    border-color: #cbb4;
+    border-color: #cbb6;
     color: #cbb;
   }
 
@@ -187,7 +186,7 @@ select {
   }
   #banner {
     padding-left: calc(25px + 64px);
-    background-position: left calc(25px + 6px) center;
+    background-position: left 25px center;
   }
   .highlight {
     border-radius: 6px;
