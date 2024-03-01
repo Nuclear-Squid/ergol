@@ -1,8 +1,9 @@
+{{ $name := .Get "name" }}
 <div class="keyboard">
-  {{ with .Get "image" }}
-    <img src="{{ . | relURL }}">
+  {{ with .Get "layout" }}
+    <img src="/img/{{ . }}.svg">
     <p style="text-align: right;">
-    <span style="float: left;"> <small>powered by <a
+      <span style="float: left;"> <small>powered by <a
           href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>
       </small></span>
       <small>géométrie :</small>
@@ -11,23 +12,21 @@
       </select>
     </p>
   {{ end }}
-  <nav>
-    {{ with .Get "src" }}
-      <a href="dactylo#{{ . }}">⌨ Apprendre</a>
-      <button hidden>⇪ Tester !</button>
+  {{ if $name }}
+    {{ with .Get "layout" }}
+    <dialog id="demo">
+      <input spellcheck="false" placeholder="zone de saisie {{ $name }}" />
+      <x-keyboard src="/layouts/{{ . }}.json"></x-keyboard>
+    </dialog>
     {{ end }}
-    {{ with .Get "download" }}
-      <a href="{{ . }}">⇣ Installer</a>
-    {{ end }}
-  </nav>
+    <nav>
+      {{ with .Get "layout" }}
+        <a href="/dactylo#{{ . }}">⌨ Apprendre</a>
+      {{ end }}
+        <button disabled>⇪ Tester !</button>
+      {{ with .Get "href" }}
+        <a href="{{ . }}">⇣ Installer</a>
+      {{ end }}
+    </nav>
+  {{ end }}
 </div>
-
-{{ $name := .Get "name" }}
-
-{{ with .Get "src" }}
-  <dialog id="demo">
-      <input spellcheck="false" placeholder='{{ if $name }} {{ printf "zone de saisie %s" $name }} {{ end }}' />
-    <x-keyboard src="/layouts/{{ . }}.json"></x-keyboard>
-  </dialog>
-{{ end }}
-

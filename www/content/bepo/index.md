@@ -7,11 +7,7 @@ jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/demo.js", "/js/svg.js"]
 +++
 
-{{< x-keyboard
-    name="Bépo"
-    download="https://bepo.fr"
-    src="bepo"
-    image="/img/bepo.svg" >}}
+{{<x-keyboard name="Bépo" layout="bepo" href="https://bepo.fr">}}
 
 :::{.highlight style="max-width: 32em;"}
 - [Ergonomie]

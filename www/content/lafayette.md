@@ -14,11 +14,8 @@ compacts via une touche « Typo ».
 QWERTY-Lafayette
 --------------------------------------------------------------------------------
 
-{{< x-keyboard
-    name="QWERTY-Lafayette"
-    download="https://qwerty-lafayette.org"
-    src="lafayette"
-    image="/img/ergol.svg" >}}
+{{<x-keyboard name="QWERTY-Lafayette" layout="lafayette"
+              href="https://qwerty-lafayette.org">}}
 
 La disposition de clavier par laquelle tout a commencé !
 

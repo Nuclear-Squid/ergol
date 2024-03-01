@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const shape = getGeometry();
       keyboard.setKeyboardLayout(data.keymap, data.deadkeys, shape);
       geometry.value = shape;
-      if (button) button.hidden = false;
+      if (button) button.disabled = false;
     });
 
   geometry.addEventListener('change', event => {

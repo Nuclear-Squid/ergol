@@ -5,18 +5,7 @@ jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/demo.js", "/js/svg.js"]
 +++
 
-<style>
-  figure {
-    max-width: 48em;
-    margin: 2em auto;
-  }
-</style>
-
-{{< x-keyboard
-    name="Ergo‑L"
-    download="/lts"
-    src="ergol"
-    image="/img/ergol.svg" >}}
+{{<x-keyboard name="Ergo‑L" layout="ergol" href="/lts">}}
 
 :::{.highlight}
 - [Ergonomique avant tout !]

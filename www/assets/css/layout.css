@@ -75,6 +75,11 @@ table caption {
   caption-side: bottom;
 }
 
+figure {
+  max-width: 45em;
+  margin: 2em auto;
+}
+
 ul {
   padding-left: 1.5em;
 }
@@ -181,6 +186,7 @@ select {
 @media only screen and (min-width: 768px) {
   header nav,
   footer nav,
+  footer small,
   main {
     padding: 0 25px;
   }

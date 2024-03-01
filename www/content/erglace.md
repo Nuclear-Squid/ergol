@@ -7,11 +7,7 @@ jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/demo.js", "/js/svg.js"]
 +++
 
-{{< x-keyboard
-    name="Erglace"
-    download="https://github.com/Lysquid/Erglace"
-    src="erglace"
-    image="/img/erglace.svg" >}}
+{{<x-keyboard name="Erglace" layout="erglace" href="https://github.com/Lysquid/Erglace">}}
 
 
 ## Notes de conception
