@@ -1,8 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="60 60 780 240">
+<!-- <svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="60 60 780 240"> -->
+<svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="135 60 630 240">
 
   <style>
     rect, path {
       fill: #f8f8f8;
+      fill: #fff;
       stroke: #666;
       stroke-width: .5px;
     }
@@ -34,7 +36,7 @@
     .level3      { fill: blue; }
     .layer  { font-size: 14px; }
 
-    .layer, .level1, .level2 { opacity: 0.5; }
+    .layer, .level1, .level2 { opacity: 0.6; }
 
     @media (prefers-color-scheme: dark) {
       .specialKey rect { fill: #333; }

@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="0 60 900 240">
+<svg xmlns="http://www.w3.org/2000/svg" class="gnu" theme="reach"
+  viewBox="90 60 720 240">
+  <!-- viewBox="0 60 900 240" -->
 
   <style>
     rect {
@@ -55,6 +57,10 @@
       transform: translateY(8px);
     }
 
+    [theme="reach"]             rect { fill: hsl(222, 100%, 95%); }
+    [theme="reach"] .homeKey    rect { fill: hsl(222, 100%, 90%); }
+    [theme="reach"] .specialKey rect { fill: #e4e4e4; }
+
     @media (prefers-color-scheme: dark) {
       .specialKey rect { fill: #333; }
       rect, path       { fill: #444; }
@@ -62,7 +68,10 @@
       #odk             { fill: #484; }
       .level3          { fill: #6b6; }
       .deadKey         { fill: #f44; }
-      .homeKey rect    { fill: #88f5; }
+
+      [theme="reach"]             rect { fill: hsl(180, 30%, 30%); }
+      [theme="reach"] .homeKey    rect { fill: hsl(230, 30%, 30%); }
+      [theme="reach"] .specialKey rect { fill: #333; }
     }
   </style>
 

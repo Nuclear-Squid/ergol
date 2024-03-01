@@ -1,8 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="60 60 780 240">
+<!-- <svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="60 60 780 240"> -->
+<svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="135 60 630 240">
 
   <style>
     rect, path {
       fill: #f8f8f8;
+      fill: #fff;
       stroke: #666;
       stroke-width: .5px;
     }
@@ -26,7 +28,7 @@
     #odk    { fill: #7e7; }
     .level3 { fill: green; }
 
-    .layer, .level1, .level2 { opacity: 0.5; }
+    .layer, .level1, .level2 { opacity: 0.6; }
 
     .deadKey {
       fill: red;

@@ -5,6 +5,13 @@ jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/demo.js", "/js/svg.js"]
 +++
 
+<style>
+  figure {
+    max-width: 48em;
+    margin: 2em auto;
+  }
+</style>
+
 {{< x-keyboard
     name="Ergo‑L"
     download="/lts"
@@ -38,7 +45,7 @@ confort important pour la saisie en méthode dactylo, évitant notamment les
 extensions latérales de l’auriculaire droit qui sont typiques de Bépo pour les
 lettres `MZWÇ` (« les quatre cavaliers de l’auriculaire »).
 
-![Ergo‑L sur un clavier compact (OLKB Plank)](img/ergol_1dfh.svg)
+![Ergo‑L sur un clavier compact (type OLKB Planck).](img/ergol_1dfh.svg)
 
 C’est pour suivre cette approche que l’immense majorité des claviers
 ergonomiques actuels ne proposent que 6 colonnes de touches par main, ce qui est :
@@ -194,11 +201,7 @@ Une grande attention à été portée sur les enchaînements de lettres :
 
 Pratiquement aucun enchaînement courant en français ne demande trop d’effort.
 
-:::{ style="text-align: center;" }
-<a href="stats/#/Ergo‑L/iso/fr">
-![fréquence d’utilisation des touches en français](img/ergol_fr.svg)
-  fréquence d’utilisation des touches en français</a>
-:::
+![[Fréquence d’utilisation des touches en français.](stats/#/Ergo‑L/iso/fr)](img/ergol_fr.svg)
 
 
 ### Typographie
@@ -232,11 +235,7 @@ d’occurences) est très confortable, mais le `H` occupe une place dont on peut
 se dispenser en français. De même, `U` et ★ sont très fréquents en français,
 mais peu fréquents en anglais, ce qui a été pris en compte pour leur placement.
 
-:::{ style="text-align: center;" }
-<a href="stats/#/Ergo‑L/iso/en">
-![fréquence d’utilisation des touches en anglais](img/ergol_en.svg)
-  fréquence d’utilisation des touches en anglais</a>
-:::
+![[Fréquence d’utilisation des touches en anglais.](stats/#/Ergo‑L/iso/en)](img/ergol_en.svg)
 
 Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de
 nombreuses dispositions dédiées exclusivement à l’anglais soient plus efficace
@@ -264,7 +263,7 @@ Remplacer les caractères de la touche morte par ceux dont vous avez besoin
 devrait être relativement simple, et le résultat sera bien plus efficace que
 n’importe quelle disposition de clavier cherchant à couvrir toutes les langues !
 
-![Un exemple d’adaptation d’Ergo‑L pour l’allemand](img/ergol_1dk_de.svg)
+![Un exemple d’adaptation d’Ergo‑L pour l’allemand.](img/ergol_1dk_de.svg)
 
 Si vous voulez adapter Ergo‑L à une langue étrangère, nous vous recommandons de
 concevoir la couche typo uniquement pour cette langue et d’installer votre
