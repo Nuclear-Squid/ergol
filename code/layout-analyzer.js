@@ -458,7 +458,7 @@ window.addEventListener('DOMContentLoaded', () => {
         fetch(`../layouts/${value}.json`)
           .then(response => response.json())
           .then(data => {
-            inputField.placeholder = `Zone de saisie ${value}`;
+            inputField.placeholder = `zone de saisie ${value}`;
             keyboard.setKeyboardLayout(
               data.keymap,
               data.deadkeys,
