@@ -31,8 +31,8 @@ Ergonomie
 ### Bépo
 
 Conservant l’approche AZERTY d’avoir certaines lettres accentuées en direct
-(`É`, `È`, `À`, `Ç`), Bépo a manqué de place pour placer toutes les lettres et a
-choisi d’occuper les colonnes excentrées pour des lettres jugées moins
+(`É`, `È`, `À`, `Ç`), [Bépo][] a manqué de place pour placer toutes les lettres
+et a choisi d’occuper les colonnes excentrées pour des lettres jugées moins
 fréquentes (`M`, `Z`, `W`, `Ç`). Il en résulte une incompatibilité avec la
 plupart des claviers ergonomiques du marché, qui ne proposent que 6 colonnes de
 touches par main pour respecter le principe [1DFH](#dfh-1u-distance-from-home).
@@ -154,7 +154,7 @@ Optimisation
 
 ### Bépo
 
-Bépo applique une optimisation de type [Dvorak][] au français :
+[Bépo][] applique une optimisation de type [Dvorak][] au français :
 
 - maximiser l’alternance des mains lors de la frappe ;
 - répartir les touches de façon équitable sur les deux mains ;
@@ -222,7 +222,7 @@ Typographie
 
 ### Bépo
 
-Bépo gère les caractères accentués de façon similaire à AZERTY :
+[Bépo][] gère les caractères accentués de façon similaire à AZERTY :
 
 - certaines lettres comme [ÉÈÀÇ]{.kbd} sont accessibles directement ;
 - l’accent circonflexe et le tréma sont faits avec une touche morte (le tréma
@@ -289,7 +289,7 @@ cet usage.
 Variantes de Bépo
 --------------------------------------------------------------------------------
 
-De par son ancienneté, Bépo a vu naître [de nombreuses variantes
+De par son ancienneté, [Bépo][] a vu naître [de nombreuses variantes
 libres](https://bepo.fr/wiki/Variantes_du_b%C3%A9po) qui ont repris la
 philosophie initiale :
 
