@@ -208,7 +208,7 @@ Pratiquement aucun enchaînement courant en français ne demande trop d’effort
 ### Typographie
 
 Soigner la typographie demande souvent un effort (physique et mental)
-supplémentaire non négligeable. Beaucoup l’ignore, ou laisse leur éditeur de
+supplémentaire non négligeable. Beaucoup l’ignorent, ou laissent leur éditeur de
 texte la gérer pour eux. Ergo‑L permet de soigner la typographie sans aucun
 effort supplémentaire :
 
@@ -227,14 +227,14 @@ Ergo‑L porte la même attention au confort de la saisie de texte en anglais qu
 français, mais doit faire quelques compromis pour faire cohabiter les deux
 langues. Certaines lettres sont beaucoup plus fréquentes dans une langue que
 l’autre, (comme le [U]{.kbd} et la touche typo en français et le [H]{.kbd} en
-anglais) et les enchaînements courrant peuvent être très différents.
+anglais) et les enchaînements courants peuvent être très différents.
 
 Ergo‑L optimise le plus possible la saisie de texte anglais et français sans
 causer de problèmes rédhibitoires dans une de ces deux langues. Par exemple,
 l’enchaînement `TH` (*le* digramme le plus fréquent en anglais, avec 3.2%
 d’occurences) est très confortable, mais le `H` occupe une place dont on peut
-se dispenser en français. De même, `U` et ★ sont très fréquent en français,
-mais peu fréquent en anglais, ce qui a été pris en compte pour leur placement.
+se dispenser en français. De même, `U` et ★ sont très fréquents en français,
+mais peu fréquents en anglais, ce qui a été pris en compte pour leur placement.
 
 :::{ style="text-align: center;" }
 <a href="stats/#/Ergo‑L/iso/en">
@@ -243,7 +243,7 @@ mais peu fréquent en anglais, ce qui a été pris en compte pour leur placement
 :::
 
 Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de
-nombreuses dispositions dédiés exclusivement à l’anglais soient plus efficace
+nombreuses dispositions dédiées exclusivement à l’anglais soient plus efficace
 qu’Ergo‑L dans cette langue, Ergo‑L est *la première disposition **reéellement**
 optimisée pour le français **et** l’anglais*.
 
@@ -251,7 +251,7 @@ optimisée pour le français **et** l’anglais*.
 ### Et les autres langues ?
 
 Ergo‑L est capable de saisir du texte dans presque toutes le langues
-européennes, mais ne cherche pas a optimiser la saisie de texte dans d’autres
+européennes, mais ne cherche pas à optimiser la saisie de texte dans d’autres
 langues que le français et l’anglais. Certains caractères sont disponibles en
 touche typo, comme `ß` ou `ñ`, et il existe de nombreuses touches mortes en
 [AltGr-Shift]{.kbd} : par exemple, `^` étant en [AltGr]{.kbd}[J]{.kbd},
@@ -311,8 +311,8 @@ regroupés par « blocs ». On y retrouve :
 - `$%^&*` sont à leur position en [Shift]{.kbd} + chiffres, mais une rangée plus bas.
 
 Comme pour l’emplacement des lettres de la disposition, une grande attention à
-été portée au placement des symboles de prog et aux enchaînements courrants. Les
-symboles peu courrants (``~@#%^`|``) sont loins des positions de repos, et la
+été portée au placement des symboles de prog et aux enchaînements courants. Les
+symboles peu courants (``~@#%^`|``) sont loin des positions de repos, et la
 grande majorité des enchaînements de symboles de prog se fait soit avec une
 alternance de main (`~/`, `);`, `</>`, `+=`, `['']`, …) soit avec un roulement
 (`>=`, `/*`, `";`, `()`, `\"`, …).
