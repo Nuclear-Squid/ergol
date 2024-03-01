@@ -243,10 +243,10 @@ prix d’une certaine complexité des pilotes de clavier :
 
 ### Ergo‑L
 
-À l’inverse, Ergo‑L utilise une touche morte de type [Qwerty-Lafayette][3] pour
-tous les caractères accentués et ponctuations spéciales : la fluditié des
-enchaînements est préservée, et la touche [AltGr]{.kbd} peut être dédiée aux
-seuls symboles de programmation.
+À l’inverse, Ergo‑L utilise une touche morte de type [Lafayette][] pour tous les
+caractères accentués et ponctuations spéciales : la fluditié des enchaînements
+est préservée, et la touche [AltGr]{.kbd} peut être dédiée aux seuls symboles de
+programmation.
 
 Cette touche morte occasionne des frappes supplémentaires sur un texte francophone :
 
@@ -328,8 +328,9 @@ beaucoup trop élevé à notre avis — à comparer aux 6.9 % pour Ergo‑L. *
   personnes qui ont des difficultés avec Bépo.
 
 
-[bépo]:    https://bepo.fr
-[dvorak]:  https://fr.wikipedia.org/wiki/Disposition_Dvorak
-[workman]: https://workmanlayout.org
-[colemak]: https://colemak.com
-[optimot]: https://optimot.fr
+[bépo]:      https://bepo.fr
+[dvorak]:    https://fr.wikipedia.org/wiki/Disposition_Dvorak
+[workman]:   https://workmanlayout.org
+[colemak]:   https://colemak.com
+[optimot]:   https://optimot.fr
+[lafayette]: https://qwerty-lafayette.org
