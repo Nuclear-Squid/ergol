@@ -1,0 +1,28 @@
+/* Shamelessly stolen from Gruvbox: https://github.com/morhetz/gruvbox */
+
+:root {
+  --bg-main:  #fbf1c7;
+  --bg-dark:  #a89984;
+  --bg-light: #bdae93;
+  --text:     #282828;
+  --yellow:   #d79921;
+  --orange:   #d65d0e;
+  --blue:     #076678;
+  --green:    #98971a;
+  --aqua:     #689d6a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main:  #282828;
+    --bg-dark:  #1d2021;
+    --bg-light: #504945;
+    --text:     #fbf1c7;
+    --yellow:   #fabd2f;
+    --orange:   #fe8019;
+    --blue:     #458588;
+    --green:    #98971a;
+    --aqua:     #689d6a;
+  }
+}
+

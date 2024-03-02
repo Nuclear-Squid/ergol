@@ -2,7 +2,7 @@ html {
   height: 100%;
   width: 100%;
   font-family: sans-serif;
-  background-color: #ccc;
+  background-color: var(--bg-dark);
 }
 
 body {
@@ -14,15 +14,15 @@ body {
   min-height: 100%;
 
   line-height: 1.4em;
-  border-left: 1px solid #aaa;
-  border-right: 1px solid #aaa;
-  box-shadow: 0px 1px 10px #888;
-  background-color: white;
-  color: black;
+  border-left:  1px solid var(--bg-light);
+  border-right: 1px solid var(--bg-light);
+  box-shadow: 0px 1px 10px var(--bg-dark);
+  background-color: var(--bg-main);
+  color: var(--text);
 }
 
 h2 {
-  color: brown;
+  color: var(--orange);
   border-bottom: 1px inset;
 }
 
@@ -42,7 +42,7 @@ dialog::backdrop {
   max-width: 42em;
   margin: auto;
   padding: 1em;
-  background-color: #8882;
+  background-color: var(--bg-light);
 }
 
 img {
@@ -85,7 +85,7 @@ ul {
 }
 
 a {
-  color: brown;
+  color: var(--orange);
   text-decoration: none;
 }
 
@@ -104,7 +104,7 @@ a:hover {
   box-sizing: border-box;
   background: left 6px center no-repeat url(../favicon.svg);
   background-size: 50px;
-  background-color: #8882;
+  background-color: var(--bg-light);
 }
 
 #banner p.title {
@@ -116,9 +116,9 @@ a:hover {
   margin: 0.4em 0 0;
 }
 
-#banner, #banner a {
-  color: #544; /* matches the favicon #rocket color */
-}
+/* #banner, #banner a { */
+/*   color: var(--yellow); /1* matches the favicon #rocket color *1/ */
+/* } */
 
 header h1 {
   text-align: center;
@@ -174,34 +174,6 @@ input,
 select {
   color-scheme: light dark;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: #111;
-  }
-
-  body {
-    background-color: #222;
-    border-color: #111;
-    box-shadow: 0px 1px 10px #111;
-    color: #ccc;
-  }
-
-  #banner,
-  #banner a,
-  header nav,
-  footer {
-    /* matches the favicon #rocket color */
-    border-color: #cbb6;
-    color: #cbb;
-  }
-
-  h2, a {
-    color: #f96;
-    border-color: #f96;
-  }
-}
-
 
 /******************************************************************************
  * Desktop Mode
