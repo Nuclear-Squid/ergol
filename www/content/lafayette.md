@@ -10,6 +10,14 @@ jsScripts = ["/js/keebs.js"]
 Une série de disposition de clavier été adaptées au français et/ou aux claviers
 ergonomiques via une touche « Typo ».
 
+:::{.highlight}
+- [QWERTY-Lafayette]
+  <br/>Là où tout a commencé.
+- [Colemak French Touch]
+  <br/>Colemak avec l’accent français.
+- [Bépolar]
+  <br/>Bépo en 1DFH.
+:::
 
 QWERTY-Lafayette
 --------------------------------------------------------------------------------
