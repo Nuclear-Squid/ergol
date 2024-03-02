@@ -2,7 +2,6 @@
 title = "Duck Typist"
 
 [params]
-cssSheets = ["/css/keyboard.css"]
 jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/duck-typist.js"]
 
@@ -70,8 +69,11 @@ footer = """
   .key_list kbd {
     font-family: monospace;
     text-transform: uppercase;
+    background-color: transparent;
     display: inline-block;
     margin: 0 2px;
+    padding: 0;
+    border: none;
     cursor: pointer;
   }
 
@@ -96,11 +98,23 @@ footer = """
   <p style="text-align: right;">
     <span style="float: left;">
       <select id="layout">
-        <option value="ergol" selected>Ergo‑L</option>
-        <option value="erglace">Erglace</option>
-        <option value="bepo">Bépo</option>
+        <option disabled>  [en]</option>
+        <option value="qwerty">Qwerty</option>
+        <option value="dvorak">Dvorak</option>
+        <option value="colemak">Colemak</option>
+        <option value="colemak-dh">Colemak-DH</option>
+        <option value="workman">Workman</option>
+        <option value="ISRT">ISRT</option>
+        <option value="MTGAP">MTGAP</option>
+        <option value="sturdy">Sturdy</option>
+        <option disabled>  [fr]</option>
         <option value="azerty">Azerty</option>
         <option value="lafayette">Lafayette</option>
+        <option value="ergol" selected>Ergo‑L</option>
+        <option value="erglace">Erglace</option>
+        <option value="colemak-french-touch">Colemak French Touch</option>
+        <option value="bepolar">Bépolar</option>
+        <option value="bepo">Bépo</option>
       </select>
       <select id="dict">
         <option value="fr,french_1k">Français 1k</option>

@@ -2,9 +2,9 @@
 title = "Ergo‑L ou Bépo ?"
 
 [params]
-cssSheets = ["/css/keyboard.css"]
+cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
-jsScripts = ["/js/demo.js", "/js/svg.js"]
+jsScripts = ["/js/keebs.js"]
 +++
 
 {{<x-keyboard name="Bépo" layout="bepo" href="https://bepo.fr">}}

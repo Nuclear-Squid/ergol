@@ -1,18 +1,54 @@
+/**
+ *  <div class="keyboard">
+ *    <img src="/img/ergol.svg">     <!-- replaced by an <svg> element -->
+ *    <p style="text-align: right;">
+ *      <small style="float: left;">powered by <a
+ *        href="https://github.com/OneDeadKey/x-keyboard">x-keyboard</a></small>
+ *      <small>géométrie :</small>
+ *      <select>                     <!-- filled when the <svg> is created -->
+ *        <option value="dk iso">ISO</option>
+ *      </select>
+ *    </p>
+ *    <dialog>
+ *      <input></input>
+ *      <x-keyboard></x-keyboard>
+ *    </dialog>
+ *  </div>
+ */
+
 window.addEventListener('DOMContentLoaded', () => {
   'use strict'; // eslint-disable-line
 
-  const dialog   = document.querySelector('dialog');
-  const keyboard = document.querySelector('x-keyboard');
-  const input    = document.querySelector('input');
-  const geometry = document.querySelector('.keyboard select');
-  const button   = document.querySelector('.keyboard button');
+for (const keeb of document.querySelectorAll('.keyboard')) {
+    console.log(keeb);
 
-  if (!keyboard.layout) {
-    console.warn('web components are not supported');
-    return; // the web component has not been loaded
-  }
+  const dialog   = keeb.querySelector('dialog');
+  const keyboard = keeb.querySelector('x-keyboard');
+  const preview  = keeb.querySelector('img');
+  const input    = keeb.querySelector('input');
+  const geometry = keeb.querySelector('select');
+  const button   = keeb.querySelector('button');
 
   const getGeometry = () => geometry.value.split(' ')[1];
+
+  fetch(preview.getAttribute('src'))
+    .then(response => response.text())
+    .then(data => {
+      preview.outerHTML = data;
+      geometry.innerHTML = `
+        <option value="dk iso intlBackslash am">       ISO-A </option>
+        <option value="dk iso intlBackslash" selected> ISO   </option>
+        <option value="dk ansi">                       ANSI  </option>
+        <option value="dk ol60 ergo">                  TMx   </option>
+        <option value="dk ol50 ergo">                  4×6   </option>
+        <option value="dk ol40 ergo">                  3×6   </option>
+      `;
+      const svg = keeb.querySelector('.keyboard svg');
+      geometry.addEventListener('change', event => {
+        svg.setAttribute('class', event.target.value);
+        keyboard.geometry = getGeometry();
+      });
+    });
 
   fetch(keyboard.getAttribute('src'))
     .then(response => response.json() )
@@ -23,9 +59,14 @@ window.addEventListener('DOMContentLoaded', () => {
       if (button) button.disabled = false;
     });
 
-  geometry.addEventListener('change', event => {
-    keyboard.geometry = getGeometry();
-  });
+  if (!keyboard.layout) {
+    console.warn('web components are not supported');
+    return; // the web component has not been loaded
+  }
+
+  if (!input) {
+    return;
+  }
 
   /**
    * Open/Close modal
@@ -95,4 +136,6 @@ window.addEventListener('DOMContentLoaded', () => {
       event.target.value = event.target.value.slice(0, -event.data.length);
     }
   });
+}
+
 });

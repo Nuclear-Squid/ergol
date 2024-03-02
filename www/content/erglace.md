@@ -2,12 +2,13 @@
 title = "Erglace (WiP)"
 
 [params]
-cssSheets = ["/css/keyboard.css"]
+cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
-jsScripts = ["/js/demo.js", "/js/svg.js"]
+jsScripts = ["/js/keebs.js"]
 +++
 
-{{<x-keyboard name="Erglace" layout="erglace" href="https://github.com/Lysquid/Erglace">}}
+{{<x-keyboard name="Erglace" layout="erglace"
+              href="https://github.com/Lysquid/Erglace">}}
 
 
 ## Notes de conception

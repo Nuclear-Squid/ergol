@@ -34,7 +34,7 @@
   opacity: 0.3;
 }
 
-#demo {
+.keyboard dialog {
   max-width: 70em;
   width: 100%;
   padding: 2em;
@@ -45,7 +45,6 @@
   border: 5px solid #fff4;
 }
 
-#demo input,
 .keyboard input {
   box-sizing: border-box;
   border-radius: 6px;
@@ -56,18 +55,18 @@
   margin-bottom: 1em;
 }
 
-#demo p {
+.keyboard p {
   margin: 1em 0;
   text-align: right;
 }
 
-#demo p span {
+.keyboard p span {
   float: left;
   font-size: small;
 }
 
 @media (prefers-color-scheme: dark) {
-  #demo {
+  .keyboard dialog {
     background-color: #222;
     border: 5px solid #0004;
   }

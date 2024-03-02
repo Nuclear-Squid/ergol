@@ -276,7 +276,9 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addEventListener('hashchange', loadLayout);
-  gLayout.addEventListener('change', loadLayout);
+  gLayout.addEventListener('change', () => {
+    window.location.hash = `#${gLayout.value}`;
+  });
 
   gDict.addEventListener('change', () => {
     localStorage.setItem('dict', gDict.value);
