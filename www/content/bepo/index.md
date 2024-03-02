@@ -70,7 +70,7 @@ Les auriculaires sont préservés, en particulier le droit qui est en charge des
 touches [Entrée]{.kbd} et [Backspace]{.kbd} sur la plupart des claviers (et qui
 ne sont pas comptées dans ces métriques).
 
-Les lettres fréquemment doublées (e.g. [L]{.kbd}, [N]{.kbd} et [M]{.kbd}) sont
+Les lettres fréquemment doublées (e.g. [L]{.kbd}, [N]{.kbd}, [M]{.kbd}) sont
 placées sous les index.
 
 Les raccourcis clavier positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}
@@ -223,11 +223,11 @@ Typographie
 
 [Bépo][] gère les caractères accentués de façon similaire à AZERTY :
 
-- certaines lettres comme [ÉÈÀÇ]{.kbd} sont accessibles directement ;
+- certaines lettres comme `É` `È` `À` `Ç` sont accessibles directement ;
 - l’accent circonflexe et le tréma sont faits avec une touche morte (le tréma
   nécessitant *en plus* [AltGr]{.kbd} avec Bépo) ;
 - certains caractères nécessitent la touche [AltGr]{.kbd}, ce qui complique les
-  enchaînements : [Ù]{.kbd}, [Œ]{.kbd}, [Æ]{.kbd}, points de suspension…
+  enchaînements : `Ù`, `Œ`, `Æ`, points de suspension…
 
 De plus, Bépo propose beaucoup de caractères spéciaux (i.e. non liés à la langue
 français ou au code informatique) via la couche AltGr ou des touches mortes, au
@@ -251,8 +251,8 @@ Cette touche morte occasionne des frappes supplémentaires sur un texte francoph
 
 - 1.0 % pour `È`, `À`, `Ç`, `Œ`, `Æ`
 - 1.5 % pour le seul `É`
-- 1.5 % si on utilise l’apostrophe typographique `’` plutôt que l’apostrophe
-  droite `'`
+- 1.5 % si on utilise l’apostrophe typographique (`’`) plutôt que l’apostrophe
+  droite (`'`)
 
 … soit environ 4 % de frappes supplémentaires. Pour une vitesse de saisie de 60
 mots/minutes, on perd ainsi 2 mots/minute en Ergo‑L.

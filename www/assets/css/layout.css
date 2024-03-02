@@ -143,6 +143,30 @@ footer small {
 
 
 /******************************************************************************
+ * Keys & Chars
+ */
+
+kbd, .odk { /* key */
+  margin: 0 2px;
+  font-size: 1em;
+  border: 1px outset #888;
+  background-color: #8884;
+  padding: 2px 3px;
+}
+
+code { /* character, digrams, trigrams */
+  /* font-size: 1.2em; */
+  font-weight: bold;
+  font-family: serif;
+  background-color: #b884;
+  text-transform: uppercase;
+  text-transform: lowercase;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+
+/******************************************************************************
  * Dark Mode
  */
 
