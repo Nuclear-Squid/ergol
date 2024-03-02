@@ -1,4 +1,5 @@
 h3 + small {
+  display: block;
   text-align: right;
   margin-top: -1em;
 }

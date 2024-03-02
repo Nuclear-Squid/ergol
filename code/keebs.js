@@ -1,9 +1,9 @@
 /**
  *  <div class="keyboard">
  *    <img src="/img/ergol.svg">     <!-- replaced by an <svg> element -->
- *    <p style="text-align: right;">
- *      <small style="float: left;">powered by <a
- *        href="https://github.com/OneDeadKey/x-keyboard">x-keyboard</a></small>
+ *    <p>
+ *      <span>powered by <a
+ *        href="https://github.com/OneDeadKey/x-keyboard">x-keyboard</a></span>
  *      <small>géométrie :</small>
  *      <select>                     <!-- filled when the <svg> is created -->
  *        <option value="dk iso">ISO</option>

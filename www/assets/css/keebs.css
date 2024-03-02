@@ -56,13 +56,13 @@
 }
 
 .keyboard p {
-  margin: 1em 0;
+  margin: 0 0 1em;
   text-align: right;
 }
 
 .keyboard p span {
   float: left;
-  font-size: small;
+  font-size: smaller;
 }
 
 @media (prefers-color-scheme: dark) {
