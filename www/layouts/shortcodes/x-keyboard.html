@@ -20,12 +20,13 @@
     </dialog>
     {{ end }}
     <nav>
-      {{ with .Get "layout" }}
-        <a href="/dactylo#{{ . }}">⌨ Apprendre</a>
-      {{ end }}
-        <button disabled>⇪ Tester !</button>
       {{ with .Get "href" }}
-        <a href="{{ . }}">⇣ Installer</a>
+        <a href="{{ . }}"><span>⇣</span> Installer</a>
+      {{ end }}
+      {{ with .Get "layout" }}
+        <button disabled>⇪ Tester</button>
+        <a href="/stats/#/{{ . }}//en+fr"><span>𝚺</span> Stats</a>
+        <a href="/dactylo/#{{ . }}"><span>⌨</span> Apprendre</a>
       {{ end }}
     </nav>
   {{ end }}

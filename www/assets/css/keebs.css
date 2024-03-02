@@ -10,15 +10,13 @@
 .keyboard nav button {
   display: inline-block;
   box-sizing: border-box;
-  margin: 0.5em;
-  padding: 0 10px;
+  margin: 1px;
+  padding: 0 6px;
   font-size: 1em;
-  height: 2.5em;
-  line-height: 2.5em;
-  text-decoration: none;
+  height: 2.3em;
+  line-height: 2.3em;
   font-family: sans-serif;
 
-  color: #333;
   background-color: #e4e4e4;
   border: 1px solid #6668;
   border-radius: 5px;
@@ -27,6 +25,7 @@
 .keyboard nav button {
   font-weight: bold;
   cursor: pointer;
+  color: #333;
 }
 
 .keyboard [disabled] {
@@ -72,8 +71,10 @@
   }
   .keyboard nav a,
   .keyboard nav button {
+    background-color: #333;
+    /* border: 1px solid #7778; */
+  }
+  .keyboard nav button {
     color: #ccc;
-    background-color: #444;
-    border: 1px solid #7778;
   }
 }
