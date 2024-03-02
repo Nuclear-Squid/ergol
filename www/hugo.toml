@@ -12,3 +12,11 @@ allow = ["pandoc"]
 
 [markup]
 defaultMarkdownHandler = "pandoc"
+
+[module]
+    [[module.mounts]]
+        source = "../code"
+        target = "assets/js"
+    [[module.mounts]]
+        source = "assets"
+        target = "assets"
