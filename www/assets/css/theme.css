@@ -2,33 +2,59 @@
  * │                         Palette                         │
  * ╰─────────────────────────────────────────────────────────╯
  */
+
 :root {
-  --bg-main:   #fff6f6;  /* <body> background color */
-  --fg-main:   #333;     /* main text color */
-  --fg-link:   #d63;     /* mostly used by titles and <a> */
+  /* <html/body> background colors and text color */
+  --bg-root:          #ccc;
+  --bg-main:          #f8f8f8; /* #fff6f6; */
+  --bg-main-shadow:   #888;
+  --fg-main-border:   #aaa;
+  --fg-main:          #222; /* #333; */
 
-  --fg-banner: #544;     /* also by "ergol rocket" and <code> */
-  --bg-banner: #efefef;  /* also used by tables of content */
+  /* banner -- the foreground matches the favicon #rocket color */
+  --fg-banner-border: #5446; /* #efefef; */
+  --fg-banner:        #544;
 
-  --bg-root:   #ccc;     /* <html> background color */
-  --bg-em:     #d634;    /* em color, but with less opacity */
-  --bg-key:    #dfdfdf;  /* mostly used by <kbd> */
+  /* links and h2 titles */
+  --fg-link:          brown; /* #d63; */
+  --fg-link-border:   brown;
+
+  /* special inline content */
+  --fg-key-border:    #888;
+  --bg-key:           #8884;
+  --bg-highlight:     #8882;
+  --bg-code:          #b884; /* #d634; */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-main:   #14141a;
-    --fg-main:   #ccc;
-    --fg-link:   #f96;
+    /* <html/body> background colors and text color */
+    --bg-root:          #080808;
+    --bg-main:          #1a1a1f;
+    --bg-main-shadow:   #111;
+    --fg-main-border:   #111;
+    --fg-main:          #ccc;
 
-    --fg-banner: #cbb;
-    --bg-banner: #23202c;
+    /* banner -- the foreground matches the favicon #rocket color */
+    --fg-banner-border: #cbb6;
+    --fg-banner:        #cbb; /* #23202c; */
 
-    --bg-root:   #08080d;
-    --bg-em:     #f964;
-    --bg-key:    #3d3d3d;
+    /* links and h2 titles */
+    --fg-link:          #f96;
+    --fg-link-border:   #f967;
+
+    /* no specific rules for inline content atm */
+    /* --bg-em:     #f964; */
+    /* --bg-key:    #3d3d3d; */
   }
 }
+
+input, select { color-scheme: light dark; }
+
+
+/******************************************************************************
+ * Main Layout
+ */
 
 html {
   height: 100%;
@@ -46,16 +72,16 @@ body {
   min-height: 100%;
 
   line-height: 1.4em;
-  border-left:  1px solid var(--bg-banner);
-  border-right: 1px solid var(--bg-banner);
-  box-shadow: 0px 1px 10px var(--bg-banner);
+  border-left:  1px solid var(--fg-main-border);
+  border-right: 1px solid var(--fg-main-border);
+  box-shadow: 0px 1px 10px var(--bg-main-shadow);
   background-color: var(--bg-main);
   color: var(--fg-main);
 }
 
 h2 {
   color: var(--fg-link);
-  border-bottom: 1px inset;
+  border-bottom: 1px inset var(--fg-link-border);
 }
 
 h3 {
@@ -74,7 +100,7 @@ dialog::backdrop {
   max-width: 42em;
   margin: auto;
   padding: 1em;
-  background-color: var(--bg-banner);
+  background-color: var(--bg-highlight);
 }
 
 img {
@@ -136,7 +162,7 @@ a:hover {
   box-sizing: border-box;
   background: left 6px center no-repeat url(../favicon.svg);
   background-size: 50px;
-  background-color: var(--bg-banner);
+  background-color: var(--bg-highlight);
 }
 
 #banner p.title {
@@ -148,8 +174,17 @@ a:hover {
   margin: 0.4em 0 0;
 }
 
-#banner, #banner a {
-  color: var(--fg-banner); /* matches the favicon #rocket color */
+#banner,
+#banner a,
+header nav,
+footer {
+  color: var(--fg-banner);
+}
+
+header nav,
+footer {
+  border-top: 1px solid var(--fg-banner-border);
+  text-align: right;
 }
 
 header h1 {
@@ -158,14 +193,7 @@ header h1 {
   margin: 1.2em auto;
 }
 
-header nav {
-  /* border-top: 1px solid; */
-  text-align: right;
-}
-
 footer {
-  border-top: 1px solid brown;
-  text-align: right;
   padding: 0.2rem 0 0.5rem;
 }
 
@@ -181,32 +209,21 @@ footer small {
 kbd, .odk { /* key */
   margin: 0 2px;
   font-size: 1em;
-  border: 1px outset #888;
+  border: 1px outset var(--bg-key-border);
   background-color: var(--bg-key);
   padding: 2px 3px;
 }
 
 code { /* character, digrams, trigrams */
-  /* font-size: 1.2em; */
   font-weight: bold;
   font-family: serif;
-  background-color: var(--bg-em);
-  color: var(--fg-banner);
+  background-color: var(--bg-code);
   text-transform: uppercase;
   text-transform: lowercase;
   padding: 2px 4px;
   border-radius: 2px;
 }
 
-
-/******************************************************************************
- * Dark Mode
- */
-
-input,
-select {
-  color-scheme: light dark;
-}
 
 /******************************************************************************
  * Desktop Mode
@@ -217,11 +234,11 @@ select {
   footer nav,
   footer small,
   main {
-    padding: 0 25px;
+    padding: 0 40px;
   }
   #banner {
-    padding-left: calc(25px + 64px);
-    background-position: left 25px center;
+    padding-left: calc(40px + 64px);
+    background-position: left 40px center;
   }
   .highlight {
     border-radius: 6px;
