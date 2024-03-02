@@ -72,7 +72,7 @@ préserver le raccourci [Ctrl]{.kbd}‑[V]{.kbd}. Il s’agit donc d’une varia
 « HUY ».
 
 Au final, on obtient une distribution avec d’excellentes statistiques, parfaite
-pour les personnes qui tapent actuellement en Colemak mais qui on un besoin
+pour les personnes qui tapent actuellement en Colemak mais qui ont un besoin
 régulier d’écrire en français. Comme toutes les autres dispositions de la
 famille, on conserve également la couche facultative [AltGr]{.kbd}, parfait pour
 la programmation.
@@ -88,7 +88,7 @@ Dérivé de Bépo, Bépolar s’adapte aux claviers compacts. C’est une dispos
 s’appuyant sur des mécanismes modernes (1DFH, touche typographique) afin
 d’améliorer le confort de frappe.
 
-La disposition est _plus confortable_ que Bépo en Français, et _meilleure_ que
+La disposition est _plus confortable_ que Bépo en français, et _meilleure_ que
 Bépo pour l’anglais et la programmation avec sa couche [AltGr]{.kbd} commune à
 Ergo-L.
 
