@@ -20,3 +20,12 @@ defaultMarkdownHandler = "pandoc"
     [[module.mounts]]
         source = "assets"
         target = "assets"
+    [[module.mounts]]
+        source = "../corpus"
+        target = "static/corpus"
+    [[module.mounts]]
+        source = "../layouts"
+        target = "static/layouts"
+    [[module.mounts]]
+        source = "static"
+        target = "static"
