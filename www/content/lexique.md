@@ -2,6 +2,12 @@
 title = "Lexique (WiP)"
 +++
 
+<style>
+  dt { font-weight: bold; }
+  dd p { margin: 0.3em 0; }
+  code { font-family: monospace; }
+</style>
+
 
 Ergonomie & Optimisation
 --------------------------------------------------------------------------------
@@ -40,10 +46,38 @@ l’index vers l’auriculaire.
 Windows
 --------------------------------------------------------------------------------
 
+AHK
+
+KLC
+
+MSKLC
+
 
 macOS
 --------------------------------------------------------------------------------
 
+keylayout
+
+karabiner
+
 
 Linux
 --------------------------------------------------------------------------------
+
+X11
+
+Wayland
+
+XKB
+
+: Un protocole et une extension de X11.
+
+: C'est aussi utilisé pour le format texte de configuration des dispositions.
+
+: Par abus de langage c'est aussi la base de données des configurations clavier,
+`xkeyboard-config`.
+
+XCompose
+
+: une IME, un format et les fichiers système correspondant. C’est notamment ce
+qui permet aux touches mortes système (autres que `1dk`) de fonctionner.
