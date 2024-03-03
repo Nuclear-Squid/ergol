@@ -29,14 +29,15 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* <html/body> background colors and text color */
-    --bg-root:          #080808;
+    --bg-root:          #151417;
+    --bg-highlight:     #252329;
     --bg-main:          #1a1a1f;
     --bg-main-shadow:   #111;
     --fg-main-border:   #111;
     --fg-main:          #ccc;
 
     /* banner -- the foreground matches the favicon #rocket color */
-    --fg-banner-border: #cbb6;
+    --fg-banner-border: #cbb5;
     --fg-banner:        #cbb; /* #23202c; */
 
     /* links and h2 titles */
