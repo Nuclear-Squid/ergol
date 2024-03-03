@@ -138,42 +138,23 @@ command generates the `json` stat file for this specific corpus.
 
 ### Run a Local Server
 
-Now, for the pages to be generated correctly and the javascript to be found at
-the right place, this git repository has to be served at the root of your
-domain.
+[Hugo](https://gohugo.io/) can be used to serve the site, it automatically
+watches and live-reload the pages upon file changes, however you still need to
+have `make watch` running to ensure that the `.json` files are generated upon
+modifying human-friendly layouts in `layouts/*.{to,ya}ml`.
 
-You can do it with a full-fledged web engine, such as
-[nginx](https://nginx.org/):
-
-```ngnix
-server {
-  listen       9000;
-  server_name  localhost;
-
-  location / {
-    root       <PATH_TO_REPOSITORY>;
-    index      stats.html stats.htm;
-  }
-}
+You can thus run your local instance of the Ergo‑L website either by running
+`hugo server` in the [`www/`](www/) directory, or _via_:
+```
+hugo server --source www/
 ```
 
-But you may not want to do that if you don’t already have a web engine installed
-in your machine.
+By default, the server will run on port `1313`: http://localhost:1313/
 
-Fortunately, if you followed us so far, you have `python` installed, and
-probably [`http.server`](https://docs.python.org/3.12/library/http.server.html)
-as well.
+The stats page is now accessible on
+<http://localhost:1313/stats/#/ergol/ol60/fr>!
 
-You can thus use it to run your local instance of the Ergo‑L website:
-```
-python3 -m http.server --bind localhost 9000
-```
-
-And you can now access the stat page at
-<http://localhost:9000/stats.html/#/ergol/ol60/fr>!
-
-You can now run `make watch` to have your edits on `toml` files live-updated… or
-almost.
-This solution doesn’t include live-reload.
-You thus have to refresh the stat page after each change, but it’s quite usable
-as is.
+**Note:** This solution supports live-reload for most parts. While it’s not a
+problem while editing the content, some stats are not fully refreshed with
+live-reload. You may have to manually refresh the stats page after editing a
+layout or a corpus to have the correct version of them.
