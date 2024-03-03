@@ -3,7 +3,7 @@
  * ╰─────────────────────────────────────────────────────────╯
  */
 :root {
-  --bg-main: #fff;     /* <body> background color */
+  --bg-main: #fff6f6;     /* <body> background color */
   --bg-dark: #ccc;     /* <html> background color */
   --bg-alt1: #efefef;  /* mostly used by header */
   --bg-alt2: #dfdfdf;  /* mostly used by <kbd> */
@@ -15,9 +15,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-main: #222;
-    --bg-dark: #111;
-    --bg-alt1: #2d2d2d;
+    --bg-main: #14141a;
+    --bg-dark: #08080d;
+    --bg-alt1: #23202c;
     --bg-alt2: #3d3d3d;
     --fg-main: #ccc;
     --fg-alt:  #cbb;
@@ -38,7 +38,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
-  max-width: 58em;
+  max-width: 60em;
   min-height: 100%;
 
   line-height: 1.4em;

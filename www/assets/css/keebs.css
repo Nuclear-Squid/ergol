@@ -17,7 +17,7 @@
   line-height: 2.3em;
   font-family: sans-serif;
 
-  background-color: #e4e4e4;
+  background-color: var(--bg-alt2);
   border: 1px solid #6668;
   border-radius: 5px;
 }
@@ -25,7 +25,7 @@
 .keyboard nav button {
   font-weight: bold;
   cursor: pointer;
-  color: #333;
+  color: var(--fg-main);
 }
 
 .keyboard [disabled] {
@@ -40,8 +40,8 @@
   margin: auto;
   border-radius: 10px;
   box-sizing: border-box;
-  background-color: #fff;
-  border: 5px solid #fff4;
+  background-color: var(--bg-main);
+  border: 5px solid var(--bg-alt1);
 }
 
 .keyboard input {
@@ -62,19 +62,4 @@
 .keyboard p span {
   float: left;
   font-size: smaller;
-}
-
-@media (prefers-color-scheme: dark) {
-  .keyboard dialog {
-    background-color: #222;
-    border: 5px solid #0004;
-  }
-  .keyboard nav a,
-  .keyboard nav button {
-    background-color: #333;
-    /* border: 1px solid #7778; */
-  }
-  .keyboard nav button {
-    color: #ccc;
-  }
 }
