@@ -71,7 +71,7 @@ Download the [layouts/ergol.toml][4] file in this repo and build the layout :
 kalamine build ergol.toml
 ```
 
-You’ll get a `dist` folder containing all of the drivers.
+You’ll get a `dist` folder containing all the drivers.
 
 Then, to install Ergo‑L, follow the [install section of Kalamine’s repo][3],
 and you should be good to go !
@@ -114,7 +114,7 @@ so you can run the page locally to try your prototypes !
 
 The different corpora can be found in [`corpus/`](corpus/), mainly `fr.txt` and
 `en.txt` which can be edited to change the type of text used (for instance if
-you don’t write like translaters of Miguel de Cervantes, or if you want to test
+you don’t write like translators of Miguel de Cervantes, or if you want to test
 with your own emails).
 
 If you have multiple source files, you can thus merge them using the
