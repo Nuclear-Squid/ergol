@@ -126,7 +126,7 @@ anglais, Ergo‑L affiche de meilleures métriques d’optimisation, tant sur la
 charge des doigts que sur le taux de digrammes de même doigt :
 
 <style>
-.sfu table tr td:nth-child(4) { background-color: #f884; }
+.sfu table tr td:nth-child(4) { background-color: var(--bg-hl); }
 .sfu table caption { margin-top: 0.5em; font-size: smaller; }
 .sfu table { margin: 1em auto; max-width: 50em; border-collapse: collapse; }
 </style>
