@@ -5,7 +5,7 @@
 :root {
   --bg-main:   #fff6f6;  /* <body> background color */
   --fg-main:   #333;     /* main text color */
-  --fg-em:     #d63;     /* mostly used by titles and <a> */
+  --fg-link:   #d63;     /* mostly used by titles and <a> */
 
   --fg-banner: #544;     /* also by "ergol rocket" and <code> */
   --bg-banner: #efefef;  /* also used by tables of content */
@@ -19,12 +19,13 @@
   :root {
     --bg-main:   #14141a;
     --fg-main:   #ccc;
-    --fg-em:     #f96;
+    --fg-link:   #f96;
 
     --fg-banner: #cbb;
+    --bg-banner: #23202c;
+
     --bg-root:   #08080d;
     --bg-em:     #f964;
-    --bg-banner: #23202c;
     --bg-key:    #3d3d3d;
   }
 }
@@ -53,7 +54,7 @@ body {
 }
 
 h2 {
-  color: var(--fg-em);
+  color: var(--fg-link);
   border-bottom: 1px inset;
 }
 
@@ -116,7 +117,7 @@ ul {
 }
 
 a {
-  color: var(--fg-em);
+  color: var(--fg-link);
   text-decoration: none;
 }
 
