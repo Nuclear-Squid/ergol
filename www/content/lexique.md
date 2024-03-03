@@ -4,7 +4,7 @@ title = "Lexique (WiP)"
 
 <style>
   dt { font-weight: bold; }
-  dd p { margin: 0.3em 0; }
+  dd p { margin: 0.2em 0; }
   code { font-family: monospace; }
 </style>
 
@@ -22,29 +22,42 @@ SKU (“Same Key Usage”), SKB (“Same Key Bigram”)
 : une répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
 disposition de clavier, ou `és` en Ergo‑L.
 
-extension
+Extension
 
 : quand un doigt doit atteindre une touche qui est soit sur une autre colonne
 que la position de repos, soit à une distance supérieure à une touche.
 
-ciseau
+Ciseau
 
 : quand un bigramme nécessite un changement de rangée inconfortable
 
-roulement intérieur
+Roulement intérieur
 
-: deux touches ou plus qui s’enchaînent sur une même main, dans le sens de
+: deux touches ou plus enchaînées sur une même main, dans le sens de
 l’auriculaire vers l’index. C’est considéré comme l’enchaînement le plus
 confortable qui soit.
 
-roulement extérieur
+Roulement extérieur
 
-: deux touches ou plus qui s’enchaînent sur une même main, dans le sens de
-l’index vers l’auriculaire.
+: deux touches ou plus enchaînées sur une même main, dans le sens de l’index
+vers l’auriculaire.
+
+Redirection
+
+: trois touches enchaînées sur une même main avec un changement de direction,
+e.g. [D]{.kbd}[S]{.kbd}[F]{.kbd} ou [K]{.kbd}[J]{.kbd}[L]{.kbd} en Azerty ou
+Qwerty.
+
+Mauvaise redirection
+
+: une redirection où l’index n’intervient pas. L’un des pires enchaînements
+faisables sur un clavier, sinon le pire.
 
 
-Windows
+Outils logiciels
 --------------------------------------------------------------------------------
+
+### Windows
 
 AHK
 
@@ -53,16 +66,14 @@ KLC
 MSKLC
 
 
-macOS
---------------------------------------------------------------------------------
+### macOS
 
 keylayout
 
-karabiner
+Karabiner
 
 
-Linux
---------------------------------------------------------------------------------
+### Linux
 
 X11
 
