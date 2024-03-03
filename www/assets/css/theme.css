@@ -3,26 +3,29 @@
  * ╰─────────────────────────────────────────────────────────╯
  */
 :root {
-  --bg-main: #fff6f6;     /* <body> background color */
-  --bg-dark: #ccc;     /* <html> background color */
-  --bg-alt1: #efefef;  /* mostly used by header */
-  --bg-alt2: #dfdfdf;  /* mostly used by <kbd> */
-  --fg-main: #333;     /* text color */
-  --fg-alt:  #544;     /* used by "ergol rocket", banner and <code> */
-  --accent:  #d63;     /* mostly used by titles and <a> */
-  --bg-hl:   #d634;    /* accent color, but with less opacity */
+  --bg-main:   #fff6f6;  /* <body> background color */
+  --fg-main:   #333;     /* main text color */
+  --fg-em:     #d63;     /* mostly used by titles and <a> */
+
+  --fg-banner: #544;     /* also by "ergol rocket" and <code> */
+  --bg-banner: #efefef;  /* also used by tables of content */
+
+  --bg-root:   #ccc;     /* <html> background color */
+  --bg-em:     #d634;    /* em color, but with less opacity */
+  --bg-key:    #dfdfdf;  /* mostly used by <kbd> */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-main: #14141a;
-    --bg-dark: #08080d;
-    --bg-alt1: #23202c;
-    --bg-alt2: #3d3d3d;
-    --fg-main: #ccc;
-    --fg-alt:  #cbb;
-    --accent:  #f96;
-    --bg-hl:   #f964;
+    --bg-main:   #14141a;
+    --fg-main:   #ccc;
+    --fg-em:     #f96;
+
+    --fg-banner: #cbb;
+    --bg-root:   #08080d;
+    --bg-em:     #f964;
+    --bg-banner: #23202c;
+    --bg-key:    #3d3d3d;
   }
 }
 
@@ -30,7 +33,7 @@ html {
   height: 100%;
   width:  100%;
   font-family: sans-serif;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-root);
 }
 
 body {
@@ -42,15 +45,15 @@ body {
   min-height: 100%;
 
   line-height: 1.4em;
-  border-left:  1px solid var(--bg-alt1);
-  border-right: 1px solid var(--bg-alt1);
-  box-shadow: 0px 1px 10px var(--bg-alt1);
+  border-left:  1px solid var(--bg-banner);
+  border-right: 1px solid var(--bg-banner);
+  box-shadow: 0px 1px 10px var(--bg-banner);
   background-color: var(--bg-main);
   color: var(--fg-main);
 }
 
 h2 {
-  color: var(--accent);
+  color: var(--fg-em);
   border-bottom: 1px inset;
 }
 
@@ -70,7 +73,7 @@ dialog::backdrop {
   max-width: 42em;
   margin: auto;
   padding: 1em;
-  background-color: var(--bg-alt1);
+  background-color: var(--bg-banner);
 }
 
 img {
@@ -113,7 +116,7 @@ ul {
 }
 
 a {
-  color: var(--accent);
+  color: var(--fg-em);
   text-decoration: none;
 }
 
@@ -132,7 +135,7 @@ a:hover {
   box-sizing: border-box;
   background: left 6px center no-repeat url(../favicon.svg);
   background-size: 50px;
-  background-color: var(--bg-alt1);
+  background-color: var(--bg-banner);
 }
 
 #banner p.title {
@@ -145,7 +148,7 @@ a:hover {
 }
 
 #banner, #banner a {
-  color: var(--fg-alt); /* matches the favicon #rocket color */
+  color: var(--fg-banner); /* matches the favicon #rocket color */
 }
 
 header h1 {
@@ -178,7 +181,7 @@ kbd, .odk { /* key */
   margin: 0 2px;
   font-size: 1em;
   border: 1px outset #888;
-  background-color: var(--bg-alt2);
+  background-color: var(--bg-key);
   padding: 2px 3px;
 }
 
@@ -186,8 +189,8 @@ code { /* character, digrams, trigrams */
   /* font-size: 1.2em; */
   font-weight: bold;
   font-family: serif;
-  background-color: var(--bg-hl);
-  color: var(--fg-alt);
+  background-color: var(--bg-em);
+  color: var(--fg-banner);
   text-transform: uppercase;
   text-transform: lowercase;
   padding: 2px 4px;

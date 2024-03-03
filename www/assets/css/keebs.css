@@ -17,7 +17,7 @@
   line-height: 2.3em;
   font-family: sans-serif;
 
-  background-color: var(--bg-alt2);
+  background-color: var(--bg-key);
   border: 1px solid #6668;
   border-radius: 5px;
 }
@@ -41,7 +41,7 @@
   border-radius: 10px;
   box-sizing: border-box;
   background-color: var(--bg-main);
-  border: 5px solid var(--bg-alt1);
+  border: 5px solid var(--bg-banner);
 }
 
 .keyboard input {
