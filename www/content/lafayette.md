@@ -10,7 +10,7 @@ jsScripts = ["/js/keebs.js"]
 Une série de disposition de clavier été adaptées au français et/ou aux claviers
 ergonomiques via une touche « Typo ».
 
-:::{.highlight}
+:::{.highlight style="max-width: 32em;"}
 - [QWERTY-Lafayette]
   <br/>Là où tout a commencé.
 - [Colemak French Touch]
@@ -19,27 +19,28 @@ ergonomiques via une touche « Typo ».
   <br/>Bépo en 1DFH.
 :::
 
+
 QWERTY-Lafayette
 --------------------------------------------------------------------------------
 
 {{<x-keyboard name="QWERTY-Lafayette" layout="lafayette"
               href="https://qwerty-lafayette.org">}}
 
-La disposition de clavier par laquelle tout a commencé !
+La disposition de clavier par laquelle tout a commencé ! Publiée en 2010,
+Lafayette est une simple adaptation du QWERTY ANSI au français. Aucune
+optimisation : on a [H]{.kbd}[J]{.kbd}[K]{.kbd}[L]{.kbd} sur la homerow et c’est
+très bien ainsi !
 
-Publiée en 2010, Lafayette est une simple adaptation du QWERTY ANSI au français.
-Aucune optimisation : on a [H]{.kbd}[J]{.kbd}[K]{.kbd}[L]{.kbd} sur la homerow
-et c’est très bien ainsi !
-
-C’est cette disposition qui a introduit l’idée d’une touche morte « à tout
-faire » et d’une couche [AltGr]{.kbd} entièrement dédiée aux symboles de
+C’est cette disposition qui a introduit l’idée d’une [touche morte][2] « à tout
+faire » et d’une [couche [AltGr]{.kbd}][3] entièrement dédiée aux symboles de
 programmation. Cette couche de symboles a longtemps été présentée comme « à
 personnaliser » : chaque utilisateur·ice était invité·e à se l’approprier et à
 l’adapter à son langage de programmation de prédilection.
 
-Kalamine a ainsi été développé dans le but de faciliter la personnalisation de
-Lafayette. Puis x-keyboard a suivi, afin de pouvoir tester ces dispositions sans
-avoir à les installer. Et de fil en aiguille…
+[Kalamine][] a alors été développé dans le but de faciliter la personnalisation
+de Lafayette. Puis [x‑keyboard][] a suivi, afin de pouvoir tester ces
+dispositions sans avoir à les installer. Et de fil en aiguille, c’est ainsi que
+les outils utilisés pour la mise au point d’Ergo‑L ont été développés.
 
 
 Colemak French Touch
@@ -48,8 +49,8 @@ Colemak French Touch
 {{<x-keyboard name="Colemak French Touch" layout="colemak-french-touch"
               href="https://github.com/cedricr/colemak-french-touch">}}
 
-Inspiré de QWERTY-Lafayette, Colemak French Touch applique le même principe
-d’adaptation au français grâce à une touche morte. On obtient ainsi très
+Inspiré de QWERTY-[Lafayette][], Colemak French Touch applique le même principe
+d’adaptation au français grâce à une [touche morte][2]. On obtient ainsi très
 facilement l’intégralité des caractères accentués et typographiques nécessaires
 à l’écriture d’un français soigné.
 
@@ -74,8 +75,8 @@ préserver le raccourci [Ctrl]{.kbd}‑[V]{.kbd}. Il s’agit donc d’une varia
 Au final, on obtient une distribution avec d’excellentes statistiques, parfaite
 pour les personnes qui tapent actuellement en Colemak mais qui ont un besoin
 régulier d’écrire en français. Comme toutes les autres dispositions de la
-famille, on conserve également la couche facultative [AltGr]{.kbd}, parfait pour
-la programmation.
+famille, on conserve également la [couche facultative [AltGr]{.kbd}][3], parfait
+pour la programmation.
 
 
 Bépolar
@@ -85,12 +86,21 @@ Bépolar
               href="https://github.com/Ced-C/Bepolar">}}
 
 Dérivé de Bépo, Bépolar s’adapte aux claviers compacts. C’est une disposition
-s’appuyant sur des mécanismes modernes (1DFH, touche typographique) afin
-d’améliorer le confort de frappe.
+s’appuyant sur des mécanismes modernes ([1DFH][1], [touche typographique][2])
+afin d’améliorer le confort de frappe.
 
 La disposition est _plus confortable_ que Bépo en français, et _meilleure_ que
-Bépo pour l’anglais et la programmation avec sa couche [AltGr]{.kbd} commune à
-Ergo-L.
+Bépo pour l’anglais et la programmation avec sa [couche [AltGr]{.kbd}][3]
+commune à Ergo-L.
 
 C’est un bon moyen, pour un bépoète, de tester l’approche 1DFH avec un temps
 d’apprentissage record.
+
+
+[1]: /#dfh-1u-distance-from-home
+[2]: /#impeccable-en-français
+[3]: /#couche-symboles
+
+[kalamine]:   https://github.com/OneDeadKey/kalamine
+[x‑keyboard]: https://github.com/OneDeadKey/x-keyboard
+[lafayette]:  https://qwerty-lafayette.org

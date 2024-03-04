@@ -21,17 +21,18 @@ jsScripts = ["/js/keebs.js"]
 - [Variantes de Bépo]
 :::
 
+
 Ergonomie
 --------------------------------------------------------------------------------
 
-### Bépo
+### Bépo {id="ergonomie-bépo"}
 
 Conservant l’approche AZERTY d’avoir certaines lettres accentuées en direct
 (`É`, `È`, `À`, `Ç`), [Bépo][] a manqué de place pour placer toutes les lettres
 et a choisi d’occuper les colonnes excentrées pour des lettres jugées moins
 fréquentes (`M`, `Z`, `W`, `Ç`). Il en résulte une incompatibilité avec la
 plupart des claviers ergonomiques du marché, qui ne proposent que 6 colonnes de
-touches par main pour respecter le principe [1DFH](#dfh-1u-distance-from-home).
+touches par main pour respecter le principe [1DFH][].
 
 Par ailleurs, la charge des doigts est mal répartie :
 
@@ -53,13 +54,13 @@ développement de troubles musculo-squelettiques associés à la saisie au clavi
 Enfin, par inspiration [Dvorak][], Bépo a renoncé aux raccourcis clavier
 positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
 
-### Ergo‑L
 
-Ergo‑L se veut [ergonomique avant tout](/#ergonomique-avant-tout). À ce titre,
-il suit une approche 1DFH stricte, plaçant les 26 lettres et les 4 principales
-ponctuations dans le pavé central de 3×10 touches, garantissant une
-compatibilité parfaite avec tous les claviers de 33 à 105 touches, ergonomiques
-ou non.
+### Ergo‑L {id="ergonomie-ergol"}
+
+Ergo‑L se veut [ergonomique avant tout][]. À ce titre, il suit une approche
+[1DFH][] stricte, plaçant les 26 lettres et les 4 principales ponctuations dans
+le pavé central de 3×10 touches, garantissant une compatibilité parfaite avec
+tous les claviers de 33 à 105 touches, ergonomiques ou non.
 
 Cette approche permet aussi de garder les chiffres en direct, rendant le pavé
 numérique inutile. On peut ainsi utiliser des claviers compacts qui favorisent
@@ -80,7 +81,7 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
 :::{ style="overflow: scroll;" }
 <!-- Bon, j’ai beau adorer pandoc-md, ce tableau il *reste en HTML* -->
 <table>
-  <caption style="caption-side: bottom">
+  <caption>
     Comparaison des charges des doigts entre Bépo et Ergo‑L.<br>
     <small> (cliquer sur l’histogramme pour plus d’infos) </small>
   </caption>
@@ -91,19 +92,19 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
     <th> Ergo‑L </th>
   </tr>
   <tr>
-    <td> <a href="/stats/#/bepo/iso/fr"><img src="./charge_bepo_fr.png" /></a> </td>
+    <td> <a href="/stats/#/bepo//fr"><img src="./charge_bepo_fr.png" /></a> </td>
     <th> fr </th>
-    <td> <a href="/stats/#/ergol/iso/fr"><img src="./charge_ergol_fr.png"/></a> </td>
+    <td> <a href="/stats/#/ergol//fr"><img src="./charge_ergol_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="/stats/#/bepo/iso/en+fr"><img src="./charge_bepo_en_fr.png"/></a> </td>
+    <td> <a href="/stats/#/bepo//en+fr"><img src="./charge_bepo_en_fr.png"/></a> </td>
     <th> fr‑en </th>
-    <td> <a href="/stats/#/ergol/iso/en+fr"><img src="./charge_ergol_en_fr.png"/></a> </td>
+    <td> <a href="/stats/#/ergol//en+fr"><img src="./charge_ergol_en_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="/stats/#/bepo/iso/en"><img src="./charge_bepo_en.png" /></a> </td>
+    <td> <a href="/stats/#/bepo//en"><img src="./charge_bepo_en.png" /></a> </td>
     <th> en </th>
-    <td> <a href="/stats/#/ergol/iso/en"><img src="./charge_ergol_en.png"/></a> </td>
+    <td> <a href="/stats/#/ergol//en"><img src="./charge_ergol_en.png"/></a> </td>
   </tr>
 
   <tr style="text-align: right; font-size: 10px;">
@@ -150,7 +151,7 @@ plupart des claviers ergonomiques.
 Optimisation
 --------------------------------------------------------------------------------
 
-### Bépo
+### Bépo {id="optimisation-bépo"}
 
 [Bépo][] applique une optimisation de type [Dvorak][] au français :
 
@@ -171,7 +172,7 @@ Cette optimisation est faite au détriment de l’anglais :
 - certains digrammes, notamment `WH`, sont rédhibitoires.
 
 
-### Ergo‑L
+### Ergo‑L {id="optimisation-ergol"}
 
 Ergo‑L reprend les principes ci-dessus mais intègre les inspirations [Colemak][]
 et [Workman][] :
@@ -204,10 +205,10 @@ même doigt :
 .sfu a       { text-decoration: none; }
 </style>
 :::{.sfu style="overflow: scroll;" }
-|      |  AZERTY                          |  Bépo                          |  Ergo‑L                         |  Dvorak                          |  QWERTY                          |
-|    -:|:--------------------------------:|:------------------------------:|:-------------------------------:|:--------------------------------:|:--------------------------------:|
-|**fr**| [7.97 %](/stats/#/azerty/iso/fr) | [2.55 %](/stats/#/bepo/iso/fr) | [1.23 %](/stats/#/ergol/iso/fr) | [3.31 %](/stats/#/dvorak/iso/fr) | [7.16 %](/stats/#/qwerty/iso/fr) |
-|**en**| [6.31 %](/stats/#/azerty/iso/en) | [3.01 %](/stats/#/bepo/iso/en) | [1.40 %](/stats/#/ergol/iso/en) | [2.62 %](/stats/#/dvorak/iso/en) | [5.76 %](/stats/#/qwerty/iso/en) |
+|      |  AZERTY                       |  Bépo                       |  Ergo‑L                      |  Dvorak                       |  QWERTY                       |
+|    -:|:-----------------------------:|:---------------------------:|:----------------------------:|:-----------------------------:|:-----------------------------:|
+|**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.23 %](/stats/#/ergol//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
+|**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.40 %](/stats/#/ergol//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
 : Taux de digrammes de même doigt en français et anglais.
 :::
 
@@ -219,7 +220,7 @@ Ergo‑L dans les deux langues.
 Typographie
 --------------------------------------------------------------------------------
 
-### Bépo
+### Bépo {id="typographie-bépo"}
 
 [Bépo][] gère les caractères accentués de façon similaire à AZERTY :
 
@@ -240,11 +241,11 @@ prix d’une certaine complexité des pilotes de clavier :
   touches mortes qu’il faut ajouter manuellement coté utilisateur.
 
 
-### Ergo‑L
+### Ergo‑L {id="typographie-ergol"}
 
-À l’inverse, Ergo‑L utilise une touche morte de type [Lafayette][] pour tous les
-caractères accentués et ponctuations spéciales : la fluditié des enchaînements
-est préservée, et la touche [AltGr]{.kbd} peut être dédiée aux seuls symboles de
+Ergo‑L utilise une touche morte de type [Lafayette][] pour tous les caractères
+accentués et ponctuations spéciales : la fluditié des enchaînements est
+préservée, et la touche [AltGr]{.kbd} peut être dédiée aux seuls symboles de
 programmation.
 
 Cette touche morte occasionne des frappes supplémentaires sur un texte francophone :
@@ -314,6 +315,7 @@ atténués que très marginalement :
   que l’on utilise des symboles de programmation, dont l’accès recommandé par
   l’auteur se fait via une touche morte placée sous l’auriculaire en extension.
 
+<!-- https://canary.discord.com/channels/794732334879473684/1202877504822579240/1212864335181906011 -->
 *[EDIT] :* l’auteur d’Optimot précise qu’il mesure 10.3 % de charge sur
 l’auriculaire droit et non 11.2 % comme vu par notre analyseur, mais fait valoir
 son droit au secret concernant le corpus et la méthode utilisés. Cela reste
@@ -326,6 +328,9 @@ beaucoup trop élevé à notre avis — à comparer aux 6.9 % pour Ergo‑L. *
 - Ergo‑L est **ergo**nomique avant tout, et apportera une solution radicale aux
   personnes qui ont des difficultés avec Bépo.
 
+
+[1DFH]: /#dfh-1u-distance-from-home.
+[ergonomique avant tout]: /#ergonomique-avant-tout)
 
 [bépo]:      https://bepo.fr
 [dvorak]:    https://fr.wikipedia.org/wiki/Disposition_Dvorak

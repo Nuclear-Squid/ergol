@@ -131,10 +131,10 @@ charge des doigts que sur le taux de digrammes de même doigt :
 .sfu table { margin: 1em auto; max-width: 50em; border-collapse: collapse; }
 </style>
 :::{.sfu style="overflow: scroll;" }
-|      |  AZERTY                          |  Bépo                          |  Ergo‑L                         |  Dvorak                          |  QWERTY                          |
-|    -:|:--------------------------------:|:------------------------------:|:-------------------------------:|:--------------------------------:|:--------------------------------:|
-|**fr**| [7.97 %](/stats/#/azerty/iso/fr) | [2.55 %](/stats/#/bepo/iso/fr) | [1.23 %](/stats/#/Ergo‑L/iso/fr) | [3.31 %](/stats/#/dvorak/iso/fr) | [7.16 %](/stats/#/qwerty/iso/fr) |
-|**en**| [6.31 %](/stats/#/azerty/iso/en) | [3.01 %](/stats/#/bepo/iso/en) | [1.40 %](/stats/#/Ergo‑L/iso/en) | [2.62 %](/stats/#/dvorak/iso/en) | [5.76 %](/stats/#/qwerty/iso/en) |
+|      |  AZERTY                       |  Bépo                       |  Ergo‑L                       |  Dvorak                       |  QWERTY                       |
+|    -:|:-----------------------------:|:---------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
+|**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.23 %](/stats/#/Ergo‑L//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
+|**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.40 %](/stats/#/Ergo‑L//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
 : Taux de digrammes de même doigts en français et anglais, extrait de la [page de comparaison avec Bépo](bepo).
 :::
 
@@ -153,8 +153,8 @@ Ergo‑L utilise une touche morte [★]{.odk} de type [Lafayette][] pour tous le
 caractères accentués, diacritiques et ponctuations spéciales. Actionner cette
 « touche Typo » donne accès à **tous** ces symboles dans le pavé de 3×10 touches
 **sans** utiliser [AltGr]{.kbd}. Cela occasionne [2.5 à 4.0 % de frappes
-supplémentaires](/bepo/#typographie) pour un texte francophone, ce qui nous
-semble négligeable comparé au gain de confort obtenu.
+supplémentaires](/bepo/#typographie-ergol) pour un texte francophone, ce qui
+nous semble négligeable comparé au gain de confort obtenu.
 
 ![La touche morte d’Ergo‑L.](img/ergol_1dk.svg)
 
@@ -211,7 +211,7 @@ Une grande attention à été portée aux enchaînements de lettres.
 - La touche morte est placée sur la main opposée à [E]{.kbd}[A]{.kbd}[C]{.kbd},
   qui sont les lettres les plus souvent diacritées en français.
 
-![[Fréquence d’utilisation des touches en français.](stats/#/Ergo‑L/iso/fr)](img/ergol_fr.svg)
+![[Fréquence d’utilisation des touches en français.](stats/#/Ergo‑L//fr)](img/ergol_fr.svg)
 
 Pratiquement aucun enchaînement courant en français ne demande trop d’effort.
 
@@ -235,7 +235,7 @@ peut se dispenser en français. De même, [U]{.kbd} et [★]{.odk} sont très
 fréquents en français, mais peu fréquents en anglais, ce qui a été pris en
 compte pour leur placement.
 
-![[Fréquence d’utilisation des touches en anglais.](stats/#/Ergo‑L/iso/en)](img/ergol_en.svg)
+![[Fréquence d’utilisation des touches en anglais.](stats/#/Ergo‑L//en)](img/ergol_en.svg)
 
 Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de
 nombreuses dispositions dédiées exclusivement à l’anglais soient plus efficace
