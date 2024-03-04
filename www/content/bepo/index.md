@@ -50,6 +50,10 @@ doublé (0.2 % du temps) et en extension latérale sur l’auriculaire droit. 
 favorise grandement les déviations ulnaires, qui sont la principale cause de
 développement de troubles musculo-squelettiques associés à la saisie au clavier.
 
+Beaucoup de Bépoètes ont recours à des claviers spécifiques, souvent très
+onéreux, pour réduire l’inconfort de ces touches placées sous l’auriculaire en
+extension.
+
 Enfin, par inspiration [Dvorak][], Bépo a renoncé aux raccourcis clavier
 positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
 
