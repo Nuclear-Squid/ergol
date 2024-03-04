@@ -54,8 +54,13 @@ Mauvaise redirection
 faisables sur un clavier, sinon le pire.
 
 
-Outils logiciels
+Support logiciel
 --------------------------------------------------------------------------------
+
+scan code
+
+key code
+
 
 ### Windows
 
@@ -64,6 +69,8 @@ AHK
 KLC
 
 MSKLC
+
+Virtual Key (VK)
 
 
 ### macOS
