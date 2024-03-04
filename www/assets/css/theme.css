@@ -1,36 +1,38 @@
-/* ╭─────────────────────────────────────────────────────────╮
- * │                         Palette                         │
- * ╰─────────────────────────────────────────────────────────╯
- */
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                         Color Palette                         │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+input, select { color-scheme: light dark; }
 
 :root {
-  /* <html/body> background colors and text color */
+  /* <html|body|main> background and text colors */
   --bg-root:          #ccc;
-  --bg-main:          #f8f8f8; /* #fff6f6; */
+  --bg-main:          #f8f8f8;
   --bg-main-shadow:   #888;
   --fg-main-border:   #aaa;
-  --fg-main:          #222; /* #333; */
+  --fg-main:          #222;
 
   /* banner -- the foreground matches the favicon #rocket color */
-  --fg-banner-border: #5446; /* #efefef; */
+  --bg-banner:        #8882;
+  --fg-banner-border: #5446;
   --fg-banner:        #544;
 
-  /* links and h2 titles */
-  --fg-link:          brown; /* #d63; */
-  --fg-link-border:   brown;
+  /* <h2|a|code> and specific emphasis */
+  --bg-accent:        #b884;
+  --fg-accent-border: brown;
+  --fg-accent:        brown;
 
-  /* special inline content */
-  --fg-key-border:    #888;
+  /* <kbd> and special inline content */
   --bg-key:           #8884;
-  --bg-highlight:     #8882;
-  --bg-code:          #b884; /* #d634; */
+  --fg-key-border:    #888;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* <html/body> background colors and text color */
+    /* <html|body|main> background and text colors */
     --bg-root:          #151417;
-    --bg-highlight:     #252329;
     --bg-main:          #1a1a1f;
     --bg-main-shadow:   #111;
     --fg-main-border:   #111;
@@ -38,24 +40,20 @@
 
     /* banner -- the foreground matches the favicon #rocket color */
     --fg-banner-border: #cbb5;
-    --fg-banner:        #cbb; /* #23202c; */
+    --fg-banner:        #cbb;
 
-    /* links and h2 titles */
-    --fg-link:          #f96;
-    --fg-link-border:   #f967;
-
-    /* no specific rules for inline content atm */
-    /* --bg-em:     #f964; */
-    /* --bg-key:    #3d3d3d; */
+    /* <h2|a|code> and specific emphasis */
+    --fg-accent-border: #f967;
+    --fg-accent:        #f96;
   }
 }
 
-input, select { color-scheme: light dark; }
 
-
-/******************************************************************************
- * Main Layout
- */
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                          Main Layout                          │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
 
 html {
   height: 100%;
@@ -81,8 +79,8 @@ body {
 }
 
 h2 {
-  color: var(--fg-link);
-  border-bottom: 1px inset var(--fg-link-border);
+  color: var(--fg-accent);
+  border-bottom: 1px inset var(--fg-accent-border);
 }
 
 h3 {
@@ -101,7 +99,7 @@ dialog::backdrop {
   max-width: 42em;
   margin: auto;
   padding: 1em;
-  background-color: var(--bg-highlight);
+  background-color: var(--bg-banner);
 }
 
 img {
@@ -144,7 +142,7 @@ ul {
 }
 
 a {
-  color: var(--fg-link);
+  color: var(--fg-accent);
   text-decoration: none;
 }
 
@@ -153,9 +151,11 @@ a:hover {
 }
 
 
-/******************************************************************************
- * Header & Footer
- */
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                        Header & Footer                        │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
 
 #banner {
   padding: .5em 0 0.5em 64px;
@@ -163,7 +163,7 @@ a:hover {
   box-sizing: border-box;
   background: left 6px center no-repeat url(../favicon.svg);
   background-size: 50px;
-  background-color: var(--bg-highlight);
+  background-color: var(--bg-banner);
 }
 
 #banner p.title {
@@ -203,9 +203,11 @@ footer small {
 }
 
 
-/******************************************************************************
- * Keys & Chars
- */
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                          Keys & Chars                         │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
 
 kbd, .odk { /* key */
   margin: 0 2px;
@@ -218,7 +220,7 @@ kbd, .odk { /* key */
 code { /* character, digrams, trigrams */
   font-weight: bold;
   font-family: serif;
-  background-color: var(--bg-code);
+  background-color: var(--bg-accent);
   text-transform: uppercase;
   text-transform: lowercase;
   padding: 2px 4px;
@@ -226,9 +228,11 @@ code { /* character, digrams, trigrams */
 }
 
 
-/******************************************************************************
- * Desktop Mode
- */
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                          Desktop Mode                         │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
 
 @media only screen and (min-width: 768px) {
   header nav,

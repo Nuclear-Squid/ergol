@@ -197,7 +197,7 @@ même doigt :
 <style>
 .sfu table th,
 .sfu table td { padding: 0.2em 0; }
-.sfu table tr td:nth-child(4) { background-color: var(--bg-code); }
+.sfu table tr td:nth-child(4) { background-color: var(--bg-accent); }
 .sfu table caption { caption-side: bottom; margin-top: 0.5em; font-size: smaller; }
 .sfu table { margin: 1em auto; max-width: 50em; border-collapse: collapse; }
 .sfu a:hover { text-decoration: underline; }
