@@ -10,7 +10,7 @@ jsScripts = ["/js/keebs.js"]
 <style>
   dt { font-weight: bold; }
   dd p { margin: 0.2em 0; }
-  code { font-family: monospace; }
+  code { font-family: monospace; text-transform: none; }
   pre { background-color: #6684; padding: 0.5em 2em; }
 </style>
 

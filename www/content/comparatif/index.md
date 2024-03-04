@@ -19,49 +19,54 @@ montrer les principaux défauts, qui, avec le temps, peuvent soit s’estomper,
 soit devenir insupportables.
 
 <style>
-.cmp table tr:nth-child(3),
-.cmp table tr:nth-child(4) { background-color: #f884; }
+.cmp table,
+.cmp td { border: 1px solid var(--fg-banner-border); padding:  0  0.5em; }
+.cmp th { border: 1px solid var(--fg-banner-border); padding: 1em 0.5em; }
+.cmp th { background-color: var(--bg-banner); font-weight: normal; }
+.cmp tr:nth-child(3),
+.cmp tr:nth-child(4) { background-color: var(--bg-accent); }
 .cmp table { margin: 0 auto; border-collapse: collapse; }
+.cmp ul { margin: 0.6em 0; }
 </style>
 :::{.cmp style="overflow: scroll;" }
-+---------------+-------+-------+-------+-------+-------+-----------------------------------------+
-| Disposition   | 1DFH  | ZXCV  |  fr   |  en   | code  | principaux défauts                      |
-+===============+=======+=======+=======+=======+=======+=========================================+
-| [Azerty][]    |   ·   |  oui  |   ·   |   ·   |   ·   | - (fr) mauvais support typographique    |
-|               |       |       |       |       |       | - charge de l’auriculaire gauche > 10 % |
-|               |       |       |       |       |       | - digrammes de même doigt > 6%          |
-|               |       |       |       |       |       | - chiffres en Shift                     |
-+---------------+-------+-------+-------+-------+-------+-----------------------------------------+
-| [Lafayette][] |  oui  |  oui  |   ·   |   ·   |  oui  | - charge déséquilibrée                  |
-|               |       |       |       |       |       | - digrammes de même doigt > 6%          |
-+---------------+-------+-------+-------+-------+-------+-----------------------------------------+
-| [Ergo‑L][]    |  oui  |  oui  |  oui  |  oui  |  oui  | - (fr) `tui`, `bo`                      |
-|               |       |       |       |       |       | - (en) `eas`, `we`                      |
-+---------------+-------+-------+-------+-------+-------+-----------------------------------------+
-| [Erglace][]   |  oui  |   ·   |  oui  |  oui  |  oui  | - (fr) `aie`, `j’`                      |
-|               |       |       |       |       |       | - (en) `ng`                             |
-+---------------+-------+-------+-------+-------+-------+-----------------------------------------+
-| [Colemak FT][]|  oui  |  oui  |  oui  |  oui  |  oui  | - (fr) `oui`/`uoi`                      |
-|               |       |       |       |       |       | - (en) `you`, `was`, `ho`               |
-|               |       |       |       |       |       | - charge déséquilibrée                  |
-+---------------+-------+-------+-------+-------+-------+-----------------------------------------+
-| [Bépolar][]   |  oui  |   ·   |  oui  |   ·   |  oui  | - charge de l’index gauche              |
-|               |       |       |       |       |       | - (fr) digrammes de même doigt > 2 %    |
-|               |       |       |       |       |       | - (en) digrammes de même doigt > 4 %    |
-+---------------+-------+-------+-------+-------+-------+-----------------------------------------+
-| [Bépo][]      |   ·   |   ·   |  oui  |   ·   |   ·   | - déviations ulnaires                   |
-|               |       |       |       |       |       | - charge de l’auriculaire droit > 10 %  |
-|               |       |       |       |       |       | - charge de l’index gauche > 20 %       |
-|               |       |       |       |       |       | - digrammes de même doigt > 2 %         |
-|               |       |       |       |       |       | - (en) rédhibitoire (e.g. `wh`)         |
-|               |       |       |       |       |       | - chiffres en Shift                     |
-+---------------+-------+-------+-------+-------+-------+-----------------------------------------+
-| [Optimot][]   |   ·   |   ·   |  oui  |[(?)][]|   ·   | - déviations ulnaires                   |
-|               |       |       |       |       |       | - (fr) auriculaires très chargés        |
-|               |       |       |       |       |       | - (en) charge déséquilibrée             |
-|               |       |       |       |       |       | - chiffres en Shift                     |
-|               |       |       |       |       |       | - licence non-libre                     |
-+---------------+-------+-------+-------+-------+-------+-----------------------------------------+
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
+|  disposition  | 1DFH  | ZXCV  |  fr   |  en   | code  |           principaux défauts                |
++===============+:=====:+:=====:+:=====:+:=====:+:=====:+=============================================+
+| [Azerty][]    |   ·   |  oui  |   ·   |   ·   |   ·   | - (fr) mauvais support typographique        |
+|               |       |       |       |       |       | - charge de l’auriculaire gauche > 10 %     |
+|               |       |       |       |       |       | - digrammes de même doigt > 6%              |
+|               |       |       |       |       |       | - chiffres en Shift                         |
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
+| [Lafayette][] |  oui  |  oui  |   ·   |   ·   |  oui  | - charge déséquilibrée                      |
+|               |       |       |       |       |       | - digrammes de même doigt > 6 %             |
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
+| [Ergo‑L][]    |  oui  |  oui  |  oui  |  oui  |  oui  | - (fr) `tui`, `bo`                          |
+|               |       |       |       |       |       | - (en) `eas`, `we`                          |
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
+| [Erglace][]   |  oui  |   ·   |  oui  |  oui  |  oui  | - (fr) `aie`, `j’`                          |
+|               |       |       |       |       |       | - (en) `ng`                                 |
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
+| [Colemak FT][]|  oui  |  oui  |  oui  |  oui  |  oui  | - charge déséquilibrée                      |
+|               |       |       |       |       |       | - (fr) `oui`/`uoi`                          |
+|               |       |       |       |       |       | - (en) `you`, `was`, `ho`                   |
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
+| [Bépolar][]   |  oui  |   ·   |  oui  |   ·   |  oui  | - charge de l’index gauche                  |
+|               |       |       |       |       |       | - (fr) digrammes de même doigt > 2 %        |
+|               |       |       |       |       |       | - (en) digrammes de même doigt > 4 %        |
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
+| [Bépo][]      |   ·   |   ·   |  oui  |   ·   |   ·   | - déviations ulnaires                       |
+|               |       |       |       |       |       | - charge de l’auriculaire droit > 10 %      |
+|               |       |       |       |       |       | - charge de l’index gauche > 20 %           |
+|               |       |       |       |       |       | - digrammes de même doigt > 2 %             |
+|               |       |       |       |       |       | - (en) rédhibitoire (e.g. `wh`)             |
+|               |       |       |       |       |       | - chiffres en Shift                         |
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
+| [Optimot][]   |   ·   |   ·   |  oui  |[(?)][]|   ·   | - déviations ulnaires                       |
+|               |       |       |       |       |       | - (fr) charge de l’auriculaire droit > 10 % |
+|               |       |       |       |       |       | - (en) charge déséquilibrée                 |
+|               |       |       |       |       |       | - chiffres en Shift                         |
+|               |       |       |       |       |       | - licence non-libre                         |
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 
 <!-- do not remove the empty line above -->
 :::
@@ -119,15 +124,18 @@ ergonomiques ou non, de 33 à 105 touches.
   optimisé que Bépo en français et que Dvorak en anglais, tout en gardant un
   confort impeccable quel que soit l’usage ;
 - Erglace est un projet encore jeune mais qui pousse l’optimisation plus loin
-  qu’Ergo‑L, notamment en français, au prix des raccourcis clavier
-  [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd}[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}
-  qui sont perdus.
+  qu’Ergo‑L, notamment en français, mais abandonne les raccourcis clavier
+  [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd}[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
 
 Colemak FT, Bépolar et Lafayette se destinent à des utilisateurs de Colemak,
 Bépo et Qwerty respectivement, qui souhaitent profiter de l’approche 1DFH avec
 le minimum d’effort. Leur ergonomie est très satisfaisante mais leur confort
 n’est pas au niveau d’Ergo‑L, ces dispositions ayant cherché à rester aussi
 proches que possibles de leurs ainées.
+
+La contrepartie c’est la [touche morte][] qu’il faut apprendre, et qui ajoute
+entre 2.5 et 4.0 % de frappes supplémentaires en français — soit une perte de 2
+mots/minute pour une personne tapant à 60 mpm.
 
 **De notre point de vue,** [Ergo‑L][] et [Erglace][] sont les seules
 dispositions à la fois ergonomiques **et** optimisées pour le français. Elles
@@ -152,13 +160,26 @@ et l’assume très bien ! Certaines variantes ont cherché à réduire le pro
 [W]{.kbd}, d’autres à pousser l’optimisation pour le français, mais toutes
 restent centrées sur une utilisation francophone.
 
+<!--
+Une solution possible pour Optimot (et proposée par @NuclearSquid à Pyjam)
+serait une permutation `h,’`, pour faire passer le `h` de [>] à [O].
+- 2024-02-03
+  https://discord.com/channels/794732334879473684/1202877504822579240/1203391939009847357
+  On s’en branle du H.
+- 2024-01-27
+  https://discord.com/channels/794732334879473684/794734985122152478/1200680341363494972
+  Moi aussi, je peux modifier légèrement Optimot pour optimiser un peu plus pour
+  l’anglais (mais au détriment du français). Mais ce n’est pas mon choix parce
+  que nous sommes en France et que je m’adresse à des personnes qui écrivent
+  d’abord en français
+-->
+
 [Nota]{id="optimot_en"} : l’auteur d’Optimot considère que sa disposition est
 optimisée pour l’anglais au motif qu’elle obtiendrait une bonne note globale sur
-KLAnext ; mais de notre point de vue, [la charge des doigts est trop mal
-répartie][1] et trop de digrammes fréquents sont inconfortables pour parler
-d’optimisation : `th` bien sûr mais aussi `yo`, `ay`, `by`, `ok`, `ak`,
-`ow`/`wo`, `ki`/`ik`, `ike` : elle est *utilisable*, mais pas *optimisée* pour
-ça.
+KLAnext ; mais pour nous, [la heatmap est inadaptée][1] (lettres fréquentes sur
+la rangée inférieure) et trop de digrammes courants sont inconfortables pour
+parler d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, `ak`, `ki`/`ik`/`ike`) :
+elle est *utilisable*, mais pas *optimisée* pour ça.
 
 [(?)]:     #optimot_en
 [optimot]: ./optimot_fr.png
@@ -175,5 +196,6 @@ d’optimisation : `th` bien sûr mais aussi `yo`, `ay`, `by`, `ok`, `ak`,
 
 
 [1DFH]:                   /#dfh-1u-distance-from-home
+[touche morte]:           /#caractères-accentués
 [couche altgr optimisée]: /#couche-symboles
 [défauts d’ergonomie]:    /bepo/#ergonomie
