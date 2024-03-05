@@ -273,12 +273,13 @@
   <g id="row_AE">
     <g class="left">
       <g id="Escape" class="specialKey">
-        <rect width="52" height="52" class="ergo" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
         <text x="16.4" y="42.8" class="ergo" text-anchor="middle">⎋</text>
       </g>
       <g id="Backquote" class="pinkyKey">
         <rect width="52" height="52" class="specialKey jis" rx="5" ry="5"/>
         <rect width="52" height="52" class="ansi alt iso ergo" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ol60" rx="5" ry="5"></rect>
         <text x="26" y="20" class="jis" text-anchor="middle">半角</text>
         <text x="26" y="32" class="jis" text-anchor="middle">全角</text>
         <text x="26" y="44" class="jis" text-anchor="middle">漢字</text>
@@ -371,6 +372,7 @@
       </g>
       <g id="Equal" class="pinkyKey" transform="translate(720)">
         <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ol60" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="43.4" class="level1">=</text>
           <text x="12.8" y="20.6" class="level2">+</text>
@@ -385,8 +387,8 @@
       </g>
       <g id="Backspace" class="specialKey" transform="translate(780)">
         <rect width="112" height="52" class="ansi" rx="5" ry="5"/>
-        <rect width="52" height="112" y="-60" class="ol60" rx="5" ry="5"/>
-        <rect width="52" height="52" class="ol40 ol50" rx="5" ry="5"/>
+        <rect width="67" height="112" y="-60" class="ol60" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ol40 ol50" rx="5" ry="5"/>
         <rect width="52" height="52" x="60" class="alt" rx="5" ry="5"/>
         <text x="16.4" y="42.8" class="ansi" text-anchor="middle">⌫</text>
         <text x="16.4" y="42.8" class="ergo" text-anchor="middle">⌫</text>
@@ -399,7 +401,7 @@
     <g class="left">
       <g id="Tab" class="specialKey">
         <rect width="82" height="52" rx="5" ry="5"/>
-        <rect width="52" height="52" class="ergo" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
         <text x="16.4" y="42.8" text-anchor="middle">↹</text>
         <text x="16.4" y="42.8" class="ergo" text-anchor="middle">↹</text>
       </g>
@@ -493,6 +495,7 @@
       </g>
       <g id="BracketRight" class="pinkyKey" transform="translate(750)">
         <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ol60" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="43.4" class="level1">]</text>
           <text x="12.8" y="20.6" class="level2">}</text>
@@ -614,8 +617,8 @@
         <path d="M50-60h72a5 5 0 0 1 5 5V47a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5h35a5 5 1 0 0 5-5v-50a5 5 0 0 1 5-5z" class="alt"/>
         <path d="M50-60h72a5 5 0 0 1 5 5V47a5 5 0 0 1-5 5H65a5 5 0 0 1-5-5V-3a5 5 1 0 0-5-5h-5a5 5 0 0 1-5-5v-42a5 5 0 0 1 5-5z" class="iso"/>
         <rect width="127" height="52" class="ansi" rx="5" ry="5"/>
-        <rect width="52" height="112" y="-60" class="ol60" rx="5" ry="5"/>
-        <rect width="52" height="52" class="ol40 ol50" rx="5" ry="5"/>
+        <rect width="67" height="112" y="-60" class="ol60" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ol40 ol50" rx="5" ry="5"/>
         <text x="16.4" y="42.8" class="ansi alt ergo" text-anchor="middle">⏎</text>
         <text x="16.4" y="42.8" class="iso" text-anchor="middle" transform="translate(60)">⏎</text>
       </g>
@@ -627,8 +630,8 @@
       <g id="ShiftLeft" class="specialKey">
         <rect width="127" height="52" class="ansi alt" rx="5" ry="5"/>
         <rect width="67" height="52" class="iso" rx="5" ry="5"/>
-        <rect width="52" height="112" y="-60" class="ol50 ol60" rx="5" ry="5"/>
-        <rect width="52" height="52" class="ol40" rx="5" ry="5"/>
+        <rect width="67" height="112" y="-60" class="ol50 ol60" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ol40" rx="5" ry="5"/>
         <text x="16.4" y="42.8" text-anchor="middle">⇧</text>
         <text x="16.4" y="42.8" class="ergo" text-anchor="middle">⇧</text>
       </g>
@@ -732,8 +735,8 @@
       <g id="ShiftRight" class="specialKey" transform="translate(735)">
         <rect width="157" height="52" class="ansi" rx="5" ry="5"/>
         <rect width="97" height="52" x="60" class="abnt" rx="5" ry="5"/>
-        <rect width="52" height="112" y="-60" class="ol50 ol60" rx="5" ry="5"/>
-        <rect width="52" height="52" class="ol40" rx="5" ry="5"/>
+        <rect width="67" height="112" y="-60" class="ol50 ol60" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ol40" rx="5" ry="5"/>
         <text x="16.4" y="42.8" class="ansi" text-anchor="middle">⇧</text>
         <text x="16.4" y="42.8" class="ergo" text-anchor="middle">⇧</text>
         <text x="16.4" y="42.8" class="abnt" text-anchor="middle" transform="translate(60)">⇧</text>

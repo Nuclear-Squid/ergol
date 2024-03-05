@@ -1,12 +1,17 @@
 /**
  *  <div class="keyboard">
- *    <img src="/img/ergol.svg">     <!-- replaced by an <svg> element -->
+ *    <object data="/img/ergol.svg"></object>
  *    <p>
  *      <span>powered by <a
  *        href="https://github.com/OneDeadKey/x-keyboard">x-keyboard</a></span>
  *      <small>géométrie :</small>
- *      <select>                     <!-- filled when the <svg> is created -->
- *        <option value="dk iso">ISO</option>
+ *      <select>
+ *        <option value="dk iso intlBackslash am">       ISO-A </option>
+ *        <option value="dk iso intlBackslash" selected> ISO   </option>
+ *        <option value="dk ansi">                       ANSI  </option>
+ *        <option value="dk ol60 ergo">                  TMx   </option>
+ *        <option value="dk ol50 ergo">                  4×6   </option>
+ *        <option value="dk ol40 ergo">                  3×6   </option>
  *      </select>
  *    </p>
  *    <dialog>
@@ -24,38 +29,29 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
 
   const dialog   = keeb.querySelector('dialog');
   const keyboard = keeb.querySelector('x-keyboard');
-  const preview  = keeb.querySelector('img');
+  const preview  = keeb.querySelector('object');
   const input    = keeb.querySelector('input');
   const geometry = keeb.querySelector('select');
   const button   = keeb.querySelector('button');
 
   const getGeometry = () => geometry.value.split(' ')[1];
 
-  fetch(preview.getAttribute('src'))
-    .then(response => response.text())
-    .then(data => {
-      preview.outerHTML = data;
-      geometry.innerHTML = `
-        <option value="dk iso intlBackslash am">       ISO-A </option>
-        <option value="dk iso intlBackslash" selected> ISO   </option>
-        <option value="dk ansi">                       ANSI  </option>
-        <option value="dk ol60 ergo">                  TMx   </option>
-        <option value="dk ol50 ergo">                  4×6   </option>
-        <option value="dk ol40 ergo">                  3×6   </option>
-      `;
-      const svg = keeb.querySelector('.keyboard svg');
-      geometry.addEventListener('change', event => {
-        svg.setAttribute('class', event.target.value);
-        keyboard.geometry = getGeometry();
-      });
-    });
+  preview.addEventListener('load', () => {
+    const svg = preview.contentDocument.documentElement;
+    const applyGeometry = event => {
+      svg.setAttribute('class', geometry.value);
+      keyboard.geometry = getGeometry();
+    };
+    geometry.selectedIndex = 1;
+    geometry.addEventListener('change', applyGeometry);
+    applyGeometry();
+  });
 
   fetch(keyboard.getAttribute('src'))
     .then(response => response.json() )
     .then(data => {
       const shape = getGeometry();
       keyboard.setKeyboardLayout(data.keymap, data.deadkeys, shape);
-      geometry.value = shape;
       if (button) button.disabled = false;
     });
 
