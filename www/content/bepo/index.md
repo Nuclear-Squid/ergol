@@ -191,8 +191,9 @@ et [Workman][] :
 - faute de pouvoir utiliser les positions de repos, on privilégie les touches :
     - de la rangée supérieure pour l’annulaire et le majeur ;
     - de la rangée inférieure pour l’index ;
-- on fait le choix de conserver les raccourcis clavier positionnels se justifie,
-  tant l’impact sur les métriques d’optimisation est limité.
+- on fait le choix de conserver les raccourcis clavier positionnels, l’impact
+  sur les métriques d’optimisation étant négligeable en regard des gains déjà
+  effectués sur Bépo et Dvorak.
 
 Malgré ces compromis et le fait qu’il soit optimisé pour les **deux** langues,
 français **et** anglais, Ergo‑L affiche de meilleures métriques d’optimisation,
