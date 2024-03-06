@@ -63,3 +63,45 @@
   float: left;
   font-size: smaller;
 }
+
+.geometry {
+  position: relative;
+  /* float: right; */
+  background-color: var(--bg-banner);
+  padding: 2px;
+  border-radius: 3px;
+  /* box-shadow: inset 0 0 0 3px rgba(35,   33,  45, 0.3), */
+  /*                   0 0 0 3px rgba(185, 185, 185, 0.3); */
+}
+
+.geometry input {
+  width: auto;
+  height: 100%;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 2px 8px;
+  margin: 0;
+  /* background: var(--bg-banner); */
+  /* color: #bdbdbdbd; */
+  background-color: var(--bg-key);
+  color: #fff6;
+  font-size: 1em;
+  transition: all 100ms linear;
+}
+
+.geometry input:checked {
+  /* background-image: linear-gradient(180deg, #95d891, #74bbad); */
+  background-color: var(--bg-accent);
+  color: #fff;
+  /* box-shadow: 0 1px 1px #0000002e; */
+  /* text-shadow: 0 1px 0px #79485f7a; */
+}
+
+.geometry input:before {
+  content: attr(label);
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}

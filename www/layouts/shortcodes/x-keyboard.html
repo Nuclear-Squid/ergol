@@ -10,12 +10,13 @@
     <span>powered by <a
         href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>
     </span>
-    <small>géométrie :</small>
-    <select>
-      <option>ISO</option>  <!-- filled when loaded -->
-    </select>
+    <!-- <small>géométrie :</small> -->
+    <span class="geometry">
+      <input type="radio" name="geometry" label="ISO"  value="male" checked>
+      <input type="radio" name="geometry" label="ANSI" value="female">
+      <input type="radio" name="geometry" label="TMx"  value="other">
+    </span>
   </p>
-
   {{ if $name }}
     {{ with .Get "data" }}
     <dialog>
