@@ -25,8 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
   'use strict'; // eslint-disable-line
 
 for (const keeb of document.querySelectorAll('.keyboard')) {
-    console.log(keeb);
-
   const dialog   = keeb.querySelector('dialog');
   const keyboard = keeb.querySelector('x-keyboard');
   const preview  = keeb.querySelector('object');
@@ -35,15 +33,13 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   const button   = keeb.querySelector('button');
 
   const getGeometry = () => geometry.value.split(' ')[1];
-  geometry.addEventListener('change', () => {
+  const applyGeometry = () => {
+    preview?.contentDocument.documentElement.setAttribute('class', geometry.value);
     keyboard.geometry = getGeometry();
-  });
+  };
 
+  geometry.addEventListener('change', applyGeometry);
   preview?.addEventListener('load', () => {
-    const svg = preview.contentDocument.documentElement;
-    const applyGeometry = event => {
-      svg.setAttribute('class', geometry.value);
-    };
     geometry.selectedIndex = 1;
     applyGeometry();
   });
@@ -51,8 +47,7 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   fetch(keyboard.getAttribute('src'))
     .then(response => response.json() )
     .then(data => {
-      const shape = getGeometry();
-      keyboard.setKeyboardLayout(data.keymap, data.deadkeys, shape);
+      keyboard.setKeyboardLayout(data.keymap, data.deadkeys, getGeometry());
       if (button) button.disabled = false;
     });
 
