@@ -31,19 +31,20 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   const keyboard = keeb.querySelector('x-keyboard');
   const preview  = keeb.querySelector('object');
   const input    = keeb.querySelector('input');
-  const geometry = keeb.querySelector('select');
+  const geometry = keeb.querySelector('select') || document.getElementById('geometry');
   const button   = keeb.querySelector('button');
 
   const getGeometry = () => geometry.value.split(' ')[1];
+  geometry.addEventListener('change', () => {
+    keyboard.geometry = getGeometry();
+  });
 
-  preview.addEventListener('load', () => {
+  preview?.addEventListener('load', () => {
     const svg = preview.contentDocument.documentElement;
     const applyGeometry = event => {
       svg.setAttribute('class', geometry.value);
-      keyboard.geometry = getGeometry();
     };
     geometry.selectedIndex = 1;
-    geometry.addEventListener('change', applyGeometry);
     applyGeometry();
   });
 

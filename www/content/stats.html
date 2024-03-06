@@ -5,16 +5,16 @@ title = "Heatmap"
 description = "Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès."
 cssSheets = ["/css/heatmap.css"]
 jsModules = ["/js/x-keyboard.js", "/js/collapsable-table.js"]
-jsScripts = ["/js/layout-analyzer.js", "/js/demo.js"]
+jsScripts = ["/js/layout-analyzer.js", "/js/keebs.js"]
 footer = "powered by [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
-<div id="demo">
+<div class="keyboard">
   <input spellcheck="false" />
-  <x-keyboard id="keyboard"></x-keyboard>
+  <x-keyboard></x-keyboard>
 </div>
 
-<div id="sticky-select" class="keyboard">
+<div id="sticky-select">
   <form>
     <select id="layout">
       <option disabled>  [en]</option>
