@@ -7,7 +7,7 @@ jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
 +++
 
-{{<x-keyboard name="Bépo" layout="bepo" href="https://bepo.fr">}}
+{{<x-keyboard name="Bépo" data="bepo" href="https://bepo.fr">}}
 
 :::{.highlight style="max-width: 32em;"}
 - [Ergonomie]
