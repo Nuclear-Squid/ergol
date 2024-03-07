@@ -3,6 +3,9 @@
      viewBox="0 0 900 300">
 
   <style>
+    :root {
+      color-scheme: light dark;
+    }
     rect, path {
       stroke: #666;
       stroke-width: .5px;

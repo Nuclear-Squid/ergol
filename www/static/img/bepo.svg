@@ -1,6 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" platform="gnu" theme="" class="iso intlBackslash">
   <style>
+    :root {
+      color-scheme: light dark;
+    }
     rect, path {
       stroke: #666;
       stroke-width: .5px;

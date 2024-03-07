@@ -2,6 +2,9 @@
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <meta name="description" content="{{ .Site.Params.description }}">
+<meta name="color-theme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1f" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8f8f8" />
 <link type="image/svg+xml" rel="icon" href="{{ absURL "favicon.svg" }}" sizes="any" />
 
 {{ partial "head/js.html" . }}

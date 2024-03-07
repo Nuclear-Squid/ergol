@@ -4,9 +4,9 @@
  * ╰───────────────────────────────────────────────────────────────╯
 **/
 
-input, select { color-scheme: light dark; }
-
 :root {
+  color-scheme: light dark;
+
   /* <html|body|main> background and text colors */
   --bg-root:          #ccc;
   --bg-main:          #f8f8f8;
