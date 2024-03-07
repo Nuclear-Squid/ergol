@@ -2,6 +2,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="135 60 630 240">
 
   <style>
+    :root {
+      color-scheme: light dark;
+    }
     rect, path {
       fill: #f8f8f8;
       fill: #fff;
