@@ -6,12 +6,12 @@
  *        href="https://github.com/OneDeadKey/x-keyboard">x-keyboard</a></span>
  *      <small>géométrie :</small>
  *      <select>
- *        <option value="dk iso intlBackslash am">       ISO-A </option>
- *        <option value="dk iso intlBackslash" selected> ISO   </option>
- *        <option value="dk ansi">                       ANSI  </option>
- *        <option value="dk ol60 ergo">                  TMx   </option>
- *        <option value="dk ol50 ergo">                  4×6   </option>
- *        <option value="dk ol40 ergo">                  3×6   </option>
+ *        <option value="iso  dk intlBackslash am"> ISO-A </option>
+ *        <option value="iso  dk intlBackslash">    ISO   </option>
+ *        <option value="ansi dk">                  ANSI  </option>
+ *        <option value="ol60 dk ergo">             TMx   </option>
+ *        <option value="ol50 dk ergo">             4×6   </option>
+ *        <option value="ol40 dk ergo">             3×6   </option>
  *      </select>
  *    </p>
  *    <dialog>
@@ -32,7 +32,7 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   const geometry = keeb.querySelector('select') || document.getElementById('geometry');
   const button   = keeb.querySelector('button');
 
-  const getGeometry = () => geometry.value.split(' ')[1];
+  const getGeometry = () => geometry.value.split(' ')[0];
   const applyGeometry = () => {
     preview?.contentDocument.documentElement.setAttribute('class', geometry.value);
     keyboard.geometry = getGeometry();

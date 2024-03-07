@@ -7,7 +7,9 @@ jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
 +++
 
-{{<x-keyboard name="Erglace" layout="erglace"
+{{<x-keyboard name="Erglace"
+              data="erglace"
+              type="1dk"
               href="https://github.com/Lysquid/Erglace">}}
 
 

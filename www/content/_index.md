@@ -5,7 +5,7 @@ jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
 +++
 
-{{<x-keyboard name="Ergo‑L" layout="ergol" href="/lts">}}
+{{<x-keyboard name="Ergo‑L" data="ergol" type="1dk" href="/lts">}}
 
 :::{.highlight}
 - [Ergonomique avant tout !]

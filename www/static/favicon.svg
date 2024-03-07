@@ -2,6 +2,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="410">
 
   <style>
+    :root { color-scheme: light dark; }
+
+    /* full-size icon */
     .green  { fill: hsl(125,  75%, 40%); }
     .purple { fill: hsl(290,  80%, 30%); }
     .red    { fill: hsl(  0,  92%, 50%); }

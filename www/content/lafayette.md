@@ -23,7 +23,9 @@ ergonomiques via une touche « Typo ».
 QWERTY-Lafayette
 --------------------------------------------------------------------------------
 
-{{<x-keyboard name="QWERTY-Lafayette" layout="lafayette"
+{{<x-keyboard name="QWERTY-Lafayette"
+              data="lafayette"
+              type="1dk"
               href="https://qwerty-lafayette.org">}}
 
 La disposition de clavier par laquelle tout a commencé ! Publiée en 2010,
@@ -46,7 +48,9 @@ les outils utilisés pour la mise au point d’Ergo‑L ont été développés.
 Colemak French Touch
 --------------------------------------------------------------------------------
 
-{{<x-keyboard name="Colemak French Touch" layout="colemak-french-touch"
+{{<x-keyboard name="Colemak French Touch"
+              data="colemak-french-touch"
+              type="1dk"
               href="https://github.com/cedricr/colemak-french-touch">}}
 
 Inspiré de QWERTY-[Lafayette][], Colemak French Touch applique le même principe
@@ -82,7 +86,9 @@ pour la programmation.
 Bépolar
 --------------------------------------------------------------------------------
 
-{{<x-keyboard name="Bépolar" layout="bepolar"
+{{<x-keyboard name="Bépolar"
+              data="bepolar"
+              type="1dk"
               href="https://github.com/Ced-C/Bepolar">}}
 
 Dérivé de Bépo, Bépolar s’adapte aux claviers compacts. C’est une disposition
