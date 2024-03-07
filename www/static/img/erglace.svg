@@ -1,5 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" platform="gnu" theme="" class="iso intlBackslash">
+<svg xmlns="http://www.w3.org/2000/svg" class="iso intlBackslash dk"
+     platform="gnu" theme="reach"
+     viewBox="0 0 900 300">
+
   <style>
     :root {
       color-scheme: light dark;
@@ -7,7 +9,7 @@
     rect, path {
       stroke: #666;
       stroke-width: .5px;
-      fill: #f8f8f8;
+      fill: #fff;
     }
     .specialKey,
     .specialKey rect,
@@ -64,6 +66,14 @@
     .intlRo  #ShiftRight .ansi { display: none; }
     .intlRo  #ShiftRight .abnt,
     .intlRo  #IntlRo { display: block; }
+
+    /* Angle Mod */
+    .am #KeyZ          { transform: translateX( 74px); }
+    .am #KeyX          { transform: translateX(134px); }
+    .am #KeyC          { transform: translateX(194px); }
+    .am #KeyV          { transform: translateX(254px); }
+    .am #KeyB          { transform: translateX(314px); }
+    .am #IntlBackslash { transform: translateX(374px); }
 
     .specialKey   .ergo,
     .specialKey   .ol60,
@@ -159,6 +169,8 @@
     #Lang1, #Lang2,
     #Space .jis,
     #Space .ks,
+    .ergo #Space .ansi,
+    .ol60 #Space .ansi,
     .ks  #Space .ansi,
     .ks  #Space .jis,
     .jis #Space .ansi,
@@ -175,6 +187,7 @@
     .jis #Backquote .jis,
     .jis #CapsLock .jis { display: block; }
 
+    #Space text,
     #Lang1 text,
     #Lang2 text,
     #Convert text,
@@ -213,96 +226,50 @@
       fill: #aad;
     }
 
-    [theme="reach"] .pinkyKey  rect { fill: hsl(  0, 100%, 90%); }
-    [theme="reach"] .numberKey rect { fill: hsl( 42, 100%, 90%); }
-    [theme="reach"] .letterKey rect { fill: hsl(122, 100%, 90%); }
-    [theme="reach"] .homeKey   rect { fill: hsl(122, 100%, 75%); }
-    [theme="reach"] .press     rect { fill: #aaf; }
-
-    [theme="hints"] [finger="m1"] rect { fill: hsl(  0, 100%, 95%); }
-    [theme="hints"] [finger="l2"] rect { fill: hsl( 42, 100%, 85%); }
-    [theme="hints"] [finger="r2"] rect { fill: hsl( 61, 100%, 85%); }
-    [theme="hints"] [finger="l3"] rect,
-    [theme="hints"] [finger="r3"] rect { fill: hsl(136, 100%, 85%); }
-    [theme="hints"] [finger="l4"] rect,
-    [theme="hints"] [finger="r4"] rect { fill: hsl(200, 100%, 85%); }
-    [theme="hints"] [finger="l5"] rect,
-    [theme="hints"] [finger="r5"] rect { fill: hsl(230, 100%, 85%); }
-    [theme="hints"] .specialKey   rect,
-    [theme="hints"] .specialKey   path { fill: #e4e4e4; }
-    [theme="hints"] .hint         rect { fill: #a33; }
-    [theme="hints"] .press        rect { fill: #335; }
-    [theme="hints"] .press        text { fill: #fff; }
-    [theme="hints"] .hint text {
-      font-weight: bold;
-      fill: white;
-    }
+    [theme="reach"] .numberKey rect { fill: hsl( 42, 100%, 95%); }
+    [theme="reach"] .letterKey rect { fill: hsl(222, 100%, 95%); }
+    [theme="reach"] .homeKey   rect { fill: hsl(222, 100%, 90%); }
 
     /* dimmed AltGr + bold dead keys */
-    .level3, .level4 { fill: blue; opacity: .5; }
-    .level5, .level6 { fill: green; display: none }
+    .level3, .level4 { fill: blue; opacity: .4; }
+    .level5, .level6 { fill: green; }
     .deadKey {
       fill: red;
-      font-size: 14px;
+      font-size: 16px;
+      transform: translateY(-3px);
     }
     .diacritic  {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bolder;
+      transform: translateY(8px);
     }
 
     /* hide Level4 (Shift+AltGr) unless AltGr is pressed */
     .level4        { display: none; }
     .altgr .level4 { display: block; }
 
-    /* highlight AltGr + Dead Keys */
+    /* highlight AltGr + Dead Keys
     .dk .level1, .altgr .level1,
-    .dk .level2, .altgr .level2 { opacity: 0.25; display: block; }
+    .dk .level2, .altgr .level2 { opacity: 0.25; }
     .dk .level5, .altgr .level3,
-    .dk .level6, .altgr .level4,
-    .mixed .level3, .mixed .level5 { opacity: 1; display: block;}
-    .dk .level3, .dk .level4,
-    .mixed .level4, .mixed .level6 { display: none; }
-
-    /* Translate level5 upward if mixed */
-    .mixed .level5 {transform: translate(0px, -22.8px);}
-
-    /* Adding Base class option to display Alpha + dk layers */
-    .base .level3, .base .level4 { display: none;}
-    .base .level5  { opacity: 0.5; display: block;}
+    .dk .level6, .altgr .level4 { opacity: 1; }
+    */
+    .dk .level3,
+    .dk .level4 { display: none; }
 
     @media (prefers-color-scheme: dark) {
       rect, path { stroke: #777; fill: #444; }
       .specialKey, .specialKey rect, .specialKey path { fill: #333; }
       g:target rect, .press rect, g:target path, .press path { fill: #558; }
-      text { fill: #999; }
+      text { fill: #bbb; }
       .level3, .level4 { fill: #99f; }
       .level5, .level6 { fill: #6d6; }
       .deadKey { fill: #f44; }
 
-      [theme="reach"] .pinkyKey  rect { fill: hsl(  0, 60%, 25%); }
-      [theme="reach"] .numberKey rect { fill: hsl( 42, 60%, 27%); }
-      [theme="reach"] .letterKey rect { fill: hsl(122, 75%, 20%); }
-      [theme="reach"] .homeKey   rect { fill: hsl(122, 70%, 25%); }
-      [theme="reach"] .press     rect { fill: #449; }
-
-      [theme="hints"] [finger="m1"] rect { fill: hsl(  0, 100%, 95%); }
-      [theme="hints"] [finger="l2"] rect { fill: hsl( 42, 100%, 85%); }
-      [theme="hints"] [finger="r2"] rect { fill: hsl( 61, 100%, 85%); }
-      [theme="hints"] [finger="l3"] rect,
-      [theme="hints"] [finger="r3"] rect { fill: hsl(136, 100%, 85%); }
-      [theme="hints"] [finger="l4"] rect,
-      [theme="hints"] [finger="r4"] rect { fill: hsl(200, 100%, 85%); }
-      [theme="hints"] [finger="l5"] rect,
-      [theme="hints"] [finger="r5"] rect { fill: hsl(230, 100%, 85%); }
-      [theme="hints"] .specialKey   rect,
-      [theme="hints"] .specialKey   path { fill: #e4e4e4; }
-      [theme="hints"] .hint         rect { fill: #a33; }
-      [theme="hints"] .press        rect { fill: #335; }
-      [theme="hints"] .press        text { fill: #fff; }
-      [theme="hints"] .hint text {
-        font-weight: bold;
-        fill: white;
-      }
+      [theme="reach"] .numberKey rect { fill: hsl( 61, 25%, 30%); }
+      [theme="reach"] .letterKey rect { fill: hsl(136, 30%, 30%); }
+      [theme="reach"] .letterKey rect { fill: hsl(180, 30%, 30%); }
+      [theme="reach"] .homeKey   rect { fill: hsl(230, 30%, 30%); }
     }
   </style>
   <g id="row_AE" text-anchor="middle">
@@ -334,8 +301,8 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">!</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">₁</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">¹</text>
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">§</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">¡</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="numberKey" finger="l5" id="Digit2" transform="translate(120, 0)">
@@ -345,7 +312,7 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">@</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">₂</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">²</text>
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">¶</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
           <text class="level6 dk" width="22" height="22" x="38" y="20.6" />
         </g>
       </g>
@@ -356,7 +323,7 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">#</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">₃</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">³</text>
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">°</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
           <text class="level6 dk" width="22" height="22" x="38" y="20.6" />
         </g>
       </g>
@@ -367,8 +334,8 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">$</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">₄</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">⁴</text>
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">£</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">¢</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="numberKey" finger="l2" id="Digit5" transform="translate(300, 0)">
@@ -379,7 +346,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">₅</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">⁵</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">€</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">‰</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
     </g>
@@ -391,7 +358,7 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">^</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">₆</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">⁶</text>
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">¥</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
           <text class="level6 dk" width="22" height="22" x="38" y="20.6" />
         </g>
       </g>
@@ -402,7 +369,7 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">&amp;</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">₇</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">⁷</text>
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">¤</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
           <text class="level6 dk" width="22" height="22" x="38" y="20.6" />
         </g>
       </g>
@@ -446,8 +413,8 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">_</text>
           <text class="level3" width="22" height="22" x="38" y="43.4" />
           <text class="level4" width="22" height="22" x="38" y="20.6" />
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">÷</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">–</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="pinkyKey" finger="r5" id="Equal" transform="translate(720, 0)">
@@ -458,8 +425,8 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">+</text>
           <text class="level3" width="22" height="22" x="38" y="43.4" />
           <text class="level4" width="22" height="22" x="38" y="20.6" />
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">≠</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">±</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="pinkyKey" finger="r5" id="IntlYen" transform="translate(780, 0)">
@@ -500,11 +467,11 @@
         <rect class="" width="52" height="52" rx="5" ry="5" />
         <g class="key">
           <text class="level1" width="22" height="22" x="12.8" y="43.4" />
-          <text class="level2 deadKey diacritic" width="22" height="22" x="12.8" y="20.6">★</text>
+          <text class="level2 deadKey" width="22" height="22" x="12.8" y="20.6">★</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">&lt;</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">≤</text>
           <text class="level5 dk deadKey diacritic" width="22" height="22" x="38" y="43.4">¨</text>
-          <text class="level6 dk deadKey diacritic" width="22" height="22" x="38" y="20.6">¨</text>
+          <text class="level6 dk deadKey diacritic" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey" finger="l3" id="KeyE" transform="translate(210, 0)">
@@ -515,7 +482,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">&gt;</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">≥</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">ô</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Ô</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey" finger="l2" id="KeyR" transform="translate(270, 0)">
@@ -526,7 +493,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">$</text>
           <text class="level4 deadKey diacritic" width="22" height="22" x="38" y="20.6">¤</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">è</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">È</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey" finger="l2" id="KeyT" transform="translate(330, 0)">
@@ -537,7 +504,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">%</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">‰</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">ù</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Ù</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
     </g>
@@ -571,8 +538,8 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">L</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">*</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">×</text>
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">ñ</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Ñ</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey" finger="r4" id="KeyO" transform="translate(570, 0)">
@@ -583,7 +550,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">'</text>
           <text class="level4 deadKey diacritic" width="22" height="22" x="38" y="20.6">´</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">ç</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Ç</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey" finger="r5" id="KeyP" transform="translate(630, 0)">
@@ -649,7 +616,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">{</text>
           <text class="level4" width="22" height="22" x="38" y="20.6" />
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">î</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Î</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey homeKey" finger="l4" id="KeyS" transform="translate(165, 0)">
@@ -660,7 +627,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">(</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">⁽</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">æ</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Æ</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey homeKey" finger="l3" id="KeyD" transform="translate(225, 0)">
@@ -671,7 +638,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">)</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">⁾</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">ê</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Ê</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey homeKey" finger="l2" id="KeyF" transform="translate(285, 0)">
@@ -682,7 +649,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">}</text>
           <text class="level4" width="22" height="22" x="38" y="20.6" />
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">é</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">É</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey" finger="l2" id="KeyG" transform="translate(345, 0)">
@@ -693,7 +660,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">=</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">≠</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">û</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Û</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
     </g>
@@ -705,7 +672,7 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">G</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">\</text>
           <text class="level4 deadKey diacritic" width="22" height="22" x="38" y="20.6">/</text>
-          <text class="level5 dk deadKey diacritic" width="22" height="22" x="38" y="43.4">µ</text>
+          <text class="level5 dk deadKey" width="22" height="22" x="38" y="43.4">α</text>
           <text class="level6 dk" width="22" height="22" x="38" y="20.6" />
         </g>
       </g>
@@ -717,7 +684,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">+</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">±</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">à</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">À</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey homeKey" finger="r3" id="KeyK" transform="translate(525, 0)">
@@ -728,7 +695,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">-</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">—</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">â</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Â</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey homeKey" finger="r4" id="KeyL" transform="translate(585, 0)">
@@ -739,7 +706,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">/</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">÷</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">_</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">_</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey homeKey" finger="r5" id="Semicolon" transform="translate(645, 0)">
@@ -750,7 +717,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">"</text>
           <text class="level4 deadKey diacritic" width="22" height="22" x="38" y="20.6">¨</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">œ</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Œ</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="pinkyKey" finger="r5" id="Quote" transform="translate(705, 0)">
@@ -826,7 +793,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">]</text>
           <text class="level4" width="22" height="22" x="38" y="20.6" />
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">‑</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">¿</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey" finger="l2" id="KeyV" transform="translate(315, 0)">
@@ -847,8 +814,8 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">Z</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">#</text>
           <text class="level4" width="22" height="22" x="38" y="20.6" />
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">ŭ</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">Ŭ</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
     </g>
@@ -872,7 +839,7 @@
           <text class="level3" width="22" height="22" x="38" y="43.4">!</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">¬</text>
           <text class="level5 dk" width="22" height="22" x="38" y="43.4">·</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">•</text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey" finger="r3" id="Comma" transform="translate(555, 0)">
@@ -882,7 +849,7 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">M</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">;</text>
           <text class="level4 deadKey diacritic" width="22" height="22" x="38" y="20.6">¸</text>
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">µ</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
           <text class="level6 dk" width="22" height="22" x="38" y="20.6" />
         </g>
       </g>
@@ -893,8 +860,8 @@
           <text class="level2" width="22" height="22" x="12.8" y="20.6">W</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">:</text>
           <text class="level4" width="22" height="22" x="38" y="20.6" />
-          <text class="level5 dk" width="22" height="22" x="38" y="43.4">ß</text>
-          <text class="level6 dk" width="22" height="22" x="38" y="20.6">ẞ</text>
+          <text class="level5 dk" width="22" height="22" x="38" y="43.4"></text>
+          <text class="level6 dk" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="letterKey" finger="r5" id="Slash" transform="translate(675, 0)">
