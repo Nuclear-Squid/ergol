@@ -84,7 +84,11 @@ KLC
 
 MSKLC
 
-Virtual Key (VK)
+Virtual Key (VK, touche virtuelle)
+
+: Code de touche spécifique à Windows, de plus haut niveau que le key code.
+Il est utilisé pour définir le placement des touches spéciales ainsi que le
+comportement d’une touche lorsqu’elle est utilisée dans un raccourci clavier.
 
 
 ### macOS
