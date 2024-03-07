@@ -75,14 +75,31 @@ système d’exploitation. Ce dernier se charge de convertir les différentes
 conventions de _scan codes_ en _key code_, permettant ainsi de faire abstraction
 de la technologie du clavier et ainsi développer des dispositions de clavier.
 
+Modificateur
+
+: TODO
+
+Couche (layer)
+
+: TODO
+
+Touche morte (dead key)
+
+: TODO
 
 ### Windows
 
 AHK
 
+: TODO
+
 KLC
 
+: TODO
+
 MSKLC
+
+: TODO
 
 Virtual Key (VK, touche virtuelle)
 
@@ -95,7 +112,11 @@ comportement d’une touche lorsqu’elle est utilisée dans un raccourci clavie
 
 keylayout
 
+: TODO
+
 Karabiner
+
+: TODO
 
 
 ### Linux
