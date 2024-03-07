@@ -1,35 +1,21 @@
-{{ $type := .Get "type" }}
 {{ $name := .Get "name" }}
 <div class="keyboard">
-  {{ with .Get "data" }}
-    <div style="width: 100%; padding-top: 34%; position: relative;">
-      <object data="/img/{{ . }}.svg" type="image/svg+xml"
-        style="position: absolute; top: 0; left: 0; width: 100%;">></object>
-    </div>
-    <p>
-      <span>powered by <a
-          href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>
-      </span>
-      <small>géométrie :</small>
-      <select>
-      {{ if $type }}
-        <option value="iso  dk intlBackslash am"> ISO-A </option>
-        <option value="iso  dk intlBackslash">    ISO   </option>
-        <option value="ansi dk">                  ANSI  </option>
-        <option value="ol60 dk ergo">             TMx   </option>
-        <option value="ol50 dk ergo">             4×6   </option>
-        <option value="ol40 dk ergo">             3×6   </option>
-      {{ else }}
-        <option value="iso intlBackslash am"> ISO-A </option>
-        <option value="iso intlBackslash">    ISO   </option>
-        <option value="ansi">                 ANSI  </option>
-        <option value="ol60 ergo">            TMx   </option>
-        <option value="ol50 ergo">            4×6   </option>
-        <option value="ol40 ergo">            3×6   </option>
-      {{ end }}
-      </select>
-    </p>
-  {{ end }}
+  <div style="width: 100%; padding-top: 34%; position: relative;">
+    <object type="image/svg+xml"
+            {{ with .Get "class" }} class="{{ . }}" {{ end }}
+            {{ with .Get "data" }} data="/img/{{ . }}.svg" {{ end }}
+      style="position: absolute; top: 0; left: 0; width: 100%;"></object>
+  </div>
+  <p>
+    <span>powered by <a
+        href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>
+    </span>
+    <small>géométrie :</small>
+    <select>
+      <option>ISO</option>  <!-- filled when loaded -->
+    </select>
+  </p>
+
   {{ if $name }}
     {{ with .Get "data" }}
     <dialog id="demo">

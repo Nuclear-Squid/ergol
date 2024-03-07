@@ -1,17 +1,12 @@
 /**
  *  <div class="keyboard">
- *    <object data="/img/ergol.svg"></object>
+ *    <object data="/img/ergol.svg" class="dk"></object>
  *    <p>
  *      <span>powered by <a
  *        href="https://github.com/OneDeadKey/x-keyboard">x-keyboard</a></span>
  *      <small>géométrie :</small>
  *      <select>
- *        <option value="iso  dk intlBackslash am"> ISO-A </option>
- *        <option value="iso  dk intlBackslash">    ISO   </option>
- *        <option value="ansi dk">                  ANSI  </option>
- *        <option value="ol60 dk ergo">             TMx   </option>
- *        <option value="ol50 dk ergo">             4×6   </option>
- *        <option value="ol40 dk ergo">             3×6   </option>
+ *        <option>ISO</option>  <!-- filled when loaded -->
  *      </select>
  *    </p>
  *    <dialog>
@@ -24,6 +19,37 @@
 window.addEventListener('DOMContentLoaded', () => {
   'use strict'; // eslint-disable-line
 
+  /**
+   * Because of implementation requirements, our SVG keyboard layouts require a
+   * bunch of CSS classes to display the proper geometry:
+   *  - ISO  => 'iso intlBackslash'
+   *  - ANSI => 'ansi'
+   *  - TMx  => 'ol60 ergo'
+   *  - 4×6  => 'ol50 ergo'
+   *  - 3×6  => 'ol40 ergo'
+   *
+   * By design, the first class in the above list matches the corresponding
+   * <x-keyboard> 'geometry' property.
+   *
+   * An additional class may be specified to display a specific layer:
+   *  - 1dk   => 'dk'
+   *  - AltGr => 'altgr'
+   *
+   * This optional class is retrieved from the preview <object> class property.
+   *
+   * All these class lists are expected to be in the <option> values so that:
+   *  - the value can be reused "as is" as the SVG documentElement class;
+   *  - the first class can be used as the x-keyboard geometry.
+   */
+  const geometryClasses = {
+    'ISO-A': ['iso', 'intlBackslash', 'am'], // am = angle-mod CSS hack
+    'ISO':   ['iso', 'intlBackslash'],       // default / pre-selected value
+    'ANSI':  ['ansi'],
+    'TMx':   ['ol60', 'ergo'],
+    '4×6':   ['ol50', 'ergo'],
+    '3×6':   ['ol40', 'ergo'],
+  };
+
 for (const keeb of document.querySelectorAll('.keyboard')) {
   const dialog   = keeb.querySelector('dialog');
   const keyboard = keeb.querySelector('x-keyboard');
@@ -32,14 +58,22 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   const geometry = keeb.querySelector('select') || document.getElementById('geometry');
   const button   = keeb.querySelector('button');
 
-  const getGeometry = () => geometry.value.split(' ')[0];
+  const getGeometry = () => geometryClasses[geometry.value][0].toLowerCase();
   const applyGeometry = () => {
-    preview?.contentDocument.documentElement.setAttribute('class', geometry.value);
     keyboard.geometry = getGeometry();
+    if (preview) {
+      const className = geometryClasses[geometry.value]
+        .concat(preview.className)
+        .join(' ');
+      preview.contentDocument.documentElement.setAttribute('class', className);
+    }
   };
 
   geometry.addEventListener('change', applyGeometry);
   preview?.addEventListener('load', () => {
+    geometry.innerHTML = Object.keys(geometryClasses)
+      .map(name => `<option>${name}</option>`)
+      .join('');
     geometry.selectedIndex = 1;
     applyGeometry();
   });

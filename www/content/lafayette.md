@@ -24,8 +24,7 @@ QWERTY-Lafayette
 --------------------------------------------------------------------------------
 
 {{<x-keyboard name="QWERTY-Lafayette"
-              data="lafayette"
-              type="1dk"
+              data="lafayette" class="dk"
               href="https://qwerty-lafayette.org">}}
 
 La disposition de clavier par laquelle tout a commencé ! Publiée en 2010,
@@ -49,8 +48,7 @@ Colemak French Touch
 --------------------------------------------------------------------------------
 
 {{<x-keyboard name="Colemak French Touch"
-              data="colemak-french-touch"
-              type="1dk"
+              data="colemak-french-touch" class="dk"
               href="https://github.com/cedricr/colemak-french-touch">}}
 
 Inspiré de QWERTY-[Lafayette][], Colemak French Touch applique le même principe
@@ -87,8 +85,7 @@ Bépolar
 --------------------------------------------------------------------------------
 
 {{<x-keyboard name="Bépolar"
-              data="bepolar"
-              type="1dk"
+              data="bepolar" class="dk"
               href="https://github.com/Ced-C/Bepolar">}}
 
 Dérivé de Bépo, Bépolar s’adapte aux claviers compacts. C’est une disposition
