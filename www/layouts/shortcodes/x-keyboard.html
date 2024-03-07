@@ -18,7 +18,7 @@
 
   {{ if $name }}
     {{ with .Get "data" }}
-    <dialog id="demo">
+    <dialog>
       <input spellcheck="false" placeholder="zone de saisie {{ $name }}" />
       <x-keyboard src="/layouts/{{ . }}.json"></x-keyboard>
     </dialog>
