@@ -516,6 +516,7 @@
           <text x="12.8" y="20.6" class="level2 deadKey">★</text>
           <text x="38.0" y="43.4" class="level3">'</text>
           <text x="38.0" y="20.6" class="level4 deadKey diacritic">´</text>
+          <text x="38.0" y="43.4" class="level5 deadKey diacritic">¨</text>
         </g>
       </g>
       <g id="KeyP" class="letterKey" transform="translate(630)">

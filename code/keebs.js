@@ -72,25 +72,15 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   };
 
   geometry?.addEventListener('change', applyGeometry);
+  preview?.addEventListener('load', applyGeometry);
   form?.addEventListener('change', () => {
-    if (preview) {
-      preview.className = form.elements.layers.value;
-    }
+    preview.className = form.elements.layers.value;
     applyGeometry();
   });
-  preview?.addEventListener('load', () => {
-    if (geometry) {
-      geometry.innerHTML = Object.keys(geometryClasses)
-        .map(name => `<option>${name}</option>`)
-        .join('');
-      geometry.selectedIndex = 1;
-    }
-    else {
-      form.elements.layers.value = preview.className;
-      form.querySelector('.layers').hidden = !(preview.className);
-    }
-    applyGeometry();
-  });
+  if (form) {
+    form.elements.layers.value = preview.className;
+    form.querySelector('.layers').hidden = !(preview.className);
+  }
 
   fetch(keyboard.getAttribute('src'))
     .then(response => response.json() )

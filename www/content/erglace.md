@@ -8,8 +8,7 @@ jsScripts = ["/js/keebs.js"]
 +++
 
 {{<x-keyboard name="Erglace"
-              data="erglace"
-              type="1dk"
+              data="erglace" class="odk"
               href="https://github.com/Lysquid/Erglace">}}
 
 
