@@ -5,6 +5,7 @@ title = "Adaptations type « Lafayette »"
 cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
+footer = "outillé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
 Une série de disposition de clavier été adaptées au français et/ou aux claviers

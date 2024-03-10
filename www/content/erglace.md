@@ -5,6 +5,7 @@ title = "Erglace (WiP)"
 cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
+footer = "outillé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
 {{<x-keyboard name="Erglace"
