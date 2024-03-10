@@ -1,26 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="iso intlBackslash dk"
+<svg xmlns="http://www.w3.org/2000/svg" class="iso intlBackslash odk"
      platform="gnu" theme="reach"
      viewBox="0 0 900 300">
 
   <style>
     :root {
       color-scheme: light dark;
+      /* default keys */
+      --fg-normal-shadow: #8bb8;
+      --fg-normal-border: #666;
+      --fg-normal:        #333;
+      --bg-normal:        #fff;
+      /* special keys */
+      --fg-level3:        blue;
+      --fg-level5:        green;
+      --fg-deadkey:       red;
+      --fg-special:       #555;
+      --bg-special:       #e4e4e4;
+      /* 'reach' theme */
+      --bg-number:        hsl( 42, 100%, 95%);
+      --bg-letter:        hsl(222, 100%, 95%);
+      --bg-home:          hsl(222, 100%, 90%);
     }
+
+    /* vibrant dark */
+    @media (prefers-color-scheme: dark) { :root {
+      --fg-normal-shadow: #8558;
+      --fg-normal-border: #666;
+      --fg-normal:        #bbb;
+      --bg-normal:        #444;
+      /* special keys */
+      --fg-level3:        #99f;
+      --fg-level5:        #6d6;
+      --fg-deadkey:       #f44;
+      --fg-special:       #888;
+      --bg-special:       #333;
+      /* 'reach' theme */
+      --bg-number:        hsl( 60, 25%, 30%);
+      --bg-letter:        hsl(180, 30%, 30%);
+      --bg-home:          hsl(230, 30%, 30%);
+    }}
+
+    /* mild dark */
+    @media (prefers-color-scheme: dark) { :root {
+      --fg-normal-shadow: #8558;
+      --fg-normal-border: #666;
+      --fg-normal:        #bbb;
+      --bg-normal:        #4d4d4d;
+      /* special keys */
+      --fg-level3:        #99f;
+      --fg-level5:        #6d6;
+      --fg-deadkey:       #f77;
+      --fg-special:       #888;
+      --bg-special:       #333;
+      /* 'reach' theme */
+      --bg-number:        hsl( 80, 10%, 35%);
+      --bg-letter:        hsl(220, 15%, 35%);
+      --bg-home:          hsl(230, 30%, 30%);
+    }}
+
     rect, path {
-      stroke: #666;
+      fill: var(--bg-normal);
+      stroke: var(--fg-normal-border);
       stroke-width: .5px;
-      fill: #fff;
-    }
-    .specialKey,
-    .specialKey rect,
-    .specialKey path {
-      fill: #e4e4e4;
     }
     text {
-      fill: #333;
+      fill: var(--fg-normal);
       font: normal 20px sans-serif;
       text-align: center;
+      text-shadow: 0 1px 0px var(--fg-normal-shadow);
     }
+
+    .specialKey,
+    .specialKey rect,
+    .specialKey path { fill: var(--bg-special); }
+    .specialKey text { fill: var(--fg-special); }
+    .level3, .level4 { fill: var(--fg-level3); }
+    .level5, .level6 { fill: var(--fg-level5); }
+    .deadKey {
+      fill: var(--fg-deadkey);
+      font-size: 22px;
+    }
+
     #Backspace text {
       font-size: 12px;
     }
@@ -221,57 +281,28 @@
     [platform="gnu"] #MetaRight,
     [platform="win"] #MetaRight, #AltRight  { transform: translate(675px, 0px); }
 
-    g:target rect, .press rect,
-    g:target path, .press path {
-      fill: #aad;
-    }
+    /* optional color theme: reach */
+    [theme="reach"] .numberKey rect { fill: var(--bg-number); }
+    [theme="reach"] .letterKey rect { fill: var(--bg-letter); }
+    [theme="reach"] .homeKey   rect { fill: var(--bg-home); }
 
-    [theme="reach"] .numberKey rect { fill: hsl( 42, 100%, 95%); }
-    [theme="reach"] .letterKey rect { fill: hsl(222, 100%, 95%); }
-    [theme="reach"] .homeKey   rect { fill: hsl(222, 100%, 90%); }
+    /* hide level3-6 by default */
+    .level3, .level4, .level5, .level6 { display: none; }
 
-    /* dimmed AltGr + bold dead keys */
-    .level3, .level4 { fill: blue; opacity: .4; }
-    .level5, .level6 { fill: green; }
-    .deadKey {
-      fill: red;
-      font-size: 16px;
-      transform: translateY(-3px);
-    }
-    .diacritic  {
-      font-size: 24px;
-      font-weight: bolder;
-      transform: translateY(8px);
-    }
+    /* show 1dk */
+    .odk .level5,
+    .odk .level6 { display: block; }
 
-    /* hide Level4 (Shift+AltGr) unless AltGr is pressed */
-    .level4        { display: none; }
+    /* show 1dk and AltGr */
+    .mixed .level3,
+    .mixed .level5 { display: block; }
+    .mixed text.level5 { transform: translate(0px, -22.8px); }
+
+    /* show AltGr */
+    .altgr .level3,
     .altgr .level4 { display: block; }
-
-    /* highlight AltGr + Dead Keys
-    .dk .level1, .altgr .level1,
-    .dk .level2, .altgr .level2 { opacity: 0.25; }
-    .dk .level5, .altgr .level3,
-    .dk .level6, .altgr .level4 { opacity: 1; }
-    */
-    .dk .level3,
-    .dk .level4 { display: none; }
-
-    @media (prefers-color-scheme: dark) {
-      rect, path { stroke: #777; fill: #444; }
-      .specialKey, .specialKey rect, .specialKey path { fill: #333; }
-      g:target rect, .press rect, g:target path, .press path { fill: #558; }
-      text { fill: #bbb; }
-      .level3, .level4 { fill: #99f; }
-      .level5, .level6 { fill: #6d6; }
-      .deadKey { fill: #f44; }
-
-      [theme="reach"] .numberKey rect { fill: hsl( 61, 25%, 30%); }
-      [theme="reach"] .letterKey rect { fill: hsl(136, 30%, 30%); }
-      [theme="reach"] .letterKey rect { fill: hsl(180, 30%, 30%); }
-      [theme="reach"] .homeKey   rect { fill: hsl(230, 30%, 30%); }
-    }
   </style>
+
   <g id="row_AE" text-anchor="middle">
     <g class="left">
       <g class="specialKey" finger="l5" id="Escape" transform="translate(0, 0)">
@@ -444,6 +475,7 @@
       </g>
     </g>
   </g>
+
   <g id="row_AD" text-anchor="middle">
     <g class="left">
       <g class="specialKey" finger="l5" id="Tab" transform="translate(0, 0)">
@@ -601,6 +633,7 @@
       </g>
     </g>
   </g>
+
   <g id="row_AC" text-anchor="middle">
     <g class="left">
       <g class="specialKey" finger="l5" id="CapsLock" transform="translate(0, 0)">
@@ -742,6 +775,7 @@
       </g>
     </g>
   </g>
+
   <g id="row_AB" text-anchor="middle">
     <g class="left">
       <g class="specialKey" finger="l5" id="ShiftLeft" transform="translate(0, 0)">
@@ -890,82 +924,103 @@
       </g>
     </g>
   </g>
-  <g id="row_AA" text-anchor="middle">
+
+  <g id="row_AA">
     <g class="left">
-      <g class="specialKey" finger="l5" id="ControlLeft" transform="translate(0, 0)">
-        <rect class="" width="67" height="52" rx="5" ry="5" />
-        <rect class="ergo" width="67" height="52" rx="5" ry="5" />
-        <text class="win gnu" width="22" height="22" x="11" y="42.8" text-anchor="start">Ctrl</text>
-        <text class="mac" width="22" height="22" x="16.4" y="42.8">⌃</text>
+      <g id="ControlLeft" class="specialKey">
+        <rect width="67" height="52" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
+        <text x="11.0" y="42.8" class="win gnu">Ctrl</text>
+        <text x="16.4" y="42.8" class="mac" text-anchor="middle">⌃</text>
       </g>
-      <g class="specialKey" finger="l1" id="MetaLeft" transform="translate(75, 0)">
-        <rect class="" width="67" height="52" rx="5" ry="5" />
-        <rect class="ergo" width="82" height="52" rx="5" ry="5" />
-        <text class="win" width="22" height="22" x="11" y="42.8" text-anchor="start">Win</text>
-        <text class="gnu" width="22" height="22" x="11" y="42.8" text-anchor="start">Super</text>
-        <text class="mac" width="22" height="22" x="16.4" y="42.8">⌘</text>
+      <g id="MetaLeft" class="specialKey" transform="translate(75)">
+        <rect width="67" height="52" rx="5" ry="5"/>
+        <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
+        <text x="11.0" y="42.8" class="win">Win</text>
+        <text x="11.0" y="42.8" class="gnu">Super</text>
+        <text x="16.4" y="42.8" class="mac" text-anchor="middle">⌘</text>
       </g>
-      <g class="specialKey" finger="l1" id="AltLeft" transform="translate(150, 0)">
-        <rect class="" width="67" height="52" rx="5" ry="5" />
-        <rect class="ergo" width="82" height="52" rx="5" ry="5" />
-        <text class="win gnu" width="22" height="22" x="11" y="42.8" text-anchor="start">Alt</text>
-        <text class="mac" width="22" height="22" x="16.4" y="42.8">⌥</text>
+      <g id="AltLeft" class="specialKey" transform="translate(150)">
+        <rect width="67" height="52" rx="5" ry="5"/>
+        <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
+        <text x="11.0" y="42.8" class="win gnu">Alt</text>
+        <text x="16.4" y="42.8" class="mac" text-anchor="middle">⌥</text>
       </g>
-      <g class="specialKey" finger="l1" id="Lang2" transform="translate(225, 0)">
-        <rect class="" width="52" height="52" rx="5" ry="5" />
-        <text class="" width="22" height="22" x="20" y="42.8">한자</text>
+      <g id="Lang2" class="specialKey" transform="translate(225)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="20" y="42.8" text-anchor="middle">한자</text>
       </g>
-      <g class="specialKey" finger="l1" id="NonConvert" transform="translate(225, 0)">
-        <rect class="" width="52" height="52" rx="5" ry="5" />
-        <text class="" width="22" height="22" x="26" y="42.8">無変換</text>
+      <g id="NonConvert" class="specialKey" transform="translate(225)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="42.8" text-anchor="middle">無変換</text>
       </g>
     </g>
-    <g class="homeKey" finger="m1" id="Space" transform="translate(225, 0)">
-      <rect class="ansi" width="367" height="52" rx="5" ry="5" />
-      <rect class="ol60" width="322" height="52" rx="5" ry="5" x="-60" />
-      <rect class="ol50 ol40" width="262" height="52" rx="5" ry="5" />
-      <rect class="ks" width="247" height="52" rx="5" ry="5" x="60" />
-      <rect class="jis" width="187" height="52" rx="5" ry="5" x="60" />
+    <g id="Space" class="homeKey" transform="translate(225)">
+      <rect width="367" height="52" class="ansi" rx="5" ry="5"/>
+      <rect width="322" height="52" x="-60" class="ol60" rx="5" ry="5"/>
+      <rect width="262" height="52" class="ol50 ol40" rx="5" ry="5"/>
+      <rect width="247" height="52" x="60" class="ks" rx="5" ry="5"/>
+      <rect width="187" height="52" x="60" class="jis" rx="5" ry="5"/>
+      <g class="key" text-anchor="begin">
+        <text x="11.0"  y="43.4" class="level1 ansi">espace</text>
+        <text x="-49.0" y="43.4" class="level2 ol60">espace</text>
+        <text x="11.0"  y="43.4" class="level1 ol50 ol40">espace</text>
+        <text x="11.0"  y="20.6" class="level2 ansi">insécable fine</text>
+        <text x="-49.0" y="20.6" class="level2 ol60">insécable fine</text>
+        <text x="11.0"  y="20.6" class="level2 ol50 ol40">insécable fine</text>
+      </g>
+      <g class="key level3" text-anchor="end">
+        <text x="356.0" y="43.4" class="level3 ansi">espace</text>
+        <text x="251.0" y="43.4" class="level3 ol60 ol50 ol40">espace</text>
+      </g>
+      <g class="key level4" text-anchor="end">
+        <text x="356.0" y="20.6" class="level4 ansi">espace insécable</text>
+        <text x="251.0" y="20.6" class="level4 ol60 ol50 ol40">insécable</text>
+      </g>
+      <g class="key level5" text-anchor="end">
+        <text x="356.0" y="43.4" class="level5 ansi">apostrophe typo (’)</text>
+        <text x="251.0" y="43.4" class="level5 ol60 ol50 ol40">apostrophe (’)</text>
+      </g>
     </g>
     <g class="right">
-      <g class="specialKey" finger="r1" id="Convert" transform="translate(480, 0)">
-        <rect class="" width="52" height="52" rx="5" ry="5" />
-        <text class="" width="22" height="22" x="26" y="42.8">変換</text>
+      <g id="Convert" class="specialKey" transform="translate(480)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="42.8" text-anchor="middle">変換</text>
       </g>
-      <g class="specialKey" finger="r1" id="KanaMode" transform="translate(540, 0)">
-        <rect class="" width="52" height="52" rx="5" ry="5" />
-        <text class="" width="22" height="22" x="26" y="20">カタカナ</text>
-        <text class="" width="22" height="22" x="26" y="32">ひらがな</text>
-        <text class="" width="22" height="22" x="26" y="44">ローマ字</text>
+      <g id="KanaMode" class="specialKey" transform="translate(540)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="20" text-anchor="middle">カタカナ</text>
+        <text x="26" y="32" text-anchor="middle">ひらがな</text>
+        <text x="26" y="44" text-anchor="middle">ローマ字</text>
       </g>
-      <g class="specialKey" finger="r1" id="Lang1" transform="translate(540, 0)">
-        <rect class="" width="52" height="52" rx="5" ry="5" />
-        <text class="" width="22" height="22" x="20" y="42.8">한/영</text>
+      <g id="Lang1" class="specialKey" transform="translate(540)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="20" y="42.8" text-anchor="middle">한/영</text>
       </g>
-      <g class="specialKey" finger="r1" id="AltRight" transform="translate(600, 0)">
-        <rect class="" width="67" height="52" rx="5" ry="5" />
-        <rect class="ergo" width="82" height="52" rx="5" ry="5" />
-        <text class="win gnu" width="22" height="22" x="11" y="42.8" text-anchor="start">Alt</text>
-        <text class="mac" width="22" height="22" x="16.4" y="42.8">⌥</text>
+      <g id="AltRight" class="specialKey" transform="translate(600)">
+        <rect width="67" height="52" rx="5" ry="5"/>
+        <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
+        <text x="11.0" y="42.8" class="win gnu">AltGr</text>
+        <text x="16.4" y="42.8" class="mac" text-anchor="middle">⌥</text>
       </g>
-      <g class="specialKey" finger="r1" id="MetaRight" transform="translate(690, 0)">
-        <rect class="" width="67" height="52" rx="5" ry="5" />
-        <rect class="ergo" width="82" height="52" rx="5" ry="5" />
-        <text class="win" width="22" height="22" x="11" y="42.8" text-anchor="start">Win</text>
-        <text class="gnu" width="22" height="22" x="11" y="42.8" text-anchor="start">Super</text>
-        <text class="mac" width="22" height="22" x="16.4" y="42.8">⌘</text>
+      <g id="MetaRight" class="specialKey" transform="translate(690)">
+        <rect width="67" height="52" rx="5" ry="5"/>
+        <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
+        <text x="11.0" y="42.8" class="win">Win</text>
+        <text x="11.0" y="42.8" class="gnu">Super</text>
+        <text x="16.4" y="42.8" class="mac" text-anchor="middle">⌘</text>
       </g>
-      <g class="specialKey" finger="r5" id="ContextMenu" transform="translate(750, 0)">
-        <rect class="" width="67" height="52" rx="5" ry="5" />
-        <rect class="ergo" width="52" height="52" rx="5" ry="5" />
-        <text class="" width="22" height="22" x="16.4" y="42.8">☰</text>
-        <text class="ol60" width="22" height="22" x="16.4" y="42.8">☰</text>
+      <g id="ContextMenu" class="specialKey" transform="translate(750)">
+        <rect width="67" height="52" rx="5" ry="5"/>
+        <rect width="52" height="52" class="ergo" rx="5" ry="5"/>
+        <text x="16.4" y="42.8" text-anchor="middle">☰</text>
+        <text x="16.4" y="42.8" class="ol60" text-anchor="middle">☰</text>
       </g>
-      <g class="specialKey" finger="r5" id="ControlRight" transform="translate(825, 0)">
-        <rect class="" width="67" height="52" rx="5" ry="5" />
-        <rect class="ergo" width="67" height="52" rx="5" ry="5" />
-        <text class="win gnu" width="22" height="22" x="11" y="42.8" text-anchor="start">Ctrl</text>
-        <text class="mac" width="22" height="22" x="16.4" y="42.8">⌃</text>
+      <g id="ControlRight" class="specialKey" transform="translate(825)">
+        <rect width="67" height="52" rx="5" ry="5"/>
+        <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
+        <text x="11.0" y="42.8" class="win gnu">Ctrl</text>
+        <text x="16.4" y="42.8" class="mac" text-anchor="middle">⌃</text>
       </g>
     </g>
   </g>

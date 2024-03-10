@@ -1,27 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="gnu" theme="reach"
   viewBox="90 60 720 240">
-  <!-- viewBox="0 60 900 240" -->
 
   <style>
     :root {
       color-scheme: light dark;
+      /* default keys */
+      --fg-normal-shadow: #8bb8;
+      --fg-normal-border: #666;
+      --fg-normal:        #333;
+      --bg-normal:        #fff;
+      /* special keys */
+      --fg-level3:        green;
+      --fg-level5:        blue;
+      --fg-deadkey:       red;
+      --fg-special:       #555;
+      --bg-special:       #e4e4e4;
+      /* 'reach' theme */
+      --bg-number:        hsl( 42, 100%, 95%);
+      --bg-letter:        hsl(222, 100%, 95%);
+      --bg-home:          hsl(222, 100%, 90%);
     }
-    rect {
-      stroke: #666;
+
+    @media (prefers-color-scheme: dark) { :root {
+      --fg-normal-shadow: #8558;
+      --fg-normal-border: #666;
+      --fg-normal:        #bbb;
+      --bg-normal:        #4d4d4d;
+      /* special keys */
+      --fg-level3:        #99f;
+      --fg-level5:        #6d6;
+      --fg-deadkey:       #f77;
+      --fg-special:       #888;
+      --bg-special:       #333;
+      /* 'reach' theme */
+      --bg-number:        hsl( 80, 10%, 35%);
+      --bg-letter:        hsl(220, 15%, 35%);
+      --bg-home:          hsl(230, 30%, 30%);
+    }}
+
+    rect, path {
+      fill: var(--bg-letter);
+      stroke: var(--fg-normal-border);
       stroke-width: .5px;
-      fill: #fff;
-    }
-    .specialKey,
-    .specialKey rect {
-      fill: #e4e4e4;
-    }
-    .homeKey rect {
-      fill: hsl(222, 100%, 90%);
     }
     text {
-      fill: #333;
+      fill: var(--fg-normal);
       font: normal 20px sans-serif;
       text-align: center;
+      text-shadow: 0 1px 0px var(--fg-normal-shadow);
+    }
+
+    .specialKey,
+    .specialKey rect,
+    .specialKey path { fill: var(--bg-special); }
+    .specialKey text { fill: var(--fg-special); }
+    .homeKey    rect { fill: var(--bg-home);    }
+    .level3, .level4 { fill: var(--fg-level3); }
+    .level5, .level6 { fill: var(--fg-level5); }
+    .deadKey {
+      fill: var(--fg-deadkey);
+      font-size: 22px;
     }
 
     #row_AD { transform: translate(64px,  64px); }
@@ -46,36 +84,6 @@
     .mac .specialKey .mac,
     .gnu .specialKey .gnu,
     .win .specialKey .win { display: block; }
-
-    .level3, .level4 { fill: green; }
-
-    .deadKey {
-      fill: red;
-      font-size: 16px;
-      transform: translateY(-3px);
-    }
-    .diacritic {
-      font-size: 24px;
-      font-weight: bolder;
-      transform: translateY(8px);
-    }
-
-    [theme="reach"]             rect { fill: hsl(222, 100%, 95%); }
-    [theme="reach"] .homeKey    rect { fill: hsl(222, 100%, 90%); }
-    [theme="reach"] .specialKey rect { fill: #e4e4e4; }
-
-    @media (prefers-color-scheme: dark) {
-      .specialKey rect { fill: #333; }
-      rect, path       { fill: #444; }
-      text             { fill: #bbb; }
-      #odk             { fill: #484; }
-      .level3          { fill: #6b6; }
-      .deadKey         { fill: #f44; }
-
-      [theme="reach"]             rect { fill: hsl(180, 30%, 30%); }
-      [theme="reach"] .homeKey    rect { fill: hsl(230, 30%, 30%); }
-      [theme="reach"] .specialKey rect { fill: #333; }
-    }
   </style>
 
   <g id="row_AD">

@@ -11,8 +11,8 @@
       --fg-normal:        #333;
       --bg-normal:        #fff;
       /* special keys */
-      --fg-level3:        green;
-      --fg-level5:        blue;
+      --fg-level3:        blue;
+      --fg-level5:        green;
       --fg-deadkey:       red;
       --fg-special:       #555;
       --bg-special:       #e4e4e4;
@@ -72,14 +72,8 @@
 
     .specialKey,
     .specialKey rect,
-    .specialKey path {
-      fill: var(--bg-special);
-    }
-    .specialKey text {
-      fill: var(--fg-special);
-    }
-
-    /* dimmed AltGr + bold dead keys */
+    .specialKey path { fill: var(--bg-special); }
+    .specialKey text { fill: var(--fg-special); }
     .level3, .level4 { fill: var(--fg-level3); }
     .level5, .level6 { fill: var(--fg-level5); }
     .deadKey {
@@ -478,6 +472,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">P</text>
           <text x="38.0" y="43.4" class="level3">$</text>
+          <text x="38.0" y="43.4" class="level5">ô</text>
         </g>
       </g>
       <g id="KeyT" class="letterKey" transform="translate(330)">
@@ -694,7 +689,7 @@
           <text x="12.8" y="20.6" class="level2">Z</text>
           <text x="38.0" y="43.4" class="level3">~</text>
           <text x="38.0" y="20.6" class="level4 deadKey diacritic">~</text>
-          <text x="38.0" y="43.4" class="level5"> </text>
+          <text x="38.0" y="43.4" class="level5">æ</text>
         </g>
       </g>
       <g id="KeyX" class="letterKey" transform="translate(195)">

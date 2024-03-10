@@ -59,11 +59,12 @@
   font-size: 1em;
   appearance: none;
   outline: none;
-  border-radius: 2px;
   padding: 2px 8px;
   margin: 0;
   background-color: var(--bg-special);
   color: var(--fg-special);
+  border: 1px solid #6668;
+  border-radius: 2px;
   opacity: 0.6;
   transition: all 50ms linear;
   cursor: pointer;
@@ -108,8 +109,9 @@
   line-height: 2.3em;
   font-family: sans-serif;
 
-  background-color: var(--bg-key);
-  border: 1px solid #6668;
+  background-image: linear-gradient(180deg, var(--bg-normal), var(--bg-special));
+  background-color: var(--bg-special);
+  border: 1px outset #6668;
   border-radius: 5px;
 }
 

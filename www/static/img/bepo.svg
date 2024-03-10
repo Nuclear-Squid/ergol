@@ -1,24 +1,89 @@
-<?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" platform="gnu" theme="" class="iso intlBackslash">
   <style>
     :root {
       color-scheme: light dark;
+      /* default keys */
+      --fg-normal-shadow: #8bb8;
+      --fg-normal-border: #666;
+      --fg-normal:        #333;
+      --bg-normal:        #fff;
+      /* special keys */
+      --fg-level3:        blue;
+      --fg-level5:        green;
+      --fg-deadkey:       red;
+      --fg-special:       #555;
+      --bg-special:       #e4e4e4;
+      /* 'reach' theme */
+      --bg-number:        hsl( 42, 100%, 95%);
+      --bg-letter:        hsl(222, 100%, 95%);
+      --bg-home:          hsl(222, 100%, 90%);
     }
+
+    /* vibrant dark */
+    @media (prefers-color-scheme: dark) { :root {
+      --fg-normal-shadow: #8558;
+      --fg-normal-border: #666;
+      --fg-normal:        #bbb;
+      --bg-normal:        #444;
+      /* special keys */
+      --fg-level3:        #99f;
+      --fg-level5:        #6d6;
+      --fg-deadkey:       #f44;
+      --fg-special:       #888;
+      --bg-special:       #333;
+      /* 'reach' theme */
+      --bg-number:        hsl( 60, 25%, 30%);
+      --bg-letter:        hsl(180, 30%, 30%);
+      --bg-home:          hsl(230, 30%, 30%);
+    }}
+
+    /* mild dark */
+    @media (prefers-color-scheme: dark) { :root {
+      --fg-normal-shadow: #8558;
+      --fg-normal-border: #666;
+      --fg-normal:        #bbb;
+      --bg-normal:        #4d4d4d;
+      /* special keys */
+      --fg-level3:        #99f;
+      --fg-level5:        #6d6;
+      --fg-deadkey:       #f77;
+      --fg-special:       #888;
+      --bg-special:       #333;
+      /* 'reach' theme */
+      --bg-number:        hsl( 80, 10%, 35%);
+      --bg-letter:        hsl(220, 15%, 35%);
+      --bg-home:          hsl(230, 30%, 30%);
+    }}
+
     rect, path {
-      stroke: #666;
+      fill: var(--bg-normal);
+      stroke: var(--fg-normal-border);
       stroke-width: .5px;
-      fill: #f8f8f8;
     }
+    text {
+      fill: var(--fg-normal);
+      font: normal 20px sans-serif;
+      text-align: center;
+      text-shadow: 0 1px 0px var(--fg-normal-shadow);
+    }
+
     .specialKey,
     .specialKey rect,
     .specialKey path {
-      fill: #e4e4e4;
+      fill: var(--bg-special);
     }
-    text {
-      fill: #333;
-      font: normal 20px sans-serif;
-      text-align: center;
+    .specialKey text {
+      fill: var(--fg-special);
     }
+
+    /* dimmed AltGr + bold dead keys */
+    .level3, .level4 { fill: var(--fg-level3); }
+    .level5, .level6 { fill: var(--fg-level5); }
+    .deadKey {
+      fill: var(--fg-deadkey);
+      font-size: 22px;
+    }
+
     #Backspace text {
       font-size: 12px;
     }
@@ -64,6 +129,14 @@
     .intlRo  #ShiftRight .ansi { display: none; }
     .intlRo  #ShiftRight .abnt,
     .intlRo  #IntlRo { display: block; }
+
+    /* Angle Mod */
+    .am #KeyZ          { transform: translateX( 74px); }
+    .am #KeyX          { transform: translateX(134px); }
+    .am #KeyC          { transform: translateX(194px); }
+    .am #KeyV          { transform: translateX(254px); }
+    .am #KeyB          { transform: translateX(314px); }
+    .am #IntlBackslash { transform: translateX(374px); }
 
     .specialKey   .ergo,
     .specialKey   .ol60,
@@ -159,6 +232,8 @@
     #Lang1, #Lang2,
     #Space .jis,
     #Space .ks,
+    .ergo #Space .ansi,
+    .ol60 #Space .ansi,
     .ks  #Space .ansi,
     .ks  #Space .jis,
     .jis #Space .ansi,
@@ -175,6 +250,7 @@
     .jis #Backquote .jis,
     .jis #CapsLock .jis { display: block; }
 
+    #Space text,
     #Lang1 text,
     #Lang2 text,
     #Convert text,
@@ -208,103 +284,16 @@
     [platform="gnu"] #MetaRight,
     [platform="win"] #MetaRight, #AltRight  { transform: translate(675px, 0px); }
 
-    g:target rect, .press rect,
-    g:target path, .press path {
-      fill: #aad;
-    }
+    /* optional color theme: reach */
+    [theme="reach"] .numberKey rect { fill: var(--bg-number); }
+    [theme="reach"] .letterKey rect { fill: var(--bg-letter); }
+    [theme="reach"] .homeKey   rect { fill: var(--bg-home); }
 
-    [theme="reach"] .pinkyKey  rect { fill: hsl(  0, 100%, 90%); }
-    [theme="reach"] .numberKey rect { fill: hsl( 42, 100%, 90%); }
-    [theme="reach"] .letterKey rect { fill: hsl(122, 100%, 90%); }
-    [theme="reach"] .homeKey   rect { fill: hsl(122, 100%, 75%); }
-    [theme="reach"] .press     rect { fill: #aaf; }
-
-    [theme="hints"] [finger="m1"] rect { fill: hsl(  0, 100%, 95%); }
-    [theme="hints"] [finger="l2"] rect { fill: hsl( 42, 100%, 85%); }
-    [theme="hints"] [finger="r2"] rect { fill: hsl( 61, 100%, 85%); }
-    [theme="hints"] [finger="l3"] rect,
-    [theme="hints"] [finger="r3"] rect { fill: hsl(136, 100%, 85%); }
-    [theme="hints"] [finger="l4"] rect,
-    [theme="hints"] [finger="r4"] rect { fill: hsl(200, 100%, 85%); }
-    [theme="hints"] [finger="l5"] rect,
-    [theme="hints"] [finger="r5"] rect { fill: hsl(230, 100%, 85%); }
-    [theme="hints"] .specialKey   rect,
-    [theme="hints"] .specialKey   path { fill: #e4e4e4; }
-    [theme="hints"] .hint         rect { fill: #a33; }
-    [theme="hints"] .press        rect { fill: #335; }
-    [theme="hints"] .press        text { fill: #fff; }
-    [theme="hints"] .hint text {
-      font-weight: bold;
-      fill: white;
-    }
-
-    /* dimmed AltGr + bold dead keys */
-    .level3, .level4 { fill: blue; opacity: .5; }
-    .level5, .level6 { fill: green; display: none }
-    .deadKey {
-      fill: red;
-      font-size: 14px;
-    }
-    .diacritic  {
-      font-size: 20px;
-      font-weight: bolder;
-    }
-
-    /* hide Level4 (Shift+AltGr) unless AltGr is pressed */
-    .level4        { display: none; }
-    .altgr .level4 { display: block; }
-
-    /* highlight AltGr + Dead Keys */
-    .dk .level1, .altgr .level1,
-    .dk .level2, .altgr .level2 { opacity: 0.25; display: block; }
-    .dk .level5, .altgr .level3,
-    .dk .level6, .altgr .level4,
-    .mixed .level3, .mixed .level5 { opacity: 1; display: block;}
-    .dk .level3, .dk .level4,
-    .mixed .level4, .mixed .level6 { display: none; }
-
-    /* Translate level5 upward if mixed */
-    .mixed .level5 {transform: translate(0px, -22.8px);}
-
-    /* Adding Base class option to display Alpha + dk layers */
-    .base .level3, .base .level4 { display: none;}
-    .base .level5  { opacity: 0.5; display: block;}
-
-    @media (prefers-color-scheme: dark) {
-      rect, path { stroke: #777; fill: #444; }
-      .specialKey, .specialKey rect, .specialKey path { fill: #333; }
-      g:target rect, .press rect, g:target path, .press path { fill: #558; }
-      text { fill: #bbb; }
-      .level3, .level4 { fill: #99f; }
-      .level5, .level6 { fill: #6d6; }
-      .deadKey { fill: #f44; }
-
-      [theme="reach"] .pinkyKey  rect { fill: hsl(  0, 60%, 25%); }
-      [theme="reach"] .numberKey rect { fill: hsl( 42, 60%, 27%); }
-      [theme="reach"] .letterKey rect { fill: hsl(122, 75%, 20%); }
-      [theme="reach"] .homeKey   rect { fill: hsl(122, 70%, 25%); }
-      [theme="reach"] .press     rect { fill: #449; }
-
-      [theme="hints"] [finger="m1"] rect { fill: hsl(  0, 100%, 95%); }
-      [theme="hints"] [finger="l2"] rect { fill: hsl( 42, 100%, 85%); }
-      [theme="hints"] [finger="r2"] rect { fill: hsl( 61, 100%, 85%); }
-      [theme="hints"] [finger="l3"] rect,
-      [theme="hints"] [finger="r3"] rect { fill: hsl(136, 100%, 85%); }
-      [theme="hints"] [finger="l4"] rect,
-      [theme="hints"] [finger="r4"] rect { fill: hsl(200, 100%, 85%); }
-      [theme="hints"] [finger="l5"] rect,
-      [theme="hints"] [finger="r5"] rect { fill: hsl(230, 100%, 85%); }
-      [theme="hints"] .specialKey   rect,
-      [theme="hints"] .specialKey   path { fill: #e4e4e4; }
-      [theme="hints"] .hint         rect { fill: #a33; }
-      [theme="hints"] .press        rect { fill: #335; }
-      [theme="hints"] .press        text { fill: #fff; }
-      [theme="hints"] .hint text {
-        font-weight: bold;
-        fill: white;
-      }
-    }
+    /* hide level4-6 by default */
+    .level4, .level5, .level6 { display: none; }
+    .level3 { display: block; }
   </style>
+
   <g id="row_AE" text-anchor="middle">
     <g class="left">
       <g class="specialKey" finger="l5" id="Escape" transform="translate(0, 0)">
@@ -477,6 +466,7 @@
       </g>
     </g>
   </g>
+
   <g id="row_AD" text-anchor="middle">
     <g class="left">
       <g class="specialKey" finger="l5" id="Tab" transform="translate(0, 0)">
@@ -634,6 +624,7 @@
       </g>
     </g>
   </g>
+
   <g id="row_AC" text-anchor="middle">
     <g class="left">
       <g class="specialKey" finger="l5" id="CapsLock" transform="translate(0, 0)">
@@ -775,6 +766,7 @@
       </g>
     </g>
   </g>
+
   <g id="row_AB" text-anchor="middle">
     <g class="left">
       <g class="specialKey" finger="l5" id="ShiftLeft" transform="translate(0, 0)">
@@ -923,6 +915,7 @@
       </g>
     </g>
   </g>
+
   <g id="row_AA" text-anchor="middle">
     <g class="left">
       <g class="specialKey" finger="l5" id="ControlLeft" transform="translate(0, 0)">
