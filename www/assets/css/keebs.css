@@ -1,5 +1,96 @@
-.keyboard { margin-bottom: 2.5em; }
-.keyboard p { margin: 0; }
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │       Color Palette (copied from the SVG stylesheet)          │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+:root {
+  --fg-normal-shadow: #8bb8;
+  --fg-normal-border: #666;
+  --fg-normal:        #333;
+  --bg-normal:        #fff;
+  /* special keys */
+  --fg-special:       #555;
+  --bg-special:       #e4e4e4;
+  /* 'reach' theme */
+  --bg-number:        hsl( 42, 100%, 95%);
+  --bg-letter:        hsl(222, 100%, 95%);
+  --bg-home:          hsl(222, 100%, 90%);
+}
+
+@media (prefers-color-scheme: dark) { :root {
+  --fg-normal-shadow: #8558;
+  --fg-normal-border: #666;
+  --fg-normal:        #bbb;
+  --bg-normal:        #4d4d4d;
+  /* special keys */
+  --fg-special:       #888;
+  --bg-special:       #333;
+  /* 'reach' theme */
+  --bg-number:        hsl( 80, 10%, 35%);
+  --bg-letter:        hsl(220, 15%, 35%);
+  --bg-home:          hsl(230, 30%, 30%);
+}}
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                  Theme & Geometry Selection                   │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+.keyboard form {
+  display: flex;
+  margin: 2px;
+}
+
+.keyboard fieldset {
+  border: none;
+  padding: 1px;
+  margin: 0;
+}
+
+.keyboard form span {
+  flex: max-content;
+}
+
+.keyboard form input {
+  width: auto;
+  height: 100%;
+  font-size: 1em;
+  appearance: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 2px 8px;
+  margin: 0;
+  background-color: var(--bg-special);
+  color: var(--fg-special);
+  opacity: 0.6;
+  transition: all 50ms linear;
+  cursor: pointer;
+}
+
+.keyboard form input:checked {
+  background-image: linear-gradient(180deg, var(--bg-letter), var(--bg-home));
+  background-color: var(--bg-normal);
+  text-shadow: 0 1px 0px var(--fg-normal-shadow);
+  color: var(--fg-normal);
+  opacity: 1;
+}
+
+.keyboard form input:before {
+  content: attr(label);
+  display: inline-block;
+  text-align: center;
+  font-size: small;
+  width: 100%;
+}
+
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                        Navigation Bar                         │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
 
 .keyboard nav {
   text-align: center;
@@ -28,10 +119,22 @@
   color: var(--fg-main);
 }
 
+.keyboard nav a:hover,
+.keyboard nav button:hover {
+  background-color: var(--bg-accent);
+}
+
 .keyboard [disabled] {
   pointer-events: none;
   opacity: 0.3;
 }
+
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                      Keyboard Emulation                       │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
 
 .keyboard dialog {
   max-width: 70em;
@@ -54,6 +157,17 @@
   margin-bottom: 1em;
 }
 
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                        Keyboard Footer                        │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+.keyboard {
+  margin-bottom: 2.5em;
+}
+
 .keyboard p {
   margin: 0 0 1em;
   text-align: right;
@@ -64,44 +178,3 @@
   font-size: smaller;
 }
 
-.geometry {
-  position: relative;
-  /* float: right; */
-  background-color: var(--bg-banner);
-  padding: 2px;
-  border-radius: 3px;
-  /* box-shadow: inset 0 0 0 3px rgba(35,   33,  45, 0.3), */
-  /*                   0 0 0 3px rgba(185, 185, 185, 0.3); */
-}
-
-.geometry input {
-  width: auto;
-  height: 100%;
-  appearance: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 2px;
-  padding: 2px 8px;
-  margin: 0;
-  /* background: var(--bg-banner); */
-  /* color: #bdbdbdbd; */
-  background-color: var(--bg-key);
-  color: #fff6;
-  font-size: 1em;
-  transition: all 100ms linear;
-}
-
-.geometry input:checked {
-  /* background-image: linear-gradient(180deg, #95d891, #74bbad); */
-  background-color: var(--bg-accent);
-  color: #fff;
-  /* box-shadow: 0 1px 1px #0000002e; */
-  /* text-shadow: 0 1px 0px #79485f7a; */
-}
-
-.geometry input:before {
-  content: attr(label);
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-}

@@ -55,26 +55,40 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   const keyboard = keeb.querySelector('x-keyboard');
   const preview  = keeb.querySelector('object');
   const input    = keeb.querySelector('input');
+  const form     = keeb.querySelector('form');
   const geometry = keeb.querySelector('select') || document.getElementById('geometry');
   const button   = keeb.querySelector('button');
 
-  const getGeometry = () => geometryClasses[geometry.value][0].toLowerCase();
+  const getGeoValue = () => geometry ? geometry.value : form.elements.geometry.value;
+  const getGeometry = () => geometryClasses[getGeoValue()][0].toLowerCase();
   const applyGeometry = () => {
     keyboard.geometry = getGeometry();
     if (preview) {
-      const className = geometryClasses[geometry.value]
+      const className = geometryClasses[getGeoValue()]
         .concat(preview.className)
         .join(' ');
       preview.contentDocument.documentElement.setAttribute('class', className);
     }
   };
 
-  geometry.addEventListener('change', applyGeometry);
+  geometry?.addEventListener('change', applyGeometry);
+  form?.addEventListener('change', () => {
+    if (preview) {
+      preview.className = form.elements.layers.value;
+    }
+    applyGeometry();
+  });
   preview?.addEventListener('load', () => {
-    geometry.innerHTML = Object.keys(geometryClasses)
-      .map(name => `<option>${name}</option>`)
-      .join('');
-    geometry.selectedIndex = 1;
+    if (geometry) {
+      geometry.innerHTML = Object.keys(geometryClasses)
+        .map(name => `<option>${name}</option>`)
+        .join('');
+      geometry.selectedIndex = 1;
+    }
+    else {
+      form.elements.layers.value = preview.className;
+      form.querySelector('.layers').hidden = !(preview.className);
+    }
     applyGeometry();
   });
 

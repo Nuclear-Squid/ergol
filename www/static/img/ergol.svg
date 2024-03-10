@@ -1,26 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="iso intlBackslash dk"
+<svg xmlns="http://www.w3.org/2000/svg" class="iso intlBackslash odk"
      platform="gnu" theme="reach"
      viewBox="0 0 900 300">
 
   <style>
     :root {
       color-scheme: light dark;
+      /* default keys */
+      --fg-normal-shadow: #8bb8;
+      --fg-normal-border: #666;
+      --fg-normal:        #333;
+      --bg-normal:        #fff;
+      /* special keys */
+      --fg-level3:        green;
+      --fg-level5:        blue;
+      --fg-deadkey:       red;
+      --fg-special:       #555;
+      --bg-special:       #e4e4e4;
+      /* 'reach' theme */
+      --bg-number:        hsl( 42, 100%, 95%);
+      --bg-letter:        hsl(222, 100%, 95%);
+      --bg-home:          hsl(222, 100%, 90%);
     }
+
+    /* vibrant dark */
+    @media (prefers-color-scheme: dark) { :root {
+      --fg-normal-shadow: #8558;
+      --fg-normal-border: #666;
+      --fg-normal:        #bbb;
+      --bg-normal:        #444;
+      /* special keys */
+      --fg-level3:        #99f;
+      --fg-level5:        #6d6;
+      --fg-deadkey:       #f44;
+      --fg-special:       #888;
+      --bg-special:       #333;
+      /* 'reach' theme */
+      --bg-number:        hsl( 60, 25%, 30%);
+      --bg-letter:        hsl(180, 30%, 30%);
+      --bg-home:          hsl(230, 30%, 30%);
+    }}
+
+    /* mild dark */
+    @media (prefers-color-scheme: dark) { :root {
+      --fg-normal-shadow: #8558;
+      --fg-normal-border: #666;
+      --fg-normal:        #bbb;
+      --bg-normal:        #4d4d4d;
+      /* special keys */
+      --fg-level3:        #99f;
+      --fg-level5:        #6d6;
+      --fg-deadkey:       #f77;
+      --fg-special:       #888;
+      --bg-special:       #333;
+      /* 'reach' theme */
+      --bg-number:        hsl( 80, 10%, 35%);
+      --bg-letter:        hsl(220, 15%, 35%);
+      --bg-home:          hsl(230, 30%, 30%);
+    }}
+
     rect, path {
-      stroke: #666;
+      fill: var(--bg-normal);
+      stroke: var(--fg-normal-border);
       stroke-width: .5px;
-      fill: #fff;
     }
+    text {
+      fill: var(--fg-normal);
+      font: normal 20px sans-serif;
+      text-align: center;
+      text-shadow: 0 1px 0px var(--fg-normal-shadow);
+    }
+
     .specialKey,
     .specialKey rect,
     .specialKey path {
-      fill: #e4e4e4;
+      fill: var(--bg-special);
     }
-    text {
-      fill: #333;
-      font: normal 20px sans-serif;
-      text-align: center;
+    .specialKey text {
+      fill: var(--fg-special);
     }
+
+    /* dimmed AltGr + bold dead keys */
+    .level3, .level4 { fill: var(--fg-level3); }
+    .level5, .level6 { fill: var(--fg-level5); }
+    .deadKey {
+      fill: var(--fg-deadkey);
+      font-size: 22px;
+    }
+
     #Backspace text {
       font-size: 12px;
     }
@@ -221,56 +287,26 @@
     [platform="gnu"] #MetaRight,
     [platform="win"] #MetaRight, #AltRight  { transform: translate(675px, 0px); }
 
-    g:target rect, .press rect,
-    g:target path, .press path {
-      fill: #aad;
-    }
+    /* optional color theme: reach */
+    [theme="reach"] .numberKey rect { fill: var(--bg-number); }
+    [theme="reach"] .letterKey rect { fill: var(--bg-letter); }
+    [theme="reach"] .homeKey   rect { fill: var(--bg-home); }
 
-    [theme="reach"] .numberKey rect { fill: hsl( 42, 100%, 95%); }
-    [theme="reach"] .letterKey rect { fill: hsl(222, 100%, 95%); }
-    [theme="reach"] .homeKey   rect { fill: hsl(222, 100%, 90%); }
+    /* hide level3-6 by default */
+    .level3, .level4, .level5, .level6 { display: none; }
 
-    /* dimmed AltGr + bold dead keys */
-    .level3, .level4 { fill: blue; opacity: .4; }
-    .level5, .level6 { fill: green; }
-    .deadKey {
-      fill: red;
-      font-size: 16px;
-      transform: translateY(-3px);
-    }
-    .diacritic  {
-      font-size: 24px;
-      font-weight: bolder;
-      transform: translateY(8px);
-    }
+    /* show 1dk */
+    .odk .level5,
+    .odk .level6 { display: block; }
 
-    /* hide Level4 (Shift+AltGr) unless AltGr is pressed */
-    .level4        { display: none; }
+    /* show 1dk and AltGr */
+    .mixed .level3,
+    .mixed .level5 { display: block; }
+    .mixed text.level5 { transform: translate(0px, -22.8px); }
+
+    /* show AltGr */
+    .altgr .level3,
     .altgr .level4 { display: block; }
-
-    /* highlight AltGr + Dead Keys
-    .dk .level1, .altgr .level1,
-    .dk .level2, .altgr .level2 { opacity: 0.25; }
-    .dk .level5, .altgr .level3,
-    .dk .level6, .altgr .level4 { opacity: 1; }
-    */
-    .dk .level3,
-    .dk .level4 { display: none; }
-
-    @media (prefers-color-scheme: dark) {
-      rect, path { stroke: #777; fill: #444; }
-      .specialKey, .specialKey rect, .specialKey path { fill: #333; }
-      g:target rect, .press rect, g:target path, .press path { fill: #558; }
-      text { fill: #bbb; }
-      .level3, .level4 { fill: #99f; }
-      .level5, .level6 { fill: #6d6; }
-      .deadKey { fill: #f44; }
-
-      [theme="reach"] .numberKey rect { fill: hsl( 61, 25%, 30%); }
-      [theme="reach"] .letterKey rect { fill: hsl(136, 30%, 30%); }
-      [theme="reach"] .letterKey rect { fill: hsl(180, 30%, 30%); }
-      [theme="reach"] .homeKey   rect { fill: hsl(230, 30%, 30%); }
-    }
   </style>
 
   <g id="row_AE">
@@ -424,6 +460,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">C</text>
           <text x="38.0" y="43.4" class="level3">&lt;</text>
+          <text x="38.0" y="20.6" class="level4">≤</text>
           <text x="38.0" y="43.4" class="level5">ç</text>
         </g>
       </g>
@@ -432,6 +469,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">O</text>
           <text x="38.0" y="43.4" class="level3">&gt;</text>
+          <text x="38.0" y="20.6" class="level4">≥</text>
           <text x="38.0" y="43.4" class="level5">œ</text>
         </g>
       </g>
@@ -481,9 +519,8 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2 deadKey">★</text>
-          <text x="38.0" y="43.4" class="level3">&quot;</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">¨</text>
-          <text x="38.0" y="43.4" class="level5 deadKey diacritic">¨</text>
+          <text x="38.0" y="43.4" class="level3">'</text>
+          <text x="38.0" y="20.6" class="level4 deadKey diacritic">´</text>
         </g>
       </g>
       <g id="KeyP" class="letterKey" transform="translate(630)">
@@ -491,6 +528,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">F</text>
           <text x="38.0" y="43.4" class="level3">`</text>
+          <text x="38.0" y="20.6" class="level4 deadKey diacritic">`</text>
           <text x="38.0" y="43.4" class="level5">û</text>
         </g>
       </g>
@@ -540,6 +578,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">S</text>
           <text x="38.0" y="43.4" class="level3">(</text>
+          <text x="38.0" y="20.6" class="level4">⁽</text>
           <text x="38.0" y="43.4" class="level5">é</text>
         </g>
       </g>
@@ -609,6 +648,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">U</text>
           <text x="38.0" y="43.4" class="level3">&quot;</text>
+          <text x="38.0" y="20.6" class="level4 deadKey diacritic">¨</text>
           <text x="38.0" y="43.4" class="level5">ù</text>
         </g>
       </g>
@@ -781,14 +821,22 @@
       <rect width="247" height="52" x="60" class="ks" rx="5" ry="5"/>
       <rect width="187" height="52" x="60" class="jis" rx="5" ry="5"/>
       <g class="key" text-anchor="begin">
-        <text x="11.0" y="43.4" class="level1 ansi">espace</text>
+        <text x="11.0"  y="43.4" class="level1 ansi">espace</text>
         <text x="-49.0" y="43.4" class="level2 ol60">espace</text>
-        <text x="11.0" y="43.4" class="level1 ol50 ol40">espace</text>
-        <text x="11.0" y="20.6" class="level2 ansi">insécable fine</text>
+        <text x="11.0"  y="43.4" class="level1 ol50 ol40">espace</text>
+        <text x="11.0"  y="20.6" class="level2 ansi">insécable fine</text>
         <text x="-49.0" y="20.6" class="level2 ol60">insécable fine</text>
-        <text x="11.0" y="20.6" class="level2 ol50 ol40">insécable fine</text>
+        <text x="11.0"  y="20.6" class="level2 ol50 ol40">insécable fine</text>
       </g>
-      <g class="key" text-anchor="end">
+      <g class="key level3" text-anchor="end">
+        <text x="356.0" y="43.4" class="level3 ansi">espace</text>
+        <text x="251.0" y="43.4" class="level3 ol60 ol50 ol40">espace</text>
+      </g>
+      <g class="key level4" text-anchor="end">
+        <text x="356.0" y="20.6" class="level4 ansi">espace insécable</text>
+        <text x="251.0" y="20.6" class="level4 ol60 ol50 ol40">insécable</text>
+      </g>
+      <g class="key level5" text-anchor="end">
         <text x="356.0" y="43.4" class="level5 ansi">apostrophe typo (’)</text>
         <text x="251.0" y="43.4" class="level5 ol60 ol50 ol40">apostrophe (’)</text>
       </g>

@@ -209,7 +209,7 @@ footer small {
  * ╰───────────────────────────────────────────────────────────────╯
 **/
 
-kbd, .odk { /* key */
+kbd, span.odk { /* key */
   margin: 0 2px;
   font-size: 1em;
   border: 1px outset var(--bg-key-border);

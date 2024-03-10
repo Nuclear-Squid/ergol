@@ -6,17 +6,32 @@
             {{ with .Get "data" }} data="/img/{{ . }}.svg" {{ end }}
       style="position: absolute; top: 0; left: 0; width: 100%;"></object>
   </div>
-  <p>
+
+  <form>
+    <fieldset class="layers" hidden>
+      <input type="radio" name="layers" label="typo"  value="odk" checked />
+      <input type="radio" name="layers" label="mix"   value="mixed" />
+      <input type="radio" name="layers" label="altgr" value="altgr" />
+    </fieldset>
+    <span></span>
+    <fieldset class="geometry">
+      <input type="radio" name="geometry" label="3×6"   value="3×6" />
+      <input type="radio" name="geometry" label="4×6"   value="4×6" />
+      <input type="radio" name="geometry" label="TMx"   value="TMx" />
+      <input type="radio" name="geometry" label="ANSI"  value="ANSI" />
+      <input type="radio" name="geometry" label="ISO"   value="ISO" checked />
+      <input type="radio" name="geometry" label="ISO-A" value="ISO-A" />
+    </fieldset>
+  </form>
+
+  <!-- <p>
     <span>powered by <a
         href="https://onedeadkey.github.io/x-keyboard/">x-keyboard</a>
     </span>
-    <!-- <small>géométrie :</small> -->
-    <span class="geometry">
-      <input type="radio" name="geometry" label="ISO"  value="male" checked>
-      <input type="radio" name="geometry" label="ANSI" value="female">
-      <input type="radio" name="geometry" label="TMx"  value="other">
-    </span>
-  </p>
+    <small>géométrie :</small>
+    <select><option>ISO</option></select>
+  </p> -->
+
   {{ if $name }}
     {{ with .Get "data" }}
     <dialog>
