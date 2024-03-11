@@ -3,7 +3,7 @@
 cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
-footer = "outillé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
+footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/lts">}}
@@ -33,7 +33,7 @@ Ergo-L intègre l’approche 1DFH, qui consiste à ne pas déplacer ses doigts d
 plus d’une touche par rapport à la position de repos. Cela permet un gain de
 confort important pour la saisie en méthode dactylo, évitant notamment les
 extensions latérales de l’auriculaire droit qui sont typiques de Bépo pour les
-lettres `M` `Z` `W` `Ç` (« les quatre cavaliers de l’auriculaire »).
+lettres `m` `z` `w` `ç` (« les quatre cavaliers de l’auriculaire »).
 
 ![Ergo‑L sur un clavier compact (type OLKB Planck).](img/ergol_1dfh.svg)
 
@@ -106,7 +106,7 @@ variantes la reprend sans chercher à la mettre à jour.
 Dvorak et Bépo ne sont optimisés que pour une seule langue (anglais et français,
 respectivement), et sont très inconfortables dans l’autre. Pourtant, à une
 exception près, les 9 lettres les plus fréquentes sont les mêmes en français
-(`ESANITRUO`) et en anglais (`ETAOHNISR`) :
+(`esanitruo`) et en anglais (`etaohnisr`) :
 
 :::{ style="overflow: scroll;" }
 |      |      E |      S |      A |      N |      I |      T |      R |      U |      O |      H |

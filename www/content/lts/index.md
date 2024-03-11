@@ -12,7 +12,7 @@ footer = "outillé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 <style>
   dt { font-weight: bold; }
   dd p { margin: 0.2em 0; }
-  code { font-family: monospace; text-transform: none; }
+  code { font-family: monospace; }
   pre { background-color: #6684; padding: 0.5em 2em; }
 </style>
 

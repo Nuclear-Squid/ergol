@@ -221,8 +221,6 @@ code { /* character, digrams, trigrams */
   font-weight: bold;
   font-family: serif;
   background-color: var(--bg-accent);
-  text-transform: uppercase;
-  text-transform: lowercase;
   padding: 2px 4px;
   border-radius: 2px;
 }

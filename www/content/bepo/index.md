@@ -29,9 +29,9 @@ Ergonomie
 ### Bépo {id="ergonomie-bépo"}
 
 Conservant l’approche AZERTY d’avoir certaines lettres accentuées en direct
-(`É`, `È`, `À`, `Ç`), [Bépo][] a manqué de place pour placer toutes les lettres
+(`é`, `è`, `à`, `ç`), [Bépo][] a manqué de place pour placer toutes les lettres
 et a choisi d’occuper les colonnes excentrées pour des lettres jugées moins
-fréquentes (`M`, `Z`, `W`, `Ç`). Il en résulte une incompatibilité avec la
+fréquentes (`m`, `z`, `w`, `ç`). Il en résulte une incompatibilité avec la
 plupart des claviers ergonomiques du marché, qui ne proposent que 6 colonnes de
 touches par main pour respecter le principe [1DFH][].
 
@@ -46,7 +46,7 @@ Par ailleurs, la charge des doigts est mal répartie :
 - une grande partie des touches doublées se trouvent sous l’auriculaire droit —
   et souvent en extension !
 
-C’est notamment le cas du `M` : 13e lettre la plus fréquente en français (2.7 %
+C’est notamment le cas du `m` : 13e lettre la plus fréquente en français (2.7 %
 de fréquence, soit plus que tous les caractères accentués cumulés), fréquemment
 doublé (0.2 % du temps) et en extension latérale sur l’auriculaire droit. Cela
 favorise grandement les déviations ulnaires, qui sont la principale cause de
@@ -174,7 +174,7 @@ proche de celui obtenu par Dvorak en anglais, là où QWERTY est à 7.2 %.
 Cette optimisation est faite au détriment de l’anglais :
 
 - la charge de l’auriculaire droit grimpe à 13.7 % ;
-- certains digrammes, notamment `WH`, sont rédhibitoires.
+- certains digrammes, notamment `wh`, sont rédhibitoires.
 
 
 ### Ergo‑L {id="optimisation-ergol"}
@@ -230,11 +230,11 @@ Typographie
 
 [Bépo][] gère les caractères accentués de façon similaire à AZERTY :
 
-- certaines lettres comme `É` `È` `À` `Ç` sont accessibles directement ;
+- certaines lettres comme `é` `è` `à` `ç` sont accessibles directement ;
 - l’accent circonflexe et le tréma sont faits avec une touche morte (le tréma
   nécessitant *en plus* [AltGr]{.kbd} avec Bépo) ;
 - certains caractères nécessitent la touche [AltGr]{.kbd}, ce qui complique les
-  enchaînements : `Ù`, `Œ`, `Æ`, points de suspension…
+  enchaînements : `ù`, `œ`, `æ`, points de suspension…
 
 De plus, Bépo propose beaucoup de caractères spéciaux (i.e. non liés à la langue
 français ou au code informatique) via la couche AltGr ou des touches mortes, au
@@ -256,8 +256,8 @@ programmation.
 
 Cette touche morte occasionne des frappes supplémentaires sur un texte francophone :
 
-- 1.0 % pour `È`, `À`, `Ç`, `Œ`, `Æ`
-- 1.5 % pour le seul `É`
+- 1.0 % pour `è`, `à`, `ç`, `œ`, `æ`
+- 1.5 % pour le seul `é`
 - 1.5 % si on utilise l’apostrophe typographique (`’`) plutôt que l’apostrophe
   droite (`'`)
 
