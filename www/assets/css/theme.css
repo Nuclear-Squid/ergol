@@ -157,13 +157,19 @@ a[href]:hover {
  * ╰───────────────────────────────────────────────────────────────╯
 **/
 
+/* this horizontal padding is reused or the navbar, footer and banner:
+ * background image position and left padding must be adjusted accordingly. */
+main {
+  padding: 0 12px;
+}
+
 #banner {
-  padding: .5em 0 0.5em 64px;
   min-height: 50px;
   box-sizing: border-box;
-  background: left 6px center no-repeat url(../favicon.svg);
+  background: left 12px center no-repeat url(../favicon.svg);
   background-size: 50px;
   background-color: var(--bg-banner);
+  padding: .5em 0 0.5em calc(12px + 64px);
 }
 
 #banner p.title {
@@ -184,6 +190,8 @@ footer {
 
 header nav,
 footer {
+  padding-left: 12px;  /* see <main> padding above */
+  padding-right: 12px; /* see <main> padding above */
   border-top: 1px solid var(--fg-banner-border);
   text-align: right;
 }
@@ -195,7 +203,8 @@ header h1 {
 }
 
 footer {
-  padding: 0.2rem 0 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.5rem;
 }
 
 footer small {

@@ -45,8 +45,13 @@
 
 .keyboard fieldset {
   border: none;
-  padding: 1px;
+  padding: 0 1px;
   margin: 0;
+  text-wrap: balance;
+}
+
+.keyboard fieldset:last-child {
+  text-align: right;
 }
 
 .keyboard form span {
@@ -54,13 +59,15 @@
 }
 
 .keyboard form input {
+  box-sizing: border-box;
   width: auto;
-  height: 100%;
-  font-size: 1em;
+  height: 1.8em;
+  line-height: 1.8em;
+  font-size: 0.8em;
   appearance: none;
   outline: none;
-  padding: 2px 8px;
-  margin: 0;
+  padding: 0 8px;
+  margin: 2px 0;
   background-color: var(--bg-special);
   color: var(--fg-special);
   border: 1px solid #6668;
@@ -82,8 +89,6 @@
   content: attr(label);
   display: inline-block;
   text-align: center;
-  font-size: small;
-  width: 100%;
 }
 
 
@@ -93,8 +98,14 @@
  * ╰───────────────────────────────────────────────────────────────╯
 **/
 
+/* No navbar on mobile *yet*. FIXME! */
+@media (pointer:none), (pointer:coarse) {
+  .keyboard nav { display: none; }
+}
+
 .keyboard nav {
   text-align: center;
+  text-wrap: balance;
   margin: 0.7em auto;
 }
 
@@ -102,7 +113,7 @@
 .keyboard nav button {
   display: inline-block;
   box-sizing: border-box;
-  margin: 1px;
+  margin: 2px 1px;
   padding: 0 6px;
   font-size: 1em;
   height: 2.3em;
