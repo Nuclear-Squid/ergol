@@ -3,7 +3,7 @@
 cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
-footer = "outillé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
+footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/lts">}}
