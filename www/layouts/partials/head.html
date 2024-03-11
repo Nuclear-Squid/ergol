@@ -2,10 +2,17 @@
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <meta name="description" content="{{ .Site.Params.description }}">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1f" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#1a1a1f" />
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8f8f8" />
 <meta name="color-scheme" content="light dark">
-<link type="image/svg+xml" rel="icon" href="{{ absURL "favicon.svg" }}" sizes="any" />
-
+<meta property="og:title"        content="Ergo‑L">
+<meta property="og:type"         content="website">
+<meta property="og:url"          content="https://ergol.org">
+<meta property="og:image"        content="{{ absURL "ergol.png" }}">
+<meta property="og:image:type"   content="image/png">
+<meta property="og:image:width"  content="960">
+<meta property="og:image:height" content="360">
+<meta property="og:description"  content="{{ .Site.Params.description }}">
+<link type="image/svg+xml" rel="icon" href="{{ absURL "favicon.svg" }}" sizes="any">
 {{ partial "head/js.html" . }}
 {{ partial "head/css.html" . }}
