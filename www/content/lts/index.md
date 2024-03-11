@@ -3,7 +3,9 @@ title = "Ergo‑L v0.7 LTS"
 
 [params]
 cssSheets = ["/css/keebs.css"]
+jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
+footer = "outillé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
 
@@ -14,7 +16,7 @@ jsScripts = ["/js/keebs.js"]
   pre { background-color: #6684; padding: 0.5em 2em; }
 </style>
 
-{{<x-keyboard layout="ergol">}}
+{{<x-keyboard name="Ergo‑L" data="ergol" class="odk">}}
 
 
 Téléchargement
