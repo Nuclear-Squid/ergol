@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="iso intlBackslash odk"
+<svg xmlns="http://www.w3.org/2000/svg" class="iso intlBackslash mixed"
      platform="gnu" theme="reach"
      viewBox="0 0 900 300">
 
@@ -74,12 +74,38 @@
     .specialKey rect,
     .specialKey path { fill: var(--bg-special); }
     .specialKey text { fill: var(--fg-special); }
+    .level3 text,
+    .level4 text,
     .level3, .level4 { fill: var(--fg-level3); }
+    .level5 text,
+    .level6 text,
     .level5, .level6 { fill: var(--fg-level5); }
-    .deadKey {
+
+    /* still hacky (experimental at best) */
+    .deadKey text {
       fill: var(--fg-deadkey);
       font-size: 22px;
     }
+    .diacritic .dk_mark { opacity: 0.7; }
+    .diacritic .dk_char { font-weight: bolder; }
+    .non_diacritic .dk_mark { transform: translate(0px, 1px); opacity: 0.9; }
+    .non_diacritic .dk_char { transform: translate(0px, -2px); }
+
+    /* hide level3-6 by default */
+    .level3, .level4, .level5, .level6 { display: none; }
+
+    /* show 1dk */
+    .odk .level5,
+    .odk .level6 { display: block; }
+
+    /* show 1dk and AltGr */
+    .mixed .level3,
+    .mixed .level5 { display: block; }
+    .mixed .level5 { transform: translate(0px, -22.8px); }
+
+    /* show AltGr */
+    .altgr .level3,
+    .altgr .level4 { display: block; }
 
     #Backspace text {
       font-size: 12px;
@@ -285,22 +311,6 @@
     [theme="reach"] .numberKey rect { fill: var(--bg-number); }
     [theme="reach"] .letterKey rect { fill: var(--bg-letter); }
     [theme="reach"] .homeKey   rect { fill: var(--bg-home); }
-
-    /* hide level3-6 by default */
-    .level3, .level4, .level5, .level6 { display: none; }
-
-    /* show 1dk */
-    .odk .level5,
-    .odk .level6 { display: block; }
-
-    /* show 1dk and AltGr */
-    .mixed .level3,
-    .mixed .level5 { display: block; }
-    .mixed text.level5 { transform: translate(0px, -22.8px); }
-
-    /* show AltGr */
-    .altgr .level3,
-    .altgr .level4 { display: block; }
   </style>
 
   <g id="row_AE">
@@ -472,6 +482,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">P</text>
           <text x="38.0" y="43.4" class="level3">$</text>
+          <g class="level4 non_diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">﹍</text>
+            <text x="38.0" y="20.6" class="dk_char">¤</text>
+          </g>
           <text x="38.0" y="43.4" class="level5">ô</text>
         </g>
       </g>
@@ -490,7 +504,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">J</text>
           <text x="38.0" y="43.4" class="level3">^</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">^</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">^</text>
+          </g>
         </g>
       </g>
       <g id="KeyU" class="letterKey" transform="translate(450)">
@@ -513,10 +530,19 @@
       <g id="KeyO" class="letterKey" transform="translate(570)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
-          <text x="12.8" y="20.6" class="level2 deadKey">★</text>
+          <g class="level2 non_diacritic deadKey">
+            <text x="12.8" y="20.6" class="dk_mark">﹍</text>
+            <text x="12.8" y="20.6" class="dk_char">★</text>
+          </g>
           <text x="38.0" y="43.4" class="level3">'</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">´</text>
-          <text x="38.0" y="43.4" class="level5 deadKey diacritic">¨</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">´</text>
+          </g>
+          <g class="level5 diacritic deadKey">
+            <text x="38.0" y="43.4" class="dk_mark">◌</text>
+            <text x="38.0" y="43.4" class="dk_char">¨</text>
+          </g>
         </g>
       </g>
       <g id="KeyP" class="letterKey" transform="translate(630)">
@@ -524,7 +550,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">F</text>
           <text x="38.0" y="43.4" class="level3">`</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">`</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">`</text>
+          </g>
           <text x="38.0" y="43.4" class="level5">û</text>
         </g>
       </g>
@@ -612,6 +641,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">L</text>
           <text x="38.0" y="43.4" class="level3">\</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">/</text>
+          </g>
           <text x="38.0" y="43.4" class="level5"> </text>
         </g>
       </g>
@@ -620,6 +653,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">R</text>
           <text x="38.0" y="43.4" class="level3">+</text>
+          <text x="38.0" y="20.6" class="level4">±</text>
           <text x="38.0" y="43.4" class="level5"> </text>
         </g>
       </g>
@@ -628,6 +662,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">T</text>
           <text x="38.0" y="43.4" class="level3">-</text>
+          <text x="38.0" y="20.6" class="level4">—</text>
           <text x="38.0" y="43.4" class="level5">î</text>
         </g>
       </g>
@@ -636,6 +671,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">I</text>
           <text x="38.0" y="43.4" class="level3">/</text>
+          <text x="38.0" y="20.6" class="level4">÷</text>
           <text x="38.0" y="43.4" class="level5">ï</text>
         </g>
       </g>
@@ -644,7 +680,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">U</text>
           <text x="38.0" y="43.4" class="level3">&quot;</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">¨</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">¨</text>
+          </g>
           <text x="38.0" y="43.4" class="level5">ù</text>
         </g>
       </g>
@@ -689,7 +728,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">Z</text>
           <text x="38.0" y="43.4" class="level3">~</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">~</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">˜</text>
+          </g>
           <text x="38.0" y="43.4" class="level5">æ</text>
         </g>
       </g>
@@ -739,6 +781,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">H</text>
           <text x="38.0" y="43.4" class="level3">!</text>
+          <text x="38.0" y="20.6" class="level4">¬</text>
           <text x="38.0" y="43.4" class="level5"> </text>
         </g>
       </g>
@@ -747,7 +790,14 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">G</text>
           <text x="38.0" y="43.4" class="level3">;</text>
-          <text x="38.0" y="43.4" class="level5"> </text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">¸</text>
+          </g>
+          <g class="level5 non_diacritic deadKey">
+            <text x="38.0" y="43.4" class="dk_mark">﹍</text>
+            <text x="38.0" y="43.4" class="dk_char">α</text>
+          </g>
         </g>
       </g>
       <g id="Period" class="letterKey" transform="translate(615)">
@@ -825,16 +875,16 @@
         <text x="11.0"  y="20.6" class="level2 ol50 ol40">insécable fine</text>
       </g>
       <g class="key level3" text-anchor="end">
-        <text x="356.0" y="43.4" class="level3 ansi">espace</text>
-        <text x="251.0" y="43.4" class="level3 ol60 ol50 ol40">espace</text>
+        <text x="356.0" y="43.4" class="ansi">espace</text>
+        <text x="251.0" y="43.4" class="ol60 ol50 ol40">espace</text>
       </g>
       <g class="key level4" text-anchor="end">
-        <text x="356.0" y="20.6" class="level4 ansi">espace insécable</text>
-        <text x="251.0" y="20.6" class="level4 ol60 ol50 ol40">insécable</text>
+        <text x="356.0" y="20.6" class="ansi">espace insécable</text>
+        <text x="251.0" y="20.6" class="ol60 ol50 ol40">insécable</text>
       </g>
       <g class="key level5" text-anchor="end">
-        <text x="356.0" y="43.4" class="level5 ansi">apostrophe typo (’)</text>
-        <text x="251.0" y="43.4" class="level5 ol60 ol50 ol40">apostrophe (’)</text>
+        <text x="356.0" y="43.4" class="ansi">apostrophe typo (’)</text>
+        <text x="251.0" y="43.4" class="ol60 ol50 ol40">apostrophe (’)</text>
       </g>
     </g>
     <g class="right">
