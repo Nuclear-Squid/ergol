@@ -137,8 +137,12 @@ figure {
   margin: 2em auto;
 }
 
-ul {
+ol, ul {
   padding-left: 1.5em;
+}
+
+dd {
+  margin-left: 1.5em;
 }
 
 a[href] {
