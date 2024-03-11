@@ -141,12 +141,12 @@ ul {
   padding-left: 1.5em;
 }
 
-a {
+a[href] {
   color: var(--fg-accent);
   text-decoration: none;
 }
 
-a:hover {
+a[href]:hover {
   text-decoration: underline;
 }
 
