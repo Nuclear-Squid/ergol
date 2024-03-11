@@ -233,7 +233,7 @@ implémentations.
 keycode) est le code numérique issu du traitement bas niveau par le noyau, alors
 que le code _symbolique_ est le nom donné dans les fichiers XKB pour faciliter
 la configuration haut-niveau du clavier. On distinguera le code brut du _noyau_
-de celui de XKB, ce dernier étant obtenu en ajoutant 8 au premier.</br>
+de celui de XKB, ce dernier étant obtenu en ajoutant 8 au premier.<br/>
 Exemple : sur un clavier QWERTY, le code brut noyau de la touche `Q` est
 `16`[^code-brut-noyau], le code brut sur XKB est `16 + 8 = 24` et son code
 symbolique est `AD01`[^code-symbolique-iso-9995].<br/>
@@ -241,7 +241,7 @@ Noter qu’un clavier QWERTY et un clavier AZERTY produisent habituellement des
 keycodes identiques pour les touches situées au même emplacement : ainsi la
 touche imprimée `Q` sur le clavier QWERTY produira le même keycode que la touche
 imprimée `A` sur un clavier imprimé AZERTY. En effet, c’est la configuration du
-clavier dans XKB et non le clavier lui-même qui défini la correspondance touche/
+clavier dans XKB et non le clavier lui-même qui définit la correspondance touche/
 [keysym].
 
 [ISO/IEC 9995-2]: https://en.wikipedia.org/wiki/ISO/IEC_9995#ISO/IEC_9995-2
