@@ -8,7 +8,7 @@ jsScripts = ["/js/keebs.js"]
 footer = "réfrigéré par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
-**🚧 en construction**
+**🚧 en construction 🚧**
 
 
 {{<x-keyboard name="Erglace"

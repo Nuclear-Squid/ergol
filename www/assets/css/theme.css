@@ -188,10 +188,32 @@ footer {
   text-align: right;
 }
 
+header nav,
+footer nav {
+  display: flex;
+  justify-content: end;
+}
+
+header nav a:not(:first-child):before,
+footer nav a:not(:first-child):before {
+  display: inline-block;
+  content: "|";
+  width: 1em;
+  text-align: center;
+  color: var(--fg-banner-border);
+}
+
 header h1 {
   text-align: center;
   font-size: 2em;
-  margin: 1.2em auto;
+  line-height: 1em;
+  margin: 1.8em auto 1.2em;
+}
+
+main > p:first-child {
+  text-align: center;
+  text-wrap: balance;
+  margin: -1em auto 2em;
 }
 
 footer {

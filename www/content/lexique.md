@@ -2,6 +2,8 @@
 title = "Lexique"
 +++
 
+**🚧 en construction 🚧**
+
 <style>
   dt + dd:has(+ dd), dd + dd { display: list-item; list-style-type: "-  "; }
   dd p { margin: 0.7em 0; }
@@ -11,8 +13,6 @@ title = "Lexique"
   .footnotes { font-size: smaller; }
   .footnotes li p { margin: 0.2em 0; }
 </style>
-
-**🚧 en construction**
 
 
 Ergonomie & Optimisation
