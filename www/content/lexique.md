@@ -4,8 +4,10 @@ title = "Lexique"
 
 <style>
   dt { font-weight: bold; }
-  dd p { margin: 0.2em 0; }
+  dd p { margin: 0.7em 0; }
   code { font-family: monospace; }
+  /* match the <body> 1.4em line-height */
+  sup { vertical-align: super; line-height: 0.4em; }
 </style>
 
 **🚧 en construction**
@@ -58,6 +60,10 @@ faisables sur un clavier, sinon le pire.
 
 Support logiciel
 --------------------------------------------------------------------------------
+<!-- Nota : la distinction keycode/scancode échappe à beaucoup de personnes, y
+compris à des développeurs qui travaillent sur la question — comme ça a été’le
+cas au sein de la talentueuse équipe de KMonad sur ce ticket Github :
+https://github.com/kmonad/kmonad/issues/111 -->
 
 <a name="scan-code-def">Scan code</a>
 
@@ -188,9 +194,12 @@ des dispositions clavier.
 : Une __méthode de saisie__ (<i lang="en">input method</i> ou IM). C’est notamment
 ce qui permet aux touches mortes système (autres que `1dk`) de fonctionner.
 Elle porte ce nom car elle _compose_ – entendre : combine – plusieurs [keysyms]
-en un[^composed-keysym] nouvel keysym.
-Exemples : la séquence `◌́e` est transformée en `é`, `n~` en `ñ`, `+-` en `±` et
-`<3` en `♥`.
+en un[^composed-keysym] nouveau keysym.
+
+    <!-- le diacritique combinant est mal supporté par Pandoc Markdown:
+        `◌́e` est affiché « é » et non «  ◌́e` ». -->
+    Exemples : la séquence `'e` est transformée en `é`, `n~` en `ñ`, `+-` en `±`
+    et `<3` en `♥`.
 
 : Une __[touche][touche Compose]__ qui active la _méthode de saisie_ Compose pour
 les touches pressées à la suite. Cette touche n’est pas présente sur les claviers
@@ -219,9 +228,10 @@ implémentations.
 : Un __format__ pour configuer la méthode de saisie XCompose.
 
 : Les __fichiers__ de configuration correspondants. En particulier :
-  - `/usr/share/X11/locale/**/Compose` : les fichiers système, organisés par
-    locale.
-  - `~/.XCompose` : le fichier utilisateur par défaut.
+
+    - `/usr/share/X11/locale/**/Compose` : les fichiers système, organisés par
+      locale.
+    - `~/.XCompose` : le fichier utilisateur par défaut.
 
 [XCompose]: https://linux.die.net/man/3/xcompose
 
@@ -233,16 +243,18 @@ implémentations.
 keycode) est le code numérique issu du traitement bas niveau par le noyau, alors
 que le code _symbolique_ est le nom donné dans les fichiers XKB pour faciliter
 la configuration haut-niveau du clavier. On distinguera le code brut du _noyau_
-de celui de XKB, ce dernier étant obtenu en ajoutant 8 au premier.<br/>
-Exemple : sur un clavier QWERTY, le code brut noyau de la touche `Q` est
-`16`[^code-brut-noyau], le code brut sur XKB est `16 + 8 = 24` et son code
-symbolique est `AD01`[^code-symbolique-iso-9995].<br/>
-Noter qu’un clavier QWERTY et un clavier AZERTY produisent habituellement des
-keycodes identiques pour les touches situées au même emplacement : ainsi la
-touche imprimée `Q` sur le clavier QWERTY produira le même keycode que la touche
-imprimée `A` sur un clavier imprimé AZERTY. En effet, c’est la configuration du
-clavier dans XKB et non le clavier lui-même qui définit la correspondance touche/
-[keysym].
+de celui de XKB, ce dernier étant obtenu en ajoutant 8 au premier.
+
+    Exemple : sur un clavier QWERTY, le code brut noyau de la touche `Q` est
+    `16`[^code-brut-noyau], le code brut sur XKB est `16 + 8 = 24` et son code
+    symbolique est `AD01`[^code-symbolique-iso-9995].
+
+    Noter qu’un clavier QWERTY et un clavier AZERTY produisent habituellement
+    des keycodes identiques pour les touches situées au même emplacement : ainsi
+    la touche imprimée `Q` sur le clavier QWERTY produira le même keycode que la
+    touche imprimée `A` sur un clavier imprimé AZERTY. En effet, c’est la
+    configuration du clavier dans XKB et non le clavier lui-même qui définit la
+    correspondance touche / [keysym].
 
 [ISO/IEC 9995-2]: https://en.wikipedia.org/wiki/ISO/IEC_9995#ISO/IEC_9995-2
 [input-event-codes.h]: https://github.com/torvalds/linux/blob/90d35da658da8cff0d4ecbb5113f5fac9d00eb72/include/uapi/linux/input-event-codes.h#L91
@@ -254,26 +266,31 @@ clavier dans XKB et non le clavier lui-même qui définit la correspondance touc
 : Code numérique identifiant un symbole sur le _capuchon_ d’une touche. Ce mot
 vient de l’anglais « <i lang="en">key symbol</i> ». Les keysyms sont également
 associées à des noms anglais pour faciliter leur utilisation. Exemples : `a`,
-`agrave` pour « à », `Shift_L` pour la touche majuscule à gauche, etc.<br/>
-À la différence des keycodes, les keysyms ne sont pas utilisés pour _identifier_
-les touches physiques mais pour configurer le _résultat_ obtenu en pressant une
-touche. Ainsi, la _touche_ `<Q>` d’un clavier imprimé QWERTY peut être configurée
-pour produire le[^keysym-genre] keysym `q` ou `a` sur la couche de base, et les
-keysyms `Q` ou `A` sur la couche masjcule, etc.
+`agrave` pour « à », `Shift_L` pour la touche majuscule à gauche, etc.
+
+    À la différence des keycodes, les keysyms ne sont pas utilisés pour
+    _identifier_ les touches physiques mais pour configurer le _résultat_ obtenu
+    en pressant une touche. Ainsi, la _touche_ [Q]{.kbd} d’un clavier imprimé
+    QWERTY peut être configurée pour produire le[^keysym-genre] keysym `q` ou
+    `a` sur la couche de base, et les keysyms `Q` ou `A` sur la couche masjcule,
+    etc.
 
 : Il existe différents types de keysyms :
-  - _caractère :_ `a` et `A` pour les scripts latins, `gamma` « γ » et `GAMMA`
-    « Γ » pour le grec, etc.
-  - _touche morte :_ `dead_grave` et `dead_diaeresis`, qui correspondent respectivement
-    à l’accent grave et au tréma. Une touche morte est une touche spéciale car elle ne
-    génère pas de caractère, mais modifie le caractère de la touche qui est utilisée
-    directement après elle. Ce comportement nécessite la fonctionnalité « Compose ».
-  - _modificateur :_ une touche qui modifie l’effet des autres touches : par exemple
-    `Shift_L`, `Control_R`, `Caps_Lock`. Les modificateurs utilisent un mécanisme
-    différent des touches mortes et servent à accéder aux différentes couches d’une
-    disposition, ainsi qu’à définir des raccourcis clavier.
-  - _système :_ actions spéciales non comprises ci-dessus : flèche `Left`,
-    `Pause`, `Escape`, `F1`, etc.
+
+    - _caractère :_ `a` et `A` pour les scripts latins, `gamma` « γ » et `GAMMA`
+      « Γ » pour le grec, etc.
+    - _touche morte :_ `dead_grave` et `dead_diaeresis`, qui correspondent
+      respectivement à l’accent grave et au tréma. Une touche morte est une
+      touche spéciale car elle ne génère pas de caractère, mais modifie le
+      caractère de la touche qui est utilisée directement après elle. Ce
+      comportement nécessite la fonctionnalité « Compose ».
+    - _modificateur :_ une touche qui modifie l’effet des autres touches : par
+      exemple `Shift_L`, `Control_R`, `Caps_Lock`. Les modificateurs utilisent
+      un mécanisme différent des touches mortes et servent à accéder aux
+      différentes couches d’une disposition, ainsi qu’à définir des raccourcis
+      clavier.
+    - _système :_ actions spéciales non comprises ci-dessus : flèche `Left`,
+      `Pause`, `Escape`, `F1`, etc.
 
 [^keysym-genre]: On devrait dire _un_ keysym car c’est un _symbole_ de touche,
 mais _une_ keysym sonne peut-être mieux.
