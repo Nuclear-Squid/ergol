@@ -184,9 +184,7 @@ a[href]:hover {
   background: left var(--main-padding) center no-repeat url(../favicon.svg);
   background-size: 50px;
   background-color: var(--bg-banner);
-  /* XXX var(--main-padding) cannot be used inside a calc(),
-   * but the 12px value below should match it */
-  padding: .5em 0 0.5em calc(12px + 64px);
+  padding: .5em 0 0.5em calc(var(--main-padding) + 64px);
 }
 
 #banner p.title {
@@ -263,13 +261,6 @@ code { /* character, digrams, trigrams */
     --main-padding: 40px;
     --list-indent: 2.5em;
   }
-
-  /* XXX var(--main-padding) cannot be used inside a calc(),
-   * but the 40px value below should match it */
-  #banner {
-    padding-left: calc(40px + 64px);
-  }
-
   .highlight {
     border-radius: 6px;
   }

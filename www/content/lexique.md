@@ -6,8 +6,6 @@ title = "Lexique"
   dt + dd:has(+ dd), dd + dd { display: list-item; list-style-type: "-  "; }
   dd p { margin: 0.7em 0; }
   code { font-family: monospace; }
-  /* match the <body> 1.4em line-height */
-  sup { vertical-align: super; line-height: 0.4em; }
   .footnotes { font-size: smaller; }
   .footnotes li p { margin: 0.2em 0; }
 </style>
