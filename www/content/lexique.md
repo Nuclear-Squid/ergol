@@ -3,7 +3,10 @@ title = "Lexique"
 +++
 
 <style>
-  dt { font-weight: bold; }
+  dt + dd:has(+ dd), dd + dd {
+    display: list-item;
+    list-style-type: "-  ";
+  }
   dd p { margin: 0.7em 0; }
   code { font-family: monospace; }
   /* match the <body> 1.4em line-height */
@@ -61,7 +64,7 @@ faisables sur un clavier, sinon le pire.
 Support logiciel
 --------------------------------------------------------------------------------
 <!-- Nota : la distinction keycode/scancode échappe à beaucoup de personnes, y
-compris à des développeurs qui travaillent sur la question — comme ça a été’le
+compris à des développeurs qui travaillent sur la question — comme ça a été le
 cas au sein de la talentueuse équipe de KMonad sur ce ticket Github :
 https://github.com/kmonad/kmonad/issues/111 -->
 
@@ -150,6 +153,7 @@ Karabiner
 [couche]: #couche-def
 [groupe]: #group-xkb-def
 
+
 #### Environnement
 
 [X11]
@@ -157,13 +161,9 @@ Karabiner
 : X est un protocole de système de fenêtrage. [X11] en est la onzième version
 majeure.
 
-[X11]: https://fr.wikipedia.org/wiki/X_Window_System
-
 [X.Org]
 
 : Le principal [serveur X][X11] utilisé sur Linux.
-
-[X.Org]: https://fr.wikipedia.org/wiki/X.Org
 
 Wayland
 
@@ -171,8 +171,6 @@ Wayland
 maintenu. Bien qu’en développement depuis 2008, son implémentation dans les
 environnements de bureau majeurs n’a commencé à être suffisante que dans les
 années 2020.
-
-[Wayland]: https://fr.wikipedia.org/wiki/Wayland
 
 XKB (_X_ <em>K</em>eyboard <em>E</em>xtension)
 
@@ -184,10 +182,6 @@ des dispositions clavier.
 
 : Par abus de langage c'est aussi la __base de données__ des configurations clavier,
 [`xkeyboard-config`][xkeyboard-config].
-
-[XKB protocol]: https://www.x.org/releases/current/doc/kbproto/xkbproto.html
-[XKB text format]: https://xkbcommon.org/doc/current/keymap-text-format-v1.html
-[xkeyboard-config]: https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
 
 <a name="compose-def">Compose</a>
 
@@ -208,16 +202,6 @@ de clavier.
 
 : La __[keysym]__ `<Multi_key>`, qui est placée sur la _touche_ Compose.
 
-[keysym]: #keysym-def
-[keysyms]: #keysym-def
-[touche Compose]: https://fr.wikipedia.org/wiki/Touche_de_composition
-[^composed-keysym]: Le cas le plus fréquent est _un_ keysym, mais il est possible
-d’en produire plusieurs. C’est indispensable pour certains caractères qui
-nécessitent plusieurs [points de code], comme « ė̄ » (`U+0117 + U+0304`), mais aussi
-👩🏿‍🚀👩🏾‍🚀👩🏽‍🚀👩🏼‍🚀👩🏻‍🚀👩‍🚀, qui requiert au moins deux [points de code] pour chaque emoji.
-
-[points de code]: #point-de-code-def
-
 XCompose
 
 : Une __[spécification][XCompose]__ de Compose pour les systèmes basés sur X11 et
@@ -233,7 +217,24 @@ implémentations.
       locale.
     - `~/.XCompose` : le fichier utilisateur par défaut.
 
-[XCompose]: https://linux.die.net/man/3/xcompose
+[X11]:              https://fr.wikipedia.org/wiki/X_Window_System
+[X.Org]:            https://fr.wikipedia.org/wiki/X.Org
+[Wayland]:          https://fr.wikipedia.org/wiki/Wayland
+[XKB protocol]:     https://www.x.org/releases/current/doc/kbproto/xkbproto.html
+[XKB text format]:  https://xkbcommon.org/doc/current/keymap-text-format-v1.html
+[xkeyboard-config]: https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
+[touche Compose]:   https://fr.wikipedia.org/wiki/Touche_de_composition
+[XCompose]:         https://linux.die.net/man/3/xcompose
+
+[keysym]:           #keysym-def
+[keysyms]:          #keysym-def
+[points de code]:   #point-de-code-def
+
+[^composed-keysym]: Le cas le plus fréquent est _un_ keysym, mais il est possible
+d’en produire plusieurs. C’est indispensable pour certains caractères qui
+nécessitent plusieurs [points de code], comme « ė̄ » (`U+0117 + U+0304`), mais aussi
+👩🏿‍🚀👩🏾‍🚀👩🏽‍🚀👩🏼‍🚀👩🏻‍🚀👩‍🚀, qui requiert au moins deux [points de code] pour chaque emoji.
+
 
 #### XKB
 
@@ -255,11 +256,6 @@ de celui de XKB, ce dernier étant obtenu en ajoutant 8 au premier.
     touche imprimée `A` sur un clavier imprimé AZERTY. En effet, c’est la
     configuration du clavier dans XKB et non le clavier lui-même qui définit la
     correspondance touche / [keysym].
-
-[ISO/IEC 9995-2]: https://en.wikipedia.org/wiki/ISO/IEC_9995#ISO/IEC_9995-2
-[input-event-codes.h]: https://github.com/torvalds/linux/blob/90d35da658da8cff0d4ecbb5113f5fac9d00eb72/include/uapi/linux/input-event-codes.h#L91
-[^code-brut-noyau]: Correspond à `KEY_Q` dans le fichier d’en-tête [`input-event-code.h`][input-event-codes.h].
-[^code-symbolique-iso-9995]: Les codes symboliques sont suivent la norme [ISO/IEC 9995-2] pour les touches alpha-numériques.
 
 <a name="keysym-def">Keysym</a>
 
@@ -292,9 +288,6 @@ associées à des noms anglais pour faciliter leur utilisation. Exemples : `a`
     - _système :_ actions spéciales non comprises ci-dessus : flèche `Left`,
       `Pause`, `Escape`, `F1`, etc.
 
-[^keysym-genre]: On devrait dire _un_ keysym car c’est un _symbole_ de touche,
-mais _une_ keysym sonne peut-être mieux.
-
 Key type
 
 : TODO
@@ -313,3 +306,11 @@ TODO: développer.
 Keymap
 
 : TODO
+
+[ISO/IEC 9995-2]: https://en.wikipedia.org/wiki/ISO/IEC_9995#ISO/IEC_9995-2
+[input-event-codes.h]: https://github.com/torvalds/linux/blob/90d35da658da8cff0d4ecbb5113f5fac9d00eb72/include/uapi/linux/input-event-codes.h#L91
+
+[^code-brut-noyau]: Correspond à `KEY_Q` dans le fichier d’en-tête [`input-event-code.h`][input-event-codes.h].
+[^code-symbolique-iso-9995]: Les codes symboliques sont suivent la norme [ISO/IEC 9995-2] pour les touches alpha-numériques.
+[^keysym-genre]: On devrait dire _un_ keysym car c’est un _symbole_ de touche,
+mais _une_ keysym sonne peut-être mieux.
