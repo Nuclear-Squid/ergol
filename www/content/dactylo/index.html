@@ -15,11 +15,17 @@ footer = """
 
 <style>
   /* compact view: let the flex magic handle the vertical margins */
-  body { padding: 0 20px; }
+  main {
+    display: flex;
+    flex: fit-content;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
   header h1, #banner { display: none; }
   header nav { border: none; }
+  footer { margin-top: 0; }
   .keyboard { margin-bottom: 0; }
-  h2, footer { margin-top: 0; }
+  .keyboard p { margin: 0; }
 
   h1 .quacks,
   h2 .quacks {
@@ -35,33 +41,33 @@ footer = """
   }
 
   h2 {
+    margin: .5em 0 0;
     font-size: 2em;
   }
 
-  .keyboard #lesson {
+  #lesson {
     text-align: left;
     font-family: monospace;
-    font-size: 2.5em;
-    height: 4em;
+    font-size: 2em;
     line-height: 1.2em;
     margin: 0;
     padding: 0;
     text-wrap: break;
   }
 
-  .keyboard #current {
-    border-bottom: 2px solid;
-  }
-
-  .keyboard span {
+  #lesson span {
     box-sizing: border-box;
   }
 
-  .keyboard #lesson { color: #333; }
-  .keyboard .done   { color: #999; }
-  .keyboard .error  { color: red; }
-  .keyboard .fixed  { color: green; }
-  .keyboard .space::before {
+  #current {
+    border-bottom: 2px solid;
+  }
+
+  #lesson { color: #333; }
+  .done   { color: #999; }
+  .error  { color: red; }
+  .fixed  { color: green; }
+  .space::before {
     content: "·";
     word-break: break-all;
   }
@@ -82,18 +88,21 @@ footer = """
   }
 
   @media (prefers-color-scheme: dark) {
-    .keyboard #lesson { color: white; }
-    .keyboard .error  { color: #f44; }
-    .keyboard .fixed  { color: #9e1; }
+    #lesson { color: white; }
+    .error  { color: #f44; }
+    .fixed  { color: #9e1; }
   }
 </style>
 
-<h2><span class="key_list"></span><span class="quacks">🦆</span></h2>
-<p class="status">·</p>
+<div>
+  <h2><span class="key_list"></span><span class="quacks">🦆</span></h2>
+  <div class="status">·</div>
+</div>
+
+<p id="lesson"></p>
 
 <div class="keyboard">
   <input hidden spellcheck="false" />
-  <p id="lesson"></p>
   <x-keyboard></x-keyboard>
   <p style="text-align: right;">
     <span style="float: left;">
