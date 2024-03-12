@@ -68,7 +68,7 @@ compris à des développeurs qui travaillent sur la question — comme ça a ét
 cas au sein de la talentueuse équipe de KMonad sur ce ticket Github :
 https://github.com/kmonad/kmonad/issues/111 -->
 
-<a name="scan-code-def">Scan code</a>
+[Scan code]{.a name="scan-code-def"}
 
 : Données envoyées par un clavier physique à un ordinateur lorsque l’on appuie
 ou relâche une touche. Suite aux évolutions technologiques (PS/2, USB, etc.),
@@ -79,22 +79,22 @@ particulier avec les scan codes « XT » ou « ensemble 1 ». Il permet alor
 d’identifier la touche qui a été pressée dans un périphérique de saisie, au plus
 bas niveau de l’OS.
 
-<a name="key-code-def">Key code</a>
+[Key code]{.a name="key-code-def"}
 
 : Code identifiant une touche sur un clavier. Ce code est propre à chaque
 système d’exploitation. Ce dernier se charge de convertir les différentes
 conventions de _scan codes_ en _key code_, permettant ainsi de faire abstraction
 de la technologie du clavier pour développer des dispositions de clavier.
 
-<a name="point-de-code-def">Point de code</a> (<i lan="en">Code point</i>)
+[Point de code]{.a name="point-de-code-def"} (<i lan="en">Code point</i>)
 
 : TODO (cf. [point de code](https://fr.wikipedia.org/wiki/Point_de_code) sur Wikipedia)
 
-<a name="modificateur-def">Modificateur</a>
+[Modificateur]{.a name="modificateur-def"}
 
 : TODO
 
-<a name="couche-def">Couche</a> (<i lang="en">layer</i>)
+[Couche]{.a name="couche-def"} (<i lang="en">layer</i>)
 
 : TODO
 
@@ -183,7 +183,7 @@ des dispositions clavier.
 : Par abus de langage c'est aussi la __base de données__ des configurations clavier,
 [`xkeyboard-config`][xkeyboard-config].
 
-<a name="compose-def">Compose</a>
+[Compose]{.a name="compose-def"}
 
 : Une __méthode de saisie__ (<i lang="en">input method</i> ou IM). C’est notamment
 ce qui permet aux touches mortes système (autres que `1dk`) de fonctionner.
@@ -238,7 +238,7 @@ nécessitent plusieurs [points de code], comme « ė̄ » (`U+0117 + U+0304`),
 
 #### XKB
 
-<a name="keycode-xkb-def">Keycode</a>
+[Keycode]{.a name="keycode-xkb-def"}
 
 : Code identifiant une touche physique sur un clavier. Le code _brut_ (raw
 keycode) est le code numérique issu du traitement bas niveau par le noyau, alors
@@ -257,7 +257,7 @@ de celui de XKB, ce dernier étant obtenu en ajoutant 8 au premier.
     configuration du clavier dans XKB et non le clavier lui-même qui définit la
     correspondance touche / [keysym].
 
-<a name="keysym-def">Keysym</a>
+[Keysym]{.a name="keysym-def"}
 
 : Code numérique identifiant un symbole sur le _capuchon_ d’une touche. Ce mot
 vient de l’anglais « <i lang="en">key symbol</i> ». Les keysyms sont également
@@ -296,7 +296,7 @@ Key Action
 
 : TODO
 
-<a name="group-xkb-def">Groupe</a>
+[Groupe]{.a name="group-xkb-def"}
 
 : TODO
 
