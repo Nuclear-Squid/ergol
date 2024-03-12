@@ -3,14 +3,13 @@ title = "Lexique"
 +++
 
 <style>
-  dt + dd:has(+ dd), dd + dd {
-    display: list-item;
-    list-style-type: "-  ";
-  }
+  dt + dd:has(+ dd), dd + dd { display: list-item; list-style-type: "-  "; }
   dd p { margin: 0.7em 0; }
   code { font-family: monospace; }
   /* match the <body> 1.4em line-height */
   sup { vertical-align: super; line-height: 0.4em; }
+  .footnotes { font-size: smaller; }
+  .footnotes li p { margin: 0.2em 0; }
 </style>
 
 **🚧 en construction**
@@ -190,9 +189,9 @@ ce qui permet aux touches mortes système (autres que `1dk`) de fonctionner.
 Elle porte ce nom car elle _compose_ – entendre : combine – plusieurs [keysyms]
 en un[^composed-keysym] nouveau keysym.
 
-    <!-- le diacritique combinant est mal supporté par Pandoc Markdown:
-        `◌́e` est affiché « é » et non «  ◌́e` ». -->
-    Exemples : la séquence `'e` est transformée en `é`, `n~` en `ñ`, `+-` en `±`
+    <!-- XXX le diacritique combinant est mal supporté avec certaines polices,
+    dont DejaVu Sans Mono : `◌́e` est affiché « é » et non «  ◌́e` ». -->
+    Exemples : la séquence `◌́e` est transformée en `é`, `n~` en `ñ`, `+-` en `±`
     et `<3` en `♥`.
 
 : Une __[touche][touche Compose]__ qui active la _méthode de saisie_ Compose pour
@@ -230,10 +229,13 @@ implémentations.
 [keysyms]:          #keysym-def
 [points de code]:   #point-de-code-def
 
-[^composed-keysym]: Le cas le plus fréquent est _un_ keysym, mais il est possible
-d’en produire plusieurs. C’est indispensable pour certains caractères qui
-nécessitent plusieurs [points de code], comme « ė̄ » (`U+0117 + U+0304`), mais aussi
-👩🏿‍🚀👩🏾‍🚀👩🏽‍🚀👩🏼‍🚀👩🏻‍🚀👩‍🚀, qui requiert au moins deux [points de code] pour chaque emoji.
+<!-- notes de bas de page -->
+[^composed-keysym]: Le cas le plus fréquent est _un_ keysym, mais il est
+    possible d’en produire plusieurs. C’est indispensable pour certains
+    caractères qui nécessitent plusieurs [points de code], comme « ė̄ » (`U+0117
+    + U+0304`), mais aussi
+    👩🏿‍🚀👩🏾‍🚀👩🏽‍🚀👩🏼‍🚀👩🏻‍🚀👩‍🚀, qui
+    requiert au moins deux [points de code] pour chaque emoji.
 
 
 #### XKB
@@ -310,7 +312,10 @@ Keymap
 [ISO/IEC 9995-2]: https://en.wikipedia.org/wiki/ISO/IEC_9995#ISO/IEC_9995-2
 [input-event-codes.h]: https://github.com/torvalds/linux/blob/90d35da658da8cff0d4ecbb5113f5fac9d00eb72/include/uapi/linux/input-event-codes.h#L91
 
-[^code-brut-noyau]: Correspond à `KEY_Q` dans le fichier d’en-tête [`input-event-code.h`][input-event-codes.h].
-[^code-symbolique-iso-9995]: Les codes symboliques sont suivent la norme [ISO/IEC 9995-2] pour les touches alpha-numériques.
+<!-- notes de bas de page -->
+[^code-brut-noyau]: Correspond à `KEY_Q` dans le fichier d’en-tête
+    [`input-event-code.h`][input-event-codes.h].
+[^code-symbolique-iso-9995]: Les codes symboliques sont suivent la norme
+    [ISO/IEC 9995-2] pour les touches alpha-numériques.
 [^keysym-genre]: On devrait dire _un_ keysym car c’est un _symbole_ de touche,
-mais _une_ keysym sonne peut-être mieux.
+    mais _une_ keysym sonne peut-être mieux.
