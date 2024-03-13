@@ -8,7 +8,7 @@ jsScripts = ["/js/keebs.js"]
 footer = "outillé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
-Une série de disposition de clavier été adaptées au français et/ou aux claviers
+Une série de dispositions de clavier adaptées au français et/ou aux claviers
 ergonomiques via une touche « Typo ».
 
 :::{.highlight style="max-width: 32em;"}
