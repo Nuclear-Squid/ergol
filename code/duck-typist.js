@@ -215,7 +215,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const cpm = Math.round(chars / elapsed);
     const wpm = Math.round(words / elapsed);
     const prc = 100 - Math.round(1000 * errors / chars) / 10;
-    gStatus.innerText = `${wpm} wpm, ${cpm} cpm, ${prc} %`;
+    gStatus.innerHTML = `${wpm} wpm, ${cpm} cpm <progress value="${cpm}" max="${MIN_CPM_SPEED}">${cpm}</progress>, ${prc} % <progress value="${prc}" max="${MIN_PRECISION}">${prc}%</progress>`;
 
     if (cpm >= MIN_CPM_SPEED && prc >= MIN_PRECISION) {
       moreQuacks();
