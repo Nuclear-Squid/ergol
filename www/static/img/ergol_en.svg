@@ -1,4 +1,3 @@
-<!-- <svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="60 60 780 240"> -->
 <svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="135 60 630 240">
 
   <style>
@@ -13,6 +12,7 @@
     }
     text {
       fill: #777;
+      text-shadow: 0 1px 0px #8bb8;
       font: normal 20px sans-serif;
       text-align: center;
       text-anchor: middle;
