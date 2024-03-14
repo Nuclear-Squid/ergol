@@ -13,7 +13,7 @@
   --fg-special:       #555;
   --bg-special:       #e4e4e4;
   /* 'reach' theme */
-  --bg-number:        hsl( 42, 100%, 95%);
+  --bg-number:        hsl(295, 100%, 95%);
   --bg-letter:        hsl(222, 100%, 95%);
   --bg-home:          hsl(222, 100%, 90%);
 }
@@ -27,9 +27,9 @@
   --fg-special:       #888;
   --bg-special:       #333;
   /* 'reach' theme */
-  --bg-number:        hsl( 80, 10%, 35%);
+  --bg-number:        hsl(280, 10%, 34%);
   --bg-letter:        hsl(220, 15%, 35%);
-  --bg-home:          hsl(230, 30%, 30%);
+  --bg-home:          hsl(225, 30%, 30%);
 }}
 
 
@@ -109,7 +109,7 @@
   display: none;
   text-align: center;
   text-wrap: balance;
-  margin: 0.7em auto;
+  margin: 1em auto;
 }
 
 .keyboard nav a,
@@ -142,9 +142,8 @@
   .keyboard nav a,
   .keyboard nav button {
     display: inline-block;
-    height: 2.3em;
-    line-height: 2.3em;
-    background-image: linear-gradient(180deg, var(--bg-normal), var(--bg-special));
+    height: 2em;
+    line-height: 2em;
     background-color: var(--bg-special);
     border: 1px outset #6668;
     border-radius: 5px;
@@ -152,6 +151,7 @@
   .keyboard nav a:hover,
   .keyboard nav button:hover {
     background-color: var(--bg-accent);
+    text-decoration: underline;
   }
 }
 

@@ -17,30 +17,11 @@
       --fg-special:       #555;
       --bg-special:       #e4e4e4;
       /* 'reach' theme */
-      --bg-number:        hsl( 42, 100%, 95%);
+      --bg-number:        hsl(295, 100%, 95%);
       --bg-letter:        hsl(222, 100%, 95%);
       --bg-home:          hsl(222, 100%, 90%);
     }
 
-    /* vibrant dark */
-    @media (prefers-color-scheme: dark) { :root {
-      --fg-normal-shadow: #8558;
-      --fg-normal-border: #666;
-      --fg-normal:        #bbb;
-      --bg-normal:        #444;
-      /* special keys */
-      --fg-level3:        #99f;
-      --fg-level5:        #6d6;
-      --fg-deadkey:       #f44;
-      --fg-special:       #888;
-      --bg-special:       #333;
-      /* 'reach' theme */
-      --bg-number:        hsl( 60, 25%, 30%);
-      --bg-letter:        hsl(180, 30%, 30%);
-      --bg-home:          hsl(230, 30%, 30%);
-    }}
-
-    /* mild dark */
     @media (prefers-color-scheme: dark) { :root {
       --fg-normal-shadow: #8558;
       --fg-normal-border: #666;
@@ -53,9 +34,9 @@
       --fg-special:       #888;
       --bg-special:       #333;
       /* 'reach' theme */
-      --bg-number:        hsl( 80, 10%, 35%);
+      --bg-number:        hsl(280, 10%, 34%);
       --bg-letter:        hsl(220, 15%, 35%);
-      --bg-home:          hsl(230, 30%, 30%);
+      --bg-home:          hsl(225, 30%, 30%);
     }}
 
     rect, path {

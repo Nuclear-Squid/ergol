@@ -198,7 +198,6 @@ a[href]:hover {
 
 #banner,
 #banner a,
-header nav,
 footer {
   color: var(--fg-banner);
 }
@@ -217,13 +216,15 @@ footer nav {
   justify-content: end;
 }
 
-header nav a:not(:first-child):before,
-footer nav a:not(:first-child):before {
-  display: inline-block;
-  content: "|";
-  width: 1em;
-  text-align: center;
-  color: var(--fg-banner-border);
+header nav a,
+footer nav a {
+  padding-left: .5em;
+}
+
+header nav a:not(:last-child),
+footer nav a:not(:last-child) {
+  padding-right: .5em;
+  border-right: 1px solid var(--fg-banner-border);
 }
 
 header h1 {
@@ -240,7 +241,6 @@ main > p:first-child {
 }
 
 footer {
-  padding-top: 0.2rem;
   padding-bottom: 0.5rem;
 }
 
