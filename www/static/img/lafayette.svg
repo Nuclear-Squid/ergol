@@ -475,7 +475,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">Y</text>
           <text x="38.0" y="43.4" class="level3">^</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">^</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">^</text>
+          </g>
         </g>
       </g>
       <g id="KeyU" class="letterKey" transform="translate(450)">
@@ -499,7 +502,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">O</text>
           <text x="38.0" y="43.4" class="level3">&apos;</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">´</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">´</text>
+          </g>
           <text x="38.0" y="43.4" class="level5">œ</text>
         </g>
       </g>
@@ -624,10 +630,19 @@
       <g id="Semicolon" class="letterKey homeKey" transform="translate(645)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
-          <text x="12.8" y="20.6" class="level2 deadKey">★</text>
+          <g class="level2 non_diacritic deadKey">
+            <text x="12.8" y="20.6" class="dk_mark">﹍</text>
+            <text x="12.8" y="20.6" class="dk_char">★</text>
+          </g>
           <text x="38.0" y="43.4" class="level3">&quot;</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">¨</text>
-          <text x="38.0" y="43.4" class="level5 deadKey diacritic">¨</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">¨</text>
+          </g>
+          <g class="level5 diacritic deadKey">
+            <text x="38.0" y="43.4" class="dk_mark">◌</text>
+            <text x="38.0" y="43.4" class="dk_char">¨</text>
+          </g>
         </g>
       </g>
       <g id="Quote" class="pinkyKey" transform="translate(705)">
@@ -671,7 +686,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">Z</text>
           <text x="38.0" y="43.4" class="level3">~</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">~</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">˜</text>
+          </g>
           <text x="38.0" y="43.4" class="level5">â</text>
         </g>
       </g>
@@ -680,7 +698,10 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">X</text>
           <text x="38.0" y="43.4" class="level3">`</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">`</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">`</text>
+          </g>
         </g>
       </g>
       <g id="KeyC" class="letterKey" transform="translate(255)">
@@ -731,7 +752,10 @@
           <text x="12.8" y="43.4" class="level1">,</text>
           <text x="12.8" y="20.6" class="level2">;</text>
           <text x="38.0" y="43.4" class="level3">#</text>
-          <text x="38.0" y="20.6" class="level4 deadKey diacritic">,</text>
+          <g class="level4 diacritic deadKey">
+            <text x="38.0" y="20.6" class="dk_mark">◌</text>
+            <text x="38.0" y="20.6" class="dk_char">¸</text>
+          </g>
           <text x="38.0" y="43.4" class="level5">·</text>
         </g>
       </g>
@@ -813,16 +837,16 @@
         <text x="11.0"  y="20.6" class="level2 ol50 ol40">insécable fine</text>
       </g>
       <g class="key level3" text-anchor="end">
-        <text x="356.0" y="43.4" class="level3 ansi">espace</text>
-        <text x="251.0" y="43.4" class="level3 ol60 ol50 ol40">espace</text>
+        <text x="356.0" y="43.4" class="ansi">espace</text>
+        <text x="251.0" y="43.4" class="ol60 ol50 ol40">espace</text>
       </g>
       <g class="key level4" text-anchor="end">
-        <text x="356.0" y="20.6" class="level4 ansi">espace insécable</text>
-        <text x="251.0" y="20.6" class="level4 ol60 ol50 ol40">insécable</text>
+        <text x="356.0" y="20.6" class="ansi">espace insécable</text>
+        <text x="251.0" y="20.6" class="ol60 ol50 ol40">insécable</text>
       </g>
       <g class="key level5" text-anchor="end">
-        <text x="356.0" y="43.4" class="level5 ansi">apostrophe typo (’)</text>
-        <text x="251.0" y="43.4" class="level5 ol60 ol50 ol40">apostrophe (’)</text>
+        <text x="356.0" y="43.4" class="ansi">apostrophe typo (’)</text>
+        <text x="251.0" y="43.4" class="ol60 ol50 ol40">apostrophe (’)</text>
       </g>
     </g>
     <g class="right">
