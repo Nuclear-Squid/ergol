@@ -39,6 +39,10 @@
  * ╰───────────────────────────────────────────────────────────────╯
 **/
 
+.keyboard [hidden] {
+  visibility: hidden;
+}
+
 .keyboard form {
   display: flex;
   justify-content: right;
@@ -77,6 +81,11 @@
   opacity: 0.6;
   transition: all 50ms linear;
   cursor: pointer;
+}
+
+.keyboard form input:hover {
+  background-color: var(--bg-accent);
+  opacity: 1;
 }
 
 .keyboard form input:checked {

@@ -1,16 +1,14 @@
 /**
  *  <div class="keyboard">
- *    <object data="/img/ergol.svg" class="dk"></object>
- *    <p>
- *      <span>powered by <a
- *        href="https://github.com/OneDeadKey/x-keyboard">x-keyboard</a></span>
- *      <small>géométrie :</small>
- *      <select>
- *        <option>ISO</option>  <!-- filled when loaded -->
- *      </select>
- *    </p>
+ *    <div>
+ *      <object data="/img/ergol.svg" class="odk"></object>
+ *    </div>
+ *    <form>
+ *      <fieldset><input type="radio" name="layers"/>…</fieldset>
+ *      <fieldset><input type="radio" name="geopetry"/>…</fieldset>
+ *    </form>
  *    <dialog>
- *      <input></input>
+ *      <input placeholder="…"/>
  *      <x-keyboard></x-keyboard>
  *    </dialog>
  *  </div>
@@ -54,7 +52,7 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   const dialog   = keeb.querySelector('dialog');
   const keyboard = keeb.querySelector('x-keyboard');
   const preview  = keeb.querySelector('object');
-  const input    = keeb.querySelector('input');
+  const input    = keeb.querySelector('input[placeholder]');
   const form     = keeb.querySelector('form');
   const geometry = keeb.querySelector('select') || document.getElementById('geometry');
   const button   = keeb.querySelector('button');
@@ -101,15 +99,15 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   /**
    * Open/Close modal
    */
-  if (button) button.onclick = () => {
+  button?.addEventListener('click', () => {
     dialog?.showModal();
     input.value = '';
     input.focus();
-  }
-  input.onblur = () => {
+  });
+  input.addEventListener('blur', () => {
     keyboard.clearStyle()
     dialog?.close();
-  }
+  });
 
   /**
    * Keyboard highlighting & layout emulation
@@ -119,7 +117,7 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
   const pressedKeys = {};
 
   // highlight keyboard keys and emulate the selected layout
-  input.onkeydown = event => {
+  input.addEventListener('keydown', event => {
     pressedKeys[event.code] = true;
     const value = keyboard.keyDown(event);
 
@@ -131,7 +129,7 @@ for (const keeb of document.querySelectorAll('.keyboard')) {
       return true; // don't intercept special keys or key shortcuts
     }
     return false; // event has been consumed, stop propagation
-  };
+  });
 
   input.addEventListener('keyup', event => {
     if (pressedKeys[event.code]) {
