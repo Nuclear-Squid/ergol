@@ -960,7 +960,7 @@ const themes = `
   .dk .level4 { display: none; }
 
   @media (prefers-color-scheme: dark) {
-    rect, path { stroke: #777; fill: #444; }
+    rect, path { stroke: #777; fill: #4d4d4d; }
     .specialKey, .specialKey rect, .specialKey path { fill: #333; }
     g:target rect, .press rect, g:target path, .press path { fill: #558; }
     text { fill: #bbb; }
