@@ -1,0 +1,15 @@
+{{ define "headtitle" }}
+  {{ printf "%s | %s" "404" site.Title }}
+{{ end }}
+
+{{ define "title" }}Il semblerait qu’il y ait un quack… 🦆{{ end }}
+
+{{ define "main" }}
+<p>
+  La page n’existe pas, mais vous pouvez retourner à <a href="{{ "" | relURL }}">l’accueil</a>.
+</p>
+
+<script>
+  document.documentElement.classList.add("quack");
+</script>
+{{ end }}
