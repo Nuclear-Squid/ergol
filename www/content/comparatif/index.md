@@ -2,6 +2,15 @@
 title = "Alternatives"
 +++
 
+:::{.highlight}
+- [Ergo‑L ou Bépo ?](/bepo/)
+  <br> avantages et inconvénients des deux dispositions
+- [Erglace !](/erglace/)
+  <br> une approche moderne du Dvorak à la française
+- [Lafayette ★](/lafayette/)
+  <br> des adaptations [1DFH][] de QWERTY, Colemak et Bépo
+:::
+
 Ergo‑L est conçu pour n’avoir que des avantages sur Azerty, Qwerty, Dvorak et
 Bépo ; mais il ne prétend pas être le plus optimisé partout. Nous pensons qu’il
 conviendra au plus grand nombre mais il y a des alternatives intéressantes !
@@ -76,6 +85,8 @@ qu’à ses qualités**, et nous avons développé Ergo‑L en ce sens : non e
 la meilleure moyenne sur tel ou tel analyseur, mais en cherchant à éliminer
 chaque défaut.
 
+[Note]: # (chaque fois que c’est possible, les liens ci-dessous sont remplacés
+en bas de cette page par des pages locales plutôt que de simples pages de stats)
 
 [azerty]:     /stats/#/azerty//en+fr
 [lafayette]:  /stats/#/lafayette//en+fr
@@ -194,6 +205,12 @@ elle est *utilisable*, mais pas *optimisée* pour ça.
 - pour les Bépoètes qui ont des douleurs ou qui souhaitent tenter l’expérience
   [1DFH][], [Bépolar][] sera une alternative intéressante et très vite apprise.
 
+[ergo‑l]:     /
+[bépo]:       /bepo
+[erglace]:    /erglace
+[lafayette]:  /lafayette/#qwerty-lafayette
+[colemak ft]: /lafayette/#colemak-french-touch
+[bépolar]:    /lafayette/#bepolar
 
 [1DFH]:                   /#dfh-1u-distance-from-home
 [touche morte]:           /#caractères-accentués
