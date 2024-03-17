@@ -4,13 +4,13 @@
 
 <head>
   <title>
-    {{ block "headtitle" . }}
-      {{ if .IsHome }}
+    {{- block "headtitle" . -}}
+      {{- if .IsHome -}}
         {{ site.Title }}
-      {{ else }}
+      {{- else -}}
         {{ printf "%s | %s" .Title site.Title }}
-      {{ end }}
-    {{ end }}
+      {{- end -}}
+    {{- end -}}
   </title>
 
   {{ partial "head.html" . }}
@@ -20,9 +20,9 @@
   <header>
     {{ partial "header.html" . }}
     <h1>
-      {{ block "title" . }}
+      {{- block "title" . -}}
         {{ .Title }}
-      {{ end }}
+      {{- end -}}
     </h1>
   </header>
 
