@@ -25,8 +25,9 @@
       {{- end -}}
     </h1>
   </header>
-
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
   <main>
+    <h1>{{ .Title }}</h1>
     {{ block "main" . }}{{ end }}
   </main>
 

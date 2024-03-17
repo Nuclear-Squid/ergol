@@ -15,7 +15,7 @@
   --fg-main:          #222;
 
   /* banner -- the foreground matches the favicon #rocket color */
-  --bg-banner:        #8882;
+  --bg-banner:        #e9e9e9;
   --fg-banner-border: #5446;
   --fg-banner:        #544;
 
@@ -39,6 +39,7 @@
     --fg-main:          #ccc;
 
     /* banner -- the foreground matches the favicon #rocket color */
+    --bg-banner:        #29292d;
     --fg-banner-border: #cbb5;
     --fg-banner:        #cbb;
 
@@ -65,6 +66,7 @@ html {
   width:  100%;
   font-family: sans-serif;
   background-color: var(--bg-root);
+  /* scroll-behavior: smooth; */
 }
 
 .quack {
@@ -216,14 +218,14 @@ footer {
   text-align: right;
 }
 
-header h1 {
+h1 {
   text-align: center;
   font-size: 2em;
   line-height: 1em;
   margin: 1.8em auto 1.2em;
 }
 
-main > p:first-child {
+h1 + p {
   text-align: center;
   text-wrap: balance;
   margin: -1em auto 2em;
@@ -244,7 +246,13 @@ footer small {
  * ╰───────────────────────────────────────────────────────────────╯
 **/
 
-header nav ul {
+
+header + nav {
+  position: sticky;
+  top: 0;
+}
+
+header + nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -253,23 +261,23 @@ header nav ul {
   margin: 0;
 }
 
-header nav a {
+header + nav a {
   display: inline-block;
   padding: 0.2em 1em;
 }
 
-header nav li {
+header + nav li {
   padding: 0;
   margin: 0;
 }
 
-header nav li:has(.active) a {
+header + nav li:has(.active) a {
   background-color: var(--bg-main);
   color: var(--fg-banner);
 }
 
 /* submenus */
-header nav ul ul {
+header + nav ul ul {
   display: none;
 }
 
@@ -313,32 +321,32 @@ code { /* character, digrams, trigrams */
   }
 
   /* tab-like navigation bar */
-  header nav ul {
+  header + nav ul {
     justify-content: flex-end;
     background-color: var(--bg-banner);
   }
-  header nav li {
+  header + nav li {
     border-left: 1px solid var(--fg-banner-border);
   }
-  header nav li:last-child {
+  header + nav li:last-child {
     border-right: 1px solid var(--fg-banner-border);
   }
 
   /* display navigation submenus, not sure it s a good idea though */
-  header nav li:has(.active) ul {
+  header + nav li:has(.active) ul {
     display: flex;
     position: absolute;
     background-color: var(--bg-main);
     padding: 0;
   }
-  header nav li:has(.active) li {
+  header + nav li:has(.active) li {
     border: none;
     font-size: smaller;
   }
-  header nav li:has(.active) a {
+  header + nav li:has(.active) a {
     color: var(--fg-accent);
   }
-  header nav li:has(.active) a.active {
+  header + nav li:has(.active) a.active {
     color: var(--fg-banner);
   }
 }
