@@ -35,10 +35,10 @@ defaultMarkdownHandler = "pandoc"
         name    = "Ergo‑L"
         pageRef = "/"
         weight  = 1
-    [[menus.main]]
-        name    = "Installer"
-        pageRef = "/lts"
-        parent  = "Ergo‑L"
+    # [[menus.main]]
+    #     name    = "Installer"
+    #     pageRef = "/lts"
+    #     parent  = "Ergo‑L"
     [[menus.main]]
         name    = "Alternatives"
         pageRef = "/comparatif"
@@ -56,9 +56,8 @@ defaultMarkdownHandler = "pandoc"
         pageRef = "/lafayette"
         parent  = "Alternatives"
     [[menus.main]]
-        name    = "Analyser"
+        name    = "Analyseur"
         pageRef = "/stats"
-        # url     = "/stats/#/ergol/en+fr"
         weight  = 3
     [[menus.main]]
         name    = "Lexique"
@@ -67,5 +66,4 @@ defaultMarkdownHandler = "pandoc"
     [[menus.main]]
         name    = "Apprendre"
         pageRef = "/dactylo"
-        url     = "/dactylo/#/ergol"
         weight  = 5
