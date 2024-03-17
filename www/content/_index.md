@@ -33,7 +33,7 @@ Ergo-L intègre l’approche 1DFH, qui consiste à ne pas déplacer ses doigts d
 plus d’une touche par rapport à la position de repos. Cela permet un gain de
 confort important pour la saisie en méthode dactylo, évitant notamment les
 extensions latérales de l’auriculaire droit qui sont typiques de Bépo pour les
-lettres `m` `z` `w` `ç` (« les quatre cavaliers de l’auriculaire »).
+lettres `m` `z` `w` `ç`.
 
 ![Ergo‑L sur un clavier compact (type OLKB Planck).](img/ergol_1dfh.svg)
 
@@ -42,8 +42,8 @@ ergonomiques actuels ne proposent que 6 colonnes de touches par main, ce qui est
 
 - compliqué avec AZERTY, qui a les touches [Ù]{.kbd} et <kbd>^</kbd> en 6e
   colonne, obligeant à déplacer [Entrée]{.kbd} et [Backspace]{.kbd} ;
-- **très** compliqué avec Bépo, qui a [W]{.kbd} et [Ç]{.kbd} en 7e colonne à
-  déplacer également ;
+- **très** compliqué avec Bépo, qui, outre [M]{.kbd} et [Z]{.kbd} en 6e colonne,
+  a [W]{.kbd} et [Ç]{.kbd} en 7e colonne à déplacer également ;
 - trivial avec Ergo‑L, qui a été conçu pour ça.
 
 Les claviers ergonomiques modernes cherchent à limiter le nombre total de

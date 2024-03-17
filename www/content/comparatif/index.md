@@ -71,10 +71,10 @@ soit devenir insupportables.
 <!-- do not remove the empty line above -->
 :::
 
-**Nous considérons qu’une disposition de clavier se mesure mieux plus à son pire
-défaut qu’à ses meilleures qualités**, et nous avons développé Ergo‑L et Erglace
-en ce sens : non pas en cherchant la meilleure moyenne sur tel ou tel analyseur,
-mais en travaillant inlassablement à réduire les défauts.
+Nous considérons qu’**une disposition de clavier se mesure mieux à ses défauts
+qu’à ses qualités**, et nous avons développé Ergo‑L en ce sens : non en visant
+la meilleure moyenne sur tel ou tel analyseur, mais en cherchant à éliminer
+chaque défaut.
 
 
 [azerty]:     /stats/#/azerty//en+fr
