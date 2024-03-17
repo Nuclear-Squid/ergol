@@ -45,8 +45,9 @@
 
 .keyboard form {
   display: flex;
-  justify-content: right;
-  margin: 2px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0 5em;
 }
 
 .keyboard fieldset {
@@ -54,20 +55,13 @@
   padding: 0 1px;
   margin: 0;
   text-wrap: balance;
-}
-
-.keyboard fieldset:first-child {
-  display: none;
-}
-
-.keyboard fieldset:last-child {
-  text-align: right;
+  text-align: center;
 }
 
 .keyboard form input {
   box-sizing: border-box;
   width: auto;
-  height: 1.8em;
+  height: auto;
   line-height: 1.8em;
   font-size: 0.8em;
   appearance: none;
@@ -102,8 +96,7 @@
   text-align: center;
 }
 
-@media only screen and (min-width: 480px) {
-  .keyboard fieldset:first-child { display: inline-block; }
+@media only screen and (min-width: 600px) {
   .keyboard form { justify-content: space-between; }
 }
 
