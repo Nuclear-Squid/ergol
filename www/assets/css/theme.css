@@ -191,6 +191,7 @@ a[href]:hover {
   background-size: 50px;
   background-color: var(--bg-banner);
   padding: .5em 0 0.5em calc(var(--main-padding) + 64px);
+  border-bottom: 1px solid var(--fg-banner-border);
 }
 
 #banner p.title {
@@ -208,29 +209,12 @@ footer {
   color: var(--fg-banner);
 }
 
-header nav,
+/* header nav, */
 footer {
   padding-left:  var(--main-padding);
   padding-right: var(--main-padding);
   border-top: 1px solid var(--fg-banner-border);
   text-align: right;
-}
-
-header nav,
-footer nav {
-  display: flex;
-  justify-content: end;
-}
-
-header nav a,
-footer nav a {
-  padding-left: .5em;
-}
-
-header nav a:not(:last-child),
-footer nav a:not(:last-child) {
-  padding-right: .5em;
-  border-right: 1px solid var(--fg-banner-border);
 }
 
 header h1 {
@@ -252,6 +236,51 @@ footer {
 
 footer small {
   float: left;
+}
+
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                        Navigation Menus                       │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  justify-content: flex-end;
+  list-style-type: none;
+  background-color: var(--bg-banner);
+  padding: 0 var(--main-padding);
+  margin: 0;
+}
+
+/* XXX find a way to display submenus on a second line */
+header nav ul ul {
+  display: none;
+}
+
+header nav a {
+  display: inline-block;
+  padding: 0.2em 1em;
+}
+
+header nav li {
+  padding: 0;
+  margin: 0;
+}
+
+header nav li:has(.active) > a {
+  background-color: var(--bg-main);
+  color: var(--fg-banner);
+}
+
+header nav li {
+  border-left: 1px solid var(--fg-banner-border);
+}
+
+header nav li:last-child {
+  border-right: 1px solid var(--fg-banner-border);
 }
 
 

@@ -1,5 +1,5 @@
 +++
-title = "Comparatif (WiP)"
+title = "Alternatives"
 +++
 
 Ergo‑L est conçu pour n’avoir que des avantages sur Azerty, Qwerty, Dvorak et
