@@ -1,5 +1,5 @@
 # baseURL = "https://ergol.org"
-relativeURLs = true
+relativeURLs = false  # our 404 page does not support relative URLs
 languageCode = "fr"
 title = "Ergo‑L"
 
