@@ -108,7 +108,6 @@
 **/
 
 .keyboard nav {
-  display: none;
   text-align: center;
   text-wrap: balance;
   margin: 1em auto;
@@ -116,7 +115,7 @@
 
 .keyboard nav a,
 .keyboard nav button {
-  display: none;
+  display: inline;
   box-sizing: border-box;
   margin: 2px 1px;
   padding: 0 6px;
@@ -125,6 +124,7 @@
 }
 
 .keyboard nav button {
+  display: none;
   font-weight: bold;
   cursor: pointer;
   color: var(--fg-main);
@@ -133,11 +133,6 @@
 .keyboard [disabled] {
   pointer-events: none;
   opacity: 0.3;
-}
-
-@media only screen and (min-width: 480px) {
-  .keyboard nav   { display: block;  }
-  .keyboard nav a { display: inline; }
 }
 
 @media only screen and (min-width: 768px) {
