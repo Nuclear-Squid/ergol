@@ -19,18 +19,12 @@
 <body>
   <header>
     {{ partial "header.html" . }}
-    <h1>
-      {{- block "title" . -}}
-        {{ .Title }}
-      {{- end -}}
-    </h1>
   </header>
   {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
   <main>
     <h1>{{ .Title }}</h1>
     {{ block "main" . }}{{ end }}
   </main>
-
   <footer>
     {{ partial "footer.html" . }}
   </footer>
