@@ -92,7 +92,7 @@ body {
 }
 
 main {
-  display: block; /* using 'flex' here would mess with `margin: auto` blocks */
+  display: flex;
   flex: fit-content;
   flex-direction: column;
   justify-content: space-evenly;
@@ -121,15 +121,6 @@ dialog::backdrop {
   margin: auto;
   padding: 1em;
   background-color: var(--bg-banner);
-}
-
-img {
-  max-width: 100%;
-}
-
-figure {
-  margin: 2em 0;
-  text-align: center;
 }
 
 sup { /* match the <body> 1.4em line-height */
@@ -170,8 +161,18 @@ table caption {
 }
 
 figure {
+  margin: 2em 0;
+  text-align: center;
+}
+
+figure figcaption,
+figure img {
+  margin: auto;
   max-width: 45em;
-  margin: 2em auto;
+}
+
+img {
+  max-width: 100%;
 }
 
 a[href] {
