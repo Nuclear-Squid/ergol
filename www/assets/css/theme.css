@@ -92,7 +92,7 @@ body {
 }
 
 main {
-  display: flex;
+  display: block; /* enable 'flex' here on a per-page basis */
   flex: fit-content;
   flex-direction: column;
   justify-content: space-evenly;
