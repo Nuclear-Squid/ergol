@@ -13,6 +13,11 @@ allow = ["pandoc"]
 [markup]
 defaultMarkdownHandler = "pandoc"
 
+[taxonomies]
+tag = "tags"
+author = "authors"
+# category = "categories"
+
 [module]
     [[module.mounts]]
         source = "../code"

@@ -230,6 +230,12 @@ h1 {
   margin: 1.8em auto 1.2em;
 }
 
+h1 + time {
+  display: block;
+  text-align: right;
+  margin: -1.5em auto 0;
+}
+
 h1 + p {
   text-align: center;
   text-wrap: balance;
