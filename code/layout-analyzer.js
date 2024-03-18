@@ -507,7 +507,8 @@ window.addEventListener('DOMContentLoaded', () => {
       IDs.map(prop => state[prop]).join('/').replace(/\/+$/, '');
   };
   const applyHashState = () => {
-    const hashState = window.location.hash.split('/').slice(1);
+    const hash = window.location.hash || '#/ergol//en+fr';
+    const hashState = hash.split('/').slice(1);
     IDs.forEach((key, i) => {
       setProp(key, hashState[i] || '');
       state[key] = hashState[i] || '';

@@ -29,3 +29,41 @@ defaultMarkdownHandler = "pandoc"
     [[module.mounts]]
         source = "static"
         target = "static"
+
+[menus]
+    [[menus.main]]
+        name    = "Ergo‑L"
+        pageRef = "/"
+        weight  = 1
+    # [[menus.main]]
+    #     name    = "Installer"
+    #     pageRef = "/lts"
+    #     parent  = "Ergo‑L"
+    [[menus.main]]
+        name    = "Alternatives"
+        pageRef = "/comparatif"
+        weight  = 2
+    [[menus.main]]
+        name    = "Bépo ?"
+        pageRef = "/bepo"
+        parent  = "Alternatives"
+    [[menus.main]]
+        name    = "Erglace !"
+        pageRef = "/erglace"
+        parent  = "Alternatives"
+    [[menus.main]]
+        name    = "Lafayette *"
+        pageRef = "/lafayette"
+        parent  = "Alternatives"
+    [[menus.main]]
+        name    = "Analyseur"
+        pageRef = "/stats"
+        weight  = 3
+    [[menus.main]]
+        name    = "Lexique"
+        pageRef = "/lexique"
+        weight  = 4
+    [[menus.main]]
+        name    = "Apprendre"
+        pageRef = "/dactylo"
+        weight  = 5
