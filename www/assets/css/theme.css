@@ -92,6 +92,10 @@ body {
 }
 
 main {
+  display: flex;
+  flex: fit-content;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 0 var(--main-padding);
 }
 
