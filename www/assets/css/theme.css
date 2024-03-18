@@ -92,6 +92,10 @@ body {
 }
 
 main {
+  display: block; /* enable 'flex' here on a per-page basis */
+  flex: fit-content;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 0 var(--main-padding);
 }
 
@@ -117,15 +121,6 @@ dialog::backdrop {
   margin: auto;
   padding: 1em;
   background-color: var(--bg-banner);
-}
-
-img {
-  max-width: 100%;
-}
-
-figure {
-  margin: 2em 0;
-  text-align: center;
 }
 
 sup { /* match the <body> 1.4em line-height */
@@ -166,8 +161,18 @@ table caption {
 }
 
 figure {
+  margin: 2em 0;
+  text-align: center;
+}
+
+figure figcaption,
+figure img {
+  margin: auto;
   max-width: 45em;
-  margin: 2em auto;
+}
+
+img {
+  max-width: 100%;
 }
 
 a[href] {
