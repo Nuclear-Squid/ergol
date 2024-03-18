@@ -21,7 +21,7 @@ conviendra au plus grand nombre mais il y a des alternatives intéressantes !
 Tableau comparatif
 --------------------------------------------------------------------------------
 
-Changer de disposiiton de clavier est coûteux en temps, voire coûteux tout court
+Changer de disposition de clavier est coûteux en temps, voire coûteux tout court
 quand cela requiert un clavier particulier. Chaque disposition étant
 généralement très prolixe quant à ses qualités, nous faisons le choix d’en
 montrer les principaux défauts, qui, avec le temps, peuvent soit s’estomper,
@@ -149,7 +149,7 @@ Bépo et ses variantes présentent toutes les mêmes [défauts d’ergonomie][]�
 
 - placement de lettres excentrées sur les 6e et 7e colonnes :
   - compatibilité délicate avec la plupart des claviers ergonomiques
-  - déviations ulnaires pouvant devenir doulereuses
+  - déviations ulnaires pouvant devenir douloureuses
 - charge importante de l’auriculaire droit (> 11 % en français)
 
 Néanmoins, pour qui n’est pas sensible à ces points-là, ces dispositions sont
