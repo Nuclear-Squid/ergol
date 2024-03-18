@@ -184,6 +184,20 @@ a[href]:hover {
   text-decoration: underline;
 }
 
+article {
+  padding: 0.5em;
+}
+
+article #date {
+  margin-top: 0;
+  margin-bottom: -1.5em;
+}
+
+article #lire-plus {
+  margin-top: -1em;
+  margin-bottom: 0;
+}
+
 
 /**
  * ╭───────────────────────────────────────────────────────────────╮

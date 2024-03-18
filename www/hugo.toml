@@ -72,3 +72,7 @@ author = "authors"
         name    = "Apprendre"
         pageRef = "/dactylo"
         weight  = 5
+    [[menus.main]]
+        name    = "Articles"
+        pageRef = "/articles"
+        weight  = 6
