@@ -85,39 +85,95 @@ de la technologie du clavier pour développer des dispositions de clavier.
 
 [Point de code]{.a name="point-de-code-def"} (<i lan="en">Code point</i>)
 
-: TODO (cf. [point de code](https://fr.wikipedia.org/wiki/Point_de_code) sur Wikipedia)
+: TODO (cf. [point de code] sur Wikipedia)
 
 [Modificateur]{.a name="modificateur-def"}
 
-: TODO
+: TODO (Modificateurs courants : `Shift`, `Caps`, `AltGr`, etc.)
 
 [Couche]{.a name="couche-def"} (<i lang="en">layer</i>)
 
-: TODO
+: Abstraction pour pouvoir disposer plusieurs caractères sur une même touche.
+
+    Exemple le plus courant de couches : en tapant des lettres sur la couche
+    *alpha* on obtient les lettres en minuscules, en gardant la touche
+    [Shift]{.kbd} enfoncée on obtient les lettres en majuscules, ce sont donc 2
+    couches différentes.
+    
+    Ce concept de couches permet de diminuer le nombre de touches nécessaires sur
+    un clavier et brille particulièrement sur les petits claviers ergonomiques
+    en diminuant la distance que les doigts ont à parcourir.
+
+    Noter qu’une [touche morte] peut également être considérée comme définissant
+    une couche, au même titre qu’un [modificateur].
+
+    <!-- TODO: liens vers les couches typo et symboles -->
 
 Touche morte (<i lang="en">dead key</i>)
 
-: TODO
+: Touche de clavier qui ne produit aucun résultat lorsqu’elle est enfoncée puis
+relâchée, mais modifie le comportement de la prochaine touche qui sera enfoncée.
+Une touche morte est généralement utilisée pour produire des lettres accentuées
+ou autres [diacritiques].
+
+    Exemple : la touche [^]{.kbd} sur le clavier Azerty puis [E]{.kbd} donne la
+    lettre `ê`.
+
+Diacritique
+
+: Signe accompagnant une lettre ou un graphème pour en modifier le sens ou la
+prononciation.
+
+    Exemple : la cédille pour « ç », ou les accents sur les voyelles. Plus de
+    détails dans l’article [Wikipedia][diacritiques-wiki].
+
+[modificateur]:      #modificateur-def
+[point de code]:     https://fr.wikipedia.org/wiki/Point_de_code
+[touche morte]:      #touche-morte-def
+[diacritiques-wiki]: https://fr.wikipedia.org/wiki/Diacritique
+[diacritiques]:      #diacritique-def
 
 ### Windows
 
 AHK
 
-: TODO
+: Abréviation du logiciel [AutoHotKey] qui permet de manière globale de créer
+des scripts pour Windows. Dans le cas des dispositions clavier, il est utilisé
+pour modifier les touches envoyées par le clavier et ainsi créer un pilote de
+disposition ne necessitant pas d’installation.
+
+[KbdEdit]
+
+: Logiciel qui permet de créer des pilotes Windows pour des dispositions clavier
+personnalisées. Il est beaucoup plus complet que MSKLC (voir ci-dessous).
+Contrairement à ce dernier, il est payant et n’est pas officiellement supporté
+par Microsoft.
 
 KLC
 
-: TODO
+: Fichier avec extension `.klc` décrivant une disposition clavier pour Microsoft
+Keyboard Layout Creator (MSKLC).
+
+    C’est un fichier source pour créer les pilotes Windows.
 
 MSKLC
 
-: TODO
+: Abréviation du logiciel [Microsoft Keyboard Layout Creator] qui permet de
+créer des pilotes Windows pour des dispositions clavier personnalisées.
+
+    Il peut être utilisé de manière autonome ou par l’intermédiaire de [Kalamine],
+    ce dernier corrigeant ainsi de nombreuses limitations de MSKLC.
 
 Virtual Key (VK, touche virtuelle)
 
 : Code de touche spécifique à Windows, de plus haut niveau que le key code.
 Il est utilisé pour définir le placement des touches spéciales ainsi que le
 comportement d’une touche lorsqu’elle est utilisée dans un raccourci clavier.
+
+[AutoHotKey]: https://www.autohotkey.com/
+[Kalamine]: https://github.com/OneDeadKey/kalamine?tab=readme-ov-file#wkalamine
+[KbdEdit]: http://www.kbdedit.com/
+[Microsoft Keyboard Layout Creator]: https://www.microsoft.com/en-us/download/details.aspx?id=102134
 
 
 ### macOS
