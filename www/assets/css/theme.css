@@ -92,7 +92,7 @@ body {
 }
 
 main {
-  display: flex;
+  display: block; /* using 'flex' here would mess with `margin: auto` blocks */
   flex: fit-content;
   flex-direction: column;
   justify-content: space-evenly;
