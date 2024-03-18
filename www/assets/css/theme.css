@@ -246,13 +246,6 @@ footer small {
  * ╰───────────────────────────────────────────────────────────────╯
 **/
 
-
-header + nav {
-  position: sticky;
-  z-index: 10;
-  top: 0;
-}
-
 header + nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -260,6 +253,7 @@ header + nav ul {
   list-style-type: none;
   padding: 0 var(--main-padding);
   margin: 0;
+  background-color: var(--bg-main);
 }
 
 header + nav a {
@@ -280,6 +274,14 @@ header + nav li:has(.active) a {
 /* submenus */
 header + nav ul ul {
   display: none;
+}
+
+@media only screen and (min-width: 480px) {
+  header + nav {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+  }
 }
 
 

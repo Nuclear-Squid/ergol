@@ -85,17 +85,6 @@ qu’à ses qualités**, et nous avons développé Ergo‑L en ce sens : non e
 la meilleure moyenne sur tel ou tel analyseur, mais en cherchant à éliminer
 chaque défaut.
 
-[Note]: # (chaque fois que c’est possible, les liens ci-dessous sont remplacés
-en bas de cette page par des pages locales plutôt que de simples pages de stats)
-
-[azerty]:     /stats/#/azerty//en+fr
-[lafayette]:  /stats/#/lafayette//en+fr
-[ergo‑l]:     /stats/#/ergol//en+fr
-[erglace]:    /stats/#/erglace//en+fr
-[colemak ft]: /stats/#/colemak-french-touch//en+fr
-[bépolar]:    /stats/#/bepolar//en+fr
-[bépo]:       /stats/#/bepo//en+fr
-
 
 Comparaison par groupes
 -------------------------------------------------------------------------------
@@ -211,6 +200,7 @@ elle est *utilisable*, mais pas *optimisée* pour ça.
 [lafayette]:  /lafayette/#qwerty-lafayette
 [colemak ft]: /lafayette/#colemak-french-touch
 [bépolar]:    /lafayette/#bepolar
+[azerty]:     /stats/#/azerty//en+fr
 
 [1DFH]:                   /#dfh-1u-distance-from-home
 [touche morte]:           /#caractères-accentués
