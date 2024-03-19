@@ -330,7 +330,7 @@ code { /* character, digrams, trigrams */
 
   /* tab-like navigation bar */
   header + nav ul {
-    justify-content: flex-end;
+    justify-content: flex-start;
     background-color: var(--bg-banner);
   }
   header + nav li {
@@ -344,8 +344,11 @@ code { /* character, digrams, trigrams */
   header + nav li:has(.active) ul {
     display: flex;
     position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 var(--main-padding);
+    box-sizing: border-box;
     background-color: var(--bg-main);
-    padding: 0;
   }
   header + nav li:has(.active) li {
     border: none;
