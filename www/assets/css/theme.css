@@ -112,10 +112,6 @@ h2, h3, footer {
   margin-top: 2em;
 }
 
-article {
-  padding: 0.5em;
-}
-
 article time {
   display: block;
   font-size: smaller;
@@ -124,7 +120,7 @@ article time {
 }
 
 article .more {
-  font-size: smaller;
+  /* font-size: smaller; */
 }
 
 dialog::backdrop {

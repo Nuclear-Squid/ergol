@@ -40,10 +40,15 @@ author = "authors"
         name    = "Ergo‑L"
         pageRef = "/"
         weight  = 1
-    # [[menus.main]]
-    #     name    = "Installer"
-    #     pageRef = "/lts"
-    #     parent  = "Ergo‑L"
+    [[menus.main]]
+        name    = "Présentation"
+        pageRef = "/presentation"
+        parent  = "Ergo‑L"
+        weight  = 1
+    [[menus.main]]
+        name    = "Installation"
+        pageRef = "/lts"
+        parent  = "Ergo‑L"
     [[menus.main]]
         name    = "Alternatives"
         pageRef = "/alternatives"
@@ -72,7 +77,7 @@ author = "authors"
         name    = "Apprendre"
         pageRef = "/dactylo"
         weight  = 5
-    [[menus.main]]
-        name    = "Articles"
-        pageRef = "/articles"
-        weight  = 6
+    # [[menus.main]]
+    #     name    = "Articles"
+    #     pageRef = "/articles"
+    #     weight  = 6

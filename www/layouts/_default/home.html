@@ -1,7 +1,14 @@
 {{ define "main" }}
   {{ .Content }}
-  <!-- {{ range site.RegularPages }} -->
-  <!--   <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2> -->
-  <!--   {{ .Summary }} -->
-  <!-- {{ end }} -->
+
+  {{ range first 10 (where site.RegularPages "Section" "articles") }}
+    <article>
+      <header>
+        <h3>{{ .LinkTitle }}</h3>
+        <time><a href="{{ .RelPermalink }}">{{ time.Format ":date_medium" .Date }}</a></time>
+      </header>
+      {{ .Summary }}
+      <nav class="more"><a href="{{ .RelPermalink }}">Lire la suite…</a></nav>
+    </article>
+  {{ end }}
 {{ end }}
