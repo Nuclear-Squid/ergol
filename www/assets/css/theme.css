@@ -112,6 +112,21 @@ h2, h3, footer {
   margin-top: 2em;
 }
 
+article {
+  padding: 0.5em;
+}
+
+article time {
+  display: block;
+  font-size: smaller;
+  text-align: right;
+  margin-top: -1.5em;
+}
+
+article .more {
+  font-size: smaller;
+}
+
 dialog::backdrop {
   backdrop-filter: blur(5px);
 }
@@ -182,20 +197,6 @@ a[href] {
 
 a[href]:hover {
   text-decoration: underline;
-}
-
-article {
-  padding: 0.5em;
-}
-
-article #date {
-  margin-top: 0;
-  margin-bottom: -1.5em;
-}
-
-article #lire-plus {
-  margin-top: -1em;
-  margin-bottom: 0;
 }
 
 

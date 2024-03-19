@@ -1,11 +1,13 @@
 {{ define "main" }}
   {{ .Content }}
   {{ range sort .Pages "Date" "desc" }}
-    <article class="highlight">
-      <p id="date"><small>{{ time.Format ":date_medium" .Date }}</small></p>
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    <article>
+      <header>
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <time>{{ time.Format ":date_medium" .Date }}</time>
+      </header>
       {{ .Summary }}
-      <p id="lire-plus"><small><a href="{{ .RelPermalink }}">…lire plus</a></small></p>
+      <nav class="more"><a href="{{ .RelPermalink }}">Lire la suite…</a></nav>
     </article>
   {{ end }}
 {{ end }}

@@ -46,7 +46,7 @@ author = "authors"
     #     parent  = "Ergo‑L"
     [[menus.main]]
         name    = "Alternatives"
-        pageRef = "/comparatif"
+        pageRef = "/alternatives"
         weight  = 2
     [[menus.main]]
         name    = "Bépo ?"
