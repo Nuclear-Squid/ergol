@@ -56,7 +56,3 @@ grâce à [notre page dédiée][9].
 
 [QWERTY-Lafayette]: https://qwerty-lafayette.org
 [Bépo]: https://bepo.fr
-
-
-Articles récents
---------------------------------------------------------------------------------
