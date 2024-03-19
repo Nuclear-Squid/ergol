@@ -17,7 +17,7 @@ Ergonomique avant tout.
   tout en conservant les principaux raccourcis clavier et l’accès direct aux
   chiffres.
 - [Pour le français **et** l’anglais][3]
-  <br> La première disposition optimisée pour les deux langues !
+  <br> La première disposition *vraiment* optimisée pour les deux langues !
 - [Pour une typographie soignée][4]
   <br> Toutes les lettres spécifiques au français et la plupart des symboles
   typographiques sont facilement accessibles, sans [AltGr]{.kbd}.

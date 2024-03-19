@@ -81,3 +81,9 @@ author = "authors"
     #     name    = "Articles"
     #     pageRef = "/articles"
     #     weight  = 6
+
+[outputs]
+    home     = ['html']
+    section  = ['html', 'rss']
+    taxonomy = ['html']
+    term     = ['html']
