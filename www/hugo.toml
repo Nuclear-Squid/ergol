@@ -70,8 +70,8 @@ author = "authors"
         pageRef = "/stats"
         weight  = 3
     [[menus.main]]
-        name    = "Lexique"
-        pageRef = "/lexique"
+        name    = "Glossaire"
+        pageRef = "/glossaire"
         weight  = 4
     [[menus.main]]
         name    = "Apprendre"
