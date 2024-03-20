@@ -238,8 +238,8 @@ Typographie
   enchaînements : `ù`, `œ`, `æ`, points de suspension…
 
 De plus, Bépo propose beaucoup de caractères spéciaux (i.e. non liés à la langue
-français ou au code informatique) via la couche AltGr ou des touches mortes, au
-prix d’une certaine complexité des pilotes de clavier :
+français ou au code informatique) via la couche _AltGr_ ou des touches mortes,
+au prix d’une certaine complexité des pilotes de clavier :
 
 - les pilotes Windows existent en deux versions, l’une « tronquée » et stable,
   l’autre « complète » mais dont le comportement est présenté comme moins
@@ -270,7 +270,7 @@ mais pour les autres caractères spéciaux Ergo‑L se contente des touches mort
 standard définies dans XKB afin de proposer des pilotes plus robustes.
 Les autres caractères spéciaux sont laissés à la touche Compose.
 
-![La couche Typo d’Ergo‑L.](/img/ergol_1dk.svg)
+![La couche _Typo_ d’Ergo‑L.](/img/ergol_1dk.svg)
 
 **De notre point de vue** : la saisie de la plupart des caractères accentués
 est plus intuitive avec Bépo. L’approche d’Ergo‑L permet d’éviter les extensions

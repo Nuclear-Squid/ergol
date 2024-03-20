@@ -165,7 +165,7 @@ nous semble négligeable comparé au gain de confort obtenu.
   (`â`, `ê`, `î`, `ô`, `û`)
 - … et d’autres altérations : `æ`, `µ`, `ß`, `ñ`…
 
-La touche Typo donne parfois accès à une autre touche morte :
+La touche [★]{.odk} donne parfois accès à une autre touche morte :
 
 - [★]{.odk} [★]{.odk} = tréma mort (`ä`, `ë`, `ï`, `ö`, `ü`, `ÿ`…)
 - [★]{.odk} [G]{.kbd} = touche morte grecque (`α`, `β`, `γ`…)
@@ -225,7 +225,7 @@ Efficace en anglais
 Ergo‑L porte la même attention au confort de la saisie de texte en anglais qu’en
 français, et doit donc faire quelques compromis pour faire cohabiter les deux
 langues. Certaines lettres sont beaucoup plus fréquentes dans une langue que
-l’autre, (comme le [U]{.kbd} et la touche typo en français et le [H]{.kbd} en
+l’autre, (comme le [U]{.kbd} et la touche [★]{.odk} en français et le [H]{.kbd} en
 anglais) et les enchaînements courants peuvent être très différents.
 
 Ergo‑L optimise le plus possible la saisie de texte anglais et français sans
@@ -251,7 +251,7 @@ optimisée pour le français **et** l’anglais*.
 Ergo‑L est capable de saisir du texte dans presque toutes le langues
 européennes, mais ne cherche pas à optimiser la saisie de texte dans d’autres
 langues que le français et l’anglais. Certains caractères sont disponibles en
-touche typo, comme `ß` ou `ñ`, et il existe de nombreuses touches mortes en
+touche [★]{.odk}, comme `ß` ou `ñ`, et il existe de nombreuses touches mortes en
 [Shift]{.kbd}‑[AltGr]{.kbd} : par exemple, `^` étant en [AltGr]{.kbd}‑[J]{.kbd},
 [Shift]{.kbd}‑[AltGr]{.kbd}‑[J]{.kbd} produit un accent circonflexe mort.
 
@@ -271,7 +271,7 @@ de clavier cherchant à couvrir toutes les langues !
 ![Un exemple d’adaptation d’Ergo‑L pour l’allemand.](ergol_1dk_de.svg)
 
 Si vous voulez adapter Ergo‑L à une langue étrangère, nous vous recommandons de
-concevoir la couche typo uniquement pour cette langue et d’installer votre
+concevoir la couche _Typo_ uniquement pour cette langue et d’installer votre
 adaptation en même temps qu’Ergo‑L en lui donnant un autre nom (comme
 « ergol-de » pour l’allemand, par exemple). Tous les bureaux modernes proposent
 un raccourci clavier pour basculer d’une langue à l’autre, et vous pourrez ainsi
@@ -303,12 +303,12 @@ une meilleure alternative.
 
 ### Couche symboles
 
-Ergo‑L propose une couche [AltGr]{.kbd} optionelle optimisée pour le placement
-et les enchaînements de symboles de programmation.
+Ergo‑L propose une couche _Symboles_ optionelle accessible par [AltGr]{.kbd} et
+optimisée pour le placement et les enchaînements de symboles de programmation.
 
-![La couche AltGr d’Ergo‑L.](ergol_altgr.svg)
+![La couche _Symboles_ d’Ergo‑L.](ergol_altgr.svg)
 
-Cette couche [AltGr]{.kbd} est plutôt simple à mémoriser, car les symboles sont
+Cette couche _Symboles_ est plutôt simple à mémoriser, car les symboles sont
 regroupés par « blocs ». On y retrouve :
 
 - les délimiteurs `()` `{}` `[]` `<>`
@@ -326,7 +326,7 @@ grande majorité des enchaînements de symboles de prog se fait soit avec une
 alternance de main (`~/`, `);`, `</>`, `+=`, `['']`, …) soit avec un roulement
 (`>=`, `/*`, `";`, `()`, `\"`, …).
 
-Comme pour la saisie de texte en français ou anglais, la couche [AltGr]{.kbd}
+Comme pour la saisie de texte en français ou anglais, la couche _Symboles_
 d’Ergo‑L ne contient pratiquement aucun enchaînement inconfortable.
 
 
@@ -334,7 +334,7 @@ d’Ergo‑L ne contient pratiquement aucun enchaînement inconfortable.
 
 Pour une utilisation technique, Vim apporte une ergonomie reconnue et de
 nombreux éditeurs de code implémentent un mode de navigation Vim. La couche
-[AltGr]{.kbd} d’Ergo‑L lui permet de conserver les principales commandes de
+_Symboles_ d’Ergo‑L lui permet de conserver les principales commandes de
 déplacement :
 
 - [AltGr]{.kbd}‑[R]{.kbd}/[T]{.kbd} (les touches correspondant à
@@ -342,7 +342,7 @@ déplacement :
   de `j`/`k` ;
 - les sauts verticaux `{}`, `()` et `[]` sont en [AltGr]{.kbd} + main gauche.
 
-Cette couche AltGr a été éprouvée dans des contextes techniques variés sans
+Cette couche _Symboles_ a été éprouvée dans des contextes techniques variés sans
 qu’on relève de problème particulier. Elle a été reprise dans d’autres projets,
 notamment [Lafayette] et [Arsenik].
 
@@ -359,7 +359,7 @@ mieux réputées, mais on en a choisi une dont on comprend tous les mots.
  !   │               Balises pour les liens :                │
  !   ╰───────────────────────────────────────────────────────╯
 -->
-[1DFH]:      /#dfh-1u-distance-from-home
+[1DFH]:      /presentation#dfh-1u-distance-from-home
 [WTFPL]:     http://wtfpl.net
 [dvorak]:    https://fr.wikipedia.org/wiki/Disposition_Dvorak
 [bépo]:      https://bepo.fr
