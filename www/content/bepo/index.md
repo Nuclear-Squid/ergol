@@ -289,8 +289,8 @@ touches répétées sous les auriculaires.
 ![La couche Symboles d’Ergo‑L.](/img/ergol_altgr.svg)
 
 La touche [AltGr]{.kbd} reste facultative, les symboles étant également
-disponibles [aux emplacements du QWERTY ANSI](/#héritage-qwerty-us), une
-disposition de clavier perçue comme efficace pour cet usage.
+disponibles [aux emplacements du QWERTY ANSI](/presentation#héritage-qwerty-us),
+une disposition de clavier perçue comme efficace pour cet usage.
 
 
 Variantes de Bépo
@@ -336,8 +336,8 @@ beaucoup trop élevé à notre avis — à comparer aux 6.9 % pour Ergo‑L. *
   personnes qui ont des difficultés avec Bépo.
 
 
-[1DFH]: /#dfh-1u-distance-from-home.
-[ergonomique avant tout]: /#ergonomique-avant-tout)
+[1DFH]: /presentation#dfh-1u-distance-from-home.
+[ergonomique avant tout]: /presentation#ergonomique-avant-tout)
 
 [bépo]:      https://bepo.fr
 [dvorak]:    https://fr.wikipedia.org/wiki/Disposition_Dvorak

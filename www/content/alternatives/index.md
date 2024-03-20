@@ -202,7 +202,7 @@ elle est *utilisable*, mais pas *optimisée* pour ça.
 [bépolar]:    /lafayette/#bepolar
 [azerty]:     /stats/#/azerty//en+fr
 
-[1DFH]:                   /#dfh-1u-distance-from-home
-[touche morte]:           /#caractères-accentués
-[couche altgr optimisée]: /#couche-symboles
+[1DFH]:                   /presentation#dfh-1u-distance-from-home
+[touche morte]:           /presentation#caractères-accentués
+[couche altgr optimisée]: /presentation#couche-symboles
 [défauts d’ergonomie]:    /bepo/#ergonomie
