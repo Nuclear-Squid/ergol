@@ -12,9 +12,7 @@
 <meta property="og:image:width"  content="960">
 <meta property="og:image:height" content="360">
 <meta property="og:description"  content="{{ .Site.Params.description }}">
-<link type="image/svg+xml" rel="icon" href="{{ absURL "favicon.svg" }}" sizes="any">
-{{ with .OutputFormats.Get "rss" -}}
-  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
-{{ end }}
+<link type="image/svg+xml"       rel="icon"    href="{{ absURL "favicon.svg" }}"        sizes="any">
+<link type="application/rss+xml" rel=alternate href="{{ absURL "articles/index.xml" }}" title="Ergo‑L">
 {{ partial "head/js.html" . }}
 {{ partial "head/css.html" . }}

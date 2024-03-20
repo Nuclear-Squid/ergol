@@ -82,8 +82,9 @@ author = "authors"
     #     pageRef = "/articles"
     #     weight  = 6
 
+# Disable RSS everywhere, and enable it manually in /content/articles/_index.md
 [outputs]
-    home     = ['html']
-    section  = ['html', 'rss']
-    taxonomy = ['html']
-    term     = ['html']
+    home     = ["html"]
+    section  = ["html"]
+    taxonomy = ["html"]
+    term     = ["html"]
