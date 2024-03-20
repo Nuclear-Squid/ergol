@@ -16,25 +16,7 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 
 <div id="sticky-select">
   <form>
-    <select id="layout">
-      <option disabled>  [en]</option>
-      <option value="qwerty">Qwerty</option>
-      <option value="dvorak">Dvorak</option>
-      <option value="colemak">Colemak</option>
-      <option value="colemak-dh">Colemak-DH</option>
-      <option value="workman">Workman</option>
-      <option value="ISRT">ISRT</option>
-      <option value="MTGAP">MTGAP</option>
-      <option value="sturdy">Sturdy</option>
-      <option disabled>  [fr]</option>
-      <option value="azerty">Azerty</option>
-      <option value="lafayette">Lafayette</option>
-      <option value="ergol" selected>Ergo‑L</option>
-      <option value="erglace">Erglace</option>
-      <option value="colemak-french-touch">Colemak French Touch</option>
-      <option value="bepolar">Bépolar</option>
-      <option value="bepo">Bépo</option>
-    </select>
+    {{< layout-list >}}
     <select id="geometry">
       <option value="iso" selected>ISO</option>
       <option value="ansi">ANSI</option>
@@ -51,7 +33,7 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 
   <p id="imprecise-data"> <strong>Attention :</strong> cette disposition
     ne supporte pas de nombreux caractères du corpus sélectionné.
-    Les résultats ne sont proposés qu’à titre indicatif. </p> 
+    Les résultats ne sont proposés qu’à titre indicatif. </p>
 </div>
 
 <h2>Métriques</h2>
