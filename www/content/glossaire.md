@@ -1,5 +1,5 @@
 +++
-title = "Lexique"
+title = "Glossaire"
 +++
 
 **🚧 en construction 🚧**
