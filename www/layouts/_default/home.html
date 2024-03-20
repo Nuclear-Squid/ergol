@@ -1,7 +1,10 @@
 {{ define "main" }}
   {{ .Content }}
 
-  <h2>Articles récents</h2>
+  <h2>Articles récents
+    <a href="articles/index.xml" title="flux RSS">
+      <img src="/rss.svg" alt="flux RSS" style="height: 1em;"></a>
+  </h2>
 
   {{ range first 10 (where site.RegularPages "Section" "articles") }}
     <article>
