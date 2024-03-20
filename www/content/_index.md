@@ -3,7 +3,7 @@
 cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
-footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
+footer = "[Flux RSS](/articles/index.xml)"
 +++
 
 Ergonomique avant tout.
