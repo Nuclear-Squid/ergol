@@ -52,6 +52,41 @@
 
 /**
  * ╭───────────────────────────────────────────────────────────────╮
+ * │                          Font Tests                           │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+:root {
+  /* thin fonts */
+  /* font-family: "Fira sans", sans-serif; */
+  /* font-family: "Source Sans 3", sans-serif; */
+
+  /* more readable fonts */
+  font-family: "Noto Sans", sans-serif;
+  /* font-family: "PT Sans", sans-serif; */
+  /* font-family: "Lato", sans-serif; */
+  /* font-family: "Asap", sans-serif; */
+
+  font-optical-sizing: auto;
+  /* font-size: 18px; */
+}
+
+/* :root { */
+/*   font-family: Inter, sans-serif; */
+/*   font-feature-settings: 'liga' 1, 'calt' 1; */
+/* } */
+/* @supports (font-variation-settings: normal) { */
+/*   :root { font-family: InterVariable, sans-serif; } */
+/* } */
+
+kbd, code, pre {
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+}
+
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
  * │                          Main Layout                          │
  * ╰───────────────────────────────────────────────────────────────╯
 **/
@@ -64,7 +99,6 @@
 html {
   height: 100%;
   width:  100%;
-  font-family: "Fira sans", sans-serif;
   background-color: var(--bg-root);
   /* scroll-behavior: smooth; */
 }
