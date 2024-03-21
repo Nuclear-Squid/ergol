@@ -16,43 +16,43 @@ title = "Glossaire"
 Ergonomie & Optimisation
 --------------------------------------------------------------------------------
 
-SFU (“Same Finger Usage”), SFB (“Same Finger Bigram”) :
+SFU (“Same Finger Usage”), SFB (“Same Finger Bigram”)
 
 : Aussi appelé « digramme de même doigt ». Quand deux lettres s’enchaînent avec un même
 doigt, ce qui est source d’inconfort ou d’erreurs, notamment à haute vitesse.
  
-SKU (“Same Key Usage”), SKB (“Same Key Bigram”) :
+SKU (“Same Key Usage”), SKB (“Same Key Bigram”)
 
 : Répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
 disposition de clavier, ou `és` en Ergo‑L.
 
-Extension :
+Extension
 
 : Quand un doigt doit atteindre une touche qui est soit sur une autre colonne
 que la position de repos, soit à une distance supérieure à une touche.
 
-Ciseau :
+Ciseau
 
 : Quand un bigramme nécessite un changement de rangée inconfortable.
 
-Roulement intérieur :
+Roulement intérieur
 
 : Deux touches ou plus enchaînées sur une même main, dans le sens de
 l’auriculaire vers l’index. C’est l’enchaînement considéré comme le plus
 confortable qui soit.
 
-Roulement extérieur :
+Roulement extérieur
 
 : Deux touches ou plus enchaînées sur une même main, dans le sens de l’index
 vers l’auriculaire.
 
-Redirection :
+Redirection
 
 : Trois touches enchaînées sur une même main avec un changement de direction,
 e.g. [D]{.kbd}[S]{.kbd}[F]{.kbd} ou [K]{.kbd}[J]{.kbd}[L]{.kbd} en Azerty ou
 Qwerty.
 
-Mauvaise redirection :
+Mauvaise redirection
 
 : Une redirection où l’index n’intervient pas. L’un des pires enchaînements
 faisables sur un clavier, sinon le pire.
@@ -65,7 +65,7 @@ compris à des développeurs qui travaillent sur la question — comme ça a ét
 cas au sein de la talentueuse équipe de KMonad sur ce ticket Github :
 https://github.com/kmonad/kmonad/issues/111 -->
 
-[Scan code]{#scan-code-def} :
+[Scan code]{#scan-code-def}
 
 : Données envoyées par un clavier physique à un ordinateur lorsqu’on appuie
 ou relâche une touche. Par suite aux évolutions technologiques (PS/2, USB, etc.),
@@ -76,22 +76,22 @@ particulier avec les scan codes « XT » ou « ensemble 1 ». Il permet alor
 d’identifier la touche qui a été pressée dans un périphérique de saisie, au plus
 bas niveau de l’OS.
 
-[Key code]{#key-code-def} :
+[Key code]{#key-code-def}
 
 : Code identifiant une touche sur un clavier. Ce code est propre à chaque
 système d’exploitation. Ce dernier se charge de convertir les différentes
 conventions de _scan code_ en _key code_, permettant ainsi de faire abstraction
 de la technologie du clavier pour développer des dispositions de clavier.
 
-[Point de code]{#point-de-code-def} (<i lan="en">code point</i>) :
+[Point de code]{#point-de-code-def} (<i lan="en">code point</i>)
 
 : TODO (cf. [point de code] sur Wikipedia).
 
-[Modificateur]{#modificateur-def} :
+[Modificateur]{#modificateur-def}
 
 : TODO (Modificateurs courants : `Shift`, `Caps`, `AltGr`, etc.).
 
-[Couche]{#couche-def} (<i lang="en">layer</i>) :
+[Couche]{#couche-def} (<i lang="en">layer</i>)
 
 : Abstraction pour pouvoir disposer plusieurs caractères sur une même touche.
 
@@ -109,7 +109,7 @@ de la technologie du clavier pour développer des dispositions de clavier.
 
     <!-- TODO: liens vers les couches typo et symboles -->
 
-[Touche morte]{#touche-morte-def} (<i lang="en">dead key</i>) :
+[Touche morte]{#touche-morte-def} (<i lang="en">dead key</i>)
 
 : Touche de clavier qui ne produit aucun résultat lorsqu’elle est enfoncée puis
 relâchée, mais modifie le comportement de la prochaine touche qui sera enfoncée.
@@ -119,7 +119,7 @@ ou autres [diacritiques].
     Exemple : la touche [^]{.kbd} sur le clavier Azerty puis [E]{.kbd} donne la
     lettre `ê`.
 
-[Diacritique]{#diacritique-def} :
+[Diacritique]{#diacritique-def}
 
 : Signe accompagnant une lettre ou un graphème pour en modifier le sens ou la
 prononciation.
@@ -135,28 +135,28 @@ prononciation.
 
 ### Windows
 
-AHK :
+AHK
 
 : Abréviation du logiciel [AutoHotKey] qui permet de manière globale de créer
 des scripts pour Windows. Dans le cas des dispositions clavier, il est utilisé
 pour modifier les touches envoyées par le clavier et ainsi créer un pilote de
 disposition ne necessitant pas d’installation.
 
-[KbdEdit] :
+[KbdEdit]
 
 : Logiciel qui permet de créer des pilotes Windows pour des dispositions clavier
 personnalisées. Il est beaucoup plus complet que MSKLC (voir ci-dessous).
 Contrairement à ce dernier, il est payant et n’est pas officiellement supporté
 par Microsoft.
 
-KLC :
+KLC
 
 : Fichier avec extension `.klc` décrivant une disposition clavier pour Microsoft
 Keyboard Layout Creator (MSKLC).
 
     C’est un fichier source pour créer les pilotes Windows.
 
-MSKLC :
+MSKLC
 
 : Abréviation du logiciel [Microsoft Keyboard Layout Creator] qui permet de
 créer des pilotes Windows pour des dispositions clavier personnalisées.
@@ -164,7 +164,7 @@ créer des pilotes Windows pour des dispositions clavier personnalisées.
     Il peut être utilisé de manière autonome ou par l’intermédiaire de [Kalamine],
     ce dernier corrigeant ainsi de nombreuses limitations de MSKLC.
 
-Virtual Key (VK, touche virtuelle) :
+Virtual Key (VK, touche virtuelle)
 
 : Code de touche spécifique à Windows, de plus haut niveau que le key code.
 Il est utilisé pour définir le placement des touches spéciales ainsi que le
@@ -178,11 +178,11 @@ comportement d’une touche lorsqu’elle est utilisée dans un raccourci clavie
 
 ### macOS
 
-keylayout :
+keylayout
 
 : TODO
 
-Karabiner :
+Karabiner
 
 : TODO
 
@@ -209,23 +209,23 @@ Karabiner :
 
 #### Environnement
 
-[X11] :
+[X11]
 
 : X est un protocole de système de fenêtrage. [X11] en est la onzième version
 majeure.
 
-[X.Org] :
+[X.Org]
 
 : Le principal [serveur X][X11] utilisé sur Linux.
 
-Wayland :
+Wayland
 
 : Un protocole de système de fenêtrage, destiné à remplacer X11 qui n’est plus
 maintenu. Bien qu’en développement depuis 2008, son implémentation dans les
 environnements de bureau majeurs n’a commencé à être suffisante que dans les
 années 2020.
 
-XKB (_X_ <em>K</em>eyboard <em>E</em>xtension) :
+XKB (_X_ <em>K</em>eyboard <em>E</em>xtension)
 
 : Un __[protocole][XKB protocol]__ défini comme extension de X11 et dédié à la gestion des
 claviers.
@@ -236,7 +236,7 @@ des dispositions clavier.
 : Par abus de langage c'est aussi la __base de données__ des configurations clavier,
 [`xkeyboard-config`][xkeyboard-config].
 
-[Compose]{#compose-def} :
+[Compose]{#compose-def}
 
 : Une __méthode de saisie__ (<i lang="en">input method</i> ou IM). C’est notamment
 ce qui permet aux touches mortes système (autres que `1dk`) de fonctionner.
@@ -255,7 +255,7 @@ de clavier.
 
 : La __[keysym]__ `<Multi_key>`, qui est placée sur la _touche_ Compose.
 
-XCompose :
+XCompose
 
 : Une __[spécification][XCompose]__ de Compose pour les systèmes basés sur X11 et
 Wayland. Il existe plusieurs implémentations: `XIM` (référence), `xkbcommon`,
@@ -294,7 +294,7 @@ implémentations.
 
 #### XKB
 
-[Keycode]{#keycode-xkb-def} :
+[Keycode]{#keycode-xkb-def}
 
 : Code identifiant une touche physique sur un clavier. Le code _brut_ (raw
 keycode) est le code numérique issu du traitement bas niveau par le noyau, alors
@@ -313,7 +313,7 @@ de celui de XKB, ce dernier étant obtenu en ajoutant 8 au premier.
     configuration du clavier dans XKB et non le clavier lui-même qui définit la
     correspondance touche / [keysym].
 
-[Keysym]{#keysym-def} :
+[Keysym]{#keysym-def}
 
 : Code numérique identifiant un symbole sur le _capuchon_ d’une touche. Ce mot
 vient de l’anglais « <i lang="en">key symbol</i> ». Les keysyms sont également
@@ -344,22 +344,22 @@ associées à des noms anglais pour faciliter leur utilisation. Exemples : `a`
     - _système :_ actions spéciales non comprises ci-dessus : flèche `Left`,
       `Pause`, `Escape`, `F1`, etc.
 
-Key type :
+Key type
 
 : TODO
 
-Key Action :
+Key Action
 
 : TODO
 
-[Groupe]{#group-xkb-def} :
+[Groupe]{#group-xkb-def}
 
 : TODO
 
 : Également appelé abusivement _disposition_ (<i lang="en">layout</i>).
 TODO: développer.
 
-Keymap :
+Keymap
 
 : TODO
 
