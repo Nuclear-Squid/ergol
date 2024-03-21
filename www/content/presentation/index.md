@@ -32,13 +32,13 @@ Ergonomique avant tout !
 Ergo-L intègre l’approche 1DFH, qui consiste à ne pas déplacer ses doigts de
 plus d’une touche par rapport à la position de repos. Cela permet un gain de
 confort important pour la saisie en méthode dactylo, évitant notamment les
-extensions latérales de l’auriculaire droit qui sont typiques de Bépo pour les
+extensions latérales de l’auriculaire droit, qui sont typiques de Bépo pour les
 lettres `m` `z` `w` `ç`.
 
 ![Ergo‑L sur un clavier compact (type OLKB Planck).](ergol_1dfh.svg)
 
 C’est pour suivre cette approche que l’immense majorité des claviers
-ergonomiques actuels ne proposent que 6 colonnes de touches par main, ce qui est :
+ergonomiques actuels ne propose que 6 colonnes de touches par main, ce qui est :
 
 - compliqué avec AZERTY, qui a les touches [Ù]{.kbd} et <kbd>^</kbd> en 6e
   colonne, obligeant à déplacer [Entrée]{.kbd} et [Backspace]{.kbd} ;
@@ -48,7 +48,7 @@ ergonomiques actuels ne proposent que 6 colonnes de touches par main, ce qui est
 
 Les claviers ergonomiques modernes cherchent à limiter le nombre total de
 touches, en utilisant différents *layers* pour amener les touches excentrées
-sous les doigts plutôt que l’inverse. Nous avons donc décidé de n’utiliser
+sous les doigts, plutôt que l’inverse. Nous avons donc décidé de n’utiliser
 aucune touche en dehors du pavé de 3×10 touches centrales pour les lettres et
 symboles de programation. Ergo‑L est ainsi compatible avec les claviers les
 plus compacts (minimum 33 touches) sans ajustement majeur.
@@ -65,7 +65,7 @@ plaçant toutes les voyelles sous la main gauche ; mais les approches modernes
 comme Colemak et Workman permettent de conserver ces raccourcis tout en obtenant
 de meilleures métriques que Dvorak.
 
-Ergo‑L suit cette approche [Colemak][] / [Workman][] et comme eux, s’autorise un
+Ergo‑L suit cette approche [Colemak][] / [Workman][] et, comme eux, s’autorise un
 changement : le [C]{.kbd} est ainsi déplacé pour favoriser les enchaînements,
 mais [Ctrl]{.kbd}‑[C]{.kbd} reste faisable d’une main à gauche.
 
@@ -91,9 +91,9 @@ Plus optimisé que Dvorak et Bépo
 --------------------------------------------------------------------------------
 
 [Dvorak][] est la disposition de clavier optimisée la plus connue. Elle fut
-développée pendant l’entre-deux guerres pour les machines à écrire, qui ont
+développée pendant l’entre-deux-guerres pour les machines à écrire, qui ont
 d’importantes contraintes physiques dont les claviers modernes sont exemptés :
-typiquement, appuyer sur deux touches côte‑à‑côte est un excellent moyen de
+typiquement, appuyer sur deux touches côte à côte est un excellent moyen de
 coincer les marteaux. Cela implique qu’il fallait privilégier les alternances de
 mains aux <abbr title="Enchaînements de deux touches actionnées par deux doigts
 différents d’une même main, comme 'df' en AZERTY">roulements</abbr>, alors que
@@ -101,7 +101,7 @@ ces derniers sont très confortables sur un clavier d’ordinateur.
 
 Dvorak était un grand pas en avant, mais se base sur une philosophie qui
 n’est plus pertinente aujourd’hui. Malheureusement, [Bépo][] et ses nombreuses
-variantes la reprend sans chercher à la mettre à jour.
+variantes la reprennent sans chercher à la mettre à jour.
 
 Dvorak et Bépo ne sont optimisés que pour une seule langue (anglais et français,
 respectivement), et sont très inconfortables dans l’autre. Pourtant, à une
@@ -136,7 +136,7 @@ charge des doigts que sur le taux de digrammes de même doigt :
 |    -:|:-----------------------------:|:---------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
 |**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.23 %](/stats/#/Ergo‑L//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
 |**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.40 %](/stats/#/Ergo‑L//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
-: Taux de digrammes de même doigts en français et anglais, extrait de la [page de comparaison avec Bépo](bepo).
+: Taux de digrammes de même doigt en français et anglais, extrait de la [page de comparaison avec Bépo](bepo).
 :::
 
 
@@ -148,11 +148,11 @@ Impeccable en français
 La gestion des accents, diacritiques et symboles typographiques français
 nécessite traditionnellement l’usage de touches excentrées (ce qui irait à
 l’encontre de l’approche [1DFH][] d’Ergo‑L) ou de [AltGr]{.kbd} (qui est source
-d’erreur à haute vitesse car il faut relâcher la touche au bon moment).
+d’erreur à haute vitesse, car il faut relâcher la touche au bon moment).
 
 Ergo‑L utilise une touche morte [★]{.odk} de type [Lafayette][] pour tous les
-caractères accentués, diacritiques et ponctuations spéciales. Actionner cette
-« touche Typo » donne accès à **tous** ces symboles dans le pavé de 3×10 touches
+caractères accentués, diacritiques et les ponctuations spéciales. Actionner cette
+« touche Typo » donne accès à **tous** ces symboles dans le pavé de 3×10 touches,
 **sans** utiliser [AltGr]{.kbd}. Cela occasionne [2.5 à 4.0 % de frappes
 supplémentaires](/bepo/#typographie-ergol) pour un texte francophone, ce qui
 nous semble négligeable comparé au gain de confort obtenu.
@@ -193,7 +193,7 @@ enchaînement avec l’insécable fine : on maintient [Shift]{.kbd}, on presse
 
 En français, les huit lettres les plus fréquentes (`esanitru`) sont toutes
 réparties sur la position de repos des doigts, et le reste des lettres
-fréquentes sont réparties sur les autres touches faciles d’accès.
+fréquentes est réparti sur les autres touches faciles d’accès.
 
 Une grande attention à été portée aux enchaînements de lettres.
 
@@ -206,7 +206,7 @@ Une grande attention à été portée aux enchaînements de lettres.
 - Le placement des lettres sur les positions de repos maximise les roulements
   vers l’intérieur et minimise les redirections, qui sont source d’erreur à
   haute vitesse.
-- Le reste des lettres fréquentes sont placées de sorte à minimiser les
+- Le reste des lettres fréquentes est placé de sorte à minimiser les
   digrammes de même doigt (par exemple, [D]{.kbd} et [G]{.kbd} s’enchaînent très
   souvent avec [N]{.kbd} ou [R]{.kbd}, mais très peu avec [T]{.kbd})
 - La touche morte est placée sur la main opposée à [E]{.kbd}[A]{.kbd}[C]{.kbd},
@@ -252,7 +252,7 @@ Ergo‑L est capable de saisir du texte dans presque toutes le langues
 européennes, mais ne cherche pas à optimiser la saisie de texte dans d’autres
 langues que le français et l’anglais. Certains caractères sont disponibles en
 touche [★]{.odk}, comme `ß` ou `ñ`, et il existe de nombreuses touches mortes en
-[Shift]{.kbd}‑[AltGr]{.kbd} : par exemple, `^` étant en [AltGr]{.kbd}‑[J]{.kbd},
+[Shift]{.kbd}‑[AltGr]{.kbd}. Par exemple : `^` étant en [AltGr]{.kbd}‑[J]{.kbd},
 [Shift]{.kbd}‑[AltGr]{.kbd}‑[J]{.kbd} produit un accent circonflexe mort.
 
 Cette approche est suffisante pour la saisie occasionnelle de caractères spéciaux.
@@ -272,7 +272,7 @@ de clavier cherchant à couvrir toutes les langues !
 
 Si vous voulez adapter Ergo‑L à une langue étrangère, nous vous recommandons de
 concevoir la couche _Typo_ uniquement pour cette langue et d’installer votre
-adaptation en même temps qu’Ergo‑L en lui donnant un autre nom (comme
+adaptation en même temps qu’Ergo‑L, en lui donnant un autre nom (comme
 « ergol-de » pour l’allemand, par exemple). Tous les bureaux modernes proposent
 un raccourci clavier pour basculer d’une langue à l’autre, et vous pourrez ainsi
 basculer d’Ergo‑L à votre variante spécifique en un clin d’œil.
@@ -286,10 +286,10 @@ Redoutable pour le code
 La grande majorité des touches en dehors du pavé de 3×10 sont identiques à
 celles de QWERTY‑US. Les seules exceptions sont :
 
-- les chevrons `<` et `>` sur la touche ISO, entre [Shift]{.kbd} et [Z]{.kbd}
-- les signes `-` et `/` qui sont échangés, le tiret étant très fréquent en français
+- les chevrons `<` et `>` sur la touche ISO, entre [Shift]{.kbd} et [Z]{.kbd} ;
+- les signes `-` et `/` qui sont échangés, le tiret étant très fréquent en français ;
 - les signes `;` et `:` qui sont déplacés en [Shift]{.kbd}‑[,]{.kbd} et
-  [Shift]{.kbd}‑[.]{.kbd} respectivement
+  [Shift]{.kbd}‑[.]{.kbd} respectivement.
 
 Cet héritage implique aussi que les chiffres sont en accès direct (sans
 [Shift]{.kbd}), ce qui facilite grandement la saisie de nombres.
@@ -311,15 +311,15 @@ optimisée pour le placement et les enchaînements de symboles de programmation.
 Cette couche _Symboles_ est plutôt simple à mémoriser, car les symboles sont
 regroupés par « blocs ». On y retrouve :
 
-- les délimiteurs `()` `{}` `[]` `<>`
-- les délimiteurs de chaîne de caractères ``'`"``
+- les délimiteurs `()` `{}` `[]` `<>` ;
+- les délimiteurs de chaîne de caractères ``'`"` ;` ;
 - les symboles arithmétiques `+` `-` `/` `*`
-- les ponctuations `!` `;` `:` `?`
-  <small>(nota : `;` `:` sont à leur emplacement en QWERTY Européen)</small>
+- les ponctuations `!` `;` `:` `?` ;
+  <small>(nota : `;` `:` qui sont à leur emplacement en QWERTY Européen)</small>
 - `$` `%` `^` `&` `*` sont à leur position en [Shift]{.kbd}‑chiffre, mais une
   rangée plus bas.
 
-Comme pour l’emplacement des lettres de la disposition, une grande attention à
+Comme pour l’emplacement des lettres de la disposition, une grande attention a
 été portée au placement des symboles de prog et aux enchaînements courants. Les
 symboles peu courants (``~@#%^`|``) sont loin des positions de repos, et la
 grande majorité des enchaînements de symboles de prog se fait soit avec une
