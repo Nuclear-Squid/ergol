@@ -12,13 +12,13 @@ footer = "objectivé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 
 :::{.highlight style="max-width: 32em;"}
 - [Ergonomie]
-  <br> une priorité pour Ergo‑L bien plus que pour Bépo
+  <br> Une priorité pour Ergo‑L bien plus que pour Bépo.
 - [Optimisation]
-  <br> Dvorak pour Bépo, Colemak/Workman pour Ergo‑L
+  <br> Dvorak pour Bépo, Colemak/Workman pour Ergo‑L.
 - [Typographie]
-  <br> deux approches différentes
+  <br> Deux approches différentes.
 - [Programmation]
-  <br> la spécialité d’Ergo‑L
+  <br> La spécialité d’Ergo‑L.
 - [Variantes de Bépo]
 :::
 
@@ -28,7 +28,7 @@ Ergonomie
 
 ### Bépo {id="ergonomie-bépo"}
 
-Conservant l’approche AZERTY d’avoir certaines lettres accentuées en direct
+Conservant l’approche AZERTY, qui consiste à avoir certaines lettres accentuées en direct
 (`é`, `è`, `à`, `ç`), [Bépo][] a manqué de place pour placer toutes les lettres
 et a choisi d’occuper les colonnes excentrées pour des lettres jugées moins
 fréquentes (`m`, `z`, `w`, `ç`, « les quatre cavaliers de l’auriculaire »). Cela
@@ -44,7 +44,7 @@ Par ailleurs, la charge des doigts est mal répartie :
 - plus grave, la charge de l’auriculaire droit (> 11 % en français) est bien
   plus élevée que dans toutes les dispositions de clavier francophones,
   optimisées ou non ;
-- une grande partie des touches doublées se trouvent sous l’auriculaire droit —
+- une grande partie des touches doublées se trouve sous l’auriculaire droit —
   et souvent en extension !
 
 C’est notamment le cas du `m` : 13e lettre la plus fréquente en français (2.7 %
@@ -73,8 +73,8 @@ numérique inutile. On peut ainsi utiliser des claviers compacts qui favorisent
 une meilleure posture de travail, notamment quand on utilise la souris de la
 main droite.
 
-Les auriculaires sont préservés, en particulier le droit qui est en charge des
-touches [Entrée]{.kbd} et [Backspace]{.kbd} sur la plupart des claviers (et qui
+Les auriculaires sont préservés, en particulier le droit, qui est en charge des
+touches [Entrée]{.kbd} et [Backspace]{.kbd} sur la plupart des claviers (et celles-ci
 ne sont pas comptées dans ces métriques).
 
 Les lettres fréquemment doublées (e.g. [L]{.kbd}, [N]{.kbd}, [M]{.kbd}) sont
@@ -149,7 +149,7 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
 </table>
 :::
 
-**De notre point de vue** : Bépo a été optimisée au détriment de l’ergonomie,
+**De notre point de vue** : Bépo a été optimisé au détriment de l’ergonomie,
 notamment en surchargeant beaucoup trop l’auriculaire droit et en s’aliénant la
 plupart des claviers ergonomiques.
 
@@ -159,13 +159,13 @@ Optimisation
 
 ### Bépo {id="optimisation-bépo"}
 
-[Bépo][] applique une optimisation de type [Dvorak][] au français :
+[Bépo][] applique au français une optimisation de type [Dvorak][] :
 
-- maximiser l’alternance des mains lors de la frappe ;
-- répartir les touches de façon équitable sur les deux mains ;
-- utiliser en priorité la rangée centrale, puis haute, puis inférieure ;
-- en cas de non-alternance des mains sur un digramme, diriger la frappe vers le
-  centre du clavier ce qui sollicite davantage les doigts les plus habiles à
+- maximisation de l’alternance des mains lors de la frappe ;
+- répartition des touches de façon équitable sur les deux mains ;
+- utilisation en priorité de la rangée centrale, puis haute, puis inférieure ;
+- en cas de non-alternance des mains sur un digramme, direction de la frappe vers le
+  centre du clavier, ce qui sollicite davantage les doigts les plus habiles, à
   savoir l’index et le majeur.
 
 Bépo cherche également à minimiser le taux de digrammes de même doigt, que nous
@@ -238,20 +238,20 @@ Typographie
   enchaînements : `ù`, `œ`, `æ`, points de suspension…
 
 De plus, Bépo propose beaucoup de caractères spéciaux (i.e. non liés à la langue
-français ou au code informatique) via la couche _AltGr_ ou des touches mortes,
+française ou au code informatique) via la couche _AltGr_ ou des touches mortes,
 au prix d’une certaine complexité des pilotes de clavier :
 
 - les pilotes Windows existent en deux versions, l’une « tronquée » et stable,
   l’autre « complète » mais dont le comportement est présenté comme moins
   fiable ;
 - le pilote Linux, théoriquement inclus à XKB, se base sur des définitions de
-  touches mortes qu’il faut ajouter manuellement coté utilisateur.
+  touches mortes qu’il faut ajouter manuellement côté utilisateur.
 
 
 ### Ergo‑L {id="typographie-ergol"}
 
 Ergo‑L utilise une touche morte de type [Lafayette][] pour tous les caractères
-accentués et ponctuations spéciales : la fluditié des enchaînements est
+accentués et ponctuations spéciales : la fluidité des enchaînements est
 préservée, et la touche [AltGr]{.kbd} peut être dédiée aux seuls symboles de
 programmation.
 
@@ -267,7 +267,7 @@ mots/minutes, on perd ainsi 2 mots/minute en Ergo‑L.
 
 Le support typographique du français est tout aussi complet que celui de Bépo,
 mais pour les autres caractères spéciaux Ergo‑L se contente des touches mortes
-standard définies dans XKB afin de proposer des pilotes plus robustes.
+standard définies dans XKB, afin de proposer des pilotes plus robustes.
 Les autres caractères spéciaux sont laissés à la touche Compose.
 
 ![La couche _Typo_ d’Ergo‑L.](/img/ergol_1dk.svg)
@@ -304,7 +304,7 @@ philosophie initiale :
 - les lettres sont étalées sur toutes les colonnes du clavier ;
 - les chiffres restent en Shift.
 
-Et très logiquement, ces variantes présentent les mêmes défauts d’ergonomie :
+Et, très logiquement, ces variantes présentent les mêmes défauts d’ergonomie :
 
 - compatibilité délicate avec la quasi-totalité des claviers ergonomiques ;
 - surcharge importante de l’auriculaire droit ;
