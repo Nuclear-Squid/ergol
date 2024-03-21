@@ -101,9 +101,9 @@ C’est un bon moyen, pour un bépoète, de tester l’approche 1DFH avec un tem
 d’apprentissage record.
 
 
-[1]: /#dfh-1u-distance-from-home
-[2]: /#impeccable-en-français
-[3]: /#couche-symboles
+[1]: /presentation#dfh-1u-distance-from-home
+[2]: /presentation#impeccable-en-français
+[3]: /presentation#couche-symboles
 
 [kalamine]:   https://github.com/OneDeadKey/kalamine
 [x‑keyboard]: https://github.com/OneDeadKey/x-keyboard

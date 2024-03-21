@@ -108,17 +108,17 @@ avoir les chiffres en direct. Néanmoins, il restera le problème des touches
 excentrées sous l’auriculaire droit, qui causent des déviations ulnaires.
 
 **De notre point de vue,** [Lafayette][] peut apporter une solution ergonomique
-intéressante ([1DFH][], [couche AltGr optimisée][]) moyennant un temps
-d’apprentissage minime.
+intéressante ([1DFH][], [couche _Symboles_ optimisée][symboles]) moyennant un
+temps d’apprentissage minime.
 
 
 ### Les « Ergonautes »
 
 [Ergo‑L][], [Erglace][], [Colemak FT][], [Bépolar][], [Lafayette][], toutes ces
-dispositions partagent une même approche ergonomique : [1DFH][] et [couche AltGr
-optimisée][], garantissant ainsi l’absence d’extensions de doigts (donc de
-déviations ulnaires) et une compatibilité exemplaire avec tous les claviers,
-ergonomiques ou non, de 33 à 105 touches.
+dispositions partagent une même approche ergonomique : [1DFH][] et [couche
+_Symboles_ optimisée][symboles], garantissant ainsi l’absence d’extensions de
+doigts (donc de déviations ulnaires) et une compatibilité exemplaire avec tous
+les claviers, ergonomiques ou non, de 33 à 105 touches.
 
 - Ergo‑L est le projet le plus abouti, destiné au plus grand nombre, bien plus
   optimisé que Bépo en français et que Dvorak en anglais, tout en gardant un
@@ -202,7 +202,7 @@ elle est *utilisable*, mais pas *optimisée* pour ça.
 [bépolar]:    /lafayette/#bepolar
 [azerty]:     /stats/#/azerty//en+fr
 
-[1DFH]:                   /#dfh-1u-distance-from-home
-[touche morte]:           /#caractères-accentués
-[couche altgr optimisée]: /#couche-symboles
-[défauts d’ergonomie]:    /bepo/#ergonomie
+[1DFH]:                /presentation#dfh-1u-distance-from-home
+[touche morte]:        /presentation#caractères-accentués
+[symboles]:            /presentation#couche-symboles
+[défauts d’ergonomie]: /bepo/#ergonomie
