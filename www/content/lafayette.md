@@ -30,7 +30,7 @@ QWERTY-Lafayette
 
 La disposition de clavier par laquelle tout a commencé ! Publiée en 2010,
 Lafayette est une simple adaptation du QWERTY ANSI au français. Aucune
-optimisation : on a [H]{.kbd}[J]{.kbd}[K]{.kbd}[L]{.kbd} sur la homerow et c’est
+optimisation : on a [H]{.kbd}[J]{.kbd}[K]{.kbd}[L]{.kbd} sur la position de repos (home row) et c’est
 très bien ainsi !
 
 C’est cette disposition qui a introduit l’idée d’une [touche morte][2] « à tout
@@ -41,7 +41,7 @@ l’adapter à son langage de programmation de prédilection.
 
 [Kalamine][] a alors été développé dans le but de faciliter la personnalisation
 de Lafayette. Puis [x‑keyboard][] a suivi, afin de pouvoir tester ces
-dispositions sans avoir à les installer. Et de fil en aiguille, c’est ainsi que
+dispositions sans avoir à les installer. Et, de fil en aiguille, c’est ainsi que
 les outils utilisés pour la mise au point d’Ergo‑L ont été développés.
 
 
@@ -69,7 +69,7 @@ Le reste des modifications sont des déplacements mineurs de symboles et signes
 de ponctuation, pour optimiser les statistiques de la disposition.
 
 Dans le monde Colemak, la disposition qui est sans doute la plus populaire
-actuellement est la variante « DH » qui permet de limiter les
+actuellement est la variante « DH », qui permet de limiter les
 extensions des index vers la colonne intérieure. Colemak French Touch a fait le
 choix de déplacer le [H]{.kbd}, mais de ne pas déplacer le [D]{.kbd}, afin de
 préserver le raccourci [Ctrl]{.kbd}‑[V]{.kbd}. Il s’agit donc d’une variante
@@ -78,7 +78,7 @@ préserver le raccourci [Ctrl]{.kbd}‑[V]{.kbd}. Il s’agit donc d’une varia
 Au final, on obtient une distribution avec d’excellentes statistiques, parfaite
 pour les personnes qui tapent actuellement en Colemak mais qui ont un besoin
 régulier d’écrire en français. Comme toutes les autres dispositions de la
-famille, on conserve également la [couche facultative [AltGr]{.kbd}][3], parfait
+famille, on conserve également la [couche facultative [AltGr]{.kbd}][3], parfaite
 pour la programmation.
 
 
