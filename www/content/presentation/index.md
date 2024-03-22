@@ -9,18 +9,18 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/lts">}}
 
 :::{.highlight}
-- [Ergonomique avant tout !]
-  <br> – réduit les extensions de doigt, les déviations ulnaires, l’effort de saisie
-  <br> – compatible avec **tous** les claviers ergonomiques, de 33 à 105 touches
-  <br> – préserve les raccourcis clavier et les chiffres en direct
-- [Plus optimisé que Dvorak et Bépo]
-  <br> deux fois moins de SFU que Bépo en français **et** que Dvorak en anglais
-- [Impeccable en français]
-  <br> une seule touche morte pour produire tous les caractères spéciaux
-- [Efficace en anglais]
-  <br> la première disposition francophone **réellement** optimisée pour l’anglais
-- [Redoutable pour le code]
-  <br> une couche de symboles optionnelle et optimisée pour le code
+- [Ergonomique avant tout !] :
+  <br> – réduit les extensions de doigt, les déviations ulnaires, l’effort de saisie ;
+  <br> – compatible avec **tous** les claviers ergonomiques, de 33 à 105 touches ;
+  <br> – préserve les raccourcis clavier et les chiffres en direct.
+- [Plus optimisé que Dvorak et Bépo] :
+  <br> deux fois moins de SFU que Bépo en français **et** que Dvorak en anglais.
+- [Impeccable en français] :
+  <br> une seule touche morte pour produire tous les caractères spéciaux.
+- [Efficace en anglais] :
+  <br> la première disposition francophone **réellement** optimisée pour l’anglais.
+- [Redoutable pour le code] :
+  <br> une couche de symboles optionnelle et optimisée pour le code.
 :::
 
 
