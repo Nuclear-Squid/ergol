@@ -30,8 +30,8 @@ QWERTY-Lafayette
 
 La disposition de clavier par laquelle tout a commencé ! Publiée en 2010,
 Lafayette est une simple adaptation du QWERTY ANSI au français. Aucune
-optimisation : on a [H]{.kbd}[J]{.kbd}[K]{.kbd}[L]{.kbd} sur la position de repos (home row) et c’est
-très bien ainsi !
+optimisation : on a [H]{.kbd}[J]{.kbd}[K]{.kbd}[L]{.kbd} sur la rangée de repos
+(<i lang="en">home row</i>) et c’est très bien ainsi !
 
 C’est cette disposition qui a introduit l’idée d’une [touche morte][2] « à tout
 faire » et d’une [couche [AltGr]{.kbd}][3] entièrement dédiée aux symboles de
