@@ -208,7 +208,7 @@ Une grande attention à été portée aux enchaînements de lettres.
   haute vitesse.
 - Le reste des lettres fréquentes est placé de sorte à minimiser les
   digrammes de même doigt (par exemple, [D]{.kbd} et [G]{.kbd} s’enchaînent très
-  souvent avec [N]{.kbd} ou [R]{.kbd}, mais très peu avec [T]{.kbd})
+  souvent avec [N]{.kbd} ou [R]{.kbd}, mais très peu avec [T]{.kbd}).
 - La touche morte est placée sur la main opposée à [E]{.kbd}[A]{.kbd}[C]{.kbd},
   qui sont les lettres les plus souvent diacritées en français.
 
@@ -312,7 +312,7 @@ Cette couche _Symboles_ est plutôt simple à mémoriser, car les symboles sont
 regroupés par « blocs ». On y retrouve :
 
 - les délimiteurs `()` `{}` `[]` `<>` ;
-- les délimiteurs de chaîne de caractères ``'`"` ;
+- les délimiteurs de chaîne de caractères `'` `"` ;
 - les symboles arithmétiques `+` `-` `/` `*` ;
 - les ponctuations `!` `;` `:` `?` ;
   <small>(nota : `;` `:` qui sont à leur emplacement en QWERTY Européen)</small> ;
