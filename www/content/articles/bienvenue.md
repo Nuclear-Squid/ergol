@@ -3,6 +3,10 @@ title = "Bienvenue chez les Ergonautes !"
 date = 2024-03-18T22:01:23+01:00
 author = "nuclear_squid"
 tags = ["communauté"]
+[comments]
+  host = "mastodon.social"
+  username = "fabi1cazenave"
+  id = 112124416010685631
 +++
 
 Après plus de quatre ans de travail et avec une version 1.0 en approche, il
