@@ -151,7 +151,7 @@ l’encontre de l’approche [1DFH][] d’Ergo‑L) ou de [AltGr]{.kbd} (qui est
 d’erreur à haute vitesse, car il faut relâcher la touche au bon moment).
 
 Ergo‑L utilise une touche morte [★]{.odk} de type [Lafayette][] pour tous les
-caractères accentués, diacritiques et les ponctuations spéciales. Actionner cette
+caractères accentués, diacritiques et ponctuations spéciales. Actionner cette
 « touche Typo » donne accès à **tous** ces symboles dans le pavé de 3×10 touches,
 **sans** utiliser [AltGr]{.kbd}. Cela occasionne [2.5 à 4.0 % de frappes
 supplémentaires](/bepo/#typographie-ergol) pour un texte francophone, ce qui
@@ -312,10 +312,10 @@ Cette couche _Symboles_ est plutôt simple à mémoriser, car les symboles sont
 regroupés par « blocs ». On y retrouve :
 
 - les délimiteurs `()` `{}` `[]` `<>` ;
-- les délimiteurs de chaîne de caractères ``'`"` ;` ;
-- les symboles arithmétiques `+` `-` `/` `*`
+- les délimiteurs de chaîne de caractères ``'`"` ;
+- les symboles arithmétiques `+` `-` `/` `*` ;
 - les ponctuations `!` `;` `:` `?` ;
-  <small>(nota : `;` `:` qui sont à leur emplacement en QWERTY Européen)</small>
+  <small>(nota : `;` `:` qui sont à leur emplacement en QWERTY Européen)</small> ;
 - `$` `%` `^` `&` `*` sont à leur position en [Shift]{.kbd}‑chiffre, mais une
   rangée plus bas.
 
