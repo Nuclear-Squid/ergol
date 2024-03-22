@@ -20,8 +20,8 @@ footer = "réfrigéré par [x-keyboard](https://onedeadkey.github.io/x-keyboard)
 
 Le point de départ était de faire une disposition avec moins de redirections
 qu’Ergo‑L. Nous nous sommes vite rendu compte qu'il fallait pour cela isoler les
-voyelles des consonnes. Les lettres de la la position de repos (*home row*) sont les lettres les plus
-utilisées du français et de l'anglais.
+voyelles des consonnes. Les lettres de la rangée de repos (<i lang="en">home row
+</i>) sont les lettres les plus utilisées du français et de l'anglais.
 
 <!-- - Les voyelles sont à gauche car ErgEAU tire profit des touches disponibles tout à droite pour rajouter des consonnes rares. Par ailleurs, c'est aussi le choix de Bépo et Optimot, ce qui permet des transitions plus faciles. -->
 
@@ -30,8 +30,8 @@ roulements, tout en s'assurant d'une bonne répartition de la charge. `t` est un
 bon candidat pour l'index, puisqu'il se combine assez peu avec d'autres
 consonnes, comparé aux autres, or l'index a 6 lettres. Les autres ordres testés
 avaient une répartition de charge moins bonne et/ou un SFB plus haut. Cet ordre
-a toutefois le défaut de privilégier les roulements extérieurs, et n'est pas celui qui
-minimise les redirections (voir l'ordre de Nerps).
+a toutefois le défaut de privilégier les roulements extérieurs, et n'est pas
+celui qui minimise les redirections (voir l'ordre de Nerps).
 
 Le raisonnement est similaire pour l'ordre des voyelles. `u` est de loin la
 lettre qui se combine le moins avec les consonnes et les signes de ponctuation,
@@ -40,12 +40,13 @@ anglais.
 <!-- Le roulement `eau`, courant en français, a donné l'ordre de voyelles de ErgEAU. -->
 
 Toutefois, `e` est une lettre particulière puisque c'est la plus utilisée et
-qu’elle se combine avec la quasi-totalité des autres lettres, à l'exception de `o`
-et des lettres accentuées. N'ayant pas de touches dédiées aux accents comme
+qu’elle se combine avec la quasi-totalité des autres lettres, à l'exception de
+`o` et des lettres accentuées. N'ayant pas de touches dédiées aux accents comme
 ErgEAU, j'ai dû me résoudre à mettre `o` au-dessus de `e`. La charge devenant
 trop grande pour l'annulaire, je l'ai mis sur l'index comme en Ergo-L et
 Optimot. `a` est resté sur l'annulaire car il a une charge plus importante que
-`i`. Les enchaînements de cette disposition restent bons, à l'exception de la mauvaise redirection assez ironique `aie`, équivalent de `sad` en qwerty.
+`i`. Les enchaînements de cette disposition restent bons, à l'exception de la
+mauvaise redirection assez ironique `aie`, équivalent de `sad` en qwerty.
 
 J'ai essayé de laisser `e` sur l'annulaire, d'abord en mettant la touche morte
 au-dessus, ce qui faisait une charge beaucoup trop importante pour l'annulaire,
@@ -56,8 +57,8 @@ lettres les plus rares sur un bon emplacement.
 Nous avons d'abord cherché à conserver le roulement `th`, digramme le plus
 commun. Mais nous nous sommes rendu compte que `h` allait aussi très bien du
 côté des voyelles avec lesquelles il fait de nombreux roulements, même si ce
-sont des roulements extérieurs. Avoir `h` sous `u` permet aussi de charger plus l'index en
-anglais.
+sont des roulements extérieurs. Avoir `h` sous `u` permet aussi de charger plus
+l'index en anglais.
 
 Les autres consonnes du côté de voyelles ont été choisies pour minimiser le SFB.
 `j` est en bas pour simplifier l'écriture de `je`, et `f` en haut pour taper
@@ -75,9 +76,9 @@ charge de ce doigt en anglais.
 
 Le placement des consonnes restantes à droite a fait l'objet de beaucoup de
 variations. `dmlcp` sont celles qui ont le moins bougé, étant les consonnes plus
-fréquentes après celles de la home row, elles occupent les meilleurs emplacements
-sur les colonnes où elles font le moins de SFB. Le placement de `c` et `p` en
-haut permet de garantir de bons enchaînements avec `l`.
+fréquentes après celles de la rangée de repos, elles occupent les meilleurs
+emplacements sur les colonnes où elles font le moins de SFB. Le placement de `c`
+et `p` en haut permet de garantir de bons enchaînements avec `l`.
 
 Nous avons considéré d'inverser `d` et `p` pour le digramme `ld`. Mais `ld` est
 moins courant que `pl`, et `d` serait plus difficile à atteindre en haut, alors
@@ -131,9 +132,10 @@ surchargerait encore plus le majeur. J'ai essayé de le placer sous `r`, colonne
 sur laquelle le SFB est minimal, mais le SKU engendré sur l'annulaire était
 considérable, et se ressentait beaucoup dans des mots comme 'préféré'. J'ai
 finalement opté pour le mettre derrière `u`, ce qui lui donne une place
-confortable sur la home row, et lui permet de bien s’enchaîner avec `e`. Cela permet aussi
-de mieux charger l'index en français. La contrepartie est les digrammes `é,` et
-`éf`, ainsi qu'un décalage nécessaire des variantes accentuées de `u`.
+confortable sur la rangée de repos, et lui permet de bien s’enchaîner avec `e`.
+Cela permet aussi de mieux charger l'index en français. La contrepartie est les
+digrammes `é,` et `éf`, ainsi qu'un décalage nécessaire des variantes accentuées
+de `u`.
 
 `_` a une place sur la home de la couche 1dk pour pouvoir écrire facilement des
 noms de fichiers et variables où les mots sont espacés d'underscores.
