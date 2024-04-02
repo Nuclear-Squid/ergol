@@ -6,7 +6,7 @@ tags = ["communauté"]
 [comments]
   host = "mastodon.social"
   username = "fabi1cazenave"
-  id = 112124416010685631
+  id = "112124416010685631"
 +++
 
 Après plus de quatre ans de travail et avec une version 1.0 en approche, il
