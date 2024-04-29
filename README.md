@@ -39,15 +39,15 @@ English and better than Qwerty for programming. [Check the stats !][1]
 Layout
 --------------------------------------------------------------------------------
 
-![base layout](www/static/img/ergol_fr.svg)
+![base layout](www/content/presentation/ergol_fr.svg)
 
 The dead <kbd>★</kbd> key gives access to all acute accents, grave accents, cedillas, digraphs and quote signs you’ll need to write in proper French:
 
-![dead key layout](www/static/img/ergol_1dk.svg)
+![dead key layout](www/content/presentation/ergol_1dk.svg)
 
 … and the AltGr layer is fully dedicated to programming symbols.
 
-![altgr layout](www/static/img/ergol_altgr.svg)
+![altgr layout](www/content/presentation/ergol_altgr.svg)
 
 The default layout allows to write in English, French, German and Esperanto easily.
 
