@@ -98,6 +98,18 @@ Then switch to Ergo‑L using the following command:
 setxkbmap fr -variant ergol  # Switch your keyboard layout to ergol
 ```
 
+_Troubleshooting with ubuntu / wayland_
+
+There is a weird issue where Ergo-L works fine with some applications (phpstorm, gnome,...) but not on others (libreoffice, terminator). The deadkey remain for two chars instead of only one. (ex: `a[deadkey]sen` should display `aéen` but it displays `aéèn` instead.).
+
+This issue is solved by adding at the end of `/etc/environment` the following lines:
+
+```bash
+INPUT_METHOD=ibus
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+```
 
 Make Your Own !
 --------------------------------------------------------------------------------
