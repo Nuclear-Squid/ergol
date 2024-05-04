@@ -134,8 +134,8 @@ charge des doigts que sur le taux de digrammes de même doigt :
 :::{.sfu style="overflow: scroll;" }
 |      |  AZERTY                       |  Bépo                       |  Ergo‑L                       |  Dvorak                       |  QWERTY                       |
 |    -:|:-----------------------------:|:---------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
-|**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.23 %](/stats/#/Ergo‑L//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
-|**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.40 %](/stats/#/Ergo‑L//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
+|**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.22 %](/stats/#/Ergo‑L//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
+|**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.19 %](/stats/#/Ergo‑L//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
 : Taux de digrammes de même doigts en français et anglais, extrait de la [page de comparaison avec Bépo](bepo).
 :::
 
@@ -180,7 +180,7 @@ effort supplémentaire :
 
 - [Shift]{.kbd}‑[Espace]{.kbd} = espace insécable fine
 - [★]{.odk} [Espace]{.kbd} = apostrophe typographique
-- [★]{.odk} [D]{.kbd}[B]{.kbd}[W]{.kbd}[-]{.kbd} = tiret bas, cadratin,
+- [★]{.odk} [D]{.kbd}[B]{.kbd}[V]{.kbd}[-]{.kbd} = tiret bas, cadratin,
   demi-cadratin, insécable
 - [★]{.odk} [majuscule] = majuscule accentuée
 
@@ -199,10 +199,10 @@ Une grande attention à été portée aux enchaînements de lettres.
 
 - Les voyelles s’enchaînent fréquemment avec toutes les consonnes importantes,
   donc elles sont soit :
-    - placées sur les auriculaires, avec des consonnes peu fréquentes autour,
-      comme [Q]{.kbd}[A]{.kbd}[Z]{.kbd} et [F]{.kbd}[U]{.kbd}[K]{.kbd} ;
+    - placées sur les auriculaires, avec des lettres peu fréquentes autour,
+      comme [Q]{.kbd}[A]{.kbd}[Z]{.kbd} et [Y]{.kbd}[U]{.kbd}[K]{.kbd} ;
     - empilées sur des doigts plus forts pour celles qui ne s’enchaînent pas
-      ensemble, comme [E]{.kbd}[O]{.kbd} et [★]{.odk}[I]{.kbd}[Y]{.kbd}.
+      ensemble, comme [E]{.kbd}[O]{.kbd} et [★]{.odk}[I]{.kbd}.
 - Le placement des lettres sur les positions de repos maximise les roulements
   vers l’intérieur et minimise les redirections, qui sont source d’erreur à
   haute vitesse.
@@ -248,12 +248,14 @@ optimisée pour le français **et** l’anglais*.
 
 ### Et les autres langues ?
 
-Ergo‑L est capable de saisir du texte dans presque toutes le langues
-européennes, mais ne cherche pas à optimiser la saisie de texte dans d’autres
-langues que le français et l’anglais. Certains caractères sont disponibles en
-touche [★]{.odk}, comme `ß` ou `ñ`, et il existe de nombreuses touches mortes en
-[Shift]{.kbd}‑[AltGr]{.kbd} : par exemple, `^` étant en [AltGr]{.kbd}‑[J]{.kbd},
-[Shift]{.kbd}‑[AltGr]{.kbd}‑[J]{.kbd} produit un accent circonflexe mort.
+Ergo‑L est capable de saisir du texte dans toutes les langues de l’union
+européenne (utilisant l’alphabet latin) ainsi que l’esperanto et le romaji,
+mais ne cherche pas à optimiser la saisie de texte dans d’autres langues que le
+français et l’anglais. Certains caractères sont disponibles en touche
+[★]{.odk}, comme `ß` ou `ñ`, et il existe de nombreuses touches mortes en
+[Shift]{.kbd}‑[AltGr]{.kbd} : par exemple, `^` étant en
+[AltGr]{.kbd}‑[Q]{.kbd}, [Shift]{.kbd}‑[AltGr]{.kbd}‑[Q]{.kbd} produit un
+accent circonflexe mort.
 
 Cette approche est suffisante pour la saisie occasionnelle de caractères spéciaux.
 Pour des usages plus réguliers, plutôt que de chercher à couvrir tous les cas
@@ -271,10 +273,11 @@ de clavier cherchant à couvrir toutes les langues !
 ![Un exemple d’adaptation d’Ergo‑L pour l’allemand.](ergol_1dk_de.svg)
 
 Si vous voulez adapter Ergo‑L à une langue étrangère, nous vous recommandons de
-concevoir la couche _Typo_ uniquement pour cette langue et d’installer votre
+concevoir la couche *Typo* uniquement pour cette langue et d’installer votre
 adaptation en même temps qu’Ergo‑L en lui donnant un autre nom (comme
-« ergol-de » pour l’allemand, par exemple). Tous les bureaux modernes proposent
-un raccourci clavier pour basculer d’une langue à l’autre, et vous pourrez ainsi
+« ergol-de » pour l’allemand, par exemple) et la *locale* adaptée (pour avoir
+la bonne correction orthographique). Tous les bureaux modernes proposent un
+raccourci clavier pour basculer d’une langue à l’autre, et vous pourrez ainsi
 basculer d’Ergo‑L à votre variante spécifique en un clin d’œil.
 
 
@@ -303,20 +306,21 @@ une meilleure alternative.
 
 ### Couche symboles
 
-Ergo‑L propose une couche _Symboles_ optionelle accessible par [AltGr]{.kbd} et
+Ergo‑L propose une couche *Symboles* optionelle accessible par [AltGr]{.kbd} et
 optimisée pour le placement et les enchaînements de symboles de programmation.
 
-![La couche _Symboles_ d’Ergo‑L.](ergol_altgr.svg)
+![La couche *Symboles* d’Ergo‑L.](ergol_altgr.svg)
 
 Cette couche _Symboles_ est plutôt simple à mémoriser, car les symboles sont
 regroupés par « blocs ». On y retrouve :
 
-- les délimiteurs `()` `{}` `[]` `<>`
+- les délimiteurs `()` `{}` `[]` `<>` `^$`
+  <small>(nota : `^$` marquent le début/fin de ligne dans les expressions régulières)</small>
 - les délimiteurs de chaîne de caractères ``'`"``
 - les symboles arithmétiques `+` `-` `/` `*`
 - les ponctuations `!` `;` `:` `?`
   <small>(nota : `;` `:` sont à leur emplacement en QWERTY Européen)</small>
-- `$` `%` `^` `&` `*` sont à leur position en [Shift]{.kbd}‑chiffre, mais une
+- `$` `%` `&` `*` sont à leur position en [Shift]{.kbd}‑chiffre, mais une
   rangée plus bas.
 
 Comme pour l’emplacement des lettres de la disposition, une grande attention à
