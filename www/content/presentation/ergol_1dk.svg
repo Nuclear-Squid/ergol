@@ -43,7 +43,7 @@
     @media (prefers-color-scheme: dark) {
       .specialKey rect { fill: #333; }
       rect, path       { fill: #444; }
-      text             { fill: #bbb; }
+      text             { fill: #ccc; }
       #odk             { fill: #484; }
       .deadKey         { fill: #f44; }
       .level3          { fill: #6b6; }
@@ -75,7 +75,7 @@
       <g transform="translate(330)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">W</text>
-        <text x="38.0" y="43.4" class="level3">–</text>
+        <text x="38.0" y="43.4" class="level3"> </text>
       </g>
     </g>
     <g class="right">
@@ -96,12 +96,13 @@
       </g>
       <g transform="translate(570)">
         <rect width="52" height="52" rx="5" ry="5" id="odk"/>
-        <text x="15" y="24" class="diacritic deadKey">★</text>
+        <text x="12.8" y="43.4" class="level1 deadKey">★</text>
+        <text x="12.8" y="20.6" class="level2">!</text>
         <text x="38" y="55" class="diacritic deadKey">¨</text>
       </g>
       <g transform="translate(630)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">F</text>
+        <text x="12.8" y="20.6" class="level2">Y</text>
         <text x="38.0" y="43.4" class="level3">û</text>
       </g>
     </g>
@@ -131,21 +132,20 @@
       </g>
       <g transform="translate(330)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">,</text>
-        <text x="12.8" y="20.6" class="level2">;</text>
-        <text x="38.0" y="43.4" class="level3">·</text>
+        <text x="12.8" y="20.6" class="level2">F</text>
+        <text x="38.0" y="43.4" class="level3">ñ</text>
       </g>
     </g>
     <g class="right">
       <g transform="translate(390)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">L</text>
-        <text x="38.0" y="43.4" class="level3"> </text>
+        <text x="38.0" y="43.4" class="level3">(</text>
       </g>
       <g transform="translate(450)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">R</text>
-        <text x="38.0" y="43.4" class="level3"> </text>
+        <text x="38.0" y="43.4" class="level3">)</text>
       </g>
       <g transform="translate(510)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -186,7 +186,7 @@
       <g transform="translate(270)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">V</text>
-        <text x="38.0" y="43.4" class="level3">ñ</text>
+        <text x="38.0" y="43.4" class="level3">–</text>
       </g>
       <g transform="translate(330)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -213,13 +213,14 @@
       </g>
       <g transform="translate(570)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="20.6" class="level2">Y</text>
-        <text x="38.0" y="43.4" class="level3">ÿ</text>
+        <text x="12.8" y="43.4" class="level1">,</text>
+        <text x="12.8" y="20.6" class="level2">;</text>
+        <text x="38.0" y="43.4" class="level3">·</text>
       </g>
       <g transform="translate(630)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">K</text>
-        <text x="38.0" y="43.4" class="level3">ŭ</text>
+        <text x="38.0" y="43.4" class="level3"> </text>
       </g>
     </g>
   </g>
