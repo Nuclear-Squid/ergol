@@ -270,7 +270,7 @@ mais pour les autres caractères spéciaux Ergo‑L se contente des touches mort
 standard définies dans XKB, afin de proposer des pilotes plus robustes.
 Les autres caractères spéciaux sont laissés à la touche Compose.
 
-![La couche _Typo_ d’Ergo‑L.](/img/ergol_1dk.svg)
+![La couche _Typo_ d’Ergo‑L.](/presentation/ergol_1dk.svg)
 
 **De notre point de vue** : la saisie de la plupart des caractères accentués
 est plus intuitive avec Bépo. L’approche d’Ergo‑L permet d’éviter les extensions
@@ -286,7 +286,7 @@ adaptée à la programmation. Comme pour les lettres en français et en anglais,
 les symboles sont placés de façon à faciliter les enchaînements et éviter les
 touches répétées sous les auriculaires.
 
-![La couche Symboles d’Ergo‑L.](/img/ergol_altgr.svg)
+![La couche Symboles d’Ergo‑L.](/presentation/ergol_altgr.svg)
 
 La touche [AltGr]{.kbd} reste facultative, les symboles étant également
 disponibles [aux emplacements du QWERTY ANSI](/presentation#héritage-qwerty-us),
