@@ -4,16 +4,16 @@ title = "Alternatives"
 
 :::{.highlight}
 - [Ergo‑L ou Bépo ?](/bepo/)
-  <br> avantages et inconvénients des deux dispositions
+  <br> Avantages et inconvénients des deux dispositions.
 - [Erglace !](/erglace/)
-  <br> une approche moderne du Dvorak à la française
+  <br> Une approche moderne du Dvorak à la française.
 - [Lafayette ★](/lafayette/)
-  <br> des adaptations [1DFH][] de QWERTY, Colemak et Bépo
+  <br> Des adaptations [1DFH][] de QWERTY, Colemak et Bépo.
 :::
 
 Ergo‑L est conçu pour n’avoir que des avantages sur Azerty, Qwerty, Dvorak et
 Bépo ; mais il ne prétend pas être le plus optimisé partout. Nous pensons qu’il
-conviendra au plus grand nombre mais il y a des alternatives intéressantes !
+conviendra au plus grand nombre, mais il y a des alternatives intéressantes !
 
 **Il n’y a pas de mauvaise disposition, seulement des mauvais choix.**
 
@@ -131,7 +131,7 @@ Colemak FT, Bépolar et Lafayette se destinent à des utilisateurs de Colemak,
 Bépo et Qwerty respectivement, qui souhaitent profiter de l’approche 1DFH avec
 le minimum d’effort. Leur ergonomie est très satisfaisante mais leur confort
 n’est pas au niveau d’Ergo‑L, ces dispositions ayant cherché à rester aussi
-proches que possibles de leurs ainées.
+proches que possible de leurs aînées.
 
 La contrepartie c’est la [touche morte][] qu’il faut apprendre, et qui ajoute
 entre 2.5 et 4.0 % de frappes supplémentaires en français — soit une perte de 2
@@ -148,9 +148,9 @@ l’anglais. Ergo‑L a la palme du confort.
 Bépo et ses variantes présentent toutes les mêmes [défauts d’ergonomie][] :
 
 - placement de lettres excentrées sur les 6e et 7e colonnes :
-  - compatibilité délicate avec la plupart des claviers ergonomiques
-  - déviations ulnaires pouvant devenir douloureuses
-- charge importante de l’auriculaire droit (> 11 % en français)
+  - compatibilité délicate avec la plupart des claviers ergonomiques ;
+  - déviations ulnaires pouvant devenir douloureuses ;
+- charge importante de l’auriculaire droit (> 11 % en français).
 
 Néanmoins, pour qui n’est pas sensible à ces points-là, ces dispositions sont
 efficaces et très intuitives en français littéraire.
@@ -177,9 +177,9 @@ serait une permutation `h,’`, pour faire passer le `h` de [>] à [O].
 [Nota]{id="optimot_en"} : l’auteur d’Optimot considère que sa disposition est
 optimisée pour l’anglais au motif qu’elle obtiendrait une bonne note globale sur
 KLAnext ; mais pour nous, [la heatmap est inadaptée][1] (lettres fréquentes sur
-la rangée inférieure) et trop de digrammes courants sont inconfortables pour
-parler d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, `ak`, `ki`/`ik`/`ike`) :
-elle est *utilisable*, mais pas *optimisée* pour ça.
+la rangée inférieure) et trop de digrammes courants sont trop inconfortables pour
+pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, `ak`, `ki`/`ik`/`ike`).
+Elle est *utilisable*, mais pas *optimisée* pour ça.
 
 [(?)]:     #optimot_en
 [optimot]: ./optimot_fr.png

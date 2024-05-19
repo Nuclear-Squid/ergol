@@ -18,43 +18,43 @@ Ergonomie & Optimisation
 
 SFU (“Same Finger Usage”), SFB (“Same Finger Bigram”)
 
-: ou « digramme de même doigt ». Quand deux lettres s’enchaînent avec un même
+: Aussi appelé « digramme de même doigt ». Quand deux lettres s’enchaînent avec un même
 doigt, ce qui est source d’inconfort ou d’erreurs, notamment à haute vitesse.
  
 SKU (“Same Key Usage”), SKB (“Same Key Bigram”)
 
-: une répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
+: Répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
 disposition de clavier, ou `és` en Ergo‑L.
 
 Extension
 
-: quand un doigt doit atteindre une touche qui est soit sur une autre colonne
+: Quand un doigt doit atteindre une touche qui est soit sur une autre colonne
 que la position de repos, soit à une distance supérieure à une touche.
 
 Ciseau
 
-: quand un bigramme nécessite un changement de rangée inconfortable
+: Quand un bigramme nécessite un changement de rangée inconfortable.
 
 Roulement intérieur
 
-: deux touches ou plus enchaînées sur une même main, dans le sens de
-l’auriculaire vers l’index. C’est considéré comme l’enchaînement le plus
+: Deux touches ou plus enchaînées sur une même main, dans le sens de
+l’auriculaire vers l’index. C’est l’enchaînement considéré comme le plus
 confortable qui soit.
 
 Roulement extérieur
 
-: deux touches ou plus enchaînées sur une même main, dans le sens de l’index
+: Deux touches ou plus enchaînées sur une même main, dans le sens de l’index
 vers l’auriculaire.
 
 Redirection
 
-: trois touches enchaînées sur une même main avec un changement de direction,
+: Trois touches enchaînées sur une même main avec un changement de direction,
 e.g. [D]{.kbd}[S]{.kbd}[F]{.kbd} ou [K]{.kbd}[J]{.kbd}[L]{.kbd} en Azerty ou
 Qwerty.
 
 Mauvaise redirection
 
-: une redirection où l’index n’intervient pas. L’un des pires enchaînements
+: Une redirection où l’index n’intervient pas. L’un des pires enchaînements
 faisables sur un clavier, sinon le pire.
 
 
@@ -67,8 +67,8 @@ https://github.com/kmonad/kmonad/issues/111 -->
 
 [Scan code]{#scan-code-def}
 
-: Données envoyées par un clavier physique à un ordinateur lorsque l’on appuie
-ou relâche une touche. Suite aux évolutions technologiques (PS/2, USB, etc.),
+: Données envoyées par un clavier physique à un ordinateur lorsqu’on appuie
+ou relâche une touche. Par suite aux évolutions technologiques (PS/2, USB, etc.),
 il existe plusieurs ensembles de scan codes.
 
 : Souvent associé au seul code envoyé lors de la _pression_ d’une touche, en
@@ -80,16 +80,16 @@ bas niveau de l’OS.
 
 : Code identifiant une touche sur un clavier. Ce code est propre à chaque
 système d’exploitation. Ce dernier se charge de convertir les différentes
-conventions de _scan codes_ en _key code_, permettant ainsi de faire abstraction
+conventions de _scan code_ en _key code_, permettant ainsi de faire abstraction
 de la technologie du clavier pour développer des dispositions de clavier.
 
 [Point de code]{#point-de-code-def} (<i lan="en">code point</i>)
 
-: TODO (cf. [point de code] sur Wikipedia)
+: TODO (cf. [point de code] sur Wikipedia).
 
 [Modificateur]{#modificateur-def}
 
-: TODO (Modificateurs courants : `Shift`, `Caps`, `AltGr`, etc.)
+: TODO (Modificateurs courants : `Shift`, `Caps`, `AltGr`, etc.).
 
 [Couche]{#couche-def} (<i lang="en">layer</i>)
 
@@ -124,7 +124,7 @@ ou autres [diacritiques].
 : Signe accompagnant une lettre ou un graphème pour en modifier le sens ou la
 prononciation.
 
-    Exemple : la cédille pour « ç », ou les accents sur les voyelles. Plus de
+    Exemple : la cédille pour « ç » ou les accents sur les voyelles. Plus de
     détails dans l’article [Wikipedia][diacritiques-wiki].
 
 [modificateur]:      #modificateur-def

@@ -12,24 +12,24 @@ Ergonomique avant tout.
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/lts">}}
 
 :::{.highlight}
-- [Pour le confort][2]
+- [Pour le confort :][2]
   <br> Ergo‑L élimine les mouvements inconfortables lors de la saisie de texte,
   tout en conservant les principaux raccourcis clavier et l’accès direct aux
   chiffres.
-- [Pour le français **et** l’anglais][3]
+- [Pour le français **et** l’anglais :][3]
   <br> La première disposition *vraiment* optimisée pour les deux langues !
-- [Pour une typographie soignée][4]
+- [Pour une typographie soignée :][4]
   <br> Toutes les lettres spécifiques au français et la plupart des symboles
   typographiques sont facilement accessibles, sans [AltGr]{.kbd}.
-- [Pour le code][5]
+- [Pour le code :][5]
   <br> La couche de symboles, optionnelle, est optimisée pour le code.
-- [Pour **tous** les claviers][2]
+- [Pour **tous** les claviers :][2]
   <br> La première disposition francophone compatible avec **tous** les
   claviers, ergonomiques ou non, de 33 à 105 touches.
 :::
 
 Ergo‑L a été mis au point par des membres des projets [QWERTY-Lafayette][] et
-[Bépo][] pour corriger les principaux défauts de leurs dispositions respectives
+[Bépo][] pour corriger les principaux défauts de leurs dispositions respectives,
 tout en profitant des avancées récentes dans le domaine de l’ergonomie clavier,
 notamment les approches [1DFH][6] et [Colemak][4].
 

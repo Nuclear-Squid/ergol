@@ -24,7 +24,7 @@ Téléchargement
 
 Windows, installeur : [ergol_KbdEditInstaller.exe][]
 : Exécuter l’installeur et relancer la session. La disposition de clavier
-apparaît dans la barre de langues (indicateur de la barre des tâches)
+apparaît dans la barre de langues (indicateur de la barre des tâches).
 
 Windows, version portable : [ergol_ahk.exe][]
 : Après lancement, un indicateur apparaît dans la barre des tâches. Le pilote

@@ -39,15 +39,15 @@ English and better than Qwerty for programming. [Check the stats !][1]
 Layout
 --------------------------------------------------------------------------------
 
-![base layout](www/static/img/ergol_fr.svg)
+![base layout](www/content/presentation/ergol_fr.svg)
 
 The dead <kbd>★</kbd> key gives access to all acute accents, grave accents, cedillas, digraphs and quote signs you’ll need to write in proper French:
 
-![dead key layout](www/static/img/ergol_1dk.svg)
+![dead key layout](www/content/presentation/ergol_1dk.svg)
 
 … and the AltGr layer is fully dedicated to programming symbols.
 
-![altgr layout](www/static/img/ergol_altgr.svg)
+![altgr layout](www/content/presentation/ergol_altgr.svg)
 
 The default layout allows to write in English, French, German and Esperanto easily.
 
@@ -98,6 +98,18 @@ Then switch to Ergo‑L using the following command:
 setxkbmap fr -variant ergol  # Switch your keyboard layout to ergol
 ```
 
+_Troubleshooting with ubuntu / wayland_
+
+There is a weird issue where Ergo-L works fine with some applications (phpstorm, gnome,...) but not on others (libreoffice, terminator). The deadkey remain for two chars instead of only one. (ex: `a[deadkey]sen` should display `aéen` but it displays `aéèn` instead.).
+
+This issue is solved by adding at the end of `/etc/environment` the following lines:
+
+```bash
+INPUT_METHOD=ibus
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+```
 
 Make Your Own !
 --------------------------------------------------------------------------------
