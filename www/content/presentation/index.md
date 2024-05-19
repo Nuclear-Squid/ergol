@@ -1,4 +1,6 @@
 +++
+title = "Présentation"
+
 [params]
 cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
@@ -20,7 +22,8 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 - [Efficace en anglais] :
   <br> la première disposition francophone **réellement** optimisée pour l’anglais.
 - [Redoutable pour le code] :
-  <br> une couche de symboles optionnelle et optimisée pour le code.
+  <br> une couche de symboles optionnelle et optimisée pour le code est
+  disponible en [AltGr]{.kbd}
 :::
 
 
@@ -131,13 +134,14 @@ charge des doigts que sur le taux de digrammes de même doigt :
 .sfu table caption { margin-top: 0.5em; font-size: smaller; }
 .sfu table { margin: 1em auto; max-width: 50em; border-collapse: collapse; }
 </style>
+
 :::{.sfu style="overflow: scroll;" }
 |      |  AZERTY                       |  Bépo                       |  Ergo‑L                       |  Dvorak                       |  QWERTY                       |
 |    -:|:-----------------------------:|:---------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
 |**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.22 %](/stats/#/Ergo‑L//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
 |**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.19 %](/stats/#/Ergo‑L//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
-: Taux de digrammes de même doigts en français et anglais, extrait de la [page de comparaison avec Bépo](bepo).
->>>>>>> 0e94a14 (Updated ergol and the home / presentation pages.)
+: Taux de digrammes de même doigts en français et anglais, extrait de la [page de comparaison avec Bépo](/bepo).
+:::
 
 
 Impeccable en français

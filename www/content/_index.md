@@ -1,13 +1,12 @@
 +++
+title = "Ergonomique avant tout."
+
 [params]
 cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
 footer = "[Flux RSS](/articles/index.xml)"
 +++
-
-Ergonomique avant tout.
-================================================================================
 
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/lts">}}
 
