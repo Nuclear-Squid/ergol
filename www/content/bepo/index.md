@@ -214,8 +214,8 @@ même doigt :
 :::{.sfu style="overflow: scroll;" }
 |      |  AZERTY                       |  Bépo                       |  Ergo‑L                      |  Dvorak                       |  QWERTY                       |
 |    -:|:-----------------------------:|:---------------------------:|:----------------------------:|:-----------------------------:|:-----------------------------:|
-|**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.23 %](/stats/#/ergol//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
-|**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.40 %](/stats/#/ergol//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
+|**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.22 %](/stats/#/ergol//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
+|**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.20 %](/stats/#/ergol//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
 : Taux de digrammes de même doigt en français et anglais.
 :::
 
