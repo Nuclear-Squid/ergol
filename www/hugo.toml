@@ -47,7 +47,7 @@ author = "authors"
         weight  = 1
     [[menus.main]]
         name    = "Installation"
-        pageRef = "/lts"
+        pageRef = "/install"
         parent  = "Ergo‑L"
     [[menus.main]]
         name    = "Alternatives"

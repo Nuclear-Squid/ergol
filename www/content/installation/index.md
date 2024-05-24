@@ -1,5 +1,6 @@
 +++
 title = "Ergo‑L v0.7 LTS"
+aliases = ["lts"]
 
 [params]
 cssSheets = ["/css/keebs.css"]
@@ -63,9 +64,9 @@ Licence
 
 
 [fichier source]:             /layouts/ergol.toml
-[ergol_KbdEditInstaller.exe]: https://github.com/Nuclear-Squid/ergol/raw/main/0_7_0/ergol_KbdEditInstaller.exe
-[ergol_ahk.exe]:              https://github.com/Nuclear-Squid/ergol/raw/main/0_7_0/ergol_ahk.exe
-[ergol.keylayout]:            https://github.com/Nuclear-Squid/ergol/raw/main/0_7_0/ergol.keylayout
-[ergol.xkb_custom]:           https://github.com/Nuclear-Squid/ergol/raw/main/0_7_0/ergol.xkb_custom
+[ergol_KbdEditInstaller.exe]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/KbdEditInstallerErgol.exe
+[ergol_ahk.exe]:              https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.ahk
+[ergol.keylayout]:            https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.keylayout
+[ergol.xkb_custom]:           https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols
 [XKalamine]:                  https://github.com/OneDeadKey/kalamine#xkalamine
 [Karabiner]:                  https://karabiner-elements.pqrs.org
