@@ -8,7 +8,7 @@ jsScripts = ["/js/keebs.js"]
 footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
-{{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/install">}}
+{{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/installation">}}
 
 :::{.highlight}
 - [Ergonomique avant tout !] :

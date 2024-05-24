@@ -8,7 +8,7 @@ jsScripts = ["/js/keebs.js"]
 footer = "[Flux RSS](/articles/index.xml)"
 +++
 
-{{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/install">}}
+{{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/installation">}}
 
 :::{.highlight}
 - [Pour le confort :][2]
