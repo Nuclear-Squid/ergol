@@ -65,7 +65,7 @@ Licence
 
 [fichier source]:  /layouts/ergol.toml
 [Pilotes nomades]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_nomade.zip
-[Windows]:         https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/KbdEditInstallerErgol.exe
+[Windows]:         https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_kbd.exe
 [macOS]:           https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.keylayout
 [GNU/Linux]:       https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols
 [XKalamine]:       https://github.com/OneDeadKey/kalamine#xkalamine
