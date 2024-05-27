@@ -15,12 +15,12 @@ jamais été aussi simple à saisir !
 
 <!--more-->
 
-Les ajustements que nous avons implémentés depuis la dernière version majeur
+Les ajustements que nous avons implémentés depuis la dernière version majeure
 (0.7.0 lts) incluent :
 
 - une retouche mineure de la couche de symbole (après sa deuxième refonte) ;
 - le déplacement de certains caractères en couche typo, pour éliminer certains
-  SFB, mieux placer les parenthèses et rendre plus intuitifs les tiret
+  SFB, mieux placer les parenthèses et rendre plus intuitifs les tirets
   cadratins ;
 - l’ajout de touches mortes en Shift-AltGr pour supporter toutes les langues de
   l’union européenne ;
@@ -40,10 +40,10 @@ avec la disposition, souvenez vous que c’est grâce à leur travail titanesque
 Une [merge
 request](https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/merge_requests/690)
 a été ouverte pour essayer d’inclure Ergo‑L dans `xkb-config`, ce qui
-permetterai (si elle est fusionnée) d’avoir Ergo‑L dans **tous** les systèmes
+permettrait (si elle est fusionnée) d’avoir Ergo‑L dans **tous** les systèmes
 linux a jour ! J’aurai aussi l’occasion d’annoncer la sortie d’Ergo‑L v1.0 aux
 [JdLL 2024](https://jdll.org/) dans une
-[conférence](https://pretalx.jdll.org/jdll2024/talk/QT7JBD/) dédié le 26 mai
+[conférence](https://pretalx.jdll.org/jdll2024/talk/QT7JBD/) dédiée le 26 mai
 2024. Durant le reste du week-end, je tiendrai avec quelques amis libristes un
 stand dédié à l’ergonomie clavier. Hésitez pas à venir discuter avec nous !
 
