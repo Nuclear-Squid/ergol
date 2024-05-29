@@ -71,6 +71,6 @@ d’Ergo‑L](https://discord.gg/5xR5K3nAFX) :
 - [Henri Lœvenbruck](https://piaille.fr/@loevenbruck@toot.portes-imaginaire.org)
 - [ClemABT](https://github.com/ClemABT)
 - [Aeshar](https://github.com/robinmoussu)
-- Valentin B
+- [Valentin B](https://github.com/c4software)
 
 Merci à vous <3
