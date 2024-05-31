@@ -1,6 +1,6 @@
 +++
 title = "Ergo‑L 1.0.0 est là !!"
-date = 2024-05-20T13:42:00+01:00
+date = 2024-05-23T15:00:00+01:00
 author = "nuclear_squid"
 tags = ["communauté"]
 +++
