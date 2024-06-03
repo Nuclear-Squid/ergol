@@ -1,9 +1,23 @@
 +++
 title = "Configurer un clavier en Ergo-L sous SwayWM"
 date = 2024-06-01T13:54:48+01:00
-author = "Steeve"
+author = "steeve"
 tags = ["communauté"]
 +++
+
+<style>
+  code { font-family: monospace; }
+  pre { background-color: #6684; padding: 0.5em 2em; }
+  pre > code { background-color: transparent; padding: 0; }
+</style>
+
+Vous utilisez SwayWM et vous voulez passer à Ergo-L ? C'est par ici !\
+
+Cet article vous guide étape par étape pour configurer Ergo-L sur votre système, que ce soit pour tous vos claviers ou pour un clavier spécifique. Avec quelques lignes de configuration, vous pourrez profiter pleinement de cette disposition optimisée.
+
+
+<!--more-->
+
 
 ## Prérequis
 
@@ -12,8 +26,8 @@ Veuillez vous référer à la partie [Installation][1] du site pour cela.
 
 ## Trouver vos fichiers de configuration
 
-La configuration de SwayWM est généralement située dans le fichier `~/.config/sway/config`.  
-Si vous ne possédez pas le dossier `~/.config/sway`, vous pouvez normalement copier la configuration par défaut située ici : `/etc/sway/`.
+La configuration de SwayWM est généralement située dans le fichier `~/.config/sway/config`.\
+Si vous ne possédez pas le dossier `~/.config/sway`, vous pouvez normalement copier la configuration par défaut située dans le dossier `/etc/sway/` sur votre système.
 
 ## Configurer Ergo-L pour tous les claviers connectés à la machine
 
@@ -21,8 +35,8 @@ C'est la solution la plus simple. Il suffit d'ajouter le code suivant à votre f
 
 ```text
 input "type:keyboard" {
-xkb_layout fr
-xkb_variant ergol
+    xkb_layout fr
+    xkb_variant ergol
 }
 ```
 
@@ -32,14 +46,13 @@ xkb_variant ergol
 
 ### Trouver l'identifiant de votre clavier
 
-Pour configurer un clavier spécifique, il est nécessaire de trouver son identifiant.  
-Vous pouvez le faire en exécutant la commande `swaymsg -t get_inputs` dans un terminal.  
-Cette commande listera tous les périphériques d'entrée de votre machine. Recherchez, dans cette liste, le bloc correspondant à votre clavier.  
-La ligne indiquant son identifiant est celle commençant par `Identifier:`.  
-Notez que les parties correspondant à des claviers possèdent une ligne `Type: Keyboard`.  
+Pour configurer différemment un clavier spécifique, il est nécessaire de trouver son identifiant. Vous pouvez le faire en exécutant la commande `swaymsg -t get_inputs` dans un terminal. Cette commande listera tous les périphériques d'entrée de votre machine. Recherchez, dans cette liste, le bloc correspondant à votre clavier.
+
+La ligne indiquant son identifiant est celle commençant par `Identifier:`. Notez que les parties correspondant à des claviers possèdent une ligne `Type: Keyboard`.
+
 Voici un exemple de données retournées par la commande :
 
-```sh
+```text
 Input device: ZMK Project Cradio Keyboard
 Type: Keyboard
 Identifier: 7504:24926:ZMK_Project_Cradio_Keyboard
@@ -57,8 +70,8 @@ Une fois l'identifiant de votre clavier obtenu, il suffit d'ajouter ce bloc à v
 
 ```text
 input "7504:24926:ZMK_Project_Cradio_Keyboard" {
-xkb_layout fr
-xkb_variant ergol
+    xkb_layout fr
+    xkb_variant ergol
 }
 ```
 
