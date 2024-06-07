@@ -23,16 +23,16 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 Téléchargement
 --------------------------------------------------------------------------------
 
-[Pilotes nomades][]
+Pilotes nomades : [ergol_nomade.zip][]
 : Une archive zip contenant les pilotes ne nécessitant pas de droits
 d’administrations, peuvent fonctionner depuis une clé USB. (pour tous les
 systèmes)
 
-[Windows][]
+Windows : [ergol_kbd.exe][]
 : Exécuter l’installeur et relancer la session. La disposition de clavier
 apparaît dans la barre de langues (indicateur de la barre des tâches).
 
-[macOS][]
+macOS : [ergol.keylayout][]
 : Enregistrer dans `/Library/Keyboard Layouts` et relancer la session. La
 disposition de clavier est disponible dans les préférences « Langue et Texte »,
 onglet « Méthodes de saisie ».
@@ -42,7 +42,7 @@ utilisateur courant), mais la disposition ne sera pas active au login.
 touches](karabiner_settings.png) [⌘ Command]{.kbd} et [⌥ Option]{.kbd} à droite,
 afin d’accéder plus facilement à la couche de symboles.
 
-[GNU/Linux][]
+GNU/Linux : [ergol.xkb_symbols][]
 : Copier ce pilote dans `xkb/symbols/custom` : <pre>
     sudo wget -O ${XKB_CONFIG_ROOT:-/usr/share/X11/xkb}/symbols/custom \
     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols </pre>
@@ -56,6 +56,9 @@ source][] à [XKalamine][].
 ne fonctionne que si Ergo‑L est défini comme disposition par défaut, i.e. en
 haut de la liste dans les préférences clavier.
 
+Cavalier : [cavalier.pdf][]
+: Une aide pour apprendre la dispo. À imprimmer, plier et placer sur le bureau !
+
 
 Licence
 --------------------------------------------------------------------------------
@@ -63,10 +66,11 @@ Licence
 [WTFPL](http://wtfpl.net/) – Do What the Fuck You Want to Public License.
 
 
-[fichier source]:  /layouts/ergol.toml
-[Pilotes nomades]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_nomade.zip
-[Windows]:         https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_kbd.exe
-[macOS]:           https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.keylayout
-[GNU/Linux]:       https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols
-[XKalamine]:       https://github.com/OneDeadKey/kalamine#xkalamine
-[Karabiner]:       https://karabiner-elements.pqrs.org
+[fichier source]:    /layouts/ergol.toml
+[cavalier.pdf]:      cavalier.pdf
+[ergol_nomade.zip]:  https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_nomade.zip
+[ergol_kbd.exe]:     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_kbd.exe
+[ergol.keylayout]:   https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.keylayout
+[ergol.xkb_symbols]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols
+[XKalamine]:         https://github.com/OneDeadKey/kalamine#xkalamine
+[Karabiner]:         https://karabiner-elements.pqrs.org
