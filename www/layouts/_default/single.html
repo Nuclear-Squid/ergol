@@ -14,4 +14,8 @@
     </p>
   {{- end -}}
 
+  {{ with .Params.comments }}
+    {{ partial "comments.html" . }}
+  {{ end }}
+
 {{ end }}
