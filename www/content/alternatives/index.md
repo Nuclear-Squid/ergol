@@ -199,7 +199,7 @@ Elle est *utilisable*, mais pas *optimisée* pour ça.
 [erglace]:    /erglace
 [lafayette]:  /lafayette/#qwerty-lafayette
 [colemak ft]: /lafayette/#colemak-french-touch
-[bépolar]:    /lafayette/#bepolar
+[bépolar]:    /lafayette/#bépolar
 [azerty]:     /stats/#/azerty//en+fr
 
 [1DFH]:                /presentation#dfh-1u-distance-from-home
