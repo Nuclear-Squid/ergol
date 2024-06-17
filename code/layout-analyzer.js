@@ -68,6 +68,38 @@ window.addEventListener('DOMContentLoaded', () => {
     element.querySelector(sel).innerText = fmtPercent(num, precision);
   };
 
+  const getKeyPositionQuality = keyCode => {
+    // This is cursed, there *has* to be a better way
+    switch (keyCode) {
+      case 'KeyA':
+      case 'KeyS':
+      case 'KeyD':
+      case 'KeyF':
+      case 'KeyW':
+      case 'KeyE':
+      case 'KeyV':
+      case 'KeyJ':
+      case 'KeyK':
+      case 'KeyL':
+      case 'Semicolon':
+      case 'KeyM':
+      case 'KeyI':
+      case 'KeyO':
+        return 'good';
+
+      case 'KeyC':
+      case 'KeyR':
+      case 'KeyG':
+      case 'KeyH':
+      case 'KeyU':
+      case 'KeyComma':
+        return 'meh';
+
+      default:
+        return 'bad';
+    }
+  };
+
   // display a finger/frequency table and bar graph
   const showFingerData = (sel, values, maxValue, precision) => {
     const canvas = document.querySelector(`${sel} canvas`);
@@ -258,6 +290,25 @@ window.addEventListener('DOMContentLoaded', () => {
     );
     showPercent('#sku-all', sumUpFrequencies(skuCount), 2, '#Digrammes');
 
+    // document.querySelector("stats-canvas").renderData([
+    //   [
+    //     { "good": 4 , "meh": 3, "bad": 5 },
+    //     { "good": 7 , "meh": 3, "bad": 5 },
+    //     { "good": 7 , "meh": 3, "bad": 5 },
+    //     { "good": 12, "meh": 3, "bad": 5 },
+    //   ],
+    //   [
+    //     { "good": 7 , "meh": 3, "bad": 5 },
+    //     { "good": 7 , "meh": 3, "bad": 5 },
+    //   ],
+    //   [
+    //     { "good": 12, "meh": 3, "bad": 5 },
+    //     { "good": 7 , "meh": 3, "bad": 5 },
+    //     { "good": 7 , "meh": 3, "bad": 5 },
+    //     { "good": 4 , "meh": 3, "bad": 5 },
+    //   ],
+    // ], 26);
+
     const achoppements = document.getElementById('Achoppements');
     achoppements.updateTableData('#sfu-digrams', 'SFU', sfuDigrams, 2);
     achoppements.updateTableData(
@@ -431,6 +482,29 @@ window.addEventListener('DOMContentLoaded', () => {
     Object.entries(fingerCount).forEach(([f, count]) => {
       fingerLoad[f] = (100 * count) / keystrokes;
     });
+
+    const getLoadGroup = fingers => fingers.map(finger => {
+      const res = {
+        'good': 0,
+        'meh': 0,
+        'bad': 0,
+      };
+
+      for (const key of finger) {
+        res[getKeyPositionQuality(key)] += keyCount[key] ?? 0;
+      }
+
+      return res;
+    });
+
+    const allFingers = Object.values(keyboard.fingerAssignments);
+
+    const load = [
+      getLoadGroup(allFingers.splice(0, 4)),
+      getLoadGroup(allFingers),
+    ];
+
+    document.querySelector('stats-canvas').renderData(load, 25);
 
     // display metrics
     const sum = (acc, id) => fingerLoad[id] + acc;

@@ -4,7 +4,7 @@ title = "Analyseur"
 [params]
 description = "Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès."
 cssSheets = ["/css/heatmap.css"]
-jsModules = ["/js/x-keyboard.js", "/js/collapsable-table.js"]
+jsModules = ["/js/x-keyboard.js", "/js/collapsable-table.js", "js/stats-canvas.js"]
 jsScripts = ["/js/layout-analyzer.js", "/js/keebs.js"]
 footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
@@ -44,6 +44,7 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
   <canvas></canvas>
   <table></table>
 </div>
+<stats-canvas></stats-canvas>
 
 <h3>Digrammes à un doigt</h3>
 <small><span id="sfu-all"></span></small>
