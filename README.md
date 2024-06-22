@@ -41,7 +41,8 @@ Layout
 
 ![base layout](www/content/presentation/ergol_fr.svg)
 
-The dead <kbd>★</kbd> key gives access to all acute accents, grave accents, cedillas, digraphs and quote signs you’ll need to write in proper French:
+The dead <kbd>★</kbd> key gives access to all acute accents, grave accents,
+cedillas, digraphs and quote signs you’ll need to write in proper French:
 
 ![dead key layout](www/content/presentation/ergol_1dk.svg)
 
@@ -49,7 +50,8 @@ The dead <kbd>★</kbd> key gives access to all acute accents, grave accents, ce
 
 ![altgr layout](www/content/presentation/ergol_altgr.svg)
 
-The default layout allows to write in English, French, German and Esperanto easily.
+The default layout allows to write in English, French, German and Esperanto
+easily.
 
 [More information on the website](https://ergol.org) (in French).
 
@@ -100,7 +102,10 @@ setxkbmap fr -variant ergol  # Switch your keyboard layout to ergol
 
 _Troubleshooting with ubuntu / wayland_
 
-There is a weird issue where Ergo-L works fine with some applications (phpstorm, gnome,...) but not on others (libreoffice, terminator). The deadkey remain for two chars instead of only one. (ex: `a[deadkey]sen` should display `aéen` but it displays `aéèn` instead.).
+There is a weird issue where Ergo-L works fine with some applications
+(phpstorm, gnome,...) but not on others (libreoffice, terminator). The deadkey
+remain for two chars instead of only one. (ex: `a[deadkey]sen` should display
+`aéen` but it displays `aéèn` instead.).
 
 This issue is solved by adding at the end of `/etc/environment` the following lines:
 
