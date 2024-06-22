@@ -29,6 +29,8 @@ window.addEventListener('DOMContentLoaded', () => {
     '\u2026': '...', // (…) ellipsis
   };
 
+  const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
+
   // create an efficient hash table to parse a text
   const supportedChars = (keymap, deadkeys) => {
     const charTable = {};
@@ -421,29 +423,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // compute the heatmap for a text on a given layout
   const computeHeatmap = () => {
-    const keyCount = {};
-    Object.values(keyChars).forEach(keys => {
-      keys.forEach(key => {
-        keyCount[key] = 0;
-      });
-    });
-
-    // count the key strokes in the corpus
     const unsupportedChars = {};
-    Object.entries(corpus).forEach(([char, count]) => {
-      const keys = keyChars[char] || keyChars[substituteChars[char]];
-      if (keys) {
-        keys.forEach(key => {
-          keyCount[key] += count;
-        });
-      } else {
-        unsupportedChars[char] = count;
-      }
-    });
+    const keyCount = {};
+    let totalUnsupportedChars = 0;
+    let extraKeysFrequency = 0;
 
-    const totalUnsupportedChars = Object.values(unsupportedChars)
-      .reduce((acc, elem) => acc + elem, 0)
-      .toFixed(3);
+    for (const [char, frequency] of Object.entries(corpus)) {
+      const keys = charToKeys(char);
+      if (!keys) {
+        unsupportedChars[char] = frequency;
+        totalUnsupportedChars += frequency;
+        continue;
+      }
+      for (const key of keys) {
+        if (!(key in keyCount)) keyCount[key] = 0;
+        keyCount[key] += frequency;
+      }
+      extraKeysFrequency += frequency * (keys.length - 1);
+    }
 
     // Set global variable, controls the color of canvas element for finger data
     // (There’s ~probably~ a better way to do this)
@@ -459,68 +456,44 @@ window.addEventListener('DOMContentLoaded', () => {
       .slice(0, -1); // remove `)` to add opacity later
 
     Object.keys(keyboard.layout.keyMap).forEach(key => {
-      if (key !== 'Enter') {
-        const count = key in keyCount ? keyCount[key] : 0;
-        const lvl = (contrast * count) / total;
-        colormap[key] = impreciseData
-          ? headingColor + `, ${lvl})` // orange scale
-          : `rgb(127, 127, 255, ${lvl})`; // blue scale
-      }
+      if (key === 'Enter') return;
+      const count = keyCount[key] ?? 0;
+      const lvl = (contrast * count) / total;
+      colormap[key] = impreciseData
+        ? headingColor + `, ${lvl})` // gray scale
+        : `rgb(127, 127, 255, ${lvl})`; // blue scale
     });
     keyboard.setCustomColors(colormap);
 
-    // compute metrics
-    const fingerCount = {};
-    const fingerLoad = {};
-    let keystrokes = 0;
-    Object.entries(keyboard.fingerAssignments).forEach(([f, keys]) => {
-      fingerCount[f] = keys
-        .filter(id => id in keyCount)
-        .reduce((acc, id) => acc + keyCount[id], 0);
-      keystrokes += fingerCount[f];
-    });
-    Object.entries(fingerCount).forEach(([f, count]) => {
-      fingerLoad[f] = (100 * count) / keystrokes;
-    });
-
-    const getLoadGroup = fingers => fingers.map(finger => {
-      const res = {
-        'good': 0,
-        'meh': 0,
-        'bad': 0,
-      };
-
-      for (const key of finger) {
-        res[getKeyPositionQuality(key)] += keyCount[key] ?? 0;
-      }
-
-      return res;
+    const getLoadGroup = fingers_array => fingers_array.map(finger => {
+      const rv = { "good": 0, "meh": 0, "bad": 0 };
+      finger.forEach(key => {
+        const keyQuality = getKeyPositionQuality(key);
+        const normalizedFrequency = keyCount[key] * 100 / (100 + extraKeysFrequency) || 0;
+        rv[keyQuality] += normalizedFrequency;
+      });
+      return rv;
     });
 
     const allFingers = Object.values(keyboard.fingerAssignments);
 
-    const load = [
-      getLoadGroup(allFingers.splice(0, 4)),
-      getLoadGroup(allFingers),
+    const loadGroups = [
+      getLoadGroup(allFingers.slice(0, 4)),
+      getLoadGroup(allFingers.slice(-4)),
     ];
 
-    document.querySelector('stats-canvas').renderData(load, 25);
+    document.querySelector('#load stats-canvas').renderData(loadGroups, 25);
+    document.querySelector('#load small').innerHTML =
+      loadGroups.map(group => group.reduce((acc, fingerFreq) =>
+            acc + fingerFreq.good + fingerFreq.meh + fingerFreq.bad, 0
+          ).toFixed(1) + '%'
+        ).join(' / ');
 
-    // display metrics
-    const sum = (acc, id) => fingerLoad[id] + acc;
-    showPercent('#load-left', ['l2', 'l3', 'l4', 'l5'].reduce(sum, 0), 1);
-    showPercent('#load-right', ['r2', 'r3', 'r4', 'r5'].reduce(sum, 0), 1);
     showPercent('#unsupported-all', totalUnsupportedChars, 3, '#Achoppements');
-    showFingerData('#load', fingerLoad, 25.0, 1, totalUnsupportedChars >= 0.5);
 
     document
       .getElementById('Achoppements')
-      .updateTableData(
-        '#unsupported',
-        'non-support\u00e9',
-        unsupportedChars,
-        3,
-      );
+      .updateTableData('#unsupported', 'non-support\u00e9', unsupportedChars, 3);
   };
 
   // keyboard state: these <select> element IDs match the x-keyboard properties
