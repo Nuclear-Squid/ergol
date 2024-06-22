@@ -56,6 +56,12 @@ easily.
 [More information on the website](https://ergol.org) (in French).
 
 
+Availability
+--------------------------------------------------------------------------------
+
+Kalamine is available on Debian Unstable. It is automatically installed
+via the `xkb-data` package.
+
 Install
 --------------------------------------------------------------------------------
 
