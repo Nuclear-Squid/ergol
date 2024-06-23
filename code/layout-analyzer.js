@@ -81,36 +81,19 @@ window.addEventListener('DOMContentLoaded', () => {
   const sumUpBar = bar => bar.good + bar.meh + bar.bad;
   const sumUpBarGroup = group => group.reduce((acc, bar) => acc + sumUpBar(bar), 0);
 
+  // This has to be the *stupidest* way to format code, and I love it
+  const goodKeysSet = new Set([
+            'KeyW', 'KeyE',                    'KeyI', 'KeyO',
+    'KeyA', 'KeyS', 'KeyD', 'KeyF',    'KeyJ', 'KeyK', 'KeyL', 'Semicolon',
+                            'KeyV',    'KeyM',
+  ]);
+
+  const mehKeysSet = new Set([ 'KeyC', 'KeyR', 'KeyG', 'KeyH', 'KeyU', 'KeyComma' ]);
+
   const getKeyPositionQuality = keyCode => {
-    // This is cursed, there *has* to be a better way
-    switch (keyCode) {
-      case 'KeyA':
-      case 'KeyS':
-      case 'KeyD':
-      case 'KeyF':
-      case 'KeyW':
-      case 'KeyE':
-      case 'KeyV':
-      case 'KeyJ':
-      case 'KeyK':
-      case 'KeyL':
-      case 'Semicolon':
-      case 'KeyM':
-      case 'KeyI':
-      case 'KeyO':
-        return 'good';
-
-      case 'KeyC':
-      case 'KeyR':
-      case 'KeyG':
-      case 'KeyH':
-      case 'KeyU':
-      case 'KeyComma':
-        return 'meh';
-
-      default:
-        return 'bad';
-    }
+    if (goodKeysSet.has(keyCode)) return "good";
+    if (mehKeysSet.has(keyCode)) return "meh";
+    return "bad";
   };
 
   // display a finger/frequency table and bar graph

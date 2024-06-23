@@ -122,7 +122,6 @@ class StatsCanvas extends HTMLElement {
       const qualities = Object.keys(this.colors);
       if (!flipVertically) qualities.reverse();
 
-      // console.log(
       table.innerHTML =
         qualities
           .map(q => extractQuality(values, q))
@@ -130,19 +129,12 @@ class StatsCanvas extends HTMLElement {
           .map(row => row.map(group => group.map(item => fmtPercent(item, precision))))
           .map(renderTableRow)
           .join('');
-      // )
     }
     else {
       table.innerHTML = renderTableRow(
         values.map(group => group.map(bar => fmtPercent(sumUpBar(bar), precision)))
       );
     }
-
-    // const tableEntries = values.map(group =>
-    //   group.map(column => `<td>${totalLoad(column)}</td>`).join('')
-    // ).join(`<td id="empty"></td>`);
-
-    // table.innerHTML = `<tr>${tableEntries}</tr>`;
 
     canvasContext.restore();
   }
