@@ -44,9 +44,21 @@ class StatsCanvas extends HTMLElement {
     shadow.appendChild(document.createElement('table'));
   }
 
-  // Values is an array of array of objects with `good`, `meh`, and `bad`
-  // fields, all of them are `Numbers`.
-  renderData(values, maxValue) {
+  renderData({
+    // An array of array of objects with `good`, `meh`, and `bad` fields
+    // (all of them are `Numbers`). Padding is added betweer the inner arrays
+    values,
+    // Which value should correspond to 100% height in the bar chart
+    maxValue,
+    // Number of decimals shown in the percentages below the bar chart
+    precision,
+    // If true: flips the order in which values are shown
+    // (`bad goes at the bottom, when it’s at the top normally).
+    flipVertically = false,
+    // If true: shows the value of each field separately below the bar chart, instead
+    // of the total. (Rows filled with 0 are ignored).
+    detailedValues = false
+  }={}) {
     const table = this.shadowRoot.querySelector('table');
     const canvas = this.shadowRoot.querySelector('canvas');
     const canvasContext = canvas.getContext('2d');
@@ -59,10 +71,13 @@ class StatsCanvas extends HTMLElement {
 
     const scale = canvas.height / maxValue;
 
-    const renderBarPart = (groupIndex, columnIndex, column) => {
+    const renderBarPart = (groupIndex, columnIndex, column, flipVerically) => {
       let renderedBarHeight = 0;
 
-      for (const [quality, color] of Object.entries(this.colors)) {
+      const colors = Object.entries(this.colors);
+      if (flipVertically) colors.reverse();
+
+      for (const [quality, color] of colors) {
         canvasContext.fillStyle = color;
         renderedBarHeight += column[quality];
 
@@ -78,23 +93,56 @@ class StatsCanvas extends HTMLElement {
       }
     };
 
-    const totalLoad = column => {
-      const sum = column.good + column.meh + column.bad;
-      return `${sum.toFixed(1)}%`;
-    };
+    const sumUpBar = bar => bar.good + bar.meh + bar.bad;
+    const fmtPercent = (num, p) => `${Math.round(10 ** p * num) / 10 ** p}%`;
 
     canvasContext.save();
     let absoluteColumnIndex = 0;
 
     values.forEach((group, groupIndex) => {
-      group.forEach(column => renderBarPart(groupIndex, absoluteColumnIndex++, column));
+      group.forEach(column => renderBarPart(groupIndex, absoluteColumnIndex++, column, flipVertically));
     });
 
-    const tableEntries = values.map(group =>
-      group.map(column => `<td>${totalLoad(column)}</td>`).join('')
-    ).join(`<td id="empty"></td>`);
+    // Takes in an Array of Array of Numbers, outputs a table row
+    const renderTableRow = row => {
+      const rowContents =
+        row.map(group =>
+          group.map(item => `<td>${item}</td>`).join('')
+        ).join('<td id="empty"></td>')
 
-    table.innerHTML = `<tr>${tableEntries}</tr>`;
+      return `<tr>${rowContents}</tr>`;
+    };
+
+    if (detailedValues) {
+      const extractQuality = (values, quality) =>
+        values.map(group => group.map(bar => bar[quality]));
+
+      const notAllZeros = row => row.some(group => group.some(item => item != 0));
+
+      const qualities = Object.keys(this.colors);
+      if (!flipVertically) qualities.reverse();
+
+      // console.log(
+      table.innerHTML =
+        qualities
+          .map(q => extractQuality(values, q))
+          .filter(notAllZeros)
+          .map(row => row.map(group => group.map(item => fmtPercent(item, precision))))
+          .map(renderTableRow)
+          .join('');
+      // )
+    }
+    else {
+      table.innerHTML = renderTableRow(
+        values.map(group => group.map(bar => fmtPercent(sumUpBar(bar), precision)))
+      );
+    }
+
+    // const tableEntries = values.map(group =>
+    //   group.map(column => `<td>${totalLoad(column)}</td>`).join('')
+    // ).join(`<td id="empty"></td>`);
+
+    // table.innerHTML = `<tr>${tableEntries}</tr>`;
 
     canvasContext.restore();
   }

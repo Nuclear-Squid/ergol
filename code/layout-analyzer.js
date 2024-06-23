@@ -70,6 +70,17 @@ window.addEventListener('DOMContentLoaded', () => {
     element.querySelector(sel).innerText = fmtPercent(num, precision);
   };
 
+  const showPercentAll = (sel, nums, precision, parentId) => {
+    const element = parentId
+      ? document.querySelector(parentId).shadowRoot
+      : document;
+    element.querySelector(sel).innerText =
+      nums.map(value => fmtPercent(value, precision)).join(' / ');
+  };
+
+  const sumUpBar = bar => bar.good + bar.meh + bar.bad;
+  const sumUpBarGroup = group => group.reduce((acc, bar) => acc + sumUpBar(bar), 0);
+
   const getKeyPositionQuality = keyCode => {
     // This is cursed, there *has* to be a better way
     switch (keyCode) {
@@ -206,13 +217,9 @@ window.addEventListener('DOMContentLoaded', () => {
         default:
           return Math.abs(getKeyRow(kc1) - getKeyRow(kc2)) >= 2;
       }
-      // if (fingerUsed == '54' || fingerUsed == '45') {
-      //   return Math.abs(getKeyRow(kc1) - getKeyRow(acc)) >= 1;
-      // }
-      // return Math.abs(getKeyRow(kc1) - getKeyRow(acc)) >= 2;
     };
 
-    // note: in Ergol, ï and î are same-finger digrams even though they are
+    // note: in Ergol, ï and · are same-finger digrams even though they are
     // single characters => count symbols, too?
     const sum = (acc, freq) => acc + freq;
     const total = Object.values(digrams).reduce(sum, 0);
@@ -263,8 +270,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const sumUpFrequencies = dict => Object.values(dict).reduce(sum, 0);
 
-    showFingerData('#sfu', sfuCount, 3.5, 2);
-    showFingerData('#sku', skuCount, 3.5, 2);
+    const mergeSfuSku = (sfu, sku, baseIndex) => {
+      const rv = [];
+      for (let i = baseIndex; i < baseIndex + 4; i++) {
+        rv.push({ "good": 0, "meh": sku[i], "bad": sfu[i] });
+      }
+      return rv;
+    };
+
+    const badDigrams = [
+      mergeSfuSku(Object.values(sfuCount), Object.values(skuCount), 0),
+      mergeSfuSku(Object.values(sfuCount), Object.values(skuCount), 4),
+    ];
+
+    document.querySelector('#sfu stats-canvas').renderData({
+      values: badDigrams,
+      maxValue: 4,
+      precision: 2,
+      flipVertically: true,
+      detailedValues: true,
+    });
 
     showPercent('#sfu-all', sumUpFrequencies(sfuCount), 2);
     showPercent('#sku-all', sumUpFrequencies(skuCount), 2);
@@ -291,25 +316,6 @@ window.addEventListener('DOMContentLoaded', () => {
       '#Digrammes',
     );
     showPercent('#sku-all', sumUpFrequencies(skuCount), 2, '#Digrammes');
-
-    // document.querySelector("stats-canvas").renderData([
-    //   [
-    //     { "good": 4 , "meh": 3, "bad": 5 },
-    //     { "good": 7 , "meh": 3, "bad": 5 },
-    //     { "good": 7 , "meh": 3, "bad": 5 },
-    //     { "good": 12, "meh": 3, "bad": 5 },
-    //   ],
-    //   [
-    //     { "good": 7 , "meh": 3, "bad": 5 },
-    //     { "good": 7 , "meh": 3, "bad": 5 },
-    //   ],
-    //   [
-    //     { "good": 12, "meh": 3, "bad": 5 },
-    //     { "good": 7 , "meh": 3, "bad": 5 },
-    //     { "good": 7 , "meh": 3, "bad": 5 },
-    //     { "good": 4 , "meh": 3, "bad": 5 },
-    //   ],
-    // ], 26);
 
     const achoppements = document.getElementById('Achoppements');
     achoppements.updateTableData('#sfu-digrams', 'SFU', sfuDigrams, 2);
@@ -482,12 +488,12 @@ window.addEventListener('DOMContentLoaded', () => {
       getLoadGroup(allFingers.slice(-4)),
     ];
 
-    document.querySelector('#load stats-canvas').renderData(loadGroups, 25);
-    document.querySelector('#load small').innerHTML =
-      loadGroups.map(group => group.reduce((acc, fingerFreq) =>
-            acc + fingerFreq.good + fingerFreq.meh + fingerFreq.bad, 0
-          ).toFixed(1) + '%'
-        ).join(' / ');
+    document.querySelector('#load stats-canvas').renderData({
+      values: loadGroups,
+      maxValue: 25,
+      precision: 1
+    });
+    showPercentAll('#load small', loadGroups.map(sumUpBarGroup), 1);
 
     showPercent('#unsupported-all', totalUnsupportedChars, 3, '#Achoppements');
 
