@@ -31,34 +31,96 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
 
+  const is1DFH = keyCode =>
+    keyCode.startsWith('Key') ||
+      ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode);
+
   // create an efficient hash table to parse a text
   const supportedChars = (keymap, deadkeys) => {
     const charTable = {};
     const deadTable = {};
 
-    // main chars, directly accessible (or with Shift / AltGr)
-    Object.entries(keymap).forEach(([key, values]) => {
-      values.forEach(char => {
-        if (!(char in charTable)) {
-          if (char.length === 1) {
-            charTable[char] = [key];
-          } else if (!(char in deadTable)) {
-            deadTable[char] = key;
-          }
-        }
-      });
-    });
+    // In case there are multiple ways of typing a singel char, this checks
+    // which sequence is easier to type (examples are in Ergo‑L)
+    const requiresLessEffort = (originalKeySequence, newKeySequence) => {
+      const arrayCount = (array, predicate) => {
+        let rv = 0;
+        array.forEach(elem => { if (predicate(elem)) rv++ });
+        return rv;
+      };
 
-    // additional chars, requiring dead keys
-    Object.entries(deadkeys).forEach(([key, dict]) => {
-      Object.entries(dict).forEach(([orig, char]) => {
-        if (!(char in charTable) && charTable[orig]) {
-          charTable[char] = [deadTable[key]].concat(charTable[orig]);
-        }
-      });
-    });
+      const cmp = (val1, val2) => {
+        if (val1 > val2) return "more";
+        if (val1 < val2) return "less";
+        return "same";
+      };
 
-    return charTable;
+      const cmpNot1DFH = cmp(
+        arrayCount(newKeySequence, key => !is1DFH(key.keyCode)),
+        arrayCount(originalKeySequence, key => !is1DFH(key.keyCode))
+      );
+
+      // Checks if new sequence has less that aren’t 1DFH.
+      // => will prefer altgr[B] over shift[9] for `#`.
+      if (cmpNot1DFH == "less") return true;
+      if (cmpNot1DFH == "more") return false;
+      // If it’s the same, we check the rest.
+
+      const cmpHighestLevel = cmp(
+        newKeySequence.reduce((max, elem) => Math.max(max, elem.level), 0),
+        originalKeySequence.reduce((max, elem) => Math.max(max, elem.level), 0)
+      );
+
+      // Checks if the highest layer is lower in the new squence.
+      // => will prefer 1dk -> `r` over altgr[D] for `)`.
+      if (cmpHighestLevel == "less") return true;
+      if (cmpHighestLevel == "more") return false;
+
+      // Checks if the new sequence has fewer keystrokes than the original one.
+      // => will prefer 1dk -> `i` over 1dk -> 1dk -> `i` for `ï`
+      return newKeySequence.length < originalKeySequence.length;
+    };
+
+    const insertInTable = (table, char, keySequence) => {
+      if (!(char in table) || requiresLessEffort(table[char], keySequence)) {
+        table[char] = keySequence;
+      }
+    };
+
+    function insertDeadKeySequences(charTable, deadKeys, currentDeadKey) {
+      for (const [baseChar, outputChar] of Object.entries(deadKeys[currentDeadKey.name])) {
+        if (!(baseChar in charTable)) continue;
+        const newSequence = currentDeadKey.sequence.concat(charTable[baseChar]);
+
+        if (outputChar.length == 1)
+          insertInTable(charTable, outputChar, newSequence);
+        else
+          insertDeadKeySequences(charTable, deadKeys, {
+            "name": outputChar,
+            "sequence": newSequence,
+          });
+      }
+    }
+
+    for (const [keyCode, charsPerLevel] of Object.entries(keymap)) {
+      for (const [level, char] of charsPerLevel.entries()) {
+        const table = char.length == 1 ? charTable : deadTable;
+        insertInTable(table, char, [{
+          "keyCode": keyCode,
+          "level": level,
+        }]);
+      }
+    }
+
+    for (const [deadKey, sequence] of Object.entries(deadTable)) {
+      insertDeadKeySequences(charTable, deadkeys, { "name": deadKey, "sequence": sequence });
+    }
+
+    const finalTable = {};
+    for (const [char, sequence] of Object.entries(charTable)) {
+      finalTable[char] = sequence.map(key => key.keyCode)
+    }
+    return finalTable;
   };
 
   // display a percentage value
