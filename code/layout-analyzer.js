@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
         arrayCount(originalKeySequence, key => !is1DFH(key.keyCode))
       );
 
-      // Checks if new sequence has less that aren’t 1DFH.
+      // Checks if new sequence has less keys that aren’t 1DFH.
       // => will prefer altgr[B] over shift[9] for `#`.
       if (cmpNot1DFH == "less") return true;
       if (cmpNot1DFH == "more") return false;
@@ -104,11 +104,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     for (const [keyCode, charsPerLevel] of Object.entries(keymap)) {
       for (const [level, char] of charsPerLevel.entries()) {
-        const table = char.length == 1 ? charTable : deadTable;
-        insertInTable(table, char, [{
-          "keyCode": keyCode,
-          "level": level,
-        }]);
+        const sequence = [{ keyCode, level }];
+        insertInTable(charTable, char, sequence);
+        if (char.length != 1) insertInTable(deadTable, char, sequence);
       }
     }
 
