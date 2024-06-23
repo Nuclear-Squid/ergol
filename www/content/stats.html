@@ -4,7 +4,7 @@ title = "Analyseur"
 [params]
 description = "Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès."
 cssSheets = ["/css/heatmap.css"]
-jsModules = ["/js/x-keyboard.js", "/js/collapsable-table.js"]
+jsModules = ["/js/x-keyboard.js", "/js/collapsable-table.js", "js/stats-canvas.js"]
 jsScripts = ["/js/layout-analyzer.js", "/js/keebs.js"]
 footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
@@ -38,26 +38,17 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 
 <h2>Métriques</h2>
 
-<h3>Charge des doigts</h3>
-<small><span id="load-left"></span> / <span id="load-right"></span></small>
-<div id="load">
-  <canvas></canvas>
-  <table></table>
-</div>
+<section id="load">
+  <h3>Charge des doigts</h3>
+  <small></small>
+  <stats-canvas></stats-canvas>
+</section>
 
-<h3>Digrammes à un doigt</h3>
-<small><span id="sfu-all"></span></small>
-<div id="sfu">
-  <canvas></canvas>
-  <table></table>
-</div>
-
-<h3>Touches doublées</h3>
-<small><span id="sku-all"></span></small>
-<div id="sku">
-  <canvas></canvas>
-  <table></table>
-</div>
+<section id="sfu">
+  <h3>Digrammes de même doigt / touche</h3>
+  <small><span id="sfu-all"></span> / <span id="sku-all"></span></small>
+  <stats-canvas></stats-canvas>
+</section>
 
 <collapsable-table id="Achoppements">
   <small>
