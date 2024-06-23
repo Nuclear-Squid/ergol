@@ -194,20 +194,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // compute the same-finger usages and rolls
   const computeDigrams = () => {
-    const skuCount = {}; // same-key usage
-    const sfuCount = {}; // same-finger usage
-    const skuDigrams = {};
-    const sfuDigrams = {};
-    const inwardDigrams = {};
-    const outwardDigrams = {};
-    const extendedRolls = {};
-    const scisors = {};
+    const allDigrams = Object.fromEntries(
+      ['sfb', 'skb', 'lsb', 'handChange', 'scisor', 'extendedScisor', 'inwardRoll', 'outwardRoll']
+        .map(x => [x, { 'digrams': {}, 'count': 0 }])
+    );
 
-    const fingers = ['l5', 'l4', 'l3', 'l2', 'r2', 'r3', 'r4', 'r5'];
-    fingers.forEach(finger => {
-      sfuCount[finger] = 0;
-      skuCount[finger] = 0;
-    });
+    // JS, I know you suck at FP, but what the fuck is that, man??
+    const totalSfuSkuPerFinger = Array(2).fill(0).map(_ =>
+      Array(4).fill(0).map(_ => ({ "good": 0, "meh": 0, "bad": 0 }))
+    );
 
     const keyFinger = {};
     Object.entries(keyboard.fingerAssignments).forEach(([f, keys]) => {
@@ -218,12 +213,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Index Inner or outside of 3×10 matrix.
     const requiresExtension = keyCode =>
-      Array.from('TGBNHY').some(l => l == keyCode.at(3)) ||
-      !(
-        keyCode.startsWith('Key') ||
-        ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode)
-      )
-      ;
+      Array.from('TGBNHY').some(l => l == keyCode.at(3)) || !is1DFH(keyCode);
 
     const getKeyRow = keyCode => {
       if (keyCode === 'Space') return 0;
@@ -264,118 +254,84 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    // note: in Ergol, ï and · are same-finger digrams even though they are
+    // NOTE: in Ergol, ï and · are same-finger digrams even though they are
     // single characters => count symbols, too?
-    const sum = (acc, freq) => acc + freq;
-    const total = Object.values(digrams).reduce(sum, 0);
-    Object.entries(digrams)
-      .map(([digram, frequency]) => [digram, (100 * frequency) / total])
-      .forEach(([digram, frequency]) => {
-        keyboard.layout.getKeySequence(digram).reduce((acc, key) => {
-          const curr_finger = keyFinger[key.id];
-          const last_finger = keyFinger[acc];
-          // Safeguard, skip iteration if check fails
-          if (!curr_finger || !last_finger) return key.id;
+    const getDigramType = (lastKeyCode, currKeyCode, lastFinger, currFinger) => {
+      if (lastKeyCode === currKeyCode) return 'skb';
+      if (currFinger === lastFinger) return 'sfb';
+      if (currFinger[0] !== lastFinger[0]) return 'handChange';
 
-          if (acc === key.id) {
-            // same key
-            skuDigrams[digram] = frequency;
-            skuCount[curr_finger] += frequency;
-          } else if (curr_finger === last_finger) {
-            // same finger
-            sfuDigrams[digram] = frequency;
-            sfuCount[curr_finger] += frequency;
-          } else if (curr_finger[0] === last_finger[0]) {
-            // same hand
-            // if (Math.abs(getKeyRow(key.id) - getKeyRow(acc)) >= 2) {
-            if (isScisor(key.id, acc, curr_finger, last_finger)) {
-              scisors[digram] = frequency;
+      if (isScisor(currKeyCode, lastKeyCode, currFinger, lastFinger))
+        return [lastKeyCode, currKeyCode].some(requiresExtension)
+          ? 'extendedScisor'
+          : 'scisor';
 
-              if (requiresExtension(key.id) || requiresExtension(acc)) {
-                extendedRolls[digram] = frequency;
-              }
-            } else {
-              if (requiresExtension(key.id) || requiresExtension(acc)) {
-                extendedRolls[digram] = frequency;
-              } else if (curr_finger[1] < last_finger[1]) {
-                inwardDigrams[digram] = frequency;
-              } else {
-                outwardDigrams[digram] = frequency;
-              }
-            }
-          }
-
-          return key.id;
-        }, '');
-      });
-
-    document.querySelector('#imprecise-data').style.display = impreciseData
-      ? 'block'
-      : 'none';
-
-    const sumUpFrequencies = dict => Object.values(dict).reduce(sum, 0);
-
-    const mergeSfuSku = (sfu, sku, baseIndex) => {
-      const rv = [];
-      for (let i = baseIndex; i < baseIndex + 4; i++) {
-        rv.push({ "good": 0, "meh": sku[i], "bad": sfu[i] });
-      }
-      return rv;
+      if ([lastKeyCode, currKeyCode].some(requiresExtension)) return 'lsb';
+      return currFinger[1] < lastFinger[1] ? 'inwardRoll' : 'outwardRoll';
     };
 
-    const badDigrams = [
-      mergeSfuSku(Object.values(sfuCount), Object.values(skuCount), 0),
-      mergeSfuSku(Object.values(sfuCount), Object.values(skuCount), 4),
-    ];
+    const getFingerPosition = ([hand, finger]) =>
+      hand == 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
+
+    const sum = (acc, freq) => acc + freq;
+    const total = Object.values(digrams).reduce(sum, 0);
+
+    for (const [digram, frequency] of Object.entries(digrams)) {
+      const keySequence = keyChars[digram.at(0)]?.concat(keyChars[digram.at(1)]);
+      if (keySequence?.[keySequence.length - 1] == undefined) continue;
+
+      for (let i = 0, j = 1; j < keySequence.length; i++, j++) {
+        const lastKeyCode = keySequence[i];
+        const currKeyCode = keySequence[j];
+        if (currKeyCode == 'Space' || lastKeyCode == 'Space') continue;
+
+        const lastFinger = keyFinger[lastKeyCode];
+        const currFinger = keyFinger[currKeyCode];
+        const normalizedFrequency = (100 * frequency) / total;
+
+        const digramType = getDigramType(lastKeyCode, currKeyCode, lastFinger, currFinger);
+        allDigrams[digramType].digrams[digram] = frequency;
+        allDigrams[digramType].count += normalizedFrequency;
+
+        if (digramType == 'sfb') {
+          const [groupIndex, itemIndex] = getFingerPosition(currFinger);
+          totalSfuSkuPerFinger[groupIndex][itemIndex].bad += normalizedFrequency;
+        }
+        else if (digramType == 'skb') {
+          const [groupIndex, itemIndex] = getFingerPosition(currFinger);
+          totalSfuSkuPerFinger[groupIndex][itemIndex].meh += normalizedFrequency;
+        }
+      }
+    }
 
     document.querySelector('#sfu stats-canvas').renderData({
-      values: badDigrams,
+      values: totalSfuSkuPerFinger,
       maxValue: 4,
       precision: 2,
       flipVertically: true,
       detailedValues: true,
     });
 
-    showPercent('#sfu-all', sumUpFrequencies(sfuCount), 2);
-    showPercent('#sku-all', sumUpFrequencies(skuCount), 2);
+    showPercent('#sfu-all', allDigrams.sfb.count, 2);
+    showPercent('#sku-all', allDigrams.skb.count, 2);
 
-    showPercent('#sfu-all', sumUpFrequencies(sfuCount), 2, '#Achoppements');
-    showPercent(
-      '#extensions-all',
-      sumUpFrequencies(extendedRolls),
-      2,
-      '#Achoppements',
-    );
-    showPercent('#scisors-all', sumUpFrequencies(scisors), 2, '#Achoppements');
+    showPercent('#sfu-all',        allDigrams.sfb.count,    2, '#Achoppements');
+    showPercent('#extensions-all', allDigrams.lsb.count,    2, '#Achoppements');
+    showPercent('#scisors-all',    allDigrams.scisor.count, 2, '#Achoppements');
 
-    showPercent(
-      '#inward-all',
-      sumUpFrequencies(inwardDigrams),
-      1,
-      '#Digrammes',
-    );
-    showPercent(
-      '#outward-all',
-      sumUpFrequencies(outwardDigrams),
-      1,
-      '#Digrammes',
-    );
-    showPercent('#sku-all', sumUpFrequencies(skuCount), 2, '#Digrammes');
+    showPercent('#inward-all',  allDigrams.inwardRoll.count,  1, '#Digrammes');
+    showPercent('#outward-all', allDigrams.outwardRoll.count, 1, '#Digrammes');
+    showPercent('#sku-all',     allDigrams.skb.count,         2, '#Digrammes');
 
     const achoppements = document.getElementById('Achoppements');
-    achoppements.updateTableData('#sfu-digrams', 'SFU', sfuDigrams, 2);
-    achoppements.updateTableData(
-      '#extended-rolls',
-      'extensions',
-      extendedRolls,
-      2,
-    );
-    achoppements.updateTableData('#scisors', 'ciseaux', scisors, 2);
+    achoppements.updateTableData('#sfu-digrams', 'SFU', allDigrams.sfb.digrams, 2);
+    achoppements.updateTableData('#extended-rolls', 'extensions', allDigrams.lsb.digrams, 2,);
+    achoppements.updateTableData('#scisors', 'ciseaux', allDigrams.scisor.digrams, 2);
 
     const digrammes = document.getElementById('Digrammes');
-    digrammes.updateTableData('#sku-digrams', 'SKU', skuDigrams, 2);
-    digrammes.updateTableData('#inward', 'rolls intérieur', inwardDigrams, 2);
-    digrammes.updateTableData('#outward', 'rolls extérieur', outwardDigrams, 2);
+    digrammes.updateTableData('#sku-digrams', 'SKU', allDigrams.skb.digrams, 2);
+    digrammes.updateTableData('#inward', 'rolls intérieur', allDigrams.inwardRoll.digrams, 2);
+    digrammes.updateTableData('#outward', 'rolls extérieur', allDigrams.outwardRoll.digrams, 2);
   };
 
   // compute the redirected rolls
@@ -496,6 +452,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // Set global variable, controls the color of canvas element for finger data
     // (There’s ~probably~ a better way to do this)
     impreciseData = totalUnsupportedChars >= 0.5;
+    document.querySelector('#imprecise-data').style.display = impreciseData
+      ? 'block'
+      : 'none';
 
     // display the heatmap
     const colormap = {};
