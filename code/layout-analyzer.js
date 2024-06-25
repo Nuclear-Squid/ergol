@@ -194,7 +194,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const computeDigrams = () => {
     const allDigrams = Object.fromEntries(
       ['sfb', 'skb', 'lsb', 'handChange', 'scisor', 'extendedScisor', 'inwardRoll', 'outwardRoll']
-        .map(x => [x, { 'digrams': {}, 'count': 0 }])
+        .map(digramType => [digramType, { 'symbols': {}, 'total': 0 }])
     );
 
     // JS, I know you suck at FP, but what the fuck is that, man??
@@ -278,6 +278,8 @@ window.addEventListener('DOMContentLoaded', () => {
       const keySequence = keyChars[digram.at(0)]?.concat(keyChars[digram.at(1)]);
       if (keySequence?.[keySequence.length - 1] == undefined) continue;
 
+      if (digram == ",”") console.log(keySequence);
+
       for (let i = 0, j = 1; j < keySequence.length; i++, j++) {
         const lastKeyCode = keySequence[i];
         const currKeyCode = keySequence[j];
@@ -288,8 +290,8 @@ window.addEventListener('DOMContentLoaded', () => {
         const normalizedFrequency = (100 * frequency) / total;
 
         const digramType = getDigramType(lastKeyCode, currKeyCode, lastFinger, currFinger);
-        allDigrams[digramType].digrams[digram] = frequency;
-        allDigrams[digramType].count += normalizedFrequency;
+        allDigrams[digramType].symbols[digram] = frequency;
+        allDigrams[digramType].total += normalizedFrequency;
 
         if (digramType == 'sfb') {
           const [groupIndex, itemIndex] = getFingerPosition(currFinger);
@@ -310,26 +312,26 @@ window.addEventListener('DOMContentLoaded', () => {
       detailedValues: true,
     });
 
-    showPercent('#sfu-all', allDigrams.sfb.count, 2);
-    showPercent('#sku-all', allDigrams.skb.count, 2);
+    showPercent('#sfu-all', allDigrams.sfb.total, 2);
+    showPercent('#sku-all', allDigrams.skb.total, 2);
 
-    showPercent('#sfu-all',        allDigrams.sfb.count,    2, '#Achoppements');
-    showPercent('#extensions-all', allDigrams.lsb.count,    2, '#Achoppements');
-    showPercent('#scisors-all',    allDigrams.scisor.count, 2, '#Achoppements');
+    showPercent('#sfu-all',        allDigrams.sfb.total,    2, '#Achoppements');
+    showPercent('#extensions-all', allDigrams.lsb.total,    2, '#Achoppements');
+    showPercent('#scisors-all',    allDigrams.scisor.total, 2, '#Achoppements');
 
-    showPercent('#inward-all',  allDigrams.inwardRoll.count,  1, '#Digrammes');
-    showPercent('#outward-all', allDigrams.outwardRoll.count, 1, '#Digrammes');
-    showPercent('#sku-all',     allDigrams.skb.count,         2, '#Digrammes');
+    showPercent('#inward-all',  allDigrams.inwardRoll.total,  1, '#Digrammes');
+    showPercent('#outward-all', allDigrams.outwardRoll.total, 1, '#Digrammes');
+    showPercent('#sku-all',     allDigrams.skb.total,         2, '#Digrammes');
 
     const achoppements = document.getElementById('Achoppements');
-    achoppements.updateTableData('#sfu-digrams', 'SFU', allDigrams.sfb.digrams, 2);
-    achoppements.updateTableData('#extended-rolls', 'extensions', allDigrams.lsb.digrams, 2,);
-    achoppements.updateTableData('#scisors', 'ciseaux', allDigrams.scisor.digrams, 2);
+    achoppements.updateTableData('#sfu-digrams', 'SFU', allDigrams.sfb.symbols, 2);
+    achoppements.updateTableData('#extended-rolls', 'extensions', allDigrams.lsb.symbols, 2,);
+    achoppements.updateTableData('#scisors', 'ciseaux', allDigrams.scisor.symbols, 2);
 
     const digrammes = document.getElementById('Digrammes');
-    digrammes.updateTableData('#sku-digrams', 'SKU', allDigrams.skb.digrams, 2);
-    digrammes.updateTableData('#inward', 'rolls intérieur', allDigrams.inwardRoll.digrams, 2);
-    digrammes.updateTableData('#outward', 'rolls extérieur', allDigrams.outwardRoll.digrams, 2);
+    digrammes.updateTableData('#sku-digrams', 'SKU', allDigrams.skb.symbols, 2);
+    digrammes.updateTableData('#inward', 'rolls intérieur', allDigrams.inwardRoll.symbols, 2);
+    digrammes.updateTableData('#outward', 'rolls extérieur', allDigrams.outwardRoll.symbols, 2);
   };
 
   // compute the redirected rolls
