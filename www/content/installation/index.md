@@ -81,6 +81,21 @@ haut de la liste dans les préférences clavier.
 
 Une aide pour apprendre la dispo. À imprimer, plier et placer sur le bureau !
 
+### Résolution de problèmes
+
+Sur Windows avec GeForce Experience, il se peut que le raccourci AltGr+M (pour
+écrire `&`) soit capté par « Superposition en jeu » pour couper le micro (car
+AltGr est considéré comme Ctrl+Alt).
+
+Il suffit d’aller dans GeForce Experience sur la roue dentée > Généralités >
+Superposition en jeu : Paramètres > Raccourcis claviers, pour changer ou
+supprimer ce raccourci. Il est aussi possible de désactiver complètement la
+Superposition en jeu.
+
+De même avec Keepass 2, le raccourci AltGr+A (pour écrire `{`) est capté même si
+le programme n’est pas au premier plan. Pour cela, aller dans Tools > Options… >
+onglet Integration > encart System-wide hot keys, et changer ou supprimer la
+valeur du raccourci Global auto-type.
 
 Licence
 --------------------------------------------------------------------------------
