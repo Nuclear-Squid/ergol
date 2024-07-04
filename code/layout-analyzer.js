@@ -43,6 +43,8 @@ window.addEventListener('DOMContentLoaded', () => {
     // In case there are multiple ways of typing a singel char, this checks
     // which sequence is easier to type (examples are in Ergo‑L)
     const requiresLessEffort = (originalKeySequence, newKeySequence) => {
+      const uses1DK = keySequence => keySequence.some(key => key == charTable['**'][0]);
+
       const arrayCount = (array, predicate) => {
         let rv = 0;
         array.forEach(elem => { if (predicate(elem)) rv++ });
@@ -54,6 +56,15 @@ window.addEventListener('DOMContentLoaded', () => {
         if (val1 < val2) return "less";
         return "same";
       };
+
+      if (originalKeySequence.length > 1 && newKeySequence.length > 1) {
+        const cmp1DK = cmp(
+          uses1DK(originalKeySequence),
+          uses1DK(newKeySequence)
+        );
+        if (cmp1DK == 'more') return false;
+        if (cmp1DK == 'less') return true;
+      }
 
       const cmpNot1DFH = cmp(
         arrayCount(newKeySequence, key => !is1DFH(key.keyCode)),
@@ -326,7 +337,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const total = Object.values(ngramsDict).reduce((acc, e) => acc + e);
 
       for (const [ngram, frequency] of Object.entries(ngramsDict)) {
-        const keySequence = Array.from(ngram).flatMap(symbol => keyChars[symbol]);
+        const keySequence = Array.from(ngram).flatMap(symbol => charToKeys(symbol));
         if (keySequence.some(key => key == undefined)) continue;
 
         const normalizedFrequency = 100 * frequency / total;
@@ -351,12 +362,12 @@ window.addEventListener('DOMContentLoaded', () => {
     );
 
     for (const [sfb, frequency] of Object.entries(ngrams.sfb.symbols)) {
-      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyChars[sfb[1]][0]]);
+      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[charToKeys(sfb[1])[0]]);
       totalSfuSkuPerFinger[groupIndex][itemIndex].bad += frequency;
     }
 
     for (const [skb, frequency] of Object.entries(ngrams.skb.symbols)) {
-      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyChars[skb[1]][0]]);
+      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[charToKeys(skb[1])[0]]);
       totalSfuSkuPerFinger[groupIndex][itemIndex].meh += frequency;
     }
 
