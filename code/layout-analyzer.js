@@ -503,10 +503,6 @@ window.addEventListener('DOMContentLoaded', () => {
             );
             data.keymap.Enter = ['\r', '\n'];
             keyChars = supportedChars(data.keymap, data.deadkeys);
-            if (Object.keys(corpus).length > 0) {
-              computeHeatmap();
-              computeNGrams();
-            }
           });
       } else {
         keyboard.setKeyboardLayout();
