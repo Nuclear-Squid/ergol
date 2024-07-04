@@ -193,7 +193,7 @@ Vers l’infini et au‑delà !
 --------------------------------------------------------------------------------
 
 Ça y est c’est le grand jour, vous avez décidé d’utiliser votre nouvelle
-disposition à temps plein. Vous vous sentez à l’aise, vous tapez suffisemment
+disposition à temps plein. Vous vous sentez à l’aise, vous tapez suffisamment
 vite, vous avez même quelques jolis screenshots de stats Monkeytype. Bien
 joué ! Vous avez passé le plus dur dans l’entraînement, mais c’est à partir de
 là que les exercices deviennent vraiment marrants. Dans cette section, je vais
@@ -262,11 +262,11 @@ Pour résumer :
 2. on s’entraîne sur [Monkeytype][] quand on prend de l’aisance ;
 3. on passe à temps plein sur la nouvelle dispo quand on se sent en confiance ;
 4. on rajoute des challenges plus compliqués :
-   - des entraînements de vitesse sur les n‑grammes avec [Ngram Type][] et [Ngram Type fr][]
-   - des entraînements de précision avec le mode *« master »* de Monkeytype
-   - des entraînements « taper sans réfléchir » avec *« read ahead »* de Monkeytype
+   - des entraînements de vitesse sur les n‑grammes avec [Ngram Type][] et [Ngram Type fr][] ;
+   - des entraînements de précision avec le mode *« master »* de Monkeytype ;
+   - des entraînements « taper sans réfléchir » avec *« read ahead »* de Monkeytype.
 
-Et pour toutes les dispositions, une bonne technique de frape implique :
+Et pour toutes les dispositions, une bonne technique de frappe implique :
 
 - d’être léger sur les touches ;
 - de garder un rythme semi-constant ;
