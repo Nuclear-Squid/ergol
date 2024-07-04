@@ -278,7 +278,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const keySequence = keyChars[digram.at(0)]?.concat(keyChars[digram.at(1)]);
       if (keySequence?.[keySequence.length - 1] == undefined) continue;
 
-      if (digram == ",”") console.log(keySequence);
+      const normalizedFrequency = (100 * frequency) / total;
 
       for (let i = 0, j = 1; j < keySequence.length; i++, j++) {
         const lastKeyCode = keySequence[i];
@@ -287,7 +287,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const lastFinger = keyFinger[lastKeyCode];
         const currFinger = keyFinger[currKeyCode];
-        const normalizedFrequency = (100 * frequency) / total;
 
         const digramType = getDigramType(lastKeyCode, currKeyCode, lastFinger, currFinger);
         allDigrams[digramType].symbols[digram] = frequency;
@@ -336,94 +335,77 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // compute the redirected rolls
   const computeTrigrams = () => {
-    const redirects = {};
-    const badRedirects = {};
-    const almostSKBs = {};
-    const almostSFBs = {};
+    const allTrigrams = Object.fromEntries(
+      ['redirect', 'badRedirect', 'sfs', 'sks', 'rollAndHandChange', 'doubleRoll', 'doubleHandChange']
+        .map(digramType => [digramType, { 'symbols': {}, 'total': 0 }])
+    );
 
-    const keyFinger = { Space: 'th' };
+    const getTrigramType = (lastKeyCode, currKeyCode, nextKeyCode, lastFinger, currFinger, nextFinger) => {
+      if (lastFinger == nextFinger) return lastKeyCode == nextKeyCode ? 'sks' : 'sfs';
+
+      const hands = lastFinger[0] + currFinger[0] + nextFinger[0];
+
+      if (['lrl', 'rlr'].includes(hands)) return 'doubleHandChange';
+      if (['llr', 'rll', 'rrl', 'lrr'].includes(hands)) return 'rollAndHandChange';
+
+      // I don’t know if this is briliant or if I deserve a VIP ticket to Hell.
+      if ((lastFinger[1] > currFinger[1]) != (currFinger[1] > nextFinger[1]))
+        return [lastFinger, currFinger, nextFinger].some(finger => finger[1] == '2')
+          ? 'redirect'
+          : 'badRedirect';
+
+      return 'doubleRoll';
+    };
+
+    const keyFinger = {};
     Object.entries(keyboard.fingerAssignments).forEach(([f, keys]) => {
       keys.forEach(keyName => {
         keyFinger[keyName] = f;
       });
     });
 
+    const getFingerPosition = ([hand, finger]) =>
+      hand == 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
+
     const sum = (acc, freq) => acc + freq;
     const total = Object.values(trigrams).reduce(sum, 0);
-    Object.entries(trigrams)
-      .map(([trigram, frequency]) => [trigram, (100 * frequency) / total])
-      .forEach(([trigram, frequency]) => {
-        const keySequence = keyboard.layout.getKeySequence(trigram);
-        const fingers = keySequence.map(key => keyFinger[key.id] ?? '  '); // XXX dirty workaround, FIXME
-        const hands = fingers.map(key => key.charAt(0)).join('');
-        // TODO: handle trigrams that involve more than 3 keys
 
-        // Almost SFBs
-        if (fingers[0] == fingers[2]) {
-          for (let i = 0; i < keySequence.length - 2; i++) {
-            if (keySequence[i].id == keySequence[i + 2].id) {
-              almostSKBs[trigram] = frequency;
-              return;
-            }
-          }
+    for (const [trigram, frequency] of Object.entries(trigrams)) {
+      const keySequence = Array.from(trigram).flatMap(symbol => keyChars[symbol]);
+      if (keySequence.some(key => key == undefined)) continue;
 
-          // not an 'almost skb' so it’s an 'almost sfb'
-          almostSFBs[trigram] = frequency;
-          return;
-        }
+      const normalizedFrequency = (100 * frequency) / total;
 
-        // Redirects
-        if (hands === 'lll' || hands === 'rrr') {
-          const nums = fingers.map(key => Number(key.charAt(1)));
-          if (
-            (nums[0] < nums[1] && nums[1] > nums[2]) ||
-            (nums[0] > nums[1] && nums[1] < nums[2])
-          ) {
-            if (nums.some(finger => finger == 2)) {
-              // redirection has an index somewhere
-              redirects[trigram] = frequency;
-            } else {
-              // no index = bad redirects
-              badRedirects[trigram] = frequency;
-            }
-          }
-        }
-      });
+      for (let i = 0, j = 1, k = 2; k < keySequence.length; i++, j++, k++) {
+        const lastKeyCode = keySequence[i];
+        const currKeyCode = keySequence[j];
+        const nextKeyCode = keySequence[k];
+        if (nextKeyCode == 'Space' || currKeyCode == 'Space' || lastKeyCode == 'Space') continue;
+
+        const lastFinger = keyFinger[lastKeyCode];
+        const currFinger = keyFinger[currKeyCode];
+        const nextFinger = keyFinger[nextKeyCode];
+
+        const trigramType = getTrigramType(lastKeyCode, currKeyCode, nextKeyCode, lastFinger, currFinger, nextFinger);
+        allTrigrams[trigramType].symbols[trigram] = frequency;
+        allTrigrams[trigramType].total += normalizedFrequency;
+      }
+    }
 
     // display metrics
-    showPercent(
-      '#almost-skb-all',
-      Object.values(almostSKBs).reduce(sum, 0),
-      1,
-      '#Trigrammes',
-    );
-    showPercent(
-      '#almost-sfb-all',
-      Object.values(almostSFBs).reduce(sum, 0),
-      1,
-      '#Trigrammes',
-    );
-    showPercent(
-      '#redirect-all',
-      Object.values(redirects).reduce(sum, 0),
-      1,
-      '#Trigrammes',
-    );
-    showPercent(
-      '#bad-redirect-all',
-      Object.values(badRedirects).reduce(sum, 0),
-      2,
-      '#Trigrammes',
-    );
+    showPercent('#almost-skb-all',   allTrigrams.sks.total, 1, '#Trigrammes');
+    showPercent('#almost-sfb-all',   allTrigrams.sfs.total, 1, '#Trigrammes');
+    showPercent('#redirect-all',     allTrigrams.redirect.total, 1, '#Trigrammes');
+    showPercent('#bad-redirect-all', allTrigrams.badRedirect.total, 2, '#Trigrammes');
 
     const trigrammes = document.getElementById('Trigrammes');
-    trigrammes.updateTableData('#almost-skbs', 'presque SKBs', almostSKBs, 2);
-    trigrammes.updateTableData('#almost-sfbs', 'presque SFBs', almostSFBs, 2);
-    trigrammes.updateTableData('#redirect', 'redirections', redirects, 2);
+    trigrammes.updateTableData('#almost-skbs', 'presque SKBs', allTrigrams.sks.symbols, 2);
+    trigrammes.updateTableData('#almost-sfbs', 'presque SFBs', allTrigrams.sfs.symbols, 2);
+    trigrammes.updateTableData('#redirect', 'redirections', allTrigrams.redirect.symbols, 2);
     trigrammes.updateTableData(
       '#bad-redirect',
-      'redirections foireuses',
-      badRedirects,
+      'mauvaises redirections',
+      allTrigrams.badRedirect.symbols,
       2,
     );
   };
