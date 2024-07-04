@@ -190,16 +190,44 @@ window.addEventListener('DOMContentLoaded', () => {
     table.innerHTML = `<tr><td></td>${cols}<td></td></tr>`;
   };
 
-  // compute the same-finger usages and rolls
-  const computeDigrams = () => {
-    const allDigrams = Object.fromEntries(
-      ['sfb', 'skb', 'lsb', 'handChange', 'scisor', 'extendedScisor', 'inwardRoll', 'outwardRoll']
-        .map(digramType => [digramType, { 'symbols': {}, 'total': 0 }])
-    );
+  // Returns a custom iterator, similar to Rust’s std::slice::Windows.
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators
+  // https://doc.rust-lang.org/std/primitive.slice.html#method.windows
+  const arrayWindows = (arr, len) => ({
+    *[Symbol.iterator]() {
+      let rv = arr.slice(0, len);
+      yield rv;
+      for (let i = len; i < arr.length; i++) {
+        for (let j = 0; j < len - 1; j++) {
+          rv[j] = rv[j + 1];
+        }
+        rv[len - 1] = arr[i];
+        yield rv;
+      }
+    }
+  });
 
-    // JS, I know you suck at FP, but what the fuck is that, man??
-    const totalSfuSkuPerFinger = Array(2).fill(0).map(_ =>
-      Array(4).fill(0).map(_ => ({ "good": 0, "meh": 0, "bad": 0 }))
+  const computeNGrams = () => {
+    const ngrams = Object.fromEntries([
+        // Digrams
+        'sfb',  // Same Finger Bigram
+        'skb',  // Same Key Bigram
+        'lsb',  // Lateral Strech Bigram
+        'handChange',  // Two keys typed by different hands
+        'scisor',  // Roll with uncomfortable height difference between the keys
+        'extendedScisor',  // scisor + lsb
+        'inwardRoll',   // Roll in the pinky -> index direction
+        'outwardRoll',  // Roll in the index -> pinky direction
+
+        // Trigrams
+        'redirect',  // Two rolls going in different directions
+        'badRedirect', // Redirect that doesn’t use the index
+        'sfs',  // Same Finger Skipgram (sfb with other key in the middle)
+        'sks',  // Same Key Skipgram (skb with other key in the middle)
+        'rollAndHandChange',  // A roll and hand change (no particullar order)
+        'doubleRoll', // Two rolls in the same direction
+        'doubleHandChange'  // Two hand changes
+      ].map(digramType => [digramType, { 'symbols': {}, 'total': 0 }])
     );
 
     const keyFinger = {};
@@ -254,8 +282,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // NOTE: in Ergol, ï and · are same-finger digrams even though they are
     // single characters => count symbols, too?
-    const getDigramType = (lastKeyCode, currKeyCode, lastFinger, currFinger) => {
+    const getDigramType = (lastKeyCode, currKeyCode) => {
       if (lastKeyCode === currKeyCode) return 'skb';
+
+      const lastFinger = keyFinger[lastKeyCode];
+      const currFinger = keyFinger[currKeyCode];
+
       if (currFinger === lastFinger) return 'sfb';
       if (currFinger[0] !== lastFinger[0]) return 'handChange';
 
@@ -268,79 +300,11 @@ window.addEventListener('DOMContentLoaded', () => {
       return currFinger[1] < lastFinger[1] ? 'inwardRoll' : 'outwardRoll';
     };
 
-    const getFingerPosition = ([hand, finger]) =>
-      hand == 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
+    const getTrigramType = (lastKeyCode, currKeyCode, nextKeyCode) => {
+      const lastFinger = keyFinger[lastKeyCode];
+      const currFinger = keyFinger[currKeyCode];
+      const nextFinger = keyFinger[nextKeyCode];
 
-    const sum = (acc, freq) => acc + freq;
-    const total = Object.values(digrams).reduce(sum, 0);
-
-    for (const [digram, frequency] of Object.entries(digrams)) {
-      const keySequence = keyChars[digram.at(0)]?.concat(keyChars[digram.at(1)]);
-      if (keySequence?.[keySequence.length - 1] == undefined) continue;
-
-      const normalizedFrequency = (100 * frequency) / total;
-
-      for (let i = 0, j = 1; j < keySequence.length; i++, j++) {
-        const lastKeyCode = keySequence[i];
-        const currKeyCode = keySequence[j];
-        if (currKeyCode == 'Space' || lastKeyCode == 'Space') continue;
-
-        const lastFinger = keyFinger[lastKeyCode];
-        const currFinger = keyFinger[currKeyCode];
-
-        const digramType = getDigramType(lastKeyCode, currKeyCode, lastFinger, currFinger);
-        allDigrams[digramType].symbols[digram] = frequency;
-        allDigrams[digramType].total += normalizedFrequency;
-
-        if (digramType == 'sfb') {
-          const [groupIndex, itemIndex] = getFingerPosition(currFinger);
-          totalSfuSkuPerFinger[groupIndex][itemIndex].bad += normalizedFrequency;
-        }
-        else if (digramType == 'skb') {
-          const [groupIndex, itemIndex] = getFingerPosition(currFinger);
-          totalSfuSkuPerFinger[groupIndex][itemIndex].meh += normalizedFrequency;
-        }
-      }
-    }
-
-    document.querySelector('#sfu stats-canvas').renderData({
-      values: totalSfuSkuPerFinger,
-      maxValue: 4,
-      precision: 2,
-      flipVertically: true,
-      detailedValues: true,
-    });
-
-    showPercent('#sfu-all', allDigrams.sfb.total, 2);
-    showPercent('#sku-all', allDigrams.skb.total, 2);
-
-    showPercent('#sfu-all',        allDigrams.sfb.total,    2, '#Achoppements');
-    showPercent('#extensions-all', allDigrams.lsb.total,    2, '#Achoppements');
-    showPercent('#scisors-all',    allDigrams.scisor.total, 2, '#Achoppements');
-
-    showPercent('#inward-all',  allDigrams.inwardRoll.total,  1, '#Digrammes');
-    showPercent('#outward-all', allDigrams.outwardRoll.total, 1, '#Digrammes');
-    showPercent('#sku-all',     allDigrams.skb.total,         2, '#Digrammes');
-
-    const achoppements = document.getElementById('Achoppements');
-    achoppements.updateTableData('#sfu-digrams', 'SFU', allDigrams.sfb.symbols, 2);
-    achoppements.updateTableData('#extended-rolls', 'extensions', allDigrams.lsb.symbols, 2,);
-    achoppements.updateTableData('#scisors', 'ciseaux', allDigrams.scisor.symbols, 2);
-
-    const digrammes = document.getElementById('Digrammes');
-    digrammes.updateTableData('#sku-digrams', 'SKU', allDigrams.skb.symbols, 2);
-    digrammes.updateTableData('#inward', 'rolls intérieur', allDigrams.inwardRoll.symbols, 2);
-    digrammes.updateTableData('#outward', 'rolls extérieur', allDigrams.outwardRoll.symbols, 2);
-  };
-
-  // compute the redirected rolls
-  const computeTrigrams = () => {
-    const allTrigrams = Object.fromEntries(
-      ['redirect', 'badRedirect', 'sfs', 'sks', 'rollAndHandChange', 'doubleRoll', 'doubleHandChange']
-        .map(digramType => [digramType, { 'symbols': {}, 'total': 0 }])
-    );
-
-    const getTrigramType = (lastKeyCode, currKeyCode, nextKeyCode, lastFinger, currFinger, nextFinger) => {
       if (lastFinger == nextFinger) return lastKeyCode == nextKeyCode ? 'sks' : 'sfs';
 
       const hands = lastFinger[0] + currFinger[0] + nextFinger[0];
@@ -357,55 +321,89 @@ window.addEventListener('DOMContentLoaded', () => {
       return 'doubleRoll';
     };
 
-    const keyFinger = {};
-    Object.entries(keyboard.fingerAssignments).forEach(([f, keys]) => {
-      keys.forEach(keyName => {
-        keyFinger[keyName] = f;
-      });
-    });
+    // TODO: This needs a better name
+    const addNGrams = (outDict, ngramsDict, getNGramType) => {
+      const total = Object.values(ngramsDict).reduce((acc, e) => acc + e);
+
+      for (const [ngram, frequency] of Object.entries(ngramsDict)) {
+        const keySequence = Array.from(ngram).flatMap(symbol => keyChars[symbol]);
+        if (keySequence.some(key => key == undefined)) continue;
+
+        const normalizedFrequency = 100 * frequency / total;
+        for (const keyCodes of arrayWindows(keySequence, ngram.length)) {
+          if (keyCodes.includes('Space')) continue;
+          const ngramType = getNGramType(...keyCodes);
+          outDict[ngramType].symbols[ngram] = frequency;
+          outDict[ngramType].total += normalizedFrequency;
+        }
+      }
+    };
+
+    addNGrams(ngrams,  digrams,  getDigramType);
+    addNGrams(ngrams, trigrams, getTrigramType);
 
     const getFingerPosition = ([hand, finger]) =>
       hand == 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
 
-    const sum = (acc, freq) => acc + freq;
-    const total = Object.values(trigrams).reduce(sum, 0);
+    // JS, I know you suck at FP, but what the fuck is that, man??
+    const totalSfuSkuPerFinger = Array(2).fill(0).map(_ =>
+      Array(4).fill(0).map(_ => ({ "good": 0, "meh": 0, "bad": 0 }))
+    );
 
-    for (const [trigram, frequency] of Object.entries(trigrams)) {
-      const keySequence = Array.from(trigram).flatMap(symbol => keyChars[symbol]);
-      if (keySequence.some(key => key == undefined)) continue;
-
-      const normalizedFrequency = (100 * frequency) / total;
-
-      for (let i = 0, j = 1, k = 2; k < keySequence.length; i++, j++, k++) {
-        const lastKeyCode = keySequence[i];
-        const currKeyCode = keySequence[j];
-        const nextKeyCode = keySequence[k];
-        if (nextKeyCode == 'Space' || currKeyCode == 'Space' || lastKeyCode == 'Space') continue;
-
-        const lastFinger = keyFinger[lastKeyCode];
-        const currFinger = keyFinger[currKeyCode];
-        const nextFinger = keyFinger[nextKeyCode];
-
-        const trigramType = getTrigramType(lastKeyCode, currKeyCode, nextKeyCode, lastFinger, currFinger, nextFinger);
-        allTrigrams[trigramType].symbols[trigram] = frequency;
-        allTrigrams[trigramType].total += normalizedFrequency;
-      }
+    for (const [sfb, frequency] of Object.entries(ngrams.sfb.symbols)) {
+      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyChars[sfb[1]][0]]);
+      totalSfuSkuPerFinger[groupIndex][itemIndex].bad += frequency;
     }
 
-    // display metrics
-    showPercent('#almost-skb-all',   allTrigrams.sks.total, 1, '#Trigrammes');
-    showPercent('#almost-sfb-all',   allTrigrams.sfs.total, 1, '#Trigrammes');
-    showPercent('#redirect-all',     allTrigrams.redirect.total, 1, '#Trigrammes');
-    showPercent('#bad-redirect-all', allTrigrams.badRedirect.total, 2, '#Trigrammes');
+    for (const [skb, frequency] of Object.entries(ngrams.skb.symbols)) {
+      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyChars[skb[1]][0]]);
+      totalSfuSkuPerFinger[groupIndex][itemIndex].meh += frequency;
+    }
+
+    // Render digrams
+    document.querySelector('#sfu stats-canvas').renderData({
+      values: totalSfuSkuPerFinger,
+      maxValue: 4,
+      precision: 2,
+      flipVertically: true,
+      detailedValues: true,
+    });
+
+    showPercent('#sfu-all', ngrams.sfb.total, 2);
+    showPercent('#sku-all', ngrams.skb.total, 2);
+
+    showPercent('#sfu-all',        ngrams.sfb.total,    2, '#Achoppements');
+    showPercent('#extensions-all', ngrams.lsb.total,    2, '#Achoppements');
+    showPercent('#scisors-all',    ngrams.scisor.total, 2, '#Achoppements');
+
+    showPercent('#inward-all',  ngrams.inwardRoll.total,  1, '#Digrammes');
+    showPercent('#outward-all', ngrams.outwardRoll.total, 1, '#Digrammes');
+    showPercent('#sku-all',     ngrams.skb.total,         2, '#Digrammes');
+
+    const achoppements = document.getElementById('Achoppements');
+    achoppements.updateTableData('#sfu-digrams', 'SFU', ngrams.sfb.symbols, 2);
+    achoppements.updateTableData('#extended-rolls', 'extensions', ngrams.lsb.symbols, 2,);
+    achoppements.updateTableData('#scisors', 'ciseaux', ngrams.scisor.symbols, 2);
+
+    const digrammes = document.getElementById('Digrammes');
+    digrammes.updateTableData('#sku-digrams', 'SKU', ngrams.skb.symbols, 2);
+    digrammes.updateTableData('#inward', 'rolls intérieur', ngrams.inwardRoll.symbols, 2);
+    digrammes.updateTableData('#outward', 'rolls extérieur', ngrams.outwardRoll.symbols, 2);
+
+    // Display trigrams
+    showPercent('#almost-skb-all',   ngrams.sks.total, 1, '#Trigrammes');
+    showPercent('#almost-sfb-all',   ngrams.sfs.total, 1, '#Trigrammes');
+    showPercent('#redirect-all',     ngrams.redirect.total, 1, '#Trigrammes');
+    showPercent('#bad-redirect-all', ngrams.badRedirect.total, 2, '#Trigrammes');
 
     const trigrammes = document.getElementById('Trigrammes');
-    trigrammes.updateTableData('#almost-skbs', 'presque SKBs', allTrigrams.sks.symbols, 2);
-    trigrammes.updateTableData('#almost-sfbs', 'presque SFBs', allTrigrams.sfs.symbols, 2);
-    trigrammes.updateTableData('#redirect', 'redirections', allTrigrams.redirect.symbols, 2);
+    trigrammes.updateTableData('#almost-skbs', 'presque SKBs', ngrams.sks.symbols, 2);
+    trigrammes.updateTableData('#almost-sfbs', 'presque SFBs', ngrams.sfs.symbols, 2);
+    trigrammes.updateTableData('#redirect', 'redirections', ngrams.redirect.symbols, 2);
     trigrammes.updateTableData(
       '#bad-redirect',
       'mauvaises redirections',
-      allTrigrams.badRedirect.symbols,
+      ngrams.badRedirect.symbols,
       2,
     );
   };
@@ -507,8 +505,7 @@ window.addEventListener('DOMContentLoaded', () => {
             keyChars = supportedChars(data.keymap, data.deadkeys);
             if (Object.keys(corpus).length > 0) {
               computeHeatmap();
-              computeDigrams();
-              computeTrigrams();
+              computeNGrams();
             }
           });
       } else {
@@ -526,8 +523,7 @@ window.addEventListener('DOMContentLoaded', () => {
             trigrams = data.trigrams;
             if (Object.keys(keyChars).length > 0) {
               computeHeatmap();
-              computeDigrams();
-              computeTrigrams();
+              computeNGrams();
             }
           });
         corpusName = value;
