@@ -159,7 +159,7 @@ window.addEventListener('DOMContentLoaded', () => {
                             'KeyV',    'KeyM',
   ]);
 
-  const mehKeysSet = new Set([ 'KeyC', 'KeyR', 'KeyG', 'KeyH', 'KeyU', 'KeyComma' ]);
+  const mehKeysSet = new Set([ 'KeyC', 'KeyR', 'KeyG', 'KeyH', 'KeyU', 'Comma' ]);
 
   const getKeyPositionQuality = keyCode => {
     if (goodKeysSet.has(keyCode)) return "good";
@@ -514,6 +514,8 @@ window.addEventListener('DOMContentLoaded', () => {
             );
             data.keymap.Enter = ['\r', '\n'];
             keyChars = supportedChars(data.keymap, data.deadkeys);
+            computeHeatmap();
+            computeNGrams();
           });
       } else {
         keyboard.setKeyboardLayout();
