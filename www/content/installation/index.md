@@ -1,5 +1,5 @@
 +++
-title = "Ergo‑L 1.0"
+title = "Installation"
 aliases = ["lts"]
 
 [params]
@@ -14,7 +14,8 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
   dt { font-weight: bold; }
   dd p { margin: 0.2em 0; }
   code { font-family: monospace; }
-  pre { background-color: #6684; padding: 0.5em 2em; }
+  pre { background-color: #6684; padding: 0.5em 1em; }
+  pre code { background-color: transparent; font-weight: normal; }
 </style>
 
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk">}}
@@ -23,41 +24,62 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 Téléchargement
 --------------------------------------------------------------------------------
 
-Pilotes nomades : [ergol_nomade.zip][]
-: Une archive zip contenant les pilotes ne nécessitant pas de droits
+### Pilotes nomades : [ergol_nomade.zip][]
+
+Une archive zip contenant les pilotes ne nécessitant pas de droits
 d’administration, peuvent fonctionner depuis une clé USB. (Pour tous les
 systèmes.)
 
-Windows : [ergol_kbd.exe][]
-: Exécuter l’installeur et relancer la session. La disposition de clavier
+### Windows : [ergol_kbd.exe][]
+
+Exécuter l’installeur et relancer la session. La disposition de clavier
 apparaît dans la barre de langues (indicateur de la barre des tâches).
 
-macOS : [ergol.keylayout][]
-: Enregistrer dans `/Library/Keyboard Layouts` et relancer la session. La
+### macOS : [ergol.keylayout][]
+
+Enregistrer dans `/Library/Keyboard Layouts` et relancer la session. La
 disposition de clavier est disponible dans les préférences « Langue et Texte »,
 onglet « Méthodes de saisie ».
-: On peut aussi l’enregistrer dans `~/Library/Keyboard Layouts` (pour le seul
+On peut aussi l’enregistrer dans `~/Library/Keyboard Layouts` (pour le seul
 utilisateur courant), mais la disposition ne sera pas active au login.
-: Il est possible (et recommandé) d’utiliser [Karabiner][] pour [inverser les
+Il est possible (et recommandé) d’utiliser [Karabiner][] pour [inverser les
 touches](karabiner_settings.png) [⌘ Command]{.kbd} et [⌥ Option]{.kbd} à droite,
 afin d’accéder plus facilement à la couche de symboles.
 
-GNU/Linux : [ergol.xkb_symbols][]
-: Copier ce pilote dans `xkb/symbols/custom` : <pre>
-    sudo wget -O ${XKB_CONFIG_ROOT:-/usr/share/X11/xkb}/symbols/custom \
-    https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols </pre>
-: La disposition de clavier est disponible dans le gestionnaire de préférences du
-bureau sous un nom générique (« custom layout », « disposition personnalisée »,
-etc.). Sous XOrg on peut aussi l’activer directement en ligne de commande : <pre>
-    setxkbmap custom </pre>
-: D’autres méthodes d’installation sont possibles, en passant le [fichier
+### GNU/Linux : [ergol.xkb_symbols][]
+
+Ergo‑L est déjà inclus dans toutes les distributions Linux dotées de `xkeyboard-config`
+en [version 2.42 ou ultérieure](https://repology.org/project/xkeyboard-config/badges),
+ce qui inclut notamment : Arch, Debian Sid, Fedora Rawhide, Gentoo, Manjaro
+Testing/Unstable, OpenMandriva Rolling/Cooker, OpenSUSE Tumbleweed, Slackware
+Current…
+
+Pour les autres distributions, copier ce pilote dans `xkb/symbols/custom` :
+
+```bash
+sudo wget -O ${XKB_CONFIG_ROOT:-/usr/share/X11/xkb}/symbols/custom \
+https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols
+```
+
+La disposition de clavier ainsi installée est disponible dans le gestionnaire de
+préférences du bureau sous un nom générique (« custom layout », « disposition
+personnalisée », etc.). Sous XOrg on peut aussi l’activer directement en ligne
+de commande :
+
+```bash
+setxkbmap custom
+```
+
+D’autres méthodes d’installation sont possibles, en passant le [fichier
 source][] à [XKalamine][].
-: Remarque : avec certains bureaux (Gnome notamment), la touche morte [★]{.odk}
+
+Remarque : avec certains bureaux (Gnome notamment), la touche morte [★]{.odk}
 ne fonctionne que si Ergo‑L est défini comme disposition par défaut, i.e. en
 haut de la liste dans les préférences clavier.
 
-Cavalier : [cavalier.pdf][]
-: Une aide pour apprendre la dispo. À imprimer, plier et placer sur le bureau !
+### Aide-mémoire : [cavalier.pdf][]
+
+Une aide pour apprendre la dispo. À imprimer, plier et placer sur le bureau !
 
 ### Résolution de problèmes
 
