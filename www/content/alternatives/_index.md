@@ -179,8 +179,8 @@ serait une permutation `h,’`, pour faire passer le `h` de [>] à [O].
 -->
 
 [Note]{id="optimot_en"} : l’auteur d’Optimot considère que sa disposition est
-optimisée pour l’anglais au motif qu’elle obtiendrait une bonne note globale sur
-KLAnext ; mais pour nous, [la heatmap est inadaptée][1] (lettres fréquentes sur
+optimisée pour l’anglais au motif qu’elle obtiendrait une bonne [note globale sur
+KLAnext][] ; mais pour nous, [la heatmap est inadaptée][1] (lettres fréquentes sur
 la rangée inférieure) et de nombreux digrammes courants sont trop inconfortables
 pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, 
 `ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça.
@@ -196,7 +196,7 @@ pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`,
 - pour les Bépoètes qui n’ont pas de douleurs, Optimot apporte une optimisation
   *très* supérieure en français et est bien plus utilisable en anglais ;
 - pour les Bépoètes qui ont des douleurs ou qui souhaitent tenter l’expérience
-  [1DFH][], [Bépolar][] sera une alternative intéressante et très vite apprise.
+  1DFH, [Bépolar][] sera une alternative intéressante et très vite apprise.
 
 [ergo‑l]:     /
 [bépo]:       /bepo
@@ -210,3 +210,5 @@ pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`,
 [touche morte]:        /presentation#caractères-accentués
 [symboles]:            /presentation#couche-symboles
 [défauts d’ergonomie]: /bepo/#ergonomie
+
+[note globale sur KLAnext]: /articles/analyse_et_optimisation/#lapproche-optimot
