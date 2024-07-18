@@ -1,4 +1,3 @@
-<!-- <svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="60 60 780 240"> -->
 <svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="135 60 630 240">
 
   <style>
@@ -98,7 +97,8 @@
       </g>
       <g transform="translate(570)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="15.0" y="24.0" class="deadKey">★</text>
+        <text x="12.8" y="43.4" class="level1">★</text>
+        <text x="12.8" y="20.6" class="level2">!</text>
         <text x="38.0" y="43.4" class="level3">'</text>
       </g>
       <g transform="translate(630)">
