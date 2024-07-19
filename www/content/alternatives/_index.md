@@ -1,5 +1,8 @@
 +++
 title = "Alternatives"
+
+[params]
+hideSummaryOfChildPages = true
 +++
 
 :::{.highlight}

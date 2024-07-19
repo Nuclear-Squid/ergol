@@ -1,5 +1,6 @@
 +++
 title = "Adaptations type « Lafayette »"
+url = "/lafayette"
 
 [params]
 cssSheets = ["/css/keebs.css"]

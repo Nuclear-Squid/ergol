@@ -1,13 +1,15 @@
 {{ define "main" }}
   {{ .Content }}
-  {{ range sort .Pages "Date" "desc" }}
-    <article>
-      <header>
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-        <time>{{ time.Format ":date_medium" .Date }}</time>
-      </header>
-      {{ .Summary }}
-      <nav class="more"><a href="{{ .RelPermalink }}">Lire la suite…</a></nav>
-    </article>
+  {{ if not .Params.hideSummaryOfChildPages }}
+    {{ range sort .Pages "Date" "desc" }}
+      <article>
+        <header>
+          <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+          <time>{{ time.Format ":date_medium" .Date }}</time>
+        </header>
+        {{ .Summary }}
+        <nav class="more"><a href="{{ .RelPermalink }}">Lire la suite…</a></nav>
+      </article>
+    {{ end }}
   {{ end }}
 {{ end }}
