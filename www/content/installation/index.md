@@ -26,8 +26,8 @@ Téléchargement
 
 ### Pilotes nomades : [ergol_nomade.zip][]
 
-Une archive zip contenant les pilotes ne nécessitant pas de droits
-d’administration, peuvent fonctionner depuis une clé USB. (Pour tous les
+Une archive ZIP contenant les pilotes ne nécessitant pas de droits
+d’administration, qui peuvent fonctionner depuis une clé USB. (Pour tous les
 systèmes.)
 
 ### Windows : [ergol_kbd.exe][]
@@ -35,11 +35,10 @@ systèmes.)
 Exécuter l’installeur et relancer la session. La disposition de clavier
 apparaît dans la barre de langues (indicateur de la barre des tâches).
 
-### macOS : [ergol.keylayout][]
+### MacOS : [ergol.keylayout][]
 
 Enregistrer dans `/Library/Keyboard Layouts` et relancer la session. La
-disposition de clavier est disponible dans les préférences « Langue et Texte »,
-onglet « Méthodes de saisie ».
+disposition de clavier est disponible dans les préférences sous « Clavier », puis « Méthodes de saisie ».
 On peut aussi l’enregistrer dans `~/Library/Keyboard Layouts` (pour le seul
 utilisateur courant), mais la disposition ne sera pas active au login.
 Il est possible (et recommandé) d’utiliser [Karabiner][] pour [inverser les
@@ -50,9 +49,9 @@ afin d’accéder plus facilement à la couche de symboles.
 
 Ergo‑L est déjà inclus dans toutes les distributions Linux dotées de `xkeyboard-config`
 en [version 2.42 ou ultérieure](https://repology.org/project/xkeyboard-config/badges),
-ce qui inclut notamment : Arch, Debian Sid, Fedora Rawhide, Gentoo, Manjaro
+ce qui inclut notamment Arch, Debian Sid, Fedora Rawhide, Gentoo, Manjaro
 Testing/Unstable, OpenMandriva Rolling/Cooker, OpenSUSE Tumbleweed, Slackware
-Current…
+Current.
 
 Pour les autres distributions, copier ce pilote dans `xkb/symbols/custom` :
 
@@ -74,12 +73,11 @@ D’autres méthodes d’installation sont possibles, en passant le [fichier
 source][] à [XKalamine][].
 
 Remarque : avec certains bureaux (Gnome notamment), la touche morte [★]{.odk}
-ne fonctionne que si Ergo‑L est défini comme disposition par défaut, i.e. en
-haut de la liste dans les préférences clavier.
+ne fonctionne que si Ergo‑L est défini comme disposition par défaut, c’est-à-dire en haut de la liste dans les préférences clavier.
 
 ### Aide-mémoire : [cavalier.pdf][]
 
-Une aide pour apprendre la dispo. À imprimer, plier et placer sur le bureau !
+Une aide pour apprendre la dispo. À imprimer, plier et placer sur son bureau !
 
 ### Résolution de problèmes
 
