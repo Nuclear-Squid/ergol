@@ -9,6 +9,11 @@ plutôt que déplacer les doigts. Le gain de confort est **très** significatif.
 
 <style> .toc td { text-align: center; padding: 0 1em; } </style>
 <table class="highlight toc">
+  <colgroup>
+    <col width="34%" />
+    <col width="33%" />
+    <col width="33%" />
+  </colgroup>
   <tr>
     <td> [![4×6](4x6.svg)][4×6] </td>
     <td> [![3×6](3x6.svg)][3×6] </td>
@@ -18,6 +23,11 @@ plutôt que déplacer les doigts. Le gain de confort est **très** significatif.
     <td> [4×6][] </td>
     <td> [3×6][] </td>
     <td> [3×5][] </td>
+  </tr>
+  <tr>
+    <td> facilité et polyvalence </td>
+    <td> le 1DFH par essence </td>
+    <td> la <i lang="en">red pill</i> </td>
   </tr>
 </table>
 
@@ -117,18 +127,19 @@ layer-taps sous les pouces et homerow-mods sous les doigts.
 
 Chaque touche de pouce va assurer deux fonctions :
 
-- émettre [Espace]{.kbd}, [Backspace]{.kbd}, [Entrée]{.kbd}, [Esc]{.kbd} ou
-  [Tab]{.kbd} quand elle est pressée et relâchée rapidement (*tap*) ;
+- émettre [Backspace]{.kbd}, [Esc]{.kbd}, [Entrée]{.kbd}, [Espace]{.kbd}
+  quand elle est pressée et relâchée rapidement (*tap*) ;
 - changer de *layer* quand elle est maintenue (*hold*).
 
 (On considère que [Shift]{.kbd} et [AltGr]{.kbd} sont des *layers* au même titre
-que [NumNav][] : contrairement à [Ctrl]{.kbd} ou [Alt]{.kbd}, leur rôle est bien
+que [NavNum][] : contrairement à [Ctrl]{.kbd} ou [Alt]{.kbd}, leur rôle est bien
 de modifier les caractères de base.)
 
-Les détails de synchronisation sont importants ! En particulier, la durée de
+Les détails de synchronisation sont importants. En particulier, la durée de
 temporisation est sensible : 300 ms est une bonne valeur pour débuter, on pourra
 la réduire doucement au fil de la progression.
 
+<!--
 Plus finement, on peut choisir parmi deux comportements :
 
 - classique : la touche se comporte comme un *tap* tant qu’elle n’est pas
@@ -142,11 +153,12 @@ Plus finement, on peut choisir parmi deux comportements :
   susceptible de ralentir la saisie ; et on en profite pour associer en *tap*
   des touches que l’on veut éviter d’actionner par erreur, comme [Entrée]{.kbd}
   ou [Esc]{.kbd}.
+-->
 
 ### Homerow-mods
 
 On utilise le même principe pour associer les modifieurs [Ctrl]{.kbd},
-[Alt]{.kbd}, [Super]{.kbd} aux touches de repos des deux mains : [N]{.kbd}
+[Alt]{.kbd}, [Cmd]{.kbd} aux touches de repos des deux mains : [N]{.kbd}
 [E]{.kbd} [S]{.kbd} pour la main gauche, [R]{.kbd} [T]{.kbd} [I]{.kbd} pour la
 main droite.
 

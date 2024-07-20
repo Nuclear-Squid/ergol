@@ -30,26 +30,26 @@ hideSummaryOfChildPages = true
     <td> [3×6][] </td>
     <td> [3×5][] </td>
   </tr>
-  <tr>
-    <th colspan="3">
-      • [Arsenik][] : pour utiliser un clavier standard comme un 3×5
-    </th>
-  </tr>
+  <!-- <tr> -->
+  <!--   <th colspan="3"> -->
+  <!--     • [Arsenik][] : pour utiliser un clavier standard comme un 3×5 -->
+  <!--   </th> -->
+  <!-- </tr> -->
 </table>
 
 
 Contraintes des claviers ergonomiques
 -------------------------------------------------------------------------------
 
+Les claviers ergonomiques ont été pensés pour QWERTY ; Ergo‑L a été conçu en
+tenant compte des contraintes de ces claviers, mais ça n’est pas le cas d’Azerty
+et encore moins de Bépo.
+
+### Les limitations d’Azerty
+
 La quasi-totalité des claviers ergonomiques, par recherche de symétrie et pour
 limiter les extensions de doigts, n’ont que deux colonnes de touches par
 auriculaire — voire une seule.
-
-Ces claviers ont été conçus pour QWERTY ; Ergo‑L a été conçu en tenant compte
-des contraintes de ces claviers, mais ça n’est pas le cas d’Azerty et encore
-moins de Bépo.
-
-### Les limitations d’Azerty
 
 Pour Azerty, le passage à 2 colonnes sous l’auriculaire droit se fait sans trop
 de problème : il suffit de déplacer trois touches de symboles ([*]{.kbd}
@@ -96,7 +96,7 @@ donc besoin que de deux touches de pouce :
 
 Et c’est tout.
 
-### Compatibilité clavier / disposition
+### Compatibilité clavier/disposition
 
 <style>
 .cmp table,
@@ -149,9 +149,11 @@ actuel suffit. Même s’il est imprimé en Azerty ! L’ergonomie clavier dé
 l’[apprentissage de la dactylographie][dactylo] : si vous ne savez pas taper à
 10 doigts sans regarder, aucun clavier ergonomique ne vous sera utile.
 
+<!--
 Avec des logiciels libres comme [Kanata][] et en utilisant [Arsenik][] comme
 base, vous pouvez aussi obtenir un gain d’ergonomie très proche du meilleur
 clavier qui soit.
+-->
 
 ### Vous avez *envie* d’un clavier ?
 
@@ -171,6 +173,14 @@ sont plus faciles à prendre en main.
 Plus le clavier est compact, plus il est efficace et moins il est cher, au
 détriment du temps d’adaptation.
 
+### Quel <i lang="en">thumb cluster</i> ?
+
+Pour qu’un clavier soit utilisable facilement, il faut **au moins trois touches
+par pouce** qui soient bien accessibles ; quatre c’est mieux, cinq c’est large.
+
+Les claviers avec deux touches par pouce voire moins sont parfaits quand les
+[layer-taps][LT] et [homerow-mods][HRM] sont maitrisés.
+
 ### Pour débuter : le [4×6][]
 
 C’est de loin le type de clavier ergonomique le plus vendu. Cette géométrie
@@ -182,15 +192,10 @@ fonctionne avec tous les layouts francophones :
   [Entrée]{.kbd} et [Backspace]{.kbd} ;
 - possible en Bépo (et variantes), moyennant des adaptations plus conséquentes.
 
-C’est déjà un clavier compact, vous devrez donc passer par un [layer de
+C’est déjà un clavier compact, il faudra donc passer par un [layer de
 navigation][NavNum] pour accéder aux flèches par exemple. Et ce n’est pas un
 défaut, bien au contraire : l’ergonomie clavier consiste à faire venir les
 touches sous les doigts, plutôt que de déplacer ses doigts.
-
-Attention, veillez à ce que le clavier dispose d’*au moins* 3 touches par pouce.
-Certains modèles comme le ZSA Voyager n’ont que 2 touches par pouce, ce qui
-complique singulièrement l’utilisation ([layer-taps][LT] voire [homerow-mods][HRM]
-obligatoires).
 
 ### Valeur sûre : le [42 touches][3×6]
 
