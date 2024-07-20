@@ -42,22 +42,22 @@ Contraintes matérielles
 -------------------------------------------------------------------------------
 
 Les claviers ergonomiques ont été pensés pour QWERTY ; Ergo‑L a été conçu en
-tenant compte des contraintes de ces claviers, mais ça n’est pas le cas d’Azerty
+tenant compte des contraintes de ces claviers, mais ça n’est pas le cas d’AZERTY
 et encore moins de Bépo.
 
-### Les limitations d’Azerty
+### Les limitations d’AZERTY
 
 La quasi-totalité des claviers ergonomiques, par recherche de symétrie et pour
 limiter les extensions de doigts, n’ont que deux colonnes de touches par
 auriculaire — voire une seule.
 
-Pour Azerty, le passage à 2 colonnes sous l’auriculaire droit se fait sans trop
+Pour AZERTY, le passage à 2 colonnes sous l’auriculaire droit se fait sans trop
 de problème : il suffit de déplacer trois touches de symboles ([*]{.kbd}
 [$]{.kbd} [=]{.kbd}), [Entrée]{.kbd}, [Backspace]{.kbd}. Un effort d’adaptation
 est requis mais tous les mots continuent à être écrits de la même façon.
 
 Les symboles présents sur les touches [*]{.kbd} [$]{.kbd} [=]{.kbd} doivent être
-placés sur un <i lang="en">layer</i>*. Azerty étant particulièrement malcommode
+placés sur un <i lang="en">layer</i>. AZERTY étant particulièrement malcommode
 pour les symboles de programmation, on en profitera pour créer un layer dédié en
 remplacement de la touche AltGr.
 
@@ -110,7 +110,7 @@ Et c’est tout.
 <table>
   <tr>
     <th></th>
-    <th> Azerty </th>
+    <th> AZERTY </th>
     <th> Bépo   </th>
     <th> Ergo‑L </th>
   </tr>
@@ -140,7 +140,7 @@ Et c’est tout.
     <td><ul>
       <li> `W`, `Ç`, `%` </li>
       <li> tiret sur un layer </li>
-      <li> symboles sur un layer </li>
+      <li> symboles sur un layer à définir </li>
       <li> [Entrée]{.kbd}, [Backspace]{.kbd} </li>
       <li> [Shift]{.kbd} sous un pouce </li>
       <li> [layer-taps][LT] </li>
@@ -163,7 +163,7 @@ Et c’est tout.
 
 ⁽¹⁾ On considère qu’une disposition est « non-compatible » avec une géométrie de
 clavier quand les lettres courantes du français ne peuvent plus tenir dans le
-seul layer principal. C’est le cas d’Azerty dès qu’on n’a plus de rangée de
+seul layer principal. C’est le cas d’AZERTY dès qu’on n’a plus de rangée de
 chiffres, et de Bépo (et ses variantes) dès qu’on a moins de 2 colonnes sous
 l’auriculaire droit.
 
@@ -174,7 +174,7 @@ Conseils d’achat
 ### Vous n’avez pas *besoin* d’un clavier
 
 Pour apprendre Ergo‑L ou n’importe quelle disposition de clavier, votre clavier
-actuel suffit. Même s’il est imprimé en Azerty ! L’ergonomie clavier débute avec
+actuel suffit. Même s’il est imprimé en AZERTY ! L’ergonomie clavier débute avec
 l’[apprentissage de la dactylographie][dactylo] : si vous ne savez pas taper à
 10 doigts sans regarder, aucun clavier ergonomique ne vous sera utile.
 
@@ -188,8 +188,7 @@ clavier qui soit.
 
 C’est bien normal. :-) De notre point de vue, un clavier est ergonomique si :
 
-- ses touches sont en colonnes (géométrie ortholinéaire ou, mieux, <i
-  lang="en">col stagger</i>), pour faciliter l’apprentissage de la
+- ses touches sont en colonnes, pour faciliter l’apprentissage de la
   dactylographie et limiter les fautes de frappe ;
 - il est équipé de contacts mécaniques, que l’on peut remplacer selon ses goûts
   et ses besoins ;
@@ -199,6 +198,11 @@ Il peut être splitté ou monobloc, c’est affaire de goûts : les versions
 splittées permettent une plus grande variété de positions, les versions monobloc
 sont plus faciles à prendre en main.
 
+Les colonnes peuvent être alignées (géométrie ortholinéaire) ou décalées
+verticalement (<i lang="en">col stagger</i>) pour compenser les différences de
+longueur des doigts. Un stagger prononcé donnera du confort, notamment quand on
+tape assez à plat, mais nécessite un temps d’adaptation.
+
 Plus le clavier est compact, plus il est efficace et moins il est cher, au
 détriment du temps d’adaptation.
 
@@ -207,7 +211,7 @@ détriment du temps d’adaptation.
 Pour qu’un clavier soit utilisable facilement, il faut **au moins trois touches
 par pouce** qui soient bien accessibles ; quatre c’est mieux, cinq c’est large.
 
-Les claviers avec deux touches par pouce voire moins sont parfaits quand les
+Les claviers avec seulement deux touches par pouce sont parfaits quand les
 [layer-taps][LT] et [homerow-mods][HRM] sont maitrisés.
 
 ### Pour débuter : le [4×6][]
@@ -219,7 +223,7 @@ fonctionne avec tous les layouts francophones :
 
 - **triviale en Ergo‑L** et Lafayette — aucune adaptation requise, chiffres en
   direct ;
-- facile en Azerty, surtout avec une colonne centrale supplémentaire pour
+- facile en AZERTY, surtout avec une colonne centrale supplémentaire pour
   [Entrée]{.kbd} et [Backspace]{.kbd} ;
 - possible en Bépo (et variantes), moyennant des adaptations plus conséquentes.
 
@@ -242,7 +246,7 @@ moins facile qu’un [4×6][] et *beaucoup* plus facile qu’un [3×5][], c’es
 clavier dont vous aurez l’usage très longtemps.
 
 Attention, il sera nettement plus difficile d’accès en Bépo (Béopy, Optimot…) et
-quasi inutilisable en Azerty.
+quasi inutilisable en AZERTY.
 
 
 [full-size]: ./full-size

@@ -200,7 +200,7 @@ disposition est faite pour ça !
 - Les [3×5][] se destinent à une utilisation plus avancée, reposant sur les
   [layer-taps][lt] et [homerow-mods][hrm].
 
-**En Azerty**, les [4×6][] sont un choix raisonnable. Certains modèles (p. ex.
+**En AZERTY**, les [4×6][] sont un choix raisonnable. Certains modèles (p. ex.
 [Sofle][] v2 ou [Lily58][]) disposent de touches supplémentaires au centre pour
 placer [Entrée]{.kbd} et [Backspace]{.kbd} sous les index, permettant ainsi de
 laisser [Shift]{.kbd} inchangées sous les auriculaires, et seront plus
