@@ -59,7 +59,8 @@
     .sym { fill: blue; transform: translate(0, -23px); }
     .nav { fill: orange; }
 
-    .level1, .level2, .sym { opacity: 0.5; }
+    .level1, .level2 { opacity: 0.8; }
+    .sym             { opacity: 0.6; }
 
     @media (prefers-color-scheme: dark) {
       .specialKey rect { fill: #333; }

@@ -71,9 +71,8 @@ ce qui n’est pas un changement anodin non plus.
 
 Les variantes de Bépo ont toutes le même problème, lié à la présence de deux
 lettres sur la 7<sup>e</sup> colonne du clavier ISO. Optimot se targue d’être
-conçu « pour tous les claviers, sans adaptation » mais a exactement les mêmes
-limitations — et détaille même sur son site quelles adaptations effectuer pour
-chaque clavier.
+conçu « pour tous les claviers » mais a les mêmes limitations — et détaille même
+sur son site quelles adaptations effectuer pour chaque type de clavier.
 
 Par ailleurs, on ne pourra pas fusionner les symboles déplacés avec la couche
 AltGr, dont les meilleurs emplacements sont déjà pris pour des besoins
@@ -188,8 +187,8 @@ clavier qui soit.
 
 C’est bien normal. :-) De notre point de vue, un clavier est ergonomique si :
 
-- ses touches sont en colonnes, pour faciliter l’apprentissage de la
-  dactylographie et limiter les fautes de frappe ;
+- **ses touches sont en colonnes**, pour faciliter la dactylographie et limiter
+  les fautes de frappe ;
 - il est équipé de contacts mécaniques, que l’on peut remplacer selon ses goûts
   et ses besoins ;
 - il est programmable.

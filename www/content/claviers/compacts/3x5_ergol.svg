@@ -68,7 +68,8 @@
     .num { fill: orange; }
     .mod { fill: #333; }
 
-    .level1, .level2, .sym { opacity: 0.5; }
+    .level1, .level2 { opacity: 0.8; }
+    .sym             { opacity: 0.6; }
 
     @media (prefers-color-scheme: dark) {
       .specialKey .dualKey,
