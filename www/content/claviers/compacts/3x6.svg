@@ -4,36 +4,18 @@
     /* color theme */
 
     :root {
-      color-scheme: light dark;
-      /* default keys */
-      --fg-normal-shadow: #8bb8;
       --fg-normal-border: #666;
-      --fg-normal:        #333;
       --bg-normal:        #fff;
-      /* special keys */
-      --fg-level3:        blue;
-      --fg-level5:        green;
-      --fg-deadkey:       red;
-      --fg-special:       #555;
-      --bg-special:       #e4e4e4;
-      /* 'reach' theme */
-      --bg-number:        hsl(295, 100%, 95%);
-      --bg-letter:        hsl(222, 100%, 95%);
-      --bg-home:          hsl(222, 100%, 90%);
+      --bg-special:       #bbb;
+      --bg-number:        hsl(295,  50%, 80%);
+      --bg-letter:        hsl(222, 100%, 84%);
+      --bg-home:          hsl(222, 100%, 74%);
     }
 
     @media (prefers-color-scheme: dark) { :root {
-      --fg-normal-shadow: #8558;
       --fg-normal-border: #666;
-      --fg-normal:        #bbb;
       --bg-normal:        #4d4d4d;
-      /* special keys */
-      --fg-level3:        #99f;
-      --fg-level5:        #6d6;
-      --fg-deadkey:       #f77;
-      --fg-special:       #888;
-      --bg-special:       #444; /* #333; */
-      /* 'reach' theme */
+      --bg-special:       #444;
       --bg-number:        hsl(280, 10%, 34%);
       --bg-letter:        hsl(220, 15%, 35%);
       --bg-home:          hsl(225, 30%, 30%);
@@ -44,19 +26,12 @@
       stroke: var(--fg-normal-border);
       stroke-width: .5px;
     }
-    text {
-      fill: var(--fg-normal);
-      font: normal 20px sans-serif;
-      text-align: center;
-      text-shadow: 0 1px 0px var(--fg-normal-shadow);
-    }
 
     .specialKey rect,
     .specialKey path { fill: var(--bg-special); }
-
-    .numberKey rect { fill: var(--bg-number); }
-    .letterKey rect { fill: var(--bg-letter); }
-    .homeKey   rect { fill: var(--bg-home); }
+    .numberKey  rect { fill: var(--bg-number);  }
+    .letterKey  rect { fill: var(--bg-letter);  }
+    .homeKey    rect { fill: var(--bg-home);    }
 
     /* geometry */
 

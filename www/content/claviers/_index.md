@@ -6,36 +6,22 @@ hideSummaryOfChildPages = true
 +++
 
 <style>
-.toc th { text-align: left; font-weight: normal; }
-.toc td { text-align: center; padding: 0 1em; }
+.toc ul { margin: 0; }
+.toc ul ul { display: flex; flex-direction: row; padding: 0; }
+.toc li li { flex: 1; list-style-type: none; margin: 1em 1em 0 0; text-align: center; }
+@media (max-width: 480px) {
+  .toc ul ul { flex-direction: column; }
+  .toc li li img { width: 240px; }
+}
 </style>
-<table class="highlight toc">
-  <tr>
-    <th colspan="3">
-      • [full-size][] : les claviers historiques
-    </th>
-  </tr>
-  <tr>
-    <th colspan="3">
-      • [compacts][] : les géométries ergonomiques par excellence !
-    </th>
-  </tr>
-  <tr>
-    <td> [![4×6](compacts/4x6.svg)][4×6] </td>
-    <td> [![3×6](compacts/3x6.svg)][3×6] </td>
-    <td> [![3×5](compacts/3x5.svg)][3×5] </td>
-  </tr>
-  <tr>
-    <td> [4×6][] </td>
-    <td> [3×6][] </td>
-    <td> [3×5][] </td>
-  </tr>
-  <!-- <tr> -->
-  <!--   <th colspan="3"> -->
-  <!--     • [Arsenik][] : pour utiliser un clavier standard comme un 3×5 -->
-  <!--   </th> -->
-  <!-- </tr> -->
-</table>
+:::{.toc .highlight}
+- [full-size][] : les claviers historiques
+- [compacts][] : les géométries ergonomiques par excellence !
+  - [![](compacts/4x6.svg)][4×6] <br> [4×6][]
+  - [![](compacts/3x6.svg)][3×6] <br> [3×6][]
+  - [![](compacts/3x5.svg)][3×5] <br> [3×5][]
+<!-- - [Arsenik][] : pour utiliser un clavier standard comme un 3×5 -->
+:::
 
 
 Contraintes matérielles

@@ -2,7 +2,7 @@
 
   <style>
     rect, path {
-      fill: #f8f8f8;
+      fill: #fff;
       stroke: #666;
       stroke-width: .5px;
     }

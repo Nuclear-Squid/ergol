@@ -15,7 +15,7 @@
       stroke-width: .5px;
     }
     text {
-      fill: #333;
+      fill: #444;
       font: normal 20px sans-serif;
       text-align: center;
       text-anchor: middle;
@@ -63,9 +63,9 @@
     #sym .dualKey { fill: #99f; }
     #nav .dualKey { fill: #e83; }
     #num .dualKey { fill: #e83; }
-    .sym { fill: blue; transform: translate(0, -23px); }
-    .nav { fill: orange; }
-    .num { fill: orange; }
+    .sym { fill: #44f; transform: translate(0, -23px); }
+    .nav { fill: #e83; }
+    .num { fill: #e83; }
     .mod { fill: #333; }
 
     .level1, .level2 { opacity: 0.8; }

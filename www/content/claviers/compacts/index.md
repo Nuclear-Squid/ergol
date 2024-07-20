@@ -7,29 +7,20 @@ plutôt que déplacer les doigts. Le gain de confort est **très** significatif.
 
 <!--more-->
 
-<style> .toc td { text-align: center; padding: 0 1em; } </style>
-<table class="highlight toc">
-  <colgroup>
-    <col width="34%" />
-    <col width="33%" />
-    <col width="33%" />
-  </colgroup>
-  <tr>
-    <td> [![4×6](4x6.svg)][4×6] </td>
-    <td> [![3×6](3x6.svg)][3×6] </td>
-    <td> [![3×5](3x5.svg)][3×5] </td>
-  </tr>
-  <tr>
-    <td> [4×6][] </td>
-    <td> [3×6][] </td>
-    <td> [3×5][] </td>
-  </tr>
-  <tr>
-    <td> facilité et polyvalence </td>
-    <td> le 1DFH par essence </td>
-    <td> la <i lang="en">red pill</i> </td>
-  </tr>
-</table>
+<style>
+.toc ul { display: flex; flex-direction: row; margin 0; padding: 0; }
+.toc li { flex: 1; list-style-type: none; margin: 0 1em; text-align: center; }
+@media (max-width: 480px) {
+  .toc ul { flex-direction: column; }
+  .toc li { margin: 1em 0; }
+  .toc li img { width: 240px; }
+}
+</style>
+:::{.toc .highlight}
+- [4×6][] <br> [![](4x6.svg)][4×6] <br> facile et polyvalent
+- [3×6][] <br> [![](3x6.svg)][3×6] <br> 1DFH par essence
+- [3×5][] <br> [![](3x5.svg)][3×5] <br> la <i lang="en">red pill</i>
+:::
 
 
 Layer « NavNum »
@@ -48,7 +39,7 @@ Pour celles et ceux qui utilisent les touches de fonction, un demi-layer peut
 ![couche « F1…12 »](func.svg)
 
 
-[4×6]{id="kbd_4x6"} : facilité et polyvalence
+[4×6]{id="kbd_4x6"} : facile et polyvalent
 --------------------------------------------------------------------------------
 
 ### Géométrie
@@ -81,7 +72,7 @@ par pouce. Les claviers 4×6+2 comme le ZSA Voyager reposent sur l’utilisation
 [homerow-mods][], qui ne sont pas du tout à la portée des débutant·e·s.
 
 
-[3×6]{id="kbd_3x6"} : le [1DFH][] par essence
+[3×6]{id="kbd_3x6"} : [1DFH][] par essence
 --------------------------------------------------------------------------------
 
 Avec un peu d’habitude en [4×6][], on réalise que les chiffres sont plus
