@@ -104,12 +104,12 @@ Si le [Corne][] est sans conteste le clavier 3×6 le plus populaire en split, le
 [Planck][] est de loin le plus connu en monobloc. Ce sont ces deux claviers qui
 ont lancé le mouvement des claviers compacts.
 
-Nota : les [Sofle][] et [Preonic][] sont essentiellement des versions 4×6 des
+Note : les [Sofle][] et [Preonic][] sont essentiellement des versions 4×6 des
 Corne et Planck respectivement, créées pour les personnes souhaitant conserver
 un accès direct aux chiffres.
 
 
-[3×5]{id="kbd_3x5"} : la <i lang="en">« red pill »</i>
+[3×5]{id="kbd_3x5"} : la « <i lang="en">red pill</i> »
 --------------------------------------------------------------------------------
 
 Quand le [1DFH][] est devenu une évidence, la suite logique est de se
@@ -188,22 +188,22 @@ Certainement le 3×5 le plus simple à prendre en main.
 Pour qui ?
 --------------------------------------------------------------------------------
 
-TL;DR; les [4×6][] conviendront toujours, quel que soit le layout utilisé, à
+TL;DR : les [4×6][] conviendront toujours, quel que soit le layout utilisé, à
 condition d’avoir *au moins* trois touches par pouce.
 
-**Les Ergonautes peuvent utiliser tous ces claviers sans souci**, leur
+**Les Ergonautes peuvent utiliser tous ces claviers sans souci** : leur
 disposition est faite pour ça !
 
 - Les [4×6][] et [3×6][] sont envisageables pour débuter, et ne nécessitent
   aucune adaptation : une touche [AltGr]{.kbd} sous un pouce, un layer
-  [NavNum][] et tout est calé.
+  [NavNum][], et tout est calé.
 - Les [3×5][] se destinent à une utilisation plus avancée, reposant sur les
   [layer-taps][lt] et [homerow-mods][hrm].
 
 **En AZERTY**, les [4×6][] sont un choix raisonnable. Certains modèles (p. ex.
 [Sofle][] v2 ou [Lily58][]) disposent de touches supplémentaires au centre pour
 placer [Entrée]{.kbd} et [Backspace]{.kbd} sous les index, permettant ainsi de
-laisser [Shift]{.kbd} inchangées sous les auriculaires, et seront plus
+laisser les touches [Shift]{.kbd} inchangées sous les auriculaires, et seront plus
 intuitifs.
 
 **En Bépo**, les [4×6][] et [3×6][] sont envisageables. L’effort d’adaptation
