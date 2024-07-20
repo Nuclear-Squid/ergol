@@ -377,4 +377,9 @@ code { /* character, digrams, trigrams */
   header + nav li:has(.active) a.active {
     color: var(--fg-banner);
   }
+
+  figure figcaption,
+  figure img {
+    max-width: 45em;
+  }
 }
