@@ -33,7 +33,7 @@ plutôt que déplacer les doigts. Le gain de confort est **très** significatif.
 
 
 Layer « NavNum »
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Avec Ergo‑L, comme le pavé principal de 3×10 touches permet de saisir toutes les
 lettres (en direct) et tous les symboles (via [AltGr]{.kbd}), on n’a besoin que
