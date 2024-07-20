@@ -160,7 +160,7 @@ Et c’est tout.
 <!-- do not remove the empty line above -->
 :::
 
-⁽¹⁾ On considère qu’une disposition est « non-compatible » avec une géométrie de
+⁽¹⁾ On considère qu’une disposition est « non compatible » avec une géométrie de
 clavier quand les lettres courantes du français ne peuvent plus tenir dans le
 seul layer principal. C’est le cas d’AZERTY dès qu’on n’a plus de rangée de
 chiffres, et de Bépo (et ses variantes) dès qu’on a moins de 2 colonnes sous
