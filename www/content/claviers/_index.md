@@ -38,7 +38,7 @@ hideSummaryOfChildPages = true
 </table>
 
 
-Contraintes des claviers ergonomiques
+Contraintes matérielles
 -------------------------------------------------------------------------------
 
 Les claviers ergonomiques ont été pensés pour QWERTY ; Ergo‑L a été conçu en
@@ -96,38 +96,67 @@ donc besoin que de deux touches de pouce :
 
 Et c’est tout.
 
-### Compatibilité clavier/disposition
+### Adaptations typiques
 
 <style>
+.cmp table { margin: 0 auto; border-collapse: collapse; text-align: center; }
 .cmp table,
 .cmp td { border: 1px solid var(--fg-banner-border); padding:  0  0.5em; }
 .cmp th { border: 1px solid var(--fg-banner-border); padding: 1em 0.5em; }
 .cmp th { background-color: var(--bg-banner); font-weight: normal; }
-.cmp table { margin: 0 auto; border-collapse: collapse; }
 .cmp ul { margin: 0.6em 0; padding-left: 1em; text-align: left; }
 </style>
 :::{.cmp style="overflow: scroll;" }
-+-------+---------------------+---------------------------+-------------------+
-|       | Azerty              | Bépo                      | Ergo‑L            |
-+:=====:+:===================:+:=========================:+:=================:+
-|[full- |                     |                           |                   |
-|size][]| selon modèle        | selon modèle              | aucune adaptation |
-|       |                     |                           |                   |
-+-------+---------------------+---------------------------+-------------------+
-|       | - `*µ`, `$£`, `[=+` | - `W`, `Ç`. `%`           |                   |
-|[4×6][]| - Entrée, Backspace | - Entrée, Backspace       | aucune adaptation |
-|       |                     | - Shift sous chaque pouce |                   |
-+-------+---------------------+---------------------------+-------------------+
-|       |                     | - `W`, `Ç`. `%`           |                   |
-|       |                     | - tiret sur un layer      |                   |
-|[3×6][]| non compatible ⁽¹⁾  | - symboles sur un layer   | aucune adaptation |
-|       |                     | - Entrée, Backspace       |                   |
-|       |                     | - Shift sous un pouce     |                   |
-+-------+---------------------+---------------------------+-------------------+
-|       |                     |                           | - *mod-taps*      |
-|[3×5][]| non compatible ⁽¹⁾  | non compatible ⁽¹⁾        | - Entrée, Esc,    |
-|       |                     |                           |   Backspace, Tab  |
-+-------+---------------------+---------------------------+-------------------+
+<table>
+  <tr>
+    <th></th>
+    <th> Azerty </th>
+    <th> Bépo   </th>
+    <th> Ergo‑L </th>
+  </tr>
+  <tr>
+    <td style="padding: 1em 0;"> [full-size][] </td>
+    <td> selon modèle </td>
+    <td> selon modèle </td>
+    <td> aucune adaptation </td>
+  </tr>
+  <tr>
+    <td> [4×6][] </td>
+    <td><ul>
+      <li> `*`, `$`, `=` </li>
+      <li> [Entrée]{.kbd}, [Backspace]{.kbd} </li>
+    </ul></td>
+    <td><ul>
+      <li> `W`, `Ç`, `%` </li>
+      <li> [Entrée]{.kbd}, [Backspace]{.kbd} </li>
+      <li> [Shift]{.kbd} sous chaque pouce </li>
+      <li> [layer-taps][LT] </li>
+    </ul></td>
+    <td> aucune adaptation </td>
+  </tr>
+  <tr>
+    <td> [3×6][] </td>
+    <td> non compatible ⁽¹⁾ </td>
+    <td><ul>
+      <li> `W`, `Ç`, `%` </li>
+      <li> tiret sur un layer </li>
+      <li> symboles sur un layer </li>
+      <li> [Entrée]{.kbd}, [Backspace]{.kbd} </li>
+      <li> [Shift]{.kbd} sous un pouce </li>
+      <li> [layer-taps][LT] </li>
+    </ul></td>
+    <td> aucune adaptation </td>
+  </tr>
+  <tr>
+    <td> [3×5][] </td>
+    <td> non compatible ⁽¹⁾ </td>
+    <td> non compatible ⁽¹⁾ </td>
+    <td><ul>
+      <li> [layer-taps][LT] </li>
+      <li> [homerow-mods][HRM] </li>
+    </ul></td>
+  </tr>
+</table>
 
 <!-- do not remove the empty line above -->
 :::
@@ -183,6 +212,8 @@ Les claviers avec deux touches par pouce voire moins sont parfaits quand les
 
 ### Pour débuter : le [4×6][]
 
+![[Sofle][], 58 touches (4×6+5)](compacts/4x6_ergol.svg)
+
 C’est de loin le type de clavier ergonomique le plus vendu. Cette géométrie
 fonctionne avec tous les layouts francophones :
 
@@ -198,6 +229,8 @@ défaut, bien au contraire : l’ergonomie clavier consiste à faire venir les
 touches sous les doigts, plutôt que de déplacer ses doigts.
 
 ### Valeur sûre : le [42 touches][3×6]
+
+![[Corne][], 42 touches (3×6+3)](compacts/3x6_ergol.svg)
 
 Cette géométrie, avec [3×6][] touches par main et 3 touches par pouce,
 correspond au plus grand clavier possible qui respecte l’approche [1DFH][] :
@@ -223,3 +256,6 @@ quasi inutilisable en Azerty.
 [Arsenik]:   ./arsenik
 [1DFH]:      /presentation/#dfh-1u-distance-from-home
 [dactylo]:   /articles/apprendre_a_taper/
+
+[Sofle]:     https://github.com/josefadamcik/SofleKeyboard
+[Corne]:     https://github.com/foostan/crkbd
