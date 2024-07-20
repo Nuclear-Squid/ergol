@@ -57,8 +57,8 @@ de problème : il suffit de déplacer trois touches de symboles ([*]{.kbd}
 est requis mais tous les mots continuent à être écrits de la même façon.
 
 Les symboles présents sur les touches [*]{.kbd} [$]{.kbd} [=]{.kbd} doivent être
-placés sur un *layer*. Azerty étant particulièrement malcommode pour les
-symboles de programmation, on en profitera pour créer un *layer* dédié en
+placés sur un <i lang="en">layer</i>*. Azerty étant particulièrement malcommode
+pour les symboles de programmation, on en profitera pour créer un layer dédié en
 remplacement de la touche AltGr.
 
 ### Les limitations de Bépo <small>(Béopy, Optimot…)</small>
@@ -78,7 +78,7 @@ chaque clavier.
 Par ailleurs, on ne pourra pas fusionner les symboles déplacés avec la couche
 AltGr, dont les meilleurs emplacements sont déjà pris pour des besoins
 typographiques : `Œ`, `Æ`, `Ù`, `€`, le tréma mort, tous sont sur les touches
-confortables en main gauche. Il faut donc définir un *layer* supplémentaire.
+confortables en main gauche. Il faut donc définir un layer supplémentaire.
 
 ### L’approche Ergonaute <small>(Ergo‑L, Erglace, Lafayette, Bépolar…)</small>
 

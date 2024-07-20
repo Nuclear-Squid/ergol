@@ -37,7 +37,7 @@ Layer « NavNum »
 
 Avec Ergo‑L, comme le pavé principal de 3×10 touches permet de saisir toutes les
 lettres (en direct) et tous les symboles (via [AltGr]{.kbd}), on n’a besoin que
-d’un seul *layer* pour disposer de toutes les touches manquantes : les touches
+d’un seul layer pour disposer de toutes les touches manquantes : les touches
 de déplacement et le pavé numérique.
 
 ![couche « NavNum »](navnum.svg)
@@ -129,9 +129,9 @@ Chaque touche de pouce va assurer deux fonctions :
 
 - émettre [Backspace]{.kbd}, [Esc]{.kbd}, [Entrée]{.kbd}, [Espace]{.kbd}
   quand elle est pressée et relâchée rapidement (*tap*) ;
-- changer de *layer* quand elle est maintenue (*hold*).
+- changer de layer quand elle est maintenue (*hold*).
 
-(On considère que [Shift]{.kbd} et [AltGr]{.kbd} sont des *layers* au même titre
+(On considère que [Shift]{.kbd} et [AltGr]{.kbd} sont des layers au même titre
 que [NavNum][] : contrairement à [Ctrl]{.kbd} ou [Alt]{.kbd}, leur rôle est bien
 de modifier les caractères de base.)
 
