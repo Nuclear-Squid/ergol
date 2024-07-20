@@ -11,7 +11,7 @@
       stroke-width: .5px;
     }
     text {
-      fill: #333;
+      fill: #444;
       font: normal 20px sans-serif;
       text-align: center;
       text-anchor: middle;
@@ -56,8 +56,8 @@
 
     #sym rect { fill: #99f; }
     #nav rect { fill: #e83; }
-    .sym { fill: blue; transform: translate(0, -23px); }
-    .nav { fill: orange; }
+    .sym { fill: #44f; transform: translate(0, -23px); }
+    .nav { fill: #e83; }
 
     .level1, .level2 { opacity: 0.8; }
     .sym             { opacity: 0.6; }

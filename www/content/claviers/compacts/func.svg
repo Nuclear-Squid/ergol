@@ -38,8 +38,8 @@
 
     .level1, .level2 { opacity: 0.7; }
 
-    rect { fill: #f8f8f8; }
-    text { fill: #aaa; }
+    rect { fill: #fff; }
+    text { fill: #666; }
     .hrm { fill: #ddd; }
     .mod { fill: #333; }
     .sym { fill: blue; }
