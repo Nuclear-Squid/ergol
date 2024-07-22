@@ -130,6 +130,9 @@ Les détails de synchronisation sont importants. En particulier, la durée de
 temporisation est sensible : 300 ms est une bonne valeur pour débuter, on pourra
 la réduire doucement au fil de la progression.
 
+L’approche [Space Cadet][] peut être utilisée pour supprimer ce délai pour
+l’activation des couches [Shift]{.kbd} ou [AltGr]{.kbd}.
+
 ### Homerow-mods
 
 On utilise le même principe pour associer les modifieurs [Ctrl]{.kbd},
@@ -220,6 +223,9 @@ plus rapide d’apprendre [Bépolar][]… voire Ergo‑L. ;-)
 [Sweep]:     https://github.com/davidphilipbarr/Sweep
 [Chocofi]:   https://github.com/pashutk/chocofi
 [Atreus]:    https://atreus.technomancy.us/
+
+[Arsenik]:       ../arsenik
+[Space Cadet]:   ../arsenik#layer-taps
 
 [Miryoku]:       https://github.com/manna-harbour/miryoku
 [precondition]:  https://precondition.github.io/home-row-mods

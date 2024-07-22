@@ -212,7 +212,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="26" y="19.6" style="font-size: 19px;">⎋</text>
-        <text x="26" y="43.4" class="layer">Num</text>
+        <text x="26" y="43.4" class="layer">Nav</text>
       </g>
     </g>
   </g>

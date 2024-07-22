@@ -35,11 +35,12 @@ perturber au début.
 [Shift]{.kbd} et [AltGr]{.kbd} sont considérés comme des layers au même titre
 que [NavNum]{.kbd}, mais avec une différence de synchronisation importante :
 pour produire le *tap*, elles doivent être pressées et relâchées sans qu’aucune
-autre touche n’ait été activée, sans quoi c’est le *hold* qui est retenu. On
-parle alors de comportement « Space Cadet » ou « <i lang="en">permissive hold
-</i> » : **cela permet à [Shift]{.kbd} et [AltGr]{.kbd} d’être déclenchées sans
-aucun délai susceptible de ralentir la saisie**, et les touches associées en
-*tap* sont beaucoup moins susceptibles d’être actionnées par erreur.
+autre touche n’ait été activée, sans quoi c’est le *hold* qui est retenu.
+
+On parle alors de comportement « **Space Cadet** » ou « <i lang="en">permissive
+hold </i> » : **cela permet à [Shift]{.kbd} et [AltGr]{.kbd} d’être déclenchées
+sans aucun délai susceptible de ralentir la saisie**, et les touches associées
+en *tap* sont beaucoup moins susceptibles d’être actionnées par erreur.
 
 ### Homerow-mods
 
