@@ -163,11 +163,9 @@ actuel suffit. Même s’il est imprimé en AZERTY ! L’ergonomie clavier dé
 l’[apprentissage de la dactylographie][dactylo] : si vous ne savez pas taper à
 10 doigts sans regarder, aucun clavier ergonomique ne vous sera utile.
 
-<!--
 Avec des logiciels libres comme [Kanata][] et en utilisant [Arsenik][] comme
 base, vous pouvez aussi obtenir un gain d’ergonomie très proche du meilleur
 clavier qui soit.
--->
 
 ### Vous avez *envie* d’un clavier ?
 
@@ -248,3 +246,4 @@ quasi inutilisable en AZERTY.
 
 [Sofle]:     https://github.com/josefadamcik/SofleKeyboard
 [Corne]:     https://github.com/foostan/crkbd
+[kanata]:    https://github.com/jtroo/kanata

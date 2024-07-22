@@ -130,22 +130,6 @@ Les détails de synchronisation sont importants. En particulier, la durée de
 temporisation est sensible : 300 ms est une bonne valeur pour débuter, on pourra
 la réduire doucement au fil de la progression.
 
-<!--
-Plus finement, on peut choisir parmi deux comportements :
-
-- classique : la touche se comporte comme un *tap* tant qu’elle n’est pas
-  maintenue au moins 300 ms ; on accepte donc un petit délai avant d’activer un
-  layer, ce qui convient parfaitement à notre touche
-  [Espace]{.kbd}/[NumNav]{.kbd}.
-- « Space Cadet » ou « permissive hold » : il faut que la touche de pouce soit
-  pressée et relâchée sans qu’aucune autre touche n’ait été activée pour
-  produire le *tap*, sans quoi c’est le *hold* qui est retenu. C’est bien adapté
-  à [Shift]{.kbd} et [AltGr]{.kbd}, pour lesquelles on ne veut pas de délai
-  susceptible de ralentir la saisie ; et on en profite pour associer en *tap*
-  des touches que l’on veut éviter d’actionner par erreur, comme [Entrée]{.kbd}
-  ou [Esc]{.kbd}.
--->
-
 ### Homerow-mods
 
 On utilise le même principe pour associer les modifieurs [Ctrl]{.kbd},
@@ -153,7 +137,7 @@ On utilise le même principe pour associer les modifieurs [Ctrl]{.kbd},
 [E]{.kbd} [S]{.kbd} pour la main gauche, [R]{.kbd} [T]{.kbd} [I]{.kbd} pour la
 main droite.
 
-![](hrm.svg)
+![](../hrm.svg)
 
 On se fait assez rapidement aux layer-taps sous les pouces, mais les
 homerow-mods sont plus longs à acquérir : on a tendance à ne pas lever les
