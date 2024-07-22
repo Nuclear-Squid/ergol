@@ -20,7 +20,7 @@ hideSummaryOfChildPages = true
   - [![](compacts/4x6.svg)][4×6] <br> [4×6][]
   - [![](compacts/3x6.svg)][3×6] <br> [3×6][]
   - [![](compacts/3x5.svg)][3×5] <br> [3×5][]
-<!-- - [Arsenik][] : pour utiliser un clavier standard comme un 3×5 -->
+- [Arsenik][] : pour utiliser un clavier standard comme un 3×5
 :::
 
 

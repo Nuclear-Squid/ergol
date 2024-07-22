@@ -82,11 +82,6 @@ l’angle-mod, la définition de layers, la configuration de layer-taps et
 homerow-mods — et plus généralement, de faire une grande partie de ce que font
 les <i lang="en">firmwares</i> de claviers programmables comme QMK et ZMK.
 
-<!-- Voici les fichiers de configuration kanata pour Arsenik et [Selenium][] : -->
-<!--   -->
-<!-- - [arsenik.kbd][] -->
-<!-- - [selenium.kbd][] -->
-
 Une configuration « clé en main » sera proposée prochainement.
 
 
@@ -107,7 +102,12 @@ consiste à doubler la touche [NavNum]{.kbd} :
 
 ![Arsenik sur un [Ferris][]](arsenik_ferris.svg)
 
+On peut également scinder la couche NumNav en une couche numérique et une couche
+de navigation, ou ajouter une couche pour les touches F1…12, ou une couche pour
+l’émulation souris…
 
+
+<!--
 Variante « Selenium »
 --------------------------------------------------------------------------------
 
@@ -150,6 +150,7 @@ C’est une référence aux numéros atomiques de ces deux éléments : 33 et 
 respectivement, correspondant au nombre de touches utilisées. La dualité
 arsenic/selenium est une référence cinématographique. <img style="height: 1em"
 src="evolution.svg">
+-->
 
 
 Pour qui ?
