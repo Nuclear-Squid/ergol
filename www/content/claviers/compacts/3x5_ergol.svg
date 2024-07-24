@@ -50,13 +50,13 @@
 
     /* XXX these thumb clusters have been positioned with magic numbers */
 
-    .thb_4 { transform: translate(280px, 201px); }
-    .thb_5 { transform: translate(350px, 217px); }
+    .thb_4 { transform: translate(280px, 203px); }
+    .thb_5 { transform: translate(350px, 219px); }
     .thb_4 g { transform: rotate(12deg); }
     .thb_5 g { transform: rotate(24deg); }
 
-    .thb_7 { transform: translate( 20px, 211px); }
-    .thb_6 { transform: translate(-48px, 236px); }
+    .thb_7 { transform: translate( 22px, 214px); }
+    .thb_6 { transform: translate(-44px, 240px); }
     .thb_7 g { transform: rotate(-12deg); }
     .thb_6 g { transform: rotate(-24deg); }
 
@@ -203,7 +203,7 @@
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="26" y="19.6" style="font-size: 13px;">⌫</text>
+        <text x="26" y="19.6" style="font-size: 19px;">⎋</text>
         <text x="26" y="43.4">Shift</text>
       </g>
     </g>
@@ -211,7 +211,7 @@
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="26" y="19.6" style="font-size: 19px;">⎋</text>
+        <text x="26" y="19.6" style="font-size: 13px;">⌫</text>
         <text x="26" y="43.4" class="layer">Nav</text>
       </g>
     </g>
@@ -336,7 +336,7 @@
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="26" y="20.6" style="font-size: 19px;">⏎</text>
+        <text x="26" y="14.6" style="font-size: 19px;">⎵</text>
         <text x="26" y="43.4" class="layer">Nav</text>
       </g>
     </g>
@@ -344,7 +344,7 @@
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
-        <text x="26" y="14.6" style="font-size: 19px;">⎵</text>
+        <text x="26" y="20.6" style="font-size: 19px;">⏎</text>
         <text x="26" y="43.4" class="layer">AltGr</text>
       </g>
     </g>

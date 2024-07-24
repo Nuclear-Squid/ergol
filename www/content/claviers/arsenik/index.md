@@ -2,8 +2,8 @@
 title = "Arsenik"
 +++
 
-Une adaptation de [Miryoku][] pour les claviers de <i lang="en">laptop</i> et
-les claviers compacts.
+Une adaptation de [Miryoku][] sur 33 touches, pour les claviers de <i
+lang="en">laptop</i> et les claviers compacts.
 
 ![](./arsenik_ortho.svg)
 
@@ -13,8 +13,8 @@ les claviers compacts.
 Fonctionnement
 -------------------------------------------------------------------------------
 
-On conserve la base de l’approche [Miryoku][] : layer-taps sous les pouces et
-homerow-mods sous les doigts.
+[Arsenik][] conserve la base de l’approche [Miryoku][] : layer-taps sous les
+pouces et homerow-mods sous les doigts.
 
 ### Layer-taps
 
@@ -42,6 +42,10 @@ hold </i> » : **cela permet à [Shift]{.kbd} et [AltGr]{.kbd} d’être dé
 sans aucun délai susceptible de ralentir la saisie**, et les touches associées
 en *tap* sont beaucoup moins susceptibles d’être actionnées par erreur.
 
+Ces détails de synchronisation sont importants. En particulier, la durée de
+temporisation est sensible : 300 ms est une bonne valeur pour débuter, on pourra
+la réduire doucement au fil de la progression.
+
 ### Homerow-mods
 
 De même que la couche NavNum est associée à [Espace]{.kbd}, les modifieurs
@@ -49,7 +53,7 @@ De même que la couche NavNum est associée à [Espace]{.kbd}, les modifieurs
 deux mains : [N]{.kbd} [E]{.kbd} [S]{.kbd} pour la main gauche, [R]{.kbd}
 [T]{.kbd} [I]{.kbd} pour la main droite.
 
-![](../hrm.svg)
+![](hrm.svg)
 
 Là encore, la touche se comporte comme un *tap* tant qu’elle n’est pas maintenue
 au moins 300 ms ; on accepte donc un délai avant d’activer un modifieur.
@@ -58,6 +62,18 @@ Plus ce délai est long et moins on est susceptible de déclencher des modifieur
 par erreur quand on ne relève pas les doigts suffisamment vite. [Shift]{.kbd} et
 [AltGr]{.kbd} n’étant pas affectées par ce délai, on peut le rallonger sans que
 ça ne gêne la vitesse ou le confort de saisie.
+
+On se fait assez rapidement aux layer-taps sous les pouces, mais les
+homerow-mods sont plus longs à acquérir : on a tendance à ne pas lever les
+doigts assez vite, ce qui risque de déclencher des modifieurs par erreur.
+
+Certain·e·s ne s’y font jamais ; d’autres contournent le problème avec des
+[combo-mods][] ou des [callum-mods][]. Mais le jeu en vaut vraiment la
+chandelle : le gain de confort est phénoménal ! En étant patient et en utilisant
+des temporisations assez longues au début (300 ms voire 400 ms), on finit par
+s’y faire et ça devient une évidence.
+
+Pour creuser le sujet, [ce billet][precondition] fait référence de nos jours.
 
 
 Claviers de <i lang="en">laptop</i>
@@ -101,7 +117,7 @@ le [Reviung][]…
 Sur un clavier splitté on a au moins deux touches par pouce. Une solution simple
 consiste à doubler la touche [NavNum]{.kbd} :
 
-![Arsenik sur un [Ferris][]](arsenik_ferris.svg)
+![Arsenik sur un [Ferris][]](../compacts/3x5_ergol.svg)
 
 On peut également scinder la couche NumNav en une couche numérique et une couche
 de navigation, ou ajouter une couche pour les touches F1…12, ou une couche pour
@@ -180,11 +196,15 @@ dispositions comme Azerty, Qwerty et tous les arrangements du Qwerty ANSI
 [arsenik.kbd]:   arsenik.kbd
 [selenium.kbd]:  selenium.kbd
 
-[Miryoku]:   https://github.com/manna-harbour/miryoku
-[kanata]:    https://github.com/jtroo/kanata
-[angle-mod]: https://colemakmods.github.io/ergonomic-mods/angle.html
+[Preonic]:       https://olkb.com/collections/preonic
+[Planck]:        https://olkb.com/collections/planck
+[Reviung]:       https://github.com/gtips/reviung
+[Ferris]:        https://github.com/pierrechevalier83/ferris
 
-[Preonic]:   https://olkb.com/collections/preonic
-[Planck]:    https://olkb.com/collections/planck
-[Reviung]:   https://github.com/gtips/reviung
-[Ferris]:    https://github.com/pierrechevalier83/ferris
+[Arsenik]:       https://github.com/OneDeadKey/arsenik
+[Miryoku]:       https://github.com/manna-harbour/miryoku
+[kanata]:        https://github.com/jtroo/kanata
+[angle-mod]:     https://colemakmods.github.io/ergonomic-mods/angle.html
+[precondition]:  https://precondition.github.io/home-row-mods
+[combo-mods]:    https://jasoncarloscox.com/writing/combo-mods/
+[Callum-mods]:   https://github.com/qmk/qmk_firmware/blob/user-keymaps-still-present/users/callum/readme.md

@@ -111,52 +111,38 @@ gain de confort est tel qu’il est impossible de revenir en arrière.
 
 ![[Ferris][], 34 touches (3×5+2) et beaucoup de *stagger*](3x5_ergol.svg)
 
-Pour utiliser ces claviers, l’approche [Miryoku][] est la plus courante :
-layer-taps sous les pouces et homerow-mods sous les doigts.
+Sur ce modèle, le fort décalage vertical des doigts, en particulier de
+l’auriculaire (<i lang="en">pinky stagger</i>), favorise une position plus
+ouverte des pouces. La touche de repos des pouces s’en trouve décalée.
 
-### Layer-taps
+### Mod-taps
 
-Chaque touche de pouce va assurer deux fonctions :
+Pour utiliser ces claviers, on utilise l’approche détaillée sur la page
+[Arsenik][] :
 
-- émettre [Backspace]{.kbd}, [Esc]{.kbd}, [Entrée]{.kbd}, [Espace]{.kbd}
-  quand elle est pressée et relâchée rapidement (*tap*) ;
-- changer de layer quand elle est maintenue (*hold*).
+- [layer-taps][] sous les pouces ;
+- [homerow-mods][] sous les doigts.
 
-(On considère que [Shift]{.kbd} et [AltGr]{.kbd} sont des layers au même titre
-que [NavNum][] : contrairement à [Ctrl]{.kbd} ou [Alt]{.kbd}, leur rôle est bien
-de modifier les caractères de base.)
+Grâce à cela, avec seulement deux touches par pouce on a un emplacement libre
+pour un layer supplémentaire :
 
-Les détails de synchronisation sont importants. En particulier, la durée de
-temporisation est sensible : 300 ms est une bonne valeur pour débuter, on pourra
-la réduire doucement au fil de la progression.
+- soit en remplaçant le [Nav]{.kbd} de gauche par un accès direct à F1…12 ou
+  une émulation de souris ;
+- soit en scindant la couche [NavNum]{.kbd} en une couche [Nav]{.kbd} et une
+  couche [Num]{.kbd}.
 
-L’approche [Space Cadet][] peut être utilisée pour supprimer ce délai pour
-l’activation des couches [Shift]{.kbd} ou [AltGr]{.kbd}.
+Tout est possible ! **Ces mod-taps offrent un gain ergonomique incroyable**,
+pour certain·e·s il est même très supérieur à l’adoption d’une disposition
+optimisée.
 
-### Homerow-mods
-
-On utilise le même principe pour associer les modifieurs [Ctrl]{.kbd},
-[Alt]{.kbd}, [Cmd]{.kbd} aux touches de repos des deux mains : [N]{.kbd}
-[E]{.kbd} [S]{.kbd} pour la main gauche, [R]{.kbd} [T]{.kbd} [I]{.kbd} pour la
-main droite.
-
-![](../hrm.svg)
-
-On se fait assez rapidement aux layer-taps sous les pouces, mais les
-homerow-mods sont plus longs à acquérir : on a tendance à ne pas lever les
-doigts assez vite, ce qui risque de déclencher des modifieurs par erreur.
-
-Certain·e·s ne s’y font jamais ; d’autres contournent le problème avec des
-[combo-mods][] ou des [callum-mods][]. Mais le jeu en vaut vraiment la
-chandelle : le gain de confort est phénoménal ! En étant patient et en utilisant
-des temporisations assez longues au début (300 ms voire 400 ms), on finit par
-s’y faire et ça devient une évidence.
-
-Pour creuser le sujet, [ce billet][precondition] fait référence de nos jours.
+Une fois l’apprentissage des mod-taps effectué, on ne bouge plus jamais ses
+doigts au-delà du pavé alpha : c’est parce que les mod-taps rendent les touches
+périphériques inutiles qu’on utilise ces claviers 3×5, et non l’inverse.
 
 ### Modèles courants
 
-En split, le [Ferris][] a de nombreux dérivés : [Sweep][], [Chocofi][]…
+En split, le [Ferris][] a de nombreux dérivés : [Sweep][], [Chocofi][]… Certains
+ont trois touches par pouce (format 36 touches), d’autres deux (34 touches).
 
 En monobloc, l’[Atreus][] est remarquable : simple, peu cher, il dispose de
 suffisamment de touches (5 par pouce) pour pouvoir se passer de homerow-mods.
@@ -194,10 +180,11 @@ conçues « pour tous les claviers, sans adaptation » :
   - déplacer [Entrée]{.kbd} et [Backspace]{.kbd} ;
   - renoncer au [Shift]{.kbd} droit et lui trouver une place sous les pouces.
 
-L’effort d’adaptation est donc (nettement) supérieur à celui que les Ergonautes
-feraient pour un clavier 3×5, et aboutit à une utilisation qui sera très
-différente entre un clavier standard et un clavier ergonomique. Il serait bien
-plus rapide d’apprendre [Bépolar][]… voire Ergo‑L. ;-)
+L’effort d’adaptation est donc supérieur à celui que les Ergonautes feraient
+pour un clavier 3×5, sans pour autant éliminer les extensions latérales des
+auriculaires ; et il aboutit à une utilisation qui sera très différente entre un
+clavier standard et un clavier ergonomique. Il nous semble bien plus rapide
+d’apprendre [Bépolar][]… voire Ergo‑L. ;-)
 
 
 [4×6]:       #kbd_4x6
@@ -225,7 +212,8 @@ plus rapide d’apprendre [Bépolar][]… voire Ergo‑L. ;-)
 [Atreus]:    https://atreus.technomancy.us/
 
 [Arsenik]:       ../arsenik
-[Space Cadet]:   ../arsenik#layer-taps
+[layer-taps]:    ../arsenik#layer-taps
+[homerow-mods]:  ../arsenik#homerow-mods
 
 [Miryoku]:       https://github.com/manna-harbour/miryoku
 [precondition]:  https://precondition.github.io/home-row-mods

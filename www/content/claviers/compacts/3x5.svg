@@ -133,12 +133,12 @@
       </g>
     </g>
 
-    <g class="thb_4 homeKey">
+    <g class="thb_4 specialKey">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
       </g>
     </g>
-    <g class="thb_5 specialKey">
+    <g class="thb_5 homeKey">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
       </g>
@@ -206,12 +206,12 @@
       </g>
     </g>
 
-    <g class="thb_6 specialKey" id="nav">
+    <g class="thb_6 homeKey" id="nav">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
       </g>
     </g>
-    <g class="thb_7 homeKey">
+    <g class="thb_7 specialKey">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
       </g>
