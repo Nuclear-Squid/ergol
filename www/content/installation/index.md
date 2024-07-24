@@ -52,7 +52,7 @@ Ergo‑L est déjà inclus dans toutes les distributions Linux dotées de `xkeyb
 en [version 2.42 ou ultérieure](https://repology.org/project/xkeyboard-config/badges),
 ce qui inclut notamment : Arch, Debian Sid, Fedora Rawhide, Gentoo, Manjaro
 Testing/Unstable, OpenMandriva Rolling/Cooker, OpenSUSE Tumbleweed, Slackware
-Current…
+Current, Ubuntu (≥24.04)…
 
 Pour les autres distributions, copier ce pilote dans `xkb/symbols/custom` :
 
