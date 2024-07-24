@@ -62,8 +62,8 @@ Outre le [Sofle][], le [Lily58][] et l’Iris56 sont très populaires en split.
 
 Certains modèles ont des touches centrales supplémentaires : c’est le cas du
 Lily58 qui a une touche supplémentaire par demi-clavier (4×6+4+1), ainsi que des
-[KeyboardIO][Model100] (4×6+5+3) et [Dygma Defy][Defy] (4×6+8+3) qui ont trois
-touches supplémentaires à la façon d’un [ErgoDox][].
+[Keyboardio Model100][Model100] (4×6+5+3) et [Dygma Defy][Defy] (4×6+8+3) qui
+ont trois touches supplémentaires à la façon d’un [ErgoDox][].
 
 En monobloc, le [Preonic][] est simple et efficace. Parfait pour débuter.
 

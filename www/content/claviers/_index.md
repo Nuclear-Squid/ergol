@@ -24,6 +24,13 @@ hideSummaryOfChildPages = true
 :::
 
 
+<i lang="en">Disclaimer</i> : nous n’avons rien à vendre, pas même des <i
+lang="en">keycaps</i>. Nous n’avons pas de partenariat commercial non plus : les
+solutions que nous préconisons ici se basent essentiellement sur des [claviers
+compacts libres][compacts] (qui peuvent donc être proposés par n’importe quel
+fabricant), voire [pas de clavier][Arsenik] du tout.
+
+
 Critères de choix
 -------------------------------------------------------------------------------
 
