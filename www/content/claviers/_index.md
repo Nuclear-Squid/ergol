@@ -24,6 +24,75 @@ hideSummaryOfChildPages = true
 :::
 
 
+Critères de choix
+-------------------------------------------------------------------------------
+
+### Impératifs
+
+De notre point de vue, un clavier est ergonomique si :
+
+- **ses touches sont en colonnes**, pour faciliter la dactylographie et limiter
+  les fautes de frappe ;
+- il est équipé de contacts mécaniques, que l’on peut remplacer selon ses goûts
+  et ses besoins ;
+- il est programmable.
+
+### Nombre de touches
+
+Les claviers ergonomiques [full-size][] existent depuis les années 1990, et ont
+toujours des adeptes.
+
+De notre point de vue, les claviers [compacts][] leur sont très supérieurs, à la
+fois plus efficaces et plus proches des claviers ISO, ce qui minimise la gêne
+quand on passe du clavier ergonomique au clavier du laptop. Les touches
+manquantes sont gérées par des layers programmables.
+
+Plus un clavier est compact, plus il est efficace et moins il est cher, au
+détriment du temps d’adaptation.
+
+### <i lang="en">Thumb cluster</i>
+
+Un élément de confort important réside dans le nombre et le placement des
+touches de pouce — qui seront, idéalement, placées en arc de cercle pour suivre
+le mouvement naturel.
+
+Pour qu’un clavier soit utilisable facilement, il faut **au moins trois touches
+par pouce** qui soient bien accessibles ; quatre c’est mieux, cinq c’est large
+— voire trop, car il est difficile de gérer autant de touches avec un pouce.
+
+Les claviers avec seulement deux touches par pouce sont parfaits quand les
+[layer-taps][LT] et [homerow-mods][HRM] sont maitrisés.
+
+### <i lang="en">Col stagger</i>
+
+Les colonnes peuvent être alignées (géométrie ortholinéaire) ou décalées
+verticalement (<i lang="en">col stagger</i>) pour compenser les différences de
+longueur des doigts.
+
+Un stagger prononcé donnera du confort, notamment quand on tape assez à plat,
+mais nécessite un temps d’adaptation.
+
+### Split ou monobloc ?
+
+C’est affaire de goûts : les versions splittées permettent une plus grande
+variété de positions, les versions monobloc sont plus faciles à prendre en main.
+
+Les claviers splittés sont indispensables si l’on souhaite taper avec les mains
+dans l’axe des épaules, ou si on a besoin de <i lang="en">tenting</i>
+(inclinaison latérale) pour réduire l’inconfort de pronation.
+
+### Géométrie plane ou 3D ?
+
+Là encore, c’est affaire de goûts : les géométries 3D (Kinesis, MoErgo, Dactyl,
+Skeletyl…) ont leurs adeptes. Elles réduisent très significativement l’inconfort
+lié aux « ciseaux » (= digrammes avec changement inconfortables de rangée) et
+permettent d’accéder à plus de touches qu’un clavier plat sans causer de
+déviations ulnaires.
+
+De notre point de vue, le surcoût de ces claviers ne se justifie pas en Ergo‑L.
+Mais le gain de confort est réel une fois la position bien calée.
+
+
 Contraintes matérielles
 -------------------------------------------------------------------------------
 
@@ -167,35 +236,15 @@ Avec des logiciels libres comme [Kanata][] et en utilisant [Arsenik][] comme
 base, vous pouvez aussi obtenir un gain d’ergonomie très proche du meilleur
 clavier qui soit.
 
-### Vous avez *envie* d’un clavier ?
+### Pourquoi acheter un clavier ?
 
-C’est bien normal. :-) De notre point de vue, un clavier est ergonomique si :
+Un clavier ergonomique peut être une aide précieuse pour apprendre à taper à dix
+doigts : la géométrie en colonnes favorise grandement l’association
+doigt/touche, et le fait de changer physiquement de clavier aide à casser les
+mauvaises habitudes qu’on a pu prendre auparavant.
 
-- **ses touches sont en colonnes**, pour faciliter la dactylographie et limiter
-  les fautes de frappe ;
-- il est équipé de contacts mécaniques, que l’on peut remplacer selon ses goûts
-  et ses besoins ;
-- il est programmable.
-
-Il peut être splitté ou monobloc, c’est affaire de goûts : les versions
-splittées permettent une plus grande variété de positions, les versions monobloc
-sont plus faciles à prendre en main.
-
-Les colonnes peuvent être alignées (géométrie ortholinéaire) ou décalées
-verticalement (<i lang="en">col stagger</i>) pour compenser les différences de
-longueur des doigts. Un stagger prononcé donnera du confort, notamment quand on
-tape assez à plat, mais nécessite un temps d’adaptation.
-
-Plus le clavier est compact, plus il est efficace et moins il est cher, au
-détriment du temps d’adaptation.
-
-### Quel <i lang="en">thumb cluster</i> ?
-
-Pour qu’un clavier soit utilisable facilement, il faut **au moins trois touches
-par pouce** qui soient bien accessibles ; quatre c’est mieux, cinq c’est large.
-
-Les claviers avec seulement deux touches par pouce sont parfaits quand les
-[layer-taps][LT] et [homerow-mods][HRM] sont maitrisés.
+Une fois cet apprentissage fait, les [caractéristiques techniques][critères de
+choix] des claviers ergonomiques pourront apporter un vrai gain de confort.
 
 ### Pour débuter : le [4×6][]
 
@@ -238,9 +287,9 @@ quasi inutilisable en AZERTY.
 [4×6]:       ./compacts/#kbd_4x6
 [3×6]:       ./compacts/#kbd_3x6
 [3×5]:       ./compacts/#kbd_3x5
-[HRM]:       ./compacts/#homerow-mods
-[LT]:        ./compacts/#layer-taps
 [Arsenik]:   ./arsenik
+[HRM]:       ./arsenik/#homerow-mods
+[LT]:        ./arsenik/#layer-taps
 [1DFH]:      /presentation/#dfh-1u-distance-from-home
 [dactylo]:   /articles/apprendre_a_taper/
 

@@ -158,7 +158,7 @@ condition d’avoir *au moins* trois touches par pouce.
 **Les Ergonautes peuvent utiliser tous ces claviers sans souci** : leur
 disposition est faite pour ça !
 
-- Les [4×6][] et [3×6][] sont envisageables pour débuter, et ne nécessitent
+- Les [4×6][] et [3×6][] sont envisageables pour débuter et ne nécessitent
   aucune adaptation : une touche [AltGr]{.kbd} sous un pouce, un layer
   [NavNum][], et tout est calé.
 - Les [3×5][] se destinent à une utilisation plus avancée, reposant sur les

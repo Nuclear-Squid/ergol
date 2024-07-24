@@ -79,6 +79,10 @@ Pour creuser le sujet, [ce billet][precondition] fait référence de nos jours.
 Claviers de <i lang="en">laptop</i>
 --------------------------------------------------------------------------------
 
+:::{style="text-align: center;" }
+🚧 en construction 🚧
+:::
+
 ### <i lang="en">Angle-mod</i>
 
 On applique un [angle-mod][], c’est-à-dire une permutation circulaire sur les 5
