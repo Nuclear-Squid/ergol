@@ -63,6 +63,10 @@ par pouce** qui soient bien accessibles ; quatre c’est mieux, cinq c’est l
 Les claviers avec seulement deux touches par pouce sont parfaits quand les
 [layer-taps][LT] et [homerow-mods][HRM] sont maitrisés.
 
+Noter que selon les utilisateurices, la touche de repos des pouce peut être soit
+dans l’axe de la colonne de repos des index, soit décalé d’une colonne vers
+l’extérieur de la paume. À prendre en compte lors du choix.
+
 ### <i lang="en">Col stagger</i>
 
 Les colonnes peuvent être alignées (géométrie ortholinéaire) ou décalées
