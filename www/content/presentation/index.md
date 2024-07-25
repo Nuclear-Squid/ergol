@@ -280,10 +280,10 @@ de clavier cherchant à couvrir toutes les langues !
 Si vous voulez adapter Ergo‑L à une langue étrangère, nous vous recommandons de
 concevoir la couche *Typo* uniquement pour cette langue et d’installer votre
 adaptation en même temps qu’Ergo‑L en lui donnant un autre nom (comme
-« ergol-de » pour l’allemand, par exemple) et une valeur *locale* adaptée (pour
-avoir la bonne correction orthographique). Tous les bureaux modernes proposent
-un raccourci clavier pour basculer d’une langue à une autre, et vous pourrez
-ainsi basculer d’Ergo‑L à votre variante spécifique en un clin d’œil.
+« ergol-de » pour l’allemand, par exemple) et des paramètres linguistiques
+adaptés (pour avoir la bonne correction orthographique). Tous les bureaux modernes
+proposent un raccourci clavier pour basculer d’une langue à une autre, et vous
+pourrez ainsi basculer d’Ergo‑L à votre variante spécifique en un clin d’œil.
 
 
 Redoutable pour le code
