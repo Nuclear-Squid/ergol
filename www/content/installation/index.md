@@ -76,7 +76,8 @@ D’autres méthodes d’installation sont possibles, en passant le [fichier
 source][] à [XKalamine][].
 
 Remarque : avec certains bureaux (Gnome notamment), la touche morte [★]{.odk}
-ne fonctionne que si Ergo‑L est défini comme disposition par défaut, c’est-à-dire en haut de la liste dans les préférences clavier.
+ne fonctionne que si Ergo‑L est défini comme disposition par défaut, c’est-à-dire 
+en haut de la liste dans les préférences clavier.
 
 ### Aide-mémoire : [cavalier.pdf][]
 
