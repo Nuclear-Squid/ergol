@@ -158,7 +158,7 @@ source d’erreur à haute vitesse, car il faut relâcher la touche au bon momen
 
 Ergo‑L utilise une touche morte [★]{.odk} de type [Lafayette][] pour tous les
 caractères accentués, diacritiques et signes de ponctuation spéciaux. Actionner
-cette touche « Typo » donne accès à **tous** ces symboles dans le pavé de
+cette touche Typo donne accès à **tous** ces symboles dans le pavé de
 3×10 touches, **sans** utiliser [AltGr]{.kbd}. Cela occasionne [de 2,5 % à
 4,0 % de frappes supplémentaires](/bepo/#typographie-ergol) pour un texte
 francophone, ce qui nous semble négligeable comparé au gain de confort obtenu.
@@ -278,7 +278,7 @@ de clavier cherchant à couvrir toutes les langues !
 ![Un exemple d’adaptation d’Ergo‑L pour l’allemand.](ergol_1dk_de.svg)
 
 Si vous voulez adapter Ergo‑L à une langue étrangère, nous vous recommandons de
-concevoir la couche *Typo* uniquement pour cette langue et d’installer votre
+concevoir la couche Typo uniquement pour cette langue et d’installer votre
 adaptation en même temps qu’Ergo‑L en lui donnant un autre nom (comme
 « ergol-de » pour l’allemand, par exemple) et des paramètres linguistiques
 adaptés (pour avoir la bonne correction orthographique). Tous les bureaux modernes
@@ -309,14 +309,14 @@ auriculaire, ou en [Shift]{.kbd}, ou les deux. Ergo‑L a donc à cœur de propo
 une meilleure solution.
 
 
-### Couche de symboles
+### Couche Symboles
 
-Ergo‑L propose une couche *Symboles* optionelle accessible par [AltGr]{.kbd} et
+Ergo‑L propose une couche Symboles optionelle accessible par [AltGr]{.kbd} et
 optimisée pour le placement et les enchaînements de symboles de programmation.
 
-![La couche *Symboles* d’Ergo‑L.](ergol_altgr.svg)
+![La couche Symboles d’Ergo‑L.](ergol_altgr.svg)
 
-Cette couche _Symboles_ est plutôt simple à mémoriser, car les symboles sont
+Cette couche est plutôt simple à mémoriser, car les symboles sont
 regroupés par « blocs ». On y retrouve :
 
 - les délimiteurs `()` `{}` `[]` `<>` `^$`
@@ -336,7 +336,7 @@ repos et la grande majorité des enchaînements de symboles de programmation se
 fait soit avec une alternance de main (`~/`, `);`, `</>`, `+=`, `['']`, etc.)
 soit avec un roulement (`>=`, `/*`, `";`, `()`, `\"`, etc.).
 
-Comme pour la saisie de texte en français ou anglais, la couche _Symboles_
+Comme pour la saisie de texte en français ou anglais, la couche Symboles
 d’Ergo‑L ne contient pratiquement aucun enchaînement inconfortable.
 
 
@@ -344,7 +344,7 @@ d’Ergo‑L ne contient pratiquement aucun enchaînement inconfortable.
 
 Pour une utilisation technique, Vim apporte une ergonomie reconnue et de
 nombreux éditeurs de code implémentent un mode de navigation Vim. La couche
-_Symboles_ d’Ergo‑L lui permet de conserver les principales commandes de
+Symboles d’Ergo‑L lui permet de conserver les principales commandes de
 déplacement :
 
 - [AltGr]{.kbd}‑[R]{.kbd}/[T]{.kbd} (les touches correspondant à
@@ -352,7 +352,7 @@ déplacement :
   de `j`/`k` ;
 - les sauts verticaux `{}`, `()` et `[]` sont en [AltGr]{.kbd} + main gauche.
 
-Cette couche _Symboles_ a été éprouvée dans des contextes techniques variés sans
+Cette couche Symboles a été éprouvée dans des contextes techniques variés sans
 qu’on relève de problème particulier. Elle a été reprise dans d’autres projets,
 notamment [Lafayette] et [Arsenik].
 
