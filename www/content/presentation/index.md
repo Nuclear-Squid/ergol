@@ -30,7 +30,7 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 Ergonomique avant tout !
 --------------------------------------------------------------------------------
 
-### 1DFH, « <i lang="en">1u Distance from Home</i> »
+### 1DFH, « <i lang="en">1u distance from home</i> »
 
 Ergo-L intègre l’approche 1DFH, qui consiste à ne pas déplacer ses doigts de
 plus d’une touche (« 1u », pour « une unité », désignant la distance entre deux
