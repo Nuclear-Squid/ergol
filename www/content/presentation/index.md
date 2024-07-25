@@ -267,7 +267,7 @@ Pour des usages plus réguliers, plutôt que de chercher à couvrir tous les cas
 possibles nous avons préféré faire en sorte que la disposition soit simple à
 personnaliser.
 
-L’[entrepôt GitHub d’Ergo‑L](https://github.com/Nuclear-Squid/ErgoL) contient le
+Le [dépôt GitHub d’Ergo‑L](https://github.com/Nuclear-Squid/ErgoL) contient le
 fichier source de la disposition – un fichier TOML facile à lire et modifier –
 ainsi que des instructions pour construire une disposition personnalisée ou
 évaluer la qualité des enchaînements d’une variante. Remplacer les caractères
