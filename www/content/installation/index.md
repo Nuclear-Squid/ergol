@@ -37,13 +37,16 @@ apparaît dans la barre de langues (indicateur de la barre des tâches).
 
 ### MacOS : [ergol.keylayout][]
 
-Enregistrer dans `/Library/Keyboard Layouts` et relancer la session. La
-disposition de clavier est disponible dans les préférences sous « Clavier », puis « Méthodes de saisie ».
-On peut aussi l’enregistrer dans `~/Library/Keyboard Layouts` (pour le seul
-utilisateur courant), mais la disposition ne sera pas active au login.
-Il est possible (et recommandé) d’utiliser [Karabiner][] pour [inverser les
-touches](karabiner_settings.png) [⌘ Command]{.kbd} et [⌥ Option]{.kbd} à droite,
-afin d’accéder plus facilement à la couche de symboles.
+Enregistrer dans `/Library/Keyboard Layouts` et relancer la session.
+La disposition de clavier est disponible dans les préférences sous
+« Clavier », puis « Méthodes de saisie ».
+On peut aussi l’enregistrer dans `~/Library/Keyboard Layouts`
+(pour le seul utilisateur courant), mais la disposition ne sera pas
+active au login.
+Il est possible (et recommandé) d’utiliser [Karabiner][]
+pour [inverser les touches](karabiner_settings.png) [⌘ Command]{.kbd}
+et [⌥ Option]{.kbd} à droite, afin d’accéder plus facilement à la couche
+de symboles.
 
 ### GNU/Linux : [ergol.xkb_symbols][]
 
