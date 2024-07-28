@@ -54,9 +54,9 @@ doublé et en extension latérale sur l’auriculaire droit. Cela favorise
 grandement les déviations ulnaires, qui sont la principale cause de
 développement de troubles musculo-squelettiques associés à la saisie au clavier.
 
-Beaucoup de Bépoètes ont recours à des claviers spécifiques, souvent très
-onéreux, pour réduire l’inconfort de ces touches placées sous l’auriculaire en
-extension.
+Beaucoup de Bépoètes ont recours à des [claviers
+spécifiques](/claviers/full-size), souvent très onéreux, pour réduire
+l’inconfort de ces touches placées sous l’auriculaire en extension.
 
 Enfin, par inspiration [Dvorak][], Bépo a renoncé aux raccourcis clavier
 positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
@@ -67,7 +67,7 @@ positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
 Ergo‑L se veut [ergonomique avant tout][]. À ce titre, il suit une approche
 [1DFH][] stricte, plaçant les 26 lettres et les 4 principales ponctuations dans
 le pavé central de 3×10 touches, garantissant une compatibilité parfaite avec
-tous les claviers de 33 à 105 touches, ergonomiques ou non.
+[tous les claviers](/claviers) de 33 à 105 touches, ergonomiques ou non.
 
 Cette approche permet aussi de garder les chiffres en direct, rendant le pavé
 numérique inutile. On peut ainsi utiliser des claviers compacts qui favorisent

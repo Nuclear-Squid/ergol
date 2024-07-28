@@ -51,7 +51,7 @@ ergonomiques actuels ne propose que 6 colonnes de touches par main, ce qui est�
 déplacer également ;
 - trivial avec Ergo‑L, qui a été conçu pour ça.
 
-Les claviers ergonomiques modernes cherchent à limiter le nombre total de
+Les [claviers ergonomiques](/claviers) modernes cherchent à limiter le nombre total de
 touches, en utilisant différents *layers* pour amener les touches excentrées
 sous les doigts, plutôt que l’inverse. Nous avons donc décidé de n’utiliser
 aucune touche en dehors du pavé de 3×10 touches centrales pour les lettres et
