@@ -15,6 +15,8 @@ changé *neuf fois* de disposition de clavier en 3,5 ans (Colemak, puis 8 versio
 majeures d’Ergo‑L), j’ai compilé dans cet article toutes les techniques que j’ai
 accumulées au fil du temps pour apprendre un nouveau layout.
 
+<!--more-->
+
 :::{.highlight style="max-width: 32em;"}
 - [Des conseils universels]
 - [Les premiers pas]
