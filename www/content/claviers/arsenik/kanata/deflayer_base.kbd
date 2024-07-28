@@ -1,0 +1,10 @@
+;; Base layer: standard keyboard behavior
+
+(deflayer base
+  q    w    e    r    t    _    y    u    i    o    p
+  a    s    d    f    g         h    j    k    l    ;
+  z    x    c    v    b   102d  n    m    ,    .    /
+            _              _              _
+)
+
+;; vim: set ft=lisp

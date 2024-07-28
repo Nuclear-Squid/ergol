@@ -1,7 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -4 720 60">
 
   <style>
-    rect, path {
+    :root {
+      color-scheme: light dark;
+    }
+    rect {
       fill: #fff;
       stroke: #666;
       stroke-width: .5px;
@@ -17,44 +20,54 @@
       text-anchor: middle;
       fill: #333;
     }
+    .dualKey {
+      fill: #ddd;
+      transform: translateY(26px);
+    }
 
     @media (prefers-color-scheme: dark) {
-      text       { fill: #888; }
-      rect, path { fill: #444; }
-      .layer     { fill: #eee; }
+      text     { fill: #aaa; }
+      rect     { fill: #444; }
+      .dualKey { fill: #666; }
+      .layer   { fill: #eee; }
     }
   </style>
 
-  <g id="row_AC" text-anchor="middle">
+  <g text-anchor="middle">
     <g transform="translate(90)">
       <rect width="52" height="52" rx="5" ry="5"/>
+      <rect width="52" height="26" rx="5" ry="5" class="dualKey"/>
       <g class="key">
         <text x="12.8" y="20.6">A</text>
       </g>
     </g>
     <g transform="translate(150)">
       <rect width="52" height="52" rx="5" ry="5"/>
+      <rect width="52" height="26" rx="5" ry="5" class="dualKey"/>
       <g class="key">
         <text x="12.8" y="20.6">S</text>
-        <text x="26.0" y="43.4" class="layer">Cmd</text>
+        <text x="26.0" y="43.4" class="layer">cmd</text>
       </g>
     </g>
     <g transform="translate(210)">
       <rect width="52" height="52" rx="5" ry="5"/>
+      <rect width="52" height="26" rx="5" ry="5" class="dualKey"/>
       <g class="key">
         <text x="12.8" y="20.6">E</text>
-        <text x="26.0" y="43.4" class="layer">Alt</text>
+        <text x="26.0" y="43.4" class="layer">alt</text>
       </g>
     </g>
     <g transform="translate(270)">
       <rect width="52" height="52" rx="5" ry="5"/>
+      <rect width="52" height="26" rx="5" ry="5" class="dualKey"/>
       <g class="key">
         <text x="12.8" y="20.6">N</text>
-        <text x="26.0" y="43.4" class="layer">Ctrl</text>
+        <text x="26.0" y="43.4" class="layer">ctrl</text>
       </g>
     </g>
     <g transform="translate(330)">
       <rect width="52" height="52" rx="5" ry="5"/>
+      <rect width="52" height="26" rx="5" ry="5" class="dualKey"/>
       <g class="key">
         <text x="12.8" y="20.6">F</text>
       </g>

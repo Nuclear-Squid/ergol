@@ -1,0 +1,10 @@
+;; angle-mod: the ISO key (a.k.a. LSGT or 102 key) becomes Z
+
+(defsrc
+  q    w    e    r    t  bspc   y    u    i    o    p
+  a    s    d    f    g         h    j    k    l    ;
+  102d z    x    c    v    b    n    m    ,    .    /
+            lmet          spc             rmet
+)
+
+;; vim: set ft=lisp

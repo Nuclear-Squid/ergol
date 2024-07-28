@@ -63,13 +63,11 @@
     #sym .dualKey { fill: #99f; }
     #nav .dualKey { fill: #e83; }
     #num .dualKey { fill: #e83; }
-    .sym { fill: #44f; transform: translate(0, -23px); }
+    .num { fill: green; transform: translate(0, -23px); }
     .nav { fill: #e83; }
-    .num { fill: #e83; }
     .mod { fill: #333; }
 
     .level1, .level2 { opacity: 0.8; }
-    .sym             { opacity: 0.6; }
 
     @media (prefers-color-scheme: dark) {
       .specialKey .dualKey,
@@ -78,11 +76,13 @@
       rect, path       { fill: #444; }
       text             { fill: #bbb; }
       .sym             { fill: #99f; }
+      .num             { fill: #6d6; }
       .mod             { fill: #eee; }
       #sym .dualKey    { fill: #77d; }
       #sym text.layer  { fill: navy; }
       #nav text.layer  { fill: brown; }
-      #num text.layer  { fill: brown; }
+      #num text.layer  { fill: green; }
+      #num .dualKey    { fill: #6d6; }
     }
   </style>
 
@@ -91,20 +91,20 @@
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Q</text>
-        <text x="38.0" y="43.4" class="sym">^</text>
-        <text x="38.0" y="43.4" class="nav">↹</text>
+        <text x="38.0" y="43.4" class="num">€</text>
+        <text x="38.0" y="43.4" class="nav"></text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">A</text>
-        <text x="38.0" y="43.4" class="sym">{</text>
-        <text x="38.0" y="43.4" class="nav">⇪</text>
+        <text x="38.0" y="43.4" class="num">1</text>
+        <text x="38.0" y="43.4" class="nav text">all</text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Z</text>
-        <text x="38.0" y="43.4" class="sym">~</text>
-        <text x="38.0" y="43.4" class="nav"></text>
+        <text x="38.0" y="43.4" class="num">„</text>
+        <text x="38.0" y="43.4" class="nav text">undo</text>
       </g>
     </g>
 
@@ -112,22 +112,22 @@
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">C</text>
-        <text x="38.0" y="43.4" class="sym">&lt;</text>
-        <text x="38.0" y="43.4" class="nav">⇱</text>
+        <text x="38.0" y="43.4" class="num">«</text>
+        <text x="38.0" y="43.4" class="nav text">close</text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">S</text>
         <text x="12.8" y="43.4" class="mod">⌘</text>
-        <text x="38.0" y="43.4" class="sym">(</text>
-        <text x="38.0" y="43.4" class="nav">←</text>
+        <text x="38.0" y="43.4" class="num">2</text>
+        <text x="38.0" y="43.4" class="nav text">save</text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">X</text>
-        <text x="38.0" y="43.4" class="sym">[</text>
-        <text x="38.0" y="43.4" class="nav text">vol−</text>
+        <text x="38.0" y="43.4" class="num">“</text>
+        <text x="38.0" y="43.4" class="nav text">cut</text>
       </g>
     </g>
 
@@ -135,23 +135,23 @@
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">O</text>
-        <text x="38.0" y="43.4" class="sym">&gt;</text>
-        <text x="38.0" y="43.4" class="nav">↑</text>
+        <text x="38.0" y="43.4" class="num">»</text>
+        <text x="38.0" y="43.4" class="nav">⎗</text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">E</text>
         <text x="12.8" y="43.4" class="mod">⌥</text>
-        <text x="38.0" y="43.4" class="sym">)</text>
-        <text x="38.0" y="43.4" class="nav">↓</text>
+        <text x="38.0" y="43.4" class="num">3</text>
+        <text x="38.0" y="43.4" class="nav">⇤</text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">-</text>
         <text x="12.8" y="20.6" class="level2">?</text>
-        <text x="38.0" y="43.4" class="sym">]</text>
-        <text x="38.0" y="43.4" class="nav text">mute</text>
+        <text x="38.0" y="43.4" class="num">”</text>
+        <text x="38.0" y="43.4" class="nav text">copy</text>
       </g>
     </g>
 
@@ -159,22 +159,22 @@
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">P</text>
-        <text x="38.0" y="43.4" class="sym">$</text>
-        <text x="38.0" y="43.4" class="nav">⇲</text>
+        <text x="38.0" y="43.4" class="num">$</text>
+        <text x="38.0" y="43.4" class="nav">⎗</text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">N</text>
         <text x="12.8" y="43.4" class="mod">⌃</text>
-        <text x="38.0" y="43.4" class="sym">}</text>
-        <text x="38.0" y="43.4" class="nav">→</text>
+        <text x="38.0" y="43.4" class="num">4</text>
+        <text x="38.0" y="43.4" class="nav">⇥</text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">V</text>
-        <text x="38.0" y="43.4" class="sym">_</text>
-        <text x="38.0" y="43.4" class="nav text">vol+</text>
+        <text x="38.0" y="43.4" class="num">¢</text>
+        <text x="38.0" y="43.4" class="nav text">paste</text>
       </g>
     </g>
 
@@ -182,20 +182,20 @@
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">W</text>
-        <text x="38.0" y="43.4" class="sym">%</text>
-        <text x="38.0" y="43.4" class="nav">⇞</text>
+        <text x="38.0" y="43.4" class="num">%</text>
+        <text x="38.0" y="43.4" class="nav"></text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">F</text>
-        <text x="38.0" y="43.4" class="sym">=</text>
-        <text x="38.0" y="43.4" class="nav">⇟</text>
+        <text x="38.0" y="43.4" class="num">5</text>
+        <text x="38.0" y="43.4" class="nav"></text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">B</text>
-        <text x="38.0" y="43.4" class="sym">#</text>
-        <text x="38.0" y="43.4" class="nav">⇤</text>
+        <text x="38.0" y="43.4" class="num">‰</text>
+        <text x="38.0" y="43.4" class="nav"></text>
       </g>
     </g>
 
@@ -212,7 +212,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="26" y="19.6" style="font-size: 13px;">⌫</text>
-        <text x="26" y="43.4" class="layer">Nav</text>
+        <text x="26" y="43.4" class="layer">Num</text>
       </g>
     </g>
   </g>
@@ -222,21 +222,21 @@
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">J</text>
-        <text x="38.0" y="43.4" class="sym">@</text>
-        <text x="38.0" y="43.4" class="nav">/</text>
+        <text x="38.0" y="43.4" class="num">^</text>
+        <text x="38.0" y="43.4" class="nav">⇱</text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">L</text>
-        <text x="38.0" y="43.4" class="sym">\</text>
-        <text x="38.0" y="43.4" class="nav">-</text>
+        <text x="38.0" y="43.4" class="num">6</text>
+        <text x="38.0" y="43.4" class="nav">←</text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">.</text>
         <text x="12.8" y="20.6" class="level2">:</text>
-        <text x="38.0" y="43.4" class="sym">|</text>
-        <text x="38.0" y="43.4" class="nav">,</text>
+        <text x="38.0" y="43.4" class="num">:</text>
+        <text x="38.0" y="43.4" class="nav">←</text>
       </g>
     </g>
 
@@ -244,22 +244,22 @@
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">M</text>
-        <text x="38.0" y="43.4" class="sym">&amp;</text>
-        <text x="38.0" y="43.4" class="nav">7</text>
+        <text x="38.0" y="43.4" class="num">&amp;</text>
+        <text x="38.0" y="43.4" class="nav">⇟</text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">R</text>
         <text x="12.8" y="43.4" class="mod">⌃</text>
-        <text x="38.0" y="43.4" class="sym">+</text>
-        <text x="38.0" y="43.4" class="nav">4</text>
+        <text x="38.0" y="43.4" class="num">7</text>
+        <text x="38.0" y="43.4" class="nav">↓</text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">H</text>
-        <text x="38.0" y="43.4" class="sym">!</text>
-        <text x="38.0" y="43.4" class="nav">1</text>
+        <text x="38.0" y="43.4" class="num">-</text>
+        <text x="38.0" y="43.4" class="nav">↓</text>
       </g>
     </g>
 
@@ -267,22 +267,22 @@
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">D</text>
-        <text x="38.0" y="43.4" class="sym">*</text>
-        <text x="38.0" y="43.4" class="nav">8</text>
+        <text x="38.0" y="43.4" class="num">*</text>
+        <text x="38.0" y="43.4" class="nav">⇞</text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="43.4" class="mod">⌥</text>
         <text x="12.8" y="20.6" class="level2">T</text>
-        <text x="38.0" y="43.4" class="sym">-</text>
-        <text x="38.0" y="43.4" class="nav">5</text>
+        <text x="38.0" y="43.4" class="num">8</text>
+        <text x="38.0" y="43.4" class="nav">↑</text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">G</text>
-        <text x="38.0" y="43.4" class="sym">;</text>
-        <text x="38.0" y="43.4" class="nav">2</text>
+        <text x="38.0" y="43.4" class="num">.</text>
+        <text x="38.0" y="43.4" class="nav">↑</text>
       </g>
     </g>
 
@@ -291,23 +291,23 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">★</text>
         <text x="12.8" y="20.6" class="level2">!</text>
-        <text x="38.0" y="43.4" class="sym">'</text>
-        <text x="38.0" y="43.4" class="nav">9</text>
+        <text x="38.0" y="43.4" class="num">#</text>
+        <text x="38.0" y="43.4" class="nav">⇲</text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">I</text>
         <text x="12.8" y="43.4" class="mod">⌘</text>
-        <text x="38.0" y="43.4" class="sym">)</text>
-        <text x="38.0" y="43.4" class="nav">6</text>
+        <text x="38.0" y="43.4" class="num">9</text>
+        <text x="38.0" y="43.4" class="nav">→</text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">,</text>
         <text x="12.8" y="20.6" class="level2">;</text>
-        <text x="38.0" y="43.4" class="sym">]</text>
-        <text x="38.0" y="43.4" class="nav">3</text>
+        <text x="38.0" y="43.4" class="num">,</text>
+        <text x="38.0" y="43.4" class="nav">→</text>
       </g>
     </g>
 
@@ -315,20 +315,20 @@
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Y</text>
-        <text x="38.0" y="43.4" class="sym">`</text>
+        <text x="38.0" y="43.4" class="num">@</text>
         <text x="38.0" y="43.4" class="nav"></text>
       </g>
       <g transform="translate(0 60)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">U</text>
-        <text x="38.0" y="43.4" class="sym">"</text>
-        <text x="38.0" y="43.4" class="nav">0</text>
+        <text x="38.0" y="43.4" class="num">0</text>
+        <text x="38.0" y="43.4" class="nav"></text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">K</text>
-        <text x="38.0" y="43.4" class="sym">?</text>
-        <text x="38.0" y="43.4" class="nav">.</text>
+        <text x="38.0" y="43.4" class="num">/</text>
+        <text x="38.0" y="43.4" class="nav"></text>
       </g>
     </g>
 
