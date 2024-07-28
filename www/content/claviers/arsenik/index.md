@@ -232,9 +232,9 @@ dispositions comme Azerty, Qwerty et tous les arrangements du Qwerty ANSI
 [Sym]{.kbd} à une couche de symboles dédiée.
 
 
-[NavNum]:        ,,/compacts/#layer-navnum
+[NavNum]:        ../compacts/#layer-navnum
 [Selenium]:      #variante-selenium
-[arsenik.zip]:   arsenik,zip
+[arsenik.zip]:   arsenik.zip
 [selenium.zip]:  selenium.zip
 
 [Preonic]:       https://olkb.com/collections/preonic
