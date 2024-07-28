@@ -5,6 +5,10 @@ title = "Arsenik"
 Une adaptation de [Miryoku][] sur 33 touches, pour les claviers de <i
 lang="en">laptop</i> et les claviers compacts.
 
+:::{style="text-align: center;" }
+🚧 en construction 🚧
+:::
+
 ![](./arsenik_ortho.svg)
 
 <!--more-->
@@ -79,22 +83,6 @@ Pour creuser le sujet, [ce billet][precondition] fait référence de nos jours.
 Claviers de <i lang="en">laptop</i>
 --------------------------------------------------------------------------------
 
-:::{style="text-align: center;" }
-🚧 en construction 🚧
-:::
-
-### <i lang="en">Angle-mod</i>
-
-On applique un [angle-mod][], c’est-à-dire une permutation circulaire sur les 5
-touches de gauche de la rangée inférieure, afin de mieux respecter l’angle des
-poignets et de se rapprocher d’une disposition ortholinéaire :
-
-![Arsenik sur un clavier ISO](./arsenik_iso.svg)
-
-Les barres d’espace des laptops ayant généralement une largeur de 5u, cet
-angle-mod symétrise aussi le placement des deux autres touches de pouces, qui se
-retrouvent dans l’alignement des majeurs.
-
 ### Kanata
 
 [kanata][] est un logiciel libre et multiplate-formes permettant de redéfinir le
@@ -103,7 +91,56 @@ l’angle-mod, la définition de layers, la configuration de layer-taps et
 homerow-mods — et plus généralement, de faire une grande partie de ce que font
 les <i lang="en">firmwares</i> de claviers programmables comme QMK et ZMK.
 
-Une configuration « clé en main » sera proposée prochainement.
+Une configuration kanata personnalisable est proposée ici : [arsenik.zip][]
+
+Cette configuration a pour but de faire découvrir Arsenik étape par étape :
+
+1. <i lang="en">angle-mod</i>
+2. <i lang="en">layer-taps</i>
+3. <i lang="en">homerow-mods</i>
+
+Par défaut, seul l’angle-mod est appliqué ; à vous d’activer les layer-taps et
+les homerow-mods à votre rythme.
+
+### 1. <i lang="en">Angle-mod</i>
+
+On applique un [angle-mod][], c’est-à-dire une permutation circulaire sur les 6
+touches de gauche de la rangée inférieure, afin de mieux respecter l’angle des
+poignets et de se rapprocher d’une disposition ortholinéaire :
+
+![Ergo‑L sur un clavier ISO](./ergol_iso.svg)
+
+![Ergo‑L avec l’angle-mod](./ergol_isoa.svg)
+
+Les barres d’espace des laptops ayant généralement une largeur de 5u, cet
+angle-mod symétrise aussi le placement des deux autres touches de pouces, qui se
+retrouvent dans l’alignement des majeurs.
+
+### 2. <i lang="en">Layer-taps</i>
+
+Une fois habitué à l’angle-mod, il est temps d’activer les layer-taps :
+
+- [AltGr]{.kbd} fait [Entrée]{.kbd} en tap ;
+- [Alt]{.kbd} fait [Backspace]{.kbd} en tap ;
+- un appui long sur [Espace]{.kbd} donne accès à la couche de navigation.
+
+![Ergo‑L avec les layer-taps](./ergol_isoa_lt.svg)
+
+On supprime ainsi les deux pires extensions ([Entrée]{.kbd} et [Backspace]{.kbd})
+et on profite d’une couche de la couche [NavNum][] à tout moment. Les mouvements
+des mains sont ainsi fortement réduits.
+
+### 3. <i lang="en">Homerow-mods</i>
+
+Quand les layer-taps sont maitrisés, on peut activer les homerow-mods en
+associant les modifieurs [Ctrl]{.kbd}, [Alt]{.kbd}, [Cmd]{.kbd} aux touches de
+repos des deux mains : [N]{.kbd} [E]{.kbd} [S]{.kbd} pour la main gauche,
+[R]{.kbd} [T]{.kbd} [I]{.kbd} pour la main droite.
+
+![Arsenik sur un clavier ISO](./arsenik_iso.svg)
+
+Cela permet d’avoir [Shift]{.kbd} sous le pouce gauche, supprimant ainsi le
+dernier cas d’extension des auriculaires.
 
 
 Claviers compacts
@@ -197,8 +234,8 @@ dispositions comme Azerty, Qwerty et tous les arrangements du Qwerty ANSI
 
 [NavNum]:        ,,/compacts/#layer-navnum
 [Selenium]:      #variante-selenium
-[arsenik.kbd]:   arsenik.kbd
-[selenium.kbd]:  selenium.kbd
+[arsenik.zip]:   arsenik,zip
+[selenium.zip]:  selenium.zip
 
 [Preonic]:       https://olkb.com/collections/preonic
 [Planck]:        https://olkb.com/collections/planck

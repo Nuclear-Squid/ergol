@@ -122,25 +122,19 @@
       </g>
       <g transform="translate(150)" finger="l4">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">S</text>
-        <text x="12.8" y="43.4" class="layerMod">⌘</text>
         <text x="38.0" y="20.6" class="layerSym">(</text>
         <text x="38.0" y="43.4" class="layerNav">←</text>
       </g>
       <g transform="translate(210)" finger="l3">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">E</text>
-        <text x="12.8" y="43.4" class="layerMod">⌥</text>
         <text x="38.0" y="20.6" class="layerSym">)</text>
         <text x="38.0" y="43.4" class="layerNav">↓</text>
       </g>
       <g transform="translate(270)" finger="l2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">N</text>
-        <text x="12.8" y="43.4" class="layerMod">⌃</text>
         <text x="38.0" y="20.6" class="layerSym">}</text>
         <text x="38.0" y="43.4" class="layerNav">→</text>
       </g>
@@ -160,25 +154,19 @@
       </g>
       <g transform="translate(450)" finger="r2">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">R</text>
-        <text x="12.8" y="43.4" class="layerMod">⌃</text>
         <text x="38.0" y="20.6" class="layerSym">+</text>
         <text x="38.0" y="43.4" class="layerNav">4</text>
       </g>
       <g transform="translate(510)" finger="r3">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">T</text>
-        <text x="12.8" y="43.4" class="layerMod">⌥</text>
         <text x="38.0" y="20.6" class="layerSym">-</text>
         <text x="38.0" y="43.4" class="layerNav">5</text>
       </g>
       <g transform="translate(570)" finger="r4">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">I</text>
-        <text x="12.8" y="43.4" class="layerMod">⌘</text>
         <text x="38.0" y="20.6" class="layerSym">/</text>
         <text x="38.0" y="43.4" class="layerNav">6</text>
       </g>
@@ -282,7 +270,7 @@
     <g transform="translate(180)">
       <rect width="52" height="52" rx="5" ry="5"/>
       <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
-      <text x="26.0" y="42.8" class="layerMod">shift</text>
+      <text x="26.0" y="42.8" class="layerMod">alt</text>
       <text x="38.0" y="20.6" class="layerNav" style="font-size: 14px;">⌦</text>
       <text x="12.8" y="20.6" class="level2" style="font-size: 14px;">⌫</text>
     </g>

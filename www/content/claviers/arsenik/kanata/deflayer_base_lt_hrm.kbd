@@ -1,0 +1,32 @@
+;; Base layer: layer-taps under the thumbs + home-row mods on SDF and JKL
+
+(deflayer base
+  q    w    e    r    t    _    y    u    i    o    p
+  a    @ss  @dd  @ff  g         h    @jj  @kk  @ll  ;
+  z    x    c    v    b   102d  n    m    ,    .    /
+            @sft          @nav            @alt
+)
+
+(defalias
+  ;; Main mod-tap: VimNav layer when hold, Space when tapped.
+  ;; The space key must be hold long enough (300ms) to become a layer shift.
+  nav (tap-hold $tto $hto spc (layer-while-held navigation))
+
+  ;; Space-cadet thumb keys: Shift/BackSpace, AltGr/Escape
+  ;;  - acts as a modifier by default, or as BS/Ret when tapped separately;
+  ;;  - works great with Qwerty-Lafayette and Ergo-L keyboard layouts, where
+  ;;    neither Shift nor AltGr are used outside of the 3×10 main alpha keys.
+  sft (tap-hold-press $tto $hto bspc lsft)
+  alt (tap-hold-press $tto $hto ret ralt)
+
+  ;; Home-row mods
+  ;; Must be hold long enough (300ms) to become a modifier.
+  ss (tap-hold $tto $hto s lmet)
+  dd (tap-hold $tto $hto d lalt)
+  ff (tap-hold $tto $hto f lctl)
+  jj (tap-hold $tto $hto j rctl)
+  kk (tap-hold $tto $hto k lalt)
+  ll (tap-hold $tto $hto l rmet)
+)
+
+;; vim: set ft=lisp

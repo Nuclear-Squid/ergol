@@ -70,9 +70,9 @@ par pouce** qui soient bien accessibles ; quatre c’est mieux, cinq c’est l
 Les claviers avec seulement deux touches par pouce sont parfaits quand les
 [layer-taps][LT] et [homerow-mods][HRM] sont maitrisés.
 
-Noter que selon les utilisateurices, la touche de repos des pouce peut être soit
-dans l’axe de la colonne de repos des index, soit décalé d’une colonne vers
-l’extérieur de la paume. À prendre en compte lors du choix.
+Noter que selon les utilisateurices, la position de repos des pouces peut être
+soit dans l’axe de la colonne de repos des index, soit décalée d’une colonne
+vers l’extérieur de la paume. À prendre en compte lors du choix.
 
 ### <i lang="en">Col stagger</i>
 
@@ -245,7 +245,7 @@ l’[apprentissage de la dactylographie][dactylo] : si vous ne savez pas taper
 
 Avec des logiciels libres comme [Kanata][] et en utilisant [Arsenik][] comme
 base, vous pouvez aussi obtenir un gain d’ergonomie très proche du meilleur
-clavier qui soit.
+clavier qui soit tout en restant sur votre clavier de laptop actuel.
 
 ### Pourquoi acheter un clavier ?
 
@@ -255,7 +255,9 @@ doigt/touche, et le fait de changer physiquement de clavier aide à casser les
 mauvaises habitudes qu’on a pu prendre auparavant.
 
 Une fois cet apprentissage fait, les [caractéristiques techniques][critères de
-choix] des claviers ergonomiques pourront apporter un vrai gain de confort.
+choix] des claviers ergonomiques pourront apporter un vrai gain de confort —
+voire s’avérer indispensables aux personnes souffrant de troubles
+musculo-squelettiques.
 
 ### Pour débuter : le [4×6][]
 
