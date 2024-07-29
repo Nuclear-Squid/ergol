@@ -53,10 +53,10 @@ de symboles.
 
 Ergo‑L est déjà inclus dans toutes les distributions Linux dotées de `xkeyboard-config`
 en [version 2.42 ou ultérieure](https://repology.org/project/xkeyboard-config/badges),
-ce qui inclut notamment Arch, Debian Sid, Fedora Rawhide, Gentoo, Manjaro
+ce qui inclut notamment Arch, Debian Trixie/Sid, Fedora Rawhide, Gentoo, Manjaro
 Testing/Unstable, OpenMandriva Rolling/Cooker, OpenSUSE Tumbleweed, Slackware
 Current, Ubuntu 24.10.
-Il a aussi été inclus dans Ubuntu 24.04 LTS (rétro-portage).
+<!-- Il a aussi été inclus dans Ubuntu 24.04 LTS (rétro-portage). -->
 
 Pour les autres distributions, copier ce pilote dans `xkb/symbols/custom` :
 
