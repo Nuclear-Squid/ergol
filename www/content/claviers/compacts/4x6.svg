@@ -1,0 +1,312 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 836 340">
+
+  <style>
+    /* color theme */
+
+    :root {
+      --fg-normal-border: #666;
+      --bg-normal:        #fff;
+      --bg-special:       #bbb;
+      --bg-number:        hsl(295,  50%, 80%);
+      --bg-letter:        hsl(222, 100%, 84%);
+      --bg-home:          hsl(222, 100%, 74%);
+    }
+
+    @media (prefers-color-scheme: dark) { :root {
+      --fg-normal-border: #666;
+      --bg-normal:        #4d4d4d;
+      --bg-special:       #444;
+      --bg-number:        hsl(280, 10%, 34%);
+      --bg-letter:        hsl(220, 15%, 35%);
+      --bg-home:          hsl(225, 30%, 30%);
+    }}
+
+    rect, path {
+      fill:   var(--bg-normal);
+      stroke: var(--fg-normal-border);
+      stroke-width: .5px;
+    }
+
+    .specialKey rect,
+    .specialKey path { fill: var(--bg-special); }
+    .letterKey  rect { fill: var(--bg-letter);  }
+    .numberKey  rect { fill: var(--bg-number);  }
+    .homeKey    rect { fill: var(--bg-home);    }
+
+    /* geometry */
+
+    #left  { transform: translate(  4px, 60px); }
+    #right { transform: translate(480px, 60px); }
+
+    /* column stagger */
+
+    .col_L { transform: translate(  0px, 22.5px); }
+    .col_1 { transform: translate( 60px, 22.5px); }
+    .col_2 { transform: translate(120px,  7.5px); }
+    .col_3 { transform: translate(180px,  0.0px); }
+    .col_4 { transform: translate(240px,  7.5px); }
+    .col_5 { transform: translate(300px, 15.0px); }
+
+    .col_6 { transform: translate(  0px, 15.0px); }
+    .col_7 { transform: translate( 60px,  7.5px); }
+    .col_8 { transform: translate(120px,  0.0px); }
+    .col_9 { transform: translate(180px,  7.5px); }
+    .col_0 { transform: translate(240px, 22.5px); }
+    .col_R { transform: translate(300px, 22.5px); }
+
+    /* XXX these thumb clusters have been positioned with magic numbers */
+
+    .thb_1 { transform: translate( 90px, 205px); }
+    .thb_2 { transform: translate(150px, 190px); }
+    .thb_3 { transform: translate(210px, 190px); }
+    .thb_4 { transform: translate(280px, 191px); }
+    .thb_5 { transform: translate(360px, 182px); }
+    .thb_4 g { transform: rotate(12deg); }
+    .thb_5 g { transform: rotate(24deg); }
+
+    .thb_0 { transform: translate(210px, 205px); }
+    .thb_9 { transform: translate(150px, 190px); }
+    .thb_8 { transform: translate( 90px, 190px); }
+    .thb_7 { transform: translate( 20px, 201px); }
+    .thb_6 { transform: translate(-57px, 201px); }
+    .thb_7 g { transform: rotate(-12deg); }
+    .thb_6 g { transform: rotate(-24deg); }
+  </style>
+
+  <g id="left">
+    <g class="col_L specialKey">
+      <g transform="translate(0 -60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_1 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)" class="homeKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_2 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)" class="homeKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_3 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)" class="homeKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_4 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)" class="homeKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_5 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="thb_1 specialKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+    <g class="thb_2 specialKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+    <g class="thb_3 specialKey" id="nav">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+    <g class="thb_4 homeKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+    <g class="thb_5 specialKey">
+      <g>
+        <rect width="52" height="82" rx="5" ry="5"/>
+      </g>
+    </g>
+  </g>
+
+  <g id="right">
+    <g class="col_6 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_7 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)" class="homeKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_8 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)" class="homeKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_9 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)" class="homeKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_0 letterKey">
+      <g transform="translate(0 -60)" class="numberKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)" class="homeKey">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="col_R specialKey">
+      <g transform="translate(0 -60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+
+    <g class="thb_6 specialKey">
+      <g>
+        <rect width="52" height="82" rx="5" ry="5"/>
+      </g>
+    </g>
+    <g class="thb_7 homeKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+    <g class="thb_8 specialKey" id="sym">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+    <g class="thb_9 specialKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+    <g class="thb_0 specialKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+      </g>
+    </g>
+  </g>
+
+</svg>

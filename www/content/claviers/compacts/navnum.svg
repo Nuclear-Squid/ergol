@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 180">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    rect {
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      font: normal 20px sans-serif;
+      text-align: center;
+      text-anchor: middle;
+    }
+    .hrm  { transform: translateY(26px); }
+    .text { transform: translateX(-3px); font-size: 11px; }
+
+    /* geometry */
+
+    #left  { transform: translateX(  4px); }
+    #right { transform: translateX(334px); }
+
+    .col_1 { transform: translateX(  0px); }
+    .col_2 { transform: translateX( 60px); }
+    .col_3 { transform: translateX(120px); }
+    .col_4 { transform: translateX(180px); }
+    .col_5 { transform: translateX(240px); }
+
+    .col_6 { transform: translateX(  0px); }
+    .col_7 { transform: translateX( 60px); }
+    .col_8 { transform: translateX(120px); }
+    .col_9 { transform: translateX(180px); }
+    .col_0 { transform: translateX(240px); }
+
+    /* color theme */
+
+    .level1, .level2 { opacity: 0.6; }
+
+    rect { fill: #fff; }
+    text { fill: #666; }
+    .hrm { fill: #ddd; }
+    .mod { fill: #333; }
+    .sym { fill: blue; }
+    .nav { fill: #e83; }
+
+    @media (prefers-color-scheme: dark) {
+      rect { fill: #444; }
+      text { fill: #888; }
+      .hrm { fill: #666; }
+      .mod { fill: #eee; }
+      .sym { fill: #99f; }
+      .nav { fill: #e83; }
+    }
+  </style>
+
+  <g id="left">
+    <g class="col_1">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Q</text>
+        <text x="38.0" y="43.4" class="nav">↹</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">A</text>
+        <text x="38.0" y="43.4" class="nav">⇪</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Z</text>
+        <text x="38.0" y="43.4" class="nav"></text>
+      </g>
+    </g>
+
+    <g class="col_2">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">C</text>
+        <text x="38.0" y="43.4" class="nav">⇱</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">S</text>
+        <text x="38.0" y="43.4" class="nav">←</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">X</text>
+        <text x="38.0" y="43.4" class="nav text">vol−</text>
+      </g>
+    </g>
+
+    <g class="col_3">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">O</text>
+        <text x="38.0" y="43.4" class="nav">↑</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">E</text>
+        <text x="38.0" y="43.4" class="nav">↓</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">-</text>
+        <text x="12.8" y="20.6" class="level2">?</text>
+        <text x="38.0" y="43.4" class="nav text">mute</text>
+      </g>
+    </g>
+
+    <g class="col_4">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">P</text>
+        <text x="38.0" y="43.4" class="nav">⇲</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">N</text>
+        <text x="38.0" y="43.4" class="nav">→</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">V</text>
+        <text x="38.0" y="43.4" class="nav text">vol+</text>
+      </g>
+    </g>
+
+    <g class="col_5">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">W</text>
+        <text x="38.0" y="43.4" class="nav">⇞</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">F</text>
+        <text x="38.0" y="43.4" class="nav">⇟</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">B</text>
+        <text x="38.0" y="43.4" class="nav">⇤</text>
+      </g>
+    </g>
+  </g>
+
+  <g id="right">
+    <g class="col_6">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">J</text>
+        <text x="38.0" y="43.4" class="nav">/</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">L</text>
+        <text x="38.0" y="43.4" class="nav">-</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">.</text>
+        <text x="12.8" y="20.6" class="level2">:</text>
+        <text x="38.0" y="43.4" class="nav">,</text>
+      </g>
+    </g>
+
+    <g class="col_7">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">M</text>
+        <text x="38.0" y="43.4" class="nav">7</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">R</text>
+        <text x="38.0" y="43.4" class="nav">4</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">H</text>
+        <text x="38.0" y="43.4" class="nav">1</text>
+      </g>
+    </g>
+
+    <g class="col_8">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">D</text>
+        <text x="38.0" y="43.4" class="nav">8</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">T</text>
+        <text x="38.0" y="43.4" class="nav">5</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">G</text>
+        <text x="38.0" y="43.4" class="nav">2</text>
+      </g>
+    </g>
+
+    <g class="col_9">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">★</text>
+        <text x="12.8" y="20.6" class="level2">!</text>
+        <text x="38.0" y="43.4" class="nav">9</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">I</text>
+        <text x="38.0" y="43.4" class="nav">6</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">,</text>
+        <text x="12.8" y="20.6" class="level2">;</text>
+        <text x="38.0" y="43.4" class="nav">3</text>
+      </g>
+    </g>
+
+    <g class="col_0">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Y</text>
+        <text x="38.0" y="43.4" class="nav"></text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">U</text>
+        <text x="38.0" y="43.4" class="nav">0</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">K</text>
+        <text x="38.0" y="43.4" class="nav">.</text>
+      </g>
+    </g>
+  </g>
+
+</svg>

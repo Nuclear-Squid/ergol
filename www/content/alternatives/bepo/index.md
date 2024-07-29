@@ -1,5 +1,6 @@
 +++
 title = "Ergo‑L ou Bépo ?"
+url = "/bepo"
 
 [params]
 cssSheets = ["/css/keebs.css"]

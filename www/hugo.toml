@@ -55,28 +55,49 @@ author = "authors"
         weight  = 2
     [[menus.main]]
         name    = "Bépo ?"
-        pageRef = "/bepo"
+        pageRef = "/alternatives/bepo"
         parent  = "Alternatives"
+        weight  = 1
     [[menus.main]]
         name    = "Erglace !"
-        pageRef = "/erglace"
+        pageRef = "/alternatives/erglace"
         parent  = "Alternatives"
+        weight  = 2
     [[menus.main]]
         name    = "Lafayette *"
-        pageRef = "/lafayette"
+        pageRef = "/alternatives/lafayette"
         parent  = "Alternatives"
+        weight  = 3
+    [[menus.main]]
+        name    = "Claviers"
+        pageRef = "/claviers"
+        weight  = 3
+    [[menus.main]]
+        name    = "Full-size"
+        pageRef = "/claviers/full-size"
+        parent  = "Claviers"
+        weight  = 1
+    [[menus.main]]
+        name    = "Compacts"
+        pageRef = "/claviers/compacts"
+        parent  = "Claviers"
+        weight  = 2
+    [[menus.main]]
+        name    = "Arsenik"
+        pageRef = "/claviers/arsenik"
+        parent  = "Claviers"
     [[menus.main]]
         name    = "Analyseur"
         pageRef = "/stats"
-        weight  = 3
+        weight  = 4
     [[menus.main]]
         name    = "Glossaire"
         pageRef = "/glossaire"
-        weight  = 4
+        weight  = 5
     [[menus.main]]
         name    = "Apprendre"
         pageRef = "/dactylo"
-        weight  = 5
+        weight  = 6
     # [[menus.main]]
     #     name    = "Articles"
     #     pageRef = "/articles"

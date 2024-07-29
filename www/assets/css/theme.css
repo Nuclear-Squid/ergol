@@ -179,7 +179,7 @@ figure {
 figure figcaption,
 figure img {
   margin: auto;
-  max-width: 45em;
+  max-width: 100%;
 }
 
 img {
@@ -376,5 +376,10 @@ code { /* character, digrams, trigrams */
   }
   header + nav li:has(.active) a.active {
     color: var(--fg-banner);
+  }
+
+  figure figcaption,
+  figure img {
+    max-width: 45em;
   }
 }

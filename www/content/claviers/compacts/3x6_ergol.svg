@@ -1,0 +1,362 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 836 300">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    rect, path {
+      fill: #f8f8f8;
+      fill: #fff;
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      fill: #444;
+      font: normal 20px sans-serif;
+      text-align: center;
+      text-anchor: middle;
+    }
+
+    .specialKey rect { fill: #e4e4e4; }
+    .specialKey text { font-size: 14px; }
+    .text            { font-size: 11px; }
+
+    #left  { transform: translate(  4px, 15px); }
+    #right { transform: translate(480px, 15px); }
+
+    /* column stagger */
+
+    .col_L { transform: translate(  0px, 22.5px); }
+    .col_1 { transform: translate( 60px, 22.5px); }
+    .col_2 { transform: translate(120px,  7.5px); }
+    .col_3 { transform: translate(180px,  0.0px); }
+    .col_4 { transform: translate(240px,  7.5px); }
+    .col_5 { transform: translate(300px, 15.0px); }
+
+    .col_6 { transform: translate(  0px, 15.0px); }
+    .col_7 { transform: translate( 60px,  7.5px); }
+    .col_8 { transform: translate(120px,  0.0px); }
+    .col_9 { transform: translate(180px,  7.5px); }
+    .col_0 { transform: translate(240px, 22.5px); }
+    .col_R { transform: translate(300px, 22.5px); }
+
+    /* XXX these thumb clusters have been positioned with magic numbers */
+
+    .thb_3 { transform: translate(210px, 190px); }
+    .thb_4 { transform: translate(280px, 191px); }
+    .thb_5 { transform: translate(360px, 182px); }
+    .thb_4 g { transform: rotate(12deg); }
+    .thb_5 g { transform: rotate(24deg); }
+
+    .thb_8 { transform: translate( 90px, 190px); }
+    .thb_7 { transform: translate( 20px, 201px); }
+    .thb_6 { transform: translate(-57px, 201px); }
+    .thb_7 g { transform: rotate(-12deg); }
+    .thb_6 g { transform: rotate(-24deg); }
+
+    #sym rect { fill: #99f; }
+    #nav rect { fill: #e83; }
+    .sym { fill: #44f; transform: translate(0, -23px); }
+    .nav { fill: #e83; }
+
+    .level1, .level2 { opacity: 0.8; }
+    .sym             { opacity: 0.6; }
+
+    @media (prefers-color-scheme: dark) {
+      .specialKey rect { fill: #333; }
+      rect, path       { fill: #444; }
+      text             { fill: #bbb; }
+      .sym             { fill: #99f; }
+      #sym rect        { fill: #77d; }
+      #sym text        { fill: navy; }
+      #nav text        { fill: brown;}
+    }
+  </style>
+
+  <g id="left">
+    <g class="col_L specialKey">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30" style="font-size: 19px;">↹</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30" style="font-size: 19px;">⎋</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30" style="font-size: 19px;">⇧</text>
+      </g>
+    </g>
+
+    <g class="col_1">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Q</text>
+        <text x="38.0" y="43.4" class="sym">^</text>
+        <text x="38.0" y="43.4" class="nav">↹</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">A</text>
+        <text x="38.0" y="43.4" class="sym">{</text>
+        <text x="38.0" y="43.4" class="nav">⇪</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Z</text>
+        <text x="38.0" y="43.4" class="sym">~</text>
+        <text x="38.0" y="43.4" class="nav"></text>
+      </g>
+    </g>
+
+    <g class="col_2">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">C</text>
+        <text x="38.0" y="43.4" class="sym">&lt;</text>
+        <text x="38.0" y="43.4" class="nav">⇱</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">S</text>
+        <text x="38.0" y="43.4" class="sym">(</text>
+        <text x="38.0" y="43.4" class="nav">←</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">X</text>
+        <text x="38.0" y="43.4" class="sym">[</text>
+        <text x="38.0" y="43.4" class="nav text">vol−</text>
+      </g>
+    </g>
+
+    <g class="col_3">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">O</text>
+        <text x="38.0" y="43.4" class="sym">&gt;</text>
+        <text x="38.0" y="43.4" class="nav">↑</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">E</text>
+        <text x="38.0" y="43.4" class="sym">)</text>
+        <text x="38.0" y="43.4" class="nav">↓</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">-</text>
+        <text x="12.8" y="20.6" class="level2">?</text>
+        <text x="38.0" y="43.4" class="sym">]</text>
+        <text x="38.0" y="43.4" class="nav text">mute</text>
+      </g>
+    </g>
+
+    <g class="col_4">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">P</text>
+        <text x="38.0" y="43.4" class="sym">$</text>
+        <text x="38.0" y="43.4" class="nav">⇲</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">N</text>
+        <text x="38.0" y="43.4" class="sym">}</text>
+        <text x="38.0" y="43.4" class="nav">→</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">V</text>
+        <text x="38.0" y="43.4" class="sym">_</text>
+        <text x="38.0" y="43.4" class="nav text">vol+</text>
+      </g>
+    </g>
+
+    <g class="col_5">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">W</text>
+        <text x="38.0" y="43.4" class="sym">%</text>
+        <text x="38.0" y="43.4" class="nav">⇞</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">F</text>
+        <text x="38.0" y="43.4" class="sym">=</text>
+        <text x="38.0" y="43.4" class="nav">⇟</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">B</text>
+        <text x="38.0" y="43.4" class="sym">#</text>
+        <text x="38.0" y="43.4" class="nav">⇤</text>
+      </g>
+    </g>
+
+    <g class="thb_3 specialKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30">Alt</text>
+      </g>
+    </g>
+    <g class="thb_4 specialKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30">Ctrl</text>
+      </g>
+    </g>
+    <g class="thb_5 specialKey">
+      <g>
+        <rect width="52" height="82" rx="5" ry="5"/>
+        <text x="26" y="45">Cmd</text>
+      </g>
+    </g>
+  </g>
+
+  <g id="right">
+    <g class="col_6">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">J</text>
+        <text x="38.0" y="43.4" class="sym">@</text>
+        <text x="38.0" y="43.4" class="nav">/</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">L</text>
+        <text x="38.0" y="43.4" class="sym">\</text>
+        <text x="38.0" y="43.4" class="nav">-</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">.</text>
+        <text x="12.8" y="20.6" class="level2">:</text>
+        <text x="38.0" y="43.4" class="sym">|</text>
+        <text x="38.0" y="43.4" class="nav">,</text>
+      </g>
+    </g>
+
+    <g class="col_7">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">M</text>
+        <text x="38.0" y="43.4" class="sym">&amp;</text>
+        <text x="38.0" y="43.4" class="nav">7</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">R</text>
+        <text x="38.0" y="43.4" class="sym">+</text>
+        <text x="38.0" y="43.4" class="nav">4</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">H</text>
+        <text x="38.0" y="43.4" class="sym">!</text>
+        <text x="38.0" y="43.4" class="nav">1</text>
+      </g>
+    </g>
+
+    <g class="col_8">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">D</text>
+        <text x="38.0" y="43.4" class="sym">*</text>
+        <text x="38.0" y="43.4" class="nav">8</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">T</text>
+        <text x="38.0" y="43.4" class="sym">-</text>
+        <text x="38.0" y="43.4" class="nav">5</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">G</text>
+        <text x="38.0" y="43.4" class="sym">;</text>
+        <text x="38.0" y="43.4" class="nav">2</text>
+      </g>
+    </g>
+
+    <g class="col_9">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">★</text>
+        <text x="12.8" y="20.6" class="level2">!</text>
+        <text x="38.0" y="43.4" class="sym">'</text>
+        <text x="38.0" y="43.4" class="nav">9</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">I</text>
+        <text x="38.0" y="43.4" class="sym">)</text>
+        <text x="38.0" y="43.4" class="nav">6</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">,</text>
+        <text x="12.8" y="20.6" class="level2">;</text>
+        <text x="38.0" y="43.4" class="sym">]</text>
+        <text x="38.0" y="43.4" class="nav">3</text>
+      </g>
+    </g>
+
+    <g class="col_0">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Y</text>
+        <text x="38.0" y="43.4" class="sym">`</text>
+        <text x="38.0" y="43.4" class="nav"></text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">U</text>
+        <text x="38.0" y="43.4" class="sym">"</text>
+        <text x="38.0" y="43.4" class="nav">0</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">K</text>
+        <text x="38.0" y="43.4" class="sym">?</text>
+        <text x="38.0" y="43.4" class="nav">.</text>
+      </g>
+    </g>
+
+    <g class="col_R specialKey">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30" style="font-size: 13px;">⌫</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30" style="font-size: 19px;">⏎</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30" style="font-size: 19px;">⇧</text>
+      </g>
+    </g>
+
+    <g class="thb_6 specialKey" id="nav">
+      <g>
+        <rect width="52" height="82" rx="5" ry="5"/>
+        <text x="26" y="45">Nav</text>
+      </g>
+    </g>
+    <g class="thb_7 specialKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30">⎵</text>
+      </g>
+    </g>
+    <g class="thb_8 specialKey" id="sym">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="26" y="30">AltGr</text>
+      </g>
+    </g>
+  </g>
+
+</svg>

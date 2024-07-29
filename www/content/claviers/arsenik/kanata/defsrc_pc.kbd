@@ -1,0 +1,10 @@
+;; `defsrc` defines the keys that will be intercepted by kanata.
+
+(defsrc
+  q    w    e    r    t  bspc   y    u    i    o    p
+  a    s    d    f    g         h    j    k    l    ;
+  z    x    c    v    b  102d   n    m    ,    .    /
+            lalt          spc             ralt
+)
+
+;; vim: set ft=lisp

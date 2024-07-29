@@ -1,5 +1,6 @@
 +++
 title = "Erglace"
+url = "/erglace"
 
 [params]
 cssSheets = ["/css/keebs.css"]
