@@ -11,7 +11,7 @@ tags = ["communauté"]
   pre > code { background-color: transparent; padding: 0; }
 </style>
 
-Vous utilisez SwayWM et vous voulez passer à Ergo-L ? C'est par ici !\
+Vous utilisez SwayWM et vous voulez passer à Ergo-L ? C’est par ici !\
 
 Cet article vous guide étape par étape pour configurer Ergo-L sur votre système, que ce soit pour tous vos claviers ou pour un clavier spécifique. Avec quelques lignes de configuration, vous pourrez profiter pleinement de cette disposition optimisée.
 
@@ -31,7 +31,7 @@ Si vous ne possédez pas le dossier `~/.config/sway`, vous pouvez normalement co
 
 ## Configurer Ergo-L pour tous les claviers connectés à la machine
 
-C'est la solution la plus simple. Il suffit d'ajouter le code suivant à votre fichier de configuration :
+C’est la solution la plus simple. Il suffit d’ajouter le code suivant à votre fichier de configuration :
 
 ```text
 input "type:keyboard" {
@@ -40,13 +40,13 @@ input "type:keyboard" {
 }
 ```
 
-> ⚠ Si un bloc de configuration similaire est déjà présent, il vous suffira de l'adapter.
+> ⚠ Si un bloc de configuration similaire est déjà présent, il vous suffira de l’adapter.
 
 ## Utiliser Ergo-L sur un clavier particulier
 
-### Trouver l'identifiant de votre clavier
+### Trouver l’identifiant de votre clavier
 
-Pour configurer différemment un clavier spécifique, il est nécessaire de trouver son identifiant. Vous pouvez le faire en exécutant la commande `swaymsg -t get_inputs` dans un terminal. Cette commande listera tous les périphériques d'entrée de votre machine. Recherchez, dans cette liste, le bloc correspondant à votre clavier.
+Pour configurer différemment un clavier spécifique, il est nécessaire de trouver son identifiant. Vous pouvez le faire en exécutant la commande `swaymsg -t get_inputs` dans un terminal. Cette commande listera tous les périphériques d’entrée de votre machine. Recherchez, dans cette liste, le bloc correspondant à votre clavier.
 
 La ligne indiquant son identifiant est celle commençant par `Identifier:`. Notez que les parties correspondant à des claviers possèdent une ligne `Type: Keyboard`.
 
@@ -62,11 +62,11 @@ Active Keyboard Layout: French (Ergo-L)
 Libinput Send Events: enabled
 ```
 
-Dans cet exemple, l'identifiant est `7504:24926:ZMK_Project_Cradio_Keyboard`.
+Dans cet exemple, l’identifiant est `7504:24926:ZMK_Project_Cradio_Keyboard`.
 
 ### Configurer Ergo-L sur le clavier souhaité
 
-Une fois l'identifiant de votre clavier obtenu, il suffit d'ajouter ce bloc à votre configuration, en prenant soin de remplacer `7504:24926:ZMK_Project_Cradio_Keyboard` par l’identifiant obtenu à l’étape précédente.
+Une fois l’identifiant de votre clavier obtenu, il suffit d’ajouter ce bloc à votre configuration, en prenant soin de remplacer `7504:24926:ZMK_Project_Cradio_Keyboard` par l’identifiant obtenu à l’étape précédente.
 
 ```text
 input "7504:24926:ZMK_Project_Cradio_Keyboard" {
