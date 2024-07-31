@@ -46,7 +46,7 @@ soit devenir insupportables.
 +===============+:=====:+:=====:+:=====:+:=====:+:=====:+=============================================+
 | [Azerty][]    |   ·   |  oui  |   ·   |   ·   |   ·   | - (fr) mauvais support typographique        |
 |               |       |       |       |       |       | - charge de l’auriculaire gauche > 10 %     |
-|               |       |       |       |       |       | - digrammes de même doigt > 6 %              |
+|               |       |       |       |       |       | - digrammes de même doigt > 6 %             |
 |               |       |       |       |       |       | - chiffres en Shift                         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 | [Lafayette][] |  oui  |  oui  |   ·   |   ·   |  oui  | - charge déséquilibrée                      |
@@ -70,7 +70,7 @@ soit devenir insupportables.
 |               |       |       |       |       |       | - charge de l’auriculaire droit > 10 %      |
 |               |       |       |       |       |       | - charge de l’index gauche > 20 %           |
 |               |       |       |       |       |       | - digrammes de même doigt > 2 %             |
-|               |       |       |       |       |       | - (en) rédhibitoire (`wh`)             |
+|               |       |       |       |       |       | - (en) rédhibitoire (`wh`)                  |
 |               |       |       |       |       |       | - chiffres en Shift                         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 | [Optimot][]   |   ·   |   ·   |  oui  |[(?)][]|   ·   | - déviations ulnaires                       |
@@ -120,8 +120,8 @@ temps d’apprentissage minime.
 [Ergo‑L][], [Erglace][], [Colemak FT][], [Bépolar][], [Lafayette][] – toutes ces
 dispositions partagent une même approche ergonomique : [1DFH][] et [couche
 Symboles optimisée][symboles], garantissant ainsi l’absence d’extensions de
-doigts (donc de déviations ulnaires) et une compatibilité exemplaire avec tous
-les claviers, ergonomiques ou non, de 33 à 105 touches.
+doigts (donc de déviations ulnaires) et une compatibilité exemplaire avec [tous
+les claviers](/claviers), ergonomiques ou non, de 33 à 105 touches.
 
 - Ergo‑L est le projet le plus abouti, destiné au plus grand nombre, bien plus
   optimisé que Bépo en français et que Dvorak en anglais, tout en gardant un

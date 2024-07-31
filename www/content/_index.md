@@ -22,23 +22,24 @@ footer = "[Flux RSS](/articles/index.xml)"
   typographiques sont facilement accessibles, sans [AltGr]{.kbd}.
 - [Pour le code][5]
   <br> La couche de symboles, optionnelle, est optimisée pour le code.
-- [Pour **tous** les claviers][2]
+- [Pour **tous** les claviers][claviers]
   <br> La première disposition francophone compatible avec **tous** les
   claviers, ergonomiques ou non, de 33 à 105 touches.
 :::
 
-Ergo‑L a été mis au point par des membres des projets [QWERTY-Lafayette][] et
-[Bépo][] pour corriger les principaux défauts de leurs dispositions respectives,
-tout en profitant des avancées récentes dans le domaine de l’ergonomie clavier,
-notamment les approches [1DFH][6] et [Colemak][4].
+Ergo‑L a été mis au point par des membres des projets
+[QWERTY-Lafayette][Lafayette] et [Bépo][] pour corriger les principaux défauts
+de leurs dispositions respectives, tout en profitant des avancées récentes dans
+le domaine de l’ergonomie clavier, notamment les approches [1DFH][6] et
+[Colemak][4].
 
-C’est une disposition très efficace. Grâce à nos [outils d’optimisation][8] nous
-avons pu obtenir une disposition de clavier bien plus performante que Bépo en
-français **et** que Dvorak en anglais !
+C’est une disposition très efficace. Grâce à nos [outils d’optimisation][stats]
+nous avons pu obtenir une disposition de clavier bien plus performante que Bépo
+en français **et** que Dvorak en anglais !
 
 C’est aussi une disposition très confortable, tant pour rédiger du français ou
 de l’anglais que pour coder. Il est possible de l’apprendre sans rien installer
-grâce à [notre page dédiée][9].
+grâce à [notre page dédiée][dactylo].
 
 <nav class="more">[Ergo‑L en détail…][1]</nav>
 
@@ -49,9 +50,10 @@ grâce à [notre page dédiée][9].
 [4]: /presentation/#impeccable-en-français
 [5]: /presentation/#redoutable-pour-le-code
 [6]: /presentation/#dfh-1u-distance-from-home
-[7]: /presentation/
-[8]: /stats/
-[9]: /dactylo/#ergol
 
-[QWERTY-Lafayette]: https://qwerty-lafayette.org
-[Bépo]: https://bepo.fr
+[stats]:     /stats/
+[dactylo]:   /dactylo/#ergol
+[claviers]:  /claviers/
+
+[Lafayette]: https://qwerty-lafayette.org
+[Bépo]:      https://bepo.fr
