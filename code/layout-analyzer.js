@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     '\u2013': '-', // (–) en dash
     '\u2014': '-', // (—) em dash
     '\u2026': '...', // (…) ellipsis
+    '\u2605': '**', // (★) ODK
   };
 
   const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
@@ -206,14 +207,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // https://doc.rust-lang.org/std/primitive.slice.html#method.windows
   const arrayWindows = (arr, len) => ({
     *[Symbol.iterator]() {
-      let rv = arr.slice(0, len);
-      yield rv;
-      for (let i = len; i < arr.length; i++) {
-        for (let j = 0; j < len - 1; j++) {
-          rv[j] = rv[j + 1];
-        }
-        rv[len - 1] = arr[i];
-        yield rv;
+      for (let i = 0; i <= arr.length - len; i++) {
+        yield arr.slice(i, i + len);
       }
     }
   });
@@ -240,6 +235,42 @@ window.addEventListener('DOMContentLoaded', () => {
         'doubleHandChange'  // Two hand changes
       ].map(digramType => [digramType, {}])
     );
+
+    const insertKeySequence = (dict, keySequence, frequency, ngram) => {
+      let name = keySequence.map(key => keyboard.layout.keyMap[key][0].replace('**', '★')).join('');
+      if (!(name in dict)) dict[name] = { keySequence, frequency };
+      else dict[name].frequency += frequency;
+    };
+
+    const buildNgramDict = (dict, ngramLength) => {
+      let total = 0;
+      const rv = {};
+
+      for (const [ngram, frequency] of Object.entries(dict)) {
+        const keySequence = Array.from(ngram).flatMap(charToKeys);
+        if (keySequence.some(key => key == undefined)) continue;
+
+        // TODO: Properly handle deadKeys when naming the smaller digrams
+        for (const subSequence of arrayWindows(keySequence, ngramLength)) {
+          const name = subSequence.map(key => keyboard.layout.keyMap[key][0].replace('**', '★')).join('');
+
+          if (!(name in rv)) rv[name] = { "keySequence": subSequence, frequency };
+          else rv[name].frequency += frequency;
+
+          total += frequency;
+        }
+      }
+
+      // normalize values
+      for (const [name, { frequency }] of Object.entries(rv)) {
+        rv[name].frequency = frequency * 100 / total;
+      }
+
+      return rv;
+    };
+
+    const realDigrams  = buildNgramDict(digrams, 2);
+    const realTrigrams = buildNgramDict(trigrams, 3);
 
     const keyFinger = {};
     Object.entries(keyboard.fingerAssignments).forEach(([f, keys]) => {
@@ -291,41 +322,39 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    // NOTE: in Ergol, ï and · are same-finger digrams even though they are
-    // single characters => count symbols, too?
-    const getDigramType = (lastKeyCode, currKeyCode) => {
-      if (lastKeyCode === currKeyCode) return 'skb';
+    const getDigramType = (prevKeyCode, currKeyCode) => {
+      if (prevKeyCode === currKeyCode) return 'skb';
 
-      const lastFinger = keyFinger[lastKeyCode];
+      const prevFinger = keyFinger[prevKeyCode];
       const currFinger = keyFinger[currKeyCode];
 
-      if (currFinger === lastFinger) return 'sfb';
-      if (currFinger[0] !== lastFinger[0]) return 'handChange';
+      if (currFinger === prevFinger) return 'sfb';
+      if (currFinger[0] !== prevFinger[0]) return 'handChange';
 
-      if (isScisor(currKeyCode, lastKeyCode, currFinger, lastFinger))
-        return [lastKeyCode, currKeyCode].some(requiresExtension)
+      if (isScisor(currKeyCode, prevKeyCode, currFinger, prevFinger))
+        return [prevKeyCode, currKeyCode].some(requiresExtension)
           ? 'extendedScisor'
           : 'scisor';
 
-      if ([lastKeyCode, currKeyCode].some(requiresExtension)) return 'lsb';
-      return currFinger[1] < lastFinger[1] ? 'inwardRoll' : 'outwardRoll';
+      if ([prevKeyCode, currKeyCode].some(requiresExtension)) return 'lsb';
+      return currFinger[1] < prevFinger[1] ? 'inwardRoll' : 'outwardRoll';
     };
 
-    const getTrigramType = (lastKeyCode, currKeyCode, nextKeyCode) => {
-      const lastFinger = keyFinger[lastKeyCode];
+    const getTrigramType = (prevKeyCode, currKeyCode, nextKeyCode) => {
+      const prevFinger = keyFinger[prevKeyCode];
       const currFinger = keyFinger[currKeyCode];
       const nextFinger = keyFinger[nextKeyCode];
 
-      if (lastFinger == nextFinger) return lastKeyCode == nextKeyCode ? 'sks' : 'sfs';
+      if (prevFinger == nextFinger) return prevKeyCode == nextKeyCode ? 'sks' : 'sfs';
 
-      const hands = lastFinger[0] + currFinger[0] + nextFinger[0];
+      const hands = prevFinger[0] + currFinger[0] + nextFinger[0];
 
       if (['lrl', 'rlr'].includes(hands)) return 'doubleHandChange';
       if (['llr', 'rll', 'rrl', 'lrr'].includes(hands)) return 'rollAndHandChange';
 
       // I don’t know if this is briliant or if I deserve a VIP ticket to Hell.
-      if ((lastFinger[1] > currFinger[1]) != (currFinger[1] > nextFinger[1]))
-        return [lastFinger, currFinger, nextFinger].some(finger => finger[1] == '2')
+      if ((prevFinger[1] > currFinger[1]) != (currFinger[1] > nextFinger[1]))
+        return [prevFinger, currFinger, nextFinger].some(finger => finger[1] == '2')
           ? 'redirect'
           : 'badRedirect';
 
@@ -334,23 +363,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // TODO: This needs a better name
     const addNGrams = (outDict, ngramsDict, getNGramType) => {
-      const total = Object.values(ngramsDict).reduce((acc, e) => acc + e, 0);
-
-      for (const [ngram, frequency] of Object.entries(ngramsDict)) {
-        const keySequence = Array.from(ngram).flatMap(symbol => charToKeys(symbol));
-        if (keySequence.some(key => key == undefined)) continue;
-
-        const normalizedFrequency = 100 * frequency / total;
-        for (const keyCodes of arrayWindows(keySequence, ngram.length)) {
-          if (keyCodes.includes('Space')) continue;
-          const ngramType = getNGramType(...keyCodes);
-          outDict[ngramType][ngram] = frequency;
-        }
+      for (const [ngram, { keySequence, frequency }] of Object.entries(ngramsDict)) {
+        // TODO: We need proper support for thumb keys
+        if (keySequence.includes('Space')) continue;
+        const ngramType = getNGramType(...keySequence);
+        outDict[ngramType][ngram] = frequency;
       }
     };
 
-    addNGrams(ngrams,  digrams,  getDigramType);
-    addNGrams(ngrams, trigrams, getTrigramType);
+    addNGrams(ngrams,  realDigrams,  getDigramType);
+    addNGrams(ngrams, realTrigrams, getTrigramType);
 
     const getFingerPosition = ([hand, finger]) =>
       hand == 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
@@ -361,12 +383,12 @@ window.addEventListener('DOMContentLoaded', () => {
     );
 
     for (const [sfb, frequency] of Object.entries(ngrams.sfb)) {
-      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[charToKeys(sfb[1])[0]]);
+      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[charToKeys(sfb[0])[0]]);
       totalSfuSkuPerFinger[groupIndex][itemIndex].bad += frequency;
     }
 
     for (const [skb, frequency] of Object.entries(ngrams.skb)) {
-      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[charToKeys(skb[1])[0]]);
+      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[charToKeys(skb[0])[0]]);
       totalSfuSkuPerFinger[groupIndex][itemIndex].meh += frequency;
     }
 

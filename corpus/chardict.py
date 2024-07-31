@@ -56,7 +56,7 @@ def parse_corpus(file_path):
     results["corpus"] = file_path
     results["symbols"] = sort_by_frequency(symbols)
     results["digrams"] = sort_by_frequency(digrams, 4)
-    results["trigrams"] = sort_by_frequency(trigrams)
+    results["trigrams"] = sort_by_frequency(trigrams, 4)
     return results
 
 
