@@ -27,7 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
     '\u2013': '-', // (–) en dash
     '\u2014': '-', // (—) em dash
     '\u2026': '...', // (…) ellipsis
-    '\u2605': '**', // (★) ODK
   };
 
   const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
@@ -363,19 +362,6 @@ window.addEventListener('DOMContentLoaded', () => {
       return 'other';
     };
 
-    // TODO: This needs a better name
-    const addNGrams = (outDict, ngramsDict, getNGramType) => {
-      for (const [ngram, { keySequence, frequency }] of Object.entries(ngramsDict)) {
-        // TODO: We need proper support for thumb keys
-        if (keySequence.includes('Space')) continue;
-        const ngramType = getNGramType(...keySequence);
-        outDict[ngramType][ngram] = frequency;
-      }
-    };
-
-    addNGrams(ngrams,  realDigrams,  getDigramType);
-    addNGrams(ngrams, realTrigrams, getTrigramType);
-
     const getFingerPosition = ([hand, finger]) =>
       hand == 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
 
@@ -384,14 +370,26 @@ window.addEventListener('DOMContentLoaded', () => {
       Array(4).fill(0).map(_ => ({ "good": 0, "meh": 0, "bad": 0 }))
     );
 
-    for (const [sfb, frequency] of Object.entries(ngrams.sfb)) {
-      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[charToKeys(sfb[0])[0]]);
-      totalSfuSkuPerFinger[groupIndex][itemIndex].bad += frequency;
+    for (const [ngram, { keySequence, frequency }] of Object.entries(realDigrams)) {
+      if (keySequence.includes('Space')) continue;
+      const ngramType = getDigramType(...keySequence);
+      ngrams[ngramType][ngram] = frequency;
+
+      if (ngramType == 'sfb') {
+        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keySequence[0]]);
+        totalSfuSkuPerFinger[groupIndex][itemIndex].bad += frequency;
+      }
+
+      if (ngramType == 'skb') {
+        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keySequence[0]]);
+        totalSfuSkuPerFinger[groupIndex][itemIndex].meh += frequency;
+      }
     }
 
-    for (const [skb, frequency] of Object.entries(ngrams.skb)) {
-      const [groupIndex, itemIndex] = getFingerPosition(keyFinger[charToKeys(skb[0])[0]]);
-      totalSfuSkuPerFinger[groupIndex][itemIndex].meh += frequency;
+    for (const [ngram, { keySequence, frequency }] of Object.entries(realTrigrams)) {
+      if (keySequence.includes('Space')) continue;
+      const ngramType = getTrigramType(...keySequence);
+      ngrams[ngramType][ngram] = frequency;
     }
 
     // Render digrams
