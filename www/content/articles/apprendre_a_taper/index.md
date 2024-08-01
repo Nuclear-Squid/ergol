@@ -10,10 +10,9 @@ important, qui implique généralement une perte de productivité durant cette
 période. Heureusement, il existe de nombreux sites ou techniques que l’on peut
 utiliser pour réduire le plus possible ce temps d’apprentissage !
 
-Après avoir changé *neuf fois* de disposition de clavier en 3,5 ans 
-(Colemak, puis 8 versions
-majeures d’Ergo‑L), j’ai compilé dans cet article toutes les techniques que j’ai
-accumulées au fil du temps pour apprendre un nouveau layout.
+Après avoir changé *neuf fois* de disposition de clavier en 3,5 ans  (Colemak,
+puis 8 versions majeures d’Ergo‑L), j’ai compilé dans cet article toutes les
+techniques que j’ai accumulées au fil du temps pour apprendre un nouveau layout.
 
 <!--more-->
 
@@ -250,7 +249,8 @@ pauses entre deux mots (vu que de base on a tendance à lire le mot, se prépare
 tâches en parallèle. Non seulement on tape plus vite, mais ça demande beaucoup
 moins d’effort pour transcrire ses pensées !
 
-Il y a aussi les variantes « *easy* » et « *hard* », qui cachent respectivement 1 mot et 3 mots.
+Il y a aussi les variantes « *easy* » et « *hard* », qui cachent
+respectivement 1 mot et 3 mots.
 
 Conclusion (TL;DR)
 --------------------------------------------------------------------------------

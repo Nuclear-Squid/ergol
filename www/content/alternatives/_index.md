@@ -137,7 +137,8 @@ n’est pas au niveau d’Ergo‑L, ces dispositions ayant cherché à rester au
 proches que possible de leurs aînées.
 
 La contrepartie, c’est la [touche morte][] qu’il faut apprendre, et qui ajoute
-entre 2,5 % et 4,0 % de frappes supplémentaires en français — soit une perte de 2 mots/minute pour une personne tapant à 60 mots/minute.
+entre 2,5 % et 4,0 % de frappes supplémentaires en français — soit une perte de
+2 mots/minute pour une personne tapant à 60 mots/minute.
 
 **De notre point de vue,** [Ergo‑L][] et [Erglace][] sont les seules
 dispositions à la fois ergonomiques **et** optimisées pour le français. Elles
@@ -180,7 +181,7 @@ serait une permutation `h,’`, pour faire passer le `h` de [>] à [O].
 [Note]{id="optimot_en"} : l’auteur d’Optimot considère que sa disposition est
 optimisée pour l’anglais au motif qu’elle obtiendrait une bonne note globale sur
 KLAnext ; mais pour nous, [la heatmap est inadaptée][1] (lettres fréquentes sur
-la rangée inférieure) et trop de digrammes courants sont trop inconfortables
+la rangée inférieure) et de nombreux digrammes courants sont trop inconfortables
 pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, 
 `ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça.
 
