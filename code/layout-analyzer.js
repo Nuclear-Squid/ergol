@@ -44,7 +44,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // In case there are multiple ways of typing a singel char, this checks
     // which sequence is easier to type (examples are in Ergo‑L)
     const requiresLessEffort = (originalKeySequence, newKeySequence) => {
-      const uses1DK = keySequence => keySequence.some(key => key == charTable['**'][0]);
+      const uses1DK = '**' in keyboard.layout.deadKeys
+          ? keySequence => keySequence.some(key => key == charTable['**'][0])
+          : (_) => false;
 
       const arrayCount = (array, predicate) => {
         let rv = 0;
