@@ -230,9 +230,7 @@ window.addEventListener('DOMContentLoaded', () => {
         'badRedirect', // Redirect that doesn’t use the index
         'sfs',  // Same Finger Skipgram (sfb with other key in the middle)
         'sks',  // Same Key Skipgram (skb with other key in the middle)
-        'rollAndHandChange',  // A roll and hand change (no particullar order)
-        'doubleRoll', // Two rolls in the same direction
-        'doubleHandChange'  // Two hand changes
+        'other',  // unused, is just two simplo digrams, nothing to note.
       ].map(digramType => [digramType, {}])
     );
 
@@ -349,16 +347,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
       const hands = prevFinger[0] + currFinger[0] + nextFinger[0];
 
-      if (['lrl', 'rlr'].includes(hands)) return 'doubleHandChange';
-      if (['llr', 'rll', 'rrl', 'lrr'].includes(hands)) return 'rollAndHandChange';
+      if (!['lll', 'rrr'].includes(hands)) return 'other';
+
+      const fingers = prevFinger[1] + currFinger[1] + nextFinger[1];
+      if (fingers[0] == fingers[1] || fingers[1] == fingers[2]) return 'other';
 
       // I don’t know if this is briliant or if I deserve a VIP ticket to Hell.
-      if ((prevFinger[1] > currFinger[1]) != (currFinger[1] > nextFinger[1]))
+      if ((fingers[0] > fingers[1]) != (fingers[1] > fingers[2]))
         return [prevFinger, currFinger, nextFinger].some(finger => finger[1] == '2')
           ? 'redirect'
           : 'badRedirect';
 
-      return 'doubleRoll';
+      return 'other';
     };
 
     // TODO: This needs a better name
