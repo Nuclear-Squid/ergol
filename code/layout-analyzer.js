@@ -127,11 +127,7 @@ window.addEventListener('DOMContentLoaded', () => {
       insertDeadKeySequences(charTable, deadkeys, { "name": deadKey, "sequence": sequence });
     }
 
-    const finalTable = {};
-    for (const [char, sequence] of Object.entries(charTable)) {
-      finalTable[char] = sequence.map(key => key.keyCode)
-    }
-    return finalTable;
+    return charTable;
   };
 
   // display a percentage value
@@ -235,25 +231,49 @@ window.addEventListener('DOMContentLoaded', () => {
       ].map(digramType => [digramType, {}])
     );
 
-    const insertKeySequence = (dict, keySequence, frequency, ngram) => {
-      let name = keySequence.map(key => keyboard.layout.keyMap[key][0].replace('**', '★')).join('');
-      if (!(name in dict)) dict[name] = { keySequence, frequency };
-      else dict[name].frequency += frequency;
-    };
-
     const buildNgramDict = (dict, ngramLength) => {
       let total = 0;
       const rv = {};
 
       for (const [ngram, frequency] of Object.entries(dict)) {
-        const keySequence = Array.from(ngram).flatMap(charToKeys);
-        if (keySequence.some(key => key == undefined)) continue;
+        const totalKeySequence = Array.from(ngram).flatMap(charToKeys);
+        if (totalKeySequence.some(key => key == undefined)) continue;
 
-        // TODO: Properly handle deadKeys when naming the smaller digrams
-        for (const subSequence of arrayWindows(keySequence, ngramLength)) {
-          const name = subSequence.map(key => keyboard.layout.keyMap[key][0].replace('**', '★')).join('');
+        let nextPendingDeadKey = undefined;
+        for (const keySequence of arrayWindows(totalKeySequence, ngramLength)) {
+          let [pendingDeadKey, name] = keySequence.reduce(([pendingDeadKey, acc], { keyCode, level }) => {
+            let char = keyboard.layout.keyMap[keyCode][level];
+            if (pendingDeadKey)
+              char = keyboard.layout.deadKeys[pendingDeadKey][char];
 
-          if (!(name in rv)) rv[name] = { "keySequence": subSequence, frequency };
+            return char.length == 1
+                ? [undefined, acc + char]
+                : [char, acc];
+          }, [nextPendingDeadKey, '']);
+
+          if (pendingDeadKey) {
+            name += pendingDeadKey;
+            pendingDeadKey = undefined;
+          }
+
+          // PrettyPrint the ODK
+          // TODO: add a system for generic deadKeys ?
+          name = name.replaceAll('**', '★');
+
+          // I wanted a "Zig-style block expression", syntax might be stupid
+          nextPendingDeadKey = (() => {
+            const { keyCode, level } = keySequence[0];
+            const firstCharInSequence = keyboard.layout.keyMap[keyCode][level]
+            if (firstCharInSequence.length == 1) return undefined;
+            return pendingDeadKey != undefined
+                ? keyboard.layout.deadKeys[pendingDeadKey][firstCharInSequence]
+                : firstCharInSequence;
+          })();
+
+          // keylevels are needed when building the ngramDicts, but aren’t
+          // used when computing the ngrams, so we simplify the data structure.
+          const keyCodes = keySequence.map(({ keyCode }) => keyCode);
+          if (!(name in rv)) rv[name] = { keyCodes, frequency };
           else rv[name].frequency += frequency;
 
           total += frequency;
@@ -370,25 +390,25 @@ window.addEventListener('DOMContentLoaded', () => {
       Array(4).fill(0).map(_ => ({ "good": 0, "meh": 0, "bad": 0 }))
     );
 
-    for (const [ngram, { keySequence, frequency }] of Object.entries(realDigrams)) {
-      if (keySequence.includes('Space')) continue;
-      const ngramType = getDigramType(...keySequence);
+    for (const [ngram, { keyCodes, frequency }] of Object.entries(realDigrams)) {
+      if (keyCodes.includes('Space')) continue;
+      const ngramType = getDigramType(...keyCodes);
       ngrams[ngramType][ngram] = frequency;
 
       if (ngramType == 'sfb') {
-        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keySequence[0]]);
+        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyCodes[0]]);
         totalSfuSkuPerFinger[groupIndex][itemIndex].bad += frequency;
       }
 
       if (ngramType == 'skb') {
-        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keySequence[0]]);
+        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyCodes[0]]);
         totalSfuSkuPerFinger[groupIndex][itemIndex].meh += frequency;
       }
     }
 
-    for (const [ngram, { keySequence, frequency }] of Object.entries(realTrigrams)) {
-      if (keySequence.includes('Space')) continue;
-      const ngramType = getTrigramType(...keySequence);
+    for (const [ngram, { keyCodes, frequency }] of Object.entries(realTrigrams)) {
+      if (keyCodes.includes('Space')) continue;
+      const ngramType = getTrigramType(...keyCodes);
       ngrams[ngramType][ngram] = frequency;
     }
 
@@ -450,7 +470,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let extraKeysFrequency = 0;
 
     for (const [char, frequency] of Object.entries(corpus)) {
-      const keys = charToKeys(char);
+      const keys = charToKeys(char).map(({ keyCode }) => keyCode);
       if (!keys) {
         unsupportedChars[char] = frequency;
         totalUnsupportedChars += frequency;
