@@ -236,11 +236,13 @@ window.addEventListener('DOMContentLoaded', () => {
       const rv = {};
 
       for (const [ngram, frequency] of Object.entries(dict)) {
-        const totalKeySequence = Array.from(ngram).flatMap(charToKeys);
-        if (totalKeySequence.some(key => key == undefined)) continue;
-
         let nextPendingDeadKey = undefined;
+        const totalKeySequence = Array.from(ngram).flatMap(charToKeys);
+
         for (const keySequence of arrayWindows(totalKeySequence, ngramLength)) {
+          total += frequency;
+          if (totalKeySequence.some(key => key == undefined)) continue;
+
           let [pendingDeadKey, name] = keySequence.reduce(([pendingDeadKey, acc], { keyCode, level }) => {
             let char = keyboard.layout.keyMap[keyCode][level];
             if (pendingDeadKey)
@@ -275,8 +277,6 @@ window.addEventListener('DOMContentLoaded', () => {
           const keyCodes = keySequence.map(({ keyCode }) => keyCode);
           if (!(name in rv)) rv[name] = { keyCodes, frequency };
           else rv[name].frequency += frequency;
-
-          total += frequency;
         }
       }
 
@@ -470,7 +470,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let extraKeysFrequency = 0;
 
     for (const [char, frequency] of Object.entries(corpus)) {
-      const keys = charToKeys(char).map(({ keyCode }) => keyCode);
+      const keys = charToKeys(char)?.map(({ keyCode }) => keyCode);
       if (!keys) {
         unsupportedChars[char] = frequency;
         totalUnsupportedChars += frequency;
