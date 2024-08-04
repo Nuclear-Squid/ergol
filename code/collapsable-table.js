@@ -104,6 +104,7 @@ class CollapsableTable extends HTMLElement {
       `<tr><th colspan='2'>${title}</td></tr>` +
       Object.entries(values)
         .filter(([digram, freq]) => freq >= 10 ** -precision)
+        .sort(([_, freq1], [__, freq2]) => freq2 - freq1)
         .map(
           ([digram, freq]) =>
             `<tr><td>${digram}</td><td>${freq.toFixed(precision)}</td></tr>`,
