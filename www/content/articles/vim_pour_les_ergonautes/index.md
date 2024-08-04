@@ -16,10 +16,10 @@ d’années. Je suis également l’auteur de [Qwerty-Lafayette][], dont Ergo‑
 issu, et un contributeur actif d’Ergo‑L depuis deux ou trois ans.
 
 J’ai fait une conférence sur l’[ergonomie vimiste][] récemment aux
-[JdLL][]. Je trouve que pour un usage technique, utiliser Vim
+[JdLL][]. Je trouve que, pour un usage technique, utiliser Vim
 (ou Neovim, Kakoune, Helix, Doom-Emacs…) apporte une ergonomie très supérieure à
 ce que n’importe quelle disposition de clavier peut offrir : on écrit peu, et
-beaucoup de ce qu’en écrit est auto-complété.
+beaucoup de ce qu’on écrit est autocomplété.
 
 <!-- ![objectivité totale (allégorie), par @fnuttens](lafayette.jpg) -->
 
@@ -41,20 +41,20 @@ L’emplacement des touches <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> est
 un hasard : comme <kbd>Ctrl</kbd>-<kbd>h</kbd> et <kbd>Ctrl</kbd>-<kbd>j</kbd>
 font Backspace et Line Feed (standard ASCII), donc gauche et bas,
 l’[ADM-3A](https://en.wikipedia.org/wiki/ADM-3A#Legacy) sur lequel a été codé Vi
-a trouvé élégant de compléter avec <kbd>Ctrl</kbd>-<kbd>k</kbd> et
+a suggéré l’idée élégante de compléter avec <kbd>Ctrl</kbd>-<kbd>k</kbd> et
 <kbd>Ctrl</kbd>-<kbd>l</kbd> pour haut et droite.
 
-![clavier de l’ADM-3A (1976)](adm3a.jpg)
+![Clavier de l’ADM-3A (1976)](adm3a.jpg)
 
 Ces touches étant très proches de la position de repos en Qwerty, surtout
 <kbd>j</kbd><kbd>k</kbd> qui tombent sous les deux doigts forts de la main
-droite, l’usage est resté. Et clairement, la possibilité de toujours rester en
+droite, l’usage est resté. Et, clairement, la possibilité de toujours rester en
 position dactylo fait partie des gros gains de confort que l’on découvre avec
 Vim.
 
 ### Ne *PAS* remapper HJKL !
 
-À une époque fort fort lointaine, ou j’aimais déjà Vim mais contribuais au
+À une époque fort lointaine, où j’aimais déjà Vim mais contribuais au
 projet Bépo, j’avais donc proposé de remapper les touches
 <kbd>c</kbd><kbd>t</kbd><kbd>s</kbd><kbd>r</kbd> pour retrouver ce confort. [Ce
 mapping](https://bepo.fr/wiki/Fichier:Vim-bepo-066.png) est toujours très
@@ -64,54 +64,54 @@ Et c’était une erreur de débutant :
 
 - ça a singulièrement limité mon apprentissage de Vim, car chaque enchainement
   de commandes devait être « traduit » dans ce nouveau référentiel ;
-- et surtout, ça m’a maintenu dans des déplacements « case à case », alors que
+- surtout, ça m’a maintenu dans des déplacements « case à case », alors que
   Vim sait faire **beaucoup** mieux que ça.
 
-La [suite](#la-vie-après-hjkl) de co billet détaille comment misux se déplacer
+La [suite](#la-vie-après-hjkl) de ce billet détaille comment mieux se déplacer
 dans Vim.
 
 ### Mieux que HJKL : une couche de navigation
 
 Se limiter aux flèches ou à HJKL est très sous-optimal dans Vim, mais on peut
 souhaiter avoir ce confort d’un pavé de flèches sous la position de repos — et
-ce, dans toutes les apprications, pas seulement dans Vim.
+ce, dans toutes les applications, pas seulement dans Vim.
 
 Pour cela on définit un <i lang="en">layer</i>, que l’on implémente via QMK ou
-ZMK si on utilise un clavier programmable, ou avec [kanata][] si on est sur un
+ZMK si on utilise un clavier programmable, ou avec [Kanata][] si on est sur un
 clavier de laptop.
 
 C’est ce que l’on propose avec [Arsenik][], qui donne une couche [NavNum][] avec
 un appui long sur la barre d’espace :
 
-![pavé de flèches à gauche, pavé numérique à droite](/claviers/compacts/navnum.svg)
+![Pavé de flèches à gauche, pavé numérique à droite](/claviers/compacts/navnum.svg)
 
 Personnellement j’ai opté pour un layer de navigation plus vimiste, avec les
 flèches en <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> et <kbd>Esc</kbd>
 en accès direct sous un pouce :
 
-![contrôles à gauche, pavé de navigation à droite](navigation.svg)
+![Contrôles à gauche, pavé de navigation à droite](navigation.svg)
 
-Plutôt que de configurer N applications pour remapper HJKL avec un résultat
+Plutôt que de configurer *n* applications pour remapper HJKL avec un résultat
 souvent imparfait, on utilise donc un layer dédié. Même sans clavier
-programmable, une seule configuration kanata est plus simple à maintenir que N
+programmable, une seule configuration Kanata est plus simple à maintenir que *n* 
 configurations d’applications.
 
 
 La vie après HJKL
 --------------------------------------------------------------------------------
 
-> Après une semaine de test y’a pas photo : ne pas utiliser [h]{.kbd} et
-> [l]{.kbd} c'est le pied !
+> Après une semaine de test y a pas photo : ne pas utiliser [h]{.kbd} et
+> [l]{.kbd}, c'est le pied !
 
 > Le fait de ne pas remapper les touches par défaut en Ergo‑L est **LE**
 > <i lang="en">game changer</i> : ça facilite énormément l’apprentissage sans
-> avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? ».
+> avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? »
 
 > J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
-> avec mes mappings Bépo hasardeux.
+> avec mes mappings Bépo hasardeux–.
 
 :::{style="text-align: right;"}
-— [Vincent Jousse](vjousse), auteur de « [Vim pour les humains][vimebook] »
+— [Vincent Jousse](vjousse), auteur de [*Vim pour les humains*][vimebook]
 :::
 
 ### Déplacements verticaux
@@ -135,7 +135,7 @@ verticaux. Vim propose notamment :
 La couche AltGr a été optimisée pour Vim, et la position de `{` et `}` en est
 une conséquence.
 
-### Déplacements horizontaux (simples)
+### Déplacements horizontaux simples
 
 La première étape consiste à naviguer mot à mot plutôt que case à case : plus
 rapide, plus précis. On a ainsi :
@@ -150,9 +150,9 @@ réécrira systématiquement le mot en entier :
 
 - soit c’est du texte, et c’est souvent plus rapide que de viser la bonne lettre
   puis de corriger (et on en profite pour apprendre à le taper proprement au
-  passage — ça fait progresser très vite en dactilographie) ;
+  passage — ça fait progresser très vite en dactylographie) ;
 - soit c’est du code, et c’est **toujours** plus rapide de le retaper du début
-  en profitant de l’auto-complétion.
+  en profitant de l’autocomplétion.
 
 On utilisera donc :
 
@@ -160,16 +160,16 @@ On utilisera donc :
 - `cb` quand on est en fin de mot (`c`hange `b`ackwards) ;
 - ou `ciw` quelle que soit la position dans le mot (`c`hange `i`n `w`ord).
 
-Ce dernier `ciw` est ce qu’on appelle un <i lang="en">text object</i>. Les
-maitriser permet de s’économiser encore des actions dans Vim.
+Ce dernier `ciw` intègre un <i lang="en">text object</i>. Maitriser les
+structures de ce genre permet de s’économiser encore des actions dans Vim.
 
-### Déplacements horizontaux (avancés)
+### Déplacements horizontaux avancés
 
 Les commandes `f` `F` `t` `T` fournissent une façon plus rapide de se déplacer
 horizontalement :
 
 - `f`x (`f`ind x) déplace le curseur sur la prochaine lettre x ;
-- `t`x (`t`ill x) déplace le curseur sur la position précédent la prochaine
+- `t`x (`t`ill x) déplace le curseur sur la position précédant la prochaine
   lettre x ;
 - `F` et `T` (majuscules) font la même chose, mais dans l’autre sens (= vers le
   début de ligne) ;
@@ -181,8 +181,8 @@ caractère spécial (cas fréquent pour du code), mais ça reste rapide en cibla
 une lettre… ou même tout simplement l’espace.
 
 On peut aussi utiliser ces mouvements pour cibler une lettre spécifique à
-corriger dans un mot. Je préfère corriger par mots entiers avec `ciw` (V. plus
-haut) mais ça peut être pratique. Par exemple, pour corriger la phrase suivante
+corriger dans un mot. Je préfère corriger par mots entiers avec `ciw` (voir plus
+haut), mais ça peut être pratique. Par exemple, pour corriger la phrase suivante
 alors que le curseur est en fin de ligne :
 
 > J’aime taper dans Vmi sans faire de fautes.
@@ -255,13 +255,13 @@ Conclusion
 
 Adepte du Qwerty (version Lafayette) depuis plus de 15 ans, je craignais de
 perdre en confort sous Vim avec Ergo‑L. À l’usage, le seul inconvénient que je
-vois c’est de devoir maintenir <kbd>AltGr</kbd> pour les déplacements verticaux
-`j`/`k` — mais à l’usage ça s’enchaine très bien avec `{`/`}` et `^`/`$` en main
+vois, c’est de devoir maintenir <kbd>AltGr</kbd> pour les déplacements verticaux
+`j`/`k` — mais ça s’enchaine très bien avec `{`/`}` et `^`/`$` en main
 gauche, donc je n’ai pas l’impression de perdre en confort.
 
 Adepte du déplacement mot à mot, je pensais ne pas utiliser `h`/`l` du tout mais
 le passage à Ergo‑L m’a prouvé le contraire : je les utilisais souvent pour un
-seul caractère. Mais <kbd>F</kbd> et <kbd>T</kbd> étant bien placés en Ergo‑L,
+seul caractère. <kbd>F</kbd> et <kbd>T</kbd> étant bien placés en Ergo‑L,
 je les utilise désormais beaucoup plus et ça m’évite des successions d’appuis
 sur <kbd>W</kbd> et <kbd>B</kbd>.
 
