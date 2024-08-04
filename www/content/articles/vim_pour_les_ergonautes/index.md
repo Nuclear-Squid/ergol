@@ -67,14 +67,14 @@ Et c’était une erreur de débutant :
 - et surtout, ça m’a maintenu dans des déplacements « case à case », alors que
   Vim sait faire **beaucoup** mieux que ça.
 
-La [suite](#la-vie-après-hjkl) de co billet détaille comment misux se déplacer
+La [suite](#la-vie-après-hjkl) de co billet détaille comment mieux se déplacer
 dans Vim.
 
 ### Mieux que HJKL : une couche de navigation
 
 Se limiter aux flèches ou à HJKL est très sous-optimal dans Vim, mais on peut
 souhaiter avoir ce confort d’un pavé de flèches sous la position de repos — et
-ce, dans toutes les apprications, pas seulement dans Vim.
+ce, dans toutes les applications, pas seulement dans Vim.
 
 Pour cela on définit un <i lang="en">layer</i>, que l’on implémente via QMK ou
 ZMK si on utilise un clavier programmable, ou avec [kanata][] si on est sur un
@@ -110,7 +110,7 @@ La vie après HJKL
 > J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
 > avec mes mappings Bépo hasardeux.
 
-:::{style="text-align: right;"}
+:::{style="text-align: right; text-wrap: balance;"}
 — [Vincent Jousse](vjousse), auteur de « [Vim pour les humains][vimebook] »
 :::
 
@@ -190,9 +190,13 @@ alors que le curseur est en fin de ligne :
 … il suffit de faire `TVxp`.
 
 De base, ces déplacements sont limités à la ligne courante. Des greffons comme
-[EasyMotion][] (Vim) ou [Flash][] (Neovim) étendent ce comportement au document
-entier tout en proposant des améliorations ergonomiques, et on conservant la
-logique `f` `F` `t` `T`. On se rapproche alors du comportement de [Vimium][].
+[EasyMotion][] (Vim), [leap.nvim][] ou [flash.nvim][] (Neovim) étendent ce
+comportement au document entier tout en proposant des améliorations
+ergonomiques, et on conservant la logique `f` `F` `t` `T`.
+
+On se rapproche alors du comportement de [Vimium][]. Ces greffons peuvent
+faciliter grandement les déplacements dans Vim ou Neovim pour les débutant·e·s,
+et les utilisateurices avancé·e·s gagneront encore en efficacité.
 
 ### ~/.vimrc
 
@@ -239,8 +243,8 @@ vraiment magique. <3
 On peut profiter de l’ergonomie vimiste sur l’ensemble du bureau. Parmi les
 outils dont j’aurais du mal à me passer, il y a :
 
-- [Vimium][] pour naviguer au clavier dans Firefox ou Chrome ;
-- [i3][] ou [Sway][] comme gestionnaires de fenêtres sous Linux ;
+- [Vimium][] (ou [Tridactyl][]) pour naviguer au clavier dans Firefox ou Chrome ;
+- [i3][] ou [Sway][] comme gestionnaires de fenêtres sous Linux ⁽¹⁾ ;
 - [dmenu][] ou [Rofi][] pour lancer une app via fuzzy-matching ;
 - [Ranger][], [lf][], [Yazi][] comme explorateurs de fichiers dans le terminal —
   voire dans Vim, avec l’extension [TermOpen][].
@@ -249,6 +253,8 @@ Avec ces outils, je n’ai plus l’usage de la souris : je fais quasiment tou
 clavier, et l’émulation QMK de mon Ferris suffit pour les rares cas où je dois
 déplacer le pointeur.
 
+⁽¹⁾ Sous Windows, [Komorebi][] serait une alternative à tester.
+
 
 Conclusion
 --------------------------------------------------------------------------------
@@ -256,8 +262,8 @@ Conclusion
 Adepte du Qwerty (version Lafayette) depuis plus de 15 ans, je craignais de
 perdre en confort sous Vim avec Ergo‑L. À l’usage, le seul inconvénient que je
 vois c’est de devoir maintenir <kbd>AltGr</kbd> pour les déplacements verticaux
-`j`/`k` — mais à l’usage ça s’enchaine très bien avec `{`/`}` et `^`/`$` en main
-gauche, donc je n’ai pas l’impression de perdre en confort.
+`j`/`k` — mais ça s’enchaine très bien avec `{`/`}` et `^`/`$` en main gauche,
+donc le niveau de confort reste similaire.
 
 Adepte du déplacement mot à mot, je pensais ne pas utiliser `h`/`l` du tout mais
 le passage à Ergo‑L m’a prouvé le contraire : je les utilisais souvent pour un
@@ -281,14 +287,17 @@ Ergo‑L a été conçu par des Vimistes, et ça se sent !
 [vimebook]:   https://vimebook.com/fr
 [tupperVim]:  https://tuppervim.org
 [EasyMotion]: https://github.com/easymotion/vim-easymotion
-[Flash]:      https://github.com/folke/flash.nvim
+[flash.nvim]: https://github.com/folke/flash.nvim
+[leap.nvim]:  https://github.com/ggandor/leap.nvim
 
 [Vimium]:     https://vimium.github.io/
+[Tridactyl]:  https://github.com/tridactyl/tridactyl
 [Telescope]:  https://github.com/nvim-telescope/telescope.nvim
 [fzf]:        https://github.com/junegunn/fzf.vim
 [LSP]:        https://microsoft.github.io/language-server-protocol/
 [i3]:         https://i3wm.org/
 [Sway]:       https://swaywm.org/
+[Komorebi]:   https://lgug2z.github.io/komorebi/
 [dmenu]:      https://tools.suckless.org/dmenu/
 [rofi]:       https://github.com/davatorium/rofi
 [ranger]:     https://github.com/ranger/ranger
