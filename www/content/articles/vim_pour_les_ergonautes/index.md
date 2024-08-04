@@ -67,14 +67,14 @@ Et c’était une erreur de débutant :
 - et surtout, ça m’a maintenu dans des déplacements « case à case », alors que
   Vim sait faire **beaucoup** mieux que ça.
 
-La [suite](#la-vie-après-hjkl) de co billet détaille comment misux se déplacer
+La [suite](#la-vie-après-hjkl) de co billet détaille comment mieux se déplacer
 dans Vim.
 
 ### Mieux que HJKL : une couche de navigation
 
 Se limiter aux flèches ou à HJKL est très sous-optimal dans Vim, mais on peut
 souhaiter avoir ce confort d’un pavé de flèches sous la position de repos — et
-ce, dans toutes les apprications, pas seulement dans Vim.
+ce, dans toutes les applications, pas seulement dans Vim.
 
 Pour cela on définit un <i lang="en">layer</i>, que l’on implémente via QMK ou
 ZMK si on utilise un clavier programmable, ou avec [kanata][] si on est sur un
@@ -243,8 +243,8 @@ vraiment magique. <3
 On peut profiter de l’ergonomie vimiste sur l’ensemble du bureau. Parmi les
 outils dont j’aurais du mal à me passer, il y a :
 
-- [Vimium][] pour naviguer au clavier dans Firefox ou Chrome ;
-- [i3][] ou [Sway][] comme gestionnaires de fenêtres sous Linux ;
+- [Vimium][] (ou [Tridactyl][]) pour naviguer au clavier dans Firefox ou Chrome ;
+- [i3][] ou [Sway][] comme gestionnaires de fenêtres sous Linux ⁽¹⁾ ;
 - [dmenu][] ou [Rofi][] pour lancer une app via fuzzy-matching ;
 - [Ranger][], [lf][], [Yazi][] comme explorateurs de fichiers dans le terminal —
   voire dans Vim, avec l’extension [TermOpen][].
@@ -252,6 +252,8 @@ outils dont j’aurais du mal à me passer, il y a :
 Avec ces outils, je n’ai plus l’usage de la souris : je fais quasiment tout au
 clavier, et l’émulation QMK de mon Ferris suffit pour les rares cas où je dois
 déplacer le pointeur.
+
+⁽¹⁾ Sous Windows, [Komorebi][] serait une alternative à tester.
 
 
 Conclusion
@@ -289,11 +291,13 @@ Ergo‑L a été conçu par des Vimistes, et ça se sent !
 [leap.nvim]:  https://github.com/ggandor/leap.nvim
 
 [Vimium]:     https://vimium.github.io/
+[Tridactyl]:  https://github.com/tridactyl/tridactyl
 [Telescope]:  https://github.com/nvim-telescope/telescope.nvim
 [fzf]:        https://github.com/junegunn/fzf.vim
 [LSP]:        https://microsoft.github.io/language-server-protocol/
 [i3]:         https://i3wm.org/
 [Sway]:       https://swaywm.org/
+[Komorebi]:   https://lgug2z.github.io/komorebi/
 [dmenu]:      https://tools.suckless.org/dmenu/
 [rofi]:       https://github.com/davatorium/rofi
 [ranger]:     https://github.com/ranger/ranger
