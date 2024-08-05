@@ -7,8 +7,12 @@ tags = ["communauté", "vim"]
 
 <style>
   code { font-family: monospace; }
-  pre { background-color: #6684; padding: 0.5em 2em; }
+  pre { background-color: var(--bg-accent); padding: 0.5em 2em; }
   pre > code { background-color: transparent; padding: 0; }
+  /* blockquote { border-left: 2px solid var(--fg-accent); padding-left: 1em; } */
+  blockquote { background-color: var(--bg-accent); margin: 0; padding: .5em 2em .5em 3em; position: relative; }
+  blockquote::before { content: "»"; font-size: 2em; position: absolute; top: 0.7em; left: 0.5em; }
+  cite { display: block; text-align: right; text-wrap: balance; font-style: normal; }
 </style>
 
 J’anime des [ateliers récurrents sur Vim][tupperVim] depuis une douzaine
@@ -16,10 +20,10 @@ d’années. Je suis également l’auteur de [Qwerty-Lafayette][], dont Ergo‑
 issu, et un contributeur actif d’Ergo‑L depuis deux ou trois ans.
 
 J’ai fait une conférence sur l’[ergonomie vimiste][] récemment aux
-[JdLL][]. Je trouve que pour un usage technique, utiliser Vim
+[JdLL][]. Je trouve que, pour un usage technique, utiliser Vim
 (ou Neovim, Kakoune, Helix, Doom-Emacs…) apporte une ergonomie très supérieure à
 ce que n’importe quelle disposition de clavier peut offrir : on écrit peu, et
-beaucoup de ce qu’en écrit est auto-complété.
+beaucoup de ce qu’on écrit est autocomplété.
 
 <!-- ![objectivité totale (allégorie), par @fnuttens](lafayette.jpg) -->
 
@@ -41,7 +45,7 @@ L’emplacement des touches <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> est
 un hasard : comme <kbd>Ctrl</kbd>-<kbd>h</kbd> et <kbd>Ctrl</kbd>-<kbd>j</kbd>
 font Backspace et Line Feed (standard ASCII), donc gauche et bas,
 l’[ADM-3A](https://en.wikipedia.org/wiki/ADM-3A#Legacy) sur lequel a été codé Vi
-a trouvé élégant de compléter avec <kbd>Ctrl</kbd>-<kbd>k</kbd> et
+a élégamment complété avec <kbd>Ctrl</kbd>-<kbd>k</kbd> et
 <kbd>Ctrl</kbd>-<kbd>l</kbd> pour haut et droite.
 
 ![clavier de l’ADM-3A (1976)](adm3a.jpg)
@@ -54,8 +58,8 @@ Vim.
 
 ### Ne *PAS* remapper HJKL !
 
-À une époque fort fort lointaine, ou j’aimais déjà Vim mais contribuais au
-projet Bépo, j’avais donc proposé de remapper les touches
+À une époque fort, fort lointaine, où j’aimais déjà Vim mais contribuais
+beaucoup au projet Bépo, j’avais donc proposé de remapper les touches
 <kbd>c</kbd><kbd>t</kbd><kbd>s</kbd><kbd>r</kbd> pour retrouver ce confort. [Ce
 mapping](https://bepo.fr/wiki/Fichier:Vim-bepo-066.png) est toujours très
 utilisé par les Bépoètes aujourd’hui.
@@ -64,10 +68,10 @@ Et c’était une erreur de débutant :
 
 - ça a singulièrement limité mon apprentissage de Vim, car chaque enchainement
   de commandes devait être « traduit » dans ce nouveau référentiel ;
-- et surtout, ça m’a maintenu dans des déplacements « case à case », alors que
-  Vim sait faire **beaucoup** mieux que ça.
+- surtout, ça m’a maintenu dans des déplacements « case à case », alors que Vim
+  sait faire **beaucoup** mieux que ça.
 
-La [suite](#la-vie-après-hjkl) de co billet détaille comment mieux se déplacer
+La [suite](#la-vie-après-hjkl) de ce billet détaille comment mieux se déplacer
 dans Vim.
 
 ### Mieux que HJKL : une couche de navigation
@@ -77,42 +81,42 @@ souhaiter avoir ce confort d’un pavé de flèches sous la position de repos �
 ce, dans toutes les applications, pas seulement dans Vim.
 
 Pour cela on définit un <i lang="en">layer</i>, que l’on implémente via QMK ou
-ZMK si on utilise un clavier programmable, ou avec [kanata][] si on est sur un
+ZMK si on utilise un clavier programmable, ou avec [Kanata][] si on est sur un
 clavier de laptop.
 
 C’est ce que l’on propose avec [Arsenik][], qui donne une couche [NavNum][] avec
 un appui long sur la barre d’espace :
 
-![pavé de flèches à gauche, pavé numérique à droite](/claviers/compacts/navnum.svg)
+![Pavé de flèches à gauche, pavé numérique à droite](/claviers/compacts/navnum.svg)
 
 Personnellement j’ai opté pour un layer de navigation plus vimiste, avec les
 flèches en <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> et <kbd>Esc</kbd>
 en accès direct sous un pouce :
 
-![contrôles à gauche, pavé de navigation à droite](navigation.svg)
+![Contrôles à gauche, pavé de navigation à droite](navigation.svg)
 
 Plutôt que de configurer N applications pour remapper HJKL avec un résultat
 souvent imparfait, on utilise donc un layer dédié. Même sans clavier
-programmable, une seule configuration kanata est plus simple à maintenir que N
+programmable, une seule configuration Kanata est plus simple à maintenir que N
 configurations d’applications.
 
 
 La vie après HJKL
 --------------------------------------------------------------------------------
 
-> Après une semaine de test y’a pas photo : ne pas utiliser [h]{.kbd} et
-> [l]{.kbd} c'est le pied !
+<blockquote>
+Après une semaine de test y a pas photo : ne pas utiliser [h]{.kbd} et
+[l]{.kbd} c'est le pied !
 
-> Le fait de ne pas remapper les touches par défaut en Ergo‑L est **LE**
-> <i lang="en">game changer</i> : ça facilite énormément l’apprentissage sans
-> avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? ».
+Le fait de ne pas remapper les touches par défaut en Ergo‑L est **LE**
+<i lang="en">game changer</i> : ça facilite énormément l’apprentissage sans
+avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? ».
 
-> J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
-> avec mes mappings Bépo hasardeux.
+J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
+avec mes mappings Bépo hasardeux.
 
-:::{style="text-align: right; text-wrap: balance;"}
-— [Vincent Jousse](vjousse), auteur de « [Vim pour les humains][vimebook] »
-:::
+<cite>— [Vincent Jousse](vjousse), auteur de [*Vim pour les humains*][vimebook]</cite>
+</blockquote>
 
 ### Déplacements verticaux
 
@@ -135,7 +139,7 @@ verticaux. Vim propose notamment :
 La couche AltGr a été optimisée pour Vim, et la position de `{` et `}` en est
 une conséquence.
 
-### Déplacements horizontaux (simples)
+### Déplacements horizontaux simples
 
 La première étape consiste à naviguer mot à mot plutôt que case à case : plus
 rapide, plus précis. On a ainsi :
@@ -152,7 +156,7 @@ réécrira systématiquement le mot en entier :
   puis de corriger (et on en profite pour apprendre à le taper proprement au
   passage — ça fait progresser très vite en dactilographie) ;
 - soit c’est du code, et c’est **toujours** plus rapide de le retaper du début
-  en profitant de l’auto-complétion.
+  en profitant de l’autocomplétion.
 
 On utilisera donc :
 
@@ -160,10 +164,11 @@ On utilisera donc :
 - `cb` quand on est en fin de mot (`c`hange `b`ackwards) ;
 - ou `ciw` quelle que soit la position dans le mot (`c`hange `i`n `w`ord).
 
-Ce dernier `ciw` est ce qu’on appelle un <i lang="en">text object</i>. Les
-maitriser permet de s’économiser encore des actions dans Vim.
+Ce dernier `ciw` utilise ce qu’on appelle un <i lang="en">text object</i>.
+Maitriser ce genre d’opérations permet de s’économiser encore des actions dans
+Vim.
 
-### Déplacements horizontaux (avancés)
+### Déplacements horizontaux avancés
 
 Les commandes `f` `F` `t` `T` fournissent une façon plus rapide de se déplacer
 horizontalement :
@@ -181,11 +186,13 @@ caractère spécial (cas fréquent pour du code), mais ça reste rapide en cibla
 une lettre… ou même tout simplement l’espace.
 
 On peut aussi utiliser ces mouvements pour cibler une lettre spécifique à
-corriger dans un mot. Je préfère corriger par mots entiers avec `ciw` (V. plus
-haut) mais ça peut être pratique. Par exemple, pour corriger la phrase suivante
+corriger dans un mot. Je préfère corriger par mots entiers avec `ciw` (voir plus
+haut), mais ça peut être pratique. Par exemple, pour corriger la phrase suivante
 alors que le curseur est en fin de ligne :
 
-> J’aime taper dans Vmi sans faire de fautes.
+```
+J’aime taper dans Vmi sans faire de fautes.
+```
 
 … il suffit de faire `TVxp`.
 
@@ -283,7 +290,7 @@ Ergo‑L a été conçu par des Vimistes, et ça se sent !
 
 [JdLL]:       https://jdll.org
 [vjousse]:    https://mastodon.social/@vjousse@mamot.fr/112886863404314065
-[kanata]:     https://github.com/jtroo/kanata
+[Kanata]:     https://github.com/jtroo/kanata
 [vimebook]:   https://vimebook.com/fr
 [tupperVim]:  https://tuppervim.org
 [EasyMotion]: https://github.com/easymotion/vim-easymotion
