@@ -154,7 +154,7 @@ réécrira systématiquement le mot en entier :
 
 - soit c’est du texte, et c’est souvent plus rapide que de viser la bonne lettre
   puis de corriger (et on en profite pour apprendre à le taper proprement au
-  passage — ça fait progresser très vite en dactilographie) ;
+  passage — ça fait progresser très vite en dactylographie) ;
 - soit c’est du code, et c’est **toujours** plus rapide de le retaper du début
   en profitant de l’autocomplétion.
 
@@ -174,7 +174,7 @@ Les commandes `f` `F` `t` `T` fournissent une façon plus rapide de se déplacer
 horizontalement :
 
 - `f`x (`f`ind x) déplace le curseur sur la prochaine lettre x ;
-- `t`x (`t`ill x) déplace le curseur sur la position précédent la prochaine
+- `t`x (`t`ill x) déplace le curseur sur la position précédant la prochaine
   lettre x ;
 - `F` et `T` (majuscules) font la même chose, mais dans l’autre sens (= vers le
   début de ligne) ;
@@ -274,9 +274,9 @@ donc le niveau de confort reste similaire.
 
 Adepte du déplacement mot à mot, je pensais ne pas utiliser `h`/`l` du tout mais
 le passage à Ergo‑L m’a prouvé le contraire : je les utilisais souvent pour un
-seul caractère. Mais <kbd>F</kbd> et <kbd>T</kbd> étant bien placés en Ergo‑L,
-je les utilise désormais beaucoup plus et ça m’évite des successions d’appuis
-sur <kbd>W</kbd> et <kbd>B</kbd>.
+seul caractère. <kbd>F</kbd> et <kbd>T</kbd> étant bien placés en Ergo‑L, je les
+utilise désormais beaucoup plus et ça m’évite des successions d’appuis sur
+<kbd>W</kbd> et <kbd>B</kbd>.
 
 Pour le reste, je n’ai pas ressenti de frictions sous Vim en passant à Ergo‑L.
 Il y a même des gains inattendus, comme avoir <kbd>N</kbd> en position de repos
