@@ -48,11 +48,11 @@ l’[ADM-3A](https://en.wikipedia.org/wiki/ADM-3A#Legacy) sur lequel a été cod
 a élégamment complété avec <kbd>Ctrl</kbd>-<kbd>k</kbd> et
 <kbd>Ctrl</kbd>-<kbd>l</kbd> pour haut et droite.
 
-![clavier de l’ADM-3A (1976)](adm3a.jpg)
+![Clavier de l’ADM-3A (1976)](adm3a.jpg)
 
 Ces touches étant très proches de la position de repos en Qwerty, surtout
 <kbd>j</kbd><kbd>k</kbd> qui tombent sous les deux doigts forts de la main
-droite, l’usage est resté. Et clairement, la possibilité de toujours rester en
+droite, l’usage est resté. Et, clairement, la possibilité de toujours rester en
 position dactylo fait partie des gros gains de confort que l’on découvre avec
 Vim.
 
@@ -68,8 +68,8 @@ Et c’était une erreur de débutant :
 
 - ça a singulièrement limité mon apprentissage de Vim, car chaque enchainement
   de commandes devait être « traduit » dans ce nouveau référentiel ;
-- surtout, ça m’a maintenu dans des déplacements « case à case », alors que Vim
-  sait faire **beaucoup** mieux que ça.
+- surtout, ça m’a maintenu dans des déplacements « case à case », alors que
+  Vim sait faire **beaucoup** mieux que ça.
 
 La [suite](#la-vie-après-hjkl) de ce billet détaille comment mieux se déplacer
 dans Vim.
@@ -95,9 +95,9 @@ en accès direct sous un pouce :
 
 ![Contrôles à gauche, pavé de navigation à droite](navigation.svg)
 
-Plutôt que de configurer N applications pour remapper HJKL avec un résultat
+Plutôt que de configurer *n* applications pour remapper HJKL avec un résultat
 souvent imparfait, on utilise donc un layer dédié. Même sans clavier
-programmable, une seule configuration Kanata est plus simple à maintenir que N
+programmable, une seule configuration Kanata est plus simple à maintenir que *n* 
 configurations d’applications.
 
 
