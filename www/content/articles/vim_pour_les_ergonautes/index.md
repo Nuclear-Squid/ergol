@@ -16,14 +16,14 @@ tags = ["communauté", "vim"]
 </style>
 
 J’anime des [ateliers récurrents sur Vim][tupperVim] depuis une douzaine
-d’années. Je suis également l’auteur de [Qwerty-Lafayette][], dont Ergo‑L est
-issu, et un contributeur actif d’Ergo‑L depuis deux ou trois ans.
+d’années. Je suis également l’auteur de [Qwerty-Lafayette][] et un contributeur
+actif d’Ergo‑L depuis deux ou trois ans.
 
-J’ai fait une conférence sur l’[ergonomie vimiste][] récemment aux
-[JdLL][]. Je trouve que, pour un usage technique, utiliser Vim
-(ou Neovim, Kakoune, Helix, Doom-Emacs…) apporte une ergonomie très supérieure à
-ce que n’importe quelle disposition de clavier peut offrir : on écrit peu, et
-beaucoup de ce qu’on écrit est autocomplété.
+Cet article fait suite à une conférence sur l’[ergonomie vimiste][] que j’ai
+faite récemment aux [JdLL][]. Je trouve que, pour un usage technique, utiliser
+Vim (ou Neovim, Kakoune, Helix, Doom-Emacs…) apporte une ergonomie très
+supérieure à ce que n’importe quelle disposition de clavier peut offrir : on
+écrit peu, et beaucoup de ce qu’on écrit est autocomplété.
 
 <!-- ![objectivité totale (allégorie), par @fnuttens](lafayette.jpg) -->
 
@@ -197,9 +197,16 @@ J’aime taper dans Vmi sans faire de fautes.
 … il suffit de faire `TVxp`.
 
 De base, ces déplacements sont limités à la ligne courante. Des greffons comme
-[EasyMotion][] (Vim), [leap.nvim][] ou [flash.nvim][] (Neovim) étendent ce
-comportement au document entier tout en proposant des améliorations
-ergonomiques, et on conservant la logique `f` `F` `t` `T`.
+[clever-f][] ou [Fanf,ingTastic;][FfTt]  étendent ce comportement au document
+entier tout en proposant des améliorations ergonomiques, et en conservant la
+logique `f` `F` `t` `T`.
+
+### Déplacements façon « EasyMotion »
+
+[EasyMotion][] (Vim), [leap.nvim][] ou [flash.nvim][] (Neovim) utilisent une
+logique proche de `f` `F` `t` `T` mais en utilisant **deux** caractères cibles
+au lieu d’un seul. Cela permet de se déplacer très rapidement dans tout le
+document, en profitant d’une aide visuelle.
 
 On se rapproche alors du comportement de [Vimium][]. Ces greffons peuvent
 faciliter grandement les déplacements dans Vim ou Neovim pour les débutant·e·s,
@@ -208,16 +215,16 @@ et les utilisateurices avancé·e·s gagneront encore en efficacité.
 ### ~/.vimrc
 
 Bien que Vim fonctionne <i lang="en">out of the box</i> avec Ergo‑L, j’utilise
-six mappings pour me faciliter la tâche :
+cinq mappings pour me faciliter la tâche :
 
 - `gj` et `gk` sur `+` et `-` pour avoir exactement le même comportement
   (= préserver la colonne courante) ;
 - interversion de `,` et `;` pour que l’action sans <kbd>Shift</kbd> aille vers
-  la suite (comme je le fais pour Qwerty-Lafayette) ;
+  la suite (recommandé pour toutes les dispositions où `;` est en
+  <kbd>Shift</kbd> : Qwertz, Lafayette, Bépo…) ;
 - <kbd>Ctrl</kbd><kbd>i</kbd> sur <kbd>Ctrl</kbd><kbd>c</kbd> pour avoir une
-  paire pour la navigation dans la pile de sauts ;
-- `<leader>` sur <kbd>Espace</kbd>, que je recommande vivement quelle que soit
-  la disposition de clavier utilisée.
+  paire pour la navigation dans la [pile de
+  sauts](https://vimhelp.org/motion.txt.html#jump-motions).
 
 ```vim
 nnoremap + gj
@@ -225,10 +232,25 @@ nnoremap - gk
 nnoremap , ;
 nnoremap ; ,
 nnoremap <C-c> <C-i>
+```
+
+C’est l’occasion de mentionner d’autres mappings sans rapport avec Ergo‑L mais
+que je recommande vivement quelle que soit la disposition de clavier utilisée :
+
+- `y$` sur `Y`, par cohérence avec `C` et `D` ;
+- « undo » sur `U`, pour s’éviter `<C-r>` et redéfinir le `U` natif de Vim qui
+  est source de confusion ;
+- `q:` (historique de commandes) sur `Q`, qui est lui aussi source de confusion
+  (= mode `Ex`) ;
+- `<leader>` sur <kbd>Espace</kbd>. Indispensable ! :-)
+
+```vim
+nnoremap Y y$
+nnoremap U <C-r>
+nnoremap Q q:
 nnoremap <Space> <Nop>
 let mapleader=" "
 ```
-
 
 Pour aller plus loin
 --------------------------------------------------------------------------------
@@ -282,7 +304,11 @@ Pour le reste, je n’ai pas ressenti de frictions sous Vim en passant à Ergo�
 Il y a même des gains inattendus, comme avoir <kbd>N</kbd> en position de repos
 et le point sur l’autre main.
 
-Ergo‑L a été conçu par des Vimistes, et ça se sent !
+**Ergo‑L a été conçu par des Vimistes, et ça change tout !**
+
+J’en profite pour remercier [Lobre][], Lafayettiste et Ergonaute de la toute
+première heure, utilisateur avancé de Vim et Kakoune, à qui l’on doit
+l’essentiel de cette couche AltGr — et en particulier son adaptation pour Vim.
 
 
 [Arsenik]:    /claviers/arsenik
@@ -293,6 +319,8 @@ Ergo‑L a été conçu par des Vimistes, et ça se sent !
 [Kanata]:     https://github.com/jtroo/kanata
 [vimebook]:   https://vimebook.com/fr
 [tupperVim]:  https://tuppervim.org
+[clever-f]:   https://github.com/rhysd/clever-f.vim
+[FfTt]:       https://github.com/dahu/vim-fanfingtastic
 [EasyMotion]: https://github.com/easymotion/vim-easymotion
 [flash.nvim]: https://github.com/folke/flash.nvim
 [leap.nvim]:  https://github.com/ggandor/leap.nvim
@@ -311,6 +339,7 @@ Ergo‑L a été conçu par des Vimistes, et ça se sent !
 [lf]:         https://github.com/gokcehan/lf
 [yazi]:       https://github.com/sxyazi/yazi
 [TermOpen]:   https://github.com/fabi1cazenave/termopen.vim
+[Lobre]:      https://github.com/lobre
 
 [Qwerty-Lafayette]:   https://qwerty-lafayette.org
 [ergonomie vimiste]:  https://fabi1cazenave.github.io/slides/2024-jdll-vim-ergo/
