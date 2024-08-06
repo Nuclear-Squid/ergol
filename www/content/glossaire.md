@@ -16,15 +16,26 @@ title = "Glossaire"
 Ergonomie & Optimisation
 --------------------------------------------------------------------------------
 
-SFU (“Same Finger Usage”), SFB (“Same Finger Bigram”)
+SFB <i lang="en">(“Same Finger Bigram”)</i>
 
 : Aussi appelé « digramme de même doigt ». Quand deux lettres s’enchaînent avec un même
 doigt, ce qui est source d’inconfort ou d’erreurs, notamment à haute vitesse.
  
-SKU (“Same Key Usage”), SKB (“Same Key Bigram”)
+SFU <i lang="en">(“Same Finger Usage”)</i>
+
+: Taux de SFB relevés dans un corpus de texte, exprimé en % du nombre total de digrammes.
+Plus le taux est bas, mieux c’est.
+ 
+SKB <i lang="en">(“Same Key Bigram”)</i>
 
 : Répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
 disposition de clavier, ou `és` en Ergo‑L.
+
+SKU <i lang="en">(“Same Key Usage”)</i>
+
+: Taux de SKB relevés dans un corpus de texte, exprimé en % du nombre total de digrammes.
+Théoriquement, il ne dépend que du corpus ; mais il peut augmenter avec l’usage
+de touches mortes.
 
 Extension
 
@@ -33,7 +44,8 @@ que la position de repos, soit à une distance supérieure à une touche.
 
 Ciseau
 
-: Quand un bigramme nécessite un changement de rangée inconfortable.
+: Quand un bigramme nécessite un changement de rangée inconfortable, i.e.
+[C]{.kbd}[R]{.kbd} en Azerty ou Qwerty.
 
 Roulement intérieur
 
