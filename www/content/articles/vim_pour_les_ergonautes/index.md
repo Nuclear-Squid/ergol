@@ -7,8 +7,12 @@ tags = ["communauté", "vim"]
 
 <style>
   code { font-family: monospace; }
-  pre { background-color: #6684; padding: 0.5em 2em; }
+  pre { background-color: var(--bg-accent); padding: 0.5em 2em; }
   pre > code { background-color: transparent; padding: 0; }
+  /* blockquote { border-left: 2px solid var(--fg-accent); padding-left: 1em; } */
+  blockquote { background-color: var(--bg-accent); margin: 0; padding: .5em 2em .5em 3em; position: relative; }
+  blockquote::before { content: "»"; font-size: 2em; position: absolute; top: 0.7em; left: 0.5em; }
+  cite { display: block; text-align: right; text-wrap: balance; font-style: normal; }
 </style>
 
 J’anime des [ateliers récurrents sur Vim][tupperVim] depuis une douzaine
@@ -41,7 +45,7 @@ L’emplacement des touches <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> est
 un hasard : comme <kbd>Ctrl</kbd>-<kbd>h</kbd> et <kbd>Ctrl</kbd>-<kbd>j</kbd>
 font Backspace et Line Feed (standard ASCII), donc gauche et bas,
 l’[ADM-3A](https://en.wikipedia.org/wiki/ADM-3A#Legacy) sur lequel a été codé Vi
-a suggéré l’idée élégante de compléter avec <kbd>Ctrl</kbd>-<kbd>k</kbd> et
+a élégamment complété avec <kbd>Ctrl</kbd>-<kbd>k</kbd> et
 <kbd>Ctrl</kbd>-<kbd>l</kbd> pour haut et droite.
 
 ![Clavier de l’ADM-3A (1976)](adm3a.jpg)
@@ -54,8 +58,8 @@ Vim.
 
 ### Ne *PAS* remapper HJKL !
 
-À une époque fort lointaine, où j’aimais déjà Vim mais contribuais au
-projet Bépo, j’avais donc proposé de remapper les touches
+À une époque fort, fort lointaine, où j’aimais déjà Vim mais contribuais
+beaucoup au projet Bépo, j’avais donc proposé de remapper les touches
 <kbd>c</kbd><kbd>t</kbd><kbd>s</kbd><kbd>r</kbd> pour retrouver ce confort. [Ce
 mapping](https://bepo.fr/wiki/Fichier:Vim-bepo-066.png) est toujours très
 utilisé par les Bépoètes aujourd’hui.
@@ -100,19 +104,19 @@ configurations d’applications.
 La vie après HJKL
 --------------------------------------------------------------------------------
 
-> Après une semaine de test y a pas photo : ne pas utiliser [h]{.kbd} et
-> [l]{.kbd}, c'est le pied !
+<blockquote>
+Après une semaine de test y a pas photo : ne pas utiliser [h]{.kbd} et
+[l]{.kbd} c'est le pied !
 
-> Le fait de ne pas remapper les touches par défaut en Ergo‑L est **LE**
-> <i lang="en">game changer</i> : ça facilite énormément l’apprentissage sans
-> avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? »
+Le fait de ne pas remapper les touches par défaut en Ergo‑L est **LE**
+<i lang="en">game changer</i> : ça facilite énormément l’apprentissage sans
+avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? ».
 
-> J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
-> avec mes mappings Bépo hasardeux–.
+J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
+avec mes mappings Bépo hasardeux.
 
-:::{style="text-align: right;"}
-— [Vincent Jousse](vjousse), auteur de [*Vim pour les humains*][vimebook]
-:::
+<cite>— [Vincent Jousse](vjousse), auteur de [*Vim pour les humains*][vimebook]</cite>
+</blockquote>
 
 ### Déplacements verticaux
 
@@ -160,8 +164,9 @@ On utilisera donc :
 - `cb` quand on est en fin de mot (`c`hange `b`ackwards) ;
 - ou `ciw` quelle que soit la position dans le mot (`c`hange `i`n `w`ord).
 
-Ce dernier `ciw` intègre un <i lang="en">text object</i>. Maitriser les
-structures de ce genre permet de s’économiser encore des actions dans Vim.
+Ce dernier `ciw` utilise ce qu’on appelle un <i lang="en">text object</i>.
+Maitriser ce genre d’opérations permet de s’économiser encore des actions dans
+Vim.
 
 ### Déplacements horizontaux avancés
 
@@ -185,14 +190,20 @@ corriger dans un mot. Je préfère corriger par mots entiers avec `ciw` (voir pl
 haut), mais ça peut être pratique. Par exemple, pour corriger la phrase suivante
 alors que le curseur est en fin de ligne :
 
-> J’aime taper dans Vmi sans faire de fautes.
+```
+J’aime taper dans Vmi sans faire de fautes.
+```
 
 … il suffit de faire `TVxp`.
 
 De base, ces déplacements sont limités à la ligne courante. Des greffons comme
-[EasyMotion][] (Vim) ou [Flash][] (Neovim) étendent ce comportement au document
-entier tout en proposant des améliorations ergonomiques, et on conservant la
-logique `f` `F` `t` `T`. On se rapproche alors du comportement de [Vimium][].
+[EasyMotion][] (Vim), [leap.nvim][] ou [flash.nvim][] (Neovim) étendent ce
+comportement au document entier tout en proposant des améliorations
+ergonomiques, et on conservant la logique `f` `F` `t` `T`.
+
+On se rapproche alors du comportement de [Vimium][]. Ces greffons peuvent
+faciliter grandement les déplacements dans Vim ou Neovim pour les débutant·e·s,
+et les utilisateurices avancé·e·s gagneront encore en efficacité.
 
 ### ~/.vimrc
 
@@ -239,8 +250,8 @@ vraiment magique. <3
 On peut profiter de l’ergonomie vimiste sur l’ensemble du bureau. Parmi les
 outils dont j’aurais du mal à me passer, il y a :
 
-- [Vimium][] pour naviguer au clavier dans Firefox ou Chrome ;
-- [i3][] ou [Sway][] comme gestionnaires de fenêtres sous Linux ;
+- [Vimium][] (ou [Tridactyl][]) pour naviguer au clavier dans Firefox ou Chrome ;
+- [i3][] ou [Sway][] comme gestionnaires de fenêtres sous Linux ⁽¹⁾ ;
 - [dmenu][] ou [Rofi][] pour lancer une app via fuzzy-matching ;
 - [Ranger][], [lf][], [Yazi][] comme explorateurs de fichiers dans le terminal —
   voire dans Vim, avec l’extension [TermOpen][].
@@ -249,21 +260,23 @@ Avec ces outils, je n’ai plus l’usage de la souris : je fais quasiment tou
 clavier, et l’émulation QMK de mon Ferris suffit pour les rares cas où je dois
 déplacer le pointeur.
 
+⁽¹⁾ Sous Windows, [Komorebi][] serait une alternative à tester.
+
 
 Conclusion
 --------------------------------------------------------------------------------
 
 Adepte du Qwerty (version Lafayette) depuis plus de 15 ans, je craignais de
 perdre en confort sous Vim avec Ergo‑L. À l’usage, le seul inconvénient que je
-vois, c’est de devoir maintenir <kbd>AltGr</kbd> pour les déplacements verticaux
-`j`/`k` — mais ça s’enchaine très bien avec `{`/`}` et `^`/`$` en main
-gauche, donc je n’ai pas l’impression de perdre en confort.
+vois c’est de devoir maintenir <kbd>AltGr</kbd> pour les déplacements verticaux
+`j`/`k` — mais ça s’enchaine très bien avec `{`/`}` et `^`/`$` en main gauche,
+donc le niveau de confort reste similaire.
 
 Adepte du déplacement mot à mot, je pensais ne pas utiliser `h`/`l` du tout mais
 le passage à Ergo‑L m’a prouvé le contraire : je les utilisais souvent pour un
-seul caractère. <kbd>F</kbd> et <kbd>T</kbd> étant bien placés en Ergo‑L,
-je les utilise désormais beaucoup plus et ça m’évite des successions d’appuis
-sur <kbd>W</kbd> et <kbd>B</kbd>.
+seul caractère. <kbd>F</kbd> et <kbd>T</kbd> étant bien placés en Ergo‑L, je les
+utilise désormais beaucoup plus et ça m’évite des successions d’appuis sur
+<kbd>W</kbd> et <kbd>B</kbd>.
 
 Pour le reste, je n’ai pas ressenti de frictions sous Vim en passant à Ergo‑L.
 Il y a même des gains inattendus, comme avoir <kbd>N</kbd> en position de repos
@@ -277,18 +290,21 @@ Ergo‑L a été conçu par des Vimistes, et ça se sent !
 
 [JdLL]:       https://jdll.org
 [vjousse]:    https://mastodon.social/@vjousse@mamot.fr/112886863404314065
-[kanata]:     https://github.com/jtroo/kanata
+[Kanata]:     https://github.com/jtroo/kanata
 [vimebook]:   https://vimebook.com/fr
 [tupperVim]:  https://tuppervim.org
 [EasyMotion]: https://github.com/easymotion/vim-easymotion
-[Flash]:      https://github.com/folke/flash.nvim
+[flash.nvim]: https://github.com/folke/flash.nvim
+[leap.nvim]:  https://github.com/ggandor/leap.nvim
 
 [Vimium]:     https://vimium.github.io/
+[Tridactyl]:  https://github.com/tridactyl/tridactyl
 [Telescope]:  https://github.com/nvim-telescope/telescope.nvim
 [fzf]:        https://github.com/junegunn/fzf.vim
 [LSP]:        https://microsoft.github.io/language-server-protocol/
 [i3]:         https://i3wm.org/
 [Sway]:       https://swaywm.org/
+[Komorebi]:   https://lgug2z.github.io/komorebi/
 [dmenu]:      https://tools.suckless.org/dmenu/
 [rofi]:       https://github.com/davatorium/rofi
 [ranger]:     https://github.com/ranger/ranger
