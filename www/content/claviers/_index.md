@@ -23,7 +23,6 @@ hideSummaryOfChildPages = true
 - [Arsenik][] : pour utiliser un clavier standard comme un 3×5
 :::
 
-
 <i lang="en">Disclaimer</i> : nous n’avons rien à vendre, pas même des <i
 lang="en">keycaps</i>. Nous n’avons pas de partenariat commercial non plus : les
 solutions que nous préconisons ici se basent essentiellement sur des [claviers
@@ -34,15 +33,46 @@ fabricant), voire [pas de clavier][Arsenik] du tout.
 Critères de choix
 -------------------------------------------------------------------------------
 
-### Impératifs
+### Impératif : géométrie en colonnes
 
-De notre point de vue, un clavier est ergonomique si :
+Les claviers standard (ANSI, ISO…) sont à rangées décalées (<i lang="en">row
+stagger</i>) pour des raisons historiques, liées à la conception des machines à
+écrire mécaniques (fin du XIX<sup>e</sup> siècle).
 
-- **ses touches sont en colonnes**, pour faciliter la dactylographie et limiter
-  les fautes de frappe ;
-- il est équipé de contacts mécaniques, que l’on peut remplacer selon ses goûts
-  et ses besoins ;
-- il est programmable.
+Les claviers ergonomiques utilisent une disposition en colonnes, ce qui facilite
+l’apprentissage de la dactylographie (chaque colonne de touches est associée à
+un doigt et un seul), limite les fautes de frappe et respecte le mouvement
+naturel des doigts.
+
+- Les claviers ortholinéaires comme le [Preonic][], le [Planck][] ou le
+  [TypeMatrix][TMx] font primer la facilité de prise en main sur le confort. Ils
+  restent bien plus efficaces et confortables qu’un clavier ISO ou ANSI.
+- Les claviers à <i lang="en">column stagger</i> comme le [Sofle][], le
+  [Corne][] ou l’[Atreus][] présentent des décalages verticaux entre les
+  colonnes pour respecter les différences de longueur des doigts.
+- Certains claviers comme le [Keyboardio Model100][Model100] ou le [Ferris][]
+  ont un <i lang="en">col stagger</i> très marqué, particulièrement visible sur
+  l’auriculaire (<i lang="en">pinky stagger</i>) où le décalage atteint presque
+  une hauteur de touche.
+
+Un stagger prononcé donnera beaucoup de confort, notamment quand on tape assez à
+plat ; mais il sera déroutant au début, et nécessitera un temps d’adaptation.
+
+### Split ou monobloc ?
+
+Pour certain·e·s, les claviers splittés sont indispensables. C’est notamment le
+cas si l’on souhaite taper avec les mains dans l’axe des épaules, ou si on a
+besoin de <i lang="en">tenting</i> (inclinaison latérale) pour réduire
+l’inconfort de pronation.
+
+Pour d’autres, c’est affaire de goûts : les versions splittées permettent une
+plus grande variété de positions, mais les versions monobloc sont plus simples
+et plus faciles à prendre en main. Elles peuvent aussi s’utiliser sur les genoux.
+
+Certains claviers monobloc comme l’[Atreus][] ont un angle de 10° à 20° entre
+les mains, ce qui permet de mieux garder les poignets dans l’axe des avant-bras.
+D’autres comme le [Planck][] restent droits, ce qui peut s’avérer inconfortable
+quand le clavier est positionné trorp haut (= trop loin des genoux).
 
 ### Nombre de touches
 
@@ -53,6 +83,11 @@ De notre point de vue, les claviers [compacts][] leur sont très supérieurs, à
 fois plus efficaces et plus proches des claviers ISO, ce qui minimise la gêne
 quand on passe du clavier ergonomique au clavier du laptop. Les touches
 manquantes sont gérées par des layers programmables.
+
+Les claviers compacts facilitent aussi l’apprentissage de dispositions [1DFH][]
+comme Ergo‑L : toutes les touches étant très proches de la position de repos des
+doigts, on ne fait jamais d’extension susceptible de faire perdre cette position
+de repos.
 
 Plus un clavier est compact, plus il est efficace et moins il est cher, au
 détriment du temps d’adaptation.
@@ -74,34 +109,60 @@ Noter que selon les utilisateurices, la position de repos des pouces peut être
 soit dans l’axe de la colonne de repos des index, soit décalée d’une colonne
 vers l’extérieur de la paume. À prendre en compte lors du choix.
 
-### <i lang="en">Col stagger</i>
-
-Les colonnes peuvent être alignées (géométrie ortholinéaire) ou décalées
-verticalement (<i lang="en">col stagger</i>) pour compenser les différences de
-longueur des doigts.
-
-Un stagger prononcé donnera du confort, notamment quand on tape assez à plat,
-mais nécessite un temps d’adaptation.
-
-### Split ou monobloc ?
-
-C’est affaire de goûts : les versions splittées permettent une plus grande
-variété de positions, les versions monobloc sont plus faciles à prendre en main.
-
-Les claviers splittés sont indispensables si l’on souhaite taper avec les mains
-dans l’axe des épaules, ou si on a besoin de <i lang="en">tenting</i>
-(inclinaison latérale) pour réduire l’inconfort de pronation.
-
 ### Géométrie plane ou 3D ?
 
-Là encore, c’est affaire de goûts : les géométries 3D (Kinesis, MoErgo, Dactyl,
-Skeletyl…) ont leurs adeptes. Elles réduisent très significativement l’inconfort
-lié aux « ciseaux » (= digrammes avec changement inconfortables de rangée) et
-permettent d’accéder à plus de touches qu’un clavier plat sans causer de
-déviations ulnaires.
+C’est affaire de goûts : les géométries 3D (Kinesis, MoErgo, Dactyl, Skeletyl…)
+ont leurs adeptes. Elles réduisent très significativement l’inconfort lié aux
+« ciseaux » (= digrammes avec changement inconfortables de rangée) et permettent
+d’accéder à plus de touches qu’un clavier plat sans causer de déviations
+ulnaires.
 
 De notre point de vue, le surcoût de ces claviers ne se justifie pas en Ergo‑L.
-Mais le gain de confort est réel une fois la position bien calée.
+Mais le gain de confort est indéniable une fois la position bien calée — surtout
+pour les modèles qui intègrent un dispositif de pointage (comme une trackball
+sous un pouce).
+
+### Contacts mécaniques
+
+Les claviers grand public sont tous à membrane, mais la plupart des
+utilisateurices de claviers ergonomiques ne jurent que par les contacts
+mécaniques. Et pour cause : on peut choisir exactement le toucher que l’on veut,
+le confort et de l’agrément d’utilisation sont incomparables. La quasi totalité
+des claviers ergonomiques utilisent ce type de contacts.
+
+On a deux principaux standards de contacts mécaniques :
+
+- les contacts MX sont les plus courants : course de 4 mm, empreinte standard de
+  19,05×19,05 mm, on trouve une très grande variété de modèles et de profils de
+  <i lang="en">keycaps</i> (cabochons) compatibles ;
+- les contacts Choc sont prisés par les amateurices de profils « <i
+  lang="en">low profile</i> : course de 2 mm, empreinte réduite de 18×17 mm,
+  moins de variété de modèles — et beaucoup moins de choix pour les keycaps.
+
+Le contact est généralement déclenché (actuation) à mi-course. La force
+d’actuation est souvent autour de 60 g, mais peut descendre à 35 g voire moins
+pour les personnes expérimentées qui souhaitent diminuer l’effort de saisie.
+
+On distingue trois types de contacts :
+
+- les linéaires, où le ressort est plus ferme à mesure que la touche est
+  enfoncée ;
+- les tactiles, où la touche marque un point dur au moment de l’actuation ;
+- les <i lang="en">clicky</i>, où la touche clique au moment de l’actuation.
+
+Là encore c’est essentiellement une histoire de goûts. Les tactiles sont très
+populaires en MX mais se justifient moins sur la course courte des Choc, pour
+lesquels les contacts linéaires sont courants.
+
+### Claviers programmables
+
+La quasi totalité des claviers ergonomiques sont programmables. Cela permet
+d’adapter le clavier à ses besoins, et pour beaucoup d’Ergonautes c’est
+indispensable : pas d’ergonomie sans possibilité de personnalisation !
+
+Certains claviers comme le [TypeMatrix][TMx] ne sont pas programmables. Si on
+dispose de droits d’administration, on peut contourner le problème avec un
+logiciel comme [Kanata][].
 
 
 Contraintes matérielles
@@ -308,4 +369,10 @@ quasi inutilisable en AZERTY.
 
 [Sofle]:     https://github.com/josefadamcik/SofleKeyboard
 [Corne]:     https://github.com/foostan/crkbd
+[Preonic]:   https://olkb.com/collections/preonic
+[Planck]:    https://olkb.com/collections/planck
+[Model100]:  https://shop.keyboard.io/products/model-100
+[Atreus]:    https://atreus.technomancy.us/
+[Ferris]:    https://github.com/pierrechevalier83/ferris
+[TMx]:       https://www.typematrix.com/
 [kanata]:    https://github.com/jtroo/kanata
