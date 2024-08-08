@@ -52,8 +52,8 @@ naturel des doigts.
   colonnes pour respecter les différences de longueur des doigts.
 - Certains claviers comme le [Keyboardio Model100][Model100] ou le [Ferris][]
   ont un <i lang="en">col stagger</i> très marqué, particulièrement visible sur
-  l’auriculaire (<i lang="en">pinky stagger</i>) où le décalage atteint presque
-  une hauteur de touche.
+  la colonne de l’auriculaire (<i lang="en">pinky stagger</i>) dont le décalage
+  atteint presque une hauteur de touche.
 
 Un stagger prononcé donnera beaucoup de confort, notamment quand on tape assez à
 plat ; mais il sera déroutant au début, et nécessitera un temps d’adaptation.
@@ -72,7 +72,7 @@ et plus faciles à prendre en main. Elles peuvent aussi s’utiliser sur les gen
 Certains claviers monobloc comme l’[Atreus][] ont un angle de 10° à 20° entre
 les mains, ce qui permet de mieux garder les poignets dans l’axe des avant-bras.
 D’autres comme le [Planck][] restent droits, ce qui peut s’avérer inconfortable
-quand le clavier est positionné trorp haut (= trop loin des genoux).
+quand le clavier est positionné trop haut (= trop loin des genoux).
 
 ### Nombre de touches
 
