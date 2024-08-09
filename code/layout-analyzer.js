@@ -213,21 +213,21 @@ window.addEventListener('DOMContentLoaded', () => {
   const computeNGrams = () => {
     const ngrams = Object.fromEntries([
         // Digrams
-        'sfb',  // Same Finger Bigram
-        'skb',  // Same Key Bigram
-        'lsb',  // Lateral Strech Bigram
-        'handChange',  // Two keys typed by different hands
-        'scisor',  // Roll with uncomfortable height difference between the keys
+        'sfb',             // Same Finger Bigram
+        'skb',             // Same Key Bigram
+        'lsb',             // Lateral Strech Bigram
+        'handChange',      // Two keys typed by different hands
+        'scisor',          // Roll with uncomfortable height difference between the keys
         'extendedScisor',  // scisor + lsb
-        'inwardRoll',   // Roll in the pinky -> index direction
-        'outwardRoll',  // Roll in the index -> pinky direction
+        'inwardRoll',      // Roll in the pinky -> index direction
+        'outwardRoll',     // Roll in the index -> pinky direction
 
         // Trigrams
-        'redirect',  // Two rolls going in different directions
-        'badRedirect', // Redirect that doesn’t use the index
-        'sfs',  // Same Finger Skipgram (sfb with other key in the middle)
-        'sks',  // Same Key Skipgram (skb with other key in the middle)
-        'other',  // unused, is just two simplo digrams, nothing to note.
+        'redirect',        // Two rolls going in different directions
+        'badRedirect',     // Redirect that doesn’t use the index
+        'sfs',             // Same Finger Skipgram (sfb with other key in the middle)
+        'sks',             // Same Key Skipgram (skb with other key in the middle)
+        'other',           // unused, is just two simple digrams, nothing to note.
       ].map(digramType => [digramType, {}])
     );
 
@@ -267,6 +267,7 @@ window.addEventListener('DOMContentLoaded', () => {
             const { keyCode, level } = keySequence[0];
             const firstCharInSequence = keyboard.layout.keyMap[keyCode][level]
             if (firstCharInSequence.length === 1) return undefined;
+            console.log((pendingDeadKey !== undefined) == (pendingDeadKey != undefined));
             return pendingDeadKey !== undefined
                 ? keyboard.layout.deadKeys[pendingDeadKey][firstCharInSequence]
                 : firstCharInSequence;
@@ -373,8 +374,9 @@ window.addEventListener('DOMContentLoaded', () => {
       const fingers = prevFinger[1] + currFinger[1] + nextFinger[1];
       if (fingers[0] === fingers[1] || fingers[1] == fingers[2]) return 'other';
 
-      // I don’t know if this is briliant or if I deserve a VIP ticket to Hell.
-      if ((fingers[0] > fingers[1]) !== (fingers[1] > fingers[2]))
+      const firstRollIsInward = fingers[0] > fingers[1];
+      const secondRollIsInward = fingers[1] > fingers[2];
+      if (firstRollIsInward !== secondRollIsInward)
         return [prevFinger, currFinger, nextFinger].some(finger => finger[1] === '2')
           ? 'redirect'
           : 'badRedirect';
