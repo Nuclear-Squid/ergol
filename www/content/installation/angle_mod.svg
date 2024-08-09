@@ -10,7 +10,7 @@
       stroke-width: .5px;
     }
     text {
-      fill: #888;
+      fill: #666;
       font: normal 20px sans-serif;
       text-align: center;
       text-anchor: middle;

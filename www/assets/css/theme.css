@@ -119,10 +119,6 @@ article time {
   margin-top: -1.5em;
 }
 
-article .more {
-  /* font-size: smaller; */
-}
-
 dialog::backdrop {
   backdrop-filter: blur(5px);
 }
@@ -174,6 +170,19 @@ table caption {
 figure {
   margin: 2em 0;
   text-align: center;
+}
+
+pre {
+  overflow: scroll;
+  background-color: var(--bg-banner);
+  padding: 0.5em 1em;
+}
+
+pre code {
+  background-color: transparent;
+  font-family: monospace;
+  font-weight: normal;
+  padding: 0;
 }
 
 figure figcaption,
