@@ -22,10 +22,10 @@
   ;; Home-row mods
   ;; Must be hold long enough (300ms) to become a modifier.
   ss (tap-hold $tto $hto s lmet)
-  dd (tap-hold $tto $hto d lalt)
-  ff (tap-hold $tto $hto f lctl)
-  jj (tap-hold $tto $hto j rctl)
-  kk (tap-hold $tto $hto k lalt)
+  dd (tap-hold $tto $hto d lctl)
+  ff (tap-hold $tto $hto f lalt)
+  jj (tap-hold $tto $hto j lalt)
+  kk (tap-hold $tto $hto k rctl)
   ll (tap-hold $tto $hto l rmet)
 )
 

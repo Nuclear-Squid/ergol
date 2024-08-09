@@ -53,11 +53,17 @@ la réduire doucement au fil de la progression.
 ### Homerow-mods
 
 De même que la couche NavNum est associée à [Espace]{.kbd}, les modifieurs
-[Ctrl]{.kbd}, [Alt]{.kbd}, [Cmd]{.kbd} sont associés aux touches de repos des
+[Alt]{.kbd} [Ctrl]{.kbd} [Cmd]{.kbd} sont associés aux touches de repos des
 deux mains : [N]{.kbd} [E]{.kbd} [S]{.kbd} pour la main gauche, [R]{.kbd}
 [T]{.kbd} [I]{.kbd} pour la main droite.
 
-![](hrm.svg)
+![](hrm_pc.svg)
+
+Sur macOS on effectue une permutation circulaire, pour garder les raccourcis
+usuels [⌘Command]{.kbd}-[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd} faisables à une
+main comme sur PC :
+
+![](hrm_mac.svg)
 
 Là encore, la touche se comporte comme un *tap* tant qu’elle n’est pas maintenue
 au moins 300 ms ; on accepte donc un délai avant d’activer un modifieur.
@@ -133,9 +139,10 @@ des mains sont ainsi fortement réduits.
 ### 3. <i lang="en">Homerow-mods</i>
 
 Quand les layer-taps sont maitrisés, on peut activer les homerow-mods en
-associant les modifieurs [Ctrl]{.kbd}, [Alt]{.kbd}, [Cmd]{.kbd} aux touches de
-repos des deux mains : [N]{.kbd} [E]{.kbd} [S]{.kbd} pour la main gauche,
-[R]{.kbd} [T]{.kbd} [I]{.kbd} pour la main droite.
+associant les modifieurs [Alt]{.kbd} [Ctrl]{.kbd} [Cmd]{.kbd} (ou [⌥]{.kbd}
+[⌘]{.kbd} [\^]{.kbd} sous macOS) aux touches de repos des deux mains : [N]{.kbd}
+[E]{.kbd} [S]{.kbd} pour la main gauche, [R]{.kbd} [T]{.kbd} [I]{.kbd} pour la
+main droite.
 
 ![Arsenik sur un clavier ISO](./arsenik_iso.svg)
 
@@ -151,7 +158,7 @@ Claviers compacts
 Arsenik est très naturel sur des claviers comme le [Planck][], le [Preonic][],
 le [Reviung][]…
 
-![Arsenik sur un [Planck][]](arsenik_planck.svg)
+![Arsenik sur un Planck](arsenik_planck.svg)
 
 ### Claviers splittés
 
@@ -229,7 +236,7 @@ Arsenik n’est pas réservé aux Ergonautes : il complète très bien Ergo‑
 autres dispositions de la famille Lafayette, mais il peut s’appliquer à d’autres
 dispositions comme Azerty, Qwerty et tous les arrangements du Qwerty ANSI
 (Dvorak, Colemak, Workman, MTGAP, ISRT, Sturdy…), en associant la touche
-[Sym]{.kbd} à une couche de symboles dédiée.
+[AltGr]{.kbd} à une couche de symboles dédiée.
 
 
 [NavNum]:        ../compacts/#layer-navnum
