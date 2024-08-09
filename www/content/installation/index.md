@@ -9,15 +9,6 @@ jsScripts = ["/js/keebs.js"]
 footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
-
-<style>
-  dt { font-weight: bold; }
-  dd p { margin: 0.2em 0; }
-  code { font-family: monospace; }
-  pre { background-color: #6684; padding: 0.5em 1em; }
-  pre code { background-color: transparent; font-weight: normal; }
-</style>
-
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk">}}
 
 

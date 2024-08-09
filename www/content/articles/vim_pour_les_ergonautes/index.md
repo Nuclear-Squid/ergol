@@ -6,9 +6,6 @@ tags = ["communauté", "vim"]
 +++
 
 <style>
-  code { font-family: monospace; }
-  pre { background-color: var(--bg-accent); padding: 0.5em 2em; }
-  pre > code { background-color: transparent; padding: 0; }
   /* blockquote { border-left: 2px solid var(--fg-accent); padding-left: 1em; } */
   blockquote { background-color: var(--bg-accent); margin: 0; padding: .5em 2em .5em 3em; position: relative; }
   blockquote::before { content: "»"; font-size: 2em; position: absolute; top: 0.7em; left: 0.5em; }

@@ -5,12 +5,6 @@ author = "steeve"
 tags = ["communauté"]
 +++
 
-<style>
-  code { font-family: monospace; }
-  pre { background-color: #6684; padding: 0.5em 2em; }
-  pre > code { background-color: transparent; padding: 0; }
-</style>
-
 Vous utilisez SwayWM et vous voulez passer à Ergo-L ? C’est par ici !\
 
 Cet article vous guide étape par étape pour configurer Ergo-L sur votre système, que ce soit pour tous vos claviers ou pour un clavier spécifique. Avec quelques lignes de configuration, vous pourrez profiter pleinement de cette disposition optimisée.
