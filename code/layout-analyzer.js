@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // which sequence is easier to type (examples are in Ergo‑L)
     const requiresLessEffort = (originalKeySequence, newKeySequence) => {
       const uses1DK = '**' in keyboard.layout.deadKeys
-          ? keySequence => keySequence.some(key => key == charTable['**'][0])
+          ? keySequence => keySequence.some(key => key === charTable['**'][0])
           : (_) => false;
 
       const arrayCount = (array, predicate) => {
@@ -64,8 +64,8 @@ window.addEventListener('DOMContentLoaded', () => {
           uses1DK(originalKeySequence),
           uses1DK(newKeySequence)
         );
-        if (cmp1DK == 'more') return false;
-        if (cmp1DK == 'less') return true;
+        if (cmp1DK === 'less') return true;
+        if (cmp1DK === 'more') return false;
       }
 
       const cmpNot1DFH = cmp(
@@ -75,8 +75,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       // Checks if new sequence has less keys that aren’t 1DFH.
       // => will prefer altgr[B] over shift[9] for `#`.
-      if (cmpNot1DFH == "less") return true;
-      if (cmpNot1DFH == "more") return false;
+      if (cmpNot1DFH === "less") return true;
+      if (cmpNot1DFH === "more") return false;
       // If it’s the same, we check the rest.
 
       const cmpHighestLevel = cmp(
@@ -86,8 +86,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       // Checks if the highest layer is lower in the new squence.
       // => will prefer 1dk -> `r` over altgr[D] for `)`.
-      if (cmpHighestLevel == "less") return true;
-      if (cmpHighestLevel == "more") return false;
+      if (cmpHighestLevel === "less") return true;
+      if (cmpHighestLevel === "more") return false;
 
       // Checks if the new sequence has fewer keystrokes than the original one.
       // => will prefer 1dk -> `i` over 1dk -> 1dk -> `i` for `ï`
@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (!(baseChar in charTable)) continue;
         const newSequence = currentDeadKey.sequence.concat(charTable[baseChar]);
 
-        if (outputChar.length == 1)
+        if (outputChar.length === 1)
           insertInTable(charTable, outputChar, newSequence);
         else
           insertDeadKeySequences(charTable, deadKeys, {
@@ -119,7 +119,7 @@ window.addEventListener('DOMContentLoaded', () => {
       for (const [level, char] of charsPerLevel.entries()) {
         const sequence = [{ keyCode, level }];
         insertInTable(charTable, char, sequence);
-        if (char.length != 1) insertInTable(deadTable, char, sequence);
+        if (char.length !== 1) insertInTable(deadTable, char, sequence);
       }
     }
 
@@ -241,14 +241,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
         for (const keySequence of arrayWindows(totalKeySequence, ngramLength)) {
           total += frequency;
-          if (totalKeySequence.some(key => key == undefined)) continue;
+          if (totalKeySequence.some(key => key === undefined)) continue;
 
           let [pendingDeadKey, name] = keySequence.reduce(([pendingDeadKey, acc], { keyCode, level }) => {
             let char = keyboard.layout.keyMap[keyCode][level];
             if (pendingDeadKey)
               char = keyboard.layout.deadKeys[pendingDeadKey][char];
 
-            return char.length == 1
+            return char.length === 1
                 ? [undefined, acc + char]
                 : [char, acc];
           }, [nextPendingDeadKey, '']);
@@ -266,8 +266,8 @@ window.addEventListener('DOMContentLoaded', () => {
           nextPendingDeadKey = (() => {
             const { keyCode, level } = keySequence[0];
             const firstCharInSequence = keyboard.layout.keyMap[keyCode][level]
-            if (firstCharInSequence.length == 1) return undefined;
-            return pendingDeadKey != undefined
+            if (firstCharInSequence.length === 1) return undefined;
+            return pendingDeadKey !== undefined
                 ? keyboard.layout.deadKeys[pendingDeadKey][firstCharInSequence]
                 : firstCharInSequence;
           })();
@@ -300,7 +300,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Index Inner or outside of 3×10 matrix.
     const requiresExtension = keyCode =>
-      Array.from('TGBNHY').some(l => l == keyCode.at(3)) || !is1DFH(keyCode);
+      Array.from('TGBNHY').some(l => l === keyCode.at(3)) || !is1DFH(keyCode);
 
     const getKeyRow = keyCode => {
       if (keyCode === 'Space') return 0;
@@ -313,10 +313,10 @@ window.addEventListener('DOMContentLoaded', () => {
         if (Array.from('ZXCVBNM').indexOf(letter) >= 0) return 1;
       }
 
-      if (['Backquote', 'Minus'].some(kc => kc == keyCode)) return 4;
-      if (['BracketLeft', 'BracketRight'].some(kc => kc == keyCode)) return 3;
-      if (['Semicolon', 'Quote', 'Backslash'].some(kc => kc == keyCode)) return 2;
-      if (['Comma', 'Period', 'Slash', 'IntlBackslash'].some(kc => kc == keyCode)) return 1;
+      if (['Backquote', 'Minus'].some(kc => kc === keyCode)) return 4;
+      if (['BracketLeft', 'BracketRight'].some(kc => kc === keyCode)) return 3;
+      if (['Semicolon', 'Quote', 'Backslash'].some(kc => kc === keyCode)) return 2;
+      if (['Comma', 'Period', 'Slash', 'IntlBackslash'].some(kc => kc === keyCode)) return 1;
 
       console.error(`Unknown Key Row: ${keyCode}`);
       return 0;
@@ -334,7 +334,7 @@ window.addEventListener('DOMContentLoaded', () => {
           // Stricter tolerance if it’s pinky and ring, but AW (qwerty) is fine
           return (
             Math.abs(getKeyRow(kc1) - getKeyRow(kc2)) >= 1 &&
-            !(finger1Height == 2 && finger2Height == 3)
+            !(finger1Height === 2 && finger2Height == 3)
           );
         default:
           return Math.abs(getKeyRow(kc1) - getKeyRow(kc2)) >= 2;
@@ -364,18 +364,18 @@ window.addEventListener('DOMContentLoaded', () => {
       const currFinger = keyFinger[currKeyCode];
       const nextFinger = keyFinger[nextKeyCode];
 
-      if (prevFinger == nextFinger) return prevKeyCode == nextKeyCode ? 'sks' : 'sfs';
+      if (prevFinger === nextFinger) return prevKeyCode == nextKeyCode ? 'sks' : 'sfs';
 
       const hands = prevFinger[0] + currFinger[0] + nextFinger[0];
 
       if (!['lll', 'rrr'].includes(hands)) return 'other';
 
       const fingers = prevFinger[1] + currFinger[1] + nextFinger[1];
-      if (fingers[0] == fingers[1] || fingers[1] == fingers[2]) return 'other';
+      if (fingers[0] === fingers[1] || fingers[1] == fingers[2]) return 'other';
 
       // I don’t know if this is briliant or if I deserve a VIP ticket to Hell.
-      if ((fingers[0] > fingers[1]) != (fingers[1] > fingers[2]))
-        return [prevFinger, currFinger, nextFinger].some(finger => finger[1] == '2')
+      if ((fingers[0] > fingers[1]) !== (fingers[1] > fingers[2]))
+        return [prevFinger, currFinger, nextFinger].some(finger => finger[1] === '2')
           ? 'redirect'
           : 'badRedirect';
 
@@ -383,7 +383,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     const getFingerPosition = ([hand, finger]) =>
-      hand == 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
+      hand === 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
 
     // JS, I know you suck at FP, but what the fuck is that, man??
     const totalSfuSkuPerFinger = Array(2).fill(0).map(_ =>
@@ -395,12 +395,12 @@ window.addEventListener('DOMContentLoaded', () => {
       const ngramType = getDigramType(...keyCodes);
       ngrams[ngramType][ngram] = frequency;
 
-      if (ngramType == 'sfb') {
+      if (ngramType === 'sfb') {
         const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyCodes[0]]);
         totalSfuSkuPerFinger[groupIndex][itemIndex].bad += frequency;
       }
 
-      if (ngramType == 'skb') {
+      if (ngramType === 'skb') {
         const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyCodes[0]]);
         totalSfuSkuPerFinger[groupIndex][itemIndex].meh += frequency;
       }
