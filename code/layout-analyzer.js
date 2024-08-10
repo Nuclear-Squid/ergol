@@ -249,7 +249,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (pendingDeadKey)
               char = keyboard.layout.deadKeys[pendingDeadKey][char];
 
-            return char.length === 1
+            return char?.length === 1
                 ? [undefined, acc + char]
                 : [char, acc];
           }, [nextPendingDeadKey, '']);
