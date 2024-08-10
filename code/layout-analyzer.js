@@ -268,7 +268,6 @@ window.addEventListener('DOMContentLoaded', () => {
             const { keyCode, level } = keySequence[0];
             const firstCharInSequence = keyboard.layout.keyMap[keyCode][level]
             if (firstCharInSequence.length === 1) return undefined;
-            console.log((pendingDeadKey !== undefined) == (pendingDeadKey != undefined));
             return pendingDeadKey !== undefined
                 ? keyboard.layout.deadKeys[pendingDeadKey][firstCharInSequence]
                 : firstCharInSequence;
