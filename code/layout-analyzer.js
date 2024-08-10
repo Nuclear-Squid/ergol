@@ -29,6 +29,25 @@ window.addEventListener('DOMContentLoaded', () => {
     '\u2026': '...', // (…) ellipsis
   };
 
+  const NGRAM_CATEGORIES = [
+    // Digrams
+    'sfb',             // Same Finger Bigram
+    'skb',             // Same Key Bigram
+    'lsb',             // Lateral Strech Bigram
+    'handChange',      // Two keys typed by different hands
+    'scisor',          // Roll with uncomfortable height difference between the keys
+    'extendedScisor',  // scisor + lsb
+    'inwardRoll',      // Roll in the pinky -> index direction
+    'outwardRoll',     // Roll in the index -> pinky direction
+
+    // Trigrams
+    'redirect',        // Two rolls going in different directions
+    'badRedirect',     // Redirect that doesn’t use the index
+    'sfs',             // Same Finger Skipgram (sfb with other key in the middle)
+    'sks',             // Same Key Skipgram (skb with other key in the middle)
+    'other',           // unused, is just two simple digrams, nothing to note.
+  ];
+
   const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
 
   const is1DFH = keyCode =>
@@ -211,25 +230,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   const computeNGrams = () => {
-    const ngrams = Object.fromEntries([
-        // Digrams
-        'sfb',             // Same Finger Bigram
-        'skb',             // Same Key Bigram
-        'lsb',             // Lateral Strech Bigram
-        'handChange',      // Two keys typed by different hands
-        'scisor',          // Roll with uncomfortable height difference between the keys
-        'extendedScisor',  // scisor + lsb
-        'inwardRoll',      // Roll in the pinky -> index direction
-        'outwardRoll',     // Roll in the index -> pinky direction
-
-        // Trigrams
-        'redirect',        // Two rolls going in different directions
-        'badRedirect',     // Redirect that doesn’t use the index
-        'sfs',             // Same Finger Skipgram (sfb with other key in the middle)
-        'sks',             // Same Key Skipgram (skb with other key in the middle)
-        'other',           // unused, is just two simple digrams, nothing to note.
-      ].map(digramType => [digramType, {}])
-    );
+    const ngrams = Object.fromEntries(NGRAM_CATEGORIES.map(digramType => [digramType, {}]));
 
     const buildNgramDict = (dict, ngramLength) => {
       let total = 0;
