@@ -29,34 +29,122 @@ window.addEventListener('DOMContentLoaded', () => {
     '\u2026': '...', // (…) ellipsis
   };
 
+  const NGRAM_CATEGORIES = [
+    // Digrams
+    'sfb',             // Same Finger Bigram
+    'skb',             // Same Key Bigram
+    'lsb',             // Lateral Strech Bigram
+    'handChange',      // Two keys typed by different hands
+    'scisor',          // Roll with uncomfortable height difference between the keys
+    'extendedScisor',  // scisor + lsb
+    'inwardRoll',      // Roll in the pinky -> index direction
+    'outwardRoll',     // Roll in the index -> pinky direction
+
+    // Trigrams
+    'redirect',        // Two rolls going in different directions
+    'badRedirect',     // Redirect that doesn’t use the index
+    'sfs',             // Same Finger Skipgram (sfb with other key in the middle)
+    'sks',             // Same Key Skipgram (skb with other key in the middle)
+    'other',           // unused, is just two simple digrams, nothing to note.
+  ];
+
   const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
+
+  const is1DFH = keyCode =>
+    keyCode.startsWith('Key') ||
+      ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode);
 
   // create an efficient hash table to parse a text
   const supportedChars = (keymap, deadkeys) => {
     const charTable = {};
     const deadTable = {};
 
-    // main chars, directly accessible (or with Shift / AltGr)
-    Object.entries(keymap).forEach(([key, values]) => {
-      values.forEach(char => {
-        if (!(char in charTable)) {
-          if (char.length === 1) {
-            charTable[char] = [key];
-          } else if (!(char in deadTable)) {
-            deadTable[char] = key;
-          }
-        }
-      });
-    });
+    // In case there are multiple ways of typing a singel char, this checks
+    // which sequence is easier to type (examples are in Ergo‑L)
+    const requiresLessEffort = (originalKeySequence, newKeySequence) => {
+      const uses1DK = '**' in keyboard.layout.deadKeys
+          ? keySequence => keySequence.some(key => key === charTable['**'][0])
+          : (_) => false;
 
-    // additional chars, requiring dead keys
-    Object.entries(deadkeys).forEach(([key, dict]) => {
-      Object.entries(dict).forEach(([orig, char]) => {
-        if (!(char in charTable) && charTable[orig]) {
-          charTable[char] = [deadTable[key]].concat(charTable[orig]);
-        }
-      });
-    });
+      const arrayCount = (array, predicate) => {
+        let rv = 0;
+        array.forEach(elem => { if (predicate(elem)) rv++ });
+        return rv;
+      };
+
+      const cmp = (val1, val2) => {
+        if (val1 > val2) return "more";
+        if (val1 < val2) return "less";
+        return "same";
+      };
+
+      if (originalKeySequence.length > 1 && newKeySequence.length > 1) {
+        const cmp1DK = cmp(
+          uses1DK(originalKeySequence),
+          uses1DK(newKeySequence)
+        );
+        if (cmp1DK === 'less') return true;
+        if (cmp1DK === 'more') return false;
+      }
+
+      const cmpNot1DFH = cmp(
+        arrayCount(newKeySequence, key => !is1DFH(key.keyCode)),
+        arrayCount(originalKeySequence, key => !is1DFH(key.keyCode))
+      );
+
+      // Checks if new sequence has less keys that aren’t 1DFH.
+      // => will prefer altgr[B] over shift[9] for `#`.
+      if (cmpNot1DFH === "less") return true;
+      if (cmpNot1DFH === "more") return false;
+      // If it’s the same, we check the rest.
+
+      const cmpHighestLevel = cmp(
+        newKeySequence.reduce((max, elem) => Math.max(max, elem.level), 0),
+        originalKeySequence.reduce((max, elem) => Math.max(max, elem.level), 0)
+      );
+
+      // Checks if the highest layer is lower in the new squence.
+      // => will prefer 1dk -> `r` over altgr[D] for `)`.
+      if (cmpHighestLevel === "less") return true;
+      if (cmpHighestLevel === "more") return false;
+
+      // Checks if the new sequence has fewer keystrokes than the original one.
+      // => will prefer 1dk -> `i` over 1dk -> 1dk -> `i` for `ï`
+      return newKeySequence.length < originalKeySequence.length;
+    };
+
+    const insertInTable = (table, char, keySequence) => {
+      if (!(char in table) || requiresLessEffort(table[char], keySequence)) {
+        table[char] = keySequence;
+      }
+    };
+
+    function insertDeadKeySequences(charTable, deadKeys, currentDeadKey) {
+      for (const [baseChar, outputChar] of Object.entries(deadKeys[currentDeadKey.name])) {
+        if (!(baseChar in charTable)) continue;
+        const newSequence = currentDeadKey.sequence.concat(charTable[baseChar]);
+
+        if (outputChar.length === 1)
+          insertInTable(charTable, outputChar, newSequence);
+        else
+          insertDeadKeySequences(charTable, deadKeys, {
+            "name": outputChar,
+            "sequence": newSequence,
+          });
+      }
+    }
+
+    for (const [keyCode, charsPerLevel] of Object.entries(keymap)) {
+      for (const [level, char] of charsPerLevel.entries()) {
+        const sequence = [{ keyCode, level }];
+        insertInTable(charTable, char, sequence);
+        if (char.length !== 1) insertInTable(deadTable, char, sequence);
+      }
+    }
+
+    for (const [deadKey, sequence] of Object.entries(deadTable)) {
+      insertDeadKeySequences(charTable, deadkeys, { "name": deadKey, "sequence": sequence });
+    }
 
     return charTable;
   };
@@ -88,7 +176,7 @@ window.addEventListener('DOMContentLoaded', () => {
                             'KeyV',    'KeyM',
   ]);
 
-  const mehKeysSet = new Set([ 'KeyC', 'KeyR', 'KeyG', 'KeyH', 'KeyU', 'KeyComma' ]);
+  const mehKeysSet = new Set([ 'KeyC', 'KeyR', 'KeyG', 'KeyH', 'KeyU', 'Comma' ]);
 
   const getKeyPositionQuality = keyCode => {
     if (goodKeysSet.has(keyCode)) return "good";
@@ -130,22 +218,79 @@ window.addEventListener('DOMContentLoaded', () => {
     table.innerHTML = `<tr><td></td>${cols}<td></td></tr>`;
   };
 
-  // compute the same-finger usages and rolls
-  const computeDigrams = () => {
-    const skuCount = {}; // same-key usage
-    const sfuCount = {}; // same-finger usage
-    const skuDigrams = {};
-    const sfuDigrams = {};
-    const inwardDigrams = {};
-    const outwardDigrams = {};
-    const extendedRolls = {};
-    const scisors = {};
+  // Returns a custom iterator, similar to Rust’s std::slice::Windows.
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators
+  // https://doc.rust-lang.org/std/primitive.slice.html#method.windows
+  const arrayWindows = (arr, len) => ({
+    *[Symbol.iterator]() {
+      for (let i = 0; i <= arr.length - len; i++) {
+        yield arr.slice(i, i + len);
+      }
+    }
+  });
 
-    const fingers = ['l5', 'l4', 'l3', 'l2', 'r2', 'r3', 'r4', 'r5'];
-    fingers.forEach(finger => {
-      sfuCount[finger] = 0;
-      skuCount[finger] = 0;
-    });
+  const computeNGrams = () => {
+    const ngrams = Object.fromEntries(NGRAM_CATEGORIES.map(digramType => [digramType, {}]));
+
+    const buildNgramDict = (dict, ngramLength) => {
+      let total = 0;
+      const rv = {};
+
+      for (const [ngram, frequency] of Object.entries(dict)) {
+        let nextPendingDeadKey = undefined;
+        const totalKeySequence = Array.from(ngram).flatMap(charToKeys);
+
+        for (const keySequence of arrayWindows(totalKeySequence, ngramLength)) {
+          total += frequency;
+          if (totalKeySequence.some(key => key === undefined)) continue;
+
+          let [pendingDeadKey, name] = keySequence.reduce(([pendingDeadKey, acc], { keyCode, level }) => {
+            let char = keyboard.layout.keyMap[keyCode][level];
+            if (pendingDeadKey)
+              char = keyboard.layout.deadKeys[pendingDeadKey][char];
+
+            return char.length === 1
+                ? [undefined, acc + char]
+                : [char, acc];
+          }, [nextPendingDeadKey, '']);
+
+          if (pendingDeadKey) {
+            name += pendingDeadKey;
+            pendingDeadKey = undefined;
+          }
+
+          // PrettyPrint the ODK
+          // TODO: add a system for generic deadKeys ?
+          name = name.replaceAll('**', '★');
+
+          // I wanted a "Zig-style block expression", syntax might be stupid
+          nextPendingDeadKey = (() => {
+            const { keyCode, level } = keySequence[0];
+            const firstCharInSequence = keyboard.layout.keyMap[keyCode][level]
+            if (firstCharInSequence.length === 1) return undefined;
+            return pendingDeadKey !== undefined
+                ? keyboard.layout.deadKeys[pendingDeadKey][firstCharInSequence]
+                : firstCharInSequence;
+          })();
+
+          // keylevels are needed when building the ngramDicts, but aren’t
+          // used when computing the ngrams, so we simplify the data structure.
+          const keyCodes = keySequence.map(({ keyCode }) => keyCode);
+          if (!(name in rv)) rv[name] = { keyCodes, frequency };
+          else rv[name].frequency += frequency;
+        }
+      }
+
+      // normalize values
+      for (const [name, { frequency }] of Object.entries(rv)) {
+        rv[name].frequency = frequency * 100 / total;
+      }
+
+      return rv;
+    };
+
+    const realDigrams  = buildNgramDict(digrams, 2);
+    const realTrigrams = buildNgramDict(trigrams, 3);
 
     const keyFinger = {};
     Object.entries(keyboard.fingerAssignments).forEach(([f, keys]) => {
@@ -156,12 +301,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Index Inner or outside of 3×10 matrix.
     const requiresExtension = keyCode =>
-      Array.from('TGBNHY').some(l => l == keyCode.at(3)) ||
-      !(
-        keyCode.startsWith('Key') ||
-        ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode)
-      )
-      ;
+      Array.from('TGBNHY').some(l => l === keyCode.at(3)) || !is1DFH(keyCode);
 
     const getKeyRow = keyCode => {
       if (keyCode === 'Space') return 0;
@@ -174,10 +314,10 @@ window.addEventListener('DOMContentLoaded', () => {
         if (Array.from('ZXCVBNM').indexOf(letter) >= 0) return 1;
       }
 
-      if (['Backquote', 'Minus'].some(kc => kc == keyCode)) return 4;
-      if (['BracketLeft', 'BracketRight'].some(kc => kc == keyCode)) return 3;
-      if (['Semicolon', 'Quote', 'Backslash'].some(kc => kc == keyCode)) return 2;
-      if (['Comma', 'Period', 'Slash', 'IntlBackslash'].some(kc => kc == keyCode)) return 1;
+      if (['Backquote', 'Minus'].some(kc => kc === keyCode)) return 4;
+      if (['BracketLeft', 'BracketRight'].some(kc => kc === keyCode)) return 3;
+      if (['Semicolon', 'Quote', 'Backslash'].some(kc => kc === keyCode)) return 2;
+      if (['Comma', 'Period', 'Slash', 'IntlBackslash'].some(kc => kc === keyCode)) return 1;
 
       console.error(`Unknown Key Row: ${keyCode}`);
       return 0;
@@ -195,217 +335,131 @@ window.addEventListener('DOMContentLoaded', () => {
           // Stricter tolerance if it’s pinky and ring, but AW (qwerty) is fine
           return (
             Math.abs(getKeyRow(kc1) - getKeyRow(kc2)) >= 1 &&
-            !(finger1Height == 2 && finger2Height == 3)
+            !(finger1Height === 2 && finger2Height == 3)
           );
         default:
           return Math.abs(getKeyRow(kc1) - getKeyRow(kc2)) >= 2;
       }
     };
 
-    // note: in Ergol, ï and · are same-finger digrams even though they are
-    // single characters => count symbols, too?
-    const sum = (acc, freq) => acc + freq;
-    const total = Object.values(digrams).reduce(sum, 0);
-    Object.entries(digrams)
-      .map(([digram, frequency]) => [digram, (100 * frequency) / total])
-      .forEach(([digram, frequency]) => {
-        keyboard.layout.getKeySequence(digram).reduce((acc, key) => {
-          const curr_finger = keyFinger[key.id];
-          const last_finger = keyFinger[acc];
-          // Safeguard, skip iteration if check fails
-          if (!curr_finger || !last_finger) return key.id;
+    const getDigramType = (prevKeyCode, currKeyCode) => {
+      if (prevKeyCode === currKeyCode) return 'skb';
 
-          if (acc === key.id) {
-            // same key
-            skuDigrams[digram] = frequency;
-            skuCount[curr_finger] += frequency;
-          } else if (curr_finger === last_finger) {
-            // same finger
-            sfuDigrams[digram] = frequency;
-            sfuCount[curr_finger] += frequency;
-          } else if (curr_finger[0] === last_finger[0]) {
-            // same hand
-            // if (Math.abs(getKeyRow(key.id) - getKeyRow(acc)) >= 2) {
-            if (isScisor(key.id, acc, curr_finger, last_finger)) {
-              scisors[digram] = frequency;
+      const prevFinger = keyFinger[prevKeyCode];
+      const currFinger = keyFinger[currKeyCode];
 
-              if (requiresExtension(key.id) || requiresExtension(acc)) {
-                extendedRolls[digram] = frequency;
-              }
-            } else {
-              if (requiresExtension(key.id) || requiresExtension(acc)) {
-                extendedRolls[digram] = frequency;
-              } else if (curr_finger[1] < last_finger[1]) {
-                inwardDigrams[digram] = frequency;
-              } else {
-                outwardDigrams[digram] = frequency;
-              }
-            }
-          }
+      if (currFinger === prevFinger) return 'sfb';
+      if (currFinger[0] !== prevFinger[0]) return 'handChange';
 
-          return key.id;
-        }, '');
-      });
+      if (isScisor(currKeyCode, prevKeyCode, currFinger, prevFinger))
+        return [prevKeyCode, currKeyCode].some(requiresExtension)
+          ? 'extendedScisor'
+          : 'scisor';
 
-    document.querySelector('#imprecise-data').style.display = impreciseData
-      ? 'block'
-      : 'none';
-
-    const sumUpFrequencies = dict => Object.values(dict).reduce(sum, 0);
-
-    const mergeSfuSku = (sfu, sku, baseIndex) => {
-      const rv = [];
-      for (let i = baseIndex; i < baseIndex + 4; i++) {
-        rv.push({ "good": 0, "meh": sku[i], "bad": sfu[i] });
-      }
-      return rv;
+      if ([prevKeyCode, currKeyCode].some(requiresExtension)) return 'lsb';
+      return currFinger[1] < prevFinger[1] ? 'inwardRoll' : 'outwardRoll';
     };
 
-    const badDigrams = [
-      mergeSfuSku(Object.values(sfuCount), Object.values(skuCount), 0),
-      mergeSfuSku(Object.values(sfuCount), Object.values(skuCount), 4),
-    ];
+    const getTrigramType = (prevKeyCode, currKeyCode, nextKeyCode) => {
+      const prevFinger = keyFinger[prevKeyCode];
+      const currFinger = keyFinger[currKeyCode];
+      const nextFinger = keyFinger[nextKeyCode];
 
+      if (prevFinger === nextFinger) return prevKeyCode == nextKeyCode ? 'sks' : 'sfs';
+
+      const hands = prevFinger[0] + currFinger[0] + nextFinger[0];
+
+      if (!['lll', 'rrr'].includes(hands)) return 'other';
+
+      const fingers = prevFinger[1] + currFinger[1] + nextFinger[1];
+      if (fingers[0] === fingers[1] || fingers[1] == fingers[2]) return 'other';
+
+      const firstRollIsInward = fingers[0] > fingers[1];
+      const secondRollIsInward = fingers[1] > fingers[2];
+      if (firstRollIsInward !== secondRollIsInward)
+        return [prevFinger, currFinger, nextFinger].some(finger => finger[1] === '2')
+          ? 'redirect'
+          : 'badRedirect';
+
+      return 'other';
+    };
+
+    const getFingerPosition = ([hand, finger]) =>
+      hand === 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
+
+    // JS, I know you suck at FP, but what the fuck is that, man??
+    const totalSfuSkuPerFinger = Array(2).fill(0).map(_ =>
+      Array(4).fill(0).map(_ => ({ "good": 0, "meh": 0, "bad": 0 }))
+    );
+
+    for (const [ngram, { keyCodes, frequency }] of Object.entries(realDigrams)) {
+      if (keyCodes.includes('Space')) continue;
+      const ngramType = getDigramType(...keyCodes);
+      ngrams[ngramType][ngram] = frequency;
+
+      if (ngramType === 'sfb') {
+        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyCodes[0]]);
+        totalSfuSkuPerFinger[groupIndex][itemIndex].bad += frequency;
+      }
+
+      if (ngramType === 'skb') {
+        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyCodes[0]]);
+        totalSfuSkuPerFinger[groupIndex][itemIndex].meh += frequency;
+      }
+    }
+
+    for (const [ngram, { keyCodes, frequency }] of Object.entries(realTrigrams)) {
+      if (keyCodes.includes('Space')) continue;
+      const ngramType = getTrigramType(...keyCodes);
+      ngrams[ngramType][ngram] = frequency;
+    }
+
+    // Render digrams
     document.querySelector('#sfu stats-canvas').renderData({
-      values: badDigrams,
+      values: totalSfuSkuPerFinger,
       maxValue: 4,
       precision: 2,
       flipVertically: true,
       detailedValues: true,
     });
 
-    showPercent('#sfu-all', sumUpFrequencies(sfuCount), 2);
-    showPercent('#sku-all', sumUpFrequencies(skuCount), 2);
+    const sum = dict => Object.entries(dict).reduce((acc, [_, e]) => acc + e, 0);
 
-    showPercent('#sfu-all', sumUpFrequencies(sfuCount), 2, '#Achoppements');
-    showPercent(
-      '#extensions-all',
-      sumUpFrequencies(extendedRolls),
-      2,
-      '#Achoppements',
-    );
-    showPercent('#scisors-all', sumUpFrequencies(scisors), 2, '#Achoppements');
+    showPercent('#sfu-all', sum(ngrams.sfb), 2);
+    showPercent('#sku-all', sum(ngrams.skb), 2);
 
-    showPercent(
-      '#inward-all',
-      sumUpFrequencies(inwardDigrams),
-      1,
-      '#Digrammes',
-    );
-    showPercent(
-      '#outward-all',
-      sumUpFrequencies(outwardDigrams),
-      1,
-      '#Digrammes',
-    );
-    showPercent('#sku-all', sumUpFrequencies(skuCount), 2, '#Digrammes');
+    showPercent('#sfu-all',        sum(ngrams.sfb),    2, '#Achoppements');
+    showPercent('#extensions-all', sum(ngrams.lsb),    2, '#Achoppements');
+    showPercent('#scisors-all',    sum(ngrams.scisor), 2, '#Achoppements');
+
+    showPercent('#inward-all',  sum(ngrams.inwardRoll),  1, '#Digrammes');
+    showPercent('#outward-all', sum(ngrams.outwardRoll), 1, '#Digrammes');
+    showPercent('#sku-all',     sum(ngrams.skb),         2, '#Digrammes');
 
     const achoppements = document.getElementById('Achoppements');
-    achoppements.updateTableData('#sfu-digrams', 'SFU', sfuDigrams, 2);
-    achoppements.updateTableData(
-      '#extended-rolls',
-      'extensions',
-      extendedRolls,
-      2,
-    );
-    achoppements.updateTableData('#scisors', 'ciseaux', scisors, 2);
+    achoppements.updateTableData('#sfu-digrams', 'SFU', ngrams.sfb, 2);
+    achoppements.updateTableData('#extended-rolls', 'extensions', ngrams.lsb, 2,);
+    achoppements.updateTableData('#scisors', 'ciseaux', ngrams.scisor, 2);
 
     const digrammes = document.getElementById('Digrammes');
-    digrammes.updateTableData('#sku-digrams', 'SKU', skuDigrams, 2);
-    digrammes.updateTableData('#inward', 'rolls intérieur', inwardDigrams, 2);
-    digrammes.updateTableData('#outward', 'rolls extérieur', outwardDigrams, 2);
-  };
+    digrammes.updateTableData('#sku-digrams', 'SKU', ngrams.skb, 2);
+    digrammes.updateTableData('#inward', 'rolls intérieur', ngrams.inwardRoll, 2);
+    digrammes.updateTableData('#outward', 'rolls extérieur', ngrams.outwardRoll, 2);
 
-  // compute the redirected rolls
-  const computeTrigrams = () => {
-    const redirects = {};
-    const badRedirects = {};
-    const almostSKBs = {};
-    const almostSFBs = {};
-
-    const keyFinger = { Space: 'th' };
-    Object.entries(keyboard.fingerAssignments).forEach(([f, keys]) => {
-      keys.forEach(keyName => {
-        keyFinger[keyName] = f;
-      });
-    });
-
-    const sum = (acc, freq) => acc + freq;
-    const total = Object.values(trigrams).reduce(sum, 0);
-    Object.entries(trigrams)
-      .map(([trigram, frequency]) => [trigram, (100 * frequency) / total])
-      .forEach(([trigram, frequency]) => {
-        const keySequence = keyboard.layout.getKeySequence(trigram);
-        const fingers = keySequence.map(key => keyFinger[key.id] ?? '  '); // XXX dirty workaround, FIXME
-        const hands = fingers.map(key => key.charAt(0)).join('');
-        // TODO: handle trigrams that involve more than 3 keys
-
-        // Almost SFBs
-        if (fingers[0] == fingers[2]) {
-          for (let i = 0; i < keySequence.length - 2; i++) {
-            if (keySequence[i].id == keySequence[i + 2].id) {
-              almostSKBs[trigram] = frequency;
-              return;
-            }
-          }
-
-          // not an 'almost skb' so it’s an 'almost sfb'
-          almostSFBs[trigram] = frequency;
-          return;
-        }
-
-        // Redirects
-        if (hands === 'lll' || hands === 'rrr') {
-          const nums = fingers.map(key => Number(key.charAt(1)));
-          if (
-            (nums[0] < nums[1] && nums[1] > nums[2]) ||
-            (nums[0] > nums[1] && nums[1] < nums[2])
-          ) {
-            if (nums.some(finger => finger == 2)) {
-              // redirection has an index somewhere
-              redirects[trigram] = frequency;
-            } else {
-              // no index = bad redirects
-              badRedirects[trigram] = frequency;
-            }
-          }
-        }
-      });
-
-    // display metrics
-    showPercent(
-      '#almost-skb-all',
-      Object.values(almostSKBs).reduce(sum, 0),
-      1,
-      '#Trigrammes',
-    );
-    showPercent(
-      '#almost-sfb-all',
-      Object.values(almostSFBs).reduce(sum, 0),
-      1,
-      '#Trigrammes',
-    );
-    showPercent(
-      '#redirect-all',
-      Object.values(redirects).reduce(sum, 0),
-      1,
-      '#Trigrammes',
-    );
-    showPercent(
-      '#bad-redirect-all',
-      Object.values(badRedirects).reduce(sum, 0),
-      2,
-      '#Trigrammes',
-    );
+    // Display trigrams
+    showPercent('#almost-skb-all',   sum(ngrams.sks), 1, '#Trigrammes');
+    showPercent('#almost-sfb-all',   sum(ngrams.sfs), 1, '#Trigrammes');
+    showPercent('#redirect-all',     sum(ngrams.redirect), 1, '#Trigrammes');
+    showPercent('#bad-redirect-all', sum(ngrams.badRedirect), 2, '#Trigrammes');
 
     const trigrammes = document.getElementById('Trigrammes');
-    trigrammes.updateTableData('#almost-skbs', 'presque SKBs', almostSKBs, 2);
-    trigrammes.updateTableData('#almost-sfbs', 'presque SFBs', almostSFBs, 2);
-    trigrammes.updateTableData('#redirect', 'redirections', redirects, 2);
+    trigrammes.updateTableData('#almost-skbs', 'presque SKBs', ngrams.sks, 2);
+    trigrammes.updateTableData('#almost-sfbs', 'presque SFBs', ngrams.sfs, 2);
+    trigrammes.updateTableData('#redirect', 'redirections', ngrams.redirect, 2);
     trigrammes.updateTableData(
       '#bad-redirect',
-      'redirections foireuses',
-      badRedirects,
+      'mauvaises redirections',
+      ngrams.badRedirect,
       2,
     );
   };
@@ -418,7 +472,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let extraKeysFrequency = 0;
 
     for (const [char, frequency] of Object.entries(corpus)) {
-      const keys = charToKeys(char);
+      const keys = charToKeys(char)?.map(({ keyCode }) => keyCode);
       if (!keys) {
         unsupportedChars[char] = frequency;
         totalUnsupportedChars += frequency;
@@ -434,6 +488,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // Set global variable, controls the color of canvas element for finger data
     // (There’s ~probably~ a better way to do this)
     impreciseData = totalUnsupportedChars >= 0.5;
+    document.querySelector('#imprecise-data').style.display = impreciseData
+      ? 'block'
+      : 'none';
 
     // display the heatmap
     const colormap = {};
@@ -502,11 +559,8 @@ window.addEventListener('DOMContentLoaded', () => {
             );
             data.keymap.Enter = ['\r', '\n'];
             keyChars = supportedChars(data.keymap, data.deadkeys);
-            if (Object.keys(corpus).length > 0) {
-              computeHeatmap();
-              computeDigrams();
-              computeTrigrams();
-            }
+            computeHeatmap();
+            computeNGrams();
           });
       } else {
         keyboard.setKeyboardLayout();
@@ -523,8 +577,7 @@ window.addEventListener('DOMContentLoaded', () => {
             trigrams = data.trigrams;
             if (Object.keys(keyChars).length > 0) {
               computeHeatmap();
-              computeDigrams();
-              computeTrigrams();
+              computeNGrams();
             }
           });
         corpusName = value;
