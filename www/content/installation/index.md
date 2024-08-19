@@ -108,12 +108,27 @@ valeur du raccourci Global auto-type.
 
 ### Linux
 
+#### Gnome
 Avec certains bureaux (Gnome notamment), la touche Typo [★]{.odk} ne fonctionne
 que si Ergo‑L est défini comme disposition par défaut, c’est-à-dire en haut de
 la liste dans les préférences clavier.
 
 [Wezterm][] ajoute un `o` à chaque pression de la touche Typo [★]{.odk}. C’est une
 [régression connue][wezterm-bug], [un patch est en cours][wezterm-patch].
+
+#### Ubuntu
+Sous Ubuntu 24.04, il est possible que la touche Typo [★]{.odk} soit active sur
+deux caractères consécutifs.
+Ainsi, `★ss` donne ainsi `éé` plutôt que `és`.
+Pour éviter cela, il faut ajouter les variables d’environnement suivantes dans
+le fichier `/etc/environment` :
+```
+INPUT_METHOD=ibus
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+```
+
 
 
 Licence
