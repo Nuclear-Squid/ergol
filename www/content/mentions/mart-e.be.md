@@ -1,0 +1,18 @@
++++
+title = "Un clavier à dix doigts"
+date = 2024-05-03T09:46:42+01:00
+tags = ["communauté", "mentions"]
+Truncated = false
+Permalink = "https://mart-e.be/2024/05/un-clavier-a-dix-doigts"
++++
+
+Si, en changeant de clavier, je m’étais préparé à perdre du temps (et de
+l’argent) pour le choix du matériel, je ne m’attendais pas à en perdre à
+l’usage. Il y a un gain certain de confort mais tout cela me fait une belle
+jambe si c’est pour taper à côté des touches.
+
+… et c’est exactement ce qui s’est passé.
+
+[https://mart-e.be/2024/05/un-clavier-a-dix-doigts](https://mart-e.be/2024/05/un-clavier-a-dix-doigts)
+
+<!--more-->

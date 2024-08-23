@@ -5,13 +5,6 @@ author = "kaze"
 tags = ["communauté", "vim"]
 +++
 
-<style>
-  /* blockquote { border-left: 2px solid var(--fg-accent); padding-left: 1em; } */
-  blockquote { background-color: var(--bg-accent); margin: 0; padding: .5em 2em .5em 3em; position: relative; }
-  blockquote::before { content: "»"; font-size: 2em; position: absolute; top: 0.7em; left: 0.5em; }
-  cite { display: block; text-align: right; text-wrap: balance; font-style: normal; }
-</style>
-
 J’anime des [ateliers récurrents sur Vim][tupperVim] depuis une douzaine
 d’années. Je suis également l’auteur de [Qwerty-Lafayette][] et un contributeur
 actif d’Ergo‑L depuis deux ou trois ans.
@@ -101,7 +94,7 @@ configurations d’applications.
 La vie après HJKL
 --------------------------------------------------------------------------------
 
-<blockquote>
+<blockquote style="background-color: var(--bg-accent);">
 Après une semaine de test y a pas photo : ne pas utiliser [h]{.kbd} et
 [l]{.kbd} c'est le pied !
 
