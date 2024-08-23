@@ -135,9 +135,9 @@ On a deux principaux standards de contacts mécaniques :
 - les contacts MX sont les plus courants : course de 4 mm, empreinte standard de
   19,05×19,05 mm, on trouve une très grande variété de modèles et de profils de
   <i lang="en">keycaps</i> (cabochons) compatibles ;
-- les contacts Choc sont prisés par les amateurices de profils « <i
-  lang="en">low profile</i> : course de 2 mm, empreinte réduite de 18×17 mm,
-  moins de variété de modèles — et beaucoup moins de choix pour les keycaps.
+- les contacts Choc sont prisés par les amateurices de « <i lang="en">low
+  profile</i> » : course de 2 mm, empreinte réduite de 18×17 mm, moins de
+  variété de modèles — et beaucoup moins de choix pour les keycaps.
 
 Le contact est généralement déclenché (actuation) à mi-course. La force
 d’actuation est souvent autour de 60 g, mais peut descendre à 35 g voire moins
