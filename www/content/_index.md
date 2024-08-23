@@ -51,17 +51,17 @@ Témoignages
 --------------------------------------------------------------------------------
 
 <blockquote>
-  je n’aurais pas cru que je repasserai par la case « apprendre à taper » après
+  Je n’aurais pas cru que je repasserai par la case « apprendre à taper » après
   avoir appris Bépo, mais les promesses d’Ergo‑L sont vraiment tenues : une
-  dispo où il fait bon taper et en Français, et en Anglais, **et** en
+  dispo où il fait bon taper et en français, et en anglais, **et** en
   programmation (cette couche AltGr est redoutable). Le grand luxe !
   <cite>@[geobert][]</cite>
 </blockquote>
 
 <blockquote>
-  Je découve que des claviers conçus par d’autres que moi (Skeletyl, Chocofi,
+  Je découvre que des claviers conçus par d’autres que moi (Skeletyl, Chocofi,
   Temper) peuvent en fait me convenir très bien… il suffisait de passer à Ergo-L.
-  <cite>@aldoo</cite>
+  <cite>@[aldoo][]</cite>
 </blockquote>
 
 <blockquote>
@@ -82,12 +82,13 @@ Témoignages
   Le confort de frappe est tout bonnement excellent, je ne regrette même pas
   Optimot  pour le français. Plus encore, je n’ai plus cette désagréable
   sensation d’avoir un handicap lorsque je tape en anglais.
-  <cite>@fnuttens</cite>
+  <cite>@[fnuttens][]</cite>
 </blockquote>
 
 <blockquote>
   C’est un choix de conception pour le moins singulier.
-  <cite>@Pyjam/Floppy</cite>
+  <!-- Je doute qu’il remporte l’adhésion. -->
+  <cite>@Pyjam / Floppy</cite>
 </blockquote>
 
 [On parle d’Ergo‑L ailleurs, dans la presse et les blogs.][mentions]
@@ -109,6 +110,7 @@ Témoignages
 [Lafayette]: https://qwerty-lafayette.org
 [Bépo]:      https://bepo.fr
 
-[henri]:     https://henriloevenbruck.com
 [vjousse]:   https://vimebook.com/fr
 [geobert]:   https://geobert.fr/posts/l-apres-bepo-ergo-l/
+[aldoo]:     https://github.com/ald0o/
+[fnuttens]:  https://blog.dabao.fr/
