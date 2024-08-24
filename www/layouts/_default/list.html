@@ -3,12 +3,12 @@
   {{ if not .Params.hideSummaryOfChildPages }}
     {{ range sort .Pages "Date" "desc" }}
       <article>
+        {{ $link := or .Params.redirect_to .RelPermalink }}
         <header>
-          <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+          <h2><a href="{{ $link }}">{{ .LinkTitle }}</a></h2>
           <time>{{ time.Format ":date_medium" .Date }}</time>
         </header>
         {{ .Summary }}
-        {{ $link := or .Params.redirect_to .RelPermalink }}
         <nav class="more"><a href="{{ $link }}">Lire la suite…</a></nav>
       </article>
     {{ end }}
