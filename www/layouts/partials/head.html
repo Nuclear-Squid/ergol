@@ -14,5 +14,10 @@
 <meta property="og:description"  content="{{ .Site.Params.description }}">
 <link type="image/svg+xml"       rel="icon"    href="{{ absURL "favicon.svg" }}"        sizes="any">
 <link type="application/rss+xml" rel=alternate href="{{ absURL "articles/index.xml" }}" title="Ergo‑L">
+
+{{ if .Params.redirect_to }}
+  <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}">
+{{ end }}
+
 {{ partial "head/js.html" . }}
 {{ partial "head/css.html" . }}
