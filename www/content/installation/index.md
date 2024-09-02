@@ -11,7 +11,6 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk">}}
 
-
 Téléchargement
 --------------------------------------------------------------------------------
 
@@ -28,9 +27,11 @@ apparaît dans la barre de langues (indicateur de la barre des tâches).
 
 ### macOS : [ergol.keylayout][]
 
-Enregistrer dans `/Library/Keyboard Layouts` et relancer la session.
-La disposition de clavier est disponible dans les préférences sous
-« Clavier », puis « Méthodes de saisie ».
+Enregistrer dans `/Library/Keyboard Layouts` et relancer la session.  La
+disposition de clavier est disponible dans les préférences sous « Clavier »,
+« Méthodes de saisie », `+` (ajouter une nouvelle disposition), et enfin «
+Autres » .
+
 On peut aussi l’enregistrer dans `~/Library/Keyboard Layouts`
 (pour le seul utilisateur courant), mais la disposition ne sera pas
 active au login.
@@ -72,7 +73,6 @@ source][] à [XKalamine][].
 
 Une aide pour apprendre la dispo. À imprimer, plier et placer sur son bureau !
 
-
 Variante en A (« <i lang="en">angle-mod</i> »)
 --------------------------------------------------------------------------------
 
@@ -81,7 +81,6 @@ Variante en A (« <i lang="en">angle-mod</i> »)
 Des pilotes incluant l’[angle-mod][] seront proposés. Il est d’ores et déjà
 possible d’appliquer cet angle-mod et bien d’autres fonctionnalités via
 [kanata][] et la configuration [Arsenik][].
-
 
 Résolution de problèmes
 --------------------------------------------------------------------------------
@@ -116,12 +115,10 @@ la liste dans les préférences clavier.
 [Wezterm][] ajoute un `o` à chaque pression de la touche Typo [★]{.odk}. C’est une
 [régression connue][wezterm-bug], [un patch est en cours][wezterm-patch].
 
-
 Licence
 --------------------------------------------------------------------------------
 
 [WTFPL](http://wtfpl.net/) – Do What the Fuck You Want to Public License.
-
 
 [fichier source]:    /layouts/ergol.toml
 [cavalier.pdf]:      cavalier.pdf
