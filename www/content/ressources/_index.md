@@ -1,5 +1,8 @@
 +++
 title = "Ressources"
+
+[params]
+hideSummaryOfChildPages = true
 +++
 
 Perdu·e dans la galaxie des dispositions clavier ?<br>

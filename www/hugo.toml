@@ -96,11 +96,11 @@ author = "authors"
         weight  = 5
     [[menus.main]]
         name    = "FAQ"
-        pageRef = "/faq"
+        pageRef = "/ressources/faq"
         parent  = "FAQ / Ressources"
     [[menus.main]]
         name    = "Glossaire"
-        pageRef = "/glossaire"
+        pageRef = "/ressources/glossaire"
         parent  = "FAQ / Ressources"
     [[menus.main]]
         name    = "Apprendre"
