@@ -140,6 +140,11 @@ ol, ul {
   margin-left: 0;
 }
 
+.dialog > ul {
+  list-style-type: "— ";
+  padding-left: 2ch;
+}
+
 dd {
   margin-left: var(--list-indent);
   padding-left: 0;

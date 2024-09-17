@@ -299,14 +299,14 @@
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">I</text>
         <text x="12.8" y="43.4" class="mod">⌘</text>
-        <text x="38.0" y="43.4" class="sym">)</text>
+        <text x="38.0" y="43.4" class="sym">/</text>
         <text x="38.0" y="43.4" class="nav">6</text>
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">,</text>
         <text x="12.8" y="20.6" class="level2">;</text>
-        <text x="38.0" y="43.4" class="sym">]</text>
+        <text x="38.0" y="43.4" class="sym">:</text>
         <text x="38.0" y="43.4" class="nav">3</text>
       </g>
     </g>

@@ -11,6 +11,7 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk">}}
 
+
 Téléchargement
 --------------------------------------------------------------------------------
 
@@ -73,6 +74,7 @@ source][] à [XKalamine][].
 
 Une aide pour apprendre la dispo. À imprimer, plier et placer sur son bureau !
 
+
 Variante en A (« <i lang="en">angle-mod</i> »)
 --------------------------------------------------------------------------------
 
@@ -85,40 +87,14 @@ possible d’appliquer cet angle-mod et bien d’autres fonctionnalités via
 Résolution de problèmes
 --------------------------------------------------------------------------------
 
-### Windows
-
-Les touches mortes chainées ne sont pas reconnues par certaines applications,
-notamment [Firefox][firefox-cdk] et [Wezterm][wezterm-cdk].
-
-Comme [AltGr]{.kbd} est équivalent à [Ctrl]{.kbd}-[Alt]{.kbd} sous Windows, les
-raccourcis clavier de certaines applications peuvent être déclenchés par
-[AltGr]{.kbd}.
-
-Avec GeForce Experience, [AltGr]{.kbd}-[M]{.kbd} (pour écrire `&`) peut être
-capté par « Superposition en jeu » pour couper le micro.
-Il suffit d’aller dans GeForce Experience sur la roue dentée > Généralités >
-Superposition en jeu : Paramètres > Raccourcis claviers, pour changer ou
-supprimer ce raccourci. Il est aussi possible de désactiver complètement la
-Superposition en jeu.
-
-De même avec Keepass 2, [AltGr]{.kbd}-[A]{.kbd} (pour écrire `{`) est capté même si
-le programme n’est pas au premier plan. Pour cela, aller dans Tools > Options… >
-onglet Integration > encart System-wide hot keys, et changer ou supprimer la
-valeur du raccourci Global auto-type.
-
-### Linux
-
-Avec certains bureaux (Gnome notamment), la touche Typo [★]{.odk} ne fonctionne
-que si Ergo‑L est défini comme disposition par défaut, c’est-à-dire en haut de
-la liste dans les préférences clavier.
-
-[Wezterm][] ajoute un `o` à chaque pression de la touche Typo [★]{.odk}. C’est une
-[régression connue][wezterm-bug], [un patch est en cours][wezterm-patch].
+Vous avez des questions ou des problèmes avec les pilotes ? Consultez notre
+[FAQ] !
 
 Licence
 --------------------------------------------------------------------------------
 
 [WTFPL](http://wtfpl.net/) – Do What the Fuck You Want to Public License.
+
 
 [fichier source]:    /layouts/ergol.toml
 [cavalier.pdf]:      cavalier.pdf
@@ -132,9 +108,4 @@ Licence
 [Arsenik]:           /claviers/arsenik/
 [kanata]:            https://github.com/jtroo/kanata
 [angle-mod]:         https://colemakmods.github.io/ergonomic-mods/angle.html
-
-[firefox-cdk]:       https://bugzilla.mozilla.org/show_bug.cgi?id=1910287
-[wezterm]:           https://github.com/wez/wezterm/
-[wezterm-cdk]:       https://github.com/wez/wezterm/issues/5866
-[wezterm-bug]:       https://github.com/wez/wezterm/commit/b8d93edce6267b09d8926f13de9620ad1ae5ea1f
-[wezterm-patch]:     https://github.com/wez/wezterm/pull/4991
+[FAQ]:               /ressources/faq
