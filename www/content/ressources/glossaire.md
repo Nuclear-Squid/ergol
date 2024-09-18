@@ -16,26 +16,26 @@ title = "Glossaire"
 Ergonomie & Optimisation
 --------------------------------------------------------------------------------
 
-SFU (“Same Finger Usage”), SFB (“Same Finger Bigram”)
+[SFU (“Same Finger Usage”)]{#SFU}, [SFB (“Same Finger Bigram”)]{#SFB}
 
 : Aussi appelé « digramme de même doigt ». Quand deux lettres s’enchaînent avec un même
 doigt, ce qui est source d’inconfort ou d’erreurs, notamment à haute vitesse.
  
-SKU (“Same Key Usage”), SKB (“Same Key Bigram”)
+[SKU (“Same Key Usage”)]{#SKU}, [SKB (“Same Key Bigram”)]{#SKB}
 
 : Répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
 disposition de clavier, ou `és` en Ergo‑L.
 
-Extension
+[Extension]{#extension}
 
 : Quand un doigt doit atteindre une touche qui est soit sur une autre colonne
 que la position de repos, soit à une distance supérieure à une touche.
 
-Ciseau
+[Ciseau]{#ciseau}
 
 : Quand un bigramme nécessite un changement de rangée inconfortable.
 
-Roulement intérieur
+[Roulement intérieur]{#roulement}
 
 : Deux touches ou plus enchaînées sur une même main, dans le sens de
 l’auriculaire vers l’index. C’est l’enchaînement considéré comme le plus
@@ -46,7 +46,7 @@ Roulement extérieur
 : Deux touches ou plus enchaînées sur une même main, dans le sens de l’index
 vers l’auriculaire.
 
-Redirection
+[Redirection]{#redirection}
 
 : Trois touches enchaînées sur une même main avec un changement de direction,
 e.g. [D]{.kbd}[S]{.kbd}[F]{.kbd} ou [K]{.kbd}[J]{.kbd}[L]{.kbd} en Azerty ou
