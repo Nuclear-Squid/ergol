@@ -39,5 +39,5 @@ La disposition a quelques défauts qu'il faut garder à l'esprit :
 
 Les explications détaillées des choix fait lors de la conception sont disponibles sur le [GitHub de la disposition][2], et sont mises à jour au fur et à mesure des changements.
 
-[1]: /glossaire
+[1]: /ressources/glossaire
 [2]: https://github.com/Lysquid/Erglace/blob/main/NOTES.md

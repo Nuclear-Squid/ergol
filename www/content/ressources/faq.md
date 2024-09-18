@@ -103,8 +103,8 @@ valeur du raccourci Global auto-type.
 
 
 
-[glossaire]:        /glossaire
-[touche morte]:     /glossaire#touche-morte-def
+[glossaire]:        /ressources/glossaire
+[touche morte]:     /ressources/glossaire#touche-morte-def
 [QWERTY-Lafayette]: /lafayette/#qwerty-lafayette
 [XKalamine]:        https://github.com/OneDeadKey/kalamine#xkalamine
 [xkb-custom]:       https://github.com/OneDeadKey/kalamine#linux-root-xkb_symbols

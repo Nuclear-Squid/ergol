@@ -17,11 +17,11 @@ Cartographie des dispositions clavier
 
 : Préparer votre voyage avec le **[comparatif](/alternatives#tableau-comparatif)**
 
-[Glossaire](/glossaire)
+[Glossaire](/ressources/glossaire)
 
 : Ne naviguez pas à vue, utilisez le radar des **définitions** des termes difficiles
 
-[Foire aux questions](/faq)
+[Foire aux questions](/ressources/faq)
 
 : Accédez à toute la sagesse des Ergonautes avec les réponses aux **questions
 fréquentes**
