@@ -217,7 +217,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const words = gLesson.querySelectorAll('.space').length + 1;
     const chars = gLesson.children.length;
     const cpm = Math.round(chars / elapsed);
-    const wpm = Math.round(words / elapsed);
+    const wpm = Math.round(cpm / 5);
     const prc = 100 - Math.round(1000 * errors / chars) / 10;
     gStatus.innerHTML = `${wpm} wpm, ${cpm} cpm <progress value="${cpm}" max="${MIN_CPM_SPEED}">${cpm}</progress>, ${prc} % <progress value="${prc}" max="${MIN_PRECISION}">${prc}%</progress>`;
 
