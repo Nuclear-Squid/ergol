@@ -17,7 +17,7 @@ footer = "réfrigéré par [x-keyboard](https://onedeadkey.github.io/x-keyboard)
 
 Erglace abandonne l'accès facile aux raccourcis usuels (Ctrl+C, Ctrl+V...) pour atteindre des statistiques légèrement meilleures, en particulier un SFB plus bas, autour les 1%. Le [SFB][1] correspond aux enchaînements de deux caractères qui utilisent le même doigt, ce qui ralentit la vitesse de frappe.
 
-L'autre différence est qu'Erglace cherche à minimiser les [redirections][1], c'est-à-dire les enchaînements de trois caractères d'une même main avec un changement de direction, mouvement considéré comme inconfortable. Pour ce faire, toutes les voyelles se retrouvent d'un côté, comme en Bépo, ce qui favorise l'alternance des mains. Le désavantage est que la disposition a moins de [roulements][1], c'est-à-dire des enchaînements de trois lettres d'une main dans une même direction, qui sont appréciables.
+L'autre différence est qu'Erglace cherche à minimiser les [redirections][2], c'est-à-dire les enchaînements de trois caractères d'une même main avec un changement de direction, mouvement considéré comme inconfortable. Pour ce faire, toutes les voyelles se retrouvent d'un côté, comme en Bépo, ce qui favorise l'alternance des mains. Le désavantage est que la disposition a moins de [roulements][3], c'est-à-dire des enchaînements de trois lettres d'une main dans une même direction, qui sont appréciables.
 
 En dehors de ces points, Erglace garde les principes d'Ergo-L (1DFH, touche morte...), et reprend d'ailleurs la même couche de symboles.
 
@@ -37,7 +37,9 @@ La disposition a quelques défauts qu'il faut garder à l'esprit :
 
 ## Conception
 
-Les explications détaillées des choix fait lors de la conception sont disponibles sur le [GitHub de la disposition][2], et sont mises à jour au fur et à mesure des changements.
+Les explications détaillées des choix fait lors de la conception sont disponibles sur le [GitHub de la disposition][4], et sont mises à jour au fur et à mesure des changements.
 
-[1]: /glossaire
-[2]: https://github.com/Lysquid/Erglace/blob/main/NOTES.md
+[1]: /ressources/glossaire#SFB
+[2]: /ressources/glossaire#redirection
+[3]: /ressources/glossaire#roulement
+[4]: https://github.com/Lysquid/Erglace/blob/main/NOTES.md

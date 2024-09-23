@@ -9,15 +9,6 @@ jsScripts = ["/js/keebs.js"]
 footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
-
-<style>
-  dt { font-weight: bold; }
-  dd p { margin: 0.2em 0; }
-  code { font-family: monospace; }
-  pre { background-color: #6684; padding: 0.5em 1em; }
-  pre code { background-color: transparent; font-weight: normal; }
-</style>
-
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk">}}
 
 
@@ -37,9 +28,11 @@ apparaît dans la barre de langues (indicateur de la barre des tâches).
 
 ### macOS : [ergol.keylayout][]
 
-Enregistrer dans `/Library/Keyboard Layouts` et relancer la session.
-La disposition de clavier est disponible dans les préférences sous
-« Clavier », puis « Méthodes de saisie ».
+Enregistrer dans `/Library/Keyboard Layouts` et relancer la session.  La
+disposition de clavier est disponible dans les préférences sous « Clavier »,
+« Méthodes de saisie », `+` (ajouter une nouvelle disposition), et enfin «
+Autres » .
+
 On peut aussi l’enregistrer dans `~/Library/Keyboard Layouts`
 (pour le seul utilisateur courant), mais la disposition ne sera pas
 active au login.
@@ -91,40 +84,11 @@ Des pilotes incluant l’[angle-mod][] seront proposés. Il est d’ores et déj
 possible d’appliquer cet angle-mod et bien d’autres fonctionnalités via
 [kanata][] et la configuration [Arsenik][].
 
-
 Résolution de problèmes
 --------------------------------------------------------------------------------
 
-### Windows
-
-Les touches mortes chainées ne sont pas reconnues par certaines applications,
-notamment [Firefox][firefox-cdk] et [Wezterm][wezterm-cdk].
-
-Comme [AltGr]{.kbd} est équivalent à [Ctrl]{.kbd}-[Alt]{.kbd} sous Windows, les
-raccourcis clavier de certaines applications peuvent être déclenchés par
-[AltGr]{.kbd}.
-
-Avec GeForce Experience, [AltGr]{.kbd}-[M]{.kbd} (pour écrire `&`) peut être
-capté par « Superposition en jeu » pour couper le micro.
-Il suffit d’aller dans GeForce Experience sur la roue dentée > Généralités >
-Superposition en jeu : Paramètres > Raccourcis claviers, pour changer ou
-supprimer ce raccourci. Il est aussi possible de désactiver complètement la
-Superposition en jeu.
-
-De même avec Keepass 2, [AltGr]{.kbd}-[A]{.kbd} (pour écrire `{`) est capté même si
-le programme n’est pas au premier plan. Pour cela, aller dans Tools > Options… >
-onglet Integration > encart System-wide hot keys, et changer ou supprimer la
-valeur du raccourci Global auto-type.
-
-### Linux
-
-Avec certains bureaux (Gnome notamment), la touche Typo [★]{.odk} ne fonctionne
-que si Ergo‑L est défini comme disposition par défaut, c’est-à-dire en haut de
-la liste dans les préférences clavier.
-
-[Wezterm][] ajoute un `o` à chaque pression de la touche Typo [★]{.odk}. C’est une
-[régression connue][wezterm-bug], [un patch est en cours][wezterm-patch].
-
+Vous avez des questions ou des problèmes avec les pilotes ? Consultez notre
+[FAQ] !
 
 Licence
 --------------------------------------------------------------------------------
@@ -144,9 +108,4 @@ Licence
 [Arsenik]:           /claviers/arsenik/
 [kanata]:            https://github.com/jtroo/kanata
 [angle-mod]:         https://colemakmods.github.io/ergonomic-mods/angle.html
-
-[firefox-cdk]:       https://bugzilla.mozilla.org/show_bug.cgi?id=1910287
-[wezterm]:           https://github.com/wez/wezterm/
-[wezterm-cdk]:       https://github.com/wez/wezterm/issues/5866
-[wezterm-bug]:       https://github.com/wez/wezterm/commit/b8d93edce6267b09d8926f13de9620ad1ae5ea1f
-[wezterm-patch]:     https://github.com/wez/wezterm/pull/4991
+[FAQ]:               /ressources/faq

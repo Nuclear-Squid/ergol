@@ -119,10 +119,6 @@ article time {
   margin-top: -1.5em;
 }
 
-article .more {
-  /* font-size: smaller; */
-}
-
 dialog::backdrop {
   backdrop-filter: blur(5px);
 }
@@ -144,6 +140,11 @@ ol, ul {
   margin-left: 0;
 }
 
+.dialog > ul {
+  list-style-type: "— ";
+  padding-left: 2ch;
+}
+
 dd {
   margin-left: var(--list-indent);
   padding-left: 0;
@@ -158,6 +159,22 @@ li,
 dd p {
   margin: 0.2em 0;
 }
+
+a[href] {
+  color: var(--fg-accent);
+  text-decoration: none;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │            Figures, Tables, Code Blocks, Quotations           │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
 
 table {
   width: 100%;
@@ -176,6 +193,19 @@ figure {
   text-align: center;
 }
 
+pre {
+  overflow: scroll;
+  background-color: var(--bg-banner);
+  padding: 0.5em 1em;
+}
+
+pre code {
+  background-color: transparent;
+  font-family: monospace;
+  font-weight: normal;
+  padding: 0;
+}
+
 figure figcaption,
 figure img {
   margin: auto;
@@ -186,13 +216,25 @@ img {
   max-width: 100%;
 }
 
-a[href] {
-  color: var(--fg-accent);
-  text-decoration: none;
+blockquote {
+  margin: 0;
+  padding: .5em 2em .5em 3em;
+  position: relative;
 }
 
-a[href]:hover {
-  text-decoration: underline;
+blockquote::before {
+  content: "»";
+  font-size: 2em;
+  position: absolute;
+  top: 0.25em;
+  left: 0.5em;
+}
+
+cite {
+  display: block;
+  text-align: right;
+  text-wrap: balance;
+  font-style: normal;
 }
 
 

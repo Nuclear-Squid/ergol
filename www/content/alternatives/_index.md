@@ -15,7 +15,7 @@ hideSummaryOfChildPages = true
 :::
 
 Ergo‑L est conçu pour n’avoir que des avantages sur Azerty, Qwerty, Dvorak et
-Bépo ; mais il ne prétend pas être le plus optimisé partout. Nous pensons qu’il
+Bépo. Il ne prétend pas être le plus optimisé partout : nous pensons qu’il
 conviendra au plus grand nombre, mais il y a des alternatives intéressantes !
 
 **Il n’y a pas de mauvaise disposition, seulement des mauvais choix.**
@@ -46,7 +46,7 @@ soit devenir insupportables.
 +===============+:=====:+:=====:+:=====:+:=====:+:=====:+=============================================+
 | [Azerty][]    |   ·   |  oui  |   ·   |   ·   |   ·   | - (fr) mauvais support typographique        |
 |               |       |       |       |       |       | - charge de l’auriculaire gauche > 10 %     |
-|               |       |       |       |       |       | - digrammes de même doigt > 6%              |
+|               |       |       |       |       |       | - digrammes de même doigt > 6 %             |
 |               |       |       |       |       |       | - chiffres en Shift                         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 | [Lafayette][] |  oui  |  oui  |   ·   |   ·   |  oui  | - charge déséquilibrée                      |
@@ -70,14 +70,14 @@ soit devenir insupportables.
 |               |       |       |       |       |       | - charge de l’auriculaire droit > 10 %      |
 |               |       |       |       |       |       | - charge de l’index gauche > 20 %           |
 |               |       |       |       |       |       | - digrammes de même doigt > 2 %             |
-|               |       |       |       |       |       | - (en) rédhibitoire (e.g. `wh`)             |
+|               |       |       |       |       |       | - (en) rédhibitoire (`wh`)                  |
 |               |       |       |       |       |       | - chiffres en Shift                         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 | [Optimot][]   |   ·   |   ·   |  oui  |[(?)][]|   ·   | - déviations ulnaires                       |
 |               |       |       |       |       |       | - (fr) charge de l’auriculaire droit > 10 % |
 |               |       |       |       |       |       | - (en) charge déséquilibrée                 |
 |               |       |       |       |       |       | - chiffres en Shift                         |
-|               |       |       |       |       |       | - licence non-libre                         |
+|               |       |       |       |       |       | - licence non libre                         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 
 <!-- do not remove the empty line above -->
@@ -92,7 +92,7 @@ chaque défaut.
 Comparaison par groupes
 -------------------------------------------------------------------------------
 
-### AZERTY / QWERTY / QWERTZ
+### AZERTY, QWERTY et QWERTZ
 
 Ces dispositions sont très proches, au moins pour le placement des lettres… qui
 n’est absolument pas optimisé, ni même équilibré en charge. AZERTY, notamment, a
@@ -100,7 +100,7 @@ plus de 10 % de charge sur l’auriculaire gauche, et le placement du [A]{.kbd
 est particulièrement inconfortable — incompréhensible pour une lettre aussi
 fréquente en français.
 
-Nota : si, contrairement à ce qui est habituellement recommandé sur les claviers
+Note : si, contrairement à ce qui est habituellement recommandé sur les claviers
 ISO, on tape la touche [2]{.kbd} où se trouve le `é` avec l’annulaire et non
 l’auriculaire, la charge totale de l’auriculaire devient plus supportable. Un
 clavier ortholinéaire apportera donc au moins ce confort-là en AZERTY.
@@ -110,35 +110,35 @@ intéressantes, tant pour profiter d’un meilleur placement du [A]{.kbd} que po
 avoir les chiffres en direct. Néanmoins, il restera le problème des touches
 excentrées sous l’auriculaire droit, qui causent des déviations ulnaires.
 
-**De notre point de vue,** [Lafayette][] peut apporter une solution ergonomique
-intéressante ([1DFH][], [couche _Symboles_ optimisée][symboles]) moyennant un
+**De notre point de vue,** [Lafayette][] apporte une solution ergonomique
+pertinente ([1DFH][], [couche Symboles optimisée][symboles]) moyennant un
 temps d’apprentissage minime.
 
 
 ### Les « Ergonautes »
 
-[Ergo‑L][], [Erglace][], [Colemak FT][], [Bépolar][], [Lafayette][], toutes ces
+[Ergo‑L][], [Erglace][], [Colemak FT][], [Bépolar][], [Lafayette][] – toutes ces
 dispositions partagent une même approche ergonomique : [1DFH][] et [couche
-_Symboles_ optimisée][symboles], garantissant ainsi l’absence d’extensions de
+Symboles optimisée][symboles], garantissant ainsi l’absence d’extensions de
 doigts (donc de déviations ulnaires) et une compatibilité exemplaire avec [tous
 les claviers](/claviers), ergonomiques ou non, de 33 à 105 touches.
 
 - Ergo‑L est le projet le plus abouti, destiné au plus grand nombre, bien plus
   optimisé que Bépo en français et que Dvorak en anglais, tout en gardant un
-  confort impeccable quel que soit l’usage ;
-- Erglace est un projet encore jeune mais qui pousse l’optimisation plus loin
+  confort impeccable, quel que soit l’usage ;
+- Erglace est un projet encore jeune qui pousse l’optimisation plus loin
   qu’Ergo‑L, notamment en français, mais abandonne les raccourcis clavier
   [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd}[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
 
-Colemak FT, Bépolar et Lafayette se destinent à des utilisateurs de Colemak,
-Bépo et Qwerty respectivement, qui souhaitent profiter de l’approche 1DFH avec
+Colemak FT, Bépolar et Lafayette s’adressent aux utilisateurs de Colemak,
+Bépo et QWERTY, respectivement, qui souhaitent profiter de l’approche 1DFH avec
 le minimum d’effort. Leur ergonomie est très satisfaisante mais leur confort
 n’est pas au niveau d’Ergo‑L, ces dispositions ayant cherché à rester aussi
 proches que possible de leurs aînées.
 
-La contrepartie c’est la [touche morte][] qu’il faut apprendre, et qui ajoute
-entre 2.5 et 4.0 % de frappes supplémentaires en français — soit une perte de 2
-mots/minute pour une personne tapant à 60 mpm.
+La contrepartie, c’est la [touche morte][] qu’il faut apprendre, et qui ajoute
+entre 2,5 % et 4,0 % de frappes supplémentaires en français — soit une perte de
+2 mots/minute pour une personne tapant à 60 mots/minute.
 
 **De notre point de vue,** [Ergo‑L][] et [Erglace][] sont les seules
 dispositions à la fois ergonomiques **et** optimisées pour le français. Elles
@@ -146,17 +146,18 @@ sont aussi les seules dispositions francophones réellement optimisées pour
 l’anglais. Ergo‑L a la palme du confort.
 
 
-### Bépo & variantes
+### Bépo et ses variantes
 
-Bépo et ses variantes présentent toutes les mêmes [défauts d’ergonomie][] :
+Bépo et toutes ses variantes présentent les mêmes [défauts d’ergonomie][] :
 
-- placement de lettres excentrées sur les 6e et 7e colonnes :
+- placement de lettres excentrées sur les 6<sup>e</sup> et 7<sup>e</sup>
+ colonnes :
   - compatibilité délicate avec la plupart des claviers ergonomiques ;
   - déviations ulnaires pouvant devenir douloureuses ;
 - charge importante de l’auriculaire droit (> 11 % en français).
 
 Néanmoins, pour qui n’est pas sensible à ces points-là, ces dispositions sont
-efficaces et très intuitives en français littéraire.
+efficaces et très intuitives pour écrire en français.
 
 Bépo est inadapté pour l’anglais, notamment à cause du placement de [W]{.kbd},
 et l’assume très bien ! Certaines variantes ont cherché à réduire le problème du
@@ -177,12 +178,12 @@ serait une permutation `h,’`, pour faire passer le `h` de [>] à [O].
   d’abord en français
 -->
 
-[Nota]{id="optimot_en"} : l’auteur d’Optimot considère que sa disposition est
+[Note]{id="optimot_en"} : l’auteur d’Optimot considère que sa disposition est
 optimisée pour l’anglais au motif qu’elle obtiendrait une bonne note globale sur
 KLAnext ; mais pour nous, [la heatmap est inadaptée][1] (lettres fréquentes sur
-la rangée inférieure) et trop de digrammes courants sont trop inconfortables pour
-pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, `ak`, `ki`/`ik`/`ike`).
-Elle est *utilisable*, mais pas *optimisée* pour ça.
+la rangée inférieure) et de nombreux digrammes courants sont trop inconfortables
+pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, 
+`ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça.
 
 [(?)]:     #optimot_en
 [optimot]: ./optimot_fr.png
@@ -191,7 +192,7 @@ Elle est *utilisable*, mais pas *optimisée* pour ça.
 **De notre point de vue :**
 
 - Bépo est intéressant pour du français littéraire sur un clavier full-size,
-  mais attention aux douleurs (auriculaire notamment) ;
+  mais attention aux douleurs (auriculaires notamment) ;
 - pour les Bépoètes qui n’ont pas de douleurs, Optimot apporte une optimisation
   *très* supérieure en français et est bien plus utilisable en anglais ;
 - pour les Bépoètes qui ont des douleurs ou qui souhaitent tenter l’expérience

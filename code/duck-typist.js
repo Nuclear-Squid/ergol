@@ -23,8 +23,10 @@ const MIN_PRECISION  = 98;  // percentage of correct keys
 const MIN_CPM_SPEED  = 100; // characters per minute
 const MIN_WIN_STREAK = 5;
 
-const STARTING_LEVEL = 4;   // number of keys to begin with
-const MIN_WORD_COUNT = 42;  // nim number or words/ngrams we want for a lesson
+const STARTING_LEVEL = 4;      // number of keys to begin with
+const MIN_WORD_COUNT = 42;     // nim number or words/ngrams we want for a lesson
+const INCLUDE_NEW_LETTERS = 2; // at least of the n last letters should be included in each word
+
 const ALL_30_KEYS = [
   'KeyF', 'KeyJ',
   'KeyD', 'KeyK',
@@ -117,9 +119,11 @@ window.addEventListener('DOMContentLoaded', () => {
         .filter(letter => letter in odk)
         .map(letter => odk[letter]);
 
-    const lessonLetters = rawLetters.concat(deadkeyLetters);
-    const lessonFilter = word =>
-      Array.from(word).every(letter => lessonLetters.indexOf(letter) >= 0);
+    const lessonLetters = rawLetters.concat(deadkeyLetters).join('');
+    const newLettersCount = gLessonLevel == STARTING_LEVEL ? STARTING_LEVEL : INCLUDE_NEW_LETTERS;
+    const newLetters = rawLetters.slice(-newLettersCount).join('');
+    const lessonRe = new RegExp(`^[${lessonLetters}]*[${newLetters}][${lessonLetters}]*$`)
+    const lessonFilter = word => lessonRe.test(word)
 
     gLessonWords = [];
     for (const dict of [
@@ -213,7 +217,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const words = gLesson.querySelectorAll('.space').length + 1;
     const chars = gLesson.children.length;
     const cpm = Math.round(chars / elapsed);
-    const wpm = Math.round(words / elapsed);
+    const wpm = Math.round(cpm / 5);
     const prc = 100 - Math.round(1000 * errors / chars) / 10;
     gStatus.innerHTML = `${wpm} wpm, ${cpm} cpm <progress value="${cpm}" max="${MIN_CPM_SPEED}">${cpm}</progress>, ${prc} % <progress value="${prc}" max="${MIN_PRECISION}">${prc}%</progress>`;
 

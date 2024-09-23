@@ -91,9 +91,17 @@ author = "authors"
         pageRef = "/stats"
         weight  = 4
     [[menus.main]]
-        name    = "Glossaire"
-        pageRef = "/glossaire"
+        name    = "FAQ / Ressources"
+        pageRef = "/ressources"
         weight  = 5
+    [[menus.main]]
+        name    = "FAQ"
+        pageRef = "/ressources/faq"
+        parent  = "FAQ / Ressources"
+    [[menus.main]]
+        name    = "Glossaire"
+        pageRef = "/ressources/glossaire"
+        parent  = "FAQ / Ressources"
     [[menus.main]]
         name    = "Apprendre"
         pageRef = "/dactylo"

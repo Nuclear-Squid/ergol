@@ -91,19 +91,19 @@ Claviers de <i lang="en">laptop</i>
 
 ### Kanata
 
-[kanata][] est un logiciel libre et multiplate-formes permettant de redéfinir le
+[Kanata][] est un logiciel libre et multiplateforme permettant de redéfinir le
 comportement des touches du clavier. Il permet notamment l’application de
 l’angle-mod, la définition de layers, la configuration de layer-taps et
-homerow-mods — et plus généralement, de faire une grande partie de ce que font
+homerow-mods — et, plus généralement, de faire une grande partie de ce que font
 les <i lang="en">firmwares</i> de claviers programmables comme QMK et ZMK.
 
-Une configuration kanata personnalisable est proposée ici : [arsenik.zip][]
+Une configuration Kanata personnalisable est proposée ici : [arsenik.zip][]
 
 Cette configuration a pour but de faire découvrir Arsenik étape par étape :
 
-1. <i lang="en">angle-mod</i>
-2. <i lang="en">layer-taps</i>
-3. <i lang="en">homerow-mods</i>
+1. <i lang="en">Angle-mod</i>
+2. <i lang="en">Layer-taps</i>
+3. <i lang="en">Homerow-mods</i>
 
 Par défaut, seul l’angle-mod est appliqué ; à vous d’activer les layer-taps et
 les homerow-mods à votre rythme.
@@ -133,7 +133,7 @@ Une fois habitué à l’angle-mod, il est temps d’activer les layer-taps :
 ![Ergo‑L avec les layer-taps](./ergol_isoa_lt.svg)
 
 On supprime ainsi les deux pires extensions ([Entrée]{.kbd} et [Backspace]{.kbd})
-et on profite d’une couche de la couche [NavNum][] à tout moment. Les mouvements
+et on profite de la couche [NavNum][] à tout moment. Les mouvements
 des mains sont ainsi fortement réduits.
 
 ### 3. <i lang="en">Homerow-mods</i>
@@ -168,7 +168,7 @@ consiste à doubler la touche [NavNum]{.kbd} :
 ![Arsenik sur un [Ferris][]](../compacts/3x5_ergol.svg)
 
 On peut également scinder la couche NumNav en une couche numérique et une couche
-de navigation, ou ajouter une couche pour les touches F1…12, ou une couche pour
+de navigation, ou ajouter une couche pour les touches F1-F12, ou une couche pour
 l’émulation souris…
 
 

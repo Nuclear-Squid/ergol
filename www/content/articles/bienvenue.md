@@ -16,7 +16,7 @@ plus qu’une simple disposition de clavier à présenter…
 <!--more-->
 
 Plutôt qu’un site vitrine on a donc opté pour un outil collaboratif : des pages
-en pandoc markdown, un peu de CSS (trop pour certains), un [dépôt public][4],
+en Pandoc markdown, un peu de CSS (trop pour certains), un [dépôt public][4],
 un [générateur][5] et nous voilà prêts ! Ni inscription ni mot de passe, pour
 proposer un article il suffit d’envoyer une *pull request*.
 
