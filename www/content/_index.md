@@ -59,6 +59,13 @@ Témoignages
 </blockquote>
 
 <blockquote>
+  L’effort d’apprentissage du passage de Bépo à Ergo‑L est complètement
+  rentabilisé par le gain de confort.
+  Avoir accès aux claviers 3×5 a révolutionné mon ergonomie.
+  <cite>@[AntoineÐ][]</cite>
+</blockquote>
+
+<blockquote>
   Je découvre que des claviers conçus par d’autres que moi (Skeletyl, Chocofi,
   Temper) peuvent en fait me convenir très bien… il suffisait de passer à Ergo-L.
   <cite>@[aldoo][]</cite>
@@ -110,6 +117,7 @@ Témoignages
 [Lafayette]: https://qwerty-lafayette.org
 [Bépo]:      https://bepo.fr
 
+[AntoineÐ]:  https://mastodon.social/@AntoineD@kwak.cab
 [vjousse]:   https://vimebook.com/fr
 [geobert]:   https://geobert.fr/posts/l-apres-bepo-ergo-l/
 [aldoo]:     https://github.com/ald0o/
