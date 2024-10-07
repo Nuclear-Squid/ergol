@@ -3,3 +3,5 @@ dist
 *.vim*
 *.custom
 www/public
+.vscode
+.DS_Store

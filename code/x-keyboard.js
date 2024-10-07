@@ -207,9 +207,9 @@ function newKeyboardLayout(keyMap = {}, deadKeys = {}, geometry = '') {
 const KEY_BG = '#f8f8f8';
 const SPECIAL_KEY_BG = '#e4e4e4';
 const KEY_COLOR = '#333';
-const KEY_COLOR_L3 = 'blue';
-const KEY_COLOR_L5 = 'green';
-const DEAD_KEY_COLOR = 'red';
+const KEY_COLOR_L3 = '#0E9595'; // --color-palette-a-dark
+const KEY_COLOR_L5 = '#CB8215'; // --color-palette-b-dark
+const DEAD_KEY_COLOR = '#77372C'; // --color-palette-d-dark
 
 const KEY_WIDTH = 60; // 1U = 0.75" = 19.05mm = 60px
 const KEY_PADDING = 4; // 8px between two key edges
@@ -912,26 +912,50 @@ const modifiers = `
 
 // color themes
 const themes = `
+  /* Base color palette -- https://coolors.co/9cf6f6-f3c98b-daa588-c46d5e-f56960 */
+  :root {
+    --color-palette-a: #9CF6F6;
+    --color-palette-b: #F3C98B;
+    --color-palette-c: #DAA588;
+    --color-palette-d: #C46D5E;
+    --color-palette-e: #F56960;
+  }
+
+  /* Derived color palette -- when lighter or darker shades are required */
+  :root {
+    --color-palette-a-light: #DAFCFC;
+    --color-palette-b-light: #FBEEDA;
+    --color-palette-c-light: #F5E7E0;
+    --color-palette-d-light: #EED7D2;
+    --color-palette-e-light: #FBC9C5;
+    
+    --color-palette-a-dark: #0E9595;
+    --color-palette-b-dark: #CB8215;
+    --color-palette-c-dark: #9C5630;
+    --color-palette-d-dark: #77372C;
+    --color-palette-e-dark: #99130A;
+  }
+
   g:target rect, .press rect,
   g:target path, .press path {
-    fill: #aad;
+    fill: var(--color-palette-c);
   }
 
   [theme="reach"] .pinkyKey  rect { fill: hsl(  0, 100%, 90%); }
-  [theme="reach"] .numberKey rect { fill: hsl( 42, 100%, 90%); }
-  [theme="reach"] .letterKey rect { fill: hsl(122, 100%, 90%); }
-  [theme="reach"] .homeKey   rect { fill: hsl(122, 100%, 75%); }
-  [theme="reach"] .press     rect { fill: #aaf; }
+  [theme="reach"] .numberKey rect { fill: var(--color-palette-a-light); }
+  [theme="reach"] .letterKey rect { fill: var(--color-palette-b-light); }
+  [theme="reach"] .homeKey   rect { fill: var(--color-palette-d-light); }
+  [theme="reach"] .press     rect { fill: var(--color-palette-c-light); }
 
-  [theme="hints"] [finger="m1"] rect { fill: hsl(  0, 100%, 95%); }
-  [theme="hints"] [finger="l2"] rect { fill: hsl( 42, 100%, 85%); }
-  [theme="hints"] [finger="r2"] rect { fill: hsl( 61, 100%, 85%); }
+  [theme="hints"] [finger="m1"] rect { fill: var(--color-palette-a); }
+  [theme="hints"] [finger="l2"] rect { fill: var(--color-palette-a); }
+  [theme="hints"] [finger="r2"] rect { var(--color-palette-b); }
   [theme="hints"] [finger="l3"] rect,
-  [theme="hints"] [finger="r3"] rect { fill: hsl(136, 100%, 85%); }
+  [theme="hints"] [finger="r3"] rect { fill: var(--color-palette-c); }
   [theme="hints"] [finger="l4"] rect,
-  [theme="hints"] [finger="r4"] rect { fill: hsl(200, 100%, 85%); }
+  [theme="hints"] [finger="r4"] rect { fill: var(--color-palette-d); }
   [theme="hints"] [finger="l5"] rect,
-  [theme="hints"] [finger="r5"] rect { fill: hsl(230, 100%, 85%); }
+  [theme="hints"] [finger="r5"] rect { fill: var(--color-palette-e); }
   [theme="hints"] .specialKey   rect,
   [theme="hints"] .specialKey   path { fill: ${SPECIAL_KEY_BG}; }
   [theme="hints"] .hint         rect { fill: #a33; }

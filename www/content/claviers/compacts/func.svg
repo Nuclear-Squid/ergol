@@ -1,6 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 180">
 
   <style>
+    /* Base color palette -- https://coolors.co/9cf6f6-f3c98b-daa588-c46d5e-f56960 */
+    :root {
+      --color-palette-a: #9CF6F6;
+      --color-palette-b: #F3C98B;
+      --color-palette-c: #DAA588;
+      --color-palette-d: #C46D5E;
+      --color-palette-e: #F56960;
+    }
+
+    /* Derived color palette -- when lighter or darker shades are required */
+    :root {
+      --color-palette-a-light: #DAFCFC;
+      --color-palette-b-light: #FBEEDA;
+      --color-palette-c-light: #F5E7E0;
+      --color-palette-d-light: #EED7D2;
+      --color-palette-e-light: #FBC9C5;
+      
+      --color-palette-a-dark: #0E9595;
+      --color-palette-b-dark: #CB8215;
+      --color-palette-c-dark: #9C5630;
+      --color-palette-d-dark: #77372C;
+      --color-palette-e-dark: #99130A;
+    }
+
     :root {
       color-scheme: light dark;
     }
@@ -42,15 +66,15 @@
     text { fill: #666; }
     .hrm { fill: #ddd; }
     .mod { fill: #333; }
-    .sym { fill: blue; }
-    .nav { fill: #e83; }
+    .sym { fill: var(--color-palette-a-dark); }
+    .nav { fill: var(--color-palette-c); }
 
     @media (prefers-color-scheme: dark) {
       rect { fill: #444; }
       text { fill: #888; }
       .hrm { fill: #666; }
       .mod { fill: #eee; }
-      .sym { fill: #99f; }
+      .sym { fill: var(--color-palette-a-light); }
       .nav { fill: #e83; }
     }
   </style>

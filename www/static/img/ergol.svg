@@ -3,6 +3,30 @@
      viewBox="0 0 900 300">
 
   <style>
+    /* Base color palette -- https://coolors.co/9cf6f6-f3c98b-daa588-c46d5e-f56960 */
+    :root {
+      --color-palette-a: #9CF6F6;
+      --color-palette-b: #F3C98B;
+      --color-palette-c: #DAA588;
+      --color-palette-d: #C46D5E;
+      --color-palette-e: #F56960;
+    }
+
+    /* Derived color palette -- when lighter or darker shades are required */
+    :root {
+      --color-palette-a-light: #DAFCFC;
+      --color-palette-b-light: #FBEEDA;
+      --color-palette-c-light: #F5E7E0;
+      --color-palette-d-light: #EED7D2;
+      --color-palette-e-light: #FBC9C5;
+      
+      --color-palette-a-dark: #0E9595;
+      --color-palette-b-dark: #CB8215;
+      --color-palette-c-dark: #9C5630;
+      --color-palette-d-dark: #77372C;
+      --color-palette-e-dark: #99130A;
+    }
+
     :root {
       color-scheme: light dark;
       /* default keys */
@@ -11,15 +35,15 @@
       --fg-normal:        #333;
       --bg-normal:        #fff;
       /* special keys */
-      --fg-level3:        blue;
-      --fg-level5:        green;
-      --fg-deadkey:       red;
+      --fg-level3:        var(--color-palette-a-dark);
+      --fg-level5:        var(--color-palette-b-dark);
+      --fg-deadkey:       var(--color-palette-d-dark);
       --fg-special:       #555;
       --bg-special:       #e4e4e4;
       /* 'reach' theme */
-      --bg-number:        hsl(295, 100%, 95%);
-      --bg-letter:        hsl(222, 100%, 95%);
-      --bg-home:          hsl(222, 100%, 90%);
+      --bg-number:        var(--color-palette-a-light);
+      --bg-letter:        var(--color-palette-b-light);
+      --bg-home:          var(--color-palette-d-light);
     }
 
     @media (prefers-color-scheme: dark) { :root {
@@ -28,15 +52,15 @@
       --fg-normal:        #bbb;
       --bg-normal:        #4d4d4d;
       /* special keys */
-      --fg-level3:        #99f;
-      --fg-level5:        #6d6;
-      --fg-deadkey:       #f77;
+      --fg-level3:        var(--color-palette-a-light);
+      --fg-level5:        var(--color-palette-b-light);
+      --fg-deadkey:       var(--color-palette-d-light);
       --fg-special:       #888;
       --bg-special:       #333;
       /* 'reach' theme */
-      --bg-number:        hsl(280, 10%, 34%);
-      --bg-letter:        hsl(220, 15%, 35%);
-      --bg-home:          hsl(225, 30%, 30%);
+      --bg-number:        var(--color-palette-a-dark);
+      --bg-letter:        var(--color-palette-b-dark);
+      --bg-home:          var(--color-palette-d-dark);
     }}
 
     rect, path {
@@ -49,6 +73,7 @@
       font: normal 20px sans-serif;
       text-align: center;
       text-shadow: 0 1px 0px var(--fg-normal-shadow);
+      cursor: default;
     }
 
     .specialKey,
