@@ -16,7 +16,11 @@ class CollapsableTable extends HTMLElement {
     this.maxHeightCollapsed =
       this.maxLinesCollapsed * tableRowElement.offsetHeight;
 
-    // Actually build the content of the element (+ remove the stupid tr)
+    const tableIds = this.getAttribute('table-ids').split(' ');
+
+    const spans = tableIds.map(id => `<span id=${id}></span>`).join(' / ');
+    const tables = tableIds.map(id => `<table id=${id}></table>`).join('');
+
     shadow.innerHTML = `
       <style>
       /* Mostly copy-pasted from '/css/heatmap.css', with some ajustments */
@@ -34,6 +38,12 @@ class CollapsableTable extends HTMLElement {
         flex-wrap: wrap;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
+      }
+
+      small {
+        display: block;
+        text-align: right;
+        margin-top: -1em;
       }
 
       table {
@@ -57,30 +67,10 @@ class CollapsableTable extends HTMLElement {
       </style>
 
       <h3> ${this.id} </h3>
-      <!-- Using a style attribute on top of the stylesheet, as it is used by
-           the button 'click' event-listner -->
-      <div id='wrapper' style='max-height: ${this.maxHeightCollapsed}px;'></div>
-      <button style='display: none'> show more </button>
+      <small> ${spans} </small>
+      <div id='wrapper' style='max-height: ${this.maxHeightCollapsed}px;'> ${tables} </div>
+      <button> ⇊ </button>
     `;
-
-    // If we find a 'small' element, then move it in a '#header' div instead of
-    // the '#wrapper' div. A 'slot' is probably better, but I can’t make it work
-    const smallElement = this.querySelector('small');
-    const wrapper = shadow.getElementById('wrapper');
-    if (smallElement) {
-      // Placing the 'small' element in a wrapper div, otherwise the 'text-align'
-      // and 'margin-top' css properties don’t do anything.
-      const smallElementWrapper = document.createElement('div');
-      smallElementWrapper.id = 'header';
-      smallElementWrapper.appendChild(smallElement.cloneNode(true));
-
-      shadow.insertBefore(smallElementWrapper, wrapper);
-      // Remove the 'small' element from this.innerHTML, before moving that to shadow
-      smallElement.remove();
-    }
-
-    wrapper.innerHTML = this.innerHTML;
-    this.innerHTML = ''; // Remove original content
 
     // Setting up the `see more` button
     // Using 'function' to set 'this' to the button (self is the web component)
@@ -89,16 +79,17 @@ class CollapsableTable extends HTMLElement {
       const wrapper = shadow.getElementById('wrapper');
       if (wrapper.style.maxHeight == `${self.maxHeightCollapsed}px`) {
         wrapper.style.maxHeight = `${wrapper.children[0].offsetHeight}px`;
-        this.innerText = 'show less';
+        this.innerText = '⇈';
       } else {
         wrapper.style.maxHeight = `${self.maxHeightCollapsed}px`;
-        this.innerText = 'show more';
+        this.innerText = '⇊';
       }
     });
   }
 
-  updateTableData(tableSelector, title, values, precision) {
-    const table = this.shadowRoot.querySelector(tableSelector);
+  updateTableData(id, title, values, precision = 3) {
+    const total = this.shadowRoot.querySelector(`small #${id}`);
+    const table = this.shadowRoot.querySelector(`#wrapper #${id}`);
 
     table.innerHTML =
       `<tr><th colspan='2'>${title}</td></tr>` +
@@ -110,6 +101,12 @@ class CollapsableTable extends HTMLElement {
             `<tr><td>${digram}</td><td>${freq.toFixed(precision)}</td></tr>`,
         )
         .join('');
+
+    total.innerText =
+      Object.values(values)
+        .reduce((e, acc) => e + acc, 0)
+        .toFixed(precision)
+     + '%';
 
     this.shadowRoot.querySelector('button').style.display =
       table.offsetHeight > this.maxHeightCollapsed ? 'block' : 'none';

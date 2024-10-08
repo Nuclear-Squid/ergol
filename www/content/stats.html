@@ -4,8 +4,8 @@ title = "Analyseur"
 [params]
 description = "Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès."
 cssSheets = ["/css/heatmap.css"]
-jsModules = ["/js/x-keyboard.js", "/js/collapsable-table.js", "js/stats-canvas.js"]
-jsScripts = ["/js/layout-analyzer.js", "/js/keebs.js"]
+jsModules = ["/js/analyser-integration.js", "/js/layout-analyzer.js", "/js/x-keyboard.js", "/js/collapsable-table.js", "js/stats-canvas.js"]
+jsScripts = ["/js/keebs.js"]
 footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
@@ -40,51 +40,21 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 
 <section id="load">
   <h3>Charge des doigts</h3>
-  <small></small>
   <stats-canvas></stats-canvas>
 </section>
 
 <section id="sfu">
   <h3>Digrammes de même doigt/touche</h3>
-  <small><span id="sfu-all"></span> / <span id="sku-all"></span></small>
   <stats-canvas></stats-canvas>
 </section>
 
-<collapsable-table id="Achoppements">
-  <small>
-    <span id="unsupported-all"></span> /
-    <span id="sfu-all"></span> /
-    <span id="extensions-all"></span> /
-    <span id="scisors-all"></span>
-  </small>
-  <table id="unsupported"></table>
-  <table id="sfu-digrams"></table>
-  <table id="extended-rolls"></table>
-  <table id="scisors"></table>
+<collapsable-table id="Achoppements" table-ids="unsupported sfb lsb scisor">
 </collapsable-table>
 
-<collapsable-table id="Digrammes">
-  <small>
-    <span id="sku-all"></span> /
-    <span id="inward-all"></span> /
-    <span id="outward-all"></span>
-  </small>
-  <table id="sku-digrams"></table>
-  <table id="inward"></table>
-  <table id="outward"></table>
+<collapsable-table id="Digrammes" table-ids="skb inwardRoll outwardRoll">
 </collapsable-table>
 
-<collapsable-table id="Trigrammes">
-  <small>
-    <span id="almost-skb-all"></span> /
-    <span id="almost-sfb-all"></span> /
-    <span id="redirect-all"></span> /
-    <span id="bad-redirect-all"></span>
-  </small>
-  <table id="almost-skbs"></table>
-  <table id="almost-sfbs"></table>
-  <table id="redirect"></table>
-  <table id="bad-redirect"></table>
+<collapsable-table id="Trigrammes" table-ids="sks sfs redirect badRedirect">
 </collapsable-table>
 
 <!-- <h2>Analyseurs de layouts</h2> -->

@@ -19,6 +19,14 @@ class StatsCanvas extends HTMLElement {
 
     shadow.innerHTML = `
       <style>
+        small {
+          display: block;
+          text-align: right;
+          margin-top: -1em;
+        /* HACK: have a similar vertical alignment to collapsable-table */
+          margin-right: -4.75em;
+        }
+
         table {
           font-size: small;
           text-align: center;
@@ -40,6 +48,7 @@ class StatsCanvas extends HTMLElement {
     canvas.width = this.totalWidth;
     canvas.height = 120;
 
+    shadow.appendChild(document.createElement('small'));
     shadow.appendChild(canvas);
     shadow.appendChild(document.createElement('table'));
   }
@@ -52,6 +61,12 @@ class StatsCanvas extends HTMLElement {
     maxValue,
     // Number of decimals shown in the percentages below the bar chart
     precision,
+    // Tells the component how to sum up the values before displaying them in
+    // the `small` element above the canvas.
+    // - 'none': default, don’t do anything
+    // - 'group': displays the sums of all the categories and entries per group
+    // - 'quality': displays the sum of the values acrosse all groups per quality
+    sumMethod = 'none',
     // If true: flips the order in which values are shown
     // (`bad goes at the bottom, when it’s at the top normally).
     flipVertically = false,
@@ -59,6 +74,31 @@ class StatsCanvas extends HTMLElement {
     // of the total. (Rows filled with 0 are ignored).
     detailedValues = false
   }={}) {
+    const sum = (e, acc) => e + acc;
+    const sumUpBar = bar => bar.good + bar.meh + bar.bad;
+    const fmtPercent = (num, p) => `${num.toFixed(p)}%`;
+
+    const sumUpValues = (groups, method) => {
+      switch (method) {
+        case 'none': return '';
+        case 'group':
+          return values.map(g => g.map(sumUpBar).reduce(sum, 0))
+            .map(x => fmtPercent(x, precision))
+            .join(' / ');
+
+        case 'quality':
+          const rawSums = Object.keys(this.colors)
+            .map(quality => values.flat().map(bar => bar[quality]).reduce(sum, 0))
+            .filter(x => x > 0);
+
+          if (flipVertically) rawSums.reverse();
+
+          return rawSums.map(x => fmtPercent(x, precision)).join(' / ');
+      }
+    };
+
+    this.shadowRoot.querySelector('small').innerText = sumUpValues(values, sumMethod);
+
     const table = this.shadowRoot.querySelector('table');
     const canvas = this.shadowRoot.querySelector('canvas');
     const canvasContext = canvas.getContext('2d');
@@ -92,9 +132,6 @@ class StatsCanvas extends HTMLElement {
         canvasContext.fillRect(startPosX, startPosY, width, height);
       }
     };
-
-    const sumUpBar = bar => bar.good + bar.meh + bar.bad;
-    const fmtPercent = (num, p) => `${Math.round(10 ** p * num) / 10 ** p}%`;
 
     canvasContext.save();
     let absoluteColumnIndex = 0;
