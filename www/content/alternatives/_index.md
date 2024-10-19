@@ -79,6 +79,11 @@ soit devenir insupportables.
 |               |       |       |       |       |       | - chiffres en Shift                         |
 |               |       |       |       |       |       | - licence non libre                         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
+| [HyperTexte][]|   ·   |  oui  |  oui  |  oui  |  oui  | - non pensé pour les claviers très compacts |
+|               |       |[(h)][]|       |		|       | - non pensé pour l’écriture d’autres langues|
+|               |       |       |       |       |       | - (fr) `sc`, `pt`, `bu`                     |
+|               |       |       |       |       |       | - (en) `eo`, `oe`, `ght`                    |
++---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 
 <!-- do not remove the empty line above -->
 :::
@@ -185,7 +190,10 @@ la rangée inférieure) et de nombreux digrammes courants sont trop inconfortabl
 pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, 
 `ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça.
 
+[Note]{id="hypertexte_ctrl"} : HyperTexte ne possède pas les touches `Z`, `X`, `C` et `V` sur la main gauche. En revanche, ces raccourcis sont bien disponibles sur la couche `Ctrl`, étant respectivement en `Ctrl` + `È`, `Ê`, `É` et `À`.
+
 [(?)]:     #optimot_en
+[(h)]:     #hypertexte_ctrl
 [optimot]: ./optimot_fr.png
 [1]:       ./optimot_en.png
 
@@ -205,6 +213,7 @@ pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`,
 [colemak ft]: /lafayette/#colemak-french-touch
 [bépolar]:    /lafayette/#bépolar
 [azerty]:     /stats/#/azerty//en+fr
+[hypertexte]: https://hypertexte.beseven.fr
 
 [1DFH]:                /presentation#dfh-1u-distance-from-home
 [touche morte]:        /presentation#caractères-accentués
