@@ -81,7 +81,7 @@ cours][wezterm-patch].
 #### Les touches mortes chainées ne marchent pas dans Firefox ?
 
 Les touches mortes chainées ne sont malheureusement pas reconnues par certaines
-applications, notamment [Firefox][firefox-cdk] et [Wezterm][wezterm-cdk].
+applications, notamment [Firefox][firefox-cdk] avant la version 131 et [Wezterm][wezterm-cdk]. 
 
 #### La touche [AltGr]{.kbd} cause des problèmes dans certaines applis. Comment corriger ça ?
 
