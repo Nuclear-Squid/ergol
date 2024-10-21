@@ -51,7 +51,7 @@ Colemak French Touch
 
 {{<x-keyboard name="Colemak French Touch"
               data="colemak-french-touch" class="odk"
-              href="https://github.com/cedricr/colemak-french-touch">}}
+              href="https://codeberg.org/cedricr/colemak-french-touch">}}
 
 Inspiré de QWERTY-[Lafayette][], Colemak French Touch applique le même principe
 d’adaptation au français grâce à une [touche morte][2]. On obtient ainsi très

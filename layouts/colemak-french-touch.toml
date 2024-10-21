@@ -4,7 +4,7 @@ locale      = "fr"
 variant     = "colemkft"
 description = "French (Colemak French Touch)"
 author      = "Cedric Rossi"
-url         = "https://github.com/cedricr/colemak-french-touch"
+url         = "https://codeberg.org/cedricr/colemak-french-touch"
 geometry    = "ERGO"
 version     = "0.3.1"
 
