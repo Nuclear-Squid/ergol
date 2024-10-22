@@ -24,6 +24,15 @@ dispositions de clavier.
 
 <!--more-->
 
+<style>
+blockquote { background-color: var(--bg-banner); }
+blockquote p { margin: 0.25em 0; }
+blockquote,
+blockquote + p { margin: 0.5em auto; max-width: 42em; box-sizing: border-box; }
+blockquote + p { text-align: right; }
+li li a[href] { color: var(--fg-main); }
+</style>
+
 :::{.highlight style="max-width: 32em;"}
 - [Les fondamentaux]
   - [la heatmap]
@@ -38,11 +47,12 @@ dispositions de clavier.
 - [Optimiser pour une note globale ?]
   - [l’approche CarpalX]
   - [l’approche Optimot]
+  - [une autre note globale est-elle possible ?]
 - [Optimiser façon Ergonaute !]
   - [la méthode]
   - [les outils]
   - [la communauté]
-- [Les autres analyseurs]
+- [Les principaux analyseurs]
   - [CarpalX]
   - [KLA (keyboard-layout-analyzer)]
   - [Colemak-DH]
@@ -122,11 +132,12 @@ roulements :
 - les roulements avec extension (LSB, <i lang="en">lateral stretch bigrams</i>),
   qui incluent une touche d’une colonne excentrée ou de la rangée des chiffres.
 
-Le SFU est le principal indicateur du niveau d’optimisation d’une disposition de
-clavier, et on peut être tenté de l’utiliser comme indicateur principal de la
-qualité d’une disposition de clavier. Mais attention, un SFU très bas cache
-parfois des défauts rédhibitoires ailleurs — notamment sur les ciseaux, les
-extensions, ou la charge des doigts.
+Le taux de SKB (ou SFU, pour <i lang="en">same finger usage</i>) est le
+principal indicateur du niveau d’optimisation d’une disposition de clavier, et
+on peut être tenté de l’utiliser comme indicateur principal de la qualité d’une
+disposition de clavier. Mais attention, un SFU très bas cache parfois des
+défauts rédhibitoires ailleurs — notamment sur les ciseaux, les extensions, ou
+la charge des doigts.
 
 ### Les trigrammes
 
@@ -151,10 +162,8 @@ métriques sur les principaux critères :
 
 - la heatmap doit être centrée sur les positions confortables ;
 - la charge des doigts doit être équilibrée et épargner les auriculaires ;
-- le taux de SFB (= SFU, <i lang="en">same finger usage</i>) doit être le plus
-  bas possible ;
-- le nombre de ciseaux et LSB (= <i lang="en">lateral stretch bigrams</i>) doit
-  être le plus bas possible ;
+- le SFU doit être le plus bas possible ;
+- le nombre de ciseaux et de LSB doit être le plus bas possible ;
 - le taux de mauvaises redirections doit être le plus bas possible.
 
 Le dernier point est moins souvent pris en considération, mais du point de vue
@@ -176,27 +185,21 @@ caractérise une disposition « rolly », i.e. privilégiant les roulements.
 le cas de la très grande majorité des dispositions modernes, dont Workman et
 Ergo‑L.
 
-:::{.highlight lang="en"}
 > In designing Workman, I preferred a high SHU (low alternation) over a low SHU
 > (high alternation). I think high alternation is beneficial if you’re typing on
 > mechanical typewriters but not necessarily on modern keyboards. […]
 
 > It is much more efficient to ride the momentum of a single arm or wrist stroke
 > and type a combo rather than just one key.
-:::
-:::{style="text-align: right"}
+
 — [Kevin DeLoach][kdeloach], disposition [Workman][]
-:::
 
 C’est un constat qui est également partagé par bon nombre de Bépoètes.
 
-:::{.highlight}
 > La frappe d’un roulement facile peut être plus rapide, plus confortable et
 > moins sujette à la faute de frappe qu’une alternance de mains.
-:::
-:::{style="text-align: right"}
+
 — extrait des notes de conception de [Béop][]
-:::
 
 Et c’est un sujet qui a été longuement détaillé par [Nuclear-Squid][] dans sa
 conférence  [Ergonomie clavier : l’ère post-Dvorak][cdl2023-slides] 
@@ -230,12 +233,9 @@ Mais il y a deux choses importantes à garder à l’esprit :
 - quelle que soit sa qualité, une note globale ne sera jamais une bonne cible
   d’optimisation.
 
-:::{.highlight}
 > Lorsqu'une métrique devient un objectif, elle cesse d'être une bonne métrique.
-:::
-:::{style="text-align: right"}
+
 — [loi de Goodhart](https://fr.wikipedia.org/wiki/Loi_de_Goodhart)
-:::
 
 
 Optimiser pour une note globale ?
@@ -286,14 +286,11 @@ Ergo‑L (1.2 %). Quant à Qwerty-Flip, son SFU est très logiquement le même
 celui de Qwerty, soit 5.7 %. Le résultat est constatable immédiatement, et ce
 n’est là que le principal défaut de ces dispositions.
 
-:::{.highlight}
 > The CarpalX layout seemed attractive due to its supposed scientific derivation.
 > After getting up to 10 WPM, I think I preferred it to Dvorak. It seemed to
 > have surprisingly high same finger usage — especially the right index.
-:::
-:::{style="text-align: right"}
+
 — [u/fullyassociative]
-:::
 
 La démarche de CarpalX est basée sur un [modèle d’effort][CarpalX-effort] très
 précis, qui donne l’illusion qu’optimiser pour ce score d’effort aboutira de
@@ -321,9 +318,9 @@ si vous lisez cet article.
 
 C’est l’approche retenue par Optimot, une variante non-libre de Bépo.
 Étonamment, l’analyseur retenu est [KLAnext][], qui est loin d’être le plus
-abouti. Ayant optimisé sa disposition pour KLAnext, l’auteur d’Optimot peut
-ainsi affirmer que sa disposition est la meilleure qui soit en français, puisque
-c’est celle qui a la meilleure note sur KLAnext.
+abouti. Ayant optimisé sa disposition pour KLAnext, l’auteur d’Optimot affirme
+ainsi que sa disposition est la meilleure qui soit en français, puisque c’est
+celle qui a la meilleure note sur KLAnext.
 
 Faisons abstraction du raisonnement circulaire et intéressons-nous à l’anglais :
 Optimot a une meilleure note KLAnext en anglais que la plupart des dispositions
@@ -334,15 +331,11 @@ qu’Optimot dédie beaucoup de bonnes touches aux lettres accentuées du franç
 Là encore, deux hypothèses sont envisageables :
 
 - soit l’auteur d’Optimot a un esprit supérieur comme le monde n’en connait que
-  rarement — il y avait Einstein au XX<sup>e</sup> siècle, il y a lui au
-  XXI<sup>e</sup> ;
+  rarement ;
 - soit il a mis en évidence sur une faille de la note globale KLAnext.
 
-Les habitué·e·s du salon et du forum Bépo le savent bien, la deuxième hypothèse
-est vigoureusement rejetée par l’auteur d’Optimot. Ça fait partie de son
-caractère légendaire, pour lequel il est soit adulé, soit détesté.
-
-Et pourtant, la note globale de KLAnext comporte des failles évidentes.
+Fatalement, la deuxième hypothèse est de loin la plus probable. Et de fait, la
+note globale de KLAnext comporte des failles évidentes.
 
 - Elle *pénalise* les roulements, qui sont pourtant les meilleurs enchainements
   possibles sur un clavier informatique : optimiser pour KLAnext suppose donc de
@@ -355,44 +348,69 @@ Et pourtant, la note globale de KLAnext comporte des failles évidentes.
   Optimot a une charge de plus de 11 % sur l’auticulaire droit en français, ce
   qui est exceptionnellement élevé pour une disposition de clavier (ergonomique
   ou non) et rédhibitoire pour nombre d’utilisateurices.
+- Elle est plus sensible à la géométrie du clavier qu’à la disposition des
+  touches. Ainsi, pour l’anglais, Bépo sur Ergodox a une meilleure note que
+  Sturdy sur ANSI — et on parle là respectivement de la pire et de la meilleure
+  disposition que je connaisse pour cette langue.
 
-<!-- - Elle se base essentiellement sur la notion de distance parcourue, ce qui ne -->
-<!--   tient pas compte des déséquilibres de charge des doigts et incite à charger -->
-<!--   les auriculaires. -->
+Le cas de KLAnext est un peu caricatural, mais à mon sens le problème ne vient
+pas tant de l’analyseur que du mésusage de sa note globale : elle peut donner
+une appréciation générale, mais elle n’est pas une bonne cible d’optimisation.
 
-<!-- On notera aussi que le calcul de distance parcourue semble défectueux, en -->
-<!-- donnant beaucoup plus d’importance à la géométrie du clavier qu’à la disposition -->
-<!-- des touches : selon KLAnext, utiliser *Bépo* en *anglais* sur un Ergodox serait -->
-<!-- beaucoup plus efficace que Sturdy, MTGAP ou Colemak sur un clavier ANSI. :-D -->
+(Utiliser un analyseur <i lang="en">closed-source</i> sur un corpus secret pour
+justifier de la qualité d’une disposition reste difficile à comprendre pour le
+libriste que je suis, mais c’est un autre sujet.)
 
-Contrairement au score d’effort de CarpalX, la note globale de KLAnext est très
-simpliste : en comprendre les limites est assez trivial. Mieux vaut utiliser les
-scores individuels fournis pour chaque métrique.
+Tout ceci n’invalide pas les qualités d’Optimot : comme on le dit dans notre
+comparateur, cette disposition reste intéressante pour le français sur un
+clavier full-size ; mais elle n’est [pas optimisée pour l’anglais][optimot-en],
+et elle hérite de Bépo les défauts qui ne sont pas mesurés par KLAnext : la
+charge des doigts reste très déséquilibrée et l’utilisation de claviers
+ergonomiques reste compliquée, nécessitant des [adaptations][] même sur les
+modèles les plus courants.
 
+### Une autre note globale est-elle possible ?
+
+Toute note globale présentera les mêmes défauts :
+
+- c’est une notation très subjective, puisque la pondération des différents
+  critères change complètement le résultat ;
+- ça n’est pas une bonne cible d’optimisation, car cela pousse à négliger les
+  défauts peu punis par la notation ;
+- ça n’est pas un bon critère d’évaluation non plus, une disposition pouvant
+  avoir un défaut rédhibitoire sans affecter la note globale.
+
+S’il existait une note globale convainquante, alors produire une disposition
+parfaitement optimisée se résumerait à une optimisation mono-critère, ce qui est
+trivial — soit avec un [algorithme génétique][] ou de [recuit simulé][] comme
+CarpalX, soit en itérant manuellement comme Optimot.
+
+<!--
 <i lang="en">Fun fact</i> : [Erglace][] a une meilleure note qu’Optimot sur
 KLAnext, même en français, alors qu’elle n’a pas du tout été optimisée pour
 cette métrique. C’est purement un hasard, mais c’est l’occasion de rappeler que
 si l’objectif est de faire une optimisation mono-critère, le tâtonnement humain
-est bien plus hasardeux qu’un [algorithme adéquat][recuit simulé].
+est bien plus hasardeux qu’un algorithme adéquat.
+-->
+
+Plus la note globale est pertinente, plus le résultat d’une telle optimisation
+le sera aussi. Et ça peut faire un bon point de départ ! Mais il restera
+toujours des défauts à éradiquer, et c’est là qu’il faut changer de méthode.
 
 
 Optimiser façon Ergonaute !
 --------------------------------------------------------------------------------
 
 Comme on vient de le voir, ce n’est pas tant l’analyseur que son utilisation qui
-est en cause : aucune note globale n’étant pertinente, vouloir évaluer ou
-optimiser des dispositions à cette aune est voué à l’échec. Il faut procéder
-autrement.
+est en cause : vouloir évaluer ou optimiser des dispositions à l’aune d’une note
+globale est voué à l’échec. Il faut procéder autrement.
 
 ### La méthode
 
-:::{.highlight}
 > Quelle que soit la disposition de clavier, son pire défaut se ressentira
 > toujours plus que ses meilleures qualités.
-:::
-:::{style="text-align: right"}
+
 — crédo ergonaute
-:::
 
 C’est l’approche que l’on propose sur notre [comparateur][] et qu’on a suivie
 pendant toute la mise au point d’Ergo‑L. On a itéré comme suit :
@@ -459,7 +477,7 @@ de temps en facilitant les échanges de la communauté Ergonaute pendant le
 développement d’Ergo‑L.
 
 
-Les autres analyseurs
+Les principaux analyseurs
 --------------------------------------------------------------------------------
 
 Notre analyseur n’est ni le premier, ni le dernier à être développé. Petit tour
@@ -502,10 +520,12 @@ apportées][KLA-SteveP-about] :
 - le SHU n’est plus du tout pris en compte dans le calcul de la note globale, si
   bien que les roulements ne sont plus considérés comme une pénalité. Enfin !
 
-On persiste à recommander d’ignorer la note globale de KLA, mais ce fork de
-SteveP propose des métriques bien plus saines que KLAnext. À notre connaissance,
-c’est la version de KLA la plus utilisée — à juste titre. Noter toutefois que
-son développement s’est arrêté en mai 2021.
+Chaque variante de KLA a ses propres paramètres de pondération pour la note
+globale, qui est par nature très subjective. On recommande d’ignorer cette note.
+
+Le fork de SteveP propose des métriques bien plus saines que KLAnext. À notre
+connaissance, c’est la version de KLA la plus utilisée. C’est aussi la version
+qui a été la mieux maintenue : son développement ne s’est arrêté qu’en mai 2021.
 
 ### Colemak-DH
 
@@ -569,7 +589,7 @@ importants, notamment :
   seul analyseur qui dispose de cette fonctionnalité.
 
 On espère qu’en mettant notre analyseur maison à disposition dans Kalamine il
-puisse servir à d’autres projets qu’Ergo‑L et les dispositions de la famille
+pourra servir à d’autres projets qu’Ergo‑L et les dispositions de la famille
 Lafayette. Et il est toujours en développement actif, notamment pour les projets
 Erglace et Hypergol.
 
@@ -583,12 +603,15 @@ Conclusion
 
 Un grand merci à [Nuclear-Squid][], non seulement pour avoir initié et dirigé le
 projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction du
-chapitre sur les autres analyseurs. Que le Grand Palmipède parsème son chemin de
+chapitre sur les analyseurs. Que le Grand Palmipède parsème son chemin de
 pétales de roses.
+
 
 [1DFH]:                    /presentation/#dfh-1u-distance-from-home
 [Erglace]:                 /erglace
 [comparateur]:             /alternatives/#tableau-comparatif
+[optimot-en]:              /alternatives/#bépo-et-ses-variantes
+[adaptations]:             /claviers/#les-limitations-de-bépo-béopy-optimot
 [cdl2023-slides]:          /slides/capitoledulibre2023
 [cdl2023-video]:           https://www.youtube.com/watch?v=96RikfmBY-U
 
@@ -607,6 +630,7 @@ pétales de roses.
 [Oxeylyzer]:               https://github.com/O-X-E-Y/oxeylyzer
 [Béop]:                    http://beop.free.fr/index.php/Main/Pourquoi#Roulements
 [recuit simulé]:           https://fr.wikipedia.org/wiki/Recuit_simulé
+[algorithme génétique]:    https://fr.wikipedia.org/wiki/Algorithme_génétique
 [CarpalX]:                 https://mk.bcgsc.ca/carpalx/
 [CarpalX-source]:          https://mk.bcgsc.ca/carpalx/?download_carpalx
 [CarpalX-effort]:          https://mk.bcgsc.ca/carpalx/?typing_effort
