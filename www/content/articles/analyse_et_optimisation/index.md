@@ -18,7 +18,7 @@ trucs (et c’est bien normal). Notamment pour des questions liées aux claviers
 -->
 
 Pour que chacun·e puisse comprendre en quoi Ergo‑L se distingue et quels sont
-ses avantages et inconvénients sur les autres layouts, il était grand temps
+ses avantages et inconvénients par rapport aux autres layouts, il était grand temps
 d’écrire un article sur l’art délicat de l’analyse et de l’optimisation des
 dispositions de clavier.
 
@@ -138,7 +138,7 @@ roulements :
 - les roulements avec extension (LSB, <i lang="en">lateral stretch bigrams</i>),
   qui incluent une touche d’une colonne excentrée ou de la rangée des chiffres.
 
-Le taux de SKB (ou SFU, pour <i lang="en">same finger usage</i>) est le
+Le taux de SFB (ou SFU, pour <i lang="en">same finger usage</i>) est le
 principal indicateur du niveau d’optimisation d’une disposition de clavier, et
 on peut être tenté de l’utiliser comme indicateur principal de la qualité d’une
 disposition de clavier. Mais attention, un SFU très bas cache parfois des
@@ -494,7 +494,7 @@ métriques excellentes, le digramme `if` (<kbd>L</kbd><kbd>P</kbd> en Azerty ou
 Qwerty) m’était très inconfortable. Ergo‑L avait beau être meilleur que
 Lafayette *dans l’ensemble*, le fait qu’il soit pire sur un point aussi
 désagréable me dissuadait totalement de changer de disposition. Le problème a
-été résolu par [MoussX][] avec une permutation de trois touches : ça peut
+été résolu par [Moussx][] avec une permutation de trois touches : ça peut
 paraitre anecdotique, mais ça a *complètement* changé mon expérience de cette
 disposition de clavier.
 -->
@@ -532,7 +532,7 @@ analyseur donnait les mêmes résultats que les analyseurs existants. Et bien s�
 tout est disponible sous licence libre pour que chacun·e puisse étudier,
 modifier, utiliser et rediffuser le tout comme bon lui semblera.
 
-Outre les métriques, cet analyseur a pour but de listet tous les digrammes et
+Outre les métriques, cet analyseur a pour but de lister tous les digrammes et
 trigrammes qui peuvent causer de l’inconfort. Ce n’est pas tant un <i
 lang="en">benchmark</i> qu’un outil d’optimisation.
 
@@ -631,7 +631,7 @@ pour les développeurs qui y ont contribué. Le dernier commit remonte à juin
 
 Oxey propose aussi un analyseur très complet avec son [layout playground][],
 dont le [code source][oxeylyzer] (Rust) est disponible sous licence libre
-(Apache 2.0). Cet  Oxeylyzer  est à nos yeux le meilleur analyseur du moment :
+(Apache 2.0). Cet Oxeylyzer est à nos yeux le meilleur analyseur du moment :
 
 - des métriques précises, complètes et pertinentes : sa notion de  mauvaises
   redirections , notamment, nous a été très utile ;
@@ -676,7 +676,7 @@ Erglace et Hypergol.
 Conclusion
 --------------------------------------------------------------------------------
 
-- il n’y a pas de mauvais analyseur, juste des mauvaises façons de s’en servir :
+- il n’y a pas de mauvais analyseur, juste des mauvaises façons de s’en servir ;
 - il n’y a pas de bonne note globale, ni de bonne façon de s’en servir ;
 - chaque métrique est importante, car on a tous nos préférences et nos ressentis.
 

@@ -44,7 +44,7 @@ que la position de repos, soit à une distance supérieure à une touche.
 
 [LSB <i lang="en">(“Lateral Stretch Bigram”)</i>]{#lsb}
 
-: Bigramme comportant une extension.
+: Bigramme comportant une extension, i.e. [F]{.kbd}[G]{.kbd} en Azerty ou Qwerty. Ou pire [P]{.kbd}[^]{.kbd} en Azerty / [P]{.kbd}[\[]{.kbd} en Qwerty
 
 [Ciseau]{#ciseau}
 
