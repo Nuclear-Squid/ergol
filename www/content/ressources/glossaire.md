@@ -13,25 +13,25 @@ title = "Glossaire"
 </style>
 
 
-Ergonomie & Optimisation
+Ergonomie et Optimisation
 --------------------------------------------------------------------------------
 
-[SFB <i lang="en">(“Same Finger Bigram”)</i>]{#sfb}
+[SFB <i lang="en">(Same Finger Bigram)</i>]{#sfb}
 
 : Aussi appelé « digramme de même doigt ». Quand deux lettres s’enchaînent avec un même
 doigt, ce qui est source d’inconfort ou d’erreurs, notamment à haute vitesse.
  
-[SFU <i lang="en">(“Same Finger Usage”)</i>]{#sfu}
+[SFU <i lang="en">(Same Finger Usage)</i>]{#sfu}
 
 : Taux de SFB relevés dans un corpus de texte, exprimé en % du nombre total de digrammes.
 Plus le taux est bas, mieux c’est.
  
-[SKB <i lang="en">(“Same Key Bigram”)</i>]{#skb}
+[SKB <i lang="en">(Same Key Bigram)</i>]{#skb}
 
 : Répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
 disposition de clavier, ou `és` en Ergo‑L.
 
-[SKU <i lang="en">(“Same Key Usage”)</i>]{#sku}
+[SKU <i lang="en">(Same Key Usage)</i>]{#sku}
 
 : Taux de SKB relevés dans un corpus de texte, exprimé en % du nombre total de digrammes.
 Théoriquement, il ne dépend que du corpus ; mais il peut augmenter avec l’usage
@@ -42,14 +42,15 @@ de touches mortes.
 : Quand un doigt doit atteindre une touche qui est soit sur une autre colonne
 que la position de repos, soit à une distance supérieure à une touche.
 
-[LSB <i lang="en">(“Lateral Stretch Bigram”)</i>]{#lsb}
+[LSB <i lang="en">(Lateral Stretch Bigram)</i>]{#lsb}
 
-: Bigramme comportant une extension, i.e. [F]{.kbd}[G]{.kbd} en Azerty ou Qwerty. Ou pire [P]{.kbd}[^]{.kbd} en Azerty / [P]{.kbd}[\[]{.kbd} en Qwerty
+: Bigramme comportant une extension, c’est-à-dire [F]{.kbd}[G]{.kbd} en Azerty
+ou Qwerty. Ou pire [P]{.kbd}[^]{.kbd} en Azerty / [P]{.kbd}[\[]{.kbd} en Qwerty
 
 [Ciseau]{#ciseau}
 
-: Quand un bigramme nécessite un changement de rangée inconfortable, i.e.
-[C]{.kbd}[R]{.kbd} en Azerty ou Qwerty.
+: Quand un bigramme nécessite un changement de rangée inconfortable,
+c’est-à-dire [C]{.kbd}[R]{.kbd} en Azerty ou Qwerty.
 
 [Roulement intérieur]{#roulement}
 

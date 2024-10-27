@@ -55,17 +55,17 @@ author = "authors"
         weight  = 2
     [[menus.main]]
         name    = "Bépo ?"
-        pageRef = "/alternatives/bepo"
+        pageRef = "/bepo"
         parent  = "Alternatives"
         weight  = 1
     [[menus.main]]
         name    = "Erglace !"
-        pageRef = "/alternatives/erglace"
+        pageRef = "/erglace"
         parent  = "Alternatives"
         weight  = 2
     [[menus.main]]
         name    = "Lafayette *"
-        pageRef = "/alternatives/lafayette"
+        pageRef = "/lafayette"
         parent  = "Alternatives"
         weight  = 3
     [[menus.main]]
@@ -91,17 +91,17 @@ author = "authors"
         pageRef = "/stats"
         weight  = 4
     [[menus.main]]
-        name    = "FAQ / Ressources"
+        name    = "FAQ/Ressources"
         pageRef = "/ressources"
         weight  = 5
     [[menus.main]]
         name    = "FAQ"
         pageRef = "/ressources/faq"
-        parent  = "FAQ / Ressources"
+        parent  = "FAQ/Ressources"
     [[menus.main]]
         name    = "Glossaire"
         pageRef = "/ressources/glossaire"
-        parent  = "FAQ / Ressources"
+        parent  = "FAQ/Ressources"
     [[menus.main]]
         name    = "Apprendre"
         pageRef = "/dactylo"

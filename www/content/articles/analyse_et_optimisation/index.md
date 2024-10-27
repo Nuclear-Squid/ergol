@@ -18,9 +18,9 @@ trucs (et c’est bien normal). Notamment pour des questions liées aux claviers
 -->
 
 Pour que chacun·e puisse comprendre en quoi Ergo‑L se distingue et quels sont
-ses avantages et inconvénients par rapport aux autres layouts, il était grand temps
-d’écrire un article sur l’art délicat de l’analyse et de l’optimisation des
-dispositions de clavier.
+ses avantages et inconvénients par rapport aux autres dispositions de clavier,
+il était grand temps d’écrire un article sur l’art délicat de l’analyse et de
+l’optimisation des layouts.
 
 <!--more-->
 
@@ -32,6 +32,7 @@ blockquote,
 blockquote + p { margin: 0.5em auto; max-width: 42em; box-sizing: border-box; }
 blockquote + p { text-align: right; }
 li li a[href] { color: var(--fg-main); }
+code { font-family: monospace; }
 </style>
 
 :::{.highlight style="max-width: 32em;"}
@@ -64,7 +65,6 @@ li li a[href] { color: var(--fg-main); }
 :::
 
 
-
 Les fondamentaux
 --------------------------------------------------------------------------------
 
@@ -89,7 +89,7 @@ Ces positions correspondent à celles notées 1 à 2 par le projet
 
 On notera au passage que la question de l’accessibilité hors du pavé central de
 3×10 touches ne s’est jamais posée chez Workman : le principe [1DFH][] va de soi
-pour les dispositions anglo-saxones.
+pour les dispositions anglophones.
 
 ### La charge des doigts
 
@@ -105,7 +105,7 @@ doigts :
 On affiche en bleu la charge liée aux touches notées 1 à 2, en jaune celle des
 touches notées 3, et en orange celles notées 4 ou plus — ce qui inclut les
 touches trop excentrées pour être évaluées par Workman, et qui enfreignent le
-principe [1DFH][] auquel nous autres Ergonautes sommes si attaché·e·s.
+principe [1DFH][], auquel nous autres Ergonautes sommes si attaché·e·s.
 
 ![Charge des doigts d’Ergo‑L.](ergol.png)
 
@@ -117,26 +117,37 @@ Un digramme est un enchainement de deux touches.
 Tout digramme appartient à l’une des catégories suivantes :
 
 - alternance de mains : les touches sont sous deux mains différentes ;
-- roulement : les touches sont sous deux doigts différents d’une même main
-    - roulement intérieur : les touches s’enchainent de l’auriculaire vers l’index ;
-    - roulement extérieur : les touches s’enchainent de l’index vers l’auriculaire ;
 - digramme de même doigt (SFB) : deux touches différentes à enchainer avec le
-  même doigt (= le pire enchainement qui soit) ;
-- répétition (SKB) : la même touche est pressée deux fois.
+  même doigt ;
+- répétition (SKB) : la même touche est pressée deux fois de suite.
+- digramme de même main (SHB) : les touches sont sous deux doigts différents
+  d’une même main.
+
+On affiche les SKB en jaune et les SFB (plus gênants) en rouge. Le nombre de SFB
+et SKB dépend fortement de la disposition de clavier, alors que le nombre de SKB
+dépend essentiellement du corpus utilisé — mais l’utilisation d’une touche morte
+est de nature à augmenter le nombre de SKB. On ne peut jamais annuler ces SFB et
+SKB, mais on fait en sorte de les placer préférentiellement sur les doigts
+forts, en évitant tout particulièrement les auriculaires.
 
 ![Répartition des SFB et SKB d’Ergo‑L.](ergol_sfu.png)
 
 ![Répartition des SFB et SKB de Bépo.](bepo_sfu.png)
 
-Les roulements intérieurs sont considérés comme les enchainements les plus
-confortables. Entre alternance de mains et roulements extérieurs, c’est plus une
-question de préférence personnelle. On identifie aussi deux types de mauvais
-roulements :
+Lors d’un enchainement rapide de deux touches, il est fréquent (voire
+systématique) que la deuxième touche soit pressée avant que la première ne soit
+relâchée. C’est particulièrement vrai pour les digrammes de même main.
 
-- les roulements avec « ciseau », qui requièrent un changement de rangée
-  inconfortable, comme [C]{.kbd}[R]{.kbd} en Azerty ou Qwerty ;
-- les roulements avec extension (LSB, <i lang="en">lateral stretch bigrams</i>),
-  qui incluent une touche d’une colonne excentrée ou de la rangée des chiffres.
+Les digrammes de même main sont plus délicats à qualifier. On distingue :
+
+- roulement intérieur : l’enchainement se fait confortablement de l’auriculaire
+  vers l’index (le meilleur enchainement qui soit) ;
+- roulement extérieur : l’enchainement se fait confortablement de l’index vers
+  l’auriculaire (confort comparable à une alternance de mains) ;
+- ciseau : l’enchainement requiert un changement de rangée inconfortable, comme
+  [C]{.kbd}[R]{.kbd} en Azerty ou Qwerty ;
+- extension (LSB, <i lang="en">lateral stretch bigrams</i>) : l’enchainement
+  inclut une touche d’une colonne excentrée ou de la rangée des chiffres.
 
 Le taux de SFB (ou SFU, pour <i lang="en">same finger usage</i>) est le
 principal indicateur du niveau d’optimisation d’une disposition de clavier, et
@@ -149,10 +160,10 @@ la charge des doigts.
 
 Un trigramme est un enchainement de trois touches.
 
-Les critères alternance / roulement / même doigt s’appliquent toujours, mais on
-ajoute encore la notion de « redirection » pour les trigrammes faits d’une même
-main avec un changement de direction, comme [D]{.kbd}[S]{.kbd}[F]{.kbd} ou
-[K]{.kbd}[J]{.kbd}[L]{.kbd} en Azerty ou Qwerty.
+Les critères « alternance », « roulement », « du même doigt » s’appliquent
+toujours, mais on ajoute encore la notion de redirection pour les trigrammes
+faits d’une même main avec un changement de direction, comme
+[D]{.kbd}[S]{.kbd}[F]{.kbd} ou [K]{.kbd}[J]{.kbd}[L]{.kbd} en Azerty ou Qwerty.
 
 La redirection est qualifiée de « mauvaise » quand elle ne fait pas intervenir
 l’index.
@@ -169,8 +180,8 @@ métriques sur les principaux critères :
 :::{.highlight}
 - la heatmap doit être centrée sur les positions confortables ;
 - la charge des doigts doit être équilibrée et épargner les auriculaires ;
-- le SFU doit être le plus bas possible ;
-- le nombre de ciseaux et de LSB doit être le plus bas possible ;
+- le taux de digrammes de même doigt (SFU) doit être le plus bas possible ;
+- le nombre de ciseaux et d’extensions (LSB) doit être le plus bas possible ;
 - le taux de mauvaises redirections doit être le plus bas possible.
 :::
 
@@ -190,14 +201,14 @@ Le SHU mesure la répartition entre alternances de mains et roulements.
 À l’époque des machines à écrire mécaniques, le SHU devait être le plus bas
 possible car les roulements coinçaient souvent les marteaux : Qwerty, et encore
 plus Dvorak, ont été développés dans cet objectif. C’est aussi le cas de Bépo et
-ses nombreuses variantes.
+de ses nombreuses variantes.
 
-Mais de nos jours, les claviers informatiques n’ayant pas de contrainte de ce
+Mais, de nos jours, les claviers informatiques n’ayant pas de contrainte de ce
 type, cette métrique du SHU n’est plus utilisée pour mesurer la qualité d’une
 disposition — voire, elle est souvent utilisée dans l’autre sens : un SHU élevé
-caractérise une disposition « rolly », i.e. privilégiant les roulements. C’est
-le cas de la très grande majorité des dispositions modernes, dont Workman et
-Ergo‑L.
+caractérise une disposition « rolly », c’est-à-dire privilégiant les roulements.
+C’est le cas de la très grande majorité des dispositions modernes, dont Workman
+et Ergo‑L.
 
 > In designing Workman, I preferred a high SHU (low alternation) over a low SHU
 > (high alternation). I think high alternation is beneficial if you’re typing on
@@ -216,7 +227,7 @@ C’est un constat qui est également partagé par bon nombre de Bépoètes.
 — extrait des notes de conception de [Béop][]
 
 Et c’est un sujet qui a été longuement détaillé par [Nuclear-Squid][] dans sa
-conférence  [Ergonomie clavier : l’ère post-Dvorak][cdl2023-slides] 
+conférence « [Ergonomie clavier : l’ère post-Dvorak][cdl2023-slides] »
 ([vidéo][cdl2023-video]).
 
 Attention : les dispositions de clavier qui privilégient les roulements prennent
@@ -226,12 +237,12 @@ le risque d’avoir un taux élevé de mauvaises redirections.
 
 Une métrique originale consiste à mesurer la distance parcourue par les doigts
 pendant la saisie d’un texte. Elle a été rendue populaire par CarpalX et KLA :
-facile à calculer, c’est toujours amusant de savoir combien de kilomètres nos
+facile à calculer, et c’est toujours amusant de savoir combien de kilomètres nos
 doigts parcourent pour saisir un texte. :-)
 
 La communauté Ergonaute n’utilise pas cette métrique car elle n’est pertinente
 que si l’on suppose que tous les déplacements de doigt se valent — ce qui est
-évidemment faux (V. le § sur la [heatmap](#la-heatmap)).
+évidemment faux (voir le paragraphe sur la [heatmap](#la-heatmap)).
 
 ### Note globale ?
 
@@ -278,7 +289,7 @@ critères, notamment :
 - le SFU ;
 - les roulements ;
 - la réduction de la charge des auriculaires ;
-- la limitations des enchainements complexes.
+- la limitation des enchainements complexes.
 
 CarpalX a ainsi abouti à la disposition [QFMLWY][], qui a le meilleur score
 d’effort possible. Et la disposition [Qwerty-Flip][] a un score d’effort quasi
@@ -295,8 +306,8 @@ Et pourtant, personne n’utilise ces dispositions. Pourquoi ?
   d’effort peut masquer des défauts majeurs.
 
 Et de fait : le score d’effort accorde bien trop peu d’importance au SFU. Il
-s’élève à 4.6 % pour QFMLWY, bien loin de Dvorak (2.7 %), Colemak (1.6 %) ou
-Ergo‑L (1.2 %). Quant à Qwerty-Flip, son SFU est très logiquement le même que
+s’élève à 4,6 % pour QFMLWY, bien loin de Dvorak (2,7 %), Colemak (1,6 %) ou
+Ergo‑L (1,2 %). Quant à Qwerty-Flip, son SFU est très logiquement le même que
 celui de Qwerty, soit 5.7 %. Le résultat est constatable immédiatement, et ce
 n’est là que le principal défaut de ces dispositions.
 
@@ -304,14 +315,17 @@ n’est là que le principal défaut de ces dispositions.
 > After getting up to 10 WPM, I think I preferred it to Dvorak. It seemed to
 > have surprisingly high same finger usage — especially the right index.
 
+> Digrams using A, F, I, and P felt uncomfortable, and common enough to really
+> bug me. Seemed like a big oversight to an otherwise great layout.
+
 — [u/fullyassociative]
 
 La démarche de CarpalX est basée sur un [modèle d’effort][CarpalX-effort] très
 précis, qui donne l’illusion qu’optimiser pour ce score d’effort aboutira de
-façon scientique à la meilleure disposition possible ; et intuitivement, on a
+façon scientique à la meilleure disposition possible ; et, intuitivement, on a
 envie d’y croire !
 
-Mais en pratique, toutes les dispositions issues de ce type d’optimisation ont
+Mais, en pratique, toutes les dispositions issues de ce type d’optimisation ont
 des défauts rédhibitoires qui sont noyés dans la moyenne du score d’effort. Ce
 score, aussi élaboré soit-il, ne parvient pas à rendre compte de la qualité
 d’une disposition.
@@ -326,38 +340,48 @@ atteint là les limites de l’optimisation mono-critère.
 
 S’il existait une note globale pertinente mais que vous n’aviez pas de
 compétence en programmation, vous pourriez passer par un analyseur en ligne qui
-propose ce type d’évaluation et à force d’essais, vous obtiendriez une
+propose ce type d’évaluation et, à force d’essais, vous obtiendriez une
 disposition très bien notée pour votre langue cible — probablement le français,
 si vous lisez cet article.
 
-C’est l’approche retenue par Optimot, une variante non-libre de Bépo.
-Étonamment, l’analyseur retenu est [KLAnext][], qui est loin d’être le plus
-abouti. Ayant optimisé sa disposition pour KLAnext, l’auteur d’Optimot affirme
-ainsi que sa disposition est la meilleure qui soit en français, puisque c’est
-celle qui a la meilleure note sur KLAnext.
+C’est l’approche retenue par Optimot, une variante non libre de Bépo.
+Étonnamment, l’analyseur retenu est [KLAnext][], qui est [loin d’être le plus
+abouti][les principaux analyseurs]. Ayant optimisé sa disposition pour KLAnext,
+l’auteur d’Optimot affirme ainsi que sa disposition est la meilleure en
+français, puisque c’est celle qui a la meilleure note sur KLAnext.
 
 Faisons abstraction du raisonnement circulaire et intéressons-nous à l’anglais :
-Optimot a une meilleure note KLAnext en anglais que la plupart des dispositions
-anglophones modernes. Comment est-ce possible ? Alors que c’est un domaine de
-recherche très actif chez les anglo-saxons depuis deux décennies ? Et alors
-qu’Optimot dédie beaucoup de bonnes touches aux lettres accentuées du français ?
+dans cette langue, Optimot a une note KLAnext quasi équivalente à celle de Colemak
+et MTGAP, qui sont deux des meilleures dispositions anglophones modernes.
+Comment est-ce possible ? Alors que c’est un domaine de recherche très actif
+chez les anglo-saxons depuis deux décennies ? Et alors qu’Optimot dédie beaucoup
+de bonnes touches aux lettres accentuées du français ? Et alors que son auteur
+confirme que l’anglais n’est qu’un objectif secondaire de cette disposition ?
+
+> Moi aussi, je peux modifier légèrement Optimot pour optimiser un peu plus pour
+> l’anglais (mais au détriment du français). Mais ce n’est pas mon choix parce
+> que nous sommes en France et que je m’adresse à des personnes qui écrivent
+> d’abord en français.
+
+— Pyjam, auteur d’Optimot
 
 Là encore, deux hypothèses sont envisageables :
 
 - soit l’auteur d’Optimot a un esprit supérieur comme le monde n’en connait que
   rarement ;
-- soit il a mis en évidence sur une faille de la note globale KLAnext.
+- soit il a mis en évidence une faille de la note globale KLAnext.
 
 Fatalement, la deuxième hypothèse est de loin la plus probable. Et de fait, la
 note globale de KLAnext comporte des failles évidentes.
 
 - Elle *pénalise* les roulements, qui sont pourtant les meilleurs enchainements
-  possibles sur un clavier informatique : optimiser pour KLAnext suppose donc de
+  possibles sur un clavier informatique. Optimiser pour KLAnext suppose donc de
   *casser* les roulements et ainsi de *dégrader* la disposition.
 - Elle ne pénalise ni les extensions de doigts, ni les ciseaux : le `EN`
   d’Ergo‑L et le `WH` de Bépo (<kbd>D</kbd><kbd>F</kbd> et
   <kbd>]</kbd><kbd>.</kbd> en Qwerty) ont la même pénalité, alors qu’il s’agit
-  respectivement du meilleur et du pire enchainement possible.
+  respectivement du meilleur et du pire enchainement possible. Optimiser pour
+  KLAnext fait privilégier les *ciseaux* aux roulements.
 - Elle ne semble pas prendre en compte l’équilibre de la charge des doigts.
   Optimot a une charge de plus de 11 % sur l’auriculaire droit en français, ce
   qui est exceptionnellement élevé pour une disposition de clavier (ergonomique
@@ -368,25 +392,29 @@ note globale de KLAnext comporte des failles évidentes.
   disposition qui soient pour cette langue, cette note ne traduit pas du tout
   l’écart de confort ressenti.
 
+![Scores KLAnext de Bépo et Sturdy en anglais.](klanext_bepo.png)
+
 Le cas de KLAnext est un peu caricatural, mais à mon sens le problème ne vient
 pas tant de l’analyseur que du mésusage de sa note globale : elle peut donner
-une appréciation générale, mais elle n’est pas une bonne cible d’optimisation.
+une première appréciation générale, mais elle n’est pas une bonne cible
+d’optimisation.
 
 Tout ceci n’invalide pas les qualités d’Optimot : comme on le dit dans notre
-comparateur, cette disposition reste intéressante pour le français sur un
-clavier full-size ; mais elle n’est [pas optimisée pour l’anglais][optimot-en],
-et elle hérite de Bépo les défauts qui ne sont pas mesurés par KLAnext : la
-charge des doigts reste très déséquilibrée et l’utilisation de claviers
-ergonomiques reste compliquée, nécessitant des [adaptations][] même sur les
-modèles les plus courants.
+[comparateur][], cette disposition reste une belle amélioration de Bépo pour le
+même objectif, écrire en français sur un clavier standard. Mais elle n’est [pas
+optimisée pour l’anglais][optimot-en], comme le reconnait son auteur à juste
+titre ; et, si l’optimisation basée sur KLAnext a permis de réduire
+significativement le SFU, elle n’a pas permis de corriger le nombre de ciseaux
+(LSB) et le mauvais équilibre de la charge des doigts, deux défauts hérités de
+Bépo mais ignorés par KLAnext.
 
 ### Une autre note globale est-elle possible ?
 
-J’avoue avoir longtemps été persuadé que le problème était seulement que les
-notes globales de CarpalX et KLA/KLAnext étaient mauvaises, mais qu’il devait
-forcément y avoir une bonne métrique ailleurs.
+Après avoir constaté que les notes globales de CarpalX et KLA/KLAnext étaient
+mauvaises, j’ai longtemps été persuadé qu’il devait *forcément* y avoir une
+bonne métrique globale ailleurs.
 
-Mais à l’usage, on s’est rendus compte que toute note globale présentera les
+Mais, à l’usage, on s’est rendu compte que toute note globale présentera les
 mêmes défauts :
 
 - c’est une notation très subjective, puisque la pondération des différents
@@ -394,19 +422,26 @@ mêmes défauts :
 - ça n’est pas une bonne cible d’optimisation, car cela pousse à négliger les
   défauts peu punis par la notation ;
 - ça n’est pas un bon critère d’évaluation non plus, une disposition pouvant
-  avoir un défaut rédhibitoire sans affecter la note globale.
+  avoir un défaut rédhibitoire sans que cela affecte la note globale.
 
-C’est souvent un gros <i lang="en">red flag</i> quand une disposition met en
-avant une note globale plutôt que des métriques objectives. Le comble serait
-d’utiliser un analyseur <i lang="en">closed-source</i> sur un corpus gardé
-secret… mais à ma connaissance, seul Optimot fait ça ! 😅
+Durant la conception d’Ergo‑L, on a perdu beaucoup de temps sur le projet à
+tenter des optimisations mono-critères avec un [algorithme génétique][] ou de
+[recuit simulé][]. Certains outils plus aboutis comme <i lang="en">[Keyboard
+Layout Optimizer][KLO]</i>, qui a été utilisé pour Neo2, nous semblaient
+prometteurs ; mais, à l’usage, ils ont été bien moins utiles que de simples
+boucles pour explorer des possibilités par force brute, que [Nuclear-Squid][] a
+codées vite fait.
 
-On a perdu beaucoup de temps sur le projet à tenter des optimisations
-mono-critères avec un [algorithme génétique][] ou de [recuit simulé][]. Certains
-outils plus aboutis comme <i lang="en">[keyboard layout optimizer][KLO]</i>, qui
-a été utilisé pour Neo2, nous semblaient prometteurs ; mais à l’usage, ils ont
-été bien moins utiles que de simples boucles pour explorer des possibilités par
-force brute, que [Nuclear-Squid][] a codé vite fait.
+> Les chiffres sont aux analystes ce que les lampadaires sont aux ivrognes :
+> ils fournissent bien plus un appui qu’un éclairage.
+
+— Jean Dion
+
+C’est un gros <i lang="en">red flag</i> quand une disposition met en avant une
+note globale plutôt que des métriques objectives, car c’est souvent une façon
+(délibérée ou non) de passer sous silence les pires aspects d’une disposition de
+clavier. Et ça devient franchement trompeur quand la disposition a été optimisée
+pour cette note globale.
 
 
 Optimiser façon Ergonaute !
@@ -421,8 +456,8 @@ globale est voué à l’échec. Il faut procéder autrement.
 Avant de se lancer dans l’élaboration d’une disposition de clavier, il est
 vivement recommandé de chercher un maximum d’informations sur le sujet. Les
 mille et une variantes de Bépo qui ont fleuri laissent penser que la plupart des
-adeptes francophones d’ergonomie clavier sont restés sur les principes Dvorak,
-qui datent des années 1930 et concernaient les machines à écrire.
+adeptes francophones d’ergonomie clavier sont restés sur les principes Dvorak
+qui, datant des années 1930, concernaient les machines à écrire.
 
 Or, beaucoup de choses ont changé depuis une petite vingtaine d’années, avec
 notamment : 
@@ -436,8 +471,8 @@ notamment :
 
 On essaye de regrouper et vulgariser un maximum d’informations à ce sujet sur ce
 site et sur le [serveur Discord][], en espérant que ça puisse aider les auteurs
-et autrices de disposition. Coté anglo-saxon, [r/KeyboardLayouts][] et [Alt
-Keyboard Layouts][] sont des mines d’or.
+et autrices de disposition. Côté anglophone, [r/KeyboardLayouts][] et le
+[Keyboard Layouts doc][] sont des mines d’or.
 
 ### La méthode
 
@@ -453,41 +488,46 @@ Keyboard Layouts][] sont des mines d’or.
 C’est l’approche que l’on propose sur notre [comparateur][] et qu’on a suivie
 pendant toute la mise au point d’Ergo‑L. On a itéré comme suit :
 
-1. identifier le pire achoppement de la disposition (SFB, ciseau, redirection…) ;
-2. améliorer notre analyseur pour qualifier et mesurer cet achoppement ;
-3. trouver une modification du layout qui, sur la foi de l’analyseur, réduise
-   cet achoppement ;
-4. utiliser ce layout jusqu’à détecter un autre achoppement (généralement moins grave) ;
-5. `GOTO 1`
+1. Identifier le pire achoppement de la disposition (SFB, ciseau, redirection…).
+2. Améliorer notre analyseur pour qualifier et mesurer cet achoppement.
+3. Trouver une modification du layout qui, sur la foi de l’analyseur, réduise
+   cet achoppement.
+4. Utiliser ce layout jusqu’à détecter un autre achoppement (généralement moins
+   grave).
+5. `GOTO 1`.
 
 On n’a donc jamais eu aucun usage d’une note globale. Au contraire, on regarde
 toujours la pire note et les pires enchainements pour évaluer une disposition et
 proposer des améliorations.
 
 Cela dit, il y a bien une métrique que l’on regarde plus que les autres, c’est
-le SFU : ça donne assez rapidement une idée de la marge d’optimisation qui reste
-possible. Pour autant, et même si on est très fier du SFU d’Ergo‑L en français
-comme en anglais, ça n’est pas un objectif en soi : [Nuclear-Squid][] a même rejeté
-des versions de développement d’Ergo‑L qui avaient des SFU incroyablement bas,
-mais qui causaient d’autres problèmes plus sournois à l’usage.
+le SFU : ça donne assez rapidement une idée de la marge d’optimisation, qui
+reste possible. Pour autant, et même si on est très fièr·e·s du SFU d’Ergo‑L en
+français comme en anglais, ça n’est pas un objectif en soi : [Nuclear-Squid][] a
+même rejeté des versions de développement d’Ergo‑L qui avaient des SFU
+incroyablement bas, mais qui causaient d’autres problèmes plus sournois à
+l’usage.
  
 C’est notamment le cas de [Colemak French Touch][], sur lequel on est tombé un
-peu accidentellement sur la fin du projet. Le SFU est terrifiant (0.6 %), et
-même si la charge des doigts n’est pas très équilibrée, le fait de coller à une
-disposition très connue était un avantage auquel on était sensible, à tel point
-qu’on a envisagé d’annuler la sortie (alors imminente) d’Ergo‑L 1.0 ! Mais il
-est apparu assez vite que la redirection `OUI` était *très* inconfortable. Et on
-est retombé sur une conclusion qui nous était déjà apparue plus tôt dans le
-projet : soit on répartit ces trois lettres sur les deux mains, soit il faut que
-l’une des trois soit sous un index.
+peu accidentellement sur la fin du projet. Le SFU est terrifiant (0.7 %),  le
+fait de coller à une disposition très connue était un avantage auquel on était
+sensible, à tel point qu’on a envisagé d’annuler la sortie (alors imminente)
+d’Ergo‑L 1.0 ! Mais deux problèmes sont apparus assez vite :
 
-D’une façon générale : quand on tombe sur un enchainement inconfortable, avec la
-pratique il devient soit plus confortable, soit carrément insupportable. D’où
-l’intérêt de pratiquer la disposition qu’on utilise – et idéalement, d’être
-plusieurs personnes différentes à pratiquer. On n’a pas tous les mêmes zones
-d’inconfort sur un clavier. 
+- la charge des doigts était trop déséquilibrée, surtout en anglais
+  étrangement ;
+- la redirection `OUI` était *très* inconfortable. Et on est retombé sur une
+  conclusion qui nous était déjà apparue plus tôt dans le projet : soit on
+  répartit ces trois lettres sur les deux mains, soit il faut que l’une des
+  trois soit sous un index.
 
-<!--
+On constate que les enchainements inconfortables évoluent de deux façons
+possibles avec la pratique : soit ils deviennent acceptables, soient ils se
+révèlent insupportables. D’où l’intérêt de pratiquer la disposition qu’on
+utilise – et idéalement, d’être plusieurs personnes différentes à pratiquer.
+Les zones d’inconfort sont propres à chacun·e d’entre nous, et cela peut
+dépendre autant de la personne que du type de clavier.
+
 En ce qui me concerne, mes premiers tests d’Ergo‑L remontent à la version 0.7,
 qui ne diffère que très légèrement d’Ergo‑L 1.0. Et bien qu’Ergo‑L 0.7 ait des
 métriques excellentes, le digramme `if` (<kbd>L</kbd><kbd>P</kbd> en Azerty ou
@@ -497,7 +537,6 @@ désagréable me dissuadait totalement de changer de disposition. Le problème a
 été résolu par [Moussx][] avec une permutation de trois touches : ça peut
 paraitre anecdotique, mais ça a *complètement* changé mon expérience de cette
 disposition de clavier.
--->
 
 Il faut évidemment avoir des stats solides, et savoir les faire évoluer tout au
 long de l’optimisation d’une disposition de clavier ; mais il nous semble tout
@@ -527,9 +566,9 @@ On a développé notre propre analyseur pour plusieurs raisons :
   fonctionnalités requises pour développer un analyseur ;
 - c’était simple et fun à faire. :-)
 
-Bien évidemment, on a vérifié que pour un même layout et un même corpus, notre
-analyseur donnait les mêmes résultats que les analyseurs existants. Et bien sûr,
-tout est disponible sous licence libre pour que chacun·e puisse étudier,
+Bien évidemment, on a vérifié que, pour un même layout et un même corpus, notre
+analyseur donnait les mêmes résultats que les analyseurs existants. Et, bien
+sûr, tout est disponible sous licence libre pour que chacun·e puisse étudier,
 modifier, utiliser et rediffuser le tout comme bon lui semblera.
 
 Outre les métriques, cet analyseur a pour but de lister tous les digrammes et
@@ -544,15 +583,15 @@ une qui convienne au plus grand nombre, c’est une autre histoire.
 En particulier, on a tou·te·s des niveaux de tolérance différents à certains
 défauts de layout : pour moi les extensions d’auriculaires sont particulièrement
 pénibles, alors que d’autres préfèrent ça plutôt que d’utiliser AltGr ;
-certain·e·s s’accomodent bien des ciseaux (notamment les utilisateurices de
-claviers 3D), d’autres pas du tout ; et les mauvaises redirection sont le point
+certain·e·s s’accommodent bien des ciseaux (notamment les utilisateurices de
+claviers 3D), d’autres pas du tout ; et les mauvaises redirections sont le point
 le plus clivant : certain·e·s s’y font, mais beaucoup trouvent ça rédhibitoire à
 l’usage.
 
 Pour prendre en compte toutes ses particularités, notre analyseur ne se contente
 pas de mesurer chaque type d’achoppement mais les détaille en listant tous les
 digrammes et trigrammes pouvant poser problème. Ça nous a fait gagner beaucoup
-de temps en facilitant les échanges de la communauté Ergonaute pendant le
+de temps en facilitant les échanges de la communauté des Ergonautes pendant le
 développement d’Ergo‑L.
 
 
@@ -565,27 +604,27 @@ d’horizon des autres analyseurs parmi les plus connus et les plus utiles.
 ### CarpalX
 
 [CarpalX][] est un analyseur et optimiseur en Perl, proposé par [Martin
-Krzywinski][] sous licence non-libre (CC-BY-NC-SA 4.0). Le [code
+Krzywinski][] sous licence non libre (CC-BY-NC-SA 4.0). Le [code
 source][CarpalX-source] est disponible sur son site, la dernière modification
 (version 0.12) remonte à 2015.
 
-CarpalX a un intérêt historique mais comme [mentionné plus
+CarpalX a un intérêt historique mais, comme [mentionné plus
 haut](#lapproche-carpalx), son score d’effort ne permet pas de fournir une
 évaluation fiable. Loin s’en faut. Il a globalement été une perte de temps
 pour le développement d’Ergo‑L.
 
-### KLA (<i lang="en">keyboard layout analyzer</i>)
+### KLA (<i lang="en">Keyboard Layout Analyzer</i>)
 
 [KLA][] est un analyseur libre en PHP et JS, proposé par [Patrick
 Gillespie][patorjk] sous licence libre (MIT). Le [code source][KLA-source] est
-disponible sur github, la dernière modification remonte à 2019.
+disponible sur GitHub, la dernière modification remonte à 2019.
 
-[KLAnext][] est un fork non-libre de KLA par [Ian Douglas][]. Ce fork est
+[KLAnext][] est un fork non libre de KLA par [Ian Douglas][]. Ce fork est
 lui-même dérivé de [KLAtest][] ([source][KLAtest-source]) par [Xay Vong][],
-a.k.a. “Shena’Fu” ou “Den”. Sans dépôt de code, difficile d’évaluer ce
-qu’apporte KLAnext à l’original — mais comme évoqué plus haut, il ne nous semble
-pas pertinent. C’est en référence aux failles de KLAnext que la plaisanterie
-*« [Qwerty-Lafayette est le meilleur layout du monde !][lafayette_mldm] »* est
+a.k.a. Shena’Fu ou Den. Sans dépôt de code, difficile d’évaluer ce qu’apporte
+KLAnext à l’original — mais, comme évoqué plus haut, il ne nous semble pas
+pertinent. C’est en référence aux failles de KLAnext que la plaisanterie
+« *[Qwerty-Lafayette est le meilleur layout du monde !][lafayette_mldm]* » est
 devenue récurrente dans la communauté ergonaute. :-)
 
 Plus intéressant, [SteveP][] a développé un [fork libre de KLA][KLA-SteveP]
@@ -631,30 +670,33 @@ pour les développeurs qui y ont contribué. Le dernier commit remonte à juin
 
 Oxey propose aussi un analyseur très complet avec son [layout playground][],
 dont le [code source][oxeylyzer] (Rust) est disponible sous licence libre
-(Apache 2.0). Cet Oxeylyzer est à nos yeux le meilleur analyseur du moment :
+(Apache 2.0). Cet « Oxeylyzer » est à nos yeux le meilleur analyseur du moment :
 
 - des métriques précises, complètes et pertinentes : sa notion de  mauvaises
-  redirections , notamment, nous a été très utile ;
-- facile à interpréter grâce aux codes de couleur (vert c’est bien, rouge c’est mal) ;
+  redirections, notamment, nous a été très utile ;
+- facile à interpréter grâce aux codes de couleur (vert, c’est bien ; rouge,
+  c’est mal) ;
 - pas de note globale (tant mieux !), mais efficace pour vite repérer les points
   faibles d’une disposition ;
 - très pratique pour tester des permutations de touches.
 
 Il est limité aux dispositions [1DFH][] (3×5 touches par main), ce qui nous
-semble très pertinent mais ça serait un inconvénient pour des dispositions du
-type Bépo.
+semble très pertinent d’un point de vue ergonomique, mais ça serait un
+inconvénient pour des dispositions du type Bépo, qui font le choix d’étaler les
+lettres sur deux colonnes supplémentaires afin de moins recourir aux touches
+mortes.
 
-C’est vraiment la référence pour nous. On le recommande vivement ! Et le projet
-est activement maintenu, le dernier commit datant de moins de 6 mois à l’heure
-où j’écris ces lignes.
+Oxeylyzer est vraiment la référence pour nous. On le recommande vivement ! Et le
+projet est activement maintenu, le dernier commit datant de moins de 6 mois à
+l’heure où j’écris ces lignes.
 
 ### Kalamine 🚀
 
 [Kalamine][] est avant tout le générateur de pilotes que l’on a développé pour
-Qwerty-Lafayette et Ergo‑L ; mais au fil du temps il s’est transformé en outil
-de mise au point tout-en-un pour les auteurs de disposition de clavier.
-L’analyseur d’Ergo‑L vient ainsi d’être intégré à Kalamine, ce qui permet de
-visualiser directement l’impact de chaque modification de layout.
+Qwerty-Lafayette et Ergo‑L ; mais, au fil du temps, il s’est transformé en outil
+de mise au point tout-en-un pour les auteurs et autrices de dispositions de
+clavier. L’analyseur d’Ergo‑L vient ainsi d’être intégré à Kalamine, ce qui
+permet de visualiser directement l’impact de chaque modification de layout.
 
 Le générateur est écrit en Python, l’analyseur en JavaScript, et le code source
 est proposé sous licence libre (MIT).
@@ -676,19 +718,25 @@ Erglace et Hypergol.
 Conclusion
 --------------------------------------------------------------------------------
 
-- il n’y a pas de mauvais analyseur, juste des mauvaises façons de s’en servir ;
-- il n’y a pas de bonne note globale, ni de bonne façon de s’en servir ;
-- chaque métrique est importante, car on a tous nos préférences et nos ressentis.
+- Il n’y a pas de mauvais analyseur, juste des mauvaises façons de s’en servir.
+- Il n’y a pas de bonne note globale, ni de bonne façon de s’en servir.
+- Chaque métrique est importante, car on a toutes et tous nos préférences et nos
+  ressentis.
 
 Un grand merci à [Nuclear-Squid][], non seulement pour avoir initié et dirigé le
 projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction du
 chapitre sur les analyseurs. Que le Grand Palmipède parsème son chemin de
 pétales de roses.
 
+Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][] et
+[Xiloynaha][] pour la relecture, les suggestions et les corrections. C’est un
+artiqle que je n’aurais jamais pu écrire tout seul. La communauté Ergo‑L est
+fantastique. :-)
+
 
 [1DFH]:                    /presentation/#dfh-1u-distance-from-home
 [Erglace]:                 /erglace
-[Colemak French Touch]:    lafayette/#colemak-french-touch
+[Colemak French Touch]:    /lafayette/#colemak-french-touch
 [claviers compacts]:       /claviers/compacts
 [comparateur]:             /alternatives/#tableau-comparatif
 [optimot-en]:              /alternatives/#bépo-et-ses-variantes
@@ -727,8 +775,13 @@ pétales de roses.
 [KLA-SteveP-source]:       https://github.com/stevep99/keyboard-layout-analyzer
 [loi de Fitts]:            https://fr.wikipedia.org/wiki/Loi_de_Fitts
 [KLO]:                     https://github.com/dariogoetz/keyboard_layout_optimizer
+[Keyboard Layouts doc]:    https://bit.ly/layout-doc-v2
+[r/KeyboardLayouts]:       https://www.reddit.com/r/KeyboardLayouts/
 
 [Nuclear-Squid]:           https://github.com/Nuclear-Squid
+[Moussx]:                  https://github.com/gagbo
+[Meriem]:                  https://mastodon.xyz/@meriem
+[aurelberra]:              https://github.com/aurelberra
 [kdeloach]:                https://github.com/kdeloach
 [patorjk]:                 https://patorjk.com/
 [SteveP]:                  https://github.com/stevep99
