@@ -117,18 +117,18 @@ Un digramme est un enchainement de deux touches.
 Tout digramme appartient à l’une des catégories suivantes :
 
 - alternance de mains : les touches sont sous deux mains différentes ;
+- digramme de même main : les touches sont sous deux doigts différents d’une
+  même main ;
 - digramme de même doigt (SFB) : deux touches différentes à enchainer avec le
   même doigt ;
 - répétition (SKB) : la même touche est pressée deux fois de suite.
-- digramme de même main (SHB) : les touches sont sous deux doigts différents
-  d’une même main.
 
 On affiche les SKB en jaune et les SFB (plus gênants) en rouge. Le nombre de SFB
-et SKB dépend fortement de la disposition de clavier, alors que le nombre de SKB
-dépend essentiellement du corpus utilisé — mais l’utilisation d’une touche morte
-est de nature à augmenter le nombre de SKB. On ne peut jamais annuler ces SFB et
-SKB, mais on fait en sorte de les placer préférentiellement sur les doigts
-forts, en évitant tout particulièrement les auriculaires.
+dépend fortement de la disposition de clavier, alors que le nombre de SKB dépend
+essentiellement du corpus utilisé — mais l’utilisation d’une touche morte est de
+nature à augmenter le nombre de SKB. On ne peut jamais annuler ces SFB et SKB,
+mais on fait en sorte de les placer préférentiellement sur les doigts forts, en
+évitant tout particulièrement les auriculaires.
 
 ![Répartition des SFB et SKB d’Ergo‑L.](ergol_sfu.png)
 
