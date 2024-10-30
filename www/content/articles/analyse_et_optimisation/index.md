@@ -242,7 +242,7 @@ doigts parcourent pour saisir un texte. :-)
 
 La communauté Ergonaute n’utilise pas cette métrique car elle n’est pertinente
 que si l’on suppose que tous les déplacements de doigt se valent — ce qui est
-évidemment faux (voir le paragraphe sur la [heatmap](#la-heatmap)).
+évidemment faux (voir le paragraphe sur [la heatmap]).
 
 ### Note globale ?
 
@@ -388,7 +388,7 @@ note globale de KLAnext comporte des failles évidentes.
 - Elle ne semble pas prendre en compte l’équilibre de la charge des doigts.
   Optimot a une charge de plus de 11 % sur l’auriculaire droit en français, ce
   qui est exceptionnellement élevé pour une disposition de clavier (ergonomique
-  ou non) et rédhibitoire pour nombre d’utilisateurices.
+  ou non), et souvent rédhibitoire.
 - Elle est plus sensible à la géométrie du clavier qu’à la disposition des
   touches. Ainsi, pour l’anglais, Bépo sur Ergodox a une meilleure note que
   Sturdy sur ANSI — s’agissant là respectivement de la pire et de la meilleure
@@ -478,6 +478,8 @@ et autrices de disposition. Côté anglophone, [r/KeyboardLayouts][] et le
 [Keyboard Layouts doc][] sont des mines d’or.
 
 ### La méthode
+
+Elle repose sur deux idées fortes :
 
 > Quelle que soit la disposition de clavier, son pire défaut se ressentira
 > toujours plus que ses meilleures qualités.
@@ -586,9 +588,9 @@ une qui convienne au plus grand nombre, c’est une autre histoire.
 En particulier, on a tou·te·s des niveaux de tolérance différents à certains
 défauts de layout : pour moi les extensions d’auriculaires sont particulièrement
 pénibles, alors que d’autres préfèrent ça plutôt que d’utiliser AltGr ;
-certain·e·s s’accommodent bien des ciseaux (notamment les utilisateurices de
-claviers 3D), d’autres pas du tout ; et les mauvaises redirections sont le point
-le plus clivant : certain·e·s s’y font, mais beaucoup trouvent ça rédhibitoire à
+certain·e·s s’accommodent bien des ciseaux (notamment les adeptes de claviers
+3D), d’autres pas du tout ; et les mauvaises redirections sont le point le plus
+clivant : certain·e·s s’y font, mais beaucoup trouvent ça rédhibitoire à
 l’usage.
 
 Pour prendre en compte toutes ses particularités, notre analyseur ne se contente
@@ -611,10 +613,10 @@ Krzywinski][] sous licence non libre (CC-BY-NC-SA 4.0). Le [code
 source][CarpalX-source] est disponible sur son site, la dernière modification
 (version 0.12) remonte à 2015.
 
-CarpalX a un intérêt historique mais, comme [mentionné plus
-haut](#lapproche-carpalx), son score d’effort ne permet pas de fournir une
-évaluation fiable. Loin s’en faut. Il a globalement été une perte de temps
-pour le développement d’Ergo‑L.
+CarpalX a un intérêt historique mais, comme [mentionné plus haut][l’approche
+CarpalX], son score d’effort ne permet pas de fournir une évaluation fiable.
+Loin s’en faut. Il a globalement été une perte de temps pour le développement
+d’Ergo‑L.
 
 ### KLA (<i lang="en">Keyboard Layout Analyzer</i>)
 
@@ -747,9 +749,9 @@ chapitre sur les analyseurs. Que le Grand Palmipède parsème son chemin de
 pétales de roses.
 
 Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][] et
-[Xiloynaha][] pour la relecture, les suggestions et les corrections. C’est un
-article que je n’aurais jamais pu écrire tout seul. La communauté Ergo‑L est
-fantastique. :-)
+[Xiloynaha][] pour la relecture, les suggestions et les corrections : on a eu
+180 points de discussion pour boucler cet article, du jamais vu ! La communauté
+Ergo‑L est fantastique. :-)
 
 
 [1DFH]:                    /presentation/#dfh-1u-distance-from-home
