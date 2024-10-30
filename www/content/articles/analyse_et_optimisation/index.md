@@ -514,7 +514,7 @@ incroyablement bas, mais qui causaient d’autres problèmes plus sournois à
 l’usage.
  
 C’est notamment le cas de [Colemak French Touch][], sur lequel on est tombé un
-peu accidentellement sur la fin du projet. Le SFU est terrifiant (0.7 %),  le
+peu accidentellement sur la fin du projet. Le SFU est terrifiant (0.7 %), le
 fait de coller à une disposition très connue était un avantage auquel on était
 sensible, à tel point qu’on a envisagé d’annuler la sortie (alors imminente)
 d’Ergo‑L 1.0 ! Mais deux problèmes sont apparus assez vite :
