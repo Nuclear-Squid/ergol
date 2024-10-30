@@ -323,7 +323,9 @@ n’est là que le principal défaut de ces dispositions.
 La démarche de CarpalX est basée sur un [modèle d’effort][CarpalX-effort] très
 précis, qui donne l’illusion qu’optimiser pour ce score d’effort aboutira de
 façon scientique à la meilleure disposition possible ; et, intuitivement, on a
-envie d’y croire !
+envie d’y croire ! On voit ici que bien que cet utilisateur ait rapidement perçu
+les principaux défauts de cette disposition, il cherche à minimiser son ressenti
+à cause de la confiance qu’inspire cette métrique.
 
 Mais, en pratique, toutes les dispositions issues de ce type d’optimisation ont
 des défauts rédhibitoires qui sont noyés dans la moyenne du score d’effort. Ce
@@ -338,11 +340,12 @@ atteint là les limites de l’optimisation mono-critère.
 
 ### L’approche Optimot
 
-S’il existait une note globale pertinente mais que vous n’aviez pas de
-compétence en programmation, vous pourriez passer par un analyseur en ligne qui
-propose ce type d’évaluation et, à force d’essais, vous obtiendriez une
-disposition très bien notée pour votre langue cible — probablement le français,
-si vous lisez cet article.
+S’il existait une note globale pertinente mais que vous n’aviez pas les
+compétences requises pour la mise en œuvre d’un algorithme d’optimisation tel
+que CarpalX, vous pourriez passer par un analyseur en ligne qui propose une
+évaluation similaire ; et, à force d’essais, vous obtiendriez une disposition
+très bien notée pour votre langue cible — probablement le français, si vous
+lisez cet article.
 
 C’est l’approche retenue par Optimot, une variante non libre de Bépo.
 Étonnamment, l’analyseur retenu est [KLAnext][], qui est [loin d’être le plus
@@ -351,12 +354,11 @@ l’auteur d’Optimot affirme ainsi que sa disposition est la meilleure en
 français, puisque c’est celle qui a la meilleure note sur KLAnext.
 
 Faisons abstraction du raisonnement circulaire et intéressons-nous à l’anglais :
-dans cette langue, Optimot a une note KLAnext quasi équivalente à celle de Colemak
-et MTGAP, qui sont deux des meilleures dispositions anglophones modernes.
-Comment est-ce possible ? Alors que c’est un domaine de recherche très actif
-chez les anglo-saxons depuis deux décennies ? Et alors qu’Optimot dédie beaucoup
-de bonnes touches aux lettres accentuées du français ? Et alors que son auteur
-confirme que l’anglais n’est qu’un objectif secondaire de cette disposition ?
+dans cette langue, Optimot a une note KLAnext quasi équivalente à celle de
+Colemak et MTGAP, qui sont deux des meilleures dispositions anglophones
+modernes. Comment est-ce possible ? Alors qu’Optimot dédie beaucoup de bonnes
+touches aux lettres accentuées du français ? Et alors que son auteur confirme
+que l’anglais n’est qu’un objectif secondaire de cette disposition ?
 
 > Moi aussi, je peux modifier légèrement Optimot pour optimiser un peu plus pour
 > l’anglais (mais au détriment du français). Mais ce n’est pas mon choix parce
@@ -367,9 +369,10 @@ confirme que l’anglais n’est qu’un objectif secondaire de cette dispositio
 
 Là encore, deux hypothèses sont envisageables :
 
-- soit l’auteur d’Optimot a un esprit supérieur comme le monde n’en connait que
-  rarement ;
-- soit il a mis en évidence une faille de la note globale KLAnext.
+- soit les meilleurs auteurs de dispositions anglophones qui ont travaillé le
+  sujet au cours des vingt dernières années sont totalement incompétents ;
+- soit la note globale de KLAnext comporte des failles trop importantes pour
+  rendre compte de la qualité d’une disposition.
 
 Fatalement, la deuxième hypothèse est de loin la plus probable. Et de fait, la
 note globale de KLAnext comporte des failles évidentes.
@@ -796,6 +799,7 @@ fantastique. :-)
 [Nuclear-Squid]:           https://github.com/Nuclear-Squid
 [Moussx]:                  https://github.com/gagbo
 [Meriem]:                  https://mastodon.xyz/@meriem
+[Adrienm7]:                https://hypertexte.beseven.fr
 [aurelberra]:              https://github.com/aurelberra
 [kdeloach]:                https://github.com/kdeloach
 [patorjk]:                 https://patorjk.com/
