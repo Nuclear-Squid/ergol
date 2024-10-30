@@ -179,7 +179,7 @@ métriques sur les principaux critères :
 
 :::{.highlight}
 - la heatmap doit être centrée sur les positions confortables ;
-- la charge des doigts doit être équilibrée et épargner les auriculaires ;
+- la charge des doigts doit être bien répartie et épargner les auriculaires ;
 - le taux de digrammes de même doigt (SFU) doit être le plus bas possible ;
 - le nombre de ciseaux et d’extensions (LSB) doit être le plus bas possible ;
 - le taux de mauvaises redirections doit être le plus bas possible.
@@ -641,9 +641,13 @@ apportées][KLA-SteveP-about] :
 Chaque variante de KLA a ses propres paramètres de pondération pour la note
 globale, qui est par nature très subjective. On recommande d’ignorer cette note.
 
-Le fork de SteveP propose des métriques bien plus saines que KLAnext. À notre
+Le fork de SteveP propose des métriques plus saines que KLAnext. À notre
 connaissance, c’est la version de KLA la plus utilisée. C’est aussi la version
 qui a été la mieux maintenue : son développement ne s’est arrêté qu’en mai 2021.
+
+Toutefois, sur les [5 critères indispensables][métriques indispensables] à nos
+yeux, seul le SFU est analysé par KLA. Attention à ne pas perdre de vue les 4
+autres.
 
 ### Colemak-DH
 
@@ -723,6 +727,17 @@ Conclusion
 - Chaque métrique est importante, car on a toutes et tous nos préférences et nos
   ressentis.
 
+Et les [5 critères indispensables][métriques indispensables] à nos yeux sont les
+suivants :
+
+:::{.highlight}
+- la heatmap doit être centrée sur les positions confortables ;
+- la charge des doigts doit être bien répartie et épargner les auriculaires ;
+- le taux de digrammes de même doigt (SFU) doit être le plus bas possible ;
+- le nombre de ciseaux et d’extensions (LSB) doit être le plus bas possible ;
+- le taux de mauvaises redirections doit être le plus bas possible.
+:::
+
 Un grand merci à [Nuclear-Squid][], non seulement pour avoir initié et dirigé le
 projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction du
 chapitre sur les analyseurs. Que le Grand Palmipède parsème son chemin de
@@ -730,7 +745,7 @@ pétales de roses.
 
 Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][] et
 [Xiloynaha][] pour la relecture, les suggestions et les corrections. C’est un
-artiqle que je n’aurais jamais pu écrire tout seul. La communauté Ergo‑L est
+article que je n’aurais jamais pu écrire tout seul. La communauté Ergo‑L est
 fantastique. :-)
 
 
