@@ -541,9 +541,9 @@ pendant toute la mise au point d’Ergo‑L. On a itéré comme suit :
    grave).
 5. `GOTO 1`.
 
-On n’a donc jamais eu aucun usage d’une note globale. Au contraire, on regarde
-toujours la pire note et les pires enchainements pour évaluer une disposition et
-proposer des améliorations.
+**On n’a donc jamais eu aucun usage d’une note globale.**
+Au contraire, on regarde toujours la pire note et les pires enchainements pour
+évaluer une disposition et proposer des améliorations.
 
 Cela dit, il y a bien une métrique que l’on regarde plus que les autres, c’est
 le SFU : ça donne assez rapidement une idée de la marge d’optimisation qui reste
@@ -561,7 +561,7 @@ vite :
 
 - la charge des doigts était trop déséquilibrée, surtout en anglais
   étrangement ;
-- la redirection `OUI` était *très* inconfortable. Et on est retombé sur une
+- la redirection `OUI` était *très* inconfortable. Et on est retombés sur une
   conclusion qui nous était déjà apparue plus tôt dans le projet : soit on
   répartit ces trois lettres sur les deux mains, soit il faut que l’une des
   trois soit sous un index.
@@ -801,6 +801,7 @@ Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju__][] et
 [adaptations]:             /claviers/#les-limitations-de-bépo-béopy-optimot
 [cdl2023-slides]:          /slides/capitoledulibre2023
 [cdl2023-video]:           https://www.youtube.com/watch?v=96RikfmBY-U
+[serveur Discord]:         https://discord.gg/5xR5K3nAFX
 
 [x‑keyboard]:              https://github.com/OneDeadKey/x-keyboard
 [kalamine]:                https://github.com/OneDeadKey/kalamine
