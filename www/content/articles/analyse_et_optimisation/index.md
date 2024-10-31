@@ -119,14 +119,14 @@ Tout digramme appartient à l’une des catégories suivantes :
 - alternance de mains : les touches sont sous deux mains différentes ;
 - digramme de même main : les touches sont sous deux doigts différents d’une
   même main ;
-- digramme de même doigt (SFB) : deux touches différentes à enchainer avec le
+- digramme de même doigt (SFB, <i lang="en">same-finger bigram</i>) : deux touches différentes à enchainer avec le
   même doigt ;
-- répétition (SKB) : la même touche est pressée deux fois de suite.
+- répétition (SKB, <i lang="en">same-key bigram</i>) : la même touche est pressée deux fois de suite.
 
 On affiche les SKB en jaune et les SFB (plus gênants) en rouge. Le nombre de SFB
 dépend fortement de la disposition de clavier, alors que le nombre de SKB dépend
 essentiellement du corpus utilisé — mais l’utilisation d’une touche morte est de
-nature à augmenter le nombre de SKB. On ne peut jamais annuler ces SFB et SKB,
+nature à augmenter le nombre de SKB. On ne peut jamais gommer complètement ces SFB et SKB,
 mais on fait en sorte de les placer préférentiellement sur les doigts forts, en
 évitant tout particulièrement les auriculaires.
 
@@ -146,7 +146,7 @@ Les digrammes de même main sont plus délicats à qualifier. On distingue :
   l’auriculaire (confort comparable à une alternance de mains) ;
 - ciseau : l’enchainement requiert un changement de rangée inconfortable, comme
   [C]{.kbd}[R]{.kbd} en Azerty ou Qwerty ;
-- extension (LSB, <i lang="en">lateral stretch bigrams</i>) : l’enchainement
+- extension (LSB, <i lang="en">lateral stretch bigram</i>) : l’enchainement
   inclut une touche d’une colonne excentrée ou de la rangée des chiffres.
 
 Le taux de SFB (ou SFU, pour <i lang="en">same finger usage</i>) est le
@@ -206,7 +206,7 @@ de ses nombreuses variantes.
 Mais, de nos jours, les claviers informatiques n’ayant pas de contrainte de ce
 type, cette métrique du SHU n’est plus utilisée pour mesurer la qualité d’une
 disposition — voire, elle est souvent utilisée dans l’autre sens : un SHU élevé
-caractérise une disposition « rolly », c’est-à-dire privilégiant les roulements.
+caractérise une disposition « <i lang="en">rolly</i> », c’est-à-dire privilégiant les roulements.
 C’est le cas de la très grande majorité des dispositions modernes, dont Workman
 et Ergo‑L.
 
@@ -321,7 +321,7 @@ n’est là que le principal défaut de ces dispositions.
 
 La démarche de CarpalX est basée sur un [modèle d’effort][CarpalX-effort] très
 précis, qui donne l’illusion qu’optimiser pour ce score d’effort aboutira de
-façon scientique à la meilleure disposition possible ; et, intuitivement, on a
+façon scientifique à la meilleure disposition possible ; et, intuitivement, on a
 envie d’y croire ! On voit ici que bien que cet utilisateur ait rapidement perçu
 les principaux défauts de cette disposition, il cherche à minimiser son ressenti
 à cause de la confiance qu’inspire cette métrique.
@@ -355,7 +355,7 @@ français, puisque c’est celle qui a la meilleure note sur KLAnext.
 Faisons abstraction du raisonnement circulaire et intéressons-nous à l’anglais :
 dans cette langue, Optimot a une note KLAnext quasi équivalente à celle de
 Colemak et MTGAP, qui sont deux des meilleures dispositions anglophones
-modernes. Comment est-ce possible ? Alors qu’Optimot dédie beaucoup de bonnes
+modernes. Comment est-ce possible, alors qu’Optimot dédie beaucoup de bonnes
 touches aux lettres accentuées du français ? Et alors que son auteur confirme
 que l’anglais n’est qu’un objectif secondaire de cette disposition ?
 
@@ -422,9 +422,9 @@ mêmes défauts :
 
 - c’est une notation très subjective, puisque la pondération des différents
   critères change complètement le résultat ;
-- ça n’est pas une bonne cible d’optimisation, car cela pousse à négliger les
+- ce n’est pas une bonne cible d’optimisation, car cela pousse à négliger les
   défauts peu punis par la notation ;
-- ça n’est pas un bon critère d’évaluation non plus, une disposition pouvant
+- ce n’est pas un bon critère d’évaluation non plus, une disposition pouvant
   avoir un défaut rédhibitoire sans que cela affecte la note globale.
 
 Durant la conception d’Ergo‑L, on a perdu beaucoup de temps sur le projet à
