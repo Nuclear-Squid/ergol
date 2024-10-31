@@ -44,9 +44,10 @@ cd www
 hugo serve
 ```
 
-Le site est alors visible sur http://localhost:1313/
+Le site est alors visible sur <http://localhost:1313/>.
 
-Le site est mis à jour à chaque modification de fichier (<i lang="en">live-reload</i>).
+Le site est mis à jour à chaque modification de fichier
+(<i lang="en">live-reload</i>).
 
 
 
