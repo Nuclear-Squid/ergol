@@ -160,15 +160,15 @@ la charge des doigts.
 
 ### Les trigrammes
 
-Les trigrammes sont des enchaînements de trois touches. Ils peuvent souvent être
-interprêtés comme la composition de deux bigrammes distincts : par exemple,
+Les trigrammes sont des enchainements de trois touches. Ils peuvent souvent être
+interprétés comme la composition de deux bigrammes distincts : par exemple,
 [O]{.kbd}[U]{.kbd}[R]{.kbd} en Qwerty ou Azerty peut être considéré comme la
 composition du roulement [O]{.kbd}[U]{.kbd} et de l’alternance
 [U]{.kbd}[R]{.kbd}.
 
 Cette approximation est suffisante dans de nombreux cas, mais il existe quelques
-exceptions : notamment, enchaîner deux roulements dans le même sens est
-significativement plus efficace que d’enchaîner deux alternances, car on ne fait
+exceptions : notamment, enchainer deux roulements dans le même sens est
+significativement plus efficace que d’enchainer deux alternances, car on ne fait
 toujours qu’un mouvement pour actionner les trois touches plutôt qu’un mouvement
 par touche.
 
@@ -653,7 +653,7 @@ source][CarpalX-source] est disponible sur son site, la dernière modification
 
 CarpalX a un intérêt historique mais, comme [mentionné plus haut][l’approche
 CarpalX], son score d’effort ne permet pas de fournir une évaluation fiable,
-Loin de là. Il a globalement été une perte de temps pour le développement
+loin de là. Il a globalement été une perte de temps pour le développement
 d’Ergo‑L.
 
 ### KLA (<i lang="en">Keyboard Layout Analyzer</i>)
