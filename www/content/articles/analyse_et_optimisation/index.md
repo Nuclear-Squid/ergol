@@ -37,7 +37,7 @@ code { font-family: monospace; }
 
 :::{.highlight style="max-width: 32em;"}
 - [Les fondamentaux]
-  - [la heatmap]
+  - [la <i lang="en">heatmap</i>]
   - [la charge des doigts]
   - [les bigrammes]
   - [les trigrammes]
@@ -70,7 +70,7 @@ Les fondamentaux
 
 Quelles sont les principales caractéristiques d’une bonne disposition de clavier ?
 
-### La heatmap
+### La <i lang="en">heatmap</i>
 
 L’optimisation la plus évidente pour une disposition de clavier consiste à
 placer les touches les plus fréquemment utilisées aux meilleurs emplacements :
@@ -189,7 +189,7 @@ disposition.
 
 Les redirections peuvent être acceptables. C’est le cas du mot `avec` tapé en
 Ergo‑L, qui correspond à <kbd>A</kbd><kbd>V</kbd><kbd>D</kbd><kbd>W</kbd> en
-Qwerty : un roulemnet intérieur suivi d’un roulement extérieur, avec un pivot
+Qwerty : un roulement intérieur suivi d’un roulement extérieur, avec un pivot
 sur l’index. Sans être aussi confortable qu’un simple roulement, ça reste un
 mouvement facile et peu sujet à l’erreur. Et plus généralement, on constate que
 si l’index intervient dans une redirection (donc soit en début, soit en pivot,
@@ -280,7 +280,7 @@ doigts parcourent pour saisir un texte. :-)
 
 La communauté Ergonaute n’utilise pas cette métrique car elle n’est pertinente
 que si l’on suppose que tous les déplacements de doigt se valent — ce qui est
-évidemment faux (voir le paragraphe sur [la heatmap]).
+évidemment faux (voir le paragraphe sur [la <i lang="en">heatmap</i>]).
 
 ### Note globale ?
 
@@ -652,8 +652,8 @@ source][CarpalX-source] est disponible sur son site, la dernière modification
 (version 0.12) remonte à 2015.
 
 CarpalX a un intérêt historique mais, comme [mentionné plus haut][l’approche
-CarpalX], son score d’effort ne permet pas de fournir une évaluation fiable.
-Loin s’en faut. Il a globalement été une perte de temps pour le développement
+CarpalX], son score d’effort ne permet pas de fournir une évaluation fiable,
+Loin de là. Il a globalement été une perte de temps pour le développement
 d’Ergo‑L.
 
 ### KLA (<i lang="en">Keyboard Layout Analyzer</i>)
@@ -696,9 +696,9 @@ autres.
 
 [Colemak-DH][] est un projet qui a enthousiasmé beaucoup d’anglophones, à juste
 titre : c’est une belle amélioration de Colemak, qui lui confère un beau
-rééquilibrage de la <i lang="en">heatmap</i>, proche de celle de Workman (qui fait office de
-référence dans ce domaine), tout en réduisant significativement les extensions
-latérales (LSB).
+rééquilibrage de la <i lang="en">heatmap</i>, proche de celle de Workman (qui
+fait office de référence dans ce domaine), tout en réduisant significativement
+les extensions latérales (LSB).
 
 Et comme c’est un projet d’ampleur, ses contributeurs — dont un certain SteveP —
 ont développé [un analyseur][Colemak-DH-analyzer] qui reflète les choix de cette
