@@ -244,7 +244,7 @@ type, on ne cherche plus à minimiser cette métrique du SHU : elle permet jus
 de voir si une disposition privilégie les alternances de mains ou les
 roulements.
 
-On constate même que plupart des dispositions modernes privilégient les
+On constate même que la plupart des dispositions modernes privilégient les
 roulements, qui sont perçus comme plus confortables et moins sujets à l’erreur.
 C’est notamment le cas de Workman, qui a grandement inspiré Ergo‑L :
 
