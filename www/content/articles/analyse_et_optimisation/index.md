@@ -161,7 +161,7 @@ la charge des doigts.
 ### Les trigrammes
 
 Les trigrammes sont des enchaînements de trois touches. Ils peuvent souvent être
-interprêtés comme la composition de deux digrammes distincts : par exemple,
+interprêtés comme la composition de deux bigrammes distincts : par exemple,
 [O]{.kbd}[U]{.kbd}[R]{.kbd} en Qwerty ou Azerty peut être considéré comme la
 composition du roulement [O]{.kbd}[U]{.kbd} et de l’alternance
 [U]{.kbd}[R]{.kbd}.

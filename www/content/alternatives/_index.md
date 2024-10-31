@@ -46,11 +46,11 @@ soit devenir insupportables.
 +===============+:=====:+:=====:+:=====:+:=====:+:=====:+=============================================+
 | [Azerty][]    |   ·   |  oui  |   ·   |   ·   |   ·   | - (fr) mauvais support typographique        |
 |               |       |       |       |       |       | - charge de l’auriculaire gauche > 10 %     |
-|               |       |       |       |       |       | - digrammes de même doigt > 6 %             |
+|               |       |       |       |       |       | - bigrammes de même doigt > 6 %             |
 |               |       |       |       |       |       | - chiffres en Shift                         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 | [Lafayette][] |  oui  |  oui  |   ·   |   ·   |  oui  | - charge déséquilibrée                      |
-|               |       |       |       |       |       | - digrammes de même doigt > 6 %             |
+|               |       |       |       |       |       | - bigrammes de même doigt > 6 %             |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 | [Ergo‑L][]    |  oui  |  oui  |  oui  |  oui  |  oui  | - (fr) `tui`, `bo`                          |
 |               |       |       |       |       |       | - (en) `eas`, `we`                          |
@@ -63,13 +63,13 @@ soit devenir insupportables.
 |               |       |       |       |       |       | - (en) `you`, `was`, `ho`                   |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 | [Bépolar][]   |  oui  |   ·   |  oui  |   ·   |  oui  | - charge de l’index gauche                  |
-|               |       |       |       |       |       | - (fr) digrammes de même doigt > 2 %        |
-|               |       |       |       |       |       | - (en) digrammes de même doigt > 4 %        |
+|               |       |       |       |       |       | - (fr) bigrammes de même doigt > 2 %        |
+|               |       |       |       |       |       | - (en) bigrammes de même doigt > 4 %        |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 | [Bépo][]      |   ·   |   ·   |  oui  |   ·   |   ·   | - déviations ulnaires                       |
 |               |       |       |       |       |       | - charge de l’auriculaire droit > 10 %      |
 |               |       |       |       |       |       | - charge de l’index gauche > 20 %           |
-|               |       |       |       |       |       | - digrammes de même doigt > 2 %             |
+|               |       |       |       |       |       | - bigrammes de même doigt > 2 %             |
 |               |       |       |       |       |       | - (en) rédhibitoire (`wh`)                  |
 |               |       |       |       |       |       | - chiffres en Shift                         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
@@ -175,7 +175,7 @@ serait une permutation `h,’`, pour faire passer le `h` de [>] à [O].
 [Note]{id="optimot_en"} : l’auteur d’Optimot considère que sa disposition est
 optimisée pour l’anglais au motif qu’elle obtiendrait une bonne [note globale sur
 KLAnext][] ; mais pour nous, [la heatmap est inadaptée][1] (lettres fréquentes sur
-la rangée inférieure) et de nombreux digrammes courants sont trop inconfortables
+la rangée inférieure) et de nombreux bigrammes courants sont trop inconfortables
 pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, 
 `ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça. Et
 d’ailleurs, son auteur reconnait que l’anglais n’est qu’un objectif secondaire

@@ -210,7 +210,7 @@ musculaire *précise*, travailler les n‑grammes peut aider à la rendre *effic
 vitesse. Personnellement, je m’entraîne généralement avec les paramètres
 ci-dessous (mais n’hésitez pas à adapter la vitesse à vos besoins !), j’essaye de
 viser 20 WPM au dessus de ce que je tape naturellement pour les trigrammes, et
-40 WPM au dessus pour les digrammes.
+40 WPM au dessus pour les bigrammes.
 
 ![mes paramètres ngram](ngram_settings.png)
 

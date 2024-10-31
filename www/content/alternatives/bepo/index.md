@@ -40,7 +40,7 @@ qui ne proposent que 6 colonnes de touches par main pour respecter le principe
 Par ailleurs, la charge des doigts est mal répartie :
 
 - la charge de l’index gauche est très élevée (> 23 % en français), et c’est
-  d’autant plus gênant que ce doigt gère à lui seul la moitié des [digrammes de
+  d’autant plus gênant que ce doigt gère à lui seul la moitié des [bigrammes de
   même doigt](#optimisation) ;
 - plus grave, la charge de l’auriculaire droit (> 11 % en français) est bien
   plus élevée que dans toutes les dispositions de clavier francophones,
@@ -165,18 +165,18 @@ Optimisation
 - maximisation de l’alternance des mains lors de la frappe ;
 - répartition des touches de façon équitable sur les deux mains ;
 - utilisation en priorité de la rangée centrale, puis haute, puis inférieure ;
-- en cas de non-alternance des mains sur un digramme, direction de la frappe vers le
+- en cas de non-alternance des mains sur un bigramme, direction de la frappe vers le
   centre du clavier, ce qui sollicite davantage les doigts les plus habiles, à
   savoir l’index et le majeur.
 
-Bépo cherche également à minimiser le taux de digrammes de même doigt, que nous
+Bépo cherche également à minimiser le taux de bigrammes de même doigt, que nous
 mesurons à 2.6 % en français contre 8.0 % pour l’AZERTY. C’est un score très
 proche de celui obtenu par Dvorak en anglais, là où QWERTY est à 7.2 %.
 
 Cette optimisation est faite au détriment de l’anglais :
 
 - la charge de l’auriculaire droit grimpe à 13.7 % ;
-- certains digrammes, notamment `wh`, sont rédhibitoires.
+- certains bigrammes, notamment `wh`, sont rédhibitoires.
 
 
 ### Ergo‑L {id="optimisation-ergol"}
@@ -200,7 +200,7 @@ et [Workman][] :
 
 Malgré ces compromis et le fait qu’il soit optimisé pour les **deux** langues,
 français **et** anglais, Ergo‑L affiche de meilleures métriques d’optimisation,
-tant sur la charge des doigts (voir § précédent) que sur le taux de digrammes de
+tant sur la charge des doigts (voir § précédent) que sur le taux de bigrammes de
 même doigt :
 
 <style>
@@ -217,7 +217,7 @@ même doigt :
 |    -:|:-----------------------------:|:---------------------------:|:----------------------------:|:-----------------------------:|:-----------------------------:|
 |**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.22 %](/stats/#/ergol//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
 |**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.20 %](/stats/#/ergol//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
-: Taux de digrammes de même doigt en français et anglais.
+: Taux de bigrammes de même doigt en français et anglais.
 :::
 
 **De notre point de vue** : l’optimisation de Bépo est faite au détriment de
@@ -312,7 +312,7 @@ Et, très logiquement, ces variantes présentent les mêmes défauts d’ergonom
 - perte des raccourcis claviers positionnels.
 
 [Optimot][] est une variante non-libre de Bépo qui l’optimise très nettement :
-le taux de digrammes de même doigt est divisé par deux en anglais et par trois
+le taux de bigrammes de même doigt est divisé par deux en anglais et par trois
 en français ! Mais les défauts d’ergonomie restent les mêmes, ou ne sont
 atténués que très marginalement :
 
