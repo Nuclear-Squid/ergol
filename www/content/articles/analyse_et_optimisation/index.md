@@ -240,11 +240,13 @@ plus Dvorak, ont été développés dans cet objectif. C’est aussi le cas de B
 de ses nombreuses variantes.
 
 Mais, de nos jours, les claviers informatiques n’ayant pas de contrainte de ce
-type, cette métrique du SHU n’est plus utilisée pour mesurer la qualité d’une
-disposition — voire, elle est souvent utilisée dans l’autre sens : un SHU élevé
-caractérise une disposition « <i lang="en">rolly</i> », c’est-à-dire privilégiant les roulements.
-C’est le cas de la très grande majorité des dispositions modernes, dont Workman
-et Ergo‑L.
+type, on ne cherche plus à minimiser cette métrique du SHU : elle permet juste
+de voir si une disposition privilégie les alternances de mains ou les
+roulements.
+
+On constate même que plupart des dispositions modernes privilégient les
+roulements, qui sont perçus comme plus confortables et moins sujets à l’erreur.
+C’est notamment le cas de Workman, qui a grandement inspiré Ergo‑L :
 
 > In designing Workman, I preferred a high SHU (low alternation) over a low SHU
 > (high alternation). I think high alternation is beneficial if you’re typing on
