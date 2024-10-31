@@ -214,7 +214,7 @@ Un analyseur de disposition de clavier va, en tout premier lieu, fournir des
 métriques sur les principaux critères :
 
 :::{.highlight}
-- la heatmap doit être centrée sur les positions confortables ;
+- la <i lang="en">heatmap</i> doit être centrée sur les positions confortables ;
 - la charge des doigts doit être bien répartie et épargner les auriculaires ;
 - le taux de bigrammes de même doigt (SFU) doit être le plus bas possible ;
 - le nombre de ciseaux et d’extensions (LSB) doit être le plus bas possible ;
@@ -478,7 +478,7 @@ codées vite fait.
 
 — Jean Dion
 
-Il faut se ménier quand une note globale est mise en avant plutôt que des
+Il faut se méfier quand une note globale est mise en avant plutôt que des
 métriques objectives, car c’est souvent une façon (délibérée ou non) de passer
 sous silence les pires aspects d’une disposition de clavier. Et ça devient
 franchement trompeur quand la disposition a été optimisée pour cette note
@@ -664,7 +664,7 @@ disponible sur GitHub, la dernière modification remonte à 2019.
 
 [KLAnext][] est un fork non libre de KLA par [Ian Douglas][]. Ce fork est
 lui-même dérivé de [KLAtest][] ([source][KLAtest-source]) par [Xay Vong][],
-a.k.a. Shena’Fu ou Den. Sans dépôt de code, difficile d’évaluer ce qu’apporte
+a.k.a. Shena’Fu ou Den. Sans accès au code, difficile d’évaluer ce qu’apporte
 KLAnext à l’original — mais, comme évoqué plus haut, il ne nous semble pas
 pertinent. C’est en référence aux failles de KLAnext que la plaisanterie
 « *[Qwerty-Lafayette est le meilleur layout du monde !][lafayette_mldm]* » est
@@ -696,7 +696,7 @@ autres.
 
 [Colemak-DH][] est un projet qui a enthousiasmé beaucoup d’anglophones, à juste
 titre : c’est une belle amélioration de Colemak, qui lui confère un beau
-rééquilibrage de la heatmap, proche de celle de Workman (qui fait office de
+rééquilibrage de la <i lang="en">heatmap</i>, proche de celle de Workman (qui fait office de
 référence dans ce domaine), tout en réduisant significativement les extensions
 latérales (LSB).
 
@@ -775,7 +775,7 @@ Et les [5 critères indispensables][métriques indispensables] à nos yeux sont 
 suivants :
 
 :::{.highlight}
-- la heatmap doit être centrée sur les positions confortables ;
+- la <i lang="en">heatmap</i> doit être centrée sur les positions confortables ;
 - la charge des doigts doit être bien répartie et épargner les auriculaires ;
 - le taux de bigrammes de même doigt (SFU) doit être le plus bas possible ;
 - le nombre de ciseaux et d’extensions (LSB) doit être le plus bas possible ;
