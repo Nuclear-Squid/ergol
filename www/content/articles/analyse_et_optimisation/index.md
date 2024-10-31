@@ -160,7 +160,7 @@ la charge des doigts.
 
 Un trigramme est un enchainement de trois touches.
 
-Les critères « alternance », « roulement », « du même doigt » s’appliquent
+Les critères « alternance », « roulement », « de même doigt » s’appliquent
 toujours, mais on ajoute encore la notion de redirection pour les trigrammes
 faits d’une même main avec un changement de direction, comme
 [D]{.kbd}[S]{.kbd}[F]{.kbd} ou [K]{.kbd}[J]{.kbd}[L]{.kbd} en Azerty ou Qwerty.
@@ -314,7 +314,6 @@ n’est là que le principal défaut de ces dispositions.
 > The CarpalX layout seemed attractive due to its supposed scientific derivation.
 > After getting up to 10 WPM, I think I preferred it to Dvorak. It seemed to
 > have surprisingly high same finger usage — especially the right index.
-
 > Digrams using A, F, I, and P felt uncomfortable, and common enough to really
 > bug me. Seemed like a big oversight to an otherwise great layout.
 
@@ -407,8 +406,9 @@ Tout ceci n’invalide pas les qualités d’Optimot : comme on le dit dans no
 même objectif, écrire en français sur un clavier standard. Mais elle n’est [pas
 optimisée pour l’anglais][optimot-en], comme le reconnait son auteur à juste
 titre ; et, si l’optimisation basée sur KLAnext a permis de réduire
-significativement le SFU, elle n’a pas permis de corriger le nombre de ciseaux
-(LSB) et le mauvais équilibre de la charge des doigts, deux défauts hérités de
+significativement le SFU, elle n’a pas permis de corriger ni le nombre de
+ciseaux, ni le mauvais équilibre de la charge des doigts, ni le [manque de
+compatibilité avec les claviers compacts][adaptations], trois défauts hérités de
 Bépo mais ignorés par KLAnext.
 
 ### Une autre note globale est-elle possible ?
@@ -658,8 +658,9 @@ autres.
 
 [Colemak-DH][] est un projet qui a enthousiasmé beaucoup d’anglophones, à juste
 titre : c’est une belle amélioration de Colemak, qui lui confère un beau
-rééquilibrage de la charge des doigts, proche de celui de Workman (qui fait
-office de référence dans ce domaine).
+rééquilibrage de la heatmap, proche de celle de Workman (qui fait office de
+référence dans ce domaine), tout en réduisant significativement les extensions
+latérales (LSB).
 
 Et comme c’est un projet d’ampleur, ses contributeurs — dont un certain SteveP —
 ont développé [un analyseur][Colemak-DH-analyzer] qui reflète les choix de cette
