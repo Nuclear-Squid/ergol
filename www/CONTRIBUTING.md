@@ -93,7 +93,7 @@ On évite les anglicismes dans le texte, et quand on y a recours on veillera à
 les inclure dans une balise `<i lang="en">` pour l’accessibilité (lecteurs
 d’écran).
 
-Les termes techniques courants en anglais sont tolérés – notamment tous ceux qui
+Les termes techniques courants en anglais sont tolérés — notamment tous ceux qui
 sont définis dans le glossaire.
 
 ### Désignation des touches
@@ -105,6 +105,6 @@ claviers Qwerty.
 On ne traduit pas les touches spéciales. On parle donc de <kbd>Shift</kbd>,
 <kbd>Enter</kbd>, <kbd>Backspace</kbd>, etc.
 
-Les touches physiques sont incluses dans des balises `<kbo>`, les caractères
+Les touches physiques sont incluses dans des balises `<kbd>`, les caractères
 produits dans des balises `<code>`. On parle donc de la touche <kbd>F</kbd> pour
 désigner celle qui produit un `N` en Ergo‑L.
