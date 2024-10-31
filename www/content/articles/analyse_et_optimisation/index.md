@@ -164,7 +164,7 @@ Un trigramme est un enchainement de trois touches. Les critères des bigrammes
 s’appliquent aussi aux trigrammes : alternance de mains, trigramme de même main,
 trigramme de même doigt (l’horreur…), répétition (très peu probable).
 
-Parmi les trigrammes de même main, on distingue:
+Parmi les trigrammes de même main, on distingue :
 
 - roulement intérieur, le meilleur enchainement qui soit ;
 - roulement extérieur, très confortable également ;
