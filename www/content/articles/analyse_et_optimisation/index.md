@@ -160,15 +160,33 @@ la charge des doigts.
 
 ### Les trigrammes
 
-Un trigramme est un enchainement de trois touches.
+Un trigramme est un enchainement de trois touches. Les critères des bigrammes
+s’appliquent aussi aux trigrammes : alternance de mains, trigramme de même main,
+trigramme de même doigt (l’horreur…), répétition (très peu probable).
 
-Les critères « alternance », « roulement », « de même doigt » s’appliquent
-toujours, mais on ajoute encore la notion de redirection pour les trigrammes
-faits d’une même main avec un changement de direction, comme
-[D]{.kbd}[S]{.kbd}[F]{.kbd} ou [K]{.kbd}[J]{.kbd}[L]{.kbd} en Azerty ou Qwerty.
+Parmi les trigrammes de même main, on distingue:
 
-La redirection est qualifiée de « mauvaise » quand elle ne fait pas intervenir
-l’index.
+- roulement intérieur, le meilleur enchainement qui soit ;
+- roulement extérieur, très confortable également ;
+- redirection, qui est l’enchainement de deux roulements de sens opposé ;
+- presque-SFB ou skipgram (TODO), dont l’inconfort se rapproche du SFB.
+
+Les redirections peuvent être acceptables. C’est le cas du mot `avec` tapé en
+Ergo‑L, qui correspond à <kbd>A</kbd><kbd>V</kbd><kbd>D</kbd><kbd>W</kbd> en
+Qwerty : un roulemnet intérieur suivi d’un roulement extérieur, avec un pivot
+sur l’index. Sans être aussi confortable qu’un simple roulement, ça reste un
+mouvement facile et peu sujet à l’erreur. Et plus généralement, on constate que
+si l’index intervient dans une redirection (donc soit en début, soit en pivot,
+soit en fin d’enchainement), le mouvement est confortable… ou le devient avec un
+peu de pratique.
+
+On parle de *mauvaise* redirection quand l’index n’intervient pas dans le
+mouvement. C’est le cas de la chaine `uti` en Ergo‑L, qui correspond à
+<kbd>;</kbd><kbd>K</kbd><kbd>L</kbd> en Qwerty. Ce type d’enchainement est
+inconfortable et très sujet à l’erreur, la pratique n’atténue que partiellement
+la gêne. Et `uti` a beau être sur la <i lang="en">home row</i> en Ergo‑L, c’est
+bien moins confortable à taper que `avec`, bien que celui-ci utilise les trois
+rangées.
 
 
 Critères d’évaluation
