@@ -16,24 +16,24 @@ title = "Glossaire"
 Ergonomie et Optimisation
 --------------------------------------------------------------------------------
 
-[SFB <i lang="en">(Same Finger Bigram)</i>]{#sfb}
+[SFB <i lang="en">(Same-Finger Bigram)</i>]{#sfb}
 
-: Aussi appelé « digramme de même doigt ». Quand deux lettres s’enchaînent avec un même
+: Aussi appelé « bigramme de même doigt ». Quand deux lettres s’enchaînent avec un même
 doigt, ce qui est source d’inconfort ou d’erreurs, notamment à haute vitesse.
  
-[SFU <i lang="en">(Same Finger Usage)</i>]{#sfu}
+[SFU <i lang="en">(Same-Finger Usage)</i>]{#sfu}
 
-: Taux de SFB relevés dans un corpus de texte, exprimé en % du nombre total de digrammes.
+: Taux de SFB relevés dans un corpus de texte, exprimé en % du nombre total de bigrammes.
 Plus le taux est bas, mieux c’est.
  
-[SKB <i lang="en">(Same Key Bigram)</i>]{#skb}
+[SKB <i lang="en">(Same-Key Bigram)</i>]{#skb}
 
 : Répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
 disposition de clavier, ou `és` en Ergo‑L.
 
-[SKU <i lang="en">(Same Key Usage)</i>]{#sku}
+[SKU <i lang="en">(Same-Key Usage)</i>]{#sku}
 
-: Taux de SKB relevés dans un corpus de texte, exprimé en % du nombre total de digrammes.
+: Taux de SKB relevés dans un corpus de texte, exprimé en % du nombre total de bigrammes.
 Théoriquement, il ne dépend que du corpus ; mais il peut augmenter avec l’usage
 de touches mortes.
 
@@ -51,6 +51,7 @@ ou Qwerty. Ou pire [P]{.kbd}[^]{.kbd} en Azerty / [P]{.kbd}[\[]{.kbd} en Qwerty
 
 : Quand un bigramme nécessite un changement de rangée inconfortable,
 c’est-à-dire [C]{.kbd}[R]{.kbd} en Azerty ou Qwerty.
+Le terme « ciseau » est utilisé ici comme substantif de « mouvement en ciseaux ».
 
 [Roulement intérieur]{#roulement}
 

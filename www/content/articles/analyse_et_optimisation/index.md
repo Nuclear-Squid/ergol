@@ -39,7 +39,7 @@ code { font-family: monospace; }
 - [Les fondamentaux]
   - [la heatmap]
   - [la charge des doigts]
-  - [les digrammes]
+  - [les bigrammes]
   - [les trigrammes]
 - [Critères d’évaluation]
   - [métriques indispensables]
@@ -99,8 +99,8 @@ doigts :
 - les doigts forts (index, majeur) peuvent supporter plus de charge que les
   auriculaires, qui sont déjà très sollicités avec [Entrée]{.kbd},
   [Backspace]{.kbd}, [Tab]{.kbd}, [Shift]{.kbd}…
-- la charge est aggravée par les extensions, i.e. les touches qui sont notées 3
-  ou plus par le projet Workman (V. ci-dessus).
+- la charge est aggravée par les extensions, c’est-à-dire les touches qui sont
+  notées 3 ou plus par le projet Workman (voir ci-dessus).
 
 On affiche en bleu la charge liée aux touches notées 1 à 2, en jaune celle des
 touches notées 3, et en orange celles notées 4 ou plus — ce qui inclut les
@@ -111,24 +111,26 @@ principe [1DFH][], auquel nous autres Ergonautes sommes si attaché·e·s.
 
 ![Charge des doigts de Bépo.](bepo.png)
 
-### Les digrammes
+### Les bigrammes
 
-Un digramme est un enchainement de deux touches.
-Tout digramme appartient à l’une des catégories suivantes :
+Un bigramme est un enchainement de deux touches.
+Tout bigramme appartient à l’une des catégories suivantes :
 
 - alternance de mains : les touches sont sous deux mains différentes ;
-- digramme de même main : les touches sont sous deux doigts différents d’une
+- bigramme de même main : les touches sont sous deux doigts différents d’une
   même main ;
-- digramme de même doigt (SFB, <i lang="en">same-finger bigram</i>) : deux touches différentes à enchainer avec le
-  même doigt ;
-- répétition (SKB, <i lang="en">same-key bigram</i>) : la même touche est pressée deux fois de suite.
+- bigramme de même doigt (SFB, <i lang="en">same-finger bigram</i>) : deux
+  touches différentes à enchainer avec le même doigt ;
+- répétition (SKB, <i lang="en">same-key bigram</i>) : la même touche est
+  pressée deux fois de suite.
 
-On affiche les SKB en jaune et les SFB (plus gênants) en rouge. Le nombre de SFB
-dépend fortement de la disposition de clavier, alors que le nombre de SKB dépend
-essentiellement du corpus utilisé — mais l’utilisation d’une touche morte est de
-nature à augmenter le nombre de SKB. On ne peut jamais gommer complètement ces SFB et SKB,
-mais on fait en sorte de les placer préférentiellement sur les doigts forts, en
-évitant tout particulièrement les auriculaires.
+On affiche les SKB en jaune et les SFB (plus gênants) en orange. Le nombre de
+SFB dépend fortement de la disposition de clavier, alors que le nombre de SKB
+dépend essentiellement du corpus utilisé — mais l’utilisation d’une touche morte
+est de nature à augmenter le nombre de SKB. On ne peut jamais gommer
+complètement ces SFB et SKB, mais on fait en sorte de les placer
+préférentiellement sur les doigts forts, en évitant tout particulièrement les
+auriculaires.
 
 ![Répartition des SFB et SKB d’Ergo‑L.](ergol_sfu.png)
 
@@ -136,9 +138,9 @@ mais on fait en sorte de les placer préférentiellement sur les doigts forts, e
 
 Lors d’un enchainement rapide de deux touches, il est fréquent (voire
 systématique) que la deuxième touche soit pressée avant que la première ne soit
-relâchée. C’est particulièrement vrai pour les digrammes de même main.
+relâchée. C’est particulièrement vrai pour les bigrammes de même main.
 
-Les digrammes de même main sont plus délicats à qualifier. On distingue :
+Les bigrammes de même main sont plus délicats à qualifier. On distingue :
 
 - roulement intérieur : l’enchainement se fait confortablement de l’auriculaire
   vers l’index (le meilleur enchainement qui soit) ;
@@ -149,7 +151,7 @@ Les digrammes de même main sont plus délicats à qualifier. On distingue :
 - extension (LSB, <i lang="en">lateral stretch bigram</i>) : l’enchainement
   inclut une touche d’une colonne excentrée ou de la rangée des chiffres.
 
-Le taux de SFB (ou SFU, pour <i lang="en">same finger usage</i>) est le
+Le taux de SFB (ou SFU, pour <i lang="en">same-finger usage</i>) est le
 principal indicateur du niveau d’optimisation d’une disposition de clavier, et
 on peut être tenté de l’utiliser comme indicateur principal de la qualité d’une
 disposition de clavier. Mais attention, un SFU très bas cache parfois des
@@ -180,7 +182,7 @@ métriques sur les principaux critères :
 :::{.highlight}
 - la heatmap doit être centrée sur les positions confortables ;
 - la charge des doigts doit être bien répartie et épargner les auriculaires ;
-- le taux de digrammes de même doigt (SFU) doit être le plus bas possible ;
+- le taux de bigrammes de même doigt (SFU) doit être le plus bas possible ;
 - le nombre de ciseaux et d’extensions (LSB) doit être le plus bas possible ;
 - le taux de mauvaises redirections doit être le plus bas possible.
 :::
@@ -212,7 +214,7 @@ et Ergo‑L.
 
 > In designing Workman, I preferred a high SHU (low alternation) over a low SHU
 > (high alternation). I think high alternation is beneficial if you’re typing on
-> mechanical typewriters but not necessarily on modern keyboards. […]
+> mechanical typewriters but not necessarily on modern keyboards.
 
 > It is much more efficient to ride the momentum of a single arm or wrist stroke
 > and type a combo rather than just one key.
@@ -440,11 +442,11 @@ codées vite fait.
 
 — Jean Dion
 
-C’est un gros <i lang="en">red flag</i> quand une disposition met en avant une
-note globale plutôt que des métriques objectives, car c’est souvent une façon
-(délibérée ou non) de passer sous silence les pires aspects d’une disposition de
-clavier. Et ça devient franchement trompeur quand la disposition a été optimisée
-pour cette note globale.
+Il faut se ménier quand une note globale est mise en avant plutôt que des
+métriques objectives, car c’est souvent une façon (délibérée ou non) de passer
+sous silence les pires aspects d’une disposition de clavier. Et ça devient
+franchement trompeur quand la disposition a été optimisée pour cette note
+globale.
 
 
 Optimiser façon Ergonaute !
@@ -474,7 +476,7 @@ notamment :
 
 On essaye de regrouper et vulgariser un maximum d’informations à ce sujet sur ce
 site et sur le [serveur Discord][], en espérant que ça puisse aider les auteurs
-et autrices de disposition. Côté anglophone, [r/KeyboardLayouts][] et le
+et autrices de dispositions. Côté anglophone, [r/KeyboardLayouts][] et le
 [Keyboard Layouts doc][] sont des mines d’or.
 
 ### La méthode
@@ -490,7 +492,7 @@ Elle repose sur deux idées fortes :
 
 — [Ergonomie clavier : l’ère post-Dvorak](https://www.youtube.com/watch?v=96RikfmBY-U&t=2017s)
 
-C’est l’approche que l’on propose sur notre [comparateur][] et qu’on a suivie
+C’est l’approche qu’on propose sur notre [comparateur][] et qu’on a suivie
 pendant toute la mise au point d’Ergo‑L. On a itéré comme suit :
 
 1. Identifier le pire achoppement de la disposition (SFB, ciseau, redirection…).
@@ -529,13 +531,13 @@ d’Ergo‑L 1.0 ! Mais deux problèmes sont apparus assez vite :
 On constate que les enchainements inconfortables évoluent de deux façons
 possibles avec la pratique : soit ils deviennent acceptables, soient ils se
 révèlent insupportables. D’où l’intérêt de pratiquer la disposition qu’on
-utilise – et idéalement, d’être plusieurs personnes différentes à pratiquer.
+utilise — et idéalement, d’être plusieurs personnes différentes à pratiquer.
 Les zones d’inconfort sont propres à chacun·e d’entre nous, et cela peut
 dépendre autant de la personne que du type de clavier.
 
 En ce qui me concerne, mes premiers tests d’Ergo‑L remontent à la version 0.7,
-qui ne diffère que très légèrement d’Ergo‑L 1.0. Et bien qu’Ergo‑L 0.7 ait des
-métriques excellentes, le digramme `if` (<kbd>L</kbd><kbd>P</kbd> en Azerty ou
+qui ne diffère que très légèrement d’Ergo‑L 1.0. Et, bien qu’Ergo‑L 0.7 ait des
+métriques excellentes, le bigramme `if` (<kbd>L</kbd><kbd>P</kbd> en Azerty ou
 Qwerty) m’était très inconfortable. Ergo‑L avait beau être meilleur que
 Lafayette *dans l’ensemble*, le fait qu’il soit pire sur un point aussi
 désagréable me dissuadait totalement de changer de disposition. Le problème a
@@ -576,7 +578,7 @@ analyseur donnait les mêmes résultats que les analyseurs existants. Et, bien
 sûr, tout est disponible sous licence libre pour que chacun·e puisse étudier,
 modifier, utiliser et rediffuser le tout comme bon lui semblera.
 
-Outre les métriques, cet analyseur a pour but de lister tous les digrammes et
+Outre les métriques, cet analyseur a pour but de lister tous les bigrammes et
 trigrammes qui peuvent causer de l’inconfort. Ce n’est pas tant un <i
 lang="en">benchmark</i> qu’un outil d’optimisation.
 
@@ -593,9 +595,9 @@ certain·e·s s’accommodent bien des ciseaux (notamment les adeptes de clavier
 clivant : certain·e·s s’y font, mais beaucoup trouvent ça rédhibitoire à
 l’usage.
 
-Pour prendre en compte toutes ses particularités, notre analyseur ne se contente
+Pour prendre en compte toutes ces particularités, notre analyseur ne se contente
 pas de mesurer chaque type d’achoppement mais les détaille en listant tous les
-digrammes et trigrammes pouvant poser problème. Ça nous a fait gagner beaucoup
+bigrammes et trigrammes pouvant poser problème. Ça nous a fait gagner beaucoup
 de temps en facilitant les échanges de la communauté des Ergonautes pendant le
 développement d’Ergo‑L.
 
@@ -739,7 +741,7 @@ suivants :
 :::{.highlight}
 - la heatmap doit être centrée sur les positions confortables ;
 - la charge des doigts doit être bien répartie et épargner les auriculaires ;
-- le taux de digrammes de même doigt (SFU) doit être le plus bas possible ;
+- le taux de bigrammes de même doigt (SFU) doit être le plus bas possible ;
 - le nombre de ciseaux et d’extensions (LSB) doit être le plus bas possible ;
 - le taux de mauvaises redirections doit être le plus bas possible.
 :::
@@ -749,10 +751,10 @@ projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction d
 chapitre sur les analyseurs. Que le Grand Palmipède parsème son chemin de
 pétales de roses.
 
-Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][] et
+Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju][] et
 [Xiloynaha][] pour la relecture, les suggestions et les corrections : on a eu
-180 points de discussion pour boucler cet article, du jamais vu ! La communauté
-Ergo‑L est fantastique. :-)
+250 points de discussion pour boucler cet article, sans compter les longs
+échanges sur Discord. Gros boulot ! La communauté Ergo‑L est fantastique. :-)
 
 
 [1DFH]:                    /presentation/#dfh-1u-distance-from-home
@@ -804,6 +806,9 @@ Ergo‑L est fantastique. :-)
 [Meriem]:                  https://mastodon.xyz/@meriem
 [Adrienm7]:                https://hypertexte.beseven.fr
 [aurelberra]:              https://github.com/aurelberra
+[Xiloynaha]:               https://github.com/cypriani
+[Ju]:                      https://github.com/PetitWombat
+
 [kdeloach]:                https://github.com/kdeloach
 [patorjk]:                 https://patorjk.com/
 [SteveP]:                  https://github.com/stevep99
