@@ -97,7 +97,7 @@ Une autre optimisation de base consiste à équilibrer la charge de travail des
 doigts :
 
 - les doigts forts (index, majeur) peuvent supporter plus de charge que les
-  auriculaires, qui sont déjà très sollicités avec [Entrée]{.kbd},
+  auriculaires, qui sont déjà très sollicités avec [Enter]{.kbd},
   [Backspace]{.kbd}, [Tab]{.kbd}, [Shift]{.kbd}…
 - la charge est aggravée par les extensions, c’est-à-dire les touches qui sont
   notées 3 ou plus par le projet Workman (voir ci-dessus).
@@ -160,16 +160,32 @@ la charge des doigts.
 
 ### Les trigrammes
 
-Un trigramme est un enchainement de trois touches. Les critères des bigrammes
-s’appliquent aussi aux trigrammes : alternance de mains, trigramme de même main,
-trigramme de même doigt (l’horreur…), répétition (très peu probable).
+Les trigrammes sont des enchaînements de trois touches. Ils peuvent souvent être
+interprêtés comme la composition de deux digrammes distincts : par exemple,
+[O]{.kbd}[U]{.kbd}[R]{.kbd} en Qwerty ou Azerty peut être considéré comme la
+composition du roulement [O]{.kbd}[U]{.kbd} et de l’alternance
+[U]{.kbd}[R]{.kbd}.
 
-Parmi les trigrammes de même main, on distingue :
+Cette approximation est suffisante dans de nombreux cas, mais il existe quelques
+exceptions : notamment, enchaîner deux roulements dans le même sens est
+significativement plus efficace que d’enchaîner deux alternances, car on ne fait
+toujours qu’un mouvement pour actionner les trois touches plutôt qu’un mouvement
+par touche.
 
-- roulement intérieur, le meilleur enchainement qui soit ;
-- roulement extérieur, très confortable également ;
-- redirection, qui est l’enchainement de deux roulements de sens opposé ;
-- presque-SFB ou skipgram (TODO), dont l’inconfort se rapproche du SFB.
+Ces exceptions forment de nouveaux enchainements dont il faut tenir compte :
+
+- presque-SFB (ou SFS, pour <i lang="en">Same-Finger Skipgram</i>) : un SFB avec
+  une touche d’un autre doigt intercalée au milieu, par exemple
+  [E]{.kbd}[A]{.kbd}[D]{.kbd} ou [B]{.kbd}[U]{.kbd}[T]{.kbd} en Qwerty ;
+- presque-SKB (ou SKS, pour <i lang="en">Same-Key Skipgram</i>) : un SKB avec
+  une touche d’un autre doigt intercalée au milieu, par exemple
+  [E]{.kbd}[R]{.kbd}[E]{.kbd} ou [E]{.kbd}[L]{.kbd}[E]{.kbd} en Qwerty ;
+- redirection : enchaînement de deux roulements de sens opposé, par exemple
+  [S]{.kbd}[A]{.kbd}[D]{.kbd} ou [M]{.kbd}[O]{.kbd}[K]{.kbd} en Qwerty ;
+
+Les presque-SFB et presque-SKB sont bien moins gênants que les « vrais » SFB ou
+SKB, mais doivent être pris en compte pour ne pas dégrader le confort de la
+disposition.
 
 Les redirections peuvent être acceptables. C’est le cas du mot `avec` tapé en
 Ergo‑L, qui correspond à <kbd>A</kbd><kbd>V</kbd><kbd>D</kbd><kbd>W</kbd> en
@@ -183,10 +199,10 @@ peu de pratique.
 On parle de *mauvaise* redirection quand l’index n’intervient pas dans le
 mouvement. C’est le cas de la chaine `uti` en Ergo‑L, qui correspond à
 <kbd>;</kbd><kbd>K</kbd><kbd>L</kbd> en Qwerty. Ce type d’enchainement est
-inconfortable et très sujet à l’erreur, la pratique n’atténue que partiellement
-la gêne. Et `uti` a beau être sur la <i lang="en">home row</i> en Ergo‑L, c’est
-bien moins confortable à taper que `avec`, bien que celui-ci utilise les trois
-rangées.
+inconfortable et très sujet à l’erreur, la pratique n’atténuant que
+partiellement la gêne. Et `uti` a beau être sur la <i lang="en">home row</i> en
+Ergo‑L, c’est bien moins confortable à taper que `avec`, même si celui-ci
+utilise les trois rangées.
 
 
 Critères d’évaluation
@@ -239,7 +255,9 @@ et Ergo‑L.
 
 — [Kevin DeLoach][kdeloach], disposition [Workman][]
 
-C’est un constat qui est également partagé par bon nombre de Bépoètes.
+C’est un constat qui a également été fait par certains Bépoètes qui ont proposé
+des améliorations très significatives de Bépo. C’est notamment le cas de
+l’auteur de Béop :
 
 > La frappe d’un roulement facile peut être plus rapide, plus confortable et
 > moins sujette à la faute de frappe qu’une alternance de mains.
