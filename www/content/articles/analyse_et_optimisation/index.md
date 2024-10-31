@@ -99,7 +99,7 @@ doigts :
 - les doigts forts (index, majeur) peuvent supporter plus de charge que les
   auriculaires, qui sont déjà très sollicités avec [Enter]{.kbd},
   [Backspace]{.kbd}, [Tab]{.kbd}, [Shift]{.kbd}…
-- la charge est aggravée par les extensions, c’est-à-dire les touches qui sont
+- la charge est aggravée par l’inconfort, c’est-à-dire les touches qui sont
   notées 3 ou plus par le projet Workman (voir ci-dessus).
 
 On affiche en bleu la charge liée aux touches notées 1 à 2, en jaune celle des
@@ -546,18 +546,18 @@ toujours la pire note et les pires enchainements pour évaluer une disposition e
 proposer des améliorations.
 
 Cela dit, il y a bien une métrique que l’on regarde plus que les autres, c’est
-le SFU : ça donne assez rapidement une idée de la marge d’optimisation, qui
-reste possible. Pour autant, et même si on est très fièr·e·s du SFU d’Ergo‑L en
+le SFU : ça donne assez rapidement une idée de la marge d’optimisation qui reste
+possible. Pour autant, et même si on est très fièr·e·s du SFU d’Ergo‑L en
 français comme en anglais, ça n’est pas un objectif en soi : [Nuclear-Squid][] a
-même rejeté des versions de développement d’Ergo‑L qui avaient des SFU
-incroyablement bas, mais qui causaient d’autres problèmes plus sournois à
-l’usage.
+même rejeté des expérimentations qui avaient des SFU incroyablement bas, mais
+qui causaient d’autres problèmes plus sournois à l’usage.
  
-C’est notamment le cas de [Colemak French Touch][], sur lequel on est tombé un
-peu accidentellement sur la fin du projet. Le SFU est terrifiant (0.7 %), le
-fait de coller à une disposition très connue était un avantage auquel on était
-sensible, à tel point qu’on a envisagé d’annuler la sortie (alors imminente)
-d’Ergo‑L 1.0 ! Mais deux problèmes sont apparus assez vite :
+C’est notamment le cas de ce qui est devenu [Colemak French Touch][], sur lequel
+on est tombé un peu accidentellement sur la fin du projet Ergo‑L. Le SFU est
+terrifiant (0.7 %), le fait de coller à une disposition très connue était un
+avantage auquel on était sensible, à tel point qu’on a envisagé d’annuler la
+sortie (alors imminente) d’Ergo‑L 1.0 ! Mais deux problèmes sont apparus assez
+vite :
 
 - la charge des doigts était trop déséquilibrée, surtout en anglais
   étrangement ;
@@ -789,9 +789,9 @@ projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction d
 chapitre sur les analyseurs. Que le Grand Palmipède parsème son chemin de
 pétales de roses.
 
-Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju][] et
+Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju__][] et
 [Xiloynaha][] pour la relecture, les suggestions et les corrections : on a eu
-250 points de discussion pour boucler cet article, sans compter les longs
+300 points de discussion pour boucler cet article, sans compter les longs
 échanges sur Discord. Gros boulot ! La communauté Ergo‑L est fantastique. :-)
 
 
@@ -845,7 +845,7 @@ Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju][] et
 [Adrienm7]:                https://hypertexte.beseven.fr
 [aurelberra]:              https://github.com/aurelberra
 [Xiloynaha]:               https://github.com/cypriani
-[Ju]:                      https://github.com/PetitWombat
+[Ju__]:                    https://github.com/PetitWombat
 
 [kdeloach]:                https://github.com/kdeloach
 [patorjk]:                 https://patorjk.com/
