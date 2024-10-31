@@ -553,7 +553,7 @@ même rejeté des expérimentations qui avaient des SFU incroyablement bas, mais
 qui causaient d’autres problèmes plus sournois à l’usage.
  
 C’est notamment le cas de ce qui est devenu [Colemak French Touch][], sur lequel
-on est tombé un peu accidentellement sur la fin du projet Ergo‑L. Le SFU est
+on est tombés un peu accidentellement sur la fin du projet Ergo‑L. Le SFU était
 terrifiant (0.7 %), le fait de coller à une disposition très connue était un
 avantage auquel on était sensible, à tel point qu’on a envisagé d’annuler la
 sortie (alors imminente) d’Ergo‑L 1.0 ! Mais deux problèmes sont apparus assez
@@ -771,10 +771,7 @@ Conclusion
 - Il n’y a pas de mauvais analyseur, juste des mauvaises façons de s’en servir.
 - Il n’y a pas de bonne note globale, ni de bonne façon de s’en servir.
 - Chaque métrique est importante, car on a toutes et tous nos préférences et nos
-  ressentis.
-
-Et les [5 critères indispensables][métriques indispensables] à nos yeux sont les
-suivants :
+  ressentis :
 
 :::{.highlight}
 - la <i lang="en">heatmap</i> doit être centrée sur les positions confortables ;
