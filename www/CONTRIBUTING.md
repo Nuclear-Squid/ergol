@@ -56,7 +56,7 @@ Rédaction
 
 ### Markdown
 
-Les pages sont écrites en [Pandoc Markdown][] plutôn qu’en HTML chaque fois que
+Les pages sont écrites en [Pandoc Markdown] plutôn qu’en HTML chaque fois que
 c’est possible.
 
 Les lignes sont limitées à 80 caractères.
@@ -71,12 +71,12 @@ que dans le corps du texte, afin de faciliter la lecture.
 
 ### Orthographe
 
-On suit l’orthographe de la [réforme de 1990][]. Il existe des dictionnaires
+On suit l’orthographe de la [réforme de 1990]. Il existe des dictionnaires
 dédiés, et des outils comme Wiktionnaire indiquent les variantes.
 
-Par souci d’inclusivité, on privilégie les formules [épicènes][]. Les formes
+Par souci d’inclusivité, on privilégie les formules [épicènes]. Les formes
 condensées avec le point médian sont tolérées mais gagnent à être évitées.
-L’[accord de proximité][] est encouragé.
+L’[accord de proximité] est encouragé.
 
 ### Typographie
 
@@ -102,7 +102,7 @@ sont définis dans le glossaire.
 ### Désignation des touches
 
 Les touches physiques du clavier sont désignées suivant les normes techniques en
-vigueur (ANSI, USB Keyboard API, JavaScript Keyboard API)… qui découlent des
+vigueur (ANSI, USB Keyboard API, [w3c Keyboard API])… qui découlent des
 claviers Qwerty.
 
 On ne traduit pas les touches spéciales. On parle donc de <kbd>Shift</kbd>,
@@ -116,3 +116,5 @@ désigner celle qui produit un `N` en Ergo‑L.
 [réforme de 1990]:     https://fr.wikipedia.org/wiki/Rectifications_orthographiques_du_français_en_1990
 [épicènes]:            https://fr.wiktionary.org/wiki/épicène
 [accord de proximité]: https://fr.wikipedia.org/wiki/Règle_de_proximité
+
+[w3c Keyboard API]:    https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system
