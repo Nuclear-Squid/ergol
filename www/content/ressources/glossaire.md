@@ -13,29 +13,42 @@ title = "Glossaire"
 </style>
 
 
-Ergonomie et Optimisation
+Analyse et optimisation
 --------------------------------------------------------------------------------
 
 [SFB <i lang="en">(Same-Finger Bigram)</i>]{#sfb}
 
-: Aussi appelé « bigramme de même doigt ». Quand deux lettres s’enchaînent avec un même
-doigt, ce qui est source d’inconfort ou d’erreurs, notamment à haute vitesse.
- 
+: Aussi appelé « bigramme de même doigt ». Quand deux lettres s’enchaînent avec
+un même doigt, ce qui est source d’inconfort ou d’erreurs, notamment à haute
+vitesse.
+
 [SFU <i lang="en">(Same-Finger Usage)</i>]{#sfu}
 
-: Taux de SFB relevés dans un corpus de texte, exprimé en % du nombre total de bigrammes.
-Plus le taux est bas, mieux c’est.
- 
+: Taux de SFB relevés dans un corpus de texte, exprimé en % du nombre total de
+bigrammes. Plus le taux est bas, mieux c’est.
+
 [SKB <i lang="en">(Same-Key Bigram)</i>]{#skb}
 
-: Répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
-disposition de clavier, ou `és` en Ergo‑L.
+: Répétition de même touche, par exemple pour produire `nn` avec n’importe
+quelle disposition de clavier, ou `és` en Ergo‑L.
 
 [SKU <i lang="en">(Same-Key Usage)</i>]{#sku}
 
-: Taux de SKB relevés dans un corpus de texte, exprimé en % du nombre total de bigrammes.
-Théoriquement, il ne dépend que du corpus ; mais il peut augmenter avec l’usage
-de touches mortes.
+: Taux de SKB relevés dans un corpus de texte, exprimé en % du nombre total de
+bigrammes. Théoriquement, il ne dépend que du corpus ; mais il peut augmenter
+avec l’usage de touches mortes.
+
+[SHB <i lang="en">(Same-Hand Bigram)</i>]{#shb}
+
+: Aussi appelé « bigramme de même main ». Quand deux lettres s’enchaînent avec
+une même main. C’est ce que cherche à éviter Dvorak, qui privilégie les
+alternances de mains.
+
+[SHU <i lang="en">(Same-Hand Usage)</i>]{#shu}
+
+: Taux de SHB relevés dans un corpus de texte, exprimé en % du nombre total de
+bigrammes. Plus le taux est bas, plus la disposition favorise l’alternance de
+mains ; plus le taux est élevé, plus la disposition favorise les roulements.
 
 [Extension]{#extension}
 
@@ -44,14 +57,26 @@ que la position de repos, soit à une distance supérieure à une touche.
 
 [LSB <i lang="en">(Lateral Stretch Bigram)</i>]{#lsb}
 
-: Bigramme comportant une extension, c’est-à-dire [F]{.kbd}[G]{.kbd} en Azerty
-ou Qwerty. Ou pire [P]{.kbd}[^]{.kbd} en Azerty / [P]{.kbd}[\[]{.kbd} en Qwerty
+: Bigramme de même main comportant une extension, par exemple [L]{.kbd}[H]{.kbd}
+en Azerty ou Qwerty.
 
 [Ciseau]{#ciseau}
 
 : Quand un bigramme nécessite un changement de rangée inconfortable,
 c’est-à-dire [C]{.kbd}[R]{.kbd} en Azerty ou Qwerty.
 Le terme « ciseau » est utilisé ici comme substantif de « mouvement en ciseaux ».
+
+[SFS <i lang="en">(Same-Finger Skipgram)</i>]{#sfs}
+
+: Aussi appelé « presque-SFB » : un SFB avec une touche d’un autre doigt
+intercalée au milieu, par exemple [E]{.kbd}[A]{.kbd}[D]{.kbd} ou
+[B]{.kbd}[U]{.kbd}[T]{.kbd} en Qwerty.
+
+[SKS <i lang="en">(Same-Key Skipgram)</i>]{#sks}
+
+: Aussi appelé « presque-SKB » : un SKB avec une touche d’un autre doigt
+intercalée au milieu, par exemple [E]{.kbd}[R]{.kbd}[E]{.kbd} ou
+[E]{.kbd}[L]{.kbd}[E]{.kbd} en Qwerty.
 
 [Roulement intérieur]{#roulement}
 
@@ -115,8 +140,8 @@ de la technologie du clavier pour développer des dispositions de clavier.
 
     Exemple le plus courant de couches : en tapant des lettres sur la couche
     *alpha* on obtient les lettres en minuscules, en gardant la touche
-    [Shift]{.kbd} enfoncée on obtient les lettres en majuscules, ce sont donc 2
-    couches différentes.
+    [Shift]{.kbd} enfoncée on obtient les lettres en majuscules, ce sont donc
+    deux couches différentes.
 
     Ce concept de couches permet de diminuer le nombre de touches nécessaires sur
     un clavier et brille particulièrement sur les petits claviers ergonomiques

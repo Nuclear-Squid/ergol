@@ -151,8 +151,8 @@ l’anglais. Ergo‑L a la palme du confort.
 Bépo et toutes ses variantes présentent les mêmes [défauts d’ergonomie][] :
 
 - placement de lettres excentrées sur les 6<sup>e</sup> et 7<sup>e</sup>
- colonnes :
-  - compatibilité délicate avec la plupart des claviers ergonomiques ;
+  colonnes :
+  - [compatibilité délicate][] avec la plupart des claviers ergonomiques ;
   - déviations ulnaires pouvant devenir douloureuses ;
 - charge importante de l’auriculaire droit (> 11 % en français).
 
@@ -173,13 +173,13 @@ serait une permutation `h,’`, pour faire passer le `h` de [>] à [O].
 -->
 
 [Note]{id="optimot_en"} : l’auteur d’Optimot considère que sa disposition est
-optimisée pour l’anglais au motif qu’elle obtiendrait une bonne [note globale sur
-KLAnext][] ; mais pour nous, [la heatmap est inadaptée][1] (lettres fréquentes sur
-la rangée inférieure) et de nombreux bigrammes courants sont trop inconfortables
-pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, 
-`ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça. Et
-d’ailleurs, son auteur reconnait que l’anglais n’est qu’un objectif secondaire
-de sa disposition.
+optimisée pour l’anglais au motif qu’elle obtiendrait une bonne [note globale
+sur KLAnext][] ; mais pour nous, [la heatmap est inadaptée][heatmap] (lettres
+fréquentes sur la rangée inférieure) et de nombreux bigrammes courants sont trop
+inconfortables pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`,
+`by`, `ok`, `ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée*
+pour ça. Et d’ailleurs, son auteur reconnait que l’anglais n’est qu’un objectif
+secondaire :
 
 > Moi aussi, je peux modifier légèrement Optimot pour optimiser un peu plus pour
 > l’anglais (mais au détriment du français). Mais ce n’est pas mon choix parce
@@ -193,7 +193,7 @@ de sa disposition.
 
 [(?)]:     #optimot_en
 [optimot]: ./optimot_fr.png
-[1]:       ./optimot_en.png
+[heatmap]: ./optimot_en.png
 
 **De notre point de vue :**
 
@@ -202,7 +202,9 @@ de sa disposition.
 - pour les Bépoètes qui n’ont pas de douleurs, Optimot apporte une optimisation
   *très* supérieure en français et est bien plus utilisable en anglais ;
 - pour les Bépoètes qui ont des douleurs ou qui souhaitent tenter l’expérience
-  1DFH, [Bépolar][] sera une alternative intéressante et très vite apprise.
+  1DFH, [Bépolar][] sera une alternative intéressante et très vite apprise ; et
+  [Erglace][] n’aura que des avantages sur Optimot, y compris sur ses propres
+  métriques.
 
 [ergo‑l]:     /
 [bépo]:       /bepo
@@ -217,4 +219,5 @@ de sa disposition.
 [symboles]:            /presentation#couche-symboles
 [défauts d’ergonomie]: /bepo/#ergonomie
 
+[compatibilité délicate]:   /claviers/#les-limitations-de-bépo-béopy-optimot
 [note globale sur KLAnext]: /articles/analyse_et_optimisation/#lapproche-optimot

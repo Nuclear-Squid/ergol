@@ -97,10 +97,10 @@ Une autre optimisation de base consiste à équilibrer la charge de travail des
 doigts :
 
 - les doigts forts (index, majeur) peuvent supporter plus de charge que les
-  auriculaires, qui sont déjà très sollicités avec [Enter]{.kbd},
+  auriculaires, qui sont déjà très sollicités avec [Entrée]{.kbd},
   [Backspace]{.kbd}, [Tab]{.kbd}, [Shift]{.kbd}…
-- la charge est aggravée par l’inconfort, c’est-à-dire les touches qui sont
-  notées 3 ou plus par le projet Workman (voir ci-dessus).
+- la charge est aggravée par l’utilisation de touches inconfortables,
+  c’est-à-dire celles notées 3 ou plus par le projet Workman (voir ci-dessus).
 
 On affiche en bleu la charge liée aux touches notées 1 à 2, en jaune celle des
 touches notées 3, et en orange celles notées 4 ou plus — ce qui inclut les
@@ -528,7 +528,7 @@ Elle repose sur deux idées fortes :
 
 > Soyez pas cons : ayez des stats.
 
-— [Ergonomie clavier : l’ère post-Dvorak](https://www.youtube.com/watch?v=96RikfmBY-U&t=2017s)
+— [Ergonomie clavier : l’ère post-Dvorak][soyez pas cons]
 
 C’est l’approche qu’on propose sur notre [comparateur][] et qu’on a suivie
 pendant toute la mise au point d’Ergo‑L. On a itéré comme suit :
@@ -748,8 +748,8 @@ de mise au point tout-en-un pour les auteurs et autrices de dispositions de
 clavier. L’analyseur d’Ergo‑L vient ainsi d’être intégré à Kalamine, ce qui
 permet de visualiser directement l’impact de chaque modification de layout.
 
-Le générateur est écrit en Python, l’analyseur en JavaScript, et le code source
-est proposé sous licence libre (MIT).
+Le générateur est écrit en Python, l’analyseur en JavaScript, et l’ensemble du
+code source est proposé sous licence libre (MIT).
 
 Il n’est pas encore au niveau d’Oxeylyzer mais il a pour nous des avantages
 importants, notamment :
@@ -782,14 +782,15 @@ Conclusion
 :::
 
 Un grand merci à [Nuclear-Squid][], non seulement pour avoir initié et dirigé le
-projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction du
-chapitre sur les analyseurs. Que le Grand Palmipède parsème son chemin de
-pétales de roses.
+projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction des
+chapitres sur les métriques et les analyseurs. Que le Grand Palmipède parsème
+son chemin de pétales de roses.
 
 Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju__][] et
 [Xiloynaha][] pour la relecture, les suggestions et les corrections : on a eu
-300 points de discussion pour boucler cet article, sans compter les longs
-échanges sur Discord. Gros boulot ! La communauté Ergo‑L est fantastique. :-)
+plus de 300 points de discussion pour boucler cet article, sans compter les
+longs échanges sur Discord. Gros boulot ! La communauté des Ergonautes est
+fantastique. 🚀
 
 
 [1DFH]:                    /presentation/#dfh-1u-distance-from-home
@@ -801,6 +802,7 @@ Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju__][] et
 [adaptations]:             /claviers/#les-limitations-de-bépo-béopy-optimot
 [cdl2023-slides]:          /slides/capitoledulibre2023
 [cdl2023-video]:           https://www.youtube.com/watch?v=96RikfmBY-U
+[soyez pas cons]:          https://www.youtube.com/watch?v=96RikfmBY-U&t=2017s
 [serveur Discord]:         https://discord.gg/5xR5K3nAFX
 
 [x‑keyboard]:              https://github.com/OneDeadKey/x-keyboard
