@@ -16,6 +16,12 @@ title = "Glossaire"
 Analyse et optimisation
 --------------------------------------------------------------------------------
 
+### Bigrammes
+
+Bigramme
+
+: Enchainement de deux touches.
+
 [SFB <i lang="en">(Same-Finger Bigram)</i>]{#sfb}
 
 : Aussi appelé « bigramme de même doigt ». Quand deux lettres s’enchaînent avec
@@ -62,21 +68,25 @@ en Azerty ou Qwerty.
 
 [Ciseau]{#ciseau}
 
-: Quand un bigramme nécessite un changement de rangée inconfortable,
-c’est-à-dire [C]{.kbd}[R]{.kbd} en Azerty ou Qwerty.
-Le terme « ciseau » est utilisé ici comme substantif de « mouvement en ciseaux ».
+: Quand un bigramme nécessite un changement de rangée inconfortable, par exemple
+[C]{.kbd}[R]{.kbd} en Azerty ou Qwerty. Le terme « ciseau » est utilisé ici
+comme substantif de « mouvement en ciseaux ».
+
+### Trigrammes
+
+Trigramme
+
+: Enchainement de trois touches.
 
 [SFS <i lang="en">(Same-Finger Skipgram)</i>]{#sfs}
 
-: Aussi appelé « presque-SFB » : un SFB avec une touche d’un autre doigt
-intercalée au milieu, par exemple [E]{.kbd}[A]{.kbd}[D]{.kbd} ou
-[B]{.kbd}[U]{.kbd}[T]{.kbd} en Qwerty.
+: Un SFB avec une touche d’un autre doigt intercalée au milieu, par exemple
+[E]{.kbd}[A]{.kbd}[D]{.kbd} ou [B]{.kbd}[U]{.kbd}[T]{.kbd} en Qwerty.
 
 [SKS <i lang="en">(Same-Key Skipgram)</i>]{#sks}
 
-: Aussi appelé « presque-SKB » : un SKB avec une touche d’un autre doigt
-intercalée au milieu, par exemple [E]{.kbd}[R]{.kbd}[E]{.kbd} ou
-[E]{.kbd}[L]{.kbd}[E]{.kbd} en Qwerty.
+: Un SKB avec une touche d’un autre doigt intercalée au milieu, par exemple
+[E]{.kbd}[R]{.kbd}[E]{.kbd} ou [E]{.kbd}[L]{.kbd}[E]{.kbd} en Qwerty.
 
 [Roulement intérieur]{#roulement}
 
