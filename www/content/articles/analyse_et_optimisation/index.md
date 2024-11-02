@@ -56,9 +56,9 @@ code { font-family: monospace; }
   - [les outils]
   - [la communauté]
 - [Les principaux analyseurs]
-  - [CarpalX]
+  - [CarpalX](#carpalx)
   - [KLA (<i lang="en">keyboard layout analyzer</i>)]
-  - [Colemak-DH]
+  - [Colemak-DH](#colemak-dh)
   - [Oxeylyzer ❤️]
   - [Kalamine 🚀]
 - [Conclusion]
