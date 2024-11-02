@@ -210,7 +210,7 @@ Critères d’évaluation
 
 ### Métriques indispensables
 
-Un analyseur de disposition de clavier va, en tout premier lieu, fournir des
+Un analyseur de disposition de clavier doit, en tout premier lieu, fournir des
 métriques sur les principaux critères :
 
 :::{.highlight}
