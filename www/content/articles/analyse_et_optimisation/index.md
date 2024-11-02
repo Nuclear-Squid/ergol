@@ -119,9 +119,9 @@ Tout bigramme appartient à l’une des catégories suivantes :
 - alternance de mains : les touches sont sous deux mains différentes ;
 - bigramme de même main : les touches sont sous deux doigts différents d’une
   même main ;
-- bigramme de même doigt (SFB, <i lang="en">same-finger bigram</i>) : deux
+- bigramme de même doigt (SFB, pour <i lang="en">same-finger bigram</i>) : deux
   touches différentes à enchainer avec le même doigt ;
-- répétition (SKB, <i lang="en">same-key bigram</i>) : la même touche est
+- répétition (SKB, pour <i lang="en">same-key bigram</i>) : la même touche est
   pressée deux fois de suite.
 
 On affiche les SKB en jaune et les SFB (plus gênants) en orange. Le nombre de
