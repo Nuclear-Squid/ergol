@@ -226,9 +226,9 @@ considère que la qualité ressentie d’une disposition est reflétée par sa p
 métrique parmi celles-ci, bien plus que par une moyenne (fût-elle pondérée) de
 toutes ces métriques.
 
-Les trois premières métriques sont très consensuelles ; les deux dernières
-dernières sont moins souvent prise en considération, mais de notre point de vue
-c’est une grosse erreur que de les négliger.
+Les trois premières métriques sont très consensuelles ; les deux dernières sont
+moins souvent prise en considération, mais de notre point de vue c’est une
+grosse erreur que de les négliger.
 
 ### SHU, <i lang="en">same hand usage</i> ?
 
