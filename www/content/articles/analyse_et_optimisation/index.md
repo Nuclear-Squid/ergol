@@ -132,9 +132,9 @@ complètement ces SFB et SKB, mais on fait en sorte de les placer
 préférentiellement sur les doigts forts, en évitant tout particulièrement les
 auriculaires.
 
-![Répartition des SFB et SKB d’Ergo‑L.](ergol_sfu.png)
+![[Répartition des SFB et SKB d’Ergo‑L.](/stats/#/ergol//en+fr)](ergol.png)
 
-![Répartition des SFB et SKB de Bépo.](bepo_sfu.png)
+![[Répartition des SFB et SKB de Bépo.](/stats/#/bepo//en+fr)](bepo.png)
 
 Lors d’un enchainement rapide de deux touches, il est fréquent (voire
 systématique) que la deuxième touche soit pressée avant que la première ne soit
