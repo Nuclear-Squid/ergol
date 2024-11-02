@@ -552,10 +552,10 @@ français comme en anglais, ça n’est pas un objectif en soi : [Nuclear-Squi
 même rejeté des expérimentations qui avaient des SFU incroyablement bas, mais
 qui causaient d’autres problèmes plus sournois à l’usage.
  
-C’est notamment le cas de ce qui est devenu [Colemak French Touch][], sur lequel
-on est tombés un peu accidentellement sur la fin du projet Ergo‑L. Le SFU était
-terrifiant (0.7 %), le fait de coller à une disposition très connue était un
-avantage auquel on était sensible, à tel point qu’on a envisagé d’annuler la
+C’est notamment le cas d’une expérimentation qu’on a faite un peu par accident
+sur la fin du projet Ergo‑L, et qui est devenue [Colemak French Touch][]. Le SFU
+était terrifiant (0.7 %), le fait de coller à une disposition très connue était
+un avantage auquel on était sensible, à tel point qu’on a envisagé d’annuler la
 sortie (alors imminente) d’Ergo‑L 1.0 ! Mais deux problèmes sont apparus assez
 vite :
 
@@ -567,7 +567,7 @@ vite :
   trois soit sous un index.
 
 On constate que les enchainements inconfortables évoluent de deux façons
-possibles avec la pratique : soit ils deviennent acceptables, soient ils se
+possibles avec la pratique : soit ils deviennent acceptables, soit ils se
 révèlent insupportables. D’où l’intérêt de pratiquer la disposition qu’on
 utilise — et idéalement, d’être plusieurs personnes différentes à pratiquer.
 Les zones d’inconfort sont propres à chacun·e d’entre nous, et cela peut
@@ -586,9 +586,8 @@ disposition de clavier.
 Il faut évidemment avoir des stats solides, et savoir les faire évoluer tout au
 long de l’optimisation d’une disposition de clavier ; mais il nous semble tout
 aussi essentiel d’alterner entre des phases d’optimisation et des phases
-d’expérimentation pour mettre en lumière les enchainements inconfortables. Et ne
-jamais perdre de vue que ce sont ces enchainements, plus que les métriques, qui
-font la qualité d’une disposition de clavier.
+d’expérimentation pour mettre en lumière les enchainements inconfortables… et
+les résoudre.
 
 ### Les outils
 
