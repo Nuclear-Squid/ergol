@@ -107,9 +107,9 @@ touches notées 3, et en orange celles notées 4 ou plus — ce qui inclut les
 touches trop excentrées pour être évaluées par Workman, et qui enfreignent le
 principe [1DFH][], auquel nous autres Ergonautes sommes si attaché·e·s.
 
-![Charge des doigts d’Ergo‑L.](ergol.png)
+![[Charge des doigts d’Ergo‑L.](/stats/#/ergol//en+fr)](ergol.png)
 
-![Charge des doigts de Bépo.](bepo.png)
+![[Charge des doigts de Bépo.](/stats/#/bepo//en+fr)](bepo.png)
 
 ### Les bigrammes
 
