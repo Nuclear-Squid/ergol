@@ -221,14 +221,23 @@ métriques sur les principaux critères :
 - le taux de mauvaises redirections doit être le plus bas possible.
 :::
 
-Et **chacune de ces métriques est importante** : chez les Ergonautes, on
-considère que la qualité ressentie d’une disposition est reflétée par sa pire
-métrique parmi celles-ci, bien plus que par une moyenne (fût-elle pondérée) de
-toutes ces métriques.
+**Chacune de ces métriques est importante** : chez les Ergonautes, on considère
+que la qualité ressentie d’une disposition est reflétée par sa pire métrique
+parmi celles-ci, voire son pire achoppement, bien plus que par une moyenne
+(fût-elle pondérée) de toutes ces métriques.
+
+**Ces métriques sont faites pour mettre en évidence des défauts**, et ne sont
+pas de bons <i lang="en">benchmarks</i>. Par exemple, une diposition qui aurait
+2 % de SFU serait bien plus confortable qu’une qui n’en aurait que 1 %, mais
+concentré sur un auriculaire : dans le second cas, la métrique est meilleure
+mais un défaut en particulier rend toute la disposition insupportable. Et c’est
+pour cela que les bons analyseurs détaillent ce type de métriques par doigt, et
+ne se contentent pas d’une valeur moyenne.
 
 Les trois premières métriques sont très consensuelles ; les deux dernières sont
-moins souvent prise en considération, mais de notre point de vue c’est une
-grosse erreur que de les négliger.
+moins souvent prises en considération, mais de notre point de vue c’est une
+grosse erreur que de les négliger — et elles deviennent même primordiales pour
+les dispositions favorisant les roulements aux alternances de mains.
 
 ### SHU, <i lang="en">same hand usage</i> ?
 
