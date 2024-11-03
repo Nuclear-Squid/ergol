@@ -813,6 +813,11 @@ Conclusion
 - le taux de mauvaises redirections doit être le plus bas possible.
 :::
 
+Une dernière recommandation : l’ergonomie passe avant l’optimisation. Quand on
+dit qu’Ergo‑L est  [ergonomique avant tout](/), ça n’est pas un simple slogan,
+c’est *ilttéralement* ce qu’on a fait : *d’abord* caler l’ergonomie ([1DFH],
+raccourcis clavier…), *puis* optimiser les mouvements de doigts.
+
 Un grand merci à [Nuclear-Squid][], non seulement pour avoir initié et dirigé le
 projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction des
 chapitres sur les métriques et les analyseurs. Que le Grand Palmipède parsème
