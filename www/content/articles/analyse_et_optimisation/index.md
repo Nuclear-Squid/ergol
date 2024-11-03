@@ -1,6 +1,6 @@
 +++
 title = "Analyse et optimisation"
-date = 2024-10-20T18:01:23+01:00
+date = 2024-11-03T11:24:23+01:00
 author = "kaze"
 tags = ["communauté", "technique", "outils"]
 +++
