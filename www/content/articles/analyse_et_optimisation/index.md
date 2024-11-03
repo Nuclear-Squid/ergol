@@ -284,14 +284,31 @@ le risque d’avoir un taux élevé de mauvaises redirections.
  
 ### Distance parcourue ?
 
-Une métrique originale consiste à mesurer la distance parcourue par les doigts
-pendant la saisie d’un texte. Elle a été rendue populaire par CarpalX et KLA :
-facile à calculer, et c’est toujours amusant de savoir combien de kilomètres nos
-doigts parcourent pour saisir un texte. :-)
+Une métrique historique consiste à mesurer la distance parcourue par les doigts
+pendant la saisie d’un texte : c’est facile à calculer, et toujours amusant de
+savoir combien de kilomètres nos doigts parcourent pour saisir un texte. :-)
 
-La communauté Ergonaute n’utilise pas cette métrique car elle n’est pertinente
-que si l’on suppose que tous les déplacements de doigt se valent — ce qui est
-évidemment faux (voir le paragraphe sur [la <i lang="en">heatmap</i>]).
+CarpalX et KLA l’utilisent toujours, et Claude Marsan l’utilisait déjà en 1991
+pour vanter les mérites de sa disposition de clavier :
+
+> Pour 100 000 frappes […], la distance projetée sur un plan horizontal
+> parcourue par les doigts est de 1 400 mètres, alors qu’en AZERTY, elle est de
+> 3 216 mètres.
+
+— *[La fin de l’AZERTY ?!]*, p. 299
+
+Les analyseurs modernes n’utilisent plus cette métrique, car elle n’est
+pertinente que si l’on suppose que tous les déplacements de doigt se valent — ce
+qui est totalement faux, comme expliqué dans le paragraphe sur [la <i
+lang="en">heatmap</i>].
+
+Corollaire, cette métrique est une très mauvaise cible d’optimisation : à
+vouloir réduire la distance parcourue sans distinction de doigts, l’optimum
+n’est atteint que quand les auriculaires font autant de distance que les index —
+ce qui va grossièrement à l’encontre des objectifs ergonomiques communément
+admis.
+
+Cette métrique est amusante, mais à n’utiliser qu’à titre de curiosité !
 
 ### Note globale ?
 
@@ -433,10 +450,10 @@ note globale de KLAnext comporte des failles évidentes.
   <kbd>]</kbd><kbd>.</kbd> en Qwerty) ont la même pénalité, alors qu’il s’agit
   respectivement du meilleur et du pire enchainement possible. Optimiser pour
   KLAnext fait privilégier les *ciseaux* aux roulements.
-- Elle ne semble pas prendre en compte l’équilibre de la charge des doigts.
+- Elle ne semble pas prendre en compte l’équilibre de la charge des doigts :
   Optimot a une charge de plus de 11 % sur l’auriculaire droit en français, ce
   qui est exceptionnellement élevé pour une disposition de clavier (ergonomique
-  ou non), et souvent rédhibitoire.
+  ou non), et souvent rédhibitoire. Un travers de la [distance parcourue ?]
 - Elle est plus sensible à la géométrie du clavier qu’à la disposition des
   touches. Ainsi, pour l’anglais, Bépo sur Ergodox a une meilleure note que
   Sturdy sur ANSI — s’agissant là respectivement de la pire et de la meilleure
@@ -720,7 +737,7 @@ C’est un analyseur plus complet que KLA, qu’il semble avoir remplacé — au
 auprès des développeurs qui y ont contribué. Le dernier commit remonte à juin
 2022.
 
-![Accessibilité des touches selon Colemak-DH.](colemak_dh_effort.png)
+![Accessibilité des touches selon [Colemak-DH].](colemak_dh_effort.png)
 
 Il remplace la mesure de distance parcourue par une évaluation globale de la <i
 lang="en">heatmap</i> basée sur un [score d’effort][Colemak-DH-effort] associé à
@@ -750,8 +767,8 @@ en fait de deux de ses pires ciseaux.
 [Sturdy][] qui est d’une efficacité redoutable en anglais : un SFU très bas
 (0,9 %), beaucoup de roulements, très peu de ciseaux. Du grand art !
 
-Oxey propose aussi un analyseur très complet avec son [layout playground][],
-dont le [code source][oxeylyzer] (Rust) est disponible sous licence libre
+Oxey propose aussi un analyseur très complet avec son [Oxeylyzer][],
+dont le [code source][oxeylyzer-source] (Rust) est disponible sous licence libre
 (Apache 2.0). Cet « Oxeylyzer » est à nos yeux le meilleur analyseur du moment :
 
 - des métriques précises, complètes et pertinentes : sa notion de « mauvaises »
@@ -762,7 +779,8 @@ dont le [code source][oxeylyzer] (Rust) est disponible sous licence libre
   faibles d’une disposition ;
 - très pratique pour tester des permutations de touches.
 
-![<i lang="en">Heatmap</i> de Sturdy dans Oxeylyzer.](oxeylyzer.png)
+![<i lang="en">Heatmap</i> anglophone de Sturdy dans
+[Oxeylyzer].](oxeylyzer.png)
 
 Contrairement à Colemak-DH, aucune métrique d’ensemble ne cherche à qualifier la
 <i lang="en">heatmap</i> : elle est mise en avant telle quelle, c’est simple et
@@ -789,6 +807,9 @@ permet de visualiser directement l’impact de chaque modification de layout.
 Le générateur est écrit en Python, l’analyseur en JavaScript, et l’ensemble du
 code source est proposé sous licence libre (MIT).
 
+![<i lang="en">Heatmap</i> francophone d’Ergo‑L dans
+[Kalamine].](/presentation/ergol_fr.svg)
+
 Il n’est pas encore au niveau d’Oxeylyzer mais il a pour nous des avantages
 importants, notamment :
 
@@ -797,10 +818,10 @@ importants, notamment :
 - et surtout, le support des touches mortes ! À notre connaissance, c’est le
   seul analyseur qui dispose de cette fonctionnalité.
 
-On espère qu’en mettant notre analyseur maison à disposition dans Kalamine il
-pourra servir à d’autres projets qu’Ergo‑L et les dispositions de la famille
-Lafayette. Et il est toujours en développement actif, notamment pour les projets
-Erglace et Hypergol.
+On espère qu’en mettant [notre analyseur maison](/stats) à disposition dans
+Kalamine il pourra servir à d’autres projets qu’Ergo‑L et les dispositions de la
+famille Lafayette. Et il est toujours en développement actif, notamment pour les
+projets Erglace et Hypergol.
 
 
 Conclusion
@@ -820,20 +841,20 @@ Conclusion
 :::
 
 Une dernière recommandation : l’ergonomie passe avant l’optimisation. Quand on
-dit qu’Ergo‑L est  [ergonomique avant tout](/), ça n’est pas un simple slogan,
-c’est *ilttéralement* ce qu’on a fait : *d’abord* caler l’ergonomie ([1DFH],
-raccourcis clavier…), *puis* optimiser les mouvements de doigts.
+dit qu’Ergo‑L est « [ergonomique avant tout](/) », ça n’est pas un simple
+slogan, c’est *littéralement* ce qu’on a fait : *d’abord* caler l’ergonomie
+([1DFH], raccourcis clavier…), *puis* optimiser les mouvements de doigts.
 
 Un grand merci à [Nuclear-Squid][], non seulement pour avoir initié et dirigé le
 projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction des
 chapitres sur les métriques et les analyseurs. Que le Grand Palmipède parsème
 son chemin de pétales de roses.
 
-Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju__][] et
-[Xiloynaha][] pour la relecture, les suggestions et les corrections : on a eu
-plus de 300 points de discussion pour boucler cet article, sans compter les
-longs échanges sur Discord. Gros boulot ! La communauté des Ergonautes est
-fantastique. 🚀
+Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju__][],
+[Xiloynaha][] et [Chouhartem][] pour la relecture, les suggestions et les
+corrections : on a eu plus de 300 points de discussion pour boucler cet article,
+sans compter les longs échanges sur Discord. Gros boulot ! La communauté des
+Ergonautes est fantastique. 🚀
 
 
 [1DFH]:                    /presentation/#dfh-1u-distance-from-home
@@ -854,14 +875,15 @@ fantastique. 🚀
 [Qwerty-Lafayette]:        https://qwerty-lafayette.org
 [lafayette_mldm]:          https://mastodon.social/@fabi1cazenave/111806300874072301
 [Workman]:                 https://workmanlayout.org/#same-hand-utilization-shu
+[La fin de l’AZERTY ?!]:   https://www.persee.fr/doc/linx_0246-8743_1991_hos_4_1_1206
 [Colemak-DH]:              https://colemakmods.github.io/mod-dh
 [Colemak-DH-analyzer]:     https://colemakmods.github.io/mod-dh/analyze.html
 [Colemak-DH-effort]:       https://colemakmods.github.io/mod-dh/model.html
 [Colemak-DH-source]:       https://github.com/ColemakMods/mod-dh/tree/gh-pages
 [Oxey]:                    https://oxey.dev
 [Sturdy]:                  https://oxey.dev/sturdy
-[layout playground]:       https://oxey.dev/playground/
-[Oxeylyzer]:               https://github.com/O-X-E-Y/oxeylyzer
+[Oxeylyzer]:               https://oxey.dev/playground/
+[Oxeylyzer-source]:        https://github.com/O-X-E-Y/oxeylyzer
 [Béop]:                    http://beop.free.fr/index.php/Main/Pourquoi#Roulements
 [recuit simulé]:           https://fr.wikipedia.org/wiki/Recuit_simulé
 [algorithme génétique]:    https://fr.wikipedia.org/wiki/Algorithme_génétique
@@ -880,8 +902,8 @@ fantastique. 🚀
 [KLA-SteveP-source]:       https://github.com/stevep99/keyboard-layout-analyzer
 [loi de Fitts]:            https://fr.wikipedia.org/wiki/Loi_de_Fitts
 [KLO]:                     https://github.com/dariogoetz/keyboard_layout_optimizer
-[Keyboard Layouts doc]:    https://bit.ly/layout-doc-v2
 [r/KeyboardLayouts]:       https://www.reddit.com/r/KeyboardLayouts/
+[Keyboard Layouts doc]:    https://docs.google.com/document/d/1Ic-h8UxGe5-Q0bPuYNgE3NoWiI8ekeadvSQ5YysrwII/
 
 [Nuclear-Squid]:           https://github.com/Nuclear-Squid
 [Moussx]:                  https://github.com/gagbo
@@ -890,6 +912,7 @@ fantastique. 🚀
 [aurelberra]:              https://github.com/aurelberra
 [Xiloynaha]:               https://github.com/cypriani
 [Ju__]:                    https://github.com/PetitWombat
+[Chouhartem]:              https://github.com/Chouhartem
 
 [kdeloach]:                https://github.com/kdeloach
 [patorjk]:                 https://patorjk.com/
