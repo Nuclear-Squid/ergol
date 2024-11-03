@@ -132,9 +132,9 @@ complètement ces SFB et SKB, mais on fait en sorte de les placer
 préférentiellement sur les doigts forts, en évitant tout particulièrement les
 auriculaires.
 
-![[Répartition des SFB et SKB d’Ergo‑L.](/stats/#/ergol//en+fr)](ergol.png)
+![[Répartition des SFB et SKB d’Ergo‑L.](/stats/#/ergol//en+fr)](ergol_sfu.png)
 
-![[Répartition des SFB et SKB de Bépo.](/stats/#/bepo//en+fr)](bepo.png)
+![[Répartition des SFB et SKB de Bépo.](/stats/#/bepo//en+fr)](bepo_sfu.png)
 
 Lors d’un enchainement rapide de deux touches, il est fréquent (voire
 systématique) que la deuxième touche soit pressée avant que la première ne soit
@@ -700,7 +700,7 @@ qui a été la mieux maintenue : son développement ne s’est arrêté qu’e
 
 Toutefois, sur les [5 critères indispensables][métriques indispensables] à nos
 yeux, seul le SFU est analysé par KLA. Attention à ne pas perdre de vue les 4
-autres.
+autres !
 
 ### Colemak-DH
 
@@ -717,8 +717,32 @@ répartition de la charge des doigts. Le [code source][Colemak-DH-source] (JS) d
 cet analyseur est disponible sous licence libre (CC0).
 
 C’est un analyseur plus complet que KLA, qu’il semble avoir remplacé — au moins
-pour les développeurs qui y ont contribué. Le dernier commit remonte à juin
+auprès des développeurs qui y ont contribué. Le dernier commit remonte à juin
 2022.
+
+![Accessibilité des touches selon Colemak-DH.](colemak_dh_effort.png)
+
+Il remplace la mesure de distance parcourue par une évaluation globale de la <i
+lang="en">heatmap</i> basée sur un [score d’effort][Colemak-DH-effort] associé à
+chaque touche, selon un modèle plus précis que celui de Workman (qui vise
+surtout à être un ordre de grandeur pour les humains). Le résultat est
+intéressant, bien plus pertinent qu’une mesure de distance parcourue, mais reste
+assez subjectif — et donc débattable en tant que <i lang="en">benchmark</i>.
+
+Contrairement à KLAnext, il introduit la notion de roulements sous la forme de
+« bigrammes de doigts voisins », une notion plus restrictive que la définition
+de roulement qu’on propose ici, et qui, étrangement, exclut l’index —
+probablement pour éviter de favoriser les LSB, un défaut rédhibitoire chez
+Colemak dont Colemak‑DH cherche a se débarasser.
+
+**Attention** : les ciseaux ne sont pas pris en compte par cette métrique, ce
+qui peut donner des résultats surprenants ! Aucun souci sur Colemak-DH, puisque
+c’est une variante de Colemak, qui fait déjà très attention aux ciseaux ; mais
+c’est susceptible d’être une source d’erreurs si on utilise cet analyseur sur
+d’autres dispositions. Par exemple, les bigrammes `sh` et `yo` d’Optimot
+([K]{.kbd}[>]{.kbd} et [X]{.kbd}[E]{.kbd} en Qwerty) sont considérés comme les
+deux meilleurs roulements de cette disposition (en anglais), alors qu’il sagit
+en fait de deux de ses pires ciseaux.
 
 ### Oxeylyzer ❤️
 
@@ -821,6 +845,7 @@ fantastique. 🚀
 [Workman]:                 https://workmanlayout.org/#same-hand-utilization-shu
 [Colemak-DH]:              https://colemakmods.github.io/mod-dh
 [Colemak-DH-analyzer]:     https://colemakmods.github.io/mod-dh/analyze.html
+[Colemak-DH-effort]:       https://colemakmods.github.io/mod-dh/model.html
 [Colemak-DH-source]:       https://github.com/ColemakMods/mod-dh/tree/gh-pages
 [Oxey]:                    https://oxey.dev
 [Sturdy]:                  https://oxey.dev/sturdy
