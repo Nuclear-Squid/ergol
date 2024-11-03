@@ -762,15 +762,21 @@ dont le [code source][oxeylyzer] (Rust) est disponible sous licence libre
   faibles d’une disposition ;
 - très pratique pour tester des permutations de touches.
 
-Il est limité aux dispositions [1DFH][] (3×5 touches par main), ce qui nous
-semble très pertinent d’un point de vue ergonomique, mais ça serait un
+![<i lang="en">Heatmap</i> de Sturdy dans Oxeylyzer.](oxeylyzer.png)
+
+Contrairement à Colemak-DH, aucune métrique d’ensemble ne cherche à qualifier la
+<i lang="en">heatmap</i> : elle est mise en avant telle quelle, c’est simple et
+objectif.
+
+Oxeylyzer est limité aux dispositions [1DFH][] (3×5 touches par main), ce qui
+nous semble très pertinent d’un point de vue ergonomique, mais ça serait un
 inconvénient pour des dispositions du type Bépo, qui font le choix d’étaler les
 lettres sur deux colonnes supplémentaires afin de moins recourir aux touches
 mortes.
 
-Oxeylyzer est vraiment la référence pour nous. On le recommande vivement ! Et le
-projet est activement maintenu, le dernier commit datant de moins de 6 mois à
-l’heure où j’écris ces lignes.
+C’est vraiment l’analyseur de référence pour nous. On le recommande vivement !
+Et le projet est activement maintenu, le dernier commit datant de moins de 6
+mois à l’heure où j’écris ces lignes.
 
 ### Kalamine 🚀
 
