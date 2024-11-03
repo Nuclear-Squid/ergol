@@ -180,7 +180,7 @@ dont il faut tenir compte de façon spécifique :
 - SKS (<i lang="en">Same-Key Skipgram</i>) : un SKB avec une touche d’un autre
   doigt intercalée au milieu, par exemple [E]{.kbd}[R]{.kbd}[E]{.kbd} ou
   [E]{.kbd}[L]{.kbd}[E]{.kbd} en Qwerty ;
-- redirection : enchaînement de deux roulements de sens opposé, par exemple
+- redirection : enchainement de deux roulements de sens opposé, par exemple
   [S]{.kbd}[A]{.kbd}[D]{.kbd} ou [M]{.kbd}[O]{.kbd}[K]{.kbd} en Qwerty ;
 
 Les SFS et SKS sont bien moins gênants que les SFB et SKB respectivement, mais
@@ -634,7 +634,7 @@ Faire une disposition de clavier pour soi-même est relativement aisé ; en fa
 une qui convienne au plus grand nombre, c’est une autre histoire.
 
 En particulier, on a tou·te·s des niveaux de tolérance différents à certains
-défauts de layout : pour moi les extensions d’auriculaires sont particulièrement
+défauts de layout : pour moi les extensions d’auriculaire sont particulièrement
 pénibles, alors que d’autres préfèrent ça plutôt que d’utiliser AltGr ;
 certain·e·s s’accommodent bien des ciseaux (notamment les adeptes de claviers
 3D), d’autres pas du tout ; et les mauvaises redirections sont le point le plus
@@ -733,7 +733,7 @@ Contrairement à KLAnext, il introduit la notion de roulements sous la forme de
 « bigrammes de doigts voisins », une notion plus restrictive que la définition
 de roulement qu’on propose ici, et qui, étrangement, exclut l’index —
 probablement pour éviter de favoriser les LSB, un défaut rédhibitoire chez
-Colemak dont Colemak‑DH cherche a se débarasser.
+Colemak dont Colemak‑DH cherche a se débarrasser.
 
 **Attention** : les ciseaux ne sont pas pris en compte par cette métrique, ce
 qui peut donner des résultats surprenants ! Aucun souci sur Colemak-DH, puisque
@@ -748,13 +748,13 @@ en fait de deux de ses pires ciseaux.
 
 [Oxey][] est un auteur de dispositions de clavier très reconnu, notamment pour
 [Sturdy][] qui est d’une efficacité redoutable en anglais : un SFU très bas
-(0.9 %), beaucoup de roulements, très peu de ciseaux. Du grand art !
+(0,9 %), beaucoup de roulements, très peu de ciseaux. Du grand art !
 
 Oxey propose aussi un analyseur très complet avec son [layout playground][],
 dont le [code source][oxeylyzer] (Rust) est disponible sous licence libre
 (Apache 2.0). Cet « Oxeylyzer » est à nos yeux le meilleur analyseur du moment :
 
-- des métriques précises, complètes et pertinentes : sa notion de  mauvaises
+- des métriques précises, complètes et pertinentes : sa notion de « mauvaises »
   redirections, notamment, nous a été très utile ;
 - facile à interpréter grâce aux codes de couleur (vert, c’est bien ; rouge,
   c’est mal) ;
