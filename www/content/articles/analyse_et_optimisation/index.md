@@ -614,7 +614,7 @@ les résoudre.
 
 Les itérations de développement ont été facilitées par :
 
-- [x‑keyboard][], pour tester nos layouts ;
+- [x‑keyboard][], pour tester nos <i lang="en">layouts</i> ;
 - [kalamine][], pour générer et installer les pilotes ;
 - [notre analyseur maison](/stats).
 
@@ -690,8 +690,9 @@ lui-même dérivé de [KLAtest][] ([source][KLAtest-source]) par [Xay Vong][],
 alias Shena’Fu ou Den. Sans accès au code, difficile d’évaluer ce qu’apporte
 KLAnext à l’original — mais, comme évoqué plus haut, il ne nous semble pas
 pertinent. C’est en référence aux failles de KLAnext que la plaisanterie
-« *[Qwerty-Lafayette est le meilleur layout du monde !][lafayette_mldm]* » est
-devenue récurrente dans la communauté ergonaute. :-)
+« *[Qwerty-Lafayette est le meilleur <i lang="en">layout</i> du
+monde !][lafayette_mldm]* » est devenue récurrente dans la communauté ergonaute.
+:-)
 
 Plus intéressant, [SteveP][] a développé un [fork libre de KLA][KLA-SteveP]
 ([source][KLA-SteveP-source]) et détaille précisément les [corrections
