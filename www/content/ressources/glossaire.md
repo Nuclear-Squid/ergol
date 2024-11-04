@@ -22,36 +22,36 @@ Analyse et optimisation
 
 : Enchainement de deux touches.
 
-[SFB <i lang="en">(Same-Finger Bigram)</i>]{#sfb}
+[SFB <i lang="en">(same-finger bigram)</i>]{#sfb}
 
 : Aussi appelé « bigramme de même doigt » : enchainement de deux touches
 différentes avec le même doigt. C’est source d’inconfort ou d’erreurs, notamment
 à haute vitesse.
 
-[SFU <i lang="en">(Same-Finger Usage)</i>]{#sfu}
+[SFU <i lang="en">(same-finger usage)</i>]{#sfu}
 
 : Taux de SFB relevés dans un corpus de texte, exprimé en % du nombre total de
 bigrammes. Plus le taux est bas, mieux c’est.
 
-[SKB <i lang="en">(Same-Key Bigram)</i>]{#skb}
+[SKB <i lang="en">(same-key bigram)</i>]{#skb}
 
 : Répétition de même touche, par exemple pour produire `nn` avec n’importe
 quelle disposition de clavier, ou `és` en Ergo‑L.
 
-[SKU <i lang="en">(Same-Key Usage)</i>]{#sku}
+[SKU <i lang="en">(same-key usage)</i>]{#sku}
 
 : Taux de SKB relevés dans un corpus de texte, exprimé en % du nombre total de
 bigrammes. Théoriquement, il ne dépend que du corpus ; mais il peut augmenter
 avec l’usage de touches mortes.
 
-[SHB <i lang="en">(Same-Hand Bigram)</i>]{#shb}
+[SHB <i lang="en">(same-hand bigram)</i>]{#shb}
 
 : Aussi appelé « bigramme de même main » : enchainement de deux touches sous
 deux doigts différents de la même main. C’est ce que cherche à éviter Dvorak,
 qui privilégie les alternances de mains pour des raisons historiques, liées aux
 contraintes des machines à écrire mécaniques de l’époque.
 
-[SHU <i lang="en">(Same-Hand Usage)</i>]{#shu}
+[SHU <i lang="en">(same-hand usage)</i>]{#shu}
 
 : Taux de SHB relevés dans un corpus de texte, exprimé en % du nombre total de
 bigrammes. Plus le taux est bas, plus la disposition favorise l’alternance de
@@ -62,7 +62,7 @@ mains ; plus le taux est élevé, plus la disposition favorise les roulements.
 : Mouvement pour atteindre une touche qui est soit sur une autre colonne que la
 position de repos, soit à une distance supérieure à une touche.
 
-[LSB <i lang="en">(Lateral Stretch Bigram)</i>]{#lsb}
+[LSB <i lang="en">(lateral stretch bigram)</i>]{#lsb}
 
 : Bigramme de même main comportant une extension, par exemple [L]{.kbd}[H]{.kbd}
 en Azerty ou Qwerty.
@@ -71,7 +71,8 @@ en Azerty ou Qwerty.
 
 : Bigramme nécessitant un changement de rangée inconfortable, par exemple
 [C]{.kbd}[R]{.kbd} en Azerty ou Qwerty. Le terme « ciseau » est utilisé ici
-comme substantif de « mouvement en ciseaux ».
+au singulier comme substantif de « mouvement en ciseaux », comme on le fait dans
+divers sports.
 
 [Roulement intérieur]{#roulement}
 
@@ -90,12 +91,12 @@ vers l’auriculaire.
 
 : Enchainement de trois touches.
 
-[SFS <i lang="en">(Same-Finger Skipgram)</i>]{#sfs}
+[SFS <i lang="en">(same-finger skipgram)</i>]{#sfs}
 
 : Un SFB avec une touche d’un autre doigt intercalée au milieu, par exemple
 [E]{.kbd}[A]{.kbd}[D]{.kbd} ou [B]{.kbd}[U]{.kbd}[T]{.kbd} en Azerty ou Qwerty.
 
-[SKS <i lang="en">(Same-Key Skipgram)</i>]{#sks}
+[SKS <i lang="en">(same-key skipgram)</i>]{#sks}
 
 : Un SKB avec une touche d’un autre doigt intercalée au milieu, par exemple
 [E]{.kbd}[R]{.kbd}[E]{.kbd} ou [E]{.kbd}[L]{.kbd}[E]{.kbd} en Azerty ou Qwerty.

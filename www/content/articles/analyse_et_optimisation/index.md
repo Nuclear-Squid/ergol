@@ -43,7 +43,7 @@ code { font-family: monospace; }
   - [les trigrammes]
 - [Critères d’évaluation]
   - [métriques indispensables]
-  - [SHU, <i lang="en">same hand usage</i> ?]
+  - [SHU, <i lang="en">same-hand usage</i> ?]
   - [distance parcourue ?]
   - [note globale ?]
 - [Optimiser pour une note globale ?]
@@ -116,7 +116,7 @@ principe [1DFH][], auquel nous autres Ergonautes sommes si attaché·e·s.
 Un bigramme est un enchainement de deux touches.
 Tout bigramme appartient à l’une des catégories suivantes :
 
-- alternance de mains : les touches sont sous deux mains différentes ;
+- alternance de mains : une touche sous chaque main :
 - bigramme de même main : les touches sont sous deux doigts différents d’une
   même main ;
 - bigramme de même doigt (SFB, pour <i lang="en">same-finger bigram</i>) : deux
@@ -148,15 +148,15 @@ Les bigrammes de même main sont plus délicats à qualifier. On distingue :
   l’auriculaire (confort comparable à une alternance de mains) ;
 - ciseau : l’enchainement requiert un changement de rangée inconfortable, comme
   [C]{.kbd}[R]{.kbd} en Azerty ou Qwerty ;
-- extension (LSB, <i lang="en">lateral stretch bigram</i>) : l’enchainement
-  inclut une touche d’une colonne excentrée ou de la rangée des chiffres.
+- extensions (LSB, pour <i lang="en">lateral stretch bigram</i>) :
+  l’enchainement inclut une touche d’une colonne excentrée ou de la rangée des
+  chiffres.
 
 Le taux de SFB (ou SFU, pour <i lang="en">same-finger usage</i>) est le
-principal indicateur du niveau d’optimisation d’une disposition de clavier, et
-on peut être tenté de l’utiliser comme indicateur principal de la qualité d’une
-disposition de clavier. Mais attention, un SFU très bas cache parfois des
-défauts rédhibitoires ailleurs — notamment sur les ciseaux, les extensions, ou
-la charge des doigts.
+principal indicateur du niveau d’optimisation d’une disposition de clavier ; on
+peut donc être tenté de l’utiliser comme indicateur de qualité générale. Mais
+attention, un SFU très bas cache parfois des défauts rédhibitoires ailleurs —
+notamment sur les ciseaux, les extensions, ou la charge des doigts.
 
 ### Les trigrammes
 
@@ -174,13 +174,13 @@ touches plutôt qu’un mouvement par touche.
 Inversement, il y a aussi des trigrammes qui produisent des achoppements, et
 dont il faut tenir compte de façon spécifique :
 
-- SFS (<i lang="en">Same-Finger Skipgram</i>) : un SFB avec une touche d’un
+- SFS (<i lang="en">same-finger skipgram</i>) : un SFB avec une touche d’un
   autre doigt intercalée au milieu, par exemple [E]{.kbd}[A]{.kbd}[D]{.kbd} ou
   [B]{.kbd}[U]{.kbd}[T]{.kbd} en Qwerty ;
-- SKS (<i lang="en">Same-Key Skipgram</i>) : un SKB avec une touche d’un autre
+- SKS (<i lang="en">same-key skipgram</i>) : un SKB avec une touche d’un autre
   doigt intercalée au milieu, par exemple [E]{.kbd}[R]{.kbd}[E]{.kbd} ou
   [E]{.kbd}[L]{.kbd}[E]{.kbd} en Qwerty ;
-- redirection : enchainement de deux roulements de sens opposé, par exemple
+- redirection : enchainement de deux roulements de sens opposés, par exemple
   [S]{.kbd}[A]{.kbd}[D]{.kbd} ou [M]{.kbd}[O]{.kbd}[K]{.kbd} en Qwerty ;
 
 Les SFS et SKS sont bien moins gênants que les SFB et SKB respectivement, mais
@@ -222,31 +222,31 @@ métriques sur les principaux critères :
 :::
 
 **Chacune de ces métriques est importante** : chez les Ergonautes, on considère
-que la qualité ressentie d’une disposition est reflétée par sa pire métrique
-parmi celles-ci, voire son pire achoppement, bien plus que par une moyenne
-(fût-elle pondérée) de toutes ces métriques.
+que la qualité ressentie d’une disposition est reflétée par sa pire métrique,
+voire son pire achoppement, bien plus que par une moyenne (fût-elle pondérée) de
+toutes ces métriques.
 
 **Ces métriques sont faites pour mettre en évidence des défauts**, et ne sont
 pas de bons <i lang="en">benchmarks</i>. Par exemple, une diposition qui aurait
-2 % de SFU serait bien plus confortable qu’une qui n’en aurait que 1 %, mais
-concentré sur un auriculaire : dans le second cas, la métrique est meilleure
-mais un défaut en particulier rend toute la disposition insupportable. Et c’est
-pour cela que les bons analyseurs détaillent ce type de métriques par doigt, et
-ne se contentent pas d’une valeur moyenne.
+2 % de SFU serait bien plus confortable qu’une disposition qui n’en aurait que
+1 %, mais concentré sur un auriculaire : dans le second cas, la métrique est
+meilleure mais un défaut en particulier rend toute la disposition insupportable.
+Et c’est pour cela que les bons analyseurs détaillent ce type de métriques par
+doigt, et ne se contentent pas d’une valeur moyenne.
 
 Les trois premières métriques sont très consensuelles ; les deux dernières sont
 moins souvent prises en considération, mais de notre point de vue c’est une
-grosse erreur que de les négliger — et elles deviennent même primordiales pour
+erreur majeure que de les négliger — et elles deviennent même primordiales pour
 les dispositions favorisant les roulements aux alternances de mains.
 
-### SHU, <i lang="en">same hand usage</i> ?
+### SHU, <i lang="en">same-hand usage</i> ?
 
 Le SHU mesure la répartition entre alternances de mains et roulements.
 
 À l’époque des machines à écrire mécaniques, le SHU devait être le plus bas
-possible car les roulements coinçaient souvent les marteaux : Qwerty, et encore
-plus Dvorak, ont été développés dans cet objectif. C’est aussi le cas de Bépo et
-de ses nombreuses variantes.
+possible car les roulements coinçaient souvent les marteaux : Qwerty et surtout
+Dvorak ont été développés dans cet objectif. C’est aussi le cas de Bépo et de
+ses nombreuses variantes.
 
 Mais, de nos jours, les claviers informatiques n’ayant pas de contrainte de ce
 type, on ne cherche plus à minimiser cette métrique du SHU : elle permet juste
@@ -275,7 +275,7 @@ l’auteur de Béop :
 
 — extrait des notes de conception de [Béop][]
 
-Et c’est un sujet qui a été longuement détaillé par [Nuclear-Squid][] dans sa
+Et c’est un sujet qui a été longuement détaillé par [Nuclear Squid][] dans sa
 conférence « [Ergonomie clavier : l’ère post-Dvorak][cdl2023-slides] »
 ([vidéo][cdl2023-video]).
 
@@ -302,7 +302,7 @@ pertinente que si l’on suppose que tous les déplacements de doigt se valent �
 qui est totalement faux, comme expliqué dans le paragraphe sur [la <i
 lang="en">heatmap</i>].
 
-Corollaire, cette métrique est une très mauvaise cible d’optimisation : à
+Corollaire : cette métrique est une très mauvaise cible d’optimisation. À
 vouloir réduire la distance parcourue sans distinction de doigts, l’optimum
 n’est atteint que quand les auriculaires font autant de distance que les index —
 ce qui va grossièrement à l’encontre des objectifs ergonomiques communément
@@ -312,10 +312,11 @@ Cette métrique est amusante, mais à n’utiliser qu’à titre de curiosité�
 
 ### Note globale ?
 
-Certains analyseurs de layout proposent une note globale, qui est une moyenne
-pondérée de plusieurs critères plus objectifs. Si vous connaissez les critères
-utilisés et êtes d’accord avec leur pondération, cette note globale peut donner
-une évaluation générale appréciable lors des premières phases d’optimisation.
+Certains analyseurs de <i lang="en">layout</i> proposent une note globale, qui
+est une moyenne pondérée de plusieurs critères plus objectifs. Si vous
+connaissez les critères utilisés et êtes d’accord avec leur pondération, cette
+note globale peut donner une évaluation générale appréciable lors des premières
+phases d’optimisation.
 
 Mais il y a deux choses importantes à garder à l’esprit :
 
@@ -324,7 +325,7 @@ Mais il y a deux choses importantes à garder à l’esprit :
 - quelle que soit sa qualité, une note globale ne sera jamais une bonne cible
   d’optimisation.
 
-> Lorsqu'une métrique devient un objectif, elle cesse d'être une bonne métrique.
+> Lorsqu’une métrique devient un objectif, elle cesse d’être une bonne métrique.
 
 — [loi de Goodhart](https://fr.wikipedia.org/wiki/Loi_de_Goodhart)
 
@@ -364,7 +365,7 @@ simple à apprendre, tout en conservant les raccourcis clavier usuels.
 
 ![Qwerty-Flip (illustration du site de l’auteur).](qwerty-flip.gif)
 
-Et pourtant, personne n’utilise ces dispositions. Pourquoi ?
+Et pourtant, personne n’utilise ces dispositions. Deux hypothèses :
 
 - soit c’est un simple manque de notoriété : elles sont très bonnes mais trop
   peu connues ;
@@ -374,7 +375,7 @@ Et pourtant, personne n’utilise ces dispositions. Pourquoi ?
 Et de fait : le score d’effort accorde bien trop peu d’importance au SFU. Il
 s’élève à 4,6 % pour QFMLWY, bien loin de Dvorak (2,7 %), Colemak (1,6 %) ou
 Ergo‑L (1,2 %). Quant à Qwerty-Flip, son SFU est très logiquement le même que
-celui de Qwerty, soit 5.7 %. Le résultat est constatable immédiatement, et ce
+celui de Qwerty, soit 5,7 %. Le résultat est constatable immédiatement, et ce
 n’est là que le principal défaut de ces dispositions.
 
 > The CarpalX layout seemed attractive due to its supposed scientific derivation.
@@ -493,13 +494,13 @@ mêmes défauts :
 - ce n’est pas un bon critère d’évaluation non plus, une disposition pouvant
   avoir un défaut rédhibitoire sans que cela affecte la note globale.
 
-Durant la conception d’Ergo‑L, on a perdu beaucoup de temps sur le projet à
-tenter des optimisations mono-critères avec un [algorithme génétique][] ou de
-[recuit simulé][]. Certains outils plus aboutis comme <i lang="en">[Keyboard
-Layout Optimizer][KLO]</i>, qui a été utilisé pour Neo2, nous semblaient
-prometteurs ; mais, à l’usage, ils ont été bien moins utiles que de simples
-boucles pour explorer des possibilités par force brute, que [Nuclear-Squid][] a
-codées vite fait.
+Durant la conception d’Ergo‑L, on a perdu beaucoup de temps à tenter des
+optimisations mono-critères avec un [algorithme génétique][] ou de [recuit
+simulé][]. Certains outils plus aboutis comme <i lang="en">[Keyboard Layout
+Optimizer][KLO]</i>, qui a été utilisé pour Neo2, nous semblaient prometteurs ;
+mais, à l’usage, ils ont été bien moins utiles que de simples boucles pour
+explorer des possibilités par force brute, que [Nuclear Squid][] a codées vite
+fait.
 
 > Les chiffres sont aux analystes ce que les lampadaires sont aux ivrognes :
 > ils fournissent bien plus un appui qu’un éclairage.
@@ -525,7 +526,7 @@ globale est voué à l’échec. Il faut procéder autrement.
 Avant de se lancer dans l’élaboration d’une disposition de clavier, il est
 vivement recommandé de chercher un maximum d’informations sur le sujet. Les
 mille et une variantes de Bépo qui ont fleuri laissent penser que la plupart des
-adeptes francophones d’ergonomie clavier sont restés sur les principes Dvorak
+adeptes francophones d’ergonomie clavier sont restés sur les principes Dvorak,
 qui, datant des années 1930, concernaient les machines à écrire.
 
 Or, beaucoup de choses ont changé depuis une petite vingtaine d’années, avec
@@ -561,10 +562,10 @@ pendant toute la mise au point d’Ergo‑L. On a itéré comme suit :
 
 1. Identifier le pire achoppement de la disposition (SFB, ciseau, redirection…).
 2. Améliorer notre analyseur pour qualifier et mesurer cet achoppement.
-3. Trouver une modification du layout qui, sur la foi de l’analyseur, réduise
-   cet achoppement.
-4. Utiliser ce layout jusqu’à détecter un autre achoppement (généralement moins
-   grave).
+3. Trouver une modification du <i lang="en">layout</i> qui, sur la foi de
+   l’analyseur, réduise cet achoppement.
+4. Utiliser ce <i lang="en">layout</i> jusqu’à détecter un autre achoppement
+   (généralement moins grave).
 5. `GOTO 1`.
 
 **On n’a donc jamais eu aucun usage d’une note globale.**
@@ -572,18 +573,18 @@ Au contraire, on regarde toujours la pire note et les pires enchainements pour
 évaluer une disposition et proposer des améliorations.
 
 Cela dit, il y a bien une métrique que l’on regarde plus que les autres, c’est
-le SFU : ça donne assez rapidement une idée de la marge d’optimisation qui reste
-possible. Pour autant, et même si on est très fièr·e·s du SFU d’Ergo‑L en
-français comme en anglais, ça n’est pas un objectif en soi : [Nuclear-Squid][] a
-même rejeté des expérimentations qui avaient des SFU incroyablement bas, mais
-qui causaient d’autres problèmes plus sournois à l’usage.
+le SFU : ça donne assez rapidement une idée de la marge d’optimisation qui
+reste. Pour autant, et même si on est très fièr·e·s du SFU d’Ergo‑L en français
+comme en anglais, ça n’est pas un objectif en soi : [Nuclear Squid][] a même
+rejeté des expérimentations qui avaient des SFU incroyablement bas, mais qui
+causaient d’autres problèmes plus sournois à l’usage.
  
 C’est notamment le cas d’une expérimentation qu’on a faite un peu par accident
 sur la fin du projet Ergo‑L, et qui est devenue [Colemak French Touch][]. Le SFU
-était terrifiant (0.7 %), le fait de coller à une disposition très connue était
-un avantage auquel on était sensible, à tel point qu’on a envisagé d’annuler la
-sortie (alors imminente) d’Ergo‑L 1.0 ! Mais deux problèmes sont apparus assez
-vite :
+était terrifiant (0,7 %) et le fait de coller à une disposition très connue
+était un avantage auquel on était sensible, à tel point qu’on a envisagé
+d’annuler la sortie (alors imminente) d’Ergo‑L 1.0 ! Mais deux problèmes sont
+apparus assez vite :
 
 - la charge des doigts était trop déséquilibrée, surtout en anglais
   étrangement ;
@@ -595,9 +596,9 @@ vite :
 On constate que les enchainements inconfortables évoluent de deux façons
 possibles avec la pratique : soit ils deviennent acceptables, soit ils se
 révèlent insupportables. D’où l’intérêt de pratiquer la disposition qu’on
-utilise — et idéalement, d’être plusieurs personnes différentes à pratiquer.
-Les zones d’inconfort sont propres à chacun·e d’entre nous, et cela peut
-dépendre autant de la personne que du type de clavier.
+utilise — et, idéalement, d’être plusieurs personnes à pratiquer. Les zones
+d’inconfort sont propres à chacun·e d’entre nous, et cela peut dépendre autant
+de la personne que du type de clavier.
 
 En ce qui me concerne, mes premiers tests d’Ergo‑L remontent à la version 0.7,
 qui ne diffère que très légèrement d’Ergo‑L 1.0. Et, bien qu’Ergo‑L 0.7 ait des
@@ -628,18 +629,19 @@ On a développé notre propre analyseur pour plusieurs raisons :
 - aucun analyseur existant ne prenait en compte les touches mortes, alors que
   toutes les dispositions francophones en font usage — et c’est même un élément
   fondamental d’Ergo‑L ;
-- on a voulu mettre en lumière certains défauts de la disposition au fur et à
-  mesure de l’avancement du projet, et qui n’étaient pas toujours pris en compte
+- au fur et à mesure de l’avancement du projet, on a voulu mettre en lumière
+  certains défauts de la disposition qui n’étaient pas toujours pris en compte
   par les autres analyseurs : part des extensions dans la charge des doigts,
   qualification des redirections, repérage des ciseaux…
 - x‑keyboard, qui avait été développé bien plus tôt, avait déjà beaucoup des
   fonctionnalités requises pour développer un analyseur ;
 - c’était simple et fun à faire. :-)
 
-Bien évidemment, on a vérifié que, pour un même layout et un même corpus, notre
-analyseur donnait les mêmes résultats que les analyseurs existants. Et, bien
-sûr, tout est disponible sous licence libre pour que chacun·e puisse étudier,
-modifier, utiliser et rediffuser le tout comme bon lui semblera.
+Bien évidemment, on a vérifié que, pour un même <i lang="en">layout</i> et un
+même corpus, notre analyseur donnait les mêmes résultats que les analyseurs
+existants. Et, bien sûr, tout est disponible sous licence libre pour que
+chacun·e puisse étudier, modifier, utiliser et rediffuser le tout comme bon lui
+semblera.
 
 Outre les métriques, cet analyseur a pour but de lister tous les bigrammes et
 trigrammes qui peuvent causer de l’inconfort. Ce n’est pas tant un <i
@@ -651,11 +653,11 @@ Faire une disposition de clavier pour soi-même est relativement aisé ; en fa
 une qui convienne au plus grand nombre, c’est une autre histoire.
 
 En particulier, on a tou·te·s des niveaux de tolérance différents à certains
-défauts de layout : pour moi les extensions d’auriculaire sont particulièrement
-pénibles, alors que d’autres préfèrent ça plutôt que d’utiliser AltGr ;
-certain·e·s s’accommodent bien des ciseaux (notamment les adeptes de claviers
-3D), d’autres pas du tout ; et les mauvaises redirections sont le point le plus
-clivant : certain·e·s s’y font, mais beaucoup trouvent ça rédhibitoire à
+défauts de <i lang="en">layout</i> : pour moi les extensions d’auriculaire sont
+particulièrement pénibles, alors que d’autres préfèrent ça plutôt que d’utiliser
+AltGr ; certain·e·s s’accommodent bien des ciseaux (notamment les adeptes de
+claviers 3D), d’autres pas du tout ; et les mauvaises redirections sont le point
+le plus clivant : certain·e·s s’y font, mais beaucoup trouvent ça rédhibitoire à
 l’usage.
 
 Pour prendre en compte toutes ces particularités, notre analyseur ne se contente
@@ -685,13 +687,13 @@ d’Ergo‑L.
 
 ### KLA (<i lang="en">Keyboard Layout Analyzer</i>)
 
-[KLA][] est un analyseur libre en PHP et JS, proposé par [Patrick
+[KLA][] est un analyseur libre en PHP et JavaScript, proposé par [Patrick
 Gillespie][patorjk] sous licence libre (MIT). Le [code source][KLA-source] est
 disponible sur GitHub, la dernière modification remonte à 2019.
 
 [KLAnext][] est un fork non libre de KLA par [Ian Douglas][]. Ce fork est
 lui-même dérivé de [KLAtest][] ([source][KLAtest-source]) par [Xay Vong][],
-a.k.a. Shena’Fu ou Den. Sans accès au code, difficile d’évaluer ce qu’apporte
+alias Shena’Fu ou Den. Sans accès au code, difficile d’évaluer ce qu’apporte
 KLAnext à l’original — mais, comme évoqué plus haut, il ne nous semble pas
 pertinent. C’est en référence aux failles de KLAnext que la plaisanterie
 « *[Qwerty-Lafayette est le meilleur layout du monde !][lafayette_mldm]* » est
@@ -746,9 +748,9 @@ surtout à être un ordre de grandeur pour les humains). Le résultat est
 intéressant, bien plus pertinent qu’une mesure de distance parcourue, mais reste
 assez subjectif — et donc débattable en tant que <i lang="en">benchmark</i>.
 
-Contrairement à KLAnext, il introduit la notion de roulements sous la forme de
-« bigrammes de doigts voisins », une notion plus restrictive que la définition
-de roulement qu’on propose ici, et qui, étrangement, exclut l’index —
+Contrairement à KLAnext, il introduit la notion de roulement sous la forme de
+« bigramme de doigts voisins », une notion plus restrictive que la définition
+du roulement qu’on propose ici, et qui, étrangement, exclut l’index —
 probablement pour éviter de favoriser les LSB, un défaut rédhibitoire chez
 Colemak dont Colemak‑DH cherche a se débarrasser.
 
@@ -756,9 +758,9 @@ Colemak dont Colemak‑DH cherche a se débarrasser.
 qui peut donner des résultats surprenants ! Aucun souci sur Colemak-DH, puisque
 c’est une variante de Colemak, qui fait déjà très attention aux ciseaux ; mais
 c’est susceptible d’être une source d’erreurs si on utilise cet analyseur sur
-d’autres dispositions. Par exemple, les bigrammes `sh` et `yo` d’Optimot
+d’autres dispositions. Par exemple, les bigrammes `SH` et `YO` d’Optimot
 ([K]{.kbd}[>]{.kbd} et [X]{.kbd}[E]{.kbd} en Qwerty) sont considérés comme les
-deux meilleurs roulements de cette disposition (en anglais), alors qu’il sagit
+deux meilleurs roulements de cette disposition (en anglais), alors qu’il s’agit
 en fait de deux de ses pires ciseaux.
 
 ### Oxeylyzer ❤️
@@ -767,9 +769,9 @@ en fait de deux de ses pires ciseaux.
 [Sturdy][] qui est d’une efficacité redoutable en anglais : un SFU très bas
 (0,9 %), beaucoup de roulements, très peu de ciseaux. Du grand art !
 
-Oxey propose aussi un analyseur très complet avec son [Oxeylyzer][],
-dont le [code source][oxeylyzer-source] (Rust) est disponible sous licence libre
-(Apache 2.0). Cet « Oxeylyzer » est à nos yeux le meilleur analyseur du moment :
+Oxey propose aussi un analyseur très complet avec [Oxeylyzer][], dont le [code
+source][oxeylyzer-source] (Rust) est disponible sous licence libre (Apache 2.0).
+Cet « Oxeylyzer » est à nos yeux le meilleur analyseur du moment :
 
 - des métriques précises, complètes et pertinentes : sa notion de « mauvaises »
   redirections, notamment, nous a été très utile ;
@@ -802,7 +804,8 @@ mois à l’heure où j’écris ces lignes.
 Qwerty-Lafayette et Ergo‑L ; mais, au fil du temps, il s’est transformé en outil
 de mise au point tout-en-un pour les auteurs et autrices de dispositions de
 clavier. L’analyseur d’Ergo‑L vient ainsi d’être intégré à Kalamine, ce qui
-permet de visualiser directement l’impact de chaque modification de layout.
+permet de visualiser directement l’impact de chaque modification de <i
+lang="en">layout</i>.
 
 Le générateur est écrit en Python, l’analyseur en JavaScript, et l’ensemble du
 code source est proposé sous licence libre (MIT).
@@ -845,15 +848,15 @@ dit qu’Ergo‑L est « [ergonomique avant tout](/) », ça n’est pas un 
 slogan, c’est *littéralement* ce qu’on a fait : *d’abord* caler l’ergonomie
 ([1DFH], raccourcis clavier…), *puis* optimiser les mouvements de doigts.
 
-Un grand merci à [Nuclear-Squid][], non seulement pour avoir initié et dirigé le
+Un grand merci à [Nuclear Squid][], non seulement pour avoir initié et dirigé le
 projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction des
 chapitres sur les métriques et les analyseurs. Que le Grand Palmipède parsème
 son chemin de pétales de roses.
 
 Merci aussi à [Moussx][], [Meriem][], [aurelberra][], [Adrienm7][], [Ju__][],
 [Xiloynaha][] et [Chouhartem][] pour la relecture, les suggestions et les
-corrections : on a eu plus de 300 points de discussion pour boucler cet article,
-sans compter les longs échanges sur Discord. Gros boulot ! La communauté des
+corrections : on a eu plus de 400 points de discussion pour boucler cet article,
+sans compter les échanges sur Discord. Gros boulot ! La communauté des
 Ergonautes est fantastique. 🚀
 
 
@@ -905,7 +908,7 @@ Ergonautes est fantastique. 🚀
 [r/KeyboardLayouts]:       https://www.reddit.com/r/KeyboardLayouts/
 [Keyboard Layouts doc]:    https://docs.google.com/document/d/1Ic-h8UxGe5-Q0bPuYNgE3NoWiI8ekeadvSQ5YysrwII/
 
-[Nuclear-Squid]:           https://github.com/Nuclear-Squid
+[Nuclear Squid]:           https://github.com/Nuclear-Squid
 [Moussx]:                  https://github.com/gagbo
 [Meriem]:                  https://mastodon.xyz/@meriem
 [Adrienm7]:                https://hypertexte.beseven.fr
