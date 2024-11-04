@@ -7,7 +7,7 @@ tags = ["communauté", "technique", "outils"]
 
 Optimiser une disposition de clavier, ça consiste en quoi ?
 
-À l’époque de Dvorak et Bépo la réponse était simple, mais ce domaine a
+À l’époque de Dvorak et Bépo, la réponse était simple, mais ce domaine a
 complètement explosé ces 20 dernières années suite au développement de
 dispositions anglophones comme Colemak, Workman, MTGAP, ISRT, Sturdy…
 
@@ -110,7 +110,7 @@ principe [1DFH][], auquel nous autres Ergonautes sommes si attaché·e·s.
 Un bigramme est un enchainement de deux touches.
 Tout bigramme appartient à l’une des catégories suivantes :
 
-- alternance de mains : une touche sous chaque main :
+- alternance de mains : une touche sous chaque main ;
 - bigramme de même main : les touches sont sous deux doigts différents d’une
   même main ;
 - bigramme de même doigt (SFB, pour <i lang="en">same-finger bigram</i>) : deux
