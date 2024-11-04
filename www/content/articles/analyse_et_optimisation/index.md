@@ -5,22 +5,16 @@ author = "kaze"
 tags = ["communauté", "technique", "outils"]
 +++
 
-<!--
-Étant mondialement connu pour mon objectivité totale, on me demande souvent des
-trucs (et c’est bien normal). Notamment pour des questions liées aux claviers.
+Optimiser une disposition de clavier, ça consiste en quoi ?
 
-— C’est vrai qu’Ergo‑L est meilleur que Dvorak en anglais ?
-— Totalement. En même temps, Dvorak date des années 1930, hein.
-— Et meilleur que Bépo en français aussi ?
-— Reste poli. Tu nous prends pour qui ?
-— J’ai vu une variante de Bépo qui dit qu’elle est mieux.
-— Haha, c’est mignon ça ! Mais non.
--->
+À l’époque de Dvorak et Bépo la réponse était simple, mais ce domaine a
+complètement explosé ces 20 dernières années suite au développement de
+dispositions anglophones comme Colemak, Workman, MTGAP, ISRT, Sturdy…
 
 Pour que chacun·e puisse comprendre en quoi Ergo‑L se distingue et quels sont
 ses avantages et inconvénients par rapport aux autres dispositions de clavier,
 il était grand temps d’écrire un article sur l’art délicat de l’analyse et de
-l’optimisation des layouts.
+l’optimisation des <i lang="en">layouts</i>.
 
 <!--more-->
 
