@@ -420,10 +420,10 @@ modernes. Comment est-ce possible, alors qu’Optimot dédie beaucoup de bonnes
 touches aux lettres accentuées du français ? Et alors que son auteur confirme
 que l’anglais n’est qu’un objectif secondaire de cette disposition ?
 
-> Moi aussi, je peux modifier légèrement Optimot pour optimiser un peu plus pour
-> l’anglais (mais au détriment du français). Mais ce n’est pas mon choix parce
-> que nous sommes en France et que je m’adresse à des personnes qui écrivent
-> d’abord en français.
+> Je peux modifier légèrement Optimot pour optimiser un peu plus pour l’anglais
+> (mais au détriment du français). Mais ce n’est pas mon choix parce que nous
+> sommes en France et que je m’adresse à des personnes qui écrivent d’abord en
+> français.
 
 — Pyjam, auteur d’Optimot
 
