@@ -56,7 +56,7 @@ Rédaction
 
 ### Markdown
 
-Les pages sont écrites en [Pandoc Markdown] plutôn qu’en HTML chaque fois que
+Les pages sont écrites en [Pandoc Markdown] plutôt qu’en HTML chaque fois que
 c’est possible.
 
 Les lignes sont limitées à 80 caractères.
