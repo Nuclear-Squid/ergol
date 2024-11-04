@@ -7,7 +7,7 @@ Prérequis : Hugo + Pandoc
 
 ### Windows
 
-Installer [Hugo][] et [Pandoc][] depuis un émulateur de terminal, par exemple
+Installer [Hugo] et [Pandoc] depuis un émulateur de terminal, par exemple
 Windows PowerShell :
 
 ```powershell
@@ -18,7 +18,7 @@ winget install --source winget --exact --id JohnMacFarlane.Pandoc
 Attention : Hugo ne fonctionne pas depuis le terminal Windows PowerShell qui est
 préinstallé.
 
-Hugo requiert un terminal WSL, Git Bash ou [PowerShell][] tout court, [qui n’est
+Hugo requiert un terminal WSL, Git Bash ou [PowerShell] tout court, [qui n’est
 pas la même application que Windows PowerShell][WindowsPS], bien que le nom soit
 quasiment le même et que les deux applications soient maintenues par Microsoft.
 PowerShell peut s’installer depuis Windows PowerShell :
@@ -101,20 +101,20 @@ sont définis dans le glossaire.
 
 ### Désignation des touches
 
-Les touches physiques du clavier sont désignées suivant les normes techniques en
-vigueur (ANSI, USB Keyboard API, [w3c Keyboard API])… qui découlent des
-claviers Qwerty.
-
-On ne traduit pas les touches spéciales. On parle donc de <kbd>Shift</kbd>,
-<kbd>Enter</kbd>, <kbd>Backspace</kbd>, etc.
-
 Les touches physiques sont incluses dans des balises `<kbd>`, les caractères
 produits dans des balises `<code>`. On parle donc de la touche <kbd>F</kbd> pour
 désigner celle qui produit un `N` en Ergo‑L.
 
-[Pandoc Markdown]:     https://pandoc.org/MANUAL.html#pandocs-markdown
-[réforme de 1990]:     https://fr.wikipedia.org/wiki/Rectifications_orthographiques_du_français_en_1990
+Comme on n’a pas encore de règle pour désigner les touches spéciales, l’usage
+actuel mélange les termes anglais et français : <kbd>Shift</kbd>,
+<kbd>Entrée</kbd>, <kbd>Backspace</kbd>, <kbd>Esc</kbd>, etc. Une possibilité
+serait de s’appuyer sur des normes existantes telles que [w3c] ou [USB HID].
+
+
 [épicènes]:            https://fr.wiktionary.org/wiki/épicène
 [accord de proximité]: https://fr.wikipedia.org/wiki/Règle_de_proximité
+[réforme de 1990]:     https://fr.wikipedia.org/wiki/Rectifications_orthographiques_du_français_en_1990
 
-[w3c Keyboard API]:    https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system
+[Pandoc Markdown]:     https://pandoc.org/MANUAL.html#pandocs-markdown
+[USB HID]:             https://www.usb.org/sites/default/files/hut1_5.pdf
+[w3c]:                 https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system
