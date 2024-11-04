@@ -843,7 +843,7 @@ slogan, c’est *littéralement* ce qu’on a fait : *d’abord* caler l’erg
 ([1DFH], raccourcis clavier…), *puis* optimiser les mouvements de doigts.
 
 Un grand merci à [Nuclear Squid][], non seulement pour avoir initié et dirigé le
-projet Ergo‑L, mais plus prosaïquement pour sa contibution à la rédaction des
+projet Ergo‑L, mais plus prosaïquement pour sa contribution à la rédaction des
 chapitres sur les métriques et les analyseurs. Que le Grand Palmipède parsème
 son chemin de pétales de roses.
 
