@@ -7,7 +7,7 @@ tags = ["communauté", "technique", "outils"]
 
 Optimiser une disposition de clavier, ça consiste en quoi ?
 
-À l’époque de Dvorak et Bépo, la réponse était simple, mais ce domaine a
+À l’époque de Dvorak et Bépo la réponse était simple, mais ce domaine a
 complètement explosé ces 20 dernières années suite au développement de
 dispositions anglophones comme Colemak, Workman, MTGAP, ISRT, Sturdy…
 
