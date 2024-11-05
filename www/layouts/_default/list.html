@@ -6,10 +6,15 @@
         {{ $link := or .Params.redirect_to .RelPermalink }}
         <header>
           <h2><a href="{{ $link }}">{{ .LinkTitle }}</a></h2>
+          <p style="text-align: right;">
+          <a href="{{ $author.url }}">{{ $author.name }}</a>
+          </p>
           <time>{{ time.Format ":date_medium" .Date }}</time>
         </header>
         {{ .Summary }}
-        <nav class="more"><a href="{{ $link }}">Lire la suite…</a></nav>
+        {{ if not .Params.redirect_to}
+          <nav class="more"><a href="{{ $link }}">Lire la suite…</a></nav>
+        {{ end }}
       </article>
     {{ end }}
   {{ end }}
