@@ -6,7 +6,7 @@ tags = ["clavier", "split", "corne", "fabrication"]
 +++
 
 Je suis partie d’aucune connaissance en clavier ergonomique (j’avais le bon gros
-clavier « 100 % » avec pavé numérique, les touches de fonctions, etc) à un petit
+clavier « 100 % » avec pavé numérique, les touches de fonction, etc.) à un petit
 clavier ergonomique : le **Corne**.
 
 Je te raconte ici mon voyage initiatique dans le monde des claviers en espérant
@@ -24,10 +24,10 @@ Apprenons à connaitre la bête !
 
 Il existe 2 types de clavier :
 
-- les claviers à membranes
+- les claviers à membrane
 - les claviers mécaniques
 
-Les *claviers à membranes* représentent la très grosse majorité des claviers car
+Les *claviers à membrane* représentent la très grosse majorité des claviers car
 peu cher à produire. Si tu ne sais pas de quel type est ton clavier, c’est
 sûrement un clavier à membrane.
 
@@ -53,7 +53,7 @@ Ici aussi, on va essentiellement retrouver 2 sortes de switches :
 Ces switches diffèrent par leur empreinte sur le <i lang="en">PCB</i> et pour
 les <i lang="en">keycaps</i> (on va voir plus tard ce que c’est).
 
-Ce qu’il faut retenir, c’est que seul Kailh produit des Chocs, mais ceux-ci ont
+Ce qu’il faut retenir, c’est que seul Kailh produit des Choc, mais ceux-ci ont
 *profil plus bas* (<i lang="en">low-profile</i>, les touches sont moins hautes)
 que les MX. En revanche les MX sont plus faciles à trouver et moins chers.
 
@@ -100,7 +100,7 @@ toucher les 2 index de la main en position dactylo.
 Pour les touches des pouces ils peuvent être convexes pour ne pas avoir d’arête
 gênante sur le bord.
 
-Avoir différentes largeurs : 1 U étant le carré de référence, 2 U sera un 
+Ils peuvent avoir différentes largeurs : 1U étant le carré de référence, 2U sera un 
 capuchon rectangulaire de 2 unités de long par 1 unité de large.
 
 ![Keycaps MBK Choc blank avec pouces convexes et homing](keycaps.webp)
@@ -141,7 +141,7 @@ ayant plus de touches. Mais ce n’est pas la seule raison pour laquelle les gen
 se tournent vers ces petits claviers : mettre à portée de doigts toutes les
 touches améliore grandement le confort de frappe, et c’est aussi là un fondement
 de la philosophie de la disposition Ergo‑L. Et pour faire rentrer toutes les
-touches dont on a besoin au quotidien (même les touches fonctions ou un pavé
+touches dont on a besoin au quotidien (même les touches de fonction ou un pavé
 numérique !) on peut profiter du fait que ces claviers qu’on va fabriquer sont
 programmables (j’y reviendrai par la suite).
 
@@ -171,7 +171,7 @@ plus mis à jour avec les modèles récents.
 
 ### Le MCU
 
-Le MCU (<i lang="en">microcontroller</i>, pas le Marvel Cinematic Universe 😁)
+Le MCU (<i lang="en">microcontroller unit</i>, pas le Marvel Cinematic Universe 😁)
 est le cerveau du clavier. Grâce à cette puce on va pouvoir programmer ce qu’on
 envoie à l’ordinateur lorqu’une ou plusieurs touches sont pressées.
 
