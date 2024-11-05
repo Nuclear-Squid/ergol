@@ -11,10 +11,10 @@
     {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
       <header>
         <h3>{{ .LinkTitle }}</h3>
-          <p>
-          <a href="{{ $author.url }}">{{ $author.name }}</a>
-          </p>
-        <time><a href="{{ .RelPermalink }}">{{ time.Format "2006-01-02" .Date }}</a></time>
+        <p class="author">
+          <a href="{{ $author.url }}">{{ $author.name }}</a> –
+          <time><a href="{{ .RelPermalink }}">{{ time.Format "2006-01-02" .Date }}</a></time>
+        </p>
       </header>
       {{ .Summary }}
       <nav class="more"><a href="{{ .RelPermalink }}">Lire la suite…</a></nav>
