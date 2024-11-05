@@ -2,6 +2,8 @@
 title = "Ergo‑L, une disposition des touches ergonomique autant en français qu’en anglais"
 date = 2024-05-27T21:00:00+01:00
 tags = ["presse", "mentions"]
+
+params.domain = "MacGeneration"
 params.redirect_to = "https://www.macg.co/ailleurs/2024/05/clavier-ergo-l-une-disposition-des-touches-ergonomique-autant-en-francais-quen-anglais-143959"
 +++
 

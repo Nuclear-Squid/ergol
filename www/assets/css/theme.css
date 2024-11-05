@@ -112,11 +112,9 @@ h2, h3, footer {
   margin-top: 2em;
 }
 
-article time {
-  display: block;
-  font-size: smaller;
+.author {
+  margin-top: -1em;
   text-align: right;
-  margin-top: -1.5em;
 }
 
 dialog::backdrop {

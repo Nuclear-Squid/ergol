@@ -2,7 +2,9 @@
 title = "L’après Bépo : Ergo‑L"
 date = 2024-05-28T09:46:42+01:00
 tags = ["communauté", "mentions"]
+
 params.redirect_to = "https://geobert.fr/posts/l-apres-bepo-ergo-l/"
+params.domain = "Geobert"
 +++
 
 Après plus de 13 ans de Bépo, je me suis intéressé à une nouvelle disposition
