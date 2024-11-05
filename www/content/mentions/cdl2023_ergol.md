@@ -5,18 +5,20 @@ author = "nuclear_squid"
 tags   = ["communauté", "conférences"]
 
 params.redirect_to = "https://ergol.org/slides/capitoledulibre2023/"
+params.abstract    = "https://cfp.capitoledulibre.org/cdl-2023/talk/FCBXAT/"
 params.video       = "https://www.youtube.com/watch?v=96RikfmBY-U"
 params.domain      = "CdL 2023"
 +++
 
-<!-- https://cfp.capitoledulibre.org/cdl-2023/talk/FCBXAT/ -->
-
 Dvorak est la disposition de clavier optimisée la plus connue au monde, mais fut
-originalement conçue pour des machines à écrires. Elle est donc soumise à des
+originalement conçue pour des machines à écrire. Elle est donc soumise à des
 contraintes qui ne sont plus nécessaires et ignore les besoins en bureautique.
+
 La plupart des dispositions modernes (comme Colemak, Workman et Ergo-L)
-utilisent différents principes d’ergonomie pour concevoir des dispositions plus
-efficaces et confortables au quotidien. Cette conférence présente ces nouveaux
-principes et l’évolution des dispositions modernes.
+utilisent des principes d’ergonomie différents pour concevoir des dispositions
+plus efficaces et plus confortables au quotidien.
+
+Cette conférence présente ces nouveaux principes et l’évolution des dispositions
+modernes.
 
 <!--more-->

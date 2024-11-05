@@ -12,7 +12,8 @@
               <a href="{{ $author.url }}">{{ $author.name }}</a> –
             {{ end }}
             {{ if .Params.domain }}
-              <a href="{{ $link }}">{{.Params.domain }}</a> –
+              {{ $abstract := or .Params.abstract $link }}
+              <a href="{{ $abstract }}">{{.Params.domain }}</a> –
             {{ end }}
             <time>{{ time.Format "2006-01-02" .Date }}</time>
           </p>
@@ -20,12 +21,16 @@
         {{ .Summary }}
         <nav class="more">
           {{ if in .Params.tags "conférences" }}
-            <a href="{{ $link }}">Voir le diaporama…</a>
-              {{ if .Params.video }}
-                – <a href="{{ .Params.video }}">Voir la vidéo…</a>
-              {{ end }}
+            <a href="{{ $link }}">Voir le diaporama 🡽</a>
+            {{ if .Params.video }}
+              – <a href="{{ .Params.video }}">Voir la vidéo 🡽</a>
+            {{ end }}
           {{ else if .Params.redirect_to }}
-            <a href="{{ $link }}">Lire l’article…</a>
+            {{ if .Params.domain }}
+              <a href="{{ $link }}">Lire l’article sur {{.Params.domain }} 🡽</a>
+            {{ else }}
+              <a href="{{ $link }}">Lire l’article 🡽</a>
+            {{ end }}
           {{ else }}
             <a href="{{ $link }}">Lire la suite…</a>
           {{ end }}
