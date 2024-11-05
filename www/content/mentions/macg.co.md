@@ -3,6 +3,7 @@ title = "Ergo‑L, une disposition des touches ergonomique autant en français q
 date = 2024-05-27T21:00:00+01:00
 tags = ["presse", "mentions"]
 params.redirect_to = "https://www.macg.co/ailleurs/2024/05/clavier-ergo-l-une-disposition-des-touches-ergonomique-autant-en-francais-quen-anglais-143959"
+ddn = "MacGeneration"
 +++
 
 Les dispositions des touches sur nos claviers sont à une écrasante majorité dans

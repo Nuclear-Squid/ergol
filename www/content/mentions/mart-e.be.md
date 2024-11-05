@@ -3,6 +3,7 @@ title = "Un clavier à dix doigts"
 date = 2024-05-03T09:46:42+01:00
 tags = ["communauté", "mentions"]
 params.redirect_to = "https://mart-e.be/2024/05/un-clavier-a-dix-doigts"
+ddn = "Mart-e"
 +++
 
 Si, en changeant de clavier, je m’étais préparé à perdre du temps (et de

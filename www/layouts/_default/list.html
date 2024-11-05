@@ -4,17 +4,26 @@
     {{ range sort .Pages "Date" "desc" }}
       <article>
         {{ $link := or .Params.redirect_to .RelPermalink }}
+        {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
         <header>
-          <h2><a href="{{ $link }}">{{ .LinkTitle }}</a></h2>
-          <p style="text-align: right;">
+          {{ if in .Params.tags "mentions"}}
+            <h2><a href="{{ $link }}">[{{.Params.ddn}}] {{ .LinkTitle }}</a></h2>
+          {{ else }}
+            <h2><a href="{{ $link }}">{{ .LinkTitle }}</a></h2>
+          {{ end }}
+          <p>
           <a href="{{ $author.url }}">{{ $author.name }}</a>
           </p>
-          <time>{{ time.Format ":date_medium" .Date }}</time>
+          <time>{{ time.Format "2006-01-02" .Date }}</time>
         </header>
         {{ .Summary }}
-        {{ if not .Params.redirect_to}
+        {{ if not .Params.redirect_to}}
           <nav class="more"><a href="{{ $link }}">Lire la suite…</a></nav>
         {{ end }}
+        {{ if in .Params.tags "conférences"}}
+          <nav class="more"><a href="{{ $link }}">Voir le diaporama</a></nav>
+          <nav class="more"><a href="{{ .Params.video }}">Voir la vidéo</a></nav>
+        {{ end}}
       </article>
     {{ end }}
   {{ end }}

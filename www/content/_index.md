@@ -99,7 +99,6 @@ Témoignages
 </blockquote>
 
 [On parle d’Ergo‑L ailleurs, dans la presse et les blogs.][mentions]
-[Il y a aussi des confs][talks]
 
 
 [presentation]: /presentation/
@@ -114,7 +113,6 @@ Témoignages
 [dactylo]:   /dactylo/#ergol
 [claviers]:  /claviers/
 [mentions]:  /mentions/
-[talks]: /talks/
 
 [Lafayette]: https://qwerty-lafayette.org
 [Bépo]:      https://bepo.fr
