@@ -1,6 +1,6 @@
 +++
 title = "Fabrication d’un clavier ergonomique"
-date = 2024-11-02T19:12:55+01:00
+date = 2024-11-05T19:40:55+01:00
 author = "trilowy"
 tags = ["clavier", "split", "corne", "fabrication"]
 +++
