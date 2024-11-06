@@ -45,7 +45,7 @@ de symboles.
 ### Linux : [ergol.xkb_symbols][]
 
 Ergo‑L est déjà inclus dans toutes les distributions Linux dotées de `xkeyboard-config`
-en [version 2.42 ou ultérieure](https://repology.org/project/xkeyboard-config/badges),
+en [version 2.42 ou ultérieure](https://repology.org/project/xkeyboard-config/versions),
 ce qui inclut notamment Arch, Debian Trixie/Sid, Fedora Rawhide, Gentoo, Manjaro
 Testing/Unstable, OpenMandriva Rolling/Cooker, OpenSUSE Tumbleweed, Slackware
 Current, Ubuntu 24.10.
