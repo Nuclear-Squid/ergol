@@ -18,5 +18,3 @@ Ergo‑L profite des avancées récentes en ergonomie clavier et propose aujourd
 une alternative simple et efficace. Plus optimisée, plus ergonomique, plus
 polyvalente, cette disposition de clavier convainc de plus en plus
 d’utilisateurs et utilisatrices.
-
-<!--more-->

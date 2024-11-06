@@ -24,5 +24,3 @@ la programmation.
 
 [Colemak]: https://colemak.com/
 [Workman]: https://workmanlayout.org/
-
-<!--more-->

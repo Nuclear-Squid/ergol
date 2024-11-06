@@ -33,5 +33,3 @@ patience de souder moi-même toutes les touches d'un clavier. De la même maniè
 je n'ai pas eu le courage de reprogrammer mon clavier là où une ligne dans un
 fichier de configuration me permettait de déployer facilement une disposition de
 touches plus adaptée que l'Azerty à mes usages (que je préciserai).
-
-<!--more-->

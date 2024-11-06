@@ -13,5 +13,3 @@ l’usage. Il y a un gain certain de confort mais tout cela me fait une belle
 jambe si c’est pour taper à côté des touches.
 
 … et c’est exactement ce qui s’est passé.
-
-<!--more-->

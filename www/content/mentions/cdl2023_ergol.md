@@ -20,5 +20,3 @@ plus efficaces et plus confortables au quotidien.
 
 Cette conférence présente ces nouveaux principes et l’évolution des dispositions
 modernes.
-
-<!--more-->

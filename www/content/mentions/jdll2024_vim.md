@@ -25,6 +25,3 @@ incroyablement efficace !
 Si vous êtes vimiste, cette présentation pourra vous donner des idées
 d’amélioration de votre configuration ; et dans le cas contraire, elle devrait
 vous donner envie d’activer le mode Vim de votre IDE actuel ! ^_^
-
-
-<!--more-->

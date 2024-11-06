@@ -22,5 +22,3 @@ pour écrire du français ou du code, quelle que soit votre disposition de
 clavier, même en Azerty ; et inversement, elle vous montrera quelles
 dispositions de claviers et quelles options de configuration permettent de
 réduire vos mouvements de doigt, même sur un clavier standard.
-
-<!--more-->

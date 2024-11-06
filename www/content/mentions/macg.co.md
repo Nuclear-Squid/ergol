@@ -14,5 +14,3 @@ existe pourtant d’autres dispositions plus rares et supposées plus ergonomiqu
 comme le Dvorak anglo-saxon ou le Bépo francophone. Cette pléthore de choix
 n’empêche pas de se creuser la tête pour trouver encore mieux et c’est ainsi
 qu’est né Ergo‑L.
-
-<!--more-->
