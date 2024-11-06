@@ -5,7 +5,7 @@ author = "trilowy"
 tags = ["clavier", "split", "corne", "fabrication"]
 +++
 
-Je suis partie d’aucune connaissance en clavier ergonomique (j’avais le bon gros
+Je suis passée d’aucune connaissance en clavier ergonomique (j’avais le bon gros
 clavier « 100 % » avec pavé numérique, les touches de fonction, etc.) à un petit
 clavier ergonomique : le **Corne**.
 
@@ -28,12 +28,12 @@ Il existe 2 types de clavier :
 - les claviers mécaniques
 
 Les *claviers à membrane* représentent la très grosse majorité des claviers car
-peu cher à produire. Si tu ne sais pas de quel type est ton clavier, c’est
+peu chers à produire. Si tu ne sais pas de quel type est ton clavier, c’est
 sûrement un clavier à membrane.
 
 On va s’intéresser ici aux *claviers mécaniques* car ils permettent une
 fabrication « artisanale ». Chaque pièce peut être remplacée, mais ils coûtent
-plus cher à produire. La fourchette de prix démarre dans la 60 aine d’euros et
+plus cher à produire. La fourchette de prix démarre aux environs de 60 euros et
 peut monter à plusieurs centaines d’euros !
 
 Mais grâce à la modularité des claviers mécaniques, chaque touche peut être
@@ -50,12 +50,14 @@ Ici aussi, on va essentiellement retrouver 2 sortes de switches :
 - les Choc
 - les MX
 
-Ces switches diffèrent par leur empreinte sur le <i lang="en">PCB</i> et pour
-les <i lang="en">keycaps</i> (on va voir plus tard ce que c’est).
+Ces switches diffèrent par leur empreinte sur le <i lang="en">PCB (Printed
+Circuit Board)</i> et pour les <i lang="en">keycaps</i> (on va voir plus tard ce
+que c’est).
 
 Ce qu’il faut retenir, c’est que seul Kailh produit des Choc, mais ceux-ci ont
-*profil plus bas* (<i lang="en">low-profile</i>, les touches sont moins hautes)
-que les MX. En revanche les MX sont plus faciles à trouver et moins chers.
+un *profil plus bas* (<i lang="en">low-profile</i>, les touches sont moins 
+hautes) que les MX. En revanche les MX sont plus faciles à trouver et moins
+chers.
 
 Hormis ce choix entre Choc et MX, 2 autres critères très importants sont à
 prendre en compte : le « touché » et la force d’activation.
@@ -64,19 +66,19 @@ Ce que j’appelle « touché » peut être de 3 sortes :
 
 - **tactile** : appuyer sur la touche fait un petit « bump », comme les claviers
 de PC portable
-- **linéaire** : appuyer sur la touche se fait de manière linéaire comme son nom
+- **linéaire** : appuyer sur la touche se fait de manière linéaire comme le nom
 l’indique, pas de résistance différente jusqu’à ce qu’on arrive en bout de
 course
 - **clicky** : comme pour le tactile mais avec en plus un petit « clic » sonore
 à chaque activation de touche, qui a fait la réputation des claviers mécaniques
-comme clavier non approprié pour un environnement de travail 😅
+comme claviers inappropriés pour un environnement de travail 😅
 
-Pour ce qui est de la force d’activation, elle est notée en grammes, c’est le
-poids qu’il faut mettre sur la touche pour enfoncer le ressort à l’intérieur et
-ainsi l’activer. Plus c’est léger plus la touche sera facile à activer,
-augmentant la sensation d’ergonomie, mais moins on pourra laisser reposer ses
-doigts sur le claviers sans activer les-dites touches. Les switches légers
-demandent un certain temps d’adaptation.
+Pour ce qui est de la force d’activation, elle est mesurée en gramme-force (gf)
+ou abusivement en gramme (g), c’est le poids qu’il faut mettre sur la touche
+pour enfoncer le ressort à l’intérieur et ainsi l’activer. Plus c’est léger,
+plus la touche sera facile à activer, augmentant la sensation d’ergonomie, mais
+moins on pourra laisser reposer ses doigts sur le clavier sans activer lesdites
+touches. Les switches légers demandent un certain temps d’adaptation.
 
 ![Kailh Choc Red Pro linéaires 35 g](key_switches.webp)
 
