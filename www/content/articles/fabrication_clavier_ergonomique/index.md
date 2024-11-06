@@ -85,25 +85,28 @@ touches. Les switches légers demandent un certain temps d’adaptation.
 
 ### Les capuchons
 
-Les capuchons ou <i lang="en">keycaps</i> sont ce qui couvre les touches, sur
-lesquels les doigts reposent et où il est noté les lettres de la touche.
+Les capuchons, ou <i lang="en">keycaps</i>, sont ce qui couvre les touches : les
+doigts reposent dessus et lettres ou symboles y sont notés.
 
 La seule contrainte est qu’il faut qu’ils soient compatibles avec les switches.
 
-Il en existe avec différents profils (la façon dont ils sont sculptés) plus ou
-moins hauts.
+Il en existe avec [différents profils][profils de keycap] (la façon dont ils 
+sont sculptés), plus ou moins hauts.
 
 Ils peuvent être « <i lang="en">blank</i> » (rien n’est écrit dessus, il faut
 savoir écrire à l’aveugle).
 
 Les types « <i lang="en">homing</i> » ont un relief pour permettre de placer au
-toucher les 2 index de la main en position dactylo.
+toucher les deux index en position dactylo (<kbd>F</kbd> et <kbd>J</kbd> en
+Azerty/Qwerty).
 
-Pour les touches des pouces ils peuvent être convexes pour ne pas avoir d’arête
-gênante sur le bord.
+Pour les touches des pouces, les keycaps peuvent être convexes pour ne pas avoir
+d’arête gênante sur le bord.
 
-Ils peuvent avoir différentes largeurs : 1U étant le carré de référence, 2U sera un 
-capuchon rectangulaire de 2 unités de long par 1 unité de large.
+Ils peuvent avoir différentes largeurs : 1U étant le carré de référence d’une
+simple touche comme <kbd>A</kbd> ou <kbd>Z</kbd>, 2U sera un capuchon
+rectangulaire de 2 unités de long par 1 unité de large. Par exemple, la barre
+espace fait 5U de long (parfois plus !) sur un clavier standard.
 
 ![Keycaps MBK Choc blank avec pouces convexes et homing](keycaps.webp)
 
@@ -114,27 +117,27 @@ Le circuit imprimé ou PCB (<i lang="en">Printed Circuit Board</i>) est la parti
 permettant de relier tous les composants du clavier entre eux, un peu comme la
 carte mère d’un PC.
 
-Le PCB est directement responsable de la géométrie que va prendre le clavier,
-c’est donc à choisir avec soin. Pour un clavier « <i lang="en">split</i> »
-(c’est-à-dire séparé en 2 parties main gauche/main droite), on aura donc 2 PCB.
+Le PCB est directement responsable de la géométrie qu’aura le clavier, c’est
+donc à choisir avec soin. Pour un clavier « <i lang="en">split</i> »
+(c’est-à-dire séparé en 2 parties, main gauche/main droite), on aura donc 2 PCB.
 
 L’arrangement des touches va dépendre du PCB. Sur un clavier classique on va
 avoir ce qu’on appelle un « <i lang="en">row stagger</i> », c’est-à-dire un
 décalage des touches entre les différentes lignes qui fait qu’elles ne sont pas
-alignées en colonne pour chaque doigt sur le clavier. L’auriculaire n’a pas un
-mouvement de simple repli/extension pour <kbd>A</kbd>, <kbd>Q</kbd> et
-<kbd>W</kbd>, il doit aussi décaler de manière horizontale. Ceci est une
-contrainte héritée des machines à écrire mais n’est pas souhaitable en
-ergonomie.
+alignées en colonne pour chaque doigt. L’auriculaire gauche n’a pas un mouvement
+de simple repli/extension pour <kbd>A</kbd>, <kbd>Q</kbd> et <kbd>W</kbd>, il 
+doit aussi se décaler de manière horizontale. Ceci est une contrainte héritée
+des machines à écrire mais n’est pas souhaitable en ergonomie.
 
-Au contraire du row stagger, on va plutôt rencontrer du « <i lang="en">column
-stagger</i> » sur les claviers ergonomiques : ce column stagger permet de
-prendre en compte le fait que tous les doigts n’ont pas la même longueur. En
-particulier on va parler de « <i lang="en">pinky stagger</i> » plus ou moins
-important pour désigner le décalage de la colonne de touches dédiées aux
-auriculaires.
+Au contraire du <i lang="en">row stagger</i>, on va plutôt rencontrer du
+« <i lang="en">column stagger</i> » sur les claviers ergonomiques : un décalage
+des touches entre les colonnes de chaque doigt. Ce <i lang="en">column
+stagger</i> permet de prendre en compte le fait que tous les doigts n’ont pas la
+même longueur. En particulier, on va parler de « <i lang="en">pinky
+stagger</i> » plus ou moins important pour désigner le décalage de la colonne de
+touches dédiées aux auriculaires.
 
-D’autres claviers sont ortholinéaires, ils ont leur disposition de touches en
+D’autres claviers sont ortholinéaires : ils ont leur disposition de touches en
 grille.
 
 Le PCB influence directement le nombre de touches sur le clavier. Un clavier
@@ -276,6 +279,7 @@ pas, va falloir tout lire si tu veux les info 😅).
 N’hésite pas à proposer des corrections sur le [Github] si besoin.
 
 
+[profils de keycap]: https://www.reddit.com/r/MechanicalKeyboards/comments/j484j5/keycap_profiles_i_compiled_a_direct_comparison/
 [comparateur de géométrie clavier]: https://jhelvy.shinyapps.io/splitkbcompare/
 [QMK]: https://qmk.fm/
 [Vial]: https://get.vial.today/
