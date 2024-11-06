@@ -20,16 +20,16 @@
         </header>
         {{ if .Params.redirect_to }}
           {{ .Content }}
-          <nav class="more">
+          <nav class="more ext">
             {{ if in .Params.tags "conférences" }}
-              <a href="{{ $link }}">Voir le diaporama 🡽</a>
+              <a href="{{ $link }}">Voir le diaporama</a>
               {{ if .Params.video }}
-                – <a href="{{ .Params.video }}">Voir la vidéo 🡽</a>
+                – <a href="{{ .Params.video }}">Voir la vidéo</a>
               {{ end }}
             {{ else if .Params.domain }}
-              <a href="{{ $link }}">Lire l’article sur {{.Params.domain }} 🡽</a>
+              <a href="{{ $link }}">Lire l’article sur {{.Params.domain }}</a>
             {{ else }}
-              <a href="{{ $link }}">Lire l’article 🡽</a>
+              <a href="{{ $link }}">Lire l’article</a>
             {{ end }}
           </nav>
         {{ else }}
