@@ -358,6 +358,44 @@ header + nav ul ul {
 
 /**
  * ╭───────────────────────────────────────────────────────────────╮
+ * │                          Link Icons                           │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+.icon::after {
+  content: "";
+  display: inline-block;
+  background-size: contain;
+  background-color: currentColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: .2em;
+  height: 1.25em;
+  width: 1.25em;
+}
+
+.icon-rss::after { /* https://boxicons.com */
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z'/><path d='M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z'/><circle cx='6' cy='18' r='2'/></svg>");
+}
+
+.icon-ext::after { /* https://boxicons.com */
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z'/><path d='M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z'/></svg>");
+}
+
+.icon-talk::after { /* https://boxicons.com */
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M20 3H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h7v3H8v2h8v-2h-3v-3h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 15V5h16l.001 10H4z'/><path d='m10 13 5-3-5-3z'/></svg>");
+}
+
+.icon-video::after { /* https://boxicons.com */
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M18 7c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-3.333L22 17V7l-4 3.333V7zm-1.998 10H4V7h12l.001 4.999L16 12l.001.001.001 4.999z'/></svg>");
+}
+
+.icon-article::after { /* https://boxicons.com */
+  mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M19.875 3H4.125C2.953 3 2 3.897 2 5v14c0 1.103.953 2 2.125 2h15.75C21.047 21 22 20.103 22 19V5c0-1.103-.953-2-2.125-2zm0 16H4.125c-.057 0-.096-.016-.113-.016-.007 0-.011.002-.012.008L3.988 5.046c.007-.01.052-.046.137-.046h15.75c.079.001.122.028.125.008l.012 13.946c-.007.01-.052.046-.137.046z'/><path d='M6 7h6v6H6zm7 8H6v2h12v-2h-4zm1-4h4v2h-4zm0-4h4v2h-4z'/></svg>");
+
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
  * │                          Keys & Chars                         │
  * ╰───────────────────────────────────────────────────────────────╯
 **/

@@ -1,6 +1,9 @@
 +++
-title = "Ailleurs"
+title = "On en parle ailleurs"
 +++
 
-On parle d’Ergo‑L et d’ergonomie clavier ailleurs —
-<br>dans la presse, dans des billets de blogs, dans des conférences…
+dans la presse, dans des billets de blogs, dans des conférences…
+
+<style>
+h3 { margin-top: 4em; }
+</style>

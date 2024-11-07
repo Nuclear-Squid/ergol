@@ -3,16 +3,15 @@
   {{ if not .Params.hideSummaryOfChildPages }}
     {{ range sort .Pages "Date" "desc" }}
       <article>
-        {{ $link := or .Params.redirect_to .RelPermalink }}
-        {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
         <header>
-          <h3><a href="{{ $link }}">{{ .LinkTitle }}</a></h3>
+          {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+          <h3>{{ .LinkTitle }}</h3>
           <p class="author">
             {{ if $author }}
               <a href="{{ $author.url }}">{{ $author.name }}</a> –
             {{ end }}
             {{ if .Params.domain }}
-              {{ $abstract := or .Params.abstract $link }}
+              {{ $abstract := or .Params.abstract .Params.redirect_to .RelPermalink }}
               <a href="{{ $abstract }}">{{.Params.domain }}</a> –
             {{ end }}
             <time>{{ time.Format "2006-01-02" .Date }}</time>
@@ -20,22 +19,22 @@
         </header>
         {{ if .Params.redirect_to }}
           {{ .Content }}
-          <nav class="more ext">
+          <nav class="more">
             {{ if in .Params.tags "conférences" }}
-              <a href="{{ $link }}">Voir le diaporama</a>
+              <a href="{{ .Params.redirect_to }}" class="icon icon-talk">Voir le diaporama</a>
               {{ if .Params.video }}
-                – <a href="{{ .Params.video }}">Voir la vidéo</a>
+                – <a href="{{ .Params.video }}" class="icon icon-video">Voir la vidéo</a>
               {{ end }}
             {{ else if .Params.domain }}
-              <a href="{{ $link }}">Lire l’article sur {{.Params.domain }}</a>
+              <a href="{{ .Params.redirect_to }}" class="icon icon-article">Lire l’article sur {{.Params.domain }}</a>
             {{ else }}
-              <a href="{{ $link }}">Lire l’article</a>
+              <a href="{{ .Params.redirect_to }}" class="icon icon-article">Lire l’article</a>
             {{ end }}
           </nav>
         {{ else }}
           {{ .Summary }}
           <nav class="more">
-            <a href="{{ $link }}">Lire la suite…</a>
+            <a href="{{ .RelPermalink }}">Lire la suite…</a>
           </nav>
         {{ end }}
       </article>
