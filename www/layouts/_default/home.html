@@ -12,8 +12,8 @@
       <header>
         <h3>{{ .LinkTitle }}</h3>
         <p class="author">
-          <a href="{{ $author.url }}">{{ $author.name }}</a> –
-          <time><a href="{{ .RelPermalink }}">{{ time.Format "2006-01-02" .Date }}</a></time>
+          par <a href="{{ $author.url }}">{{ $author.name }}</a> –
+          <time>{{ time.Format "2006-01-02" .Date }}</time>
         </p>
       </header>
       {{ .Summary }}

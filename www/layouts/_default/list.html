@@ -5,14 +5,24 @@
       <article>
         <header>
           {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+          {{ $abstract := or .Params.abstract .Params.redirect_to .RelPermalink }}
           <h3>{{ .LinkTitle }}</h3>
           <p class="author">
-            {{ if $author }}
-              <a href="{{ $author.url }}">{{ $author.name }}</a> –
-            {{ end }}
-            {{ if .Params.domain }}
-              {{ $abstract := or .Params.abstract .Params.redirect_to .RelPermalink }}
-              <a href="{{ $abstract }}">{{.Params.domain }}</a> –
+            {{ if in .Params.tags "conférences" }}
+              conférence de <a href="{{ $author.url }}">{{ $author.name }}</a> –
+              {{ if .Params.domain }}
+                <a href="{{ $abstract }}">{{.Params.domain }}</a> –
+              {{ end }}
+            {{ else if in .Params.tags "presse" }}
+              {{ if .Params.domain }}
+                article de <a href="{{ $abstract }}">{{.Params.domain }}</a> –
+              {{ end }}
+            {{ else if .Params.redirect_to }}
+              {{ if .Params.domain }}
+                billet de <a href="{{ $abstract }}">{{.Params.domain }}</a> –
+              {{ end }}
+            {{ else if $author }}
+              par <a href="{{ $author.url }}">{{ $author.name }}</a> –
             {{ end }}
             <time>{{ time.Format "2006-01-02" .Date }}</time>
           </p>
