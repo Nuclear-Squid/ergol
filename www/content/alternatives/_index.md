@@ -77,7 +77,7 @@ soit devenir insupportables.
 |               |       |       |       |       |       | - (fr) charge de l’auriculaire droit > 10 % |
 |               |       |       |       |       |       | - (en) charge déséquilibrée                 |
 |               |       |       |       |       |       | - chiffres en Shift                         |
-|               |       |       |       |       |       | - [licence non libre](https://optimot.fr/licence.html)|
+|               |       |       |       |       |       | - [licence non libre][] (clause NC)         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
 
 <!-- do not remove the empty line above -->
@@ -176,10 +176,9 @@ serait une permutation `h,’`, pour faire passer le `h` de [>] à [O].
 optimisée pour l’anglais au motif qu’elle obtiendrait une bonne [note globale
 sur KLAnext][] ; mais pour nous, [la heatmap est inadaptée][heatmap] (lettres
 fréquentes sur la rangée inférieure) et de nombreux bigrammes courants sont trop
-inconfortables pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`,
-`by`, `ok`, `ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée*
-pour ça. Et d’ailleurs, son auteur reconnait que l’anglais n’est qu’un objectif
-secondaire :
+inconfortables pour une utilisation régulière (`th`, `yo`, `ay`, `by`, `ok`,
+`ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça. Et
+d’ailleurs, son auteur reconnait que l’anglais n’est qu’un objectif secondaire :
 
 > Je peux modifier légèrement Optimot pour optimiser un peu plus pour l’anglais
 > (mais au détriment du français). Mais ce n’est pas mon choix parce que nous
@@ -203,8 +202,8 @@ secondaire :
   *très* supérieure en français et est bien plus utilisable en anglais ;
 - pour les Bépoètes qui ont des douleurs ou qui souhaitent tenter l’expérience
   1DFH, [Bépolar][] sera une alternative intéressante et très vite apprise ; et
-  [Erglace][] n’aura que des avantages sur Optimot, y compris sur ses propres
-  métriques.
+  [Erglace][] n’aura que des avantages sur Bépo et Optimot, y compris sur leurs
+  propres métriques.
 
 [ergo‑l]:     /
 [bépo]:       /bepo
@@ -221,3 +220,4 @@ secondaire :
 
 [compatibilité délicate]:   /claviers/#les-limitations-de-bépo-béopy-optimot
 [note globale sur KLAnext]: /articles/analyse_et_optimisation/#lapproche-optimot
+[licence non libre]:        https://optimot.fr/licence.html
