@@ -1,33 +1,41 @@
 {{ $default_layout := "ergol" }}
 {{ $layouts := dict
   "en" (dict
-    "qwerty"      "Qwerty"
-    "dvorak"      "Dvorak"
-    "colemak"     "Colemak"
-    "colemak-dh"  "Colemak-DH"
-    "workman"     "Workman"
-    "ISRT"        "ISRT"
-    "MTGAP"       "MTGAP"
-    "sturdy"      "Sturdy"
+  "colemak"     			"Colemak"
+  "colemak-dh"  			"Colemak-DH"
+  "dvorak"      			"Dvorak"
+  "ISRT"        			"ISRT"
+  "MTGAP"       			"MTGAP"
+  "qwerty"      			"Qwerty"
+  "sturdy"      			"Sturdy"
+  "workman"     			"Workman"
   )
 
   "fr" (dict
-    "azerty"      "Azerty"
-    "lafayette"   "Lafayette"
-    "ergol"       "Ergo‑L"
-    "erglace"     "Erglace"
-    "colemak-french-touch" "Colemak French Touch"
-    "bepolar"     "Bépolar"
-    "bepo"        "Bépo"
-    "hypertexte"  "HyperTexte"
-    "hypertexte_1dfh"  "HyperTexte 1DFH"
+  "bepolar"     			"Bépolar"
+  "colemak-french-touch" 	"Colemak French Touch"
+  "ergol"       			"Ergo‑L"
+  "erglace"     			"Erglace"
+  "lafayette"   			"Lafayette"
+  )
+
+  "fr.contrib" (dict
+    "azerty"      			"Azerty"
+    "beopy_1dfh"  			"Béopy 1DFH"
+    "bepo"        			"Bépo"
+    "hypertexte"  			"HyperTexte"
+    "hypertexte_1dfh"  		"HyperTexte 1DFH"
+  )
+
+  "fr.nonfree" (dict
+    "optimot"      			"Optimot"
   )
 }}
 
 <select id="layout">
   {{ range $language, $layouts_language := $layouts }}
     <option disabled>  [{{ $language }}]</option>
-    {{ range $json_name, $displayed_name := $layouts_language }}
+    {{ range $json_name, $displayed_name := $layouts_language  }}
       {{ if eq $default_layout $json_name }}
         <option value="{{ $json_name }}" selected> {{ $displayed_name }} </option>
       {{ else }}
