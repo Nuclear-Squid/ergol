@@ -33,14 +33,15 @@
 }}
 
 <select id="layout">
-  {{ range $language, $layouts_language := $layouts }}
-    <option disabled>  [{{ $language }}]</option>
-    {{ range $json_name, $displayed_name := $layouts_language  }}
-      {{ if eq $default_layout $json_name }}
-        <option value="{{ $json_name }}" selected> {{ $displayed_name }} </option>
-      {{ else }}
-        <option value="{{ $json_name }}"> {{ $displayed_name }} </option>
-      {{ end }}
-    {{ end }}
-  {{ end }}
-</select>
+	{{ range $language, $layouts_language := $layouts }}
+	  <option disabled> [{{ $language }}] </option>
+	  {{ range $layout, $layout_displayed_name := $layouts_language }}
+		{{ $json_name := printf "%s/%s" $language $layout }}
+		{{ if eq $default_layout $layout }}
+		  <option value="{{ $json_name }}" selected> {{ $layout_displayed_name }} </option>
+		{{ else }}
+		  <option value="{{ $json_name }}"> {{ $layout_displayed_name }} </option>
+		{{ end }}
+	  {{ end }}
+	{{ end }}
+  </select>
