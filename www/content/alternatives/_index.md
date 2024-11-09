@@ -185,9 +185,11 @@ d’ailleurs, son auteur reconnait que l’anglais n’est qu’un objectif seco
 > sommes en France et que je m’adresse à des personnes qui écrivent d’abord en
 > français.
 
-<!--
-- 2024-01-27
-  https://discord.com/channels/794732334879473684/794734985122152478/1200680341363494972
+<!-- élément vide pour éviter que le prochain paragraphe soit considéré commo la
+sourde de la citation — ne pas retirer ! -->
+<i></i>
+<!-- 2024-01-27
+https://discord.com/channels/794732334879473684/794734985122152478/1200680341363494972
 -->
 
 [(?)]:     #optimot_en

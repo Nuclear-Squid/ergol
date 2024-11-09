@@ -99,6 +99,15 @@ d’écran).
 Les termes techniques courants en anglais sont tolérés — notamment tous ceux qui
 sont définis dans le glossaire.
 
+### Blocs de citation
+
+Les blocs de citation doivent être suivi d’un paragraphe donnant la source de la
+citation. Ce paragraphe est affiché de façon spécifique par notre feuille de
+style.
+
+L’usage est d’introduire la source de la citation avec un tiret cadratin en
+début de ligne.
+
 ### Désignation des touches
 
 Les touches physiques sont incluses dans des balises `<kbd>`, les caractères
