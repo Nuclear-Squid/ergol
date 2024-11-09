@@ -180,10 +180,12 @@ inconfortables pour une utilisation régulière (`th`, `yo`, `ay`, `by`, `ok`,
 `ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça. Et
 d’ailleurs, son auteur reconnait que l’anglais n’est qu’un objectif secondaire :
 
-> Je peux modifier légèrement Optimot pour optimiser un peu plus pour l’anglais
-> (mais au détriment du français). Mais ce n’est pas mon choix parce que nous
-> sommes en France et que je m’adresse à des personnes qui écrivent d’abord en
-> français.
+<blockquote>
+  Je peux modifier légèrement Optimot pour optimiser un peu plus pour l’anglais
+  (mais au détriment du français). Mais ce n’est pas mon choix parce que nous
+  sommes en France et que je m’adresse à des personnes qui écrivent d’abord en
+  français.
+</blockquote>
 
 <!--
 - 2024-01-27
