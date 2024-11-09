@@ -13,27 +13,66 @@ title = "Glossaire"
 </style>
 
 
-Ergonomie & Optimisation
+Analyse et optimisation
 --------------------------------------------------------------------------------
 
-[SFU (“Same Finger Usage”)]{#SFU}, [SFB (“Same Finger Bigram”)]{#SFB}
+### Bigrammes
 
-: Aussi appelé « digramme de même doigt ». Quand deux lettres s’enchaînent avec un même
-doigt, ce qui est source d’inconfort ou d’erreurs, notamment à haute vitesse.
- 
-[SKU (“Same Key Usage”)]{#SKU}, [SKB (“Same Key Bigram”)]{#SKB}
+[Bigramme]{#bigramme}
 
-: Répétition de même touche, e.g. pour produire `nn` avec n’importe quelle
-disposition de clavier, ou `és` en Ergo‑L.
+: Enchainement de deux touches.
+
+[SFB <i lang="en">(same-finger bigram)</i>]{#sfb}
+
+: Aussi appelé « bigramme de même doigt » : enchainement de deux touches
+différentes avec le même doigt. C’est source d’inconfort ou d’erreurs, notamment
+à haute vitesse.
+
+[SFU <i lang="en">(same-finger usage)</i>]{#sfu}
+
+: Taux de SFB relevés dans un corpus de texte, exprimé en % du nombre total de
+bigrammes. Plus le taux est bas, mieux c’est.
+
+[SKB <i lang="en">(same-key bigram)</i>]{#skb}
+
+: Répétition de même touche, par exemple pour produire `nn` avec n’importe
+quelle disposition de clavier, ou `és` en Ergo‑L.
+
+[SKU <i lang="en">(same-key usage)</i>]{#sku}
+
+: Taux de SKB relevés dans un corpus de texte, exprimé en % du nombre total de
+bigrammes. Théoriquement, il ne dépend que du corpus ; mais il peut augmenter
+avec l’usage de touches mortes.
+
+[SHB <i lang="en">(same-hand bigram)</i>]{#shb}
+
+: Aussi appelé « bigramme de même main » : enchainement de deux touches sous
+deux doigts différents de la même main. C’est ce que cherche à éviter Dvorak,
+qui privilégie les alternances de mains pour des raisons historiques, liées aux
+contraintes des machines à écrire mécaniques de l’époque.
+
+[SHU <i lang="en">(same-hand usage)</i>]{#shu}
+
+: Taux de SHB relevés dans un corpus de texte, exprimé en % du nombre total de
+bigrammes. Plus le taux est bas, plus la disposition favorise l’alternance de
+mains ; plus le taux est élevé, plus la disposition favorise les roulements.
 
 [Extension]{#extension}
 
-: Quand un doigt doit atteindre une touche qui est soit sur une autre colonne
-que la position de repos, soit à une distance supérieure à une touche.
+: Mouvement pour atteindre une touche qui est soit sur une autre colonne que la
+position de repos, soit à une distance supérieure à une touche.
+
+[LSB <i lang="en">(lateral stretch bigram)</i>]{#lsb}
+
+: Bigramme de même main comportant une extension, par exemple [L]{.kbd}[H]{.kbd}
+en Azerty ou Qwerty.
 
 [Ciseau]{#ciseau}
 
-: Quand un bigramme nécessite un changement de rangée inconfortable.
+: Bigramme nécessitant un changement de rangée inconfortable, par exemple
+[C]{.kbd}[R]{.kbd} en Azerty ou Qwerty. Le terme « ciseau » est utilisé ici
+au singulier comme substantif de « mouvement en ciseaux », comme on le fait dans
+divers sports.
 
 [Roulement intérieur]{#roulement}
 
@@ -45,6 +84,22 @@ Roulement extérieur
 
 : Deux touches ou plus enchaînées sur une même main, dans le sens de l’index
 vers l’auriculaire.
+
+### Trigrammes
+
+[Trigramme]{#trigramme}
+
+: Enchainement de trois touches.
+
+[SFS <i lang="en">(same-finger skipgram)</i>]{#sfs}
+
+: Un SFB avec une touche d’un autre doigt intercalée au milieu, par exemple
+[E]{.kbd}[A]{.kbd}[D]{.kbd} ou [B]{.kbd}[U]{.kbd}[T]{.kbd} en Azerty ou Qwerty.
+
+[SKS <i lang="en">(same-key skipgram)</i>]{#sks}
+
+: Un SKB avec une touche d’un autre doigt intercalée au milieu, par exemple
+[E]{.kbd}[R]{.kbd}[E]{.kbd} ou [E]{.kbd}[L]{.kbd}[E]{.kbd} en Azerty ou Qwerty.
 
 [Redirection]{#redirection}
 
@@ -97,9 +152,9 @@ de la technologie du clavier pour développer des dispositions de clavier.
 
     Exemple le plus courant de couches : en tapant des lettres sur la couche
     *alpha* on obtient les lettres en minuscules, en gardant la touche
-    [Shift]{.kbd} enfoncée on obtient les lettres en majuscules, ce sont donc 2
-    couches différentes.
-    
+    [Shift]{.kbd} enfoncée on obtient les lettres en majuscules, ce sont donc
+    deux couches différentes.
+
     Ce concept de couches permet de diminuer le nombre de touches nécessaires sur
     un clavier et brille particulièrement sur les petits claviers ergonomiques
     en diminuant la distance que les doigts ont à parcourir.

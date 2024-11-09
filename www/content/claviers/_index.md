@@ -113,7 +113,7 @@ vers l’extérieur de la paume. À prendre en compte lors du choix.
 
 C’est affaire de goûts : les géométries 3D (Kinesis, MoErgo, Dactyl, Skeletyl…)
 ont leurs adeptes. Elles réduisent très significativement l’inconfort lié aux
-« ciseaux » (= digrammes avec changement inconfortables de rangée) et permettent
+« ciseaux » (= bigrammes avec changement inconfortables de rangée) et permettent
 d’accéder à plus de touches qu’un clavier plat sans causer de déviations
 ulnaires.
 

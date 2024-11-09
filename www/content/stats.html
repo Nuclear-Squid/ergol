@@ -9,6 +9,11 @@ jsScripts = ["/js/layout-analyzer.js", "/js/keebs.js"]
 footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
+<p> Voici l’analyseur qu’on a utilisé pour la mise au point d’Ergo‑L. Les
+  métriques sont explicitées dans le <a href="/ressources/glossaire">glossaire</a>,
+  et un <a href="/articles/analyse_et_optimisation">article détaillé</a> explique
+  plus précisément les principes d’analyse mis en œuvre. </p>
+
 <div class="keyboard">
   <input spellcheck="false" placeholder="" />
   <x-keyboard></x-keyboard>
@@ -45,26 +50,26 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 </section>
 
 <section id="sfu">
-  <h3>Digrammes de même doigt/touche</h3>
-  <small><span id="sfu-all"></span> / <span id="sku-all"></span></small>
+  <h3>Bigrammes de même doigt/touche</h3>
+  <small>SFU : <span id="sfu-all"></span> / SKU : <span id="sku-all"></span></small>
   <stats-canvas></stats-canvas>
 </section>
 
 <collapsable-table id="Achoppements">
-  <small>
+  <small>total :
     <span id="unsupported-all"></span> /
     <span id="sfu-all"></span> /
     <span id="extensions-all"></span> /
-    <span id="scisors-all"></span>
+    <span id="scissors-all"></span>
   </small>
   <table id="unsupported"></table>
   <table id="sfu-digrams"></table>
   <table id="extended-rolls"></table>
-  <table id="scisors"></table>
+  <table id="scissors"></table>
 </collapsable-table>
 
-<collapsable-table id="Digrammes">
-  <small>
+<collapsable-table id="Bigrammes">
+  <small>total :
     <span id="sku-all"></span> /
     <span id="inward-all"></span> /
     <span id="outward-all"></span>
@@ -75,26 +80,37 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 </collapsable-table>
 
 <collapsable-table id="Trigrammes">
-  <small>
-    <span id="almost-skb-all"></span> /
-    <span id="almost-sfb-all"></span> /
+  <small>total :
+    <span id="sks-all"></span> /
+    <span id="sfs-all"></span> /
     <span id="redirect-all"></span> /
     <span id="bad-redirect-all"></span>
   </small>
-  <table id="almost-skbs"></table>
-  <table id="almost-sfbs"></table>
+  <table id="sks"></table>
+  <table id="sfs"></table>
   <table id="redirect"></table>
   <table id="bad-redirect"></table>
 </collapsable-table>
 
-<!-- <h2>Analyseurs de layouts</h2> -->
-<!-- <p>TODO</p> -->
-
-<h2>Glossaire</h2>
-<p>»»» <a href="/ressources/glossaire">Un glossaire est en cours d’élaboration ici.</a> «««</p>
+<h2>Évaluation</h2>
+<p><a
+  href="/articles/analyse_et_optimisation/#optimiser-pour-une-note-globale">On
+  ne propose pas de note globale.</a> Au contraire, on recommande d’évaluer une
+  disposition de clavier selon cinq critères principaux :</p>
+<ul>
+  <li> la <i lang="en">heatmap</i> doit être centrée sur les positions confortables ; </li>
+  <li> la charge des doigts doit être bien répartie et épargner les auriculaires ; </li>
+  <li> le taux de bigrammes de même doigt (SFU) doit être le plus bas possible ; </li>
+  <li> le nombre de ciseaux et d’extensions (LSB) doit être le plus bas possible ; </li>
+  <li> le taux de mauvaises redirections doit être le plus bas possible. </li>
+</ul>
+<p>Et du point de vue des Ergonautes, la qualité d’une disposition ne se juge
+  pas à la moyenne de ces critères, mais au plus gênant d’entre eux. C’est quand
+  un <i lang="en">layout</i> n’a pas de gros défaut qu’il est confortable à l’usage.</p>
 
 <h2>Mise en garde</h2>
-<p><strong>Ces métriques ne sont pas des cibles d’optimisation !</strong></p>
+<p><a href="/articles/analyse_et_optimisation/#optimiser-façon-ergonaute">Ces
+  métriques ne sont pas des cibles d’optimisation !</a></p>
 
 <blockquote cite="https://fr.wikipedia.org/wiki/Loi_de_Goodhart">
   Lorsqu’une métrique devient un objectif, elle cesse d’être une bonne métrique.
@@ -108,10 +124,3 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
   <cite>— Jean Dion<cite>
   <!-- Le Devoir - 4 juin 1997 -->
 </blockquote>
-
-<p> Notre recommandation : utilisez ces métriques non pour mesurer les qualités
-d’une disposition de clavier, mais pour essayer d’en évaluer le défaut le plus
-gênant. Puis itérez sur votre layout jusqu’à ce que ce défaut soit
-suffisamment réduit… sans en créer un pire ailleurs. </p>
-
-<p> Et recommencez. :-) </p>

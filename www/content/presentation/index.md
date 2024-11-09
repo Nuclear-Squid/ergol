@@ -84,7 +84,7 @@ Ergo‑L veille à réduire autant que possible :
 - **la charge des doigts faibles**, surtout celle de l’auriculaire droit,
   responsable de [Entrée]{.kbd} et [Backspace]{.kbd} sur la plupart des
   claviers ;
-- **le taux de digrammes de même doigt**, un type d’enchaînement très
+- **le taux de bigrammes de même doigt**, un type d’enchaînement très
   inconfortable, notamment à haute vitesse de saisie.
 
 Ergo‑L privilégie le confort à la vitesse : on peut taper vite avec n’importe
@@ -124,12 +124,12 @@ exception près, les 9 lettres les plus fréquentes sont les mêmes en français
 Ergo‑L place donc ces lettres aux emplacements les plus confortables (au sens de
 [Workman][]) et fait en sorte qu’aucun enchaînement fréquent en français ou en
 anglais ne soit rédhibitoire. Comme en [Colemak][], on cherche à limiter le plus
-possible le taux de digrammes de même doigt, en favorisant les roulements au
+possible le taux de bigrammes de même doigt, en favorisant les roulements au
 même titre que les alternances de mains.
 
 Bien qu’il soit **optimisé pour les deux langues, français _et_
 anglais**, Ergo‑L affiche de meilleures métriques d’optimisation, tant sur la
-charge des doigts que sur le taux de digrammes de même doigt :
+charge des doigts que sur le taux de bigrammes de même doigt :
 
 <style>
 .sfu table tr td:nth-child(4) { background-color: var(--bg-accent); }
@@ -142,7 +142,7 @@ charge des doigts que sur le taux de digrammes de même doigt :
 |    -:|:-----------------------------:|:---------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
 |**fr**| [7,97 %](/stats/#/azerty//fr) | [2,55 %](/stats/#/bepo//fr) | [1,22 %](/stats/#/ergol//fr) | [3,31 %](/stats/#/dvorak//fr) | [7,16 %](/stats/#/qwerty//fr) |
 |**en**| [6,31 %](/stats/#/azerty//en) | [3,01 %](/stats/#/bepo//en) | [1,20 %](/stats/#/ergol//en) | [2,62 %](/stats/#/dvorak//en) | [5,76 %](/stats/#/qwerty//en) |
-: Taux de digrammes de même doigt en français et anglais, extrait de la [page de comparaison avec Bépo](/bepo).
+: Taux de bigrammes de même doigt en français et anglais, extrait de la [page de comparaison avec Bépo](/bepo).
 :::
 
 
@@ -212,7 +212,7 @@ Une grande attention à été portée aux enchaînements de lettres.
   vers l’intérieur et minimise les redirections, qui sont source d’erreur à
   haute vitesse.
 - Le reste des lettres fréquentes est placé de sorte à minimiser les
-  digrammes de même doigt (par exemple, [D]{.kbd} et [G]{.kbd} s’enchaînent très
+  bigrammes de même doigt (par exemple, [D]{.kbd} et [G]{.kbd} s’enchaînent très
   souvent avec [N]{.kbd} ou [R]{.kbd}, mais très peu avec [T]{.kbd}).
 - La touche morte est placée sur la main opposée à [E]{.kbd}[A]{.kbd}[C]{.kbd},
   qui sont les lettres le plus souvent diacritées en français.
@@ -235,7 +235,7 @@ anglais) et les enchaînements courants peuvent être très différents.
 
 Ergo‑L optimise le plus possible la saisie de texte anglais et français sans
 causer de problèmes rédhibitoires dans une de ces deux langues. Par exemple,
-l’enchaînement `TH` (*le* digramme le plus fréquent en anglais, avec 3,2 %
+l’enchaînement `TH` (*le* bigramme le plus fréquent en anglais, avec 3,2 %
 d’occurences) est très confortable, mais le [H]{.kbd} occupe une place dont on
 peut se dispenser en français. De même, [U]{.kbd} et [★]{.odk} sont très
 fréquents en français, mais peu fréquents en anglais, ce qui a été pris en

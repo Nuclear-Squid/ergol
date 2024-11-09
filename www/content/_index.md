@@ -98,7 +98,8 @@ Témoignages
   <cite>@Pyjam / Floppy</cite>
 </blockquote>
 
-[On parle d’Ergo‑L ailleurs, dans la presse et les blogs.][mentions]
+[On parle d’Ergo‑L et d’ergonomie clavier ailleurs][ailleurs]
+— dans la presse, dans des billets de blogs, dans des conférences…
 
 
 [presentation]: /presentation/
@@ -112,7 +113,7 @@ Témoignages
 [stats]:     /stats/
 [dactylo]:   /dactylo/#ergol
 [claviers]:  /claviers/
-[mentions]:  /mentions/
+[ailleurs]:  /ailleurs/
 
 [Lafayette]: https://qwerty-lafayette.org
 [Bépo]:      https://bepo.fr

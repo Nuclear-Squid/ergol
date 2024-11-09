@@ -63,7 +63,7 @@ d’Ergo‑L](https://discord.gg/5xR5K3nAFX) :
 - [Moussx](https://github.com/gagbo)
 - [Patrick Massot](https://github.com/PatrickMassot)
 - [Chouhartem](https://github.com/Chouhartem)
-- [Cedricr](https://github.com/cedricr)
+- [Cedricr](https://codeberg.org/cedricr)
 - [Wismill](https://github.com/wismill)
 - [Nuitjour](https://h4.io/@helioselene)
 - [fnuttens](https://github.com/fnuttens)
