@@ -271,6 +271,9 @@ l’auteur de Béop :
 Et c’est un sujet qui a été longuement détaillé par [Nuclear Squid][] dans sa
 conférence « [Ergonomie clavier : l’ère post-Dvorak][cdl2023-slides] »
 ([vidéo][cdl2023-video]).
+
+Attention : les dispositions de clavier qui privilégient les roulements prennent
+le risque d’avoir un taux élevé de mauvaises redirections.
  
 ### Distance parcourue ?
 
