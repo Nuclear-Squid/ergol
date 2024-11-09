@@ -223,9 +223,11 @@ img {
   max-width: 100%;
 }
 
-blockquote {
-  margin: 0;
+blockquote,
+blockquote + p {
+  margin: 0 auto;
   padding: .5em 2em .5em 3em;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -237,11 +239,17 @@ blockquote::before {
   left: 0.5em;
 }
 
-cite {
-  display: block;
+blockquote p {
+  margin: 0;
+}
+
+blockquote p + p {
+  margin-top: 0.5em;
+}
+
+blockquote + p {
   text-align: right;
-  text-wrap: balance;
-  font-style: normal;
+  padding: 0 2em;
 }
 
 
