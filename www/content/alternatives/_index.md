@@ -188,13 +188,11 @@ https://discord.com/channels/794732334879473684/794734985122152478/1200680341363
 > sommes en France et que je m’adresse à des personnes qui écrivent d’abord en
 > français.
 
-<!-- élément vide pour éviter que le prochain paragraphe soit considéré comme la
-sourde de la citation — ne pas retirer ! -->
-<i></i>
-
 [(?)]:     #optimot_en
 [optimot]: ./optimot_fr.png
 [heatmap]: ./optimot_en.png
+
+---
 
 **De notre point de vue :**
 

@@ -101,12 +101,14 @@ sont définis dans le glossaire.
 
 ### Blocs de citation
 
-Les blocs de citation doivent être suivi d’un paragraphe donnant la source de la
-citation. Ce paragraphe est affiché de façon spécifique par notre feuille de
-style.
+Les blocs de citation <`>` en Markdown> doivent être suivi d’un paragraphe
+donnant la source de la citation. Ce paragraphe est affiché de façon spécifique
+par notre feuille de style. L’usage est d’introduire la source de la citation
+avec un tiret cadratin en début de ligne.
 
-L’usage est d’introduire la source de la citation avec un tiret cadratin en
-début de ligne.
+Pour les citations qui ne requièrent pas de source, on remplace le paragraphe de
+source par une ligne horizontale (`---` en Markdown), qui est masquée par la
+feuille de style.
 
 ### Désignation des touches
 
