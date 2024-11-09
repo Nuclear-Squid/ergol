@@ -548,20 +548,22 @@ window.addEventListener('DOMContentLoaded', () => {
   const setProp = (key, value) => {
     if (key === 'layout') {
       if (value) {
-        fetch(`../layouts/${value}.json`)
-          .then(response => response.json())
-          .then(data => {
-            inputField.placeholder = `zone de saisie ${value}`;
-            keyboard.setKeyboardLayout(
-              data.keymap,
-              data.deadkeys,
-              data.geometry.replace('ergo', 'iso'),
-            );
-            data.keymap.Enter = ['\r', '\n'];
-            keyChars = supportedChars(data.keymap, data.deadkeys);
-            computeHeatmap();
-            computeNGrams();
-          });
+		fetch(`../layouts/${value}.json`)
+			.then(response => response.json())
+			.then(data => {
+				const selectedOption = document.querySelector('#layout option:checked').textContent.trim() || value;
+				inputField.placeholder = `zone de saisie ${selectedOption}`;
+				keyboard.setKeyboardLayout(
+					data.keymap,
+					data.deadkeys,
+					data.geometry.replace('ergo', 'iso'),
+				);
+				data.keymap.Enter = ['\r', '\n'];
+				keyChars = supportedChars(data.keymap, data.deadkeys);
+				computeHeatmap();
+				computeNGrams();
+				updateHashState('layout', value); // Update URL hash state
+			});
       } else {
         keyboard.setKeyboardLayout();
         keyChars = {};
@@ -569,7 +571,8 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     } else if (key === 'corpus') {
       if (value && value !== corpusName) {
-        fetch(`../corpus/${value}.json`)
+		let value2 = value.replace("en_fr", 'en+fr');
+        fetch(`../corpus/${value2}.json`)
           .then(response => response.json())
           .then(data => {
             corpus = data.symbols;
@@ -588,28 +591,38 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById(key).value = value;
   };
 
-  // store the keyboard state in the URL hash like it's 1995 again! :-)
-  const state = {};
-  const updateHashState = (key, value) => {
-    state[key] = value;
-    window.location.hash = '/' +
-      IDs.map(prop => state[prop]).join('/').replace(/\/+$/, '');
-  };
-  const applyHashState = () => {
-    const hash = window.location.hash || '#/ergol//en+fr';
-    const hashState = hash.split('/').slice(1);
-    IDs.forEach((key, i) => {
-      setProp(key, hashState[i] || '');
-      state[key] = hashState[i] || '';
-    });
-  };
-  IDs.forEach(key => {
-    document
-      .getElementById(key)
-      .addEventListener('change', event =>
-        updateHashState(key, event.target.value),
-      );
-  });
-  window.addEventListener('hashchange', applyHashState);
-  applyHashState();
+// Store the keyboard state in the URL as query parameters
+const state = {};
+const updateHashState = (key, value) => {
+  state[key] = value;
+  // Build the new URL query parameters format '&key=value'
+  const newParams = IDs.map(prop => `${prop}=${state[prop]}`).join('&');
+  window.location.hash = `#${newParams}`; // Update URL hash with query parameters
+};
+
+const applyHashState = () => {
+	const hash = window.location.hash.slice(1); // Remove initial `#`
+	const params = new URLSearchParams(hash);
+	const defaultValues = {
+		layout: 'fr/ergol',
+		geometry: 'iso',
+		corpus: 'en_fr'
+	};
+IDs.forEach(key => {
+	const value = params.get(key) || defaultValues[key];
+	setProp(key, value);
+	state[key] = value;
+});
+};
+
+// Add event listeners for updating URL
+IDs.forEach(key => {
+  document
+    .getElementById(key)
+    .addEventListener('change', event => updateHashState(key, event.target.value));
+});
+
+window.addEventListener('hashchange', applyHashState); // Listen for hash changes
+applyHashState();
+
 });
