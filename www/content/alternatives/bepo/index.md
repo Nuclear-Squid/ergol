@@ -99,19 +99,19 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
     <th> Ergo‑L </th>
   </tr>
   <tr>
-    <td> <a href="/stats/#/bepo/iso/fr"><img src="./charge_bepo_fr.png" /></a> </td>
+    <td> <a href="/stats/#/fr/bepo/iso/fr"><img src="./charge_bepo_fr.png" /></a> </td>
     <th> fr </th>
-    <td> <a href="/stats/#/ergol/iso/fr"><img src="./charge_ergol_fr.png"/></a> </td>
+    <td> <a href="/stats/#/fr/ergol/iso/fr"><img src="./charge_ergol_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="/stats/#/bepo/iso/en+fr"><img src="./charge_bepo_en_fr.png"/></a> </td>
+    <td> <a href="/stats/#/fr/bepo/iso/en+fr"><img src="./charge_bepo_en_fr.png"/></a> </td>
     <th> fr‑en </th>
-    <td> <a href="/stats/#/ergol/iso/en+fr"><img src="./charge_ergol_en_fr.png"/></a> </td>
+    <td> <a href="/stats/#/fr/ergol/iso/en+fr"><img src="./charge_ergol_en_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="/stats/#/bepo/iso/en"><img src="./charge_bepo_en.png" /></a> </td>
+    <td> <a href="/stats/#/fr/bepo/iso/en"><img src="./charge_bepo_en.png" /></a> </td>
     <th> en </th>
-    <td> <a href="/stats/#/ergol/iso/en"><img src="./charge_ergol_en.png"/></a> </td>
+    <td> <a href="/stats/#/fr/ergol/iso/en"><img src="./charge_ergol_en.png"/></a> </td>
   </tr>
 
   <tr style="text-align: right; font-size: 10px;">
@@ -215,8 +215,8 @@ même doigt :
 :::{.sfu style="overflow: scroll;" }
 |      |  AZERTY                       |  Bépo                       |  Ergo‑L                      |  Dvorak                       |  QWERTY                       |
 |    -:|:-----------------------------:|:---------------------------:|:----------------------------:|:-----------------------------:|:-----------------------------:|
-|**fr**| [7.97 %](/stats/#/azerty//fr) | [2.55 %](/stats/#/bepo//fr) | [1.22 %](/stats/#/ergol//fr) | [3.31 %](/stats/#/dvorak//fr) | [7.16 %](/stats/#/qwerty//fr) |
-|**en**| [6.31 %](/stats/#/azerty//en) | [3.01 %](/stats/#/bepo//en) | [1.20 %](/stats/#/ergol//en) | [2.62 %](/stats/#/dvorak//en) | [5.76 %](/stats/#/qwerty//en) |
+|**fr**| [7.97 %](/stats/#/fr/azerty/iso/fr) | [2.55 %](/stats/#/fr/bepo/iso/fr) | [1.22 %](/stats/#/fr/ergol/iso/fr) | [3.31 %](/stats/#/en/dvorak/iso/fr) | [7.16 %](/stats/#/en/qwerty/iso/fr) |
+|**en**| [6.31 %](/stats/#/fr/azerty/iso/en) | [3.01 %](/stats/#/fr/bepo/iso/en) | [1.20 %](/stats/#/fr/ergol/iso/en) | [2.62 %](/stats/#/en/dvorak/iso/en) | [5.76 %](/stats/#/en/qwerty/iso/en) |
 : Taux de bigrammes de même doigt en français et anglais.
 :::
 
