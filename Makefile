@@ -1,11 +1,17 @@
 all:
-	python build_all.py
+	@find layouts -type f \( -name '*.toml' -o -name '*.yaml' \) | while read -r file; do \
+		kalamine build "$$file" --out "$$(echo $$file | sed 's/....$$/json/')"; \
+	done
 
 watch:
-	python watch.py
+	@inotifywait -m -r layouts -e close_write | while read -r path _action file; do \
+		case $$file in \
+			*.yaml | *.toml) echo kalamine build "$$path$$file" --out "$$path$$(basename "$${file%.*}").json";; \
+		esac \
+	done
 
 dev:
-	pip3 install kalamine watchdog
+	pip3 install kalamine
 
 clean:
 	rm -rf dist/*
