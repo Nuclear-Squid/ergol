@@ -1,21 +1,11 @@
 all:
-	@for file in layouts/*.toml; do \
-		kalamine build $$file --out "layouts/$$(basename $${file%.*}).json"; \
-	done
-	@for file in layouts/*.yaml; do \
-		kalamine build $$file --out "layouts/$$(basename $${file%.*}).json"; \
-	done
+	python build_all.py
 
 watch:
-	@inotifywait -m layouts -e close_write | while read -r _path _action file; do \
-		case $$file in \
-			*yaml) kalamine build "layouts/$$file" --out "layouts/$$(basename "$${file%.*}").json";; \
-			*toml) kalamine build "layouts/$$file" --out "layouts/$$(basename "$${file%.*}").json";; \
-		esac \
-	done
+	python watch.py
 
 dev:
-	pip3 install kalamine
+	pip3 install kalamine watchdog
 
 clean:
 	rm -rf dist/*
