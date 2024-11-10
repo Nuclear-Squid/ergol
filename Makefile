@@ -11,7 +11,7 @@ watch:
 	done
 
 dev:
-	pip3 install kalamine
+	pipx install kalamine
 
 clean:
 	rm -rf dist/*
