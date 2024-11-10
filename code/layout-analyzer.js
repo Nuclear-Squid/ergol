@@ -31,28 +31,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const NGRAM_CATEGORIES = [
     // Digrams
-    'sfb', // Same Finger Bigram
-    'skb', // Same Key Bigram
-    'lsb', // Lateral Strech Bigram
-    'handChange', // Two keys typed by different hands
-    'scissor', // Roll with uncomfortable height difference between the keys
+    'sfb',             // Same Finger Bigram
+    'skb',             // Same Key Bigram
+    'lsb',             // Lateral Strech Bigram
+    'handChange',      // Two keys typed by different hands
+    'scissor',         // Roll with uncomfortable height difference between the keys
     'extendedScissor', // scissor + lsb
-    'inwardRoll', // Roll in the pinky -> index direction
-    'outwardRoll', // Roll in the index -> pinky direction
+    'inwardRoll',      // Roll in the pinky -> index direction
+    'outwardRoll',     // Roll in the index -> pinky direction
 
     // Trigrams
-    'redirect', // Two rolls going in different directions
-    'badRedirect', // Redirect that doesn’t use the index
-    'sfs', // Same Finger Skipgram (sfb with other key in the middle)
-    'sks', // Same Key Skipgram (skb with other key in the middle)
-    'other', // unused, is just two simple digrams, nothing to note.
+    'redirect',        // Two rolls going in different directions
+    'badRedirect',     // Redirect that doesn’t use the index
+    'sfs',             // Same Finger Skipgram (sfb with other key in the middle)
+    'sks',             // Same Key Skipgram (skb with other key in the middle)
+    'other',           // unused, is just two simple digrams, nothing to note.
   ];
 
   const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
 
   const is1DFH = keyCode =>
     keyCode.startsWith('Key') ||
-    ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode);
+      ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode);
 
   // create an efficient hash table to parse a text
   const supportedChars = (keymap, deadkeys) => {
@@ -62,23 +62,20 @@ window.addEventListener('DOMContentLoaded', () => {
     // In case there are multiple ways of typing a singel char, this checks
     // which sequence is easier to type (examples are in Ergo‑L)
     const requiresLessEffort = (originalKeySequence, newKeySequence) => {
-      const uses1DK =
-        '**' in keyboard.layout.deadKeys
+      const uses1DK = '**' in keyboard.layout.deadKeys
           ? keySequence => keySequence.some(key => key === charTable['**'][0])
-          : _ => false;
+          : (_) => false;
 
       const arrayCount = (array, predicate) => {
         let rv = 0;
-        array.forEach(elem => {
-          if (predicate(elem)) rv++;
-        });
+        array.forEach(elem => { if (predicate(elem)) rv++ });
         return rv;
       };
 
       const cmp = (val1, val2) => {
-        if (val1 > val2) return 'more';
-        if (val1 < val2) return 'less';
-        return 'same';
+        if (val1 > val2) return "more";
+        if (val1 < val2) return "less";
+        return "same";
       };
 
       if (originalKeySequence.length > 1 && newKeySequence.length > 1) {
@@ -97,8 +94,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       // Checks if new sequence has less keys that aren’t 1DFH.
       // => will prefer altgr[B] over shift[9] for `#`.
-      if (cmpNot1DFH === 'less') return true;
-      if (cmpNot1DFH === 'more') return false;
+      if (cmpNot1DFH === "less") return true;
+      if (cmpNot1DFH === "more") return false;
       // If it’s the same, we check the rest.
 
       const cmpHighestLevel = cmp(
@@ -108,8 +105,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       // Checks if the highest layer is lower in the new squence.
       // => will prefer 1dk -> `r` over altgr[D] for `)`.
-      if (cmpHighestLevel === 'less') return true;
-      if (cmpHighestLevel === 'more') return false;
+      if (cmpHighestLevel === "less") return true;
+      if (cmpHighestLevel === "more") return false;
 
       // Checks if the new sequence has fewer keystrokes than the original one.
       // => will prefer 1dk -> `i` over 1dk -> 1dk -> `i` for `ï`
@@ -123,9 +120,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     function insertDeadKeySequences(charTable, deadKeys, currentDeadKey) {
-      for (const [baseChar, outputChar] of Object.entries(
-        deadKeys[currentDeadKey.name]
-      )) {
+      for (const [baseChar, outputChar] of Object.entries(deadKeys[currentDeadKey.name])) {
         if (!(baseChar in charTable)) continue;
         const newSequence = currentDeadKey.sequence.concat(charTable[baseChar]);
 
@@ -133,8 +128,8 @@ window.addEventListener('DOMContentLoaded', () => {
           insertInTable(charTable, outputChar, newSequence);
         else
           insertDeadKeySequences(charTable, deadKeys, {
-            name: outputChar,
-            sequence: newSequence,
+            "name": outputChar,
+            "sequence": newSequence,
           });
       }
     }
@@ -148,10 +143,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     for (const [deadKey, sequence] of Object.entries(deadTable)) {
-      insertDeadKeySequences(charTable, deadkeys, {
-        name: deadKey,
-        sequence: sequence,
-      });
+      insertDeadKeySequences(charTable, deadkeys, { "name": deadKey, "sequence": sequence });
     }
 
     return charTable;
@@ -170,39 +162,26 @@ window.addEventListener('DOMContentLoaded', () => {
     const element = parentId
       ? document.querySelector(parentId).shadowRoot
       : document;
-    element.querySelector(sel).innerText = nums
-      .map(value => fmtPercent(value, precision))
-      .join(' / ');
+    element.querySelector(sel).innerText =
+      nums.map(value => fmtPercent(value, precision)).join(' / ');
   };
 
   const sumUpBar = bar => bar.good + bar.meh + bar.bad;
-  const sumUpBarGroup = group =>
-    group.reduce((acc, bar) => acc + sumUpBar(bar), 0);
+  const sumUpBarGroup = group => group.reduce((acc, bar) => acc + sumUpBar(bar), 0);
 
   // This has to be the *stupidest* way to format code, and I love it
   const goodKeysSet = new Set([
-    'KeyW',
-    'KeyE',
-    'KeyI',
-    'KeyO',
-    'KeyA',
-    'KeyS',
-    'KeyD',
-    'KeyF',
-    'KeyJ',
-    'KeyK',
-    'KeyL',
-    'Semicolon',
-    'KeyV',
-    'KeyM',
+            'KeyW', 'KeyE',                    'KeyI', 'KeyO',
+    'KeyA', 'KeyS', 'KeyD', 'KeyF',    'KeyJ', 'KeyK', 'KeyL', 'Semicolon',
+                            'KeyV',    'KeyM',
   ]);
 
-  const mehKeysSet = new Set(['KeyC', 'KeyR', 'KeyG', 'KeyH', 'KeyU', 'Comma']);
+  const mehKeysSet = new Set([ 'KeyC', 'KeyR', 'KeyG', 'KeyH', 'KeyU', 'Comma' ]);
 
   const getKeyPositionQuality = keyCode => {
-    if (goodKeysSet.has(keyCode)) return 'good';
-    if (mehKeysSet.has(keyCode)) return 'meh';
-    return 'bad';
+    if (goodKeysSet.has(keyCode)) return "good";
+    if (mehKeysSet.has(keyCode)) return "meh";
+    return "bad";
   };
 
   // display a finger/frequency table and bar graph
@@ -215,7 +194,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
     ctx.save();
     const headingColor = getComputedStyle(
-      document.querySelector('h1')
+      document.querySelector('h1'),
     ).getPropertyValue('color');
     ctx.fillStyle = impreciseData ? headingColor : '#88f';
     const width = canvas.width / 11;
@@ -232,7 +211,7 @@ window.addEventListener('DOMContentLoaded', () => {
         idx * width + margin / 2,
         canvas.height - value * scale,
         width - margin / 2,
-        value * scale
+        value * scale,
       );
     });
     ctx.restore();
@@ -247,13 +226,11 @@ window.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i <= arr.length - len; i++) {
         yield arr.slice(i, i + len);
       }
-    },
+    }
   });
 
   const computeNGrams = () => {
-    const ngrams = Object.fromEntries(
-      NGRAM_CATEGORIES.map(digramType => [digramType, {}])
-    );
+    const ngrams = Object.fromEntries(NGRAM_CATEGORIES.map(digramType => [digramType, {}]));
 
     const buildNgramDict = (dict, ngramLength) => {
       let total = 0;
@@ -267,16 +244,15 @@ window.addEventListener('DOMContentLoaded', () => {
           total += frequency;
           if (totalKeySequence.some(key => key === undefined)) continue;
 
-          let [pendingDeadKey, name] = keySequence.reduce(
-            ([pendingDeadKey, acc], { keyCode, level }) => {
-              let char = keyboard.layout.keyMap[keyCode][level];
-              if (pendingDeadKey)
-                char = keyboard.layout.deadKeys[pendingDeadKey][char];
+          let [pendingDeadKey, name] = keySequence.reduce(([pendingDeadKey, acc], { keyCode, level }) => {
+            let char = keyboard.layout.keyMap[keyCode][level];
+            if (pendingDeadKey)
+              char = keyboard.layout.deadKeys[pendingDeadKey][char];
 
-              return char?.length === 1 ? [undefined, acc + char] : [char, acc];
-            },
-            [nextPendingDeadKey, '']
-          );
+            return char?.length === 1
+                ? [undefined, acc + char]
+                : [char, acc];
+          }, [nextPendingDeadKey, '']);
 
           if (pendingDeadKey) {
             name += pendingDeadKey;
@@ -290,11 +266,11 @@ window.addEventListener('DOMContentLoaded', () => {
           // I wanted a "Zig-style block expression", syntax might be stupid
           nextPendingDeadKey = (() => {
             const { keyCode, level } = keySequence[0];
-            const firstCharInSequence = keyboard.layout.keyMap[keyCode][level];
+            const firstCharInSequence = keyboard.layout.keyMap[keyCode][level]
             if (firstCharInSequence.length === 1) return undefined;
             return pendingDeadKey !== undefined
-              ? keyboard.layout.deadKeys[pendingDeadKey][firstCharInSequence]
-              : firstCharInSequence;
+                ? keyboard.layout.deadKeys[pendingDeadKey][firstCharInSequence]
+                : firstCharInSequence;
           })();
 
           // keylevels are needed when building the ngramDicts, but aren’t
@@ -307,13 +283,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
       // normalize values
       for (const [name, { frequency }] of Object.entries(rv)) {
-        rv[name].frequency = (frequency * 100) / total;
+        rv[name].frequency = frequency * 100 / total;
       }
 
       return rv;
     };
 
-    const realDigrams = buildNgramDict(digrams, 2);
+    const realDigrams  = buildNgramDict(digrams, 2);
     const realTrigrams = buildNgramDict(trigrams, 3);
 
     const keyFinger = {};
@@ -340,12 +316,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
       if (['Backquote', 'Minus'].some(kc => kc === keyCode)) return 4;
       if (['BracketLeft', 'BracketRight'].some(kc => kc === keyCode)) return 3;
-      if (['Semicolon', 'Quote', 'Backslash'].some(kc => kc === keyCode))
-        return 2;
-      if (
-        ['Comma', 'Period', 'Slash', 'IntlBackslash'].some(kc => kc === keyCode)
-      )
-        return 1;
+      if (['Semicolon', 'Quote', 'Backslash'].some(kc => kc === keyCode)) return 2;
+      if (['Comma', 'Period', 'Slash', 'IntlBackslash'].some(kc => kc === keyCode)) return 1;
 
       console.error(`Unknown Key Row: ${keyCode}`);
       return 0;
@@ -393,8 +365,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const currFinger = keyFinger[currKeyCode];
       const nextFinger = keyFinger[nextKeyCode];
 
-      if (prevFinger === nextFinger)
-        return prevKeyCode == nextKeyCode ? 'sks' : 'sfs';
+      if (prevFinger === nextFinger) return prevKeyCode == nextKeyCode ? 'sks' : 'sfs';
 
       const hands = prevFinger[0] + currFinger[0] + nextFinger[0];
 
@@ -406,9 +377,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const firstRollIsInward = fingers[0] > fingers[1];
       const secondRollIsInward = fingers[1] > fingers[2];
       if (firstRollIsInward !== secondRollIsInward)
-        return [prevFinger, currFinger, nextFinger].some(
-          finger => finger[1] === '2'
-        )
+        return [prevFinger, currFinger, nextFinger].some(finger => finger[1] === '2')
           ? 'redirect'
           : 'badRedirect';
 
@@ -419,39 +388,27 @@ window.addEventListener('DOMContentLoaded', () => {
       hand === 'l' ? [0, 5 - Number(finger)] : [1, Number(finger) - 2];
 
     // JS, I know you suck at FP, but what the fuck is that, man??
-    const totalSfuSkuPerFinger = Array(2)
-      .fill(0)
-      .map(_ =>
-        Array(4)
-          .fill(0)
-          .map(_ => ({ good: 0, meh: 0, bad: 0 }))
-      );
+    const totalSfuSkuPerFinger = Array(2).fill(0).map(_ =>
+      Array(4).fill(0).map(_ => ({ "good": 0, "meh": 0, "bad": 0 }))
+    );
 
-    for (const [ngram, { keyCodes, frequency }] of Object.entries(
-      realDigrams
-    )) {
+    for (const [ngram, { keyCodes, frequency }] of Object.entries(realDigrams)) {
       if (keyCodes.includes('Space')) continue;
       const ngramType = getDigramType(...keyCodes);
       ngrams[ngramType][ngram] = frequency;
 
       if (ngramType === 'sfb') {
-        const [groupIndex, itemIndex] = getFingerPosition(
-          keyFinger[keyCodes[0]]
-        );
+        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyCodes[0]]);
         totalSfuSkuPerFinger[groupIndex][itemIndex].bad += frequency;
       }
 
       if (ngramType === 'skb') {
-        const [groupIndex, itemIndex] = getFingerPosition(
-          keyFinger[keyCodes[0]]
-        );
+        const [groupIndex, itemIndex] = getFingerPosition(keyFinger[keyCodes[0]]);
         totalSfuSkuPerFinger[groupIndex][itemIndex].meh += frequency;
       }
     }
 
-    for (const [ngram, { keyCodes, frequency }] of Object.entries(
-      realTrigrams
-    )) {
+    for (const [ngram, { keyCodes, frequency }] of Object.entries(realTrigrams)) {
       if (keyCodes.includes('Space')) continue;
       const ngramType = getTrigramType(...keyCodes);
       ngrams[ngramType][ngram] = frequency;
@@ -466,55 +423,44 @@ window.addEventListener('DOMContentLoaded', () => {
       detailedValues: true,
     });
 
-    const sum = dict =>
-      Object.entries(dict).reduce((acc, [_, e]) => acc + e, 0);
+    const sum = dict => Object.entries(dict).reduce((acc, [_, e]) => acc + e, 0);
 
     showPercent('#sfu-all', sum(ngrams.sfb), 2);
     showPercent('#sku-all', sum(ngrams.skb), 2);
 
-    showPercent('#sfu-all', sum(ngrams.sfb), 2, '#Achoppements');
-    showPercent('#extensions-all', sum(ngrams.lsb), 2, '#Achoppements');
-    showPercent('#scissors-all', sum(ngrams.scissor), 2, '#Achoppements');
+    showPercent('#sfu-all',        sum(ngrams.sfb),     2, '#Achoppements');
+    showPercent('#extensions-all', sum(ngrams.lsb),     2, '#Achoppements');
+    showPercent('#scissors-all',   sum(ngrams.scissor), 2, '#Achoppements');
 
-    showPercent('#inward-all', sum(ngrams.inwardRoll), 1, '#Bigrammes');
+    showPercent('#inward-all',  sum(ngrams.inwardRoll),  1, '#Bigrammes');
     showPercent('#outward-all', sum(ngrams.outwardRoll), 1, '#Bigrammes');
-    showPercent('#sku-all', sum(ngrams.skb), 2, '#Bigrammes');
+    showPercent('#sku-all',     sum(ngrams.skb),         2, '#Bigrammes');
 
     const achoppements = document.getElementById('Achoppements');
-    achoppements.updateTableData('#sfu-digrams', 'SFU', ngrams.sfb, 2);
-    achoppements.updateTableData('#extended-rolls', 'LSB', ngrams.lsb, 2);
-    achoppements.updateTableData('#scissors', 'ciseaux', ngrams.scissor, 2);
+    achoppements.updateTableData('#sfu-digrams',    'SFU',        ngrams.sfb, 2);
+    achoppements.updateTableData('#extended-rolls', 'LSB',        ngrams.lsb, 2,);
+    achoppements.updateTableData('#scissors',       'ciseaux',    ngrams.scissor, 2);
 
     const bigrammes = document.getElementById('Bigrammes');
     bigrammes.updateTableData('#sku-digrams', 'SKU', ngrams.skb, 2);
-    bigrammes.updateTableData(
-      '#inward',
-      'roulements intérieurs',
-      ngrams.inwardRoll,
-      2
-    );
-    bigrammes.updateTableData(
-      '#outward',
-      'roulements extérieurs',
-      ngrams.outwardRoll,
-      2
-    );
+    bigrammes.updateTableData('#inward',  'roulements intérieurs', ngrams.inwardRoll,  2);
+    bigrammes.updateTableData('#outward', 'roulements extérieurs', ngrams.outwardRoll, 2);
 
     // Display trigrams
-    showPercent('#sks-all', sum(ngrams.sks), 1, '#Trigrammes');
-    showPercent('#sfs-all', sum(ngrams.sfs), 1, '#Trigrammes');
-    showPercent('#redirect-all', sum(ngrams.redirect), 1, '#Trigrammes');
+    showPercent('#sks-all',          sum(ngrams.sks),         1, '#Trigrammes');
+    showPercent('#sfs-all',          sum(ngrams.sfs),         1, '#Trigrammes');
+    showPercent('#redirect-all',     sum(ngrams.redirect),    1, '#Trigrammes');
     showPercent('#bad-redirect-all', sum(ngrams.badRedirect), 2, '#Trigrammes');
 
     const trigrammes = document.getElementById('Trigrammes');
-    trigrammes.updateTableData('#sks', 'SKS', ngrams.sks, 2);
-    trigrammes.updateTableData('#sfs', 'SFS', ngrams.sfs, 2);
+    trigrammes.updateTableData('#sks',      'SKS',          ngrams.sks, 2);
+    trigrammes.updateTableData('#sfs',      'SFS',          ngrams.sfs, 2);
     trigrammes.updateTableData('#redirect', 'redirections', ngrams.redirect, 2);
     trigrammes.updateTableData(
       '#bad-redirect',
       'mauvaises redirections',
       ngrams.badRedirect,
-      2
+      2,
     );
   };
 
@@ -565,17 +511,15 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     keyboard.setCustomColors(colormap);
 
-    const getLoadGroup = fingers_array =>
-      fingers_array.map(finger => {
-        const rv = { good: 0, meh: 0, bad: 0 };
-        finger.forEach(key => {
-          const keyQuality = getKeyPositionQuality(key);
-          const normalizedFrequency =
-            (keyCount[key] * 100) / (100 + extraKeysFrequency) || 0;
-          rv[keyQuality] += normalizedFrequency;
-        });
-        return rv;
+    const getLoadGroup = fingers_array => fingers_array.map(finger => {
+      const rv = { "good": 0, "meh": 0, "bad": 0 };
+      finger.forEach(key => {
+        const keyQuality = getKeyPositionQuality(key);
+        const normalizedFrequency = keyCount[key] * 100 / (100 + extraKeysFrequency) || 0;
+        rv[keyQuality] += normalizedFrequency;
       });
+      return rv;
+    });
 
     const allFingers = Object.values(keyboard.fingerAssignments);
 
@@ -587,7 +531,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#load stats-canvas').renderData({
       values: loadGroups,
       maxValue: 25,
-      precision: 1,
+      precision: 1
     });
     showPercentAll('#load small', loadGroups.map(sumUpBarGroup), 1);
 
@@ -595,12 +539,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document
       .getElementById('Achoppements')
-      .updateTableData(
-        '#unsupported',
-        'non-support\u00e9',
-        unsupportedChars,
-        3
-      );
+      .updateTableData('#unsupported', 'non-support\u00e9', unsupportedChars, 3);
   };
 
   // keyboard state: these <select> element IDs match the x-keyboard properties
@@ -620,7 +559,7 @@ window.addEventListener('DOMContentLoaded', () => {
             keyboard.setKeyboardLayout(
               data.keymap,
               data.deadkeys,
-              data.geometry.replace('ergo', 'iso')
+              data.geometry.replace('ergo', 'iso'),
             );
             data.keymap.Enter = ['\r', '\n'];
             keyChars = supportedChars(data.keymap, data.deadkeys);
@@ -657,11 +596,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const state = {};
   const updateHashState = (key, value) => {
     state[key] = value;
-    window.location.hash =
-      '/' +
-      IDs.map(prop => state[prop])
-        .join('/')
-        .replace(/\/+$/, '');
+    window.location.hash = '/' +
+      IDs.map(prop => state[prop]).join('/').replace(/\/+$/, '');
   };
   const applyHashState = () => {
     const hash = window.location.hash;
@@ -683,7 +619,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document
       .getElementById(key)
       .addEventListener('change', event =>
-        updateHashState(key, event.target.value)
+        updateHashState(key, event.target.value),
       );
   });
   window.addEventListener('hashchange', applyHashState);
