@@ -3,14 +3,14 @@
   {{ $date := .Date }}
   {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
 
-  <p style="text-align: right;">
-    {{ if $author }}
+  {{ if $author }}
+    <p style="text-align: right;">
       – <a href="{{ $author.url }}">{{ $author.name }}</a>
-    {{ end -}}
     {{ if $date }}
       – <time>{{ $date.Format (.Site.Params.dateform | default "2006-01-02") }}</time>
     {{ end }}
-  </p>
+    </p>
+  {{ end -}}
 
   {{ .Content }}
 

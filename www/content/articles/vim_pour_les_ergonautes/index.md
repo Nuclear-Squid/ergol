@@ -94,19 +94,19 @@ configurations d’applications.
 La vie après HJKL
 --------------------------------------------------------------------------------
 
-<blockquote style="background-color: var(--bg-accent);">
-Après une semaine de test y a pas photo : ne pas utiliser [h]{.kbd} et
-[l]{.kbd} c'est le pied !
+:::{.highlight}
+> Après une semaine de test y a pas photo : ne pas utiliser [h]{.kbd} et
+> [l]{.kbd} c'est le pied !
+>
+> Le fait de ne pas remapper les touches par défaut en Ergo‑L est **LE**
+> <i lang="en">game changer</i> : ça facilite énormément l’apprentissage sans
+> avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? ».
+>
+> J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
+> avec mes mappings Bépo hasardeux.
 
-Le fait de ne pas remapper les touches par défaut en Ergo‑L est **LE**
-<i lang="en">game changer</i> : ça facilite énormément l’apprentissage sans
-avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? ».
-
-J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
-avec mes mappings Bépo hasardeux.
-
-<cite>— [Vincent Jousse](vjousse), auteur de [*Vim pour les humains*][vimebook]</cite>
-</blockquote>
+— [Vincent Jousse](vjousse), auteur de [*Vim pour les humains*][vimebook]
+:::
 
 ### Déplacements verticaux
 
