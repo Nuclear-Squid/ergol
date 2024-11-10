@@ -551,10 +551,9 @@ window.addEventListener('DOMContentLoaded', () => {
         fetch(`../layouts/${value}.json`)
           .then(response => response.json())
           .then(data => {
-            const selectedOption =
-              document
-                .querySelector('#layout option:checked')
-                .textContent.trim() || value;
+            const selectedOption = document
+              .querySelector('#layout option:checked')
+              .textContent.trim() || value;
             inputField.placeholder = `zone de saisie ${selectedOption}`;
             keyboard.setKeyboardLayout(
               data.keymap,
