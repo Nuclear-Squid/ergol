@@ -548,10 +548,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const setProp = (key, value) => {
     if (key === 'layout') {
       if (value) {
-		const selectedOptionFolder = document
-		  .querySelector(`#layout option[value="${value}"]`)
-		  .getAttribute('data-folder');
-        fetch(`../layouts/${selectedOptionFolder}/${value}.json`)
+        const layoutFolder = document
+          .querySelector(`#layout option[value="${value}"]`).dataset.folder;
+        fetch(`../layouts/${layoutFolder}/${value}.json`)
           .then(response => response.json())
           .then(data => {
             const selectedOption = document
