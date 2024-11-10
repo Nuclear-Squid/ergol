@@ -99,19 +99,19 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
     <th> Ergo‑L </th>
   </tr>
   <tr>
-    <td> <a href="/stats/#/bepo//fr"><img src="./charge_bepo_fr.png" /></a> </td>
+    <td> <a href="/stats/#/bepo/iso/fr"><img src="./charge_bepo_fr.png" /></a> </td>
     <th> fr </th>
-    <td> <a href="/stats/#/ergol//fr"><img src="./charge_ergol_fr.png"/></a> </td>
+    <td> <a href="/stats/#/ergol/iso/fr"><img src="./charge_ergol_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="/stats/#/bepo//en+fr"><img src="./charge_bepo_en_fr.png"/></a> </td>
+    <td> <a href="/stats/#/bepo/iso/en+fr"><img src="./charge_bepo_en_fr.png"/></a> </td>
     <th> fr‑en </th>
-    <td> <a href="/stats/#/ergol//en+fr"><img src="./charge_ergol_en_fr.png"/></a> </td>
+    <td> <a href="/stats/#/ergol/iso/en+fr"><img src="./charge_ergol_en_fr.png"/></a> </td>
   </tr>
   <tr>
-    <td> <a href="/stats/#/bepo//en"><img src="./charge_bepo_en.png" /></a> </td>
+    <td> <a href="/stats/#/bepo/iso/en"><img src="./charge_bepo_en.png" /></a> </td>
     <th> en </th>
-    <td> <a href="/stats/#/ergol//en"><img src="./charge_ergol_en.png"/></a> </td>
+    <td> <a href="/stats/#/ergol/iso/en"><img src="./charge_ergol_en.png"/></a> </td>
   </tr>
 
   <tr style="text-align: right; font-size: 10px;">

@@ -79,48 +79,6 @@ soit devenir insupportables.
 |               |       |       |       |       |       | - chiffres en Shift                         |
 |               |       |       |       |       |       | - [licence non libre][] (clause NC)         |
 +---------------+-------+-------+-------+-------+-------+---------------------------------------------+
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
-|  disposition  | 1DFH   | ZXCV   |  fr   |  en   | code  |           principaux défauts                |
-+===============+:======:+:======:+:=====:+:=====:+:=====:+=============================================+
-| [Azerty][]    |   ·    |  oui   |   ·   |   ·   |   ·   | - (fr) mauvais support typographique        |
-|               |        |        |       |       |       | - charge de l’auriculaire gauche > 10 %     |
-|               |        |        |       |       |       | - digrammes de même doigt > 6 %             |
-|               |        |        |       |       |       | - chiffres en Shift                         |
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
-| [Lafayette][] |  oui   |  oui   |   ·   |   ·   |  oui  | - charge déséquilibrée                      |
-|               |        |        |       |       |       | - digrammes de même doigt > 6 %             |
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
-| [Ergo‑L][]    |  oui   |  oui   |  oui  |  oui  |  oui  | - (fr) `tui`, `bo`                          |
-|               |        |        |       |       |       | - (en) `eas`, `we`                          |
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
-| [Erglace][]   |  oui   |   ·    |  oui  |  oui  |  oui  | - (fr) `aie`, `j’`                          |
-|               |        |        |       |       |       | - (en) `ng`                                 |
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
-| [Colemak FT][]|  oui   |  oui   |  oui  |  oui  |  oui  | - charge déséquilibrée                      |
-|               |        |        |       |       |       | - (fr) `oui`/`uoi`                          |
-|               |        |        |       |       |       | - (en) `you`, `was`, `ho`                   |
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
-| [Bépolar][]   |  oui   |   ·    |  oui  |   ·   |  oui  | - charge de l’index gauche                  |
-|               |        |        |       |       |       | - (fr) digrammes de même doigt > 2 %        |
-|               |        |        |       |       |       | - (en) digrammes de même doigt > 4 %        |
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
-| [Bépo][]      |   ·    |   ·    |  oui  |   ·   |   ·   | - déviations ulnaires                       |
-|               |        |        |       |       |       | - charge de l’auriculaire droit > 10 %      |
-|               |        |        |       |       |       | - charge de l’index gauche > 20 %           |
-|               |        |        |       |       |       | - digrammes de même doigt > 2 %             |
-|               |        |        |       |       |       | - (en) rédhibitoire (`wh`)                  |
-|               |        |        |       |       |       | - chiffres en Shift                         |
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
-| [Optimot][]   |   ·    |   ·    |  oui  |[(?)][]|   ·   | - déviations ulnaires                       |
-|               |        |        |       |       |       | - (fr) charge de l’auriculaire droit > 10 % |
-|               |        |        |       |       |       | - (en) charge déséquilibrée                 |
-|               |        |        |       |       |       | - chiffres en Shift                         |
-|               |        |        |       |       |       | - [licence non libre][] (clause NC)         |
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
-| [HyperTexte][]|  oui   |  oui   |  oui  |  oui  |  oui  | - (fr) `sc`, `pt`, `bu`                     |
-|               |[(h1)][]|[(h2)][]|       |		  |       | - (en) `eo`, `oe`, `ght`                    |
-|               |        |        |       |       |       | - (prog) `cd`                               |
-+---------------+--------+--------+-------+-------+-------+---------------------------------------------+
 
 <!-- do not remove the empty line above -->
 :::
@@ -222,39 +180,19 @@ inconfortables pour une utilisation régulière (`th`, `yo`, `ay`, `by`, `ok`,
 `ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça. Et
 d’ailleurs, son auteur reconnait que l’anglais n’est qu’un objectif secondaire :
 
+<!-- 2024-01-27
+https://discord.com/channels/794732334879473684/794734985122152478/1200680341363494972
+-->
 > Je peux modifier légèrement Optimot pour optimiser un peu plus pour l’anglais
 > (mais au détriment du français). Mais ce n’est pas mon choix parce que nous
 > sommes en France et que je m’adresse à des personnes qui écrivent d’abord en
 > français.
 
-<!--
-- 2024-01-27
-  https://discord.com/channels/794732334879473684/794734985122152478/1200680341363494972
--->
-  Moi aussi, je peux modifier légèrement Optimot pour optimiser un peu plus pour
-  l’anglais (mais au détriment du français). Mais ce n’est pas mon choix parce
-  que nous sommes en France et que je m’adresse à des personnes qui écrivent
-  d’abord en français
--->
-
-
-
-**[Note HyperTexte — 1DFH]{id="hypertexte_1dfh"}** : HyperTexte n’a pas été conçue pour être 1DFH. Cependant, une variante 1DFH est disponible et est très efficace (meilleures stats que la version standard), mais au prix de touches qui ne sont plus en accès direct comme le `É` ou le `È`. Le `Q` n’est également plus en accès direct, ce qui permet un très bon roulement et la suppression d’un digramme de même doigt avec l’apostrophe.
-
-**[Note HyperTexte — Raccourcis Ctrl]{id="hypertexte_ctrl"}** : HyperTexte ne possède pas les touches `Z`, `X`, `C` et `V` sur la main gauche. En revanche, ces raccourcis sont bien disponibles sur la couche `Ctrl`, étant respectivement en `Ctrl` + `È`, `Ê`, `É` et `À`.
-
-**[Note Optimot]{id="optimot_en"}** : l’auteur d’Optimot considère que sa disposition est
-optimisée pour l’anglais au motif qu’elle obtiendrait une bonne note globale sur
-KLAnext ; mais pour nous, [la heatmap est inadaptée][1] (lettres fréquentes sur
-la rangée inférieure) et de nombreux digrammes courants sont trop inconfortables
-pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`, 
-`ak`, `ki`/`ik`/`ike`). Elle est *utilisable*, mais pas *optimisée* pour ça.
-
 [(?)]:     #optimot_en
-[(h1)]:      #hypertexte_1dfh
-[(h2)]:      #hypertexte_ctrl
 [optimot]: ./optimot_fr.png
 [heatmap]: ./optimot_en.png
+
+---
 
 **De notre point de vue :**
 
@@ -274,7 +212,6 @@ pour pouvoir parler réellement d’optimisation (`th`, `yo`, `ay`, `by`, `ok`,
 [colemak ft]: /lafayette/#colemak-french-touch
 [bépolar]:    /lafayette/#bépolar
 [azerty]:     /stats/#/azerty//en+fr
-[hypertexte]: https://hypertexte.beseven.fr
 
 [1DFH]:                /presentation#dfh-1u-distance-from-home
 [touche morte]:        /presentation#caractères-accentués

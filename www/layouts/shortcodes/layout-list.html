@@ -1,47 +1,46 @@
 {{ $default_layout := "ergol" }}
 {{ $layouts := dict
   "en" (dict
-  "colemak"     			"Colemak"
-  "colemak-dh"  			"Colemak-DH"
-  "dvorak"      			"Dvorak"
-  "ISRT"        			"ISRT"
-  "MTGAP"       			"MTGAP"
-  "qwerty"      			"Qwerty"
-  "sturdy"      			"Sturdy"
-  "workman"     			"Workman"
+    "qwerty"      "Qwerty"
+    "dvorak"      "Dvorak"
+    "colemak"     "Colemak"
+    "colemak-dh"  "Colemak-DH"
+    "workman"     "Workman"
+    "ISRT"        "ISRT"
+    "MTGAP"       "MTGAP"
+    "sturdy"      "Sturdy"
   )
 
   "fr" (dict
-  "bepolar"     			"Bépolar"
-  "colemak-french-touch" 	"Colemak French Touch"
-  "ergol"       			"Ergo‑L"
-  "erglace"     			"Erglace"
-  "lafayette"   			"Lafayette"
+    "azerty"      "Azerty"
+    "lafayette"   "Lafayette"
+    "ergol"       "Ergo‑L"
+    "erglace"     "Erglace"
+    "colemak-french-touch" "Colemak French Touch"
+    "bepolar"     "Bépolar"
+    "bepo"        "Bépo"
   )
 
   "fr.contrib" (dict
-    "azerty"      			"Azerty"
-    "beopy_1dfh"  			"Béopy 1DFH"
-    "bepo"        			"Bépo"
-    "hypertexte"  			"HyperTexte"
-    "hypertexte_1dfh"  		"HyperTexte 1DFH"
+  "beopy1dk"      "Béopy 1DK"
+  "hyper_1dk"     "HyperTexte 1DFH"
   )
 
   "fr.nonfree" (dict
-    "optimot"      			"Optimot"
+  "optimot"       "Optimot"
   )
 }}
 
 <select id="layout">
-	{{ range $language, $layouts_language := $layouts }}
-	  <option disabled> [{{ $language }}] </option>
-	  {{ range $layout, $layout_displayed_name := $layouts_language }}
-		{{ $json_name := printf "%s/%s" $language $layout }}
-		{{ if eq $default_layout $layout }}
-		  <option value="{{ $json_name }}" selected> {{ $layout_displayed_name }} </option>
-		{{ else }}
-		  <option value="{{ $json_name }}"> {{ $layout_displayed_name }} </option>
-		{{ end }}
-	  {{ end }}
-	{{ end }}
-  </select>
+  {{ range $language, $layouts_language := $layouts }}
+    <option disabled>  [{{ $language }}]</option>
+    {{ range $json_name, $displayed_name := $layouts_language }}
+	  {{ $json_name := printf "%s/%s" $language $json_name }}
+      {{ if eq $default_layout $json_name }}
+        <option value="{{ $json_name }}" selected> {{ $displayed_name }} </option>
+      {{ else }}
+        <option value="{{ $json_name }}"> {{ $displayed_name }} </option>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</select>
