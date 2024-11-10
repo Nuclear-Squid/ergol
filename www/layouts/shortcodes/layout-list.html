@@ -35,11 +35,10 @@
   {{ range $language, $layouts_language := $layouts }}
     <option disabled>  [{{ $language }}]</option>
     {{ range $json_name, $displayed_name := $layouts_language }}
-      {{ $json_name := printf "%s/%s" $language $json_name }}
       {{ if eq $default_layout $json_name }}
-        <option value="{{ $json_name }}" selected> {{ $displayed_name }} </option>
+        <option data-folder="{{$language}}" value="{{ $json_name }}" selected> {{ $displayed_name }} </option>
       {{ else }}
-        <option value="{{ $json_name }}"> {{ $displayed_name }} </option>
+        <option data-folder="{{$language}}" value="{{ $json_name }}"> {{ $displayed_name }} </option>
       {{ end }}
     {{ end }}
   {{ end }}

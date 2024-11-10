@@ -548,7 +548,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const setProp = (key, value) => {
     if (key === 'layout') {
       if (value) {
-        fetch(`../layouts/${value}.json`)
+		const selectedOptionFolder = document
+		  .querySelector(`#layout option[value="${value}"]`)
+		  .getAttribute('data-folder');
+        fetch(`../layouts/${selectedOptionFolder}/${value}.json`)
           .then(response => response.json())
           .then(data => {
             const selectedOption = document
@@ -601,14 +604,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const applyHashState = () => {
     const hash = window.location.hash;
     if (hash.length < 4) {
-      window.location.hash = '/fr/ergol//en+fr';
+      window.location.hash = '/ergol//en+fr';
     }
     const hashState = hash.split('/').slice(1);
-    // Merge les deux premiers éléments, car ce sont "fr" et "ergol" par exemple, et on veut "fr/ergol"
-    if (hashState.length > 1) {
-      hashState[1] = `${hashState[0]}/${hashState[1]}`;
-      hashState.splice(0, 1);
-    }
     IDs.forEach((key, i) => {
       setProp(key, hashState[i] || '');
       state[key] = hashState[i] || '';
