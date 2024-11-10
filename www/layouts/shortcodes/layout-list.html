@@ -22,12 +22,12 @@
   )
 
   "fr.contrib" (dict
-  "beopy1dk"      "Béopy 1DK"
-  "hyper_1dk"     "HyperTexte 1DFH"
+    "beopy1dk"    "Béopy-1dk"
+    "hyper_1dk"   "HyperTexte-1DFH"
   )
 
   "fr.nonfree" (dict
-  "optimot"       "Optimot"
+    "optimot"     "Optimot"
   )
 }}
 
@@ -35,7 +35,7 @@
   {{ range $language, $layouts_language := $layouts }}
     <option disabled>  [{{ $language }}]</option>
     {{ range $json_name, $displayed_name := $layouts_language }}
-	  {{ $json_name := printf "%s/%s" $language $json_name }}
+      {{ $json_name := printf "%s/%s" $language $json_name }}
       {{ if eq $default_layout $json_name }}
         <option value="{{ $json_name }}" selected> {{ $displayed_name }} </option>
       {{ else }}

@@ -602,7 +602,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const applyHashState = () => {
     const hash = window.location.hash;
     if (hash.length < 4) {
-      window.location.hash = '/fr/ergol/iso/en+fr';
+      window.location.hash = '/fr/ergol//en+fr';
     }
     const hashState = hash.split('/').slice(1);
     // Merge les deux premiers éléments, car ce sont "fr" et "ergol" par exemple, et on veut "fr/ergol"
