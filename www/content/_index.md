@@ -50,53 +50,46 @@ grâce à [notre page dédiée][dactylo].
 Témoignages
 --------------------------------------------------------------------------------
 
-<blockquote>
-  Je n’aurais pas cru que je repasserai par la case « apprendre à taper » après
-  avoir appris Bépo, mais les promesses d’Ergo‑L sont vraiment tenues : une
-  dispo où il fait bon taper et en français, et en anglais, **et** en
-  programmation (cette couche AltGr est redoutable). Le grand luxe !
-  <cite>@[geobert][]</cite>
-</blockquote>
+> Je n’aurais pas cru que je repasserai par la case « apprendre à taper » après
+> avoir appris Bépo, mais les promesses d’Ergo‑L sont vraiment tenues : une
+> dispo où il fait bon taper et en français, et en anglais, **et** en
+> programmation (cette couche AltGr est redoutable). Le grand luxe !
 
-<blockquote>
-  L’effort d’apprentissage du passage de Bépo à Ergo‑L est complètement
-  rentabilisé par le gain de confort.
-  Avoir accès aux claviers 3×5 a révolutionné mon ergonomie.
-  <cite>@[AntoineÐ][]</cite>
-</blockquote>
+@[geobert][]
 
-<blockquote>
-  Je découvre que des claviers conçus par d’autres que moi (Skeletyl, Chocofi,
-  Temper) peuvent en fait me convenir très bien… il suffisait de passer à Ergo-L.
-  <cite>@[aldoo][]</cite>
-</blockquote>
+> L’effort d’apprentissage du passage de Bépo à Ergo‑L est complètement
+> rentabilisé par le gain de confort.
+> Avoir accès aux claviers 3×5 a révolutionné mon ergonomie.
 
-<blockquote>
-  La touche morte je l’adore, parce que ça veut dire qu’il y a deux fois plus de
-  caractères en <i lang="en">home row</i>, et ça c’est trop bien.
-  <cite>@galipeth</cite>
-</blockquote>
+@[AntoineÐ][]
 
-<blockquote>
-  [Avec Vim] le fait de ne pas remapper les touches par défaut en Ergo‑L est
-  **LE** <i lang="en">game changer</i> : ça facilite énormément l’apprentissage.
-  J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
-  avec mes mappings Bépo hasardeux.
-  <cite>@[vjousse][]</cite>
-</blockquote>
+> Je découvre que des claviers conçus par d’autres que moi (Skeletyl, Chocofi,
+> Temper) peuvent en fait me convenir très bien… il suffisait de passer à Ergo-L.
 
-<blockquote>
-  Le confort de frappe est tout bonnement excellent, je ne regrette même pas
-  Optimot  pour le français. Plus encore, je n’ai plus cette désagréable
-  sensation d’avoir un handicap lorsque je tape en anglais.
-  <cite>@[fnuttens][]</cite>
-</blockquote>
+@[aldoo][]
 
-<blockquote>
-  C’est un choix de conception pour le moins singulier.
+> La touche morte je l’adore, parce que ça veut dire qu’il y a deux fois plus de
+> caractères en <i lang="en">home row</i>, et ça c’est trop bien.
+
+@galipeth
+
+> [Avec Vim] le fait de ne pas remapper les touches par défaut en Ergo‑L est
+> **LE** <i lang="en">game changer</i> : ça facilite énormément l’apprentissage.
+> J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
+> avec mes mappings Bépo hasardeux.
+
+@[vjousse][]
+
+> Le confort de frappe est tout bonnement excellent, je ne regrette même pas
+> Optimot  pour le français. Plus encore, je n’ai plus cette désagréable
+> sensation d’avoir un handicap lorsque je tape en anglais.
+
+@[fnuttens][]
+
+> C’est un choix de conception pour le moins singulier.
   <!-- Je doute qu’il remporte l’adhésion. -->
-  <cite>@Pyjam / Floppy</cite>
-</blockquote>
+
+@Pyjam / Floppy
 
 [On parle d’Ergo‑L et d’ergonomie clavier ailleurs][ailleurs]
 — dans la presse, dans des billets de blogs, dans des conférences…

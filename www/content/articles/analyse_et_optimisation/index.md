@@ -19,12 +19,11 @@ l’optimisation des <i lang="en">layouts</i>.
 <!--more-->
 
 <style>
-blockquote { background-color: var(--bg-banner); }
-blockquote p { margin: 0.25em 0; }
 .highlight,
 blockquote,
-blockquote + p { margin: 0.5em auto; max-width: 42em; box-sizing: border-box; }
-blockquote + p { text-align: right; }
+blockquote + p { max-width: 42em; }
+blockquote + p { padding: 0.5em 0; }
+blockquote { background-color: var(--bg-banner); }
 li li a[href] { color: var(--fg-main); }
 code { font-family: monospace; }
 </style>
@@ -69,12 +68,12 @@ Quelles sont les principales caractéristiques d’une bonne disposition de clav
 L’optimisation la plus évidente pour une disposition de clavier consiste à
 placer les touches les plus fréquemment utilisées aux meilleurs emplacements :
 
-- sur les 8 positions de repos
-  <br>([A]{.kbd}[S]{.kbd}[D]{.kbd}[F]{.kbd} et [J]{.kbd}[K]{.kbd}[L]{.kbd}[;]{.kbd} en Qwerty) ;
+- sur les 8 positions de repos <br>([A]{.kbd}[S]{.kbd}[D]{.kbd}[F]{.kbd} et
+  [J]{.kbd}[K]{.kbd}[L]{.kbd}[;]{.kbd} en Qwerty) ;
 - sur les 4 positions des majeurs et annulaires de la rangée supérieure
   <br>([W]{.kbd}[E]{.kbd} et [I]{.kbd}[O]{.kbd} en Qwerty) ;
-- sur les 2 positions des index de la rangée inférieure
-  <br>([V]{.kbd} et [M]{.kbd} en Qwerty).
+- sur les 2 positions des index de la rangée inférieure <br>([V]{.kbd} et
+  [M]{.kbd} en Qwerty).
 
 Ces positions correspondent à celles notées 1 à 2 par le projet
 [Workman](https://workmanlayout.org/#back-to-the-drawing-board).
@@ -254,7 +253,7 @@ C’est notamment le cas de Workman, qui a grandement inspiré Ergo‑L :
 > In designing Workman, I preferred a high SHU (low alternation) over a low SHU
 > (high alternation). I think high alternation is beneficial if you’re typing on
 > mechanical typewriters but not necessarily on modern keyboards.
-
+>
 > It is much more efficient to ride the momentum of a single arm or wrist stroke
 > and type a combo rather than just one key.
 
