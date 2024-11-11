@@ -4,7 +4,7 @@ date   = 2023-11-18T11:30:00+01:00
 author = "nuclear_squid"
 tags   = ["communauté", "conférences"]
 
-params.redirect_to = "https://ergol.org/slides/capitoledulibre2023/"
+params.redirect_to = "https://nuclear-squid.github.io/slides/cdl2023/"
 params.abstract    = "https://cfp.capitoledulibre.org/cdl-2023/talk/FCBXAT/"
 params.video       = "https://www.youtube.com/watch?v=96RikfmBY-U"
 params.domain      = "CdL 2023"

@@ -4,7 +4,7 @@ date   = 2024-05-26T14:00:00+01:00
 author = "nuclear_squid"
 tags   = ["communauté", "conférences"]
 
-params.redirect_to = "https://ergol.org/slides/jdll2024/"
+params.redirect_to = "https://nuclear-squid.github.io/slides/jdll2024/"
 params.abstract    = "https://pretalx.jdll.org/jdll2024/talk/QT7JBD/"
 params.video       = "https://videos-libr.es/w/sosqtsJ7bBYW7PoKcqnPNW"
 params.domain      = "JdLL 2024"
