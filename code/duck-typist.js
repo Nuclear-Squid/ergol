@@ -96,7 +96,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // fetch a kalamine keyboard layout
   const fetchLayout = () => {
-    return fetch(`../layouts/${gLayout.value}.json`)
+    const selected = gLayout.querySelector(`option[value="${gLayout.value}"`);
+    return fetch(`../layouts/${selected.dataset.folder}/${gLayout.value}.json`)
       .then(response => response.json())
       .then(layout => {
         gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, gGeometry.value);
