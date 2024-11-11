@@ -344,5 +344,5 @@ beaucoup trop élevé à notre avis — à comparer aux 6.9 % pour Ergo‑L. *
 [dvorak]:    https://fr.wikipedia.org/wiki/Disposition_Dvorak
 [workman]:   https://workmanlayout.org
 [colemak]:   https://colemak.com
-[optimot]:   https://optimot.fr
 [lafayette]: https://qwerty-lafayette.org
+[optimot]:   https://github.com/Nuclear-Squid/ergol/blob/main/layouts/fr.nonfree/LICENSE.md
