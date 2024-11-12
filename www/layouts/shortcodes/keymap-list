@@ -1,5 +1,5 @@
 {{ $default_layout := "ergol" }}
-{{ $layouts := dict
+{{ $keymaps := dict
   "en" (dict
     "qwerty"      "Qwerty"
     "dvorak"      "Dvorak"
@@ -36,9 +36,9 @@
 }}
 
 <select id="layout">
-  {{ range $language, $layouts_language := $layouts }}
+  {{ range $language, $keymaps_language := $keymaps }}
     <option disabled>  [{{ $language }}]</option>
-    {{ range $json_name, $displayed_name := $layouts_language }}
+    {{ range $json_name, $displayed_name := $keymaps_language }}
       {{ if eq $default_layout $json_name }}
         <option data-folder="{{$language}}" value="{{ $json_name }}" selected> {{ $displayed_name }} </option>
       {{ else }}

@@ -73,7 +73,7 @@ their guide), you can just run the following command:
 pipx install kalamine
 ```
 
-Download the [layouts/ergol.toml][4] file in this repo and build the layout :
+Download the [keymaps/ergol.toml][4] file in this repo and build the layout :
 
 ```bash
 kalamine build ergol.toml
@@ -86,7 +86,7 @@ and you should be good to go !
 
 [2]: https://github.com/OneDeadKey/kalamine
 [3]: https://github.com/OneDeadKey/kalamine#installing-distributable-layouts
-[4]: https://github.com/Nuclear-Squid/ergol/blob/master/layouts/ergol.toml
+[4]: https://github.com/Nuclear-Squid/ergol/blob/master/keymaps/ergol.toml
 [5]: https://github.com/pypa/pipx?tab=readme-ov-file#install-pipx
 
 
@@ -125,7 +125,7 @@ XMODIFIERS=@im=ibus
 Make Your Own !
 --------------------------------------------------------------------------------
 
-If you wish to modify the layout, the `layouts/*.{toml,yaml}` are human-readable
+If you wish to modify the layout, the `keymaps/*.{toml,yaml}` are human-readable
 ASCII arts of the final layout. You can easily edit them, then run `make` (or
 `make watch`) at the root of the repo to generate the `.json` files used to
 benchmark layouts on the [stats page][1].
@@ -164,7 +164,7 @@ command generates the `json` stat file for this specific corpus.
 [Hugo](https://gohugo.io/) can be used to serve the site, it automatically
 watches and live-reload the pages upon file changes, however you still need to
 have `make watch` running to ensure that the `.json` files are generated upon
-modifying human-friendly layouts in `layouts/*.{to,ya}ml`.
+modifying human-friendly layouts in `keymaps/*.{to,ya}ml`.
 
 You can thus run your local instance of the Ergo‑L website either by running
 `hugo server` in the [`www/`](www/) directory, or _via_:

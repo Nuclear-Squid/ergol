@@ -345,4 +345,4 @@ beaucoup trop élevé à notre avis — à comparer aux 6.9 % pour Ergo‑L. *
 [workman]:   https://workmanlayout.org
 [colemak]:   https://colemak.com
 [lafayette]: https://qwerty-lafayette.org
-[optimot]:   https://github.com/Nuclear-Squid/ergol/blob/main/layouts/fr.nonfree/LICENSE.md
+[optimot]:   https://github.com/Nuclear-Squid/ergol/blob/main/keymaps/fr.nonfree/LICENSE.md

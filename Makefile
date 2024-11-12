@@ -1,10 +1,10 @@
 all:
-	@find layouts -type f \( -name '*.toml' -o -name '*.yaml' \) | while read -r file; do \
+	@find keymaps -type f \( -name '*.toml' -o -name '*.yaml' \) | while read -r file; do \
 		kalamine build "$$file" --out "$$(echo $$file | sed 's/....$$/json/')"; \
 	done
 
 watch:
-	@inotifywait -m -r layouts -e close_write | while read -r path _action file; do \
+	@inotifywait -m -r keymaps -e close_write | while read -r path _action file; do \
 		case $$file in \
 			*.yaml | *.toml) echo kalamine build "$$path$$file" --out "$$path$$(basename "$${file%.*}").json";; \
 		esac \
@@ -21,7 +21,7 @@ clean:
 install:
 	@echo "Installer script for XKB (GNU/Linux)."
 	@echo
-	xkalamine install layouts/ergol.toml
+	xkalamine install keymaps/ergol.toml
 
 uninstall:
 	@echo "Unistaller script for XKB (GNU/Linux)."

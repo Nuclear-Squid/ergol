@@ -96,7 +96,7 @@ Licence
 [WTFPL](http://wtfpl.net/) – Do What the Fuck You Want to Public License.
 
 
-[fichier source]:    /layouts/ergol.toml
+[fichier source]:    /keymaps/ergol.toml
 [cavalier.pdf]:      cavalier.pdf
 [ergol_nomade.zip]:  https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_nomade.zip
 [ergol_kbd.exe]:     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_kbd.exe

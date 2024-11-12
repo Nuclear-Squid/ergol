@@ -29,8 +29,8 @@ author = "authors"
         source = "../corpus"
         target = "static/corpus"
     [[module.mounts]]
-        source = "../layouts"
-        target = "static/layouts"
+        source = "../keymaps"
+        target = "static/keymaps"
     [[module.mounts]]
         source = "static"
         target = "static"

@@ -220,4 +220,4 @@ https://discord.com/channels/794732334879473684/794734985122152478/1200680341363
 
 [compatibilité délicate]:   /claviers/#les-limitations-de-bépo-béopy-optimot
 [note globale sur KLAnext]: /articles/analyse_et_optimisation/#lapproche-optimot
-[licence non libre]:        https://github.com/Nuclear-Squid/ergol/blob/main/layouts/fr.nonfree/LICENSE.md
+[licence non libre]:        https://github.com/Nuclear-Squid/ergol/blob/main/keymaps/fr.nonfree/LICENSE.md
