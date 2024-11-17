@@ -1,5 +1,5 @@
 {
-  "name": "ergaie",
+  "name": "ergaie_07",
   "description": "French (Ergaie_07)",
   "geometry": "ergo",
   "keymap": {
@@ -24,9 +24,9 @@
     "KeyO": [ "c", "C", "'", "*´" ],
     "KeyP": [ "q", "Q", "`", "*`" ],
     "KeyA": [ "a", "A", "{", "*ˇ" ],
-    "KeyS": [ "i", "I", "(", "⁽" ],
-    "KeyD": [ "e", "E", ")", "⁾" ],
-    "KeyF": [ "u", "U", "}", " " ],
+    "KeyS": [ "i", "I", "(", "«" ],
+    "KeyD": [ "e", "E", ")", " " ],
+    "KeyF": [ "u", "U", "}", "»" ],
     "KeyG": [ ",", ";", "=", "≠" ],
     "KeyH": [ "b", "B", "\\", "*/" ],
     "KeyJ": [ "t", "T", "+", "±" ],
