@@ -191,10 +191,11 @@ remplacement de la touche AltGr.
 ### Les limitations de Bépo <small>(Béopy, Optimot…)</small>
 
 Pour Bépo et toutes ses variantes c’est plus délicat car il faut déplacer des
-**lettres**, ce qui oblige à changer de technique de saisie quand on passe d’un
-clavier standard à un clavier ergonomique. Pour minimiser la gêne et conserver
-[W]{.kbd} sous l’auriculaire droit, il faut passer [Shift]{.kbd} sous un pouce —
-ce qui n’est pas un changement anodin non plus.
+**lettres** qui sont sur la 7<sup>e</sup> colonne du clavier ISO : la technique
+de saisie diffère quand on passe d’un clavier standard à un clavier ergonomique.
+Pour minimiser la gêne et conserver [W]{.kbd} sous l’auriculaire droit, il faut
+passer [Shift]{.kbd} sous un pouce — ce qui n’est pas un changement anodin non
+plus.
 
 Par ailleurs, on ne pourra pas fusionner les symboles déplacés avec la couche
 AltGr, dont les meilleurs emplacements sont déjà pris pour des besoins
