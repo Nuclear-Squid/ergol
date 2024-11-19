@@ -190,7 +190,7 @@ remplacement de la touche AltGr.
 
 ### Les limitations de Bépo <small>(Béopy, Optimot…)</small>
 
-Pour Bépo et toutes ses variantes c’est plus délicat car il faut déplacer des
+Pour Bépo et toutes ses variantes, c’est plus délicat car il faut déplacer des
 **lettres** qui sont sur la 7<sup>e</sup> colonne du clavier ISO : la technique
 de saisie diffère quand on passe d’un clavier standard à un clavier ergonomique.
 Pour minimiser la gêne et conserver [W]{.kbd} sous l’auriculaire droit, il faut
@@ -289,7 +289,6 @@ Et c’est tout.
 
 ⁽¹⁾ Ergo‑L ou toute autre disposition [1DFH][] : Erglace, Bépolar,
 QWERTY-Lafayette, Colemak French Touch…
-
 
 ⁽²⁾ On considère qu’une disposition est « non compatible » avec une géométrie de
 clavier quand les lettres courantes du français ne peuvent plus tenir dans le
