@@ -238,7 +238,7 @@ Et c’est tout.
     <th></th>
     <th> AZERTY </th>
     <th> Bépo   </th>
-    <th> Ergo‑L ⁽²⁾ </th>
+    <th> Ergo‑L ⁽¹⁾ </th>
   </tr>
   <tr>
     <td style="padding: 1em 0;"> [full-size][] </td>
@@ -262,7 +262,7 @@ Et c’est tout.
   </tr>
   <tr>
     <td> [3×6][] </td>
-    <td> non compatible ⁽¹⁾ </td>
+    <td> non compatible ⁽²⁾ </td>
     <td><ul>
       <li> `W`, `Ç`, `%` </li>
       <li> tiret sur un layer </li>
@@ -275,8 +275,8 @@ Et c’est tout.
   </tr>
   <tr>
     <td> [3×5][] </td>
-    <td> non compatible ⁽¹⁾ </td>
-    <td> non compatible ⁽¹⁾ </td>
+    <td> non compatible ⁽²⁾ </td>
+    <td> non compatible ⁽²⁾ </td>
     <td><ul>
       <li> [layer-taps][LT] </li>
       <li> [homerow-mods][HRM] </li>
@@ -287,13 +287,15 @@ Et c’est tout.
 <!-- do not remove the empty line above -->
 :::
 
-⁽¹⁾ On considère qu’une disposition est « non compatible » avec une géométrie de
+⁽¹⁾ Ergo‑L ou toute autre disposition [1DFH][] : Erglace, Bépolar,
+QWERTY-Lafayette, Colemak French Touch…
+
+
+⁽²⁾ On considère qu’une disposition est « non compatible » avec une géométrie de
 clavier quand les lettres courantes du français ne peuvent plus tenir dans le
 seul layer principal. C’est le cas d’AZERTY dès qu’on n’a plus de rangée de
-chiffres, et de Bépo (et ses variantes) dès qu’on a moins de 2 colonnes sous
+chiffres, et de Bépo (et ses variantes) dès qu’on a moins de deux colonnes sous
 l’auriculaire droit.
-
-⁽²⁾ Ergo‑L ou Erglace, Bépolar, QWERTY-Lafayette, Colemak French Touch…
 
 
 Conseils d’achat
