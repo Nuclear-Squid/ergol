@@ -11,11 +11,11 @@ Code de conduite
 
 *TL;DR:*
 - Les règles ci-dessous peuvent se résumer à une phrase :
-  « **aucun comportement toxique** ».
+  « **[aucun comportement toxique][#comportement]** ».
 - Si vous pensez qu’une discussion nécessite une intervention, contactez
-  l’équipe de modération.
+  [l’équipe de modération][#modération].
 - Nous avons la chance d’avoir une communauté amicale, diverse et bienveillante.
-  Profitons-en, et cultivons cet esprit !
+  Profitons-en, et [cultivons ce savoir-vivre][#savoir-vivre] !
 
 
 Comportement
