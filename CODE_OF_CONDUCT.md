@@ -11,7 +11,7 @@ Code de conduite
 
 *TL;DR:*
 - Les règles ci-dessous peuvent se résumer à une phrase :
-  « **ne pas être toxique** ».
+  « **aucun comportement toxique** ».
 - Si vous pensez qu’une discussion nécessite une intervention, contactez
   l’équipe de modération.
 - Nous avons la chance d’avoir une communauté amicale, diverse et bienveillante.
