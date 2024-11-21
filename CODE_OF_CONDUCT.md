@@ -91,8 +91,8 @@ Savoir-vivre
   enthousiasmants comme l’ergonomie, l’optimisation, et les belles choses qui
   font *clickety-clack*. Votre bonne foi sera un gage de confiance.
 
-Les règles listées ci-dessus s’appliquent au serveur [Discord] ainsi qu’aux
-dépôts [Ergo‑L] et [OneDeadKey].
+Ce code de conduite s’applique au serveur [Discord] ainsi qu’aux dépôts [Ergo‑L]
+et [OneDeadKey].
 
 *(Sources d’inspiration : [Code de conduite Rust][Rust], [Node.js Policy on
 Trolling][nodejs] et [Contributor Covenant v1.3.0][cco].)*
