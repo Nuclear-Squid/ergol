@@ -1,3 +1,11 @@
+<!--
+  - intro/résumé : ne soyez pas toxique !
+  - Comportement : qu’est-ce qui est considéré comme toxique ?
+  - Modération   : comment gère-t-on les comportements toxiques ?
+  - Savoir-vivre : on ne se contente pas de ne pas être toxique,
+                   on essaye d’être de belles personnes.
+  -->
+
 Code de conduite
 ================================================================================
 
