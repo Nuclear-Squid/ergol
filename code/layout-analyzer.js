@@ -35,13 +35,14 @@
     'other',           // unused, is just two simple bigrams, nothing to note.
   ];
 
+  // thsis could be part of x-keyboard
   const is1DFH = keyCode =>
     keyCode.startsWith('Key') ||
       ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode);
 
 
 // create an efficient hash table to parse a text
-export function supportedChars(keymap, deadkeys) {
+export function getSupportedChars(keymap, deadkeys) {
     const charTable = {};
     const deadTable = {};
 
@@ -137,24 +138,29 @@ export function supportedChars(keymap, deadkeys) {
 }
 
 
-export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
-
-  const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
-
+// XXX thsis should be part of x-keyboard
+function getKeyPositionQuality(keyCode) {
   // This has to be the *stupidest* way to format code, and I love it
   const goodKeysSet = new Set([
             'KeyW', 'KeyE',                    'KeyI', 'KeyO',
     'KeyA', 'KeyS', 'KeyD', 'KeyF',    'KeyJ', 'KeyK', 'KeyL', 'Semicolon',
                             'KeyV',    'KeyM',
   ]);
-
   const mehKeysSet = new Set([ 'KeyC', 'KeyR', 'KeyG', 'KeyH', 'KeyU', 'Comma' ]);
 
-  const getKeyPositionQuality = keyCode => {
     if (goodKeysSet.has(keyCode)) return 'good';
     if (mehKeysSet.has(keyCode)) return 'meh';
     return 'bad';
-  };
+}
+
+
+export function analyzeKeyboardLayout(
+    keyboard,
+    corpus,
+    keyChars = getSupportedChars(keyboard.layout.keyMap, keyboard.layout.deadKeys),
+    errorColor = 'rgb(127, 127, 127)'
+) {
+  const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
 
   // Returns a custom iterator, similar to Rust’s std::slice::Windows.
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators
@@ -168,7 +174,6 @@ export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
   });
 
   const computeNGrams = () => {
-
     const ngrams = Object
       .fromEntries(NGRAM_CATEGORIES.map(bigramType => [bigramType, {}]));
 
@@ -229,7 +234,7 @@ export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
       return rv;
     };
 
-    const realBigrams  = buildNgramDict(corpus.digrams, 2);
+    const realBigrams  = buildNgramDict(corpus.bigrams, 2);
     const realTrigrams = buildNgramDict(corpus.trigrams, 3);
 
     const keyFinger = {};
@@ -263,7 +268,7 @@ export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
       return 0;
     };
 
-    const isScisor = (kc1, kc2, finger1, finger2) => {
+    const isScissor = (kc1, kc2, finger1, finger2) => {
       var finger1Height = getKeyRow(kc1);
       var finger2Height = getKeyRow(kc2);
 
@@ -291,7 +296,7 @@ export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
       if (currFinger === prevFinger) return 'sfb';
       if (currFinger[0] !== prevFinger[0]) return 'handChange';
 
-      if (isScisor(currKeyCode, prevKeyCode, currFinger, prevFinger))
+      if (isScissor(currKeyCode, prevKeyCode, currFinger, prevFinger))
         return [prevKeyCode, currKeyCode].some(requiresExtension)
           ? 'extendedScissor'
           : 'scissor';
@@ -305,8 +310,9 @@ export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
       const currFinger = keyFinger[currKeyCode];
       const nextFinger = keyFinger[nextKeyCode];
 
-      if (prevFinger === nextFinger)
+      if (prevFinger === nextFinger) {
         return prevKeyCode == nextKeyCode ? 'sks' : 'sfs';
+      }
 
       const hands = prevFinger[0] + currFinger[0] + nextFinger[0];
 

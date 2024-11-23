@@ -1,4 +1,4 @@
-import { supportedChars, analyzeKeyboardLayout } from './layout-analyzer.js';
+import { getSupportedChars, analyzeKeyboardLayout } from './layout-analyzer.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   const inputField = document.querySelector('input');
@@ -125,7 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
               data.geometry.replace('ergo', 'iso'),
             );
             data.keymap.Enter = ['\r', '\n'];
-            keyChars = supportedChars(data.keymap, data.deadkeys);
+            keyChars = getSupportedChars(data.keymap, data.deadkeys);
             showReport();
           });
       } else {
