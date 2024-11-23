@@ -1,6 +1,44 @@
-const is1DFH = keyCode =>
-  keyCode.startsWith('Key') ||
-    ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode);
+  const substituteChars = {
+    '\u00a0': ' ', // ( ) no-break space
+    '\u202f': ' ', // ( ) narrow no-break space
+
+    '\u00ab': '"', // («) left-pointing double angle quotation mark
+    '\u00bb': '"', // (») right-pointing double angle quotation mark
+    '\u201c': '"', // (“) left double quotation mark
+    '\u201d': '"', // (”) right double quotation mark
+    '\u201e': '"', // („) double low-9 quotation mark
+
+    '\u2018': "'", // (‘) left single quotation mark
+    '\u2019': "'", // (’) right single quotation mark
+
+    '\u2013': '-', // (–) en dash
+    '\u2014': '-', // (—) em dash
+    '\u2026': '...', // (…) ellipsis
+  };
+
+  const NGRAM_CATEGORIES = [
+    // Bigrams
+    'sfb',             // Same Finger Bigram
+    'skb',             // Same Key Bigram
+    'lsb',             // Lateral Strech Bigram
+    'handChange',      // Two keys typed by different hands
+    'scissor',         // Roll with uncomfortable height difference between the keys
+    'extendedScissor', // scissor + lsb
+    'inwardRoll',      // Roll in the pinky -> index direction
+    'outwardRoll',     // Roll in the index -> pinky direction
+
+    // Trigrams
+    'redirect',        // Two rolls going in different directions
+    'badRedirect',     // Redirect that doesn’t use the index
+    'sfs',             // Same Finger Skipgram (sfb with other key in the middle)
+    'sks',             // Same Key Skipgram (skb with other key in the middle)
+    'other',           // unused, is just two simple bigrams, nothing to note.
+  ];
+
+  const is1DFH = keyCode =>
+    keyCode.startsWith('Key') ||
+      ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode);
+
 
 // create an efficient hash table to parse a text
 export function supportedChars(keymap, deadkeys) {
@@ -98,44 +136,8 @@ export function supportedChars(keymap, deadkeys) {
     return charTable;
 }
 
+
 export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
-
-  const substituteChars = {
-    '\u00a0': ' ', // ( ) no-break space
-    '\u202f': ' ', // ( ) narrow no-break space
-
-    '\u00ab': '"', // («) left-pointing double angle quotation mark
-    '\u00bb': '"', // (») right-pointing double angle quotation mark
-    '\u201c': '"', // (“) left double quotation mark
-    '\u201d': '"', // (”) right double quotation mark
-    '\u201e': '"', // („) double low-9 quotation mark
-
-    '\u2018': "'", // (‘) left single quotation mark
-    '\u2019': "'", // (’) right single quotation mark
-
-    '\u2013': '-', // (–) en dash
-    '\u2014': '-', // (—) em dash
-    '\u2026': '...', // (…) ellipsis
-  };
-
-  const NGRAM_CATEGORIES = [
-    // Bigrams
-    'sfb',             // Same Finger Bigram
-    'skb',             // Same Key Bigram
-    'lsb',             // Lateral Strech Bigram
-    'handChange',      // Two keys typed by different hands
-    'scissor',         // Roll with uncomfortable height difference between the keys
-    'extendedScissor', // scissor + lsb
-    'inwardRoll',      // Roll in the pinky -> index direction
-    'outwardRoll',     // Roll in the index -> pinky direction
-
-    // Trigrams
-    'redirect',        // Two rolls going in different directions
-    'badRedirect',     // Redirect that doesn’t use the index
-    'sfs',             // Same Finger Skipgram (sfb with other key in the middle)
-    'sks',             // Same Key Skipgram (skb with other key in the middle)
-    'other',           // unused, is just two simple digrams, nothing to note.
-  ];
 
   const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
 
@@ -168,7 +170,7 @@ export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
   const computeNGrams = () => {
 
     const ngrams = Object
-      .fromEntries(NGRAM_CATEGORIES.map(digramType => [digramType, {}]));
+      .fromEntries(NGRAM_CATEGORIES.map(bigramType => [bigramType, {}]));
 
     const buildNgramDict = (dict, ngramLength) => {
       let total = 0;
@@ -227,7 +229,7 @@ export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
       return rv;
     };
 
-    const realDigrams  = buildNgramDict(corpus.digrams, 2);
+    const realBigrams  = buildNgramDict(corpus.digrams, 2);
     const realTrigrams = buildNgramDict(corpus.trigrams, 3);
 
     const keyFinger = {};
@@ -280,7 +282,7 @@ export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
       }
     };
 
-    const getDigramType = (prevKeyCode, currKeyCode) => {
+    const getBigramType = (prevKeyCode, currKeyCode) => {
       if (prevKeyCode === currKeyCode) return 'skb';
 
       const prevFinger = keyFinger[prevKeyCode];
@@ -331,9 +333,9 @@ export function analyzeKeyboardLayout(keyboard, corpus, keyChars, errorColor) {
       Array(4).fill(0).map(_ => ({ "good": 0, "meh": 0, "bad": 0 }))
     );
 
-    for (const [ngram, { keyCodes, frequency }] of Object.entries(realDigrams)) {
+    for (const [ngram, { keyCodes, frequency }] of Object.entries(realBigrams)) {
       if (keyCodes.includes('Space')) continue;
-      const ngramType = getDigramType(...keyCodes);
+      const ngramType = getBigramType(...keyCodes);
       ngrams[ngramType][ngram] = frequency;
 
       if (ngramType === 'sfb') {

@@ -43,12 +43,12 @@ window.addEventListener('DOMContentLoaded', () => {
     showPercent('#sku-all',     sum(ngrams.skb),         2, '#Bigrammes');
 
     const achoppements = document.getElementById('Achoppements');
-    achoppements.updateTableData('#sfu-digrams',    'SFU',        ngrams.sfb, 2);
+    achoppements.updateTableData('#sfu-bigrams',    'SFU',        ngrams.sfb, 2);
     achoppements.updateTableData('#extended-rolls', 'LSB',        ngrams.lsb, 2,);
     achoppements.updateTableData('#scissors',       'ciseaux',    ngrams.scissor, 2);
 
     const bigrammes = document.getElementById('Bigrammes');
-    bigrammes.updateTableData('#sku-digrams', 'SKU', ngrams.skb, 2);
+    bigrammes.updateTableData('#sku-bigrams', 'SKU', ngrams.skb, 2);
     bigrammes.updateTableData('#inward',  'roulements intérieurs', ngrams.inwardRoll,  2);
     bigrammes.updateTableData('#outward', 'roulements extérieurs', ngrams.outwardRoll, 2);
 
