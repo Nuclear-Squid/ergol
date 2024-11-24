@@ -9,9 +9,6 @@ class CollapsableTable extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
 
-    const showMore = 'show more'; // XXX replace with a symbol
-    const showLess = 'show less'; // XXX replace with a symbol
-
     // Stupid hack to get the height of a 'tr' element
     const tableRowElement = document.createElement('tr');
     tableRowElement.innerHTML = 'random placeholder text';
@@ -43,19 +40,24 @@ class CollapsableTable extends HTMLElement {
       td:nth-child(2) { width: 4em; text-align: right; }
 
       button {
-        width: 30%;
+        width: 20%;
+        height: 1.5em;
         margin: auto;
         background-color: #88fa;
         border: 1px solid black;
         border-radius: 15px;
         cursor: pointer;
+        clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+      }
+      button.showLess {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
       }
       </style>
 
       <!-- Using a style attribute on top of the stylesheet, as it is used by
            the button 'click' event-listner -->
       <div id='wrapper' style='max-height: ${this.maxHeightCollapsed}px;'></div>
-      <button style='display: none'>${showMore}</button>
+      <button style='display: none'></button>
     `;
 
     const wrapper = shadow.getElementById('wrapper');
@@ -69,10 +71,10 @@ class CollapsableTable extends HTMLElement {
       const wrapper = shadow.getElementById('wrapper');
       if (wrapper.style.maxHeight == `${self.maxHeightCollapsed}px`) {
         wrapper.style.maxHeight = `${wrapper.children[0].offsetHeight}px`;
-        this.innerText = showLess;
+        this.className = 'showLess';
       } else {
         wrapper.style.maxHeight = `${self.maxHeightCollapsed}px`;
-        this.innerText = showMore;
+        this.className = '';
       }
     });
   }
