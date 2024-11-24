@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 836 300">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+      --stag-pinky:  71.25px;
+      --stag-middle: 26.25px;
+      --stag-index:  20.00px;
+      --stag-center: 27.50px;
+    }
+    rect, path {
+      fill: #f8f8f8;
+      fill: #fff;
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      fill: #444;
+      font: normal 20px sans-serif;
+      text-align: center;
+      text-anchor: middle;
+    }
+
+    .specialKey rect { fill: #e4e4e4; }
+    .specialKey text { font-size: 14px; }
+    .text            { font-size: 11px; }
+    .mod             { font-size: 14px; font-weight: bold; }
+
+    #left  { transform: translate(  4px, 10px); }
+    #right { transform: translate(480px, 10px); }
+
+    .dualKey { transform: translateY(26px); }
+
+    .specialKey .dualKey,
+    .dualKey { fill: #ddd; }
+
+    /* column stagger */
+
+    .col_1 { transform: translate( 60px, var(--stag-pinky));  }
+    .col_2 { transform: translate(120px, var(--stag-middle)); }
+    .col_3 { transform: translate(180px, 0px); }
+    .col_4 { transform: translate(240px, var(--stag-index));  }
+    .col_5 { transform: translate(300px, var(--stag-center)); }
+
+    .col_6 { transform: translate(  0px, var(--stag-center)); }
+    .col_7 { transform: translate( 60px, var(--stag-index));  }
+    .col_8 { transform: translate(120px, 0px); }
+    .col_9 { transform: translate(180px, var(--stag-middle)); }
+    .col_0 { transform: translate(240px, var(--stag-pinky));  }
+
+    /* XXX these thumb clusters have been positioned with magic numbers */
+
+    .thb_4 { transform: translate(280px, 203px); }
+    .thb_5 { transform: translate(350px, 219px); }
+    .thb_4 g { transform: rotate(12deg); }
+    .thb_5 g { transform: rotate(24deg); }
+
+    .thb_7 { transform: translate( 22px, 214px); }
+    .thb_6 { transform: translate(-44px, 240px); }
+    .thb_7 g { transform: rotate(-12deg); }
+    .thb_6 g { transform: rotate(-24deg); }
+
+    #sym .dualKey { fill: #99f; }
+    #nav .dualKey { fill: #e83; }
+    #num .dualKey { fill: #e83; }
+    .sym { fill: #44f; transform: translate(0, -23px); }
+    .nav { fill: #e83; }
+    .num { fill: #e83; }
+    .mod { fill: #333; }
+
+    .level1, .level2 { opacity: 0.8; }
+    .sym             { opacity: 0.6; }
+
+    @media (prefers-color-scheme: dark) {
+      .specialKey .dualKey,
+      .dualKey         { fill: #666; }
+      .specialKey rect { fill: #333; }
+      rect, path       { fill: #444; }
+      text             { fill: #bbb; }
+      .sym             { fill: #99f; }
+      .mod             { fill: #eee; }
+      #sym .dualKey    { fill: #77d; }
+      #sym text.layer  { fill: navy; }
+      #nav text.layer  { fill: brown; }
+      #num text.layer  { fill: brown; }
+    }
+  </style>
+
+  <g id="left">
+    <g class="col_1">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Y</text>
+        <text x="38.0" y="43.4" class="sym">^</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">D</text>
+        <text x="38.0" y="43.4" class="sym">{</text>
+      </g>
+    </g>
+
+    <g class="col_2">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">U</text>
+        <text x="38.0" y="43.4" class="sym">&lt;</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="12.8" y="20.6" class="level2">I</text>
+        <text x="12.8" y="43.4" class="mod">⌥</text>
+        <text x="38.0" y="43.4" class="sym">(</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">,</text>
+        <text x="38.0" y="43.4" class="sym">[</text>
+      </g>
+    </g>
+
+    <g class="col_3">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">O</text>
+        <text x="38.0" y="43.4" class="sym">&gt;</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="12.8" y="20.6" class="level2">A</text>
+        <text x="12.8" y="43.4" class="mod">⌘</text>
+        <text x="38.0" y="43.4" class="sym">)</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">-</text>
+        <text x="12.8" y="20.6" class="level2">?</text>
+        <text x="38.0" y="43.4" class="sym">]</text>
+      </g>
+    </g>
+
+    <g class="col_4">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">G</text>
+        <text x="38.0" y="43.4" class="sym">$</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="12.8" y="20.6" class="level2">T</text>
+        <text x="12.8" y="43.4" class="mod">⌃</text>
+        <text x="38.0" y="43.4" class="sym">}</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Q</text>
+        <text x="38.0" y="43.4" class="sym">_</text>
+      </g>
+    </g>
+
+    <g class="col_5">
+      <g transform="translate(0 30)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">W</text>
+        <text x="38.0" y="43.4" class="sym">%</text>
+      </g>
+      <g transform="translate(0 90)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">’</text>
+        <text x="38.0" y="43.4" class="sym">=</text>
+      </g>
+    </g>
+
+    <g class="thb_4 specialKey">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="26" y="19.6" style="font-size: 19px;">⎋</text>
+        <text x="26" y="43.4">Shift</text>
+      </g>
+    </g>
+    <g class="thb_5 specialKey" id="num">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="26" y="19.6" style="font-size: 13px;">E</text>
+        <text x="26" y="43.4" class="layer">Nav</text>
+      </g>
+    </g>
+  </g>
+
+  <g id="right">
+    <g class="col_6">
+      <g transform="translate(0 30)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">.</text>
+        <text x="38.0" y="43.4" class="sym">@</text>
+      </g>
+      <g transform="translate(0 90)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">B</text>
+        <text x="38.0" y="43.4" class="sym">\</text>
+      </g>
+    </g>
+
+    <g class="col_7">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">P</text>
+        <text x="38.0" y="43.4" class="sym">&amp;</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="12.8" y="20.6" class="level2">N</text>
+        <text x="12.8" y="43.4" class="mod">⌃</text>
+        <text x="38.0" y="43.4" class="sym">+</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">H</text>
+        <text x="38.0" y="43.4" class="sym">!</text>
+      </g>
+    </g>
+
+    <g class="col_8">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">M</text>
+        <text x="38.0" y="43.4" class="sym">*</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="12.8" y="43.4" class="mod">⌘</text>
+        <text x="12.8" y="20.6" class="level2">S</text>
+        <text x="38.0" y="43.4" class="sym">-</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">F</text>
+        <text x="38.0" y="43.4" class="sym">;</text>
+      </g>
+    </g>
+
+    <g class="col_9">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">L</text>
+        <text x="12.8" y="20.6" class="level2">!</text>
+        <text x="38.0" y="43.4" class="sym">'</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="12.8" y="20.6" class="level2">R</text>
+        <text x="12.8" y="43.4" class="mod">⌥</text>
+        <text x="38.0" y="43.4" class="sym">/</text>
+      </g>
+      <g transform="translate(0 120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">V</text>
+        <text x="12.8" y="20.6" class="level2">;</text>
+        <text x="38.0" y="43.4" class="sym">:</text>
+      </g>
+    </g>
+
+    <g class="col_0">
+      <g transform="translate(0 0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">★</text>
+        <text x="38.0" y="43.4" class="sym">`</text>
+      </g>
+      <g transform="translate(0 60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">C</text>
+        <text x="38.0" y="43.4" class="sym">"</text>
+      </g>
+    </g>
+
+    <g class="thb_6 specialKey" id="nav">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="26" y="14.6" style="font-size: 19px;">⎵</text>
+        <text x="26" y="43.4" class="layer">Nav</text>
+      </g>
+    </g>
+    <g class="thb_7 specialKey" id="sym">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="52" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="26" y="20.6" style="font-size: 19px;">🚀</text>
+        <text x="26" y="43.4" class="layer">AltGr</text>
+      </g>
+    </g>
+  </g>
+
+</svg>
