@@ -49,7 +49,6 @@ export function getSupportedChars(keymap, deadkeys) {
     // In case there are multiple ways of typing a singel char, this checks
     // which sequence is easier to type (examples are in Ergo‑L)
     const requiresLessEffort = (originalKeySequence, newKeySequence) => {
-      // const uses1DK = '**' in keyboard.layout.deadKeys
       const uses1DK = '**' in deadkeys
           ? keySequence => keySequence.some(key => key === charTable['**'][0])
           : (_) => false;

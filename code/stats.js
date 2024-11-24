@@ -13,69 +13,53 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // display a percentage value
   const fmtPercent = (num, p) => `${Math.round(10 ** p * num) / 10 ** p}%`;
-  const showPercent = (sel, num, precision, parentId) => {
-    const element = parentId
-      ? document.querySelector(parentId).shadowRoot
-      : document;
-    element.querySelector(sel).innerText = fmtPercent(num, precision);
+  const showPercent = (sel, num, precision) => {
+    document.querySelector(sel).innerText = fmtPercent(num, precision);
   };
-
-  const showPercentAll = (sel, nums, precision, parentId) => {
-    const element = parentId
-      ? document.querySelector(parentId).shadowRoot
-      : document;
-    element.querySelector(sel).innerText =
+  const showPercentAll = (sel, nums, precision) => {
+    document.querySelector(sel).innerText =
       nums.map(value => fmtPercent(value, precision)).join(' / ');
   };
 
   const showNGrams = (ngrams) => {
     const sum = dict => Object.entries(dict).reduce((acc, [_, e]) => acc + e, 0);
 
-    showPercent('#sfu-all', sum(ngrams.sfb), 2);
-    showPercent('#sku-all', sum(ngrams.skb), 2);
+    showPercent('#sfu-total',        sum(ngrams.sfb),         2);
+    showPercent('#sku-total',        sum(ngrams.skb),         2);
 
-    showPercent('#sfu-all',        sum(ngrams.sfb),     2, '#Achoppements');
-    showPercent('#extensions-all', sum(ngrams.lsb),     2, '#Achoppements');
-    showPercent('#scissors-all',   sum(ngrams.scissor), 2, '#Achoppements');
+    showPercent('#sfu-all',          sum(ngrams.sfb),         2);
+    showPercent('#extensions-all',   sum(ngrams.lsb),         2);
+    showPercent('#scissors-all',     sum(ngrams.scissor),     2);
 
-    showPercent('#inward-all',  sum(ngrams.inwardRoll),  1, '#Bigrammes');
-    showPercent('#outward-all', sum(ngrams.outwardRoll), 1, '#Bigrammes');
-    showPercent('#sku-all',     sum(ngrams.skb),         2, '#Bigrammes');
+    showPercent('#inward-all',       sum(ngrams.inwardRoll),  1);
+    showPercent('#outward-all',      sum(ngrams.outwardRoll), 1);
+    showPercent('#sku-all',          sum(ngrams.skb),         2);
 
-    const achoppements = document.getElementById('Achoppements');
-    achoppements.updateTableData('#sfu-bigrams',    'SFU',        ngrams.sfb, 2);
-    achoppements.updateTableData('#extended-rolls', 'LSB',        ngrams.lsb, 2,);
-    achoppements.updateTableData('#scissors',       'ciseaux',    ngrams.scissor, 2);
+    showPercent('#sks-all',          sum(ngrams.sks),         1);
+    showPercent('#sfs-all',          sum(ngrams.sfs),         1);
+    showPercent('#redirect-all',     sum(ngrams.redirect),    1);
+    showPercent('#bad-redirect-all', sum(ngrams.badRedirect), 2);
 
-    const bigrammes = document.getElementById('Bigrammes');
-    bigrammes.updateTableData('#sku-bigrams', 'SKU', ngrams.skb, 2);
-    bigrammes.updateTableData('#inward',  'roulements intérieurs', ngrams.inwardRoll,  2);
-    bigrammes.updateTableData('#outward', 'roulements extérieurs', ngrams.outwardRoll, 2);
+    const achoppements = document.querySelector('#achoppements collapsable-table');
+    achoppements.updateTableData('#sfu-bigrams',    ngrams.sfb,         2);
+    achoppements.updateTableData('#extended-rolls', ngrams.lsb,         2);
+    achoppements.updateTableData('#scissors',       ngrams.scissor,     2);
 
-    // Display trigrams
-    showPercent('#sks-all',          sum(ngrams.sks),         1, '#Trigrammes');
-    showPercent('#sfs-all',          sum(ngrams.sfs),         1, '#Trigrammes');
-    showPercent('#redirect-all',     sum(ngrams.redirect),    1, '#Trigrammes');
-    showPercent('#bad-redirect-all', sum(ngrams.badRedirect), 2, '#Trigrammes');
+    const bigrammes = document.querySelector('#bigrammes collapsable-table');
+    bigrammes.updateTableData('#sku-bigrams',       ngrams.skb,         2);
+    bigrammes.updateTableData('#inward',            ngrams.inwardRoll,  2);
+    bigrammes.updateTableData('#outward',           ngrams.outwardRoll, 2);
 
-    const trigrammes = document.getElementById('Trigrammes');
-    trigrammes.updateTableData('#sks',      'SKS',          ngrams.sks, 2);
-    trigrammes.updateTableData('#sfs',      'SFS',          ngrams.sfs, 2);
-    trigrammes.updateTableData('#redirect', 'redirections', ngrams.redirect, 2);
-    trigrammes.updateTableData(
-      '#bad-redirect',
-      'mauvaises redirections',
-      ngrams.badRedirect,
-      2,
-    );
+    const trigrammes = document.querySelector('#trigrammes collapsable-table');
+    trigrammes.updateTableData('#sks',              ngrams.sks,         2);
+    trigrammes.updateTableData('#sfs',              ngrams.sfs,         2);
+    trigrammes.updateTableData('#redirect',         ngrams.redirect,    2);
+    trigrammes.updateTableData('#bad-redirect',     ngrams.badRedirect, 2);
   };
 
   const showReport = () => {
     const report = analyzeKeyboardLayout(keyboard, corpus, keyChars, headingColor);
 
-    showNGrams(report.ngrams);
-
-    // Render bigrams
     document.querySelector('#sfu stats-canvas').renderData({
       values: report.totalSfuSkuPerFinger,
       maxValue: 4,
@@ -94,14 +78,16 @@ window.addEventListener('DOMContentLoaded', () => {
     const sumUpBarGroup = group => group.reduce((acc, bar) => acc + sumUpBar(bar), 0);
 
     showPercentAll('#load small', report.loadGroups.map(sumUpBarGroup), 1);
-    showPercent('#unsupported-all', report.totalUnsupportedChars, 3, '#Achoppements');
+    showPercent('#unsupported-all', report.totalUnsupportedChars, 3);
 
     document.querySelector('#imprecise-data').style.display
       = report.impreciseData ? 'block' : 'none';
 
     document
-      .getElementById('Achoppements')
-      .updateTableData('#unsupported', 'non-support\u00e9', report.unsupportedChars, 3);
+      .querySelector('#achoppements collapsable-table')
+      .updateTableData('#unsupported', report.unsupportedChars, 3);
+
+    showNGrams(report.ngrams);
   };
 
   // keyboard state: these <select> element IDs match the x-keyboard properties

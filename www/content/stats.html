@@ -51,46 +51,58 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard) e
 
 <section id="sfu">
   <h3>Bigrammes de même doigt/touche</h3>
-  <small>SFU : <span id="sfu-all"></span> / SKU : <span id="sku-all"></span></small>
+  <small>
+    SFU : <span id="sfu-total"></span> /
+    SKU : <span id="sku-total"></span>
+  </small>
   <stats-canvas></stats-canvas>
 </section>
 
-<collapsable-table id="Achoppements">
+<section id="achoppements">
+  <h3>Achoppements</h3>
   <small>total :
     <span id="unsupported-all"></span> /
     <span id="sfu-all"></span> /
     <span id="extensions-all"></span> /
     <span id="scissors-all"></span>
   </small>
-  <table id="unsupported"></table>
-  <table id="sfu-bigrams"></table>
-  <table id="extended-rolls"></table>
-  <table id="scissors"></table>
-</collapsable-table>
+  <collapsable-table>
+    <table id="unsupported"    title="non supporté"></table>
+    <table id="sfu-bigrams"    title="SFU"></table>
+    <table id="extended-rolls" title="LFB"></table>
+    <table id="scissors"       title="ciseaux"></table>
+  </collapsable-table>
+</section>
 
-<collapsable-table id="Bigrammes">
+<section id="bigrammes">
+  <h3>Bigrammes</h3>
   <small>total :
     <span id="sku-all"></span> /
     <span id="inward-all"></span> /
     <span id="outward-all"></span>
   </small>
-  <table id="sku-bigrams"></table>
-  <table id="inward"></table>
-  <table id="outward"></table>
-</collapsable-table>
+  <collapsable-table>
+    <table id="sku-bigrams" title="SKU"></table>
+    <table id="inward"      title="roulements intérieurs"></table>
+    <table id="outward"     title="roulements extérieurs"></table>
+  </collapsable-table>
+</section>
 
-<collapsable-table id="Trigrammes">
+<section id="trigrammes">
+  <h3>Trigrammes</h3>
   <small>total :
     <span id="sks-all"></span> /
     <span id="sfs-all"></span> /
     <span id="redirect-all"></span> /
     <span id="bad-redirect-all"></span>
   </small>
-  <table id="sks"></table>
-  <table id="sfs"></table>
-  <table id="redirect"></table>
-  <table id="bad-redirect"></table>
-</collapsable-table>
+  <collapsable-table>
+    <table id="sks"          title="SKS"></table>
+    <table id="sfs"          title="SFS"></table>
+    <table id="redirect"     title="redirections"></table>
+    <table id="bad-redirect" title="mauvaises redirections"></table>
+  </collapsable-table>
+</section>
 
 <h2>Évaluation</h2>
 <p><a
