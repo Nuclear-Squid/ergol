@@ -1,4 +1,4 @@
-class CollapsableTable extends HTMLElement {
+class StatsTable extends HTMLElement {
   maxLinesCollapsed = 12;
 
   // Elements built in constructor
@@ -44,8 +44,6 @@ class CollapsableTable extends HTMLElement {
         height: 1.5em;
         margin: auto;
         background-color: #88fa;
-        border: 1px solid black;
-        border-radius: 15px;
         cursor: pointer;
         clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
       }
@@ -98,4 +96,4 @@ class CollapsableTable extends HTMLElement {
   }
 }
 
-customElements.define('collapsable-table', CollapsableTable);
+customElements.define('stats-table', StatsTable);

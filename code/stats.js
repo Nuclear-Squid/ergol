@@ -40,17 +40,17 @@ window.addEventListener('DOMContentLoaded', () => {
     showPercent('#redirect-all',     sum(ngrams.redirect),    1);
     showPercent('#bad-redirect-all', sum(ngrams.badRedirect), 2);
 
-    const achoppements = document.querySelector('#achoppements collapsable-table');
+    const achoppements = document.querySelector('#achoppements stats-table');
     achoppements.updateTableData('#sfu-bigrams',    ngrams.sfb,         2);
     achoppements.updateTableData('#extended-rolls', ngrams.lsb,         2);
     achoppements.updateTableData('#scissors',       ngrams.scissor,     2);
 
-    const bigrammes = document.querySelector('#bigrammes collapsable-table');
+    const bigrammes = document.querySelector('#bigrammes stats-table');
     bigrammes.updateTableData('#sku-bigrams',       ngrams.skb,         2);
     bigrammes.updateTableData('#inward',            ngrams.inwardRoll,  2);
     bigrammes.updateTableData('#outward',           ngrams.outwardRoll, 2);
 
-    const trigrammes = document.querySelector('#trigrammes collapsable-table');
+    const trigrammes = document.querySelector('#trigrammes stats-table');
     trigrammes.updateTableData('#sks',              ngrams.sks,         2);
     trigrammes.updateTableData('#sfs',              ngrams.sfs,         2);
     trigrammes.updateTableData('#redirect',         ngrams.redirect,    2);
@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
       = report.impreciseData ? 'block' : 'none';
 
     document
-      .querySelector('#achoppements collapsable-table')
+      .querySelector('#achoppements stats-table')
       .updateTableData('#unsupported', report.unsupportedChars, 3);
 
     showNGrams(report.ngrams);

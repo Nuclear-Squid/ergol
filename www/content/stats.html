@@ -4,7 +4,7 @@ title = "Analyseur"
 [params]
 description = "Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès."
 cssSheets = ["/css/heatmap.css"]
-jsModules = ["/js/x-keyboard.js", "/js/stats.js", "/js/layout-analyzer.js", "/js/collapsable-table.js", "js/stats-canvas.js"]
+jsModules = ["/js/x-keyboard.js", "/js/layout-analyzer.js", "/js/stats.js", "/js/stats-table.js", "js/stats-canvas.js"]
 jsScripts = ["/js/keebs.js"]
 footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard) et [kalamine](https://onedeadkey.github.io/kalamine)"
 +++
@@ -66,12 +66,12 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard) e
     <span id="extensions-all"></span> /
     <span id="scissors-all"></span>
   </small>
-  <collapsable-table>
+  <stats-table>
     <table id="unsupported"    title="non supporté"></table>
     <table id="sfu-bigrams"    title="SFU"></table>
     <table id="extended-rolls" title="LFB"></table>
     <table id="scissors"       title="ciseaux"></table>
-  </collapsable-table>
+  </stats-table>
 </section>
 
 <section id="bigrammes">
@@ -81,11 +81,11 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard) e
     <span id="inward-all"></span> /
     <span id="outward-all"></span>
   </small>
-  <collapsable-table>
+  <stats-table>
     <table id="sku-bigrams" title="SKU"></table>
     <table id="inward"      title="roulements intérieurs"></table>
     <table id="outward"     title="roulements extérieurs"></table>
-  </collapsable-table>
+  </stats-table>
 </section>
 
 <section id="trigrammes">
@@ -96,12 +96,12 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard) e
     <span id="redirect-all"></span> /
     <span id="bad-redirect-all"></span>
   </small>
-  <collapsable-table>
+  <stats-table>
     <table id="sks"          title="SKS"></table>
     <table id="sfs"          title="SFS"></table>
     <table id="redirect"     title="redirections"></table>
     <table id="bad-redirect" title="mauvaises redirections"></table>
-  </collapsable-table>
+  </stats-table>
 </section>
 
 <h2>Évaluation</h2>
