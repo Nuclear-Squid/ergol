@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
-""" Turn corpus texts into dictionaries of symbols, bigrams and trigrams. """
+#!/bin/env python3
+""" Turn corpus texts into dictionaries of symbols and digrams. """
 
 import json
 from os import path, listdir
@@ -9,10 +9,10 @@ IGNORED_CHARS = "1234567890 \t\r\n\ufeff"
 
 
 def parse_corpus(file_path):
-    """ Count symbols and bigrams in a text file. """
+    """ Count symbols and digrams in a text file. """
 
     symbols = {}
-    bigrams = {}
+    digrams = {}
     trigrams = {}
     char_count = 0
     prev_symbol = None
@@ -28,12 +28,12 @@ def parse_corpus(file_path):
                 symbols[symbol] = 0
             symbols[symbol] += 1
             if prev_symbol is not None:
-                bigram = prev_symbol + symbol
-                if bigram not in bigrams:
-                    bigrams[bigram] = 0
-                bigrams[bigram] += 1
+                digram = prev_symbol + symbol
+                if digram not in digrams:
+                    digrams[digram] = 0
+                digrams[digram] += 1
                 if prev_prev_symbol is not None:
-                    trigram = prev_prev_symbol + bigram
+                    trigram = prev_prev_symbol + digram
                     if trigram not in trigrams:
                         trigrams[trigram] = 0
                     trigrams[trigram] += 1
@@ -55,7 +55,7 @@ def parse_corpus(file_path):
     results = {}
     results["corpus"] = file_path
     results["symbols"] = sort_by_frequency(symbols)
-    results["bigrams"] = sort_by_frequency(bigrams, 4)
+    results["digrams"] = sort_by_frequency(digrams, 4)
     results["trigrams"] = sort_by_frequency(trigrams)
     return results
 

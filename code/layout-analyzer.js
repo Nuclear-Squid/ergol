@@ -1,3 +1,16 @@
+window.addEventListener('DOMContentLoaded', () => {
+  'use strict'; // eslint-disable-line
+
+  const inputField = document.querySelector('input');
+  const keyboard = document.querySelector('x-keyboard');
+
+  let keyChars = {};
+  let corpus = {};
+  let digrams = {};
+  let trigrams = {};
+  let corpusName = '';
+  let impreciseData = false;
+
   const substituteChars = {
     '\u00a0': ' ', // ( ) no-break space
     '\u202f': ' ', // ( ) narrow no-break space
@@ -17,7 +30,7 @@
   };
 
   const NGRAM_CATEGORIES = [
-    // Bigrams
+    // Digrams
     'sfb',             // Same Finger Bigram
     'skb',             // Same Key Bigram
     'lsb',             // Lateral Strech Bigram
@@ -32,24 +45,24 @@
     'badRedirect',     // Redirect that doesn’t use the index
     'sfs',             // Same Finger Skipgram (sfb with other key in the middle)
     'sks',             // Same Key Skipgram (skb with other key in the middle)
-    'other',           // unused, is just two simple bigrams, nothing to note.
+    'other',           // unused, is just two simple digrams, nothing to note.
   ];
 
-  // thsis could be part of x-keyboard
+  const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
+
   const is1DFH = keyCode =>
     keyCode.startsWith('Key') ||
       ['Space', 'Comma', 'Period', 'Slash', 'Semicolon'].includes(keyCode);
 
-
-// create an efficient hash table to parse a text
-export function getSupportedChars(keymap, deadkeys) {
+  // create an efficient hash table to parse a text
+  const supportedChars = (keymap, deadkeys) => {
     const charTable = {};
     const deadTable = {};
 
     // In case there are multiple ways of typing a singel char, this checks
     // which sequence is easier to type (examples are in Ergo‑L)
     const requiresLessEffort = (originalKeySequence, newKeySequence) => {
-      const uses1DK = '**' in deadkeys
+      const uses1DK = '**' in keyboard.layout.deadKeys
           ? keySequence => keySequence.some(key => key === charTable['**'][0])
           : (_) => false;
 
@@ -106,7 +119,7 @@ export function getSupportedChars(keymap, deadkeys) {
       }
     };
 
-    const insertDeadKeySequences = (charTable, deadKeys, currentDeadKey) => {
+    function insertDeadKeySequences(charTable, deadKeys, currentDeadKey) {
       for (const [baseChar, outputChar] of Object.entries(deadKeys[currentDeadKey.name])) {
         if (!(baseChar in charTable)) continue;
         const newSequence = currentDeadKey.sequence.concat(charTable[baseChar]);
@@ -119,7 +132,7 @@ export function getSupportedChars(keymap, deadkeys) {
             "sequence": newSequence,
           });
       }
-    };
+    }
 
     for (const [keyCode, charsPerLevel] of Object.entries(keymap)) {
       for (const [level, char] of charsPerLevel.entries()) {
@@ -134,32 +147,76 @@ export function getSupportedChars(keymap, deadkeys) {
     }
 
     return charTable;
-}
+  };
 
+  // display a percentage value
+  const fmtPercent = (num, p) => `${Math.round(10 ** p * num) / 10 ** p}%`;
+  const showPercent = (sel, num, precision, parentId) => {
+    const element = parentId
+      ? document.querySelector(parentId).shadowRoot
+      : document;
+    element.querySelector(sel).innerText = fmtPercent(num, precision);
+  };
 
-// XXX thsis should be part of x-keyboard
-function getKeyPositionQuality(keyCode) {
+  const showPercentAll = (sel, nums, precision, parentId) => {
+    const element = parentId
+      ? document.querySelector(parentId).shadowRoot
+      : document;
+    element.querySelector(sel).innerText =
+      nums.map(value => fmtPercent(value, precision)).join(' / ');
+  };
+
+  const sumUpBar = bar => bar.good + bar.meh + bar.bad;
+  const sumUpBarGroup = group => group.reduce((acc, bar) => acc + sumUpBar(bar), 0);
+
   // This has to be the *stupidest* way to format code, and I love it
   const goodKeysSet = new Set([
             'KeyW', 'KeyE',                    'KeyI', 'KeyO',
     'KeyA', 'KeyS', 'KeyD', 'KeyF',    'KeyJ', 'KeyK', 'KeyL', 'Semicolon',
                             'KeyV',    'KeyM',
   ]);
+
   const mehKeysSet = new Set([ 'KeyC', 'KeyR', 'KeyG', 'KeyH', 'KeyU', 'Comma' ]);
 
-    if (goodKeysSet.has(keyCode)) return 'good';
-    if (mehKeysSet.has(keyCode)) return 'meh';
-    return 'bad';
-}
+  const getKeyPositionQuality = keyCode => {
+    if (goodKeysSet.has(keyCode)) return "good";
+    if (mehKeysSet.has(keyCode)) return "meh";
+    return "bad";
+  };
 
+  // display a finger/frequency table and bar graph
+  const showFingerData = (sel, values, maxValue, precision) => {
+    const canvas = document.querySelector(`${sel} canvas`);
+    const table = document.querySelector(`${sel} table`);
 
-export function analyzeKeyboardLayout(
-    keyboard,
-    corpus,
-    keyChars = getSupportedChars(keyboard.layout.keyMap, keyboard.layout.deadKeys),
-    errorColor = 'rgb(127, 127, 127)'
-) {
-  const charToKeys = char => keyChars[char] ?? keyChars[substituteChars[char]];
+    canvas.width = 1000;
+    canvas.height = 100;
+    const ctx = canvas.getContext('2d');
+    ctx.save();
+    const headingColor = getComputedStyle(
+      document.querySelector('h1'),
+    ).getPropertyValue('color');
+    ctx.fillStyle = impreciseData ? headingColor : '#88f';
+    const width = canvas.width / 11;
+    const margin = 20;
+    const scale = 100 / maxValue;
+
+    let cols = '';
+    Object.values(values).forEach((value, i) => {
+      const idx = i >= 4 ? i + 2 : i + 1;
+      cols +=
+        (i === 4 ? '<td></td>' : '') +
+        `<td>${fmtPercent(value, precision)}</td>`;
+      ctx.fillRect(
+        idx * width + margin / 2,
+        canvas.height - value * scale,
+        width - margin / 2,
+        value * scale,
+      );
+    });
+    ctx.restore();
+    table.innerHTML = `<tr><td></td>${cols}<td></td></tr>`;
+  };
 
   // Returns a custom iterator, similar to Rust’s std::slice::Windows.
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators
@@ -173,8 +230,7 @@ export function analyzeKeyboardLayout(
   });
 
   const computeNGrams = () => {
-    const ngrams = Object
-      .fromEntries(NGRAM_CATEGORIES.map(bigramType => [bigramType, {}]));
+    const ngrams = Object.fromEntries(NGRAM_CATEGORIES.map(digramType => [digramType, {}]));
 
     const buildNgramDict = (dict, ngramLength) => {
       let total = 0;
@@ -233,8 +289,8 @@ export function analyzeKeyboardLayout(
       return rv;
     };
 
-    const realBigrams  = buildNgramDict(corpus.bigrams, 2);
-    const realTrigrams = buildNgramDict(corpus.trigrams, 3);
+    const realDigrams  = buildNgramDict(digrams, 2);
+    const realTrigrams = buildNgramDict(trigrams, 3);
 
     const keyFinger = {};
     Object.entries(keyboard.fingerAssignments).forEach(([f, keys]) => {
@@ -267,7 +323,7 @@ export function analyzeKeyboardLayout(
       return 0;
     };
 
-    const isScissor = (kc1, kc2, finger1, finger2) => {
+    const isScisor = (kc1, kc2, finger1, finger2) => {
       var finger1Height = getKeyRow(kc1);
       var finger2Height = getKeyRow(kc2);
 
@@ -286,7 +342,7 @@ export function analyzeKeyboardLayout(
       }
     };
 
-    const getBigramType = (prevKeyCode, currKeyCode) => {
+    const getDigramType = (prevKeyCode, currKeyCode) => {
       if (prevKeyCode === currKeyCode) return 'skb';
 
       const prevFinger = keyFinger[prevKeyCode];
@@ -295,7 +351,7 @@ export function analyzeKeyboardLayout(
       if (currFinger === prevFinger) return 'sfb';
       if (currFinger[0] !== prevFinger[0]) return 'handChange';
 
-      if (isScissor(currKeyCode, prevKeyCode, currFinger, prevFinger))
+      if (isScisor(currKeyCode, prevKeyCode, currFinger, prevFinger))
         return [prevKeyCode, currKeyCode].some(requiresExtension)
           ? 'extendedScissor'
           : 'scissor';
@@ -309,9 +365,7 @@ export function analyzeKeyboardLayout(
       const currFinger = keyFinger[currKeyCode];
       const nextFinger = keyFinger[nextKeyCode];
 
-      if (prevFinger === nextFinger) {
-        return prevKeyCode == nextKeyCode ? 'sks' : 'sfs';
-      }
+      if (prevFinger === nextFinger) return prevKeyCode == nextKeyCode ? 'sks' : 'sfs';
 
       const hands = prevFinger[0] + currFinger[0] + nextFinger[0];
 
@@ -338,9 +392,9 @@ export function analyzeKeyboardLayout(
       Array(4).fill(0).map(_ => ({ "good": 0, "meh": 0, "bad": 0 }))
     );
 
-    for (const [ngram, { keyCodes, frequency }] of Object.entries(realBigrams)) {
+    for (const [ngram, { keyCodes, frequency }] of Object.entries(realDigrams)) {
       if (keyCodes.includes('Space')) continue;
-      const ngramType = getBigramType(...keyCodes);
+      const ngramType = getDigramType(...keyCodes);
       ngrams[ngramType][ngram] = frequency;
 
       if (ngramType === 'sfb') {
@@ -360,10 +414,54 @@ export function analyzeKeyboardLayout(
       ngrams[ngramType][ngram] = frequency;
     }
 
-    return {
-      ngrams,
-      totalSfuSkuPerFinger,
-    };
+    // Render digrams
+    document.querySelector('#sfu stats-canvas').renderData({
+      values: totalSfuSkuPerFinger,
+      maxValue: 4,
+      precision: 2,
+      flipVertically: true,
+      detailedValues: true,
+    });
+
+    const sum = dict => Object.entries(dict).reduce((acc, [_, e]) => acc + e, 0);
+
+    showPercent('#sfu-all', sum(ngrams.sfb), 2);
+    showPercent('#sku-all', sum(ngrams.skb), 2);
+
+    showPercent('#sfu-all',        sum(ngrams.sfb),     2, '#Achoppements');
+    showPercent('#extensions-all', sum(ngrams.lsb),     2, '#Achoppements');
+    showPercent('#scissors-all',   sum(ngrams.scissor), 2, '#Achoppements');
+
+    showPercent('#inward-all',  sum(ngrams.inwardRoll),  1, '#Bigrammes');
+    showPercent('#outward-all', sum(ngrams.outwardRoll), 1, '#Bigrammes');
+    showPercent('#sku-all',     sum(ngrams.skb),         2, '#Bigrammes');
+
+    const achoppements = document.getElementById('Achoppements');
+    achoppements.updateTableData('#sfu-digrams',    'SFU',        ngrams.sfb, 2);
+    achoppements.updateTableData('#extended-rolls', 'LSB',        ngrams.lsb, 2,);
+    achoppements.updateTableData('#scissors',       'ciseaux',    ngrams.scissor, 2);
+
+    const bigrammes = document.getElementById('Bigrammes');
+    bigrammes.updateTableData('#sku-digrams', 'SKU', ngrams.skb, 2);
+    bigrammes.updateTableData('#inward',  'roulements intérieurs', ngrams.inwardRoll,  2);
+    bigrammes.updateTableData('#outward', 'roulements extérieurs', ngrams.outwardRoll, 2);
+
+    // Display trigrams
+    showPercent('#sks-all',          sum(ngrams.sks),         1, '#Trigrammes');
+    showPercent('#sfs-all',          sum(ngrams.sfs),         1, '#Trigrammes');
+    showPercent('#redirect-all',     sum(ngrams.redirect),    1, '#Trigrammes');
+    showPercent('#bad-redirect-all', sum(ngrams.badRedirect), 2, '#Trigrammes');
+
+    const trigrammes = document.getElementById('Trigrammes');
+    trigrammes.updateTableData('#sks',      'SKS',          ngrams.sks, 2);
+    trigrammes.updateTableData('#sfs',      'SFS',          ngrams.sfs, 2);
+    trigrammes.updateTableData('#redirect', 'redirections', ngrams.redirect, 2);
+    trigrammes.updateTableData(
+      '#bad-redirect',
+      'mauvaises redirections',
+      ngrams.badRedirect,
+      2,
+    );
   };
 
   // compute the heatmap for a text on a given layout
@@ -373,7 +471,7 @@ export function analyzeKeyboardLayout(
     let totalUnsupportedChars = 0;
     let extraKeysFrequency = 0;
 
-    for (const [char, frequency] of Object.entries(corpus.symbols)) {
+    for (const [char, frequency] of Object.entries(corpus)) {
       const keys = charToKeys(char)?.map(({ keyCode }) => keyCode);
       if (!keys) {
         unsupportedChars[char] = frequency;
@@ -387,18 +485,29 @@ export function analyzeKeyboardLayout(
       extraKeysFrequency += frequency * (keys.length - 1);
     }
 
+    // Set global variable, controls the color of canvas element for finger data
+    // (There’s ~probably~ a better way to do this)
+    impreciseData = totalUnsupportedChars >= 0.5;
+    document.querySelector('#imprecise-data').style.display = impreciseData
+      ? 'block'
+      : 'none';
+
     // display the heatmap
     const colormap = {};
     const contrast = 6;
-    const total = Object.values(corpus.symbols).reduce((acc, n) => n + acc, 0);
-    const impreciseData = totalUnsupportedChars >= 0.5;
-    const color = impreciseData ? errorColor : 'rgb(127, 127, 255)';
+    const total = Object.values(corpus).reduce((acc, n) => n + acc, 0);
+
+    const headingColor = getComputedStyle(document.querySelector('h1'))
+      .getPropertyValue('color')
+      .slice(0, -1); // remove `)` to add opacity later
 
     Object.keys(keyboard.layout.keyMap).forEach(key => {
       if (key === 'Enter') return;
       const count = keyCount[key] ?? 0;
       const lvl = (contrast * count) / total;
-      colormap[key] = color.replace(')',  `, ${lvl})`); // opacity
+      colormap[key] = impreciseData
+        ? headingColor + `, ${lvl})` // gray scale
+        : `rgb(127, 127, 255, ${lvl})`; // blue scale
     });
     keyboard.setCustomColors(colormap);
 
@@ -413,31 +522,99 @@ export function analyzeKeyboardLayout(
     });
 
     const allFingers = Object.values(keyboard.fingerAssignments);
+
     const loadGroups = [
       getLoadGroup(allFingers.slice(0, 4)),
       getLoadGroup(allFingers.slice(-4)),
     ];
 
-    return {
-      loadGroups,
-      unsupportedChars,
-      totalUnsupportedChars,
-      impreciseData,
-    };
+    document.querySelector('#load stats-canvas').renderData({
+      values: loadGroups,
+      maxValue: 25,
+      precision: 1
+    });
+    showPercentAll('#load small', loadGroups.map(sumUpBarGroup), 1);
+
+    showPercent('#unsupported-all', totalUnsupportedChars, 3, '#Achoppements');
+
+    document
+      .getElementById('Achoppements')
+      .updateTableData('#unsupported', 'non-support\u00e9', unsupportedChars, 3);
   };
 
-  // main
-  if (Object.keys(keyChars).length === 0) {
-    return {};
-  }
-  const heatmap = computeHeatmap();
-  const ngrams = computeNGrams();
-  return {
-    loadGroups:            heatmap.loadGroups,
-    unsupportedChars:      heatmap.unsupportedChars,
-    totalUnsupportedChars: heatmap.totalUnsupportedChars,
-    impreciseData:         heatmap.impreciseData,
-    ngrams:                ngrams.ngrams,
-    totalSfuSkuPerFinger:  ngrams.totalSfuSkuPerFinger,
+  // keyboard state: these <select> element IDs match the x-keyboard properties
+  // -- but the `layout` property requires a JSON fetch
+  const IDs = ['layout', 'geometry', 'corpus'];
+  const setProp = (key, value) => {
+    if (key === 'layout') {
+      if (value) {
+        const layoutFolder = document
+          .querySelector(`#layout option[value="${value}"]`).dataset.folder;
+        fetch(`../keymaps/${layoutFolder}/${value}.json`)
+          .then(response => response.json())
+          .then(data => {
+            const selectedOption = document
+              .querySelector('#layout option:checked')
+              .textContent.trim() || value;
+            inputField.placeholder = `zone de saisie ${selectedOption}`;
+            keyboard.setKeyboardLayout(
+              data.keymap,
+              data.deadkeys,
+              data.geometry.replace('ergo', 'iso'),
+            );
+            data.keymap.Enter = ['\r', '\n'];
+            keyChars = supportedChars(data.keymap, data.deadkeys);
+            computeHeatmap();
+            computeNGrams();
+          });
+      } else {
+        keyboard.setKeyboardLayout();
+        keyChars = {};
+        inputField.placeholder = 'select a keyboard layout';
+      }
+    } else if (key === 'corpus') {
+      if (value && value !== corpusName) {
+        fetch(`../corpus/${value}.json`)
+          .then(response => response.json())
+          .then(data => {
+            corpus = data.symbols;
+            digrams = data.digrams;
+            trigrams = data.trigrams;
+            if (Object.keys(keyChars).length > 0) {
+              computeHeatmap();
+              computeNGrams();
+            }
+          });
+        corpusName = value;
+      }
+    } else {
+      keyboard[key] = value;
+    }
+    document.getElementById(key).value = value;
   };
-}
+
+  // store the keyboard state in the URL hash like it's 1995 again! :-)
+  const state = {};
+  const updateHashState = (key, value) => {
+    state[key] = value;
+    window.location.hash = '/' +
+      IDs.map(prop => state[prop]).join('/').replace(/\/+$/, '');
+  };
+  const applyHashState = () => {
+    const hash = window.location.hash || '/ergol//en+fr';
+    const hashState = hash.split('/').slice(1);
+    IDs.forEach((key, i) => {
+      setProp(key, hashState[i] || '');
+      state[key] = hashState[i] || '';
+    });
+  };
+  IDs.forEach(key => {
+    document
+      .getElementById(key)
+      .addEventListener('change', event =>
+        updateHashState(key, event.target.value),
+      );
+  });
+  window.addEventListener('hashchange', applyHashState);
+  applyHashState();
+});

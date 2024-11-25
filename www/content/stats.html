@@ -4,12 +4,12 @@ title = "Analyseur"
 [params]
 description = "Fréquences de touches obtenues avec le “Don Quichotte” de Cervantès."
 cssSheets = ["/css/heatmap.css"]
-jsModules = ["/js/x-keyboard.js", "/js/layout-analyzer.js", "/js/stats.js", "/js/stats-table.js", "js/stats-canvas.js"]
-jsScripts = ["/js/keebs.js"]
-footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard) et [kalamine](https://onedeadkey.github.io/kalamine)"
+jsModules = ["/js/x-keyboard.js", "/js/collapsable-table.js", "js/stats-canvas.js"]
+jsScripts = ["/js/layout-analyzer.js", "/js/keebs.js"]
+footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
-<p> Voici l’analyseur qu’on a développé pour la mise au point d’Ergo‑L. Les
+<p> Voici l’analyseur qu’on a utilisé pour la mise au point d’Ergo‑L. Les
   métriques sont explicitées dans le <a href="/ressources/glossaire">glossaire</a>,
   et un <a href="/articles/analyse_et_optimisation">article détaillé</a> explique
   plus précisément les principes d’analyse mis en œuvre. </p>
@@ -51,58 +51,46 @@ footer = "quantifié par [x-keyboard](https://onedeadkey.github.io/x-keyboard) e
 
 <section id="sfu">
   <h3>Bigrammes de même doigt/touche</h3>
-  <small>
-    SFU : <span id="sfu-total"></span> /
-    SKU : <span id="sku-total"></span>
-  </small>
+  <small>SFU : <span id="sfu-all"></span> / SKU : <span id="sku-all"></span></small>
   <stats-canvas></stats-canvas>
 </section>
 
-<section id="achoppements">
-  <h3>Achoppements</h3>
+<collapsable-table id="Achoppements">
   <small>total :
     <span id="unsupported-all"></span> /
     <span id="sfu-all"></span> /
     <span id="extensions-all"></span> /
     <span id="scissors-all"></span>
   </small>
-  <stats-table>
-    <table id="unsupported"    title="non supporté"></table>
-    <table id="sfu-bigrams"    title="SFU"></table>
-    <table id="extended-rolls" title="LFB"></table>
-    <table id="scissors"       title="ciseaux"></table>
-  </stats-table>
-</section>
+  <table id="unsupported"></table>
+  <table id="sfu-digrams"></table>
+  <table id="extended-rolls"></table>
+  <table id="scissors"></table>
+</collapsable-table>
 
-<section id="bigrammes">
-  <h3>Bigrammes</h3>
+<collapsable-table id="Bigrammes">
   <small>total :
     <span id="sku-all"></span> /
     <span id="inward-all"></span> /
     <span id="outward-all"></span>
   </small>
-  <stats-table>
-    <table id="sku-bigrams" title="SKU"></table>
-    <table id="inward"      title="roulements intérieurs"></table>
-    <table id="outward"     title="roulements extérieurs"></table>
-  </stats-table>
-</section>
+  <table id="sku-digrams"></table>
+  <table id="inward"></table>
+  <table id="outward"></table>
+</collapsable-table>
 
-<section id="trigrammes">
-  <h3>Trigrammes</h3>
+<collapsable-table id="Trigrammes">
   <small>total :
     <span id="sks-all"></span> /
     <span id="sfs-all"></span> /
     <span id="redirect-all"></span> /
     <span id="bad-redirect-all"></span>
   </small>
-  <stats-table>
-    <table id="sks"          title="SKS"></table>
-    <table id="sfs"          title="SFS"></table>
-    <table id="redirect"     title="redirections"></table>
-    <table id="bad-redirect" title="mauvaises redirections"></table>
-  </stats-table>
-</section>
+  <table id="sks"></table>
+  <table id="sfs"></table>
+  <table id="redirect"></table>
+  <table id="bad-redirect"></table>
+</collapsable-table>
 
 <h2>Évaluation</h2>
 <p><a

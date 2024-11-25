@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/bin/env python3
 """ Merge two corpus dictionaries. """
 
 import json
@@ -8,7 +8,7 @@ from sys import argv
 def merge(filenames, filecount):
     merged = {
         "symbols": {},
-        "bigrams": {},
+        "digrams": {},
     }
 
     # merge dictionaries
@@ -33,7 +33,7 @@ def merge(filenames, filecount):
     results = {}
     results["corpus"] = ""
     results["symbols"] = sort_by_frequency(merged["symbols"])
-    results["bigrams"] = sort_by_frequency(merged["bigrams"])
+    results["digrams"] = sort_by_frequency(merged["digrams"])
     return results
 
 
