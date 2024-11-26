@@ -19,5 +19,29 @@
   <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}">
 {{ end }}
 
-{{ partial "head/js.html" . }}
-{{ partial "head/css.html" . }}
+{{ $opts := dict "format" "cjs" }}
+{{ if hugo.IsProduction }}
+  {{ $opts = merge $opts (dict "minify" true) }}
+{{ end }}
+
+{{ template "InsertJs" (dict "opts" $opts "collection" .Params.JsScripts "type" "text/javascript") }}
+{{ template "InsertJs" (dict "opts" $opts "collection" .Params.JsModules "type" "module") }}
+
+{{ define "InsertJs" }}
+  {{ $opts := .opts }}
+  {{ $type := .type }}
+  {{ range .collection }}
+    {{- with resources.Get . }}
+      {{- with . | js.Build (merge $opts (dict "targetPath" .RelPermalink)) }}
+        <script src="{{ .RelPermalink }}" type="{{ $type }}"></script>
+      {{- end }}
+    {{- end }}
+  {{ end }}
+{{ end }}
+
+{{ range (.Params.cssSheets | append "css/theme.css") }}
+  {{ with resources.Get . | minify }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+{{ end }}
+
