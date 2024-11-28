@@ -25,7 +25,7 @@ Principe de la disposition
 Hypergol est un projet de disposition de clavier qui cherche à incorporer les
 fonctionalités des claviers mécaniques programmables au sein de la disposition.
 À l’heure actuelle, aucune de ses fonctionnalités n’est inderdite : si c’est
-*techniquement faisaible* et que ça fait progresser l’ergonomie ou
+*techniquement faisable* et que ça fait progresser l’ergonomie ou
 l’optimisation de la disposition, alors on y a droit.
 
 La disposition est implémentée gràce a un pilote Kanata / QMK prévu pour être
