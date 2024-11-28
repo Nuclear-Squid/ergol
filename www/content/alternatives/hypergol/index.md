@@ -33,7 +33,7 @@ utilisé sur un ordinateur en Ergo‑L.
 
 Pour accélérer le développement de la dispo, nous utilisons un [brute-forceur]
 maison, qui ne cherche pas à concevoir la meilleur disposition possible sur la
-base d’une note globale hazardeuse, mais liste toutes les dispositions
+base d’une note globale hasardeuse, mais liste toutes les dispositions
 possibles qui addhèrent a des critères simples (pas moins de 12% de charge sur
 un anulaire, pas plus de 0.2% de SFU sur un auriculaire…). On reste sur la
 méthode d’optimisation classique des ergonautes, mais ça accélère le travail de
