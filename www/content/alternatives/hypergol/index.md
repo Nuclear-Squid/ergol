@@ -12,7 +12,7 @@ Une disposition et configuration de clavier aussi efficace qu’expérimentale�
 
 :::{.highlight style="max-width: 32em;"}
 - [Principe de la disposition]
-- [La géométrie "Hummingbird"]
+- [La géométrie « Hummingbird »]
 - [Le [E]{.kbd} et « touche magique » sous un pouce]
 - [Les auto-fills]
 - [Les combos étendus]
