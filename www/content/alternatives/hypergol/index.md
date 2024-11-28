@@ -35,7 +35,7 @@ Pour accélérer le développement de la dispo, nous utilisons un [brute-forceur
 maison, qui ne cherche pas à concevoir la meilleur disposition possible sur la
 base d’une note globale hasardeuse, mais liste toutes les dispositions
 possibles qui adhèrent à des critères simples (pas moins de 12% de charge sur
-un anulaire, pas plus de 0.2% de SFU sur un auriculaire…). On reste sur la
+un index, pas plus de 0.2% de SFU sur un auriculaire…). On reste sur la
 méthode d’optimisation classique des Ergonautes, mais ça accélère le travail de
 recherche (surtout avec les fonctionnalités d’Hypergol qui rendent la conception encore
 plus compliquée).
@@ -107,10 +107,10 @@ pour limiter les ciseaux, LSB et mauvaises redirections.
 La touche magique agit comme une touche repeat par défaut, sauf pour les
 lettres suivantes :
 
-|       |     |     |     |               |     |     |     |      |     |     |     |     |     |               |
-| ----- | --- | --- | --- | ---           | --- | --- | --- | ---  | --- | --- | --- | --- | --- | ---           |
-| Prev  | `A` | `C` | `D` | `E`           | `G` | `H` | `I` | `Q`  | `U` | `V` | `É` | `’` | `Y` | `E`           |
-| Magic | `O` | `★` | `Y` | [Space]{.kbd} | `T` | `.` | `,` | `U’` | `I` | `R` | `A` | `T` | `D` | [Space]{.kbd} |
+|       |     |     |     |               |     |     |     |      |     |     |     |     |     |
+| ----- | --- | --- | --- | ---           | --- | --- | --- | ---  | --- | --- | --- | --- | --- |
+| Prev  | `A` | `C` | `D` | `E`           | `G` | `H` | `I` | `Q`  | `U` | `V` | `É` | `’` | `Y` |
+| Magic | `O` | `★` | `Y` | [Space]{.kbd} | `T` | `.` | `,` | `U’` | `I` | `R` | `A` | `T` | `D` |
 
 
 ### Les configurations de pouces recommandés
@@ -166,7 +166,7 @@ d’implémenter une touche `Qu`.
 Une pression sur la touche `q` va immédiatement écrire un `q` et va surveiller
 la touche suivante. Si la touche suivante est fait partie de `aeio’é`, alors on
 rajoute un `u` juste avant d’écrire la lettre voulue (et si la touche ne fait
-pas partie de la liste, alors on sontinue comme si de rien était). On peut donc
+pas partie de la liste, alors on continue comme si de rien n’était). On peut donc
 facilement écrire `Que` ou `cinq` sans problèmes. Ça reste plus compliqué
 d’écrire `Qatar` mais pour l’instant, on considère que faire typo -> `q` insère
 un `q` sans l’auto-fill.
