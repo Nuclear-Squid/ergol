@@ -35,10 +35,10 @@ Pour accélérer le développement de la dispo, nous utilisons un [brute-forceur
 maison, qui ne cherche pas à concevoir la meilleur disposition possible sur la
 base d’une note globale hasardeuse, mais liste toutes les dispositions
 possibles qui adhèrent à des critères simples (pas moins de 12% de charge sur
-un index, pas plus de 0.2% de SFU sur un auriculaire…). On reste sur la
-méthode d’optimisation classique des Ergonautes, mais ça accélère le travail de
-recherche (surtout avec les fonctionnalités d’Hypergol qui rendent la conception encore
-plus compliquée).
+un index, pas plus de 0.2% de SFU sur un auriculaire…). On reste sur la méthode
+d’optimisation classique des Ergonautes, mais ça accélère le travail de
+recherche (surtout avec les fonctionnalités d’Hypergol qui rendent la
+conception encore plus compliquée).
 
 Attention : ce brute-forceur est un projet personnel inachevé du concepteur
 d’Hypergol (Nuclear-Squid). La qualité du code est affreuse, et nous sommes en
@@ -48,9 +48,9 @@ train de le réécrire pour pouvoir implémenter de nouvelles fonctionnalités.
 La géométrie « Hummingbird »
 --------------------------------------------------------------------------------
 
-Chez les Ergonautes, nous sommes convaincu·e·s des apports de la philosophie [1DFH]
-en terme de confort et d’ergonomie. Cependant, il reste des touches assez
-inconfortables dans le pavé de 3x10 central, comme les touches [Z]{.kbd},
+Chez les Ergonautes, nous sommes convaincu·e·s des apports de la philosophie
+[1DFH] en terme de confort et d’ergonomie. Cependant, il reste des touches
+assez inconfortables dans le pavé de 3x10 central, comme les touches [Z]{.kbd},
 [B]{.kbd}, [N]{.kbd} et [/]{.kbd} (sur un clavier ergonomique avec un gros
 stagger, comme le Ferris).
 
@@ -85,10 +85,10 @@ drastiquement le taux de roulements de la disposition. On compte faire des
 recherches pour trouver la lettre optimale a cette position.
 
 Passer une lettre sous un pouce permet donc de réqupérer une place dans le pavé
-de 3x10 pour le `é`, et puisque nous n’avons plus besoin mettre le tiret sous le
-`e` (comme en Ergo‑L), on l’a donc échangé avec l’apostrophe typographique sur
-la touche typo, ce qui permet de drastiquement réduire l’usage de cette touche
-typo (~4% -> ~1%).
+de 3x10 pour le `é`, et puisque nous n’avons plus besoin mettre le tiret sous
+le `e` (comme en Ergo‑L), on l’a donc échangé avec l’apostrophe typographique
+sur la touche typo, ce qui permet de drastiquement réduire l’usage de cette
+touche typo (~4% -> ~1%).
 
 La « touche magique » (inspirée de [Magic Sturdy]) est une touche dont le
 comportement dépend de la touche précédente (un peu comme l’inverse d’une
@@ -132,12 +132,12 @@ est de rajouter un « one-time-shift » (l’équivalent touche morte d’un
 afin de ne plus avoir d’erreurs de timing avec les lettres en majuscules.
 
 Malheureusement, avoir une lettre fréquemment doublée sous un pouce peut rendre
-la configuration des pouces compliquée : devoir mettre la touche magique sous le
-même pouce que l’espace nous force à avoir des configurations complexes et peu
-fiables pour totalement éliminer les SKB et SFK de pouce (qu’on a remarqué être
-particulièrement inconfortables) et profiter pleinement des touches de pouces
-disponibles (par exemple, temporairement transformer le one-time-shift en
-espace après une pression de la touche magique).
+la configuration des pouces compliquée : devoir mettre la touche magique sous
+le même pouce que l’espace nous force à avoir des configurations complexes et
+peu fiables pour totalement éliminer les SKB et SFK de pouce (qu’on a remarqué
+être particulièrement inconfortables) et profiter pleinement des touches de
+pouces disponibles (par exemple, temporairement transformer le one-time-shift
+en espace après une pression de la touche magique).
 
 Avoir espace et one-time-shift d’un côté et une lettre (non doublée) et magic
 de l’autre permettrait d’éliminer ces soucis de configuration. Nous travaillons
@@ -166,8 +166,8 @@ d’implémenter une touche `Qu`.
 Une pression sur la touche `q` va immédiatement écrire un `q` et va surveiller
 la touche suivante. Si la touche suivante est fait partie de `aeio’é`, alors on
 rajoute un `u` juste avant d’écrire la lettre voulue (et si la touche ne fait
-pas partie de la liste, alors on continue comme si de rien n’était). On peut donc
-facilement écrire `Que` ou `cinq` sans problèmes. Ça reste plus compliqué
+pas partie de la liste, alors on continue comme si de rien n’était). On peut
+donc facilement écrire `Que` ou `cinq` sans problèmes. Ça reste plus compliqué
 d’écrire `Qatar` mais pour l’instant, on considère que faire typo -> `q` insère
 un `q` sans l’auto-fill.
 
@@ -193,15 +193,15 @@ Les « combos étendus »
 --------------------------------------------------------------------------------
 
 Les « combos étendus » sont une autre fonctionnalité exclusive à Hypergol, et
-c’est probablement la partie la plus complexe de la disposition. Cette fonctionnalité
-permet de transformer la dispo en un hybride entre un clavier standard et un
-clavier de sténotypie.
+c’est probablement la partie la plus complexe de la disposition. Cette
+fonctionnalité permet de transformer la dispo en un hybride entre un clavier
+standard et un clavier de sténotypie.
 
 L’idée est qu’on peut taper un combo (appuyer sur deux touches spécifiques en
-même temps) pour écrire un mot ou morceau de mot. Comme pour les auto-fills,
-la touche suivante va être surveillée ; mais cette fois, au lieu de rajouter une
-seule lettre, on rentre dans une machine a états qui va écrire le reste du
-mot et potentiellement continuer la séquence.
+même temps) pour écrire un mot ou morceau de mot. Comme pour les auto-fills, la
+touche suivante va être surveillée ; mais cette fois, au lieu de rajouter une
+seule lettre, on rentre dans une machine a états qui va écrire le reste du mot
+et potentiellement continuer la séquence.
 
 Par exemple, appuyer sur [S]{.kbd} et [F]{.kbd} (de Qwerty) en même temps, va
 écrire `the`, et donne accès a ces extensions suivantes :
@@ -215,24 +215,24 @@ Par exemple, appuyer sur [S]{.kbd} et [F]{.kbd} (de Qwerty) en même temps, va
 la machine a états et écrire la touche comme si de rien n’était.)
 
 À l’heure actuelle, c’est le seul combo étendu de la dispo. Il sert surtout de
-« proof of concept » et bien que l’expérience soit satisfaisante, nous n’en avons
-pas encore rajouté d’autres : il reste des parties plus critiques à régler
-avant ça.
+« proof of concept » et bien que l’expérience soit satisfaisante, nous n’en
+avons pas encore rajouté d’autres : il reste des parties plus critiques à
+régler avant ça.
 
 
 « C’est où qu’on signe ? »
 --------------------------------------------------------------------------------
 
 Certains d’entre vous doivent probablement beaucoup aimer le concept, et
-voudront utiliser la disposition le plus tôt possible. Mais attention, c’est en plein
-développement et ça n’est pas encore prévu pour une utilisation quotidienne : il y a des
-bugs dans les pilotes, notre analyseur ne sait pas gérer ce type de
-dispositions, il manque des fonctionnalités dans beaucoup d’applis/frameworks pour
-claviers programmables qu’on doit implémenter nous mêmes, il faut travailler
-sur le [brute-forceur maison] pour qu’il puisse repérer les mauvaises
-redirections (et proposer des auto-fills), la disposition peut encore
-radicalement bouger et nous ne sommes pas a l’abri de découvrir une nouvelle
-fonctionnalité, ou remettre en cause une fonctionnalité existante.
+voudront utiliser la disposition le plus tôt possible. Mais attention, c’est en
+plein développement et ça n’est pas encore prévu pour une utilisation
+quotidienne : il y a des bugs dans les pilotes, notre analyseur ne sait pas
+gérer ce type de dispositions, il manque des fonctionnalités dans beaucoup
+d’applis/frameworks pour claviers programmables qu’on doit implémenter nous
+mêmes, il faut travailler sur le [brute-forceur maison] pour qu’il puisse
+repérer les mauvaises redirections (et proposer des auto-fills), la disposition
+peut encore radicalement bouger et nous ne sommes pas a l’abri de découvrir une
+nouvelle fonctionnalité, ou remettre en cause une fonctionnalité existante.
 
 Pour le dire autrement, nous ne vous recommandons ***PAS*** Hypergol pour
 l’instant, car :
@@ -246,10 +246,10 @@ l’instant, car :
 - on n’a pas de keymaps ZMK, Kmonad, Keyd, Keyberon…
 
 En revanche, si aucun des points précédemment cités ne vous fait peur et que
-vous voulez faire partie des alpha-testeurs, n’hésitez pas à venir sur le [serveur
-Discord d’Ergo‑L], où on développe la disposition. On serait ravi d’avoir des
-nouvelles idées de choses à rajouter à la disposition ou de l’aide avec les
-parties techniques !
+vous voulez faire partie des alpha-testeurs, n’hésitez pas à venir sur le
+[serveur Discord d’Ergo‑L], où on développe la disposition. On serait ravi
+d’avoir des nouvelles idées de choses à rajouter à la disposition ou de l’aide
+avec les parties techniques !
 
 
 [Arsenik]:                 https://github.com/OneDeadKey/arsenik
