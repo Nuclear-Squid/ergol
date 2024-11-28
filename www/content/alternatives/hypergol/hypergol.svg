@@ -135,8 +135,7 @@
       </g>
       <g transform="translate(0 120)">
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">-</text>
-        <text x="12.8" y="20.6" class="level2">?</text>
+        <text x="12.8" y="20.6" class="level2">É</text>
         <text x="38.0" y="43.4" class="sym">]</text>
       </g>
     </g>
