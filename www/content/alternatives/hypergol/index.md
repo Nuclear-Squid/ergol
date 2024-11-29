@@ -24,11 +24,11 @@ Principe de la disposition
 
 Hypergol est un projet de disposition de clavier qui cherche à incorporer les
 fonctionalités des claviers mécaniques programmables au sein de la disposition.
-À l’heure actuelle, aucune de ses fonctionnalités n’est inderdite : si c’est
+À l’heure actuelle, on ne s’interdit aucune de ces fonctionnalités : si c’est
 *techniquement faisable* et que ça fait progresser l’ergonomie ou
 l’optimisation de la disposition, alors on y a droit.
 
-La disposition est implémentée gràce a un pilote Kanata / QMK prévu pour être
+La disposition est implémentée gràce a un pilote Kanata ou QMK prévu pour être
 utilisé sur un ordinateur en Ergo‑L.
 
 Pour accélérer le développement de la dispo, nous utilisons un [brute-forceur]
@@ -78,11 +78,11 @@ Le [E]{.kbd} et « touche magique » sous un pouce
 
 Puisque nous avons prévu la disposition pour des claviers programables, alors
 on peut se permettre de mettre des lettres sous les pouces. Le `e` étant la
-lettre la plus fréquente en français et anglais, c’est donc celle-ci que nous
-avons choisie. Nous avons cependant remarqué que d’avoir le `e` sous le pouce
+lettre la plus fréquente en français et anglais, c’est celle-ci qui a été
+retenue. Nous avons cependant remarqué qu’avoir le `e` sous le pouce
 transforme beaucoup de roulements en alternances (avec un pouce), ce qui baisse
 drastiquement le taux de roulements de la disposition. On compte faire des
-recherches pour trouver la lettre optimale a cette position.
+recherches pour trouver la lettre optimale à cette position.
 
 Passer une lettre sous un pouce permet donc de réqupérer une place dans le pavé
 de 3x10 pour le `é`, et puisque nous n’avons plus besoin mettre le tiret sous
@@ -91,17 +91,17 @@ sur la touche typo, ce qui permet de drastiquement réduire l’usage de cette
 touche typo (~4% -> ~1%).
 
 La « touche magique » (inspirée de [Magic Sturdy]) est une touche dont le
-comportement dépend de la touche précédente (un peu comme l’inverse d’une
-touche morte). Elle se comporte comme une touche « [alt repeat] » de QMK : elle
+comportement dépend de la touche précédente — un peu comme l’inverse d’une
+touche morte. Elle se comporte comme une touche « [alt repeat] » de QMK : elle
 répète les symboles fréquemment doublés et fait un autre symbole sur le même
-doigt pour les autres. L’objectif de cette touche est de totalement (ou
-presque) éliminer les SKB et SFB.
+doigt pour les autres. L’objectif de cette touche est d’éliminer totalement
+(ou presque) les SKB et SFB.
 
-Par exemple, `ui` est un SFB qui a 0.7% de fréquence en français, donc après un
+Par exemple, `ui` est un SFB qui a 0,7 % de fréquence en français, donc après un
 `u`, la touche magique insère un `i`. De nombreux SFB sont *intentionnellement*
 insérés dans la disposition pour qu’ils soient corrigés par cette touche
-magique. Cela permet d’avoir à la fois un score de SFU très bas (estimé à 0.3%
-en français et 0.4% en anglais) tout en se laissant assez de marge de manœuvre
+magique. Cela permet d’obtenir un score de SFU très bas (estimé à 0,3 %
+en français et 0,4 % en anglais) tout en se laissant assez de marge de manœuvre
 pour limiter les ciseaux, LSB et mauvaises redirections.
 
 La touche magique agit comme une touche repeat par défaut, sauf pour les
@@ -115,8 +115,8 @@ lettres suivantes :
 
 ### Les configurations de pouces recommandés
 
-Bien que la dispo soit avec une configuration de pouces précise, vous êtes
-libre d’adapter cette configuration comme bon vous semble. Il reste cependant
+Bien que la dispo soit proposée avec une configuration de pouces précise, vous
+êtes libre d’adapter cette configuration comme bon vous semble. Il y a cependant
 quelques pièges à éviter.
 
 Nous recommandons d’utiliser la configuration d’[Arsenik] ou [Selenium]
@@ -156,18 +156,18 @@ d’éliminer les mauvaises redirections et économiser quelques touches.
 Une façon de comprendre le concept de cette fonctionnalité est de regarder le
 fonctionnement de la touche `Qu`.
 
-En français comme en anglais, le `Q` n’est pratiquement *que* suivi par un `u`,
-donc une façon d’économiser des gestes est d’utiliser une touche qui écrit
-directement `qu`. Cependant, cela peut causer des problèmes, si on veut écrire
+En français comme en anglais, le `Q` étant quasiment *toujours* suivi par un `u`,
+une façon d’économiser des gestes serait donc d’utiliser une touche qui écrit
+directement `qu`. Mais cela peut causer des problèmes, notamment pour écrire
 `Qatar`, `cinq` ou commencer une phrase par un `q` (puisque shift + `qu` donne
-`QU` au lieu de `Qu`). Les auto-fills sont une façon beaucoup plus fiable
-d’implémenter une touche `Qu`.
+`QU` et non `Qu`). Pour éviter ces écueils, on a recours à des auto-fills
+plutôt qu’à une touche `Qu`.
 
-Une pression sur la touche `q` va immédiatement écrire un `q` et va surveiller
+Une pression sur la touche `q` va immédiatement écrire un `q` et surveiller
 la touche suivante. Si la touche suivante est fait partie de `aeio’é`, alors on
 rajoute un `u` juste avant d’écrire la lettre voulue (et si la touche ne fait
 pas partie de la liste, alors on continue comme si de rien n’était). On peut
-donc facilement écrire `Que` ou `cinq` sans problèmes. Ça reste plus compliqué
+donc facilement écrire `Que` ou `cinq` sans problème. Ça reste plus compliqué
 d’écrire `Qatar` mais pour l’instant, on considère que faire typo -> `q` insère
 un `q` sans l’auto-fill.
 
@@ -180,13 +180,13 @@ d’apparition négligeable, alors on peut s’en servir pour taper un auto-fill
 mauvaises redirections.
 
 Par exemple, dans la version actuelle d’Hypergol, on a une mauvaise redirection
-sur `you` (en anglais). Cependant, le bigramme `yu` n’existe pratiquement pas,
-donc on peut utiliser un auto-fill pour écrire `you` en tapant `yu`, ce qui
-transforme une mauvaise redirection en un roulement intérieur.
+sur `you` (en anglais). Mais puisque le bigramme `yu` n’existe pratiquement pas,
+on peut utiliser un auto-fill pour écrire `you` en tapant `yu`, et ainsi
+transformer une mauvaise redirection en roulement intérieur.
 
-Les auto-fills sont nés en cherchant une meilleur implémentation de la touche
-`qu`, et ce n’est que plus tard que nous avons trouvé cet usage, donc Hypergol
-ne profite pas encore pleinement des posibilités que cela ouvre.
+Les auto-fills sont nés en cherchant une meilleure implémentation de la touche
+`qu`, et ce n’est que plus tard que nous avons trouvé cet usage pour `you`.
+Hypergol ne profite donc pas encore pleinement des possibilités que cela ouvre.
 
 
 Les « combos étendus »
@@ -197,14 +197,14 @@ c’est probablement la partie la plus complexe de la disposition. Cette
 fonctionnalité permet de transformer la dispo en un hybride entre un clavier
 standard et un clavier de sténotypie.
 
-L’idée est qu’on peut taper un combo (appuyer sur deux touches spécifiques en
+L’idée est qu’on peut taper un combo (deux touches spécifiques actionnées en
 même temps) pour écrire un mot ou morceau de mot. Comme pour les auto-fills, la
 touche suivante va être surveillée ; mais cette fois, au lieu de rajouter une
 seule lettre, on rentre dans une machine a états qui va écrire le reste du mot
 et potentiellement continuer la séquence.
 
-Par exemple, appuyer sur [S]{.kbd} et [F]{.kbd} (de Qwerty) en même temps, va
-écrire `the`, et donne accès a ces extensions suivantes :
+Par exemple, appuyer sur [S]{.kbd} et [F]{.kbd} (de Qwerty) en même temps va
+écrire `the`, et donne accès aux extensions suivantes :
 
 |         |        |         |         |           |           |        |
 |   ---   | ---    | ---     | ---     | ---       | ---       | ---    |
@@ -223,16 +223,14 @@ régler avant ça.
 « C’est où qu’on signe ? »
 --------------------------------------------------------------------------------
 
-Certains d’entre vous doivent probablement beaucoup aimer le concept, et
-voudront utiliser la disposition le plus tôt possible. Mais attention, c’est en
-plein développement et ça n’est pas encore prévu pour une utilisation
-quotidienne : il y a des bugs dans les pilotes, notre analyseur ne sait pas
+Attention ! Hypergol est en plein développement et n’est pas encore utilisable
+au quotidien : il y a des bugs dans les pilotes, notre analyseur ne sait pas
 gérer ce type de dispositions, il manque des fonctionnalités dans beaucoup
-d’applis/frameworks pour claviers programmables qu’on doit implémenter nous
-mêmes, il faut travailler sur le [brute-forceur maison] pour qu’il puisse
+d’applis/frameworks pour claviers programmables qu’on doit implémenter
+nous-mêmes, il faut travailler sur le [brute-forceur maison] pour qu’il puisse
 repérer les mauvaises redirections (et proposer des auto-fills), la disposition
-peut encore radicalement bouger et nous ne sommes pas a l’abri de découvrir une
-nouvelle fonctionnalité, ou remettre en cause une fonctionnalité existante.
+peut encore radicalement bouger — et nous ne sommes à l’abri ni de découvrir
+une nouvelle fonctionnalité, ni de remettre en cause une fonctionnalité existante.
 
 Pour le dire autrement, nous ne vous recommandons ***PAS*** Hypergol pour
 l’instant, car :
