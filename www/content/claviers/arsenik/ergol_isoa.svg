@@ -1,6 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 60 720 240">
 
   <style>
+    /* Base color palette -- https://coolors.co/9cf6f6-f3c98b-daa588-c46d5e-f56960 */
+    :root {
+      --color-palette-a: #9CF6F6;
+      --color-palette-b: #F3C98B;
+      --color-palette-c: #DAA588;
+      --color-palette-d: #C46D5E;
+      --color-palette-e: #F56960;
+    }
+
+    /* Derived color palette -- when lighter or darker shades are required */
+    :root {
+      --color-palette-a-light: #DAFCFC;
+      --color-palette-b-light: #FBEEDA;
+      --color-palette-c-light: #F5E7E0;
+      --color-palette-d-light: #EED7D2;
+      --color-palette-e-light: #FBC9C5;
+      
+      --color-palette-a-dark: #0E9595;
+      --color-palette-b-dark: #CB8215;
+      --color-palette-c-dark: #9C5630;
+      --color-palette-d-dark: #77372C;
+      --color-palette-e-dark: #99130A;
+    }
+
     :root {
       color-scheme: light dark;
     }
@@ -27,36 +51,26 @@
     .layerMod { font-weight: bold; font-size: 14px; }
 
     .layerMod, .colorMod { fill: #333; }
-    .layerSym, .colorSym { fill: blue; }
+    .layerSym, .colorSym { fill: var(--color-palette-a-dark); }
     #row_AA    .level2   { fill: #333; }
 
-    [finger="m1"] rect { fill: hsl(  0, 100%, 95%); }
-    [finger="l2"] rect { fill: hsl( 42, 100%, 85%); }
-    [finger="r2"] rect { fill: hsl( 61, 100%, 85%); }
+    [finger="m1"] rect { fill: var(--color-palette-a); }
+    [finger="l2"] rect { fill: var(--color-palette-a); }
+    [finger="r2"] rect { fill: var(--color-palette-b); }
     [finger="l3"] rect,
-    [finger="r3"] rect { fill: hsl(136, 100%, 85%); }
+    [finger="r3"] rect { fill: var(--color-palette-c); }
     [finger="l4"] rect,
-    [finger="r4"] rect { fill: hsl(200, 100%, 85%); }
+    [finger="r4"] rect { fill: var(--color-palette-d); }
     [finger="l5"] rect,
-    [finger="r5"] rect { fill: hsl(230, 100%, 85%); }
+    [finger="r5"] rect { fill: var(--color-palette-e); }
 
     @media (prefers-color-scheme: dark) {
       text                 { fill: #aaa; }
       rect                 { fill: #444; }
       .dualKey             { fill: #666; }
       .layerMod, .colorMod { fill: #eee; }
-      .layerSym, .colorSym { fill: #99f; }
+      .layerSym, .colorSym { fill: var(--color-palette-a-light); }
       #row_AA .level2      { fill: #ccc; }
-      /* 'hints' theme */
-      [finger="m1"] rect { fill: hsl(  0, 25%, 30%); }
-      [finger="l2"] rect { fill: hsl( 31, 30%, 30%); }
-      [finger="r2"] rect { fill: hsl( 61, 30%, 30%); }
-      [finger="l3"] rect,
-      [finger="r3"] rect { fill: hsl(136, 30%, 30%); }
-      [finger="l4"] rect,
-      [finger="r4"] rect { fill: hsl(200, 30%, 30%); }
-      [finger="l5"] rect,
-      [finger="r5"] rect { fill: hsl(230, 30%, 30%); }
     }
   </style>
 

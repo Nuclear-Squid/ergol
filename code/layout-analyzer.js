@@ -507,7 +507,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const lvl = (contrast * count) / total;
       colormap[key] = impreciseData
         ? headingColor + `, ${lvl})` // gray scale
-        : `rgb(127, 127, 255, ${lvl})`; // blue scale
+        : `rgb(153, 19, 10, ${lvl})`; // scale with shades of --color-palette-e-dark = #99130A
     });
     keyboard.setCustomColors(colormap);
 
