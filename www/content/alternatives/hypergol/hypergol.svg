@@ -44,7 +44,7 @@
 
   <g id="row_AD">
     <g class="left">
-      <g transform="translate(90, 15)">
+      <g transform="translate(90, 10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Y</text>
         <text x="38.0" y="43.4" class="layerSym">^</text>
@@ -54,7 +54,7 @@
         <text x="12.8" y="20.6" class="level2">U</text>
         <text x="38.0" y="43.4" class="layerSym">&lt;</text>
       </g>
-      <g transform="translate(210, -15)">
+      <g transform="translate(210, -10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">O</text>
         <text x="38.0" y="43.4" class="layerSym">&gt;</text>
@@ -82,7 +82,7 @@
         <text x="12.8" y="20.6" class="level2">P</text>
         <text x="38.0" y="43.4" class="layerSym">&amp;</text>
       </g>
-      <g transform="translate(510, -15)">
+      <g transform="translate(510, -10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">M</text>
         <text x="38.0" y="43.4" class="layerSym">*</text>
@@ -92,7 +92,7 @@
         <text x="12.8" y="20.6" class="level2">L</text>
         <text x="38.0" y="43.4" class="layerSym">'</text>
       </g>
-      <g transform="translate(630, 15)">
+      <g transform="translate(630, 10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">★</text>
         <text x="38.0" y="43.4" class="layerSym">`</text>
@@ -102,7 +102,7 @@
 
   <g id="row_AC">
     <g class="left">
-      <g transform="translate(90, 15)">
+      <g transform="translate(90, 10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">D</text>
         <text x="38.0" y="43.4" class="layerSym">{</text>
@@ -112,7 +112,7 @@
         <text x="12.8" y="20.6" class="level2">I</text>
         <text x="38.0" y="43.4" class="layerSym">(</text>
       </g>
-      <g transform="translate(210, -15)">
+      <g transform="translate(210, -10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">A</text>
         <text x="38.0" y="43.4" class="layerSym">)</text>
@@ -140,7 +140,7 @@
         <text x="12.8" y="20.6" class="level2">N</text>
         <text x="38.0" y="43.4" class="layerSym">+</text>
       </g>
-      <g transform="translate(510, -15)">
+      <g transform="translate(510, -10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">S</text>
         <text x="38.0" y="43.4" class="layerSym">-</text>
@@ -150,7 +150,7 @@
         <text x="12.8" y="20.6" class="level2">R</text>
         <text x="38.0" y="43.4" class="layerSym">/</text>
       </g>
-      <g transform="translate(630, 15)">
+      <g transform="translate(630, 10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">C</text>
         <text x="38.0" y="43.4" class="layerSym">"</text>
@@ -168,7 +168,7 @@
           <text x="38.0" y="43.4" class="layerSym">[</text>
         </g>
       </g>
-      <g transform="translate(210, -15)">
+      <g transform="translate(210, -10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <g>
           <text x="12.8" y="20.6" class="level2">É</text>
@@ -189,7 +189,7 @@
         <text x="12.8" y="20.6" class="level2">H</text>
         <text x="38.0" y="43.4" class="layerSym">!</text>
       </g>
-      <g transform="translate(510, -15)">
+      <g transform="translate(510, -10)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">F</text>
         <text x="38.0" y="43.4" class="layerSym">;</text>
