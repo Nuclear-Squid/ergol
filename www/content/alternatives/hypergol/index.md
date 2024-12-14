@@ -15,7 +15,7 @@ Une disposition et configuration de clavier aussi efficace qu’expérimentale�
 - [La géométrie « Hummingbird »]
 - [Le [E]{.kbd} et « touche magique » sous un pouce]
 - [Les auto-fills]
-- [Les combos étendus]
+- [Les « combos étendus »]
 - [« C’est où qu’on signe ? »]
 :::
 
@@ -58,10 +58,6 @@ stagger, comme le Ferris).
 ![Un exemple de clavier « hummingbird »](hummingbird.jpg){width="25em"}
 :::
 
-<!-- Bien que le clavier présenté utilise 4 touches de pouces, on cherche aussi a -->
-<!-- prévoir une disposition utilisable sur un clavier avec seulement 3 touches de -->
-<!-- pouces (comme avec Arsenik). -->
-
 Retirer 4 touches sur le clavier nous force donc à trouver des nouvelles places
 pour les 4 lettres les moins fréquentes en français et anglais (`z`, `x`, `k`
 et `j`), et pour ça, nous avons décidé de les placer sur la touche typo. On
@@ -84,18 +80,18 @@ transforme beaucoup de roulements en alternances (avec un pouce), ce qui baisse
 drastiquement le taux de roulements de la disposition. On compte faire des
 recherches pour trouver la lettre optimale à cette position.
 
-Passer une lettre sous un pouce permet donc de réqupérer une place dans le pavé
-de 3x10 pour le `é`, et puisque nous n’avons plus besoin mettre le tiret sous
-le `e` (comme en Ergo‑L), on l’a donc échangé avec l’apostrophe typographique
-sur la touche typo, ce qui permet de drastiquement réduire l’usage de cette
-touche typo (~4% -> ~1%).
+Passer une lettre sous un pouce permet de récupérer une place dans le pavé de
+3x10 pour le `é` ; et puisque nous n’avons plus besoin de mettre le tiret sous
+le `e` comme en Ergo‑L, on peut le mettre derrière la touche typo et repasser
+l’apostrophe typographique en direct. Cela permet de réduire drastiquement
+l’usage de cette touche typo, qui passe de ~4% à ~1% en français.
 
-La « touche magique » (inspirée de [Magic Sturdy]) est une touche dont le
-comportement dépend de la touche précédente — un peu comme l’inverse d’une
-touche morte. Elle se comporte comme une touche « [alt repeat] » de QMK : elle
-répète les symboles fréquemment doublés et fait un autre symbole sur le même
-doigt pour les autres. L’objectif de cette touche est d’éliminer totalement
-(ou presque) les SKB et SFB.
+La « touche magique » (inspirée de [Magic Sturdy], et marqué par un `⛧` dans la
+l’image de la dispo) est une touche dont le comportement dépend de la touche
+précédente — un peu comme l’inverse d’une touche morte. Elle se comporte comme
+une touche « [alt repeat] » de QMK : elle répète les symboles fréquemment
+doublés et fait un autre symbole sur le même doigt pour les autres. L’objectif
+de cette touche est d’éliminer totalement (ou presque) les SKB et SFB.
 
 Par exemple, `ui` est un SFB qui a 0,7 % de fréquence en français, donc après un
 `u`, la touche magique insère un `i`. De nombreux SFB sont *intentionnellement*
@@ -107,10 +103,10 @@ pour limiter les ciseaux, LSB et mauvaises redirections.
 La touche magique agit comme une touche repeat par défaut, sauf pour les
 lettres suivantes :
 
-|       |     |     |     |               |     |     |     |      |     |     |     |     |     |
-| ----- | --- | --- | --- | ---           | --- | --- | --- | ---  | --- | --- | --- | --- | --- |
-| Prev  | `A` | `C` | `D` | `E`           | `G` | `H` | `I` | `Q`  | `U` | `V` | `É` | `’` | `Y` |
-| Magic | `O` | `★` | `Y` | [Space]{.kbd} | `T` | `.` | `,` | `U’` | `I` | `R` | `A` | `T` | `D` |
+|       |     |     |     |     |     |     |      |     |     |     |     |     |               |
+| ----- | --- | --- | --- | --- | --- | --- | ---  | --- | --- | --- | --- | --- | ---           |
+| Prev  | `A` | `C` | `D` | `G` | `H` | `I` | `Q`  | `U` | `V` | `É` | `’` | `Y` | [Space]{.kbd} |
+| Magic | `O` | `★` | `Y` | `T` | `.` | `,` | `U’` | `I` | `R` | `A` | `T` | `D` | `E`           |
 
 
 ### Les configurations de pouces recommandés
@@ -206,10 +202,12 @@ et potentiellement continuer la séquence.
 Par exemple, appuyer sur [S]{.kbd} et [F]{.kbd} (de Qwerty) en même temps va
 écrire `the`, et donne accès aux extensions suivantes :
 
-|         |        |         |         |           |           |        |
-|   ---   | ---    | ---     | ---     | ---       | ---       | ---    |
-| lettre  | `F`    | `N`     | `S`     | `R`       | `L`       | `M`    |
-| mot     | `they` | `there` | `their` | `they’re` | `they’ll` | `them` |
+:::{ style="width: 80%; text-align: center; margin: auto" }
+|         |        |         |         |           |           |
+|   ---   | ---    | ---     | ---     | ---       | ---       |
+| lettre  | `F`    | `N`     | `S`     | `R`       | `L`       |
+| mot     | `they` | `there` | `their` | `they’re` | `they’ll` |
+:::
 
 (Comme pour les auto-fills, écrire n’importe quelle autre lettre va sortir de
 la machine a états et écrire la touche comme si de rien n’était.)
@@ -227,7 +225,7 @@ Attention ! Hypergol est en plein développement et n’est pas encore utilisa
 au quotidien : il y a des bugs dans les pilotes, notre analyseur ne sait pas
 gérer ce type de dispositions, il manque des fonctionnalités dans beaucoup
 d’applis/frameworks pour claviers programmables qu’on doit implémenter
-nous-mêmes, il faut travailler sur le [brute-forceur maison] pour qu’il puisse
+nous-mêmes, il faut travailler sur le [brute-forceur] maison pour qu’il puisse
 repérer les mauvaises redirections (et proposer des auto-fills), la disposition
 peut encore radicalement bouger — et nous ne sommes à l’abri ni de découvrir
 une nouvelle fonctionnalité, ni de remettre en cause une fonctionnalité existante.
@@ -250,8 +248,9 @@ d’avoir des nouvelles idées de choses à rajouter à la disposition ou de l�
 avec les parties techniques !
 
 
-[Arsenik]:                 https://github.com/OneDeadKey/arsenik
-[Selenium]:
+[1DFH]:                     /presentation#dfh-1u-distance-from-home
+[Arsenik]:                  https://github.com/OneDeadKey/arsenik
+[Selenium]:                 https://github.com/OneDeadKey/arsenik
 [serveur Discord d’Ergo‑L]: https://discord.gg/5xR5K3nAFX
 [brute-forceur]:            https://github.com/nuclear-Squid/klayopt
 [magic sturdy]:             https://github.com/Ikcelaks/keyboard_layouts/blob/main/magic_sturdy/magic_sturdy.md
