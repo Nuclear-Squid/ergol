@@ -11,15 +11,15 @@
       --fg-normal:        #333;
       --bg-normal:        #fff;
       /* special keys */
-      --fg-level3:        blue;
-      --fg-level5:        green;
-      --fg-deadkey:       red;
+      --fg-level3:        var(--color-palette-a-dark);
+      --fg-level5:        var(--color-palette-b-dark);
+      --fg-deadkey:       var(--color-palette-d-dark);
       --fg-special:       #555;
       --bg-special:       #e4e4e4;
       /* 'reach' theme */
-      --bg-number:        hsl(295, 100%, 95%);
-      --bg-letter:        hsl(222, 100%, 95%);
-      --bg-home:          hsl(222, 100%, 90%);
+      --bg-number:        var(--color-palette-a-light);
+      --bg-letter:        var(--color-palette-b-light);
+      --bg-home:          var(--color-palette-d-light);
     }
 
     @media (prefers-color-scheme: dark) { :root {
@@ -28,15 +28,15 @@
       --fg-normal:        #bbb;
       --bg-normal:        #4d4d4d;
       /* special keys */
-      --fg-level3:        #99f;
-      --fg-level5:        #6d6;
-      --fg-deadkey:       #f77;
+      --fg-level3:        var(--color-palette-a-light);
+      --fg-level5:        var(--color-palette-b-light);
+      --fg-deadkey:       var(--color-palette-d-light);
       --fg-special:       #888;
       --bg-special:       #333;
       /* 'reach' theme */
-      --bg-number:        hsl(280, 10%, 34%);
-      --bg-letter:        hsl(220, 15%, 35%);
-      --bg-home:          hsl(225, 30%, 30%);
+      --bg-number:        var(--color-palette-a-dark);
+      --bg-letter:        var(--color-palette-b-dark);
+      --bg-home:          var(--color-palette-d-dark);
     }}
 
     rect, path {

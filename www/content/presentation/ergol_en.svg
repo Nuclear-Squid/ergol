@@ -1,8 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="gnu" viewBox="135 60 630 240">
 
   <style>
+    /* Base color palette -- https://coolors.co/9cf6f6-f3c98b-daa588-c46d5e-f56960 */
+    :root {
+      --color-palette-a: #9CF6F6;
+      --color-palette-b: #F3C98B;
+      --color-palette-c: #DAA588;
+      --color-palette-d: #C46D5E;
+      --color-palette-e: #F56960;
+    }
+
+    /* Derived color palette -- when lighter or darker shades are required */
+    :root {
+      --color-palette-a-light: #DAFCFC;
+      --color-palette-b-light: #FBEEDA;
+      --color-palette-c-light: #F5E7E0;
+      --color-palette-d-light: #EED7D2;
+      --color-palette-e-light: #FBC9C5;
+      
+      --color-palette-a-dark: #0E9595;
+      --color-palette-b-dark: #CB8215;
+      --color-palette-c-dark: #9C5630;
+      --color-palette-d-dark: #77372C;
+      --color-palette-e-dark: #99130A;
+    }
+
     :root {
       color-scheme: light dark;
+      --colormap-color: 153, 19, 10; /* --color-palette-e-dark = #99130A*/
     }
     rect, path {
       fill: #f8f8f8;
@@ -11,7 +36,7 @@
       stroke-width: .5px;
     }
     text {
-      fill: #777;
+      fill: #333;
       text-shadow: 0 1px 0px #8bb8;
       font: normal 20px sans-serif;
       text-align: center;
@@ -33,66 +58,69 @@
     .right  { transform: translate(+15px, 0); }
 
     .layer  { opacity: 0.7; font-size: 14px; }
-    .level3 { opacity: 0.0; fill: green; }
+    .level3 { opacity: 0.0; fill: var(--color-palette-a-dark); }
 
     @media (prefers-color-scheme: dark) {
+      :root {
+        --colormap-color: 251, 201, 197; /* --color-palette-e-light = #FBC9C5*/
+      }
       rect, path { fill: #444; }
       text       { fill: #bbb; }
-      .deadKey   { fill: #f44; }
-      .level3    { fill: #6b6; }
+      /* .deadKey   { fill: #f44; } */
+      .level3    { fill: var(--color-palette-a-light); }
     }
   </style>
 
   <g id="row_AD">
     <g class="left">
       <g transform="translate(90)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.01);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.01);"/>
         <text x="12.8" y="20.6" class="level2">Q</text>
         <text x="38.0" y="43.4" class="level3">æ</text>
       </g>
       <g transform="translate(150)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.13);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.13);"/>
         <text x="12.8" y="20.6" class="level2">C</text>
         <text x="38.0" y="43.4" class="level3">ç</text>
       </g>
       <g transform="translate(210)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.47);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.47);"/>
         <text x="12.8" y="20.6" class="level2">O</text>
         <text x="38.0" y="43.4" class="level3">œ</text>
       </g>
       <g transform="translate(270)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.083);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.083);"/>
         <text x="12.8" y="20.6" class="level2">P</text>
         <text x="38.0" y="43.4" class="level3">ô</text>
       </g>
       <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.13);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.13);"/>
         <text x="12.8" y="20.6" class="level2">W</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
     </g>
     <g class="right">
       <g transform="translate(390)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.005);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.005);"/>
         <text x="12.8" y="20.6" class="level2">J</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
       <g transform="translate(450)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.15);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.15);"/>
         <text x="12.8" y="20.6" class="level2">M</text>
         <text x="38.0" y="43.4" class="level3">µ</text>
       </g>
       <g transform="translate(510)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.262);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.262);"/>
         <text x="12.8" y="20.6" class="level2">D</text>
         <text x="38.0" y="43.4" class="level3">_</text>
       </g>
       <g transform="translate(570)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.048);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.048);"/>
         <text x="15" y="24" class="deadKey">★</text>
       </g>
       <g transform="translate(630)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.107);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.107);"/>
         <text x="12.8" y="20.6" class="level2">Y</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
@@ -102,54 +130,54 @@
   <g id="row_AC">
     <g class="left">
       <g transform="translate(90)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.48);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.48);"/>
         <text x="12.8" y="20.6" class="level2">A</text>
         <text x="38.0" y="43.4" class="level3">à</text>
       </g>
       <g transform="translate(150)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.37);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.37);"/>
         <text x="12.8" y="20.6" class="level2">S</text>
         <text x="38.0" y="43.4" class="level3">é</text>
       </g>
       <g transform="translate(210)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.70);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.70);"/>
         <text x="12.8" y="20.6" class="level2">E</text>
         <text x="38.0" y="43.4" class="level3">è</text>
       </g>
       <g transform="translate(270)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.398);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.398);"/>
         <text x="12.8" y="20.6" class="level2">N</text>
         <text x="38.0" y="43.4" class="level3">ê</text>
       </g>
       <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.134);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.134);"/>
         <text x="12.8" y="20.6" class="level2">F</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
     </g>
     <g class="right">
       <g transform="translate(390)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.215);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.215);"/>
         <text x="12.8" y="20.6" class="level2">L</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
       <g transform="translate(450)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.32);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.32);"/>
         <text x="12.8" y="20.6" class="level2">R</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
       <g transform="translate(510)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.55);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.55);"/>
         <text x="12.8" y="20.6" class="level2">T</text>
         <text x="38.0" y="43.4" class="level3">î</text>
       </g>
       <g transform="translate(570)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.39);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.39);"/>
         <text x="12.8" y="20.6" class="level2">I</text>
         <text x="38.0" y="43.4" class="level3">û</text>
       </g>
       <g transform="translate(630)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.16);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.16);"/>
         <text x="12.8" y="20.6" class="level2">U</text>
         <text x="38.0" y="43.4" class="level3">ù</text>
       </g>
@@ -159,57 +187,57 @@
   <g id="row_AB">
     <g class="left">
       <g transform="translate(90)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.004);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.004);"/>
         <text x="12.8" y="20.6" class="level2">Z</text>
         <text x="38.0" y="43.4" class="level3">â</text>
       </g>
       <g transform="translate(150)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.014);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.014);"/>
         <text x="12.8" y="20.6" class="level2">X</text>
         <text x="38.0" y="43.4" class="level3">ß</text>
       </g>
       <g transform="translate(210)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.003);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.003);"/>
         <text x="12.8" y="43.4" class="level1">-</text>
         <text x="12.8" y="20.6" class="level2">?</text>
         <text x="38.0" y="43.4" class="level3">—</text>
       </g>
       <g transform="translate(270)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.063);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.063);"/>
         <text x="12.8" y="20.6" class="level2">V</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
       <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.082);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.082);"/>
         <text x="12.8" y="20.6" class="level2">B</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
     </g>
     <g class="right">
       <g transform="translate(390)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.027);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.027);"/>
         <text x="12.8" y="43.4" class="level1">.</text>
         <text x="12.8" y="20.6" class="level2">:</text>
         <text x="38.0" y="43.4" class="level3">…</text>
       </g>
       <g transform="translate(450)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.403);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.403);"/>
         <text x="12.8" y="20.6" class="level2">H</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
       <g transform="translate(510)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.11);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.11);"/>
         <text x="12.8" y="20.6" class="level2">G</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
       <g transform="translate(570)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.139);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.139);"/>
         <text x="12.8" y="43.4" class="level1">,</text>
         <text x="12.8" y="20.6" class="level2">;</text>
         <text x="38.0" y="43.4" class="level3">·</text>
       </g>
       <g transform="translate(630)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.04);"/>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.04);"/>
         <text x="12.8" y="20.6" class="level2">K</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
@@ -218,14 +246,14 @@
 
   <g id="row_AA">
     <g transform="translate(180)">
-      <rect width="82" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0);"/>
+      <rect width="82" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0);"/>
       <text x="26" y="42.8" class="layer">Shift</text>
     </g>
     <g transform="translate(270)">
-      <rect width="232" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.086);"/>
+      <rect width="232" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0.086);"/>
     </g>
     <g transform="translate(510)">
-      <rect width="82" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0);"/>
+      <rect width="82" height="52" rx="5" ry="5" style="fill: rgba(var(--colormap-color), 0);"/>
       <text x="26" y="42.8" class="layer">AltGr</text>
     </g>
   </g>

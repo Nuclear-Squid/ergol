@@ -1,6 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 836 300">
 
   <style>
+    /* Base color palette -- https://coolors.co/9cf6f6-f3c98b-daa588-c46d5e-f56960 */
+    :root {
+      --color-palette-a: #9CF6F6;
+      --color-palette-b: #F3C98B;
+      --color-palette-c: #DAA588;
+      --color-palette-d: #C46D5E;
+      --color-palette-e: #F56960;
+    }
+
+    /* Derived color palette -- when lighter or darker shades are required */
+    :root {
+      --color-palette-a-light: #DAFCFC;
+      --color-palette-b-light: #FBEEDA;
+      --color-palette-c-light: #F5E7E0;
+      --color-palette-d-light: #EED7D2;
+      --color-palette-e-light: #FBC9C5;
+      
+      --color-palette-a-dark: #0E9595;
+      --color-palette-b-dark: #CB8215;
+      --color-palette-c-dark: #9C5630;
+      --color-palette-d-dark: #77372C;
+      --color-palette-e-dark: #99130A;
+    }
+
     :root {
       color-scheme: light dark;
     }
@@ -54,10 +78,10 @@
     .thb_7 g { transform: rotate(-12deg); }
     .thb_6 g { transform: rotate(-24deg); }
 
-    #sym rect { fill: #99f; }
-    #nav rect { fill: #e83; }
-    .sym { fill: #44f; transform: translate(0, -23px); }
-    .nav { fill: #e83; }
+    #sym rect { fill: var(--color-palette-a-dark); }
+    #nav rect { fill: var(--color-palette-c); }
+    .sym { fill: var(--color-palette-a-dark); transform: translate(0, -23px); }
+    .nav { fill: var(--color-palette-c); }
 
     .level1, .level2 { opacity: 0.8; }
     .sym             { opacity: 0.6; }
@@ -66,8 +90,8 @@
       .specialKey rect { fill: #333; }
       rect, path       { fill: #444; }
       text             { fill: #bbb; }
-      .sym             { fill: #99f; }
-      #sym rect        { fill: #77d; }
+      .sym             { fill: var(--color-palette-a-light); }
+      #sym rect        { fill: var(--color-palette-a-light); }
       #sym text        { fill: navy; }
       #nav text        { fill: brown;}
     }

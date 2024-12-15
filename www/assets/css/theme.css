@@ -4,49 +4,110 @@
  * ╰───────────────────────────────────────────────────────────────╯
 **/
 
+/* Base color palette -- https://coolors.co/9cf6f6-f3c98b-daa588-c46d5e-f56960 */
+:root {
+  --color-palette-a: #9CF6F6;
+  --color-palette-b: #F3C98B;
+  --color-palette-c: #DAA588;
+  --color-palette-d: #C46D5E;
+  --color-palette-e: #F56960;
+}
+
+/* Derived color palette -- when lighter or darker shades are required */
+:root {
+  --color-palette-a-light: #DAFCFC;
+  --color-palette-b-light: #FBEEDA;
+  --color-palette-c-light: #F5E7E0;
+  --color-palette-d-light: #EED7D2;
+  --color-palette-e-light: #FBC9C5;
+  
+  --color-palette-a-dark: #0E9595;
+  --color-palette-b-dark: #CB8215;
+  --color-palette-c-dark: #9C5630;
+  --color-palette-d-dark: #77372C;
+  --color-palette-e-dark: #99130A;
+}
+
+/* Keycap color palette -- for generating realistic keycaps */
+:root {
+  --keycap-color-a: #282828;
+  --keycap-color-b: #202020;
+  --keycap-color-c: #232323;
+  --keycap-color-d: #4a4a4a;
+  --keycap-color-e: #0009;
+  --keycap-color-f: #0004;
+  --keycap-color-i: rgba(255, 255, 255, 1.0);
+  --keycap-bs-1: rgba(0, 0, 0, 0.15);
+  --keycap-bs-2: rgba(0, 0, 0, 0.25);
+  --keycap-bs-3: rgba(0, 0, 0, 0.75);
+  --keycap-bs-4: rgba(0, 0, 0, 0.25);
+}
+
+
 :root {
   color-scheme: light dark;
 
   /* <html|body|main> background and text colors */
-  --bg-root:          #ccc;
-  --bg-main:          #f8f8f8;
-  --bg-main-shadow:   #888;
-  --fg-main-border:   #aaa;
+  --bg-root:          white;
+  --bg-main:          white;
+  --bg-main-shadow:   white;
+  --fg-main-border:   white;
   --fg-main:          #222;
+  --fg-disabled:      #999;
 
   /* banner -- the foreground matches the favicon #rocket color */
-  --bg-banner:        #e9e9e9;
-  --fg-banner-border: #5446;
-  --fg-banner:        #544;
+  --bg-banner:        white;
+  --fg-banner-border: #eee;
+  --fg-banner:        #222;
 
   /* <h2|a|code> and specific emphasis */
-  --bg-accent:        #b884;
-  --fg-accent-border: brown;
-  --fg-accent:        brown;
+  --bg-accent:        var(--color-palette-d-light);
+  --fg-accent-border: var(--color-palette-d);
+  --fg-accent:        var(--color-palette-d);
 
   /* <kbd> and special inline content */
-  --bg-key:           #8884;
-  --fg-key-border:    #888;
+  --key-bg:              #6a6a6a;
+  --key-bg-gradient:     #282828;
+  --key-border:          #202020;
+  --key-border-gradient: #232323;
+  --key-fg:              rgba(255, 255, 255, 0.85);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* <html|body|main> background and text colors */
-    --bg-root:          #151417;
-    --bg-main:          #1a1a1f;
-    --bg-main-shadow:   #111;
-    --fg-main-border:   #111;
-    --fg-main:          #ccc;
+    --bg-root:          #222;
+    --bg-main:          #222;
+    --bg-main-shadow:   #222;
+    --fg-main-border:   #222;
+    --fg-main:          #eee;
+    --fg-disabled:      #666;
 
-    /* banner -- the foreground matches the favicon #rocket color */
-    --bg-banner:        #29292d;
-    --fg-banner-border: #cbb5;
-    --fg-banner:        #cbb;
+    /* banner -- the foreground DOES NOT matches the favicon #rocket color */
+    --bg-banner:        #222;
+    --fg-banner-border: #444;
+    --fg-banner:        #eee;
 
     /* <h2|a|code> and specific emphasis */
-    --fg-accent-border: #f967;
-    --fg-accent:        #f96;
+    --bg-accent:        var(--color-palette-d-dark);
+
+    /* <kbd> and special inline content */
+    --key-bg:              #dfdfdf;
+    --key-bg-gradient:     #dcdcdc;
+    --key-border:          #959595;
+    --key-border-gradient: #d7d7d7;
+    --key-fg:              rgba(0, 0, 0, 0.85);
   }
+}
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                             Fonts                             │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+:root {
+  --main-font-family: sans-serif;
+  --code-font-family: sans-serif;
 }
 
 
@@ -64,7 +125,7 @@
 html {
   height: 100%;
   width:  100%;
-  font-family: sans-serif;
+  font-family: var(--main-font-family);
   background-color: var(--bg-root);
   /* scroll-behavior: smooth; */
 }
@@ -299,7 +360,7 @@ h1 {
   text-align: center;
   font-size: 2em;
   line-height: 1em;
-  margin: 1.8em auto 1.2em;
+  margin: 1.8em auto 0.5em;
 }
 
 h1 + time {
@@ -419,20 +480,57 @@ header + nav ul ul {
  * ╰───────────────────────────────────────────────────────────────╯
 **/
 
-kbd, span.odk { /* key */
-  margin: 0 2px;
-  font-size: 1em;
-  border: 1px outset var(--bg-key-border);
-  background-color: var(--bg-key);
-  padding: 2px 3px;
+kbd,
+span.odk {
+  /* Match the page defaults in light mode but switch to a light-ish grey in dark mode */
+  background: linear-gradient(90deg, var(--key-bg), var(--key-bg-gradient));
+  /* background-color: white; */
+  color: var(--key-fg);
+
+  /* Round off the corners like physical keys have */
+  border-radius: 0.25rem;
+
+  /* Add a simple border */
+  border: 1px solid var(--key-border);
+
+  /* A sharp shadow (with no blur) really gives the old school keyboard look */
+  box-shadow: 0 2px 0 1px var(--key-border);
+  /* Remove the text cursor — totally optional but I wanted it for my hover effect */
+  cursor: default;
+  font-family: var(--code-font-family);
+  font-size: 0.8em;
+  /* Remove any extra space so I can accurately tweak the padding */
+  line-height: 1;
+
+  /* Make narrow numbers and letters look less odd */
+  min-width: 0.8rem;
+  /* `min-width` doesn’t work on inline elements */
+  display: inline-block;
+  /* Keep the characters centred when narrower than the `max-width` */
+  text-align: center;
+
+  /* Seemed to look more key-like with more horizontal padding 🤷 */
+  padding: 3px 5px 2px 5px;
+  margin: 0 0.2em 0 0.2em;
+
+  /* These two lines pull the whole element up now that they’re bottom-heavy due to the `box-shadow`. This looks better against the cap height of regular paragraph text. */
+  position: relative;
+  top: -1.5px;
+
+  /* This is my favourite part of the whole thing. The key gets “pushed” down and the shadow gets reduced so it looks like it might when typing on a physical keyboard. */
+  &:hover {
+      box-shadow: 0 1.5px 0 0.5px linear-gradient(0deg, var(--key-border), var(--key-border-gradient));
+      top: 1px;
+  }
 }
+  
 
 code { /* character, digrams, trigrams */
   font-weight: bold;
-  font-family: serif;
+  font-family: var(--code-font-family);
   background-color: var(--bg-accent);
   padding: 2px 4px;
-  border-radius: 2px;
+  border-radius: 0.25em;
 }
 
 
@@ -455,12 +553,6 @@ code { /* character, digrams, trigrams */
   header + nav ul {
     justify-content: flex-start;
     background-color: var(--bg-banner);
-  }
-  header + nav li {
-    border-left: 1px solid var(--fg-banner-border);
-  }
-  header + nav li:last-child {
-    border-right: 1px solid var(--fg-banner-border);
   }
 
   /* display navigation submenus, not sure it s a good idea though */

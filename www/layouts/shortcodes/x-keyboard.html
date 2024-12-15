@@ -1,5 +1,18 @@
 {{ $name := .Get "name" }}
 <div class="keyboard">
+  {{ if $name }}
+    <nav>
+      {{ with .Get "href" }}
+        <a href="{{ . }}"><span class="gg-software-download"></span> Installer</a>
+      {{ end }}
+      {{ with .Get "data" }}
+        <button disabled><i class="gg-play-button-o"></i> Tester</button>
+        <a href="/stats/#/{{ . }}//en+fr"><i class="gg-align-bottom"></i> Stats</a>
+        <a href="/dactylo/#{{ . }}"><i class="gg-keyboard"></i> Apprendre</a><!-- 🎓 -->
+      {{ end }}
+    </nav>
+  {{ end }}
+
   <div style="width: 100%; padding-top: 34%; position: relative;">
     <object type="image/svg+xml"
             {{ with .Get "class" }} class="{{ . }}" {{ end }}
@@ -11,7 +24,7 @@
     <fieldset class="layers" hidden>
       <input type="radio" name="layers" label="Typo"  value="odk" checked
         title="caractères obtenus par la touche « Typo » (vue simplifiée)">
-      <input type="radio" name="layers" label="Typo+Symboles"   value="mixed"
+      <input type="radio" name="layers" label="Typo & Symboles"   value="mixed"
         title="caractères obtenus par les touches « Typo » et « Symboles »">
       <input type="radio" name="layers" label="Symboles" value="altgr"
         title="caractères obtenus par la touche « Symboles »">
@@ -39,15 +52,5 @@
       <x-keyboard src="/keymaps/fr/{{ . }}.json"></x-keyboard>
     </dialog>
     {{ end }}
-    <nav>
-      {{ with .Get "href" }}
-        <a href="{{ . }}"><span>⇣</span> Installer</a>
-      {{ end }}
-      {{ with .Get "data" }}
-        <button disabled>⇪ Tester</button>
-        <a href="/stats/#/{{ . }}//en+fr"><span>𝚺</span> Stats</a>
-        <a href="/dactylo/#{{ . }}"><span>⌨</span> Apprendre</a><!-- 🎓 -->
-      {{ end }}
-    </nav>
   {{ end }}
 </div>
