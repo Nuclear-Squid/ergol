@@ -166,6 +166,8 @@ watches and live-reload the pages upon file changes, however you still need to
 have `make watch` running to ensure that the `.json` files are generated upon
 modifying human-friendly layouts in `keymaps/*.{to,ya}ml`.
 
+Some pages require [pandoc](https://pandoc.org/) for proper rendering.
+
 You can thus run your local instance of the Ergo‑L website either by running
 `hugo server` in the [`www/`](www/) directory, or _via_:
 ```
