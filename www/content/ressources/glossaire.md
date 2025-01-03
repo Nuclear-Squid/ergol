@@ -171,7 +171,7 @@ relâchée, mais modifie le comportement de la prochaine touche qui sera enfonc�
 Une touche morte est généralement utilisée pour produire des lettres accentuées
 ou autres [diacritiques].
 
-    Exemple : la touche [^]{.kbd} sur le clavier Azerty puis [E]{.kbd} donne la
+    Exemple : la touche [\^]{.kbd} sur le clavier Azerty puis [E]{.kbd} donne la
     lettre `ê`.
 
 [Diacritique]{#diacritique-def}
