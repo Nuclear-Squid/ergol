@@ -172,7 +172,9 @@ Compose est disponible nativement sous Linux dans la majorité des distributions
 Sous Windows et MacOS, il faut installer un programme supplémentaire. Si
 [WinCompose][wcompose] semble s’être imposé
 comme un standard pour Windows, il ne semble pas y avoir d’équivalent pour MacOS
-qui fasse consensus. 
+qui fasse consensus. Si tu utilises une implementation de compose sous mac et
+que tu en est satisfait, n'hésite pas à nous le dire (sur le
+[serveur discord][discord] par exemple) afin de mettre à jour l'article !  
 
 Une fois installée, il convient simplement de définir une touche qui sera
 interprétée comme la touche compose. Ainsi le bureau Gnome propose par défaut
@@ -189,9 +191,15 @@ qui donne un [B]{.kbd} en Azerty/Qwerty) comme cela :
 
 ![Le combo parfait sur un clavier ISO](ergol_iso_compose.svg)
 
-Mais pour cela, il faut avoir un clavier programmable ou un logicielle comme
-[Kanata][kanata] afin de déplacer la touche à
-l’endroit voulu.  
+Mais pour cela, il faut avoir un clavier programmable ou un logiciel comme
+[Kanata][kanata] afin de déplacer la touche à l’endroit voulu.
+
+> **NB** : Les utilisateurs averti sous Linux, avec les sessions X11 peuvent
+> positionner compose comme sur l'image en utilisant les commandes suivantes
+> ```
+setxkbmap fr ergol_iso
+xmodmap -e "keycode 56 = Multi_key"
+```
 
 Conclusion
 --------------------------------------------------------------------------------
