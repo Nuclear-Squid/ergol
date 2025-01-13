@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="90 60 720 240">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    rect {
+      fill: #f8f8f8;
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      fill: #444;
+      font: normal 20px sans-serif;
+      text-align: center;
+      text-anchor: middle;
+    }
+    .dualKey      { fill: #aaa; transform: translateY(26px); }
+
+    #row_AD { transform: translate(64px,  64px); }
+    #row_AC { transform: translate(64px, 124px); }
+    #row_AB { transform: translate(64px, 184px); }
+    #row_AA { transform: translate(64px, 244px); }
+    .left   { transform: translate(-15px, 0); }
+    .right  { transform: translate(+15px, 0); }
+
+    .layer    { font-size: 14px; font-weight: bold; fill: #f8f8f8; }
+    .LayerDK  { font-weight: normal; }
+    .layerMod { font-weight: bold; font-size: 14px; }
+
+    .LayerDK, .colorDK { fill: green; }
+
+    @media (prefers-color-scheme: dark) {
+      text                 { fill: #666; }
+      rect                 { fill: #444; }
+      .dualKey             { fill: #666; }
+      .layerMod            { fill: #eee; }
+      .LayerDK, .colorDK   { fill: #99f; }
+    }
+  </style>
+
+  <g id="row_AD">
+    <g class="left">
+      <g transform="translate(90, 26)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Y</text>
+      </g>
+      <g transform="translate(150)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">U</text>
+        <text x="38.0" y="43.4" class="LayerDK">û</text>
+      </g>
+      <g transform="translate(210)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">O</text>
+        <text x="38.0" y="43.4" class="LayerDK">ô</text>
+      </g>
+      <g transform="translate(270)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">G</text>
+        <text x="38.0" y="43.4" class="LayerDK">œ</text>
+      </g>
+      <g transform="translate(330, 26)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">W</text>
+      </g>
+    </g>
+    <g class="right">
+      <g transform="translate(390, 26)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">.</text>
+        <text x="12.8" y="20.6" class="level2">:</text>
+      </g>
+      <g transform="translate(450)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">P</text>
+        <text x="38.0" y="43.4" class="LayerDK">j</text>
+      </g>
+      <g transform="translate(510)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">M</text>
+        <text x="38.0" y="43.4" class="LayerDK">x</text>
+      </g>
+      <g transform="translate(570)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">L</text>
+        <text x="38.0" y="43.4" class="LayerDK">k</text>
+      </g>
+      <g transform="translate(630, 26)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2 colorDK">★</text>
+        <text x="38.0" y="43.4" class="LayerDK">*¨</text>
+      </g>
+    </g>
+  </g>
+
+  <g id="row_AC">
+    <g class="left">
+      <g transform="translate(90, 26)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">D</text>
+        <text x="38.0" y="43.4" class="LayerDK">ù</text>
+      </g>
+      <g transform="translate(150)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">I</text>
+        <text x="38.0" y="43.4" class="LayerDK">î</text>
+      </g>
+      <g transform="translate(210)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">A</text>
+        <text x="38.0" y="43.4" class="LayerDK">â</text>
+      </g>
+      <g transform="translate(270)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">T</text>
+        <text x="38.0" y="43.4" class="LayerDK">à</text>
+      </g>
+      <g transform="translate(330, 26)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">’</text>
+        <text x="12.8" y="20.6" class="level2">?</text>
+      </g>
+    </g>
+    <g class="right">
+      <g transform="translate(390, 26)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">B</text>
+      </g>
+      <g transform="translate(450)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">N</text>
+        <text x="38.0" y="43.4" class="LayerDK">ç</text>
+      </g>
+      <g transform="translate(510)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">S</text>
+        <text x="38.0" y="43.4" class="LayerDK">z</text>
+      </g>
+      <g transform="translate(570)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">R</text>
+      </g>
+      <g transform="translate(630, 26)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">C</text>
+      </g>
+    </g>
+  </g>
+
+  <g id="row_AB">
+    <g class="left">
+      <g transform="translate(150)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g>
+        <text x="12.8" y="43.4" class="level1">,</text>
+        <text x="12.8" y="20.6" class="level2">;</text>
+        </g>
+      </g>
+      <g transform="translate(210)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g>
+          <text x="12.8" y="20.6" class="level2">É</text>
+          <text x="38.0" y="43.4" class="LayerDK">ê</text>
+        </g>
+      </g>
+      <g transform="translate(270)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <g>
+          <text x="12.8" y="20.6" class="level2">Q</text>
+        </g>
+      </g>
+    </g>
+    <g class="right">
+      <g transform="translate(450)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">H</text>
+      </g>
+      <g transform="translate(510)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">F</text>
+      </g>
+      <g transform="translate(570)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">V</text>
+      </g>
+    </g>
+  </g>
+
+  <g id="row_AA">
+    <g transform="translate(180)">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <rect width="82" height="26" rx="2" ry="2" class="dualKey"/>
+      <text x="41" y="20.6" style="font-size: 20px;">⛧</text>
+      <text x="41" y="43.4" class="layer">Shift</text>
+    </g>
+    <g transform="translate(270)">
+      <rect width="232" height="52" rx="5" ry="5"/>
+      <rect width="232" height="26" rx="2" ry="2" class="dualKey"/>
+      <text x="116" y="14.6" style="font-size: 19px;">⎵</text>
+      <text x="116" y="43.4" class="layer">Nav</text>
+    </g>
+    <g class="thb_7 specialKey" id="sym">
+      <g transform="translate(510)">
+        <rect width="82" height="52" rx="5" ry="5"/>
+        <rect width="82" height="26" rx="2" ry="2" class="dualKey"/>
+        <text x="33" y="19.6" style="font-size: 15px;">E</text>
+        <text x="49" y="19.6" class="LayerDK" style="font-size: 15px;">è</text>
+        <text x="41" y="43.4" class="layer">AltGr</text>
+      </g>
+    </g>
+  </g>
+
+</svg>

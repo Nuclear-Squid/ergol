@@ -1,14 +1,14 @@
 {{ $default_layout := "ergol" }}
 {{ $keymaps := dict
   "en" (dict
-    "qwerty"      "Qwerty"
-    "dvorak"      "Dvorak"
     "colemak"     "Colemak"
     "colemak-dh"  "Colemak-DH"
-    "workman"     "Workman"
+    "dvorak"      "Dvorak"
     "ISRT"        "ISRT"
     "MTGAP"       "MTGAP"
+    "qwerty"      "Qwerty"
     "sturdy"      "Sturdy"
+    "workman"     "Workman"
   )
 
   "fr" (dict

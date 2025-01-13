@@ -6,6 +6,7 @@ tags   = ["communauté", "conférences"]
 
 params.redirect_to = "https://fabi1cazenave.github.io/slides/2024-jdll-vim-ergo/"
 params.abstract    = "https://pretalx.jdll.org/jdll2023/talk/CMY3E8/"
+video              = "https://videos-libr.es/w/bSg1FWqVTQm1qTpLh6nW3y"
 params.domain      = "JdLL 2024"
 +++
 

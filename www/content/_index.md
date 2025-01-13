@@ -86,11 +86,6 @@ Témoignages
 
 @[fnuttens][]
 
-> C’est un choix de conception pour le moins singulier.
-  <!-- Je doute qu’il remporte l’adhésion. -->
-
-@Pyjam / Floppy
-
 [On parle d’Ergo‑L et d’ergonomie clavier ailleurs][ailleurs]
 — dans la presse, dans des billets de blogs, dans des conférences…
 

@@ -190,21 +190,21 @@ remplacement de la touche AltGr.
 
 ### Les limitations de Bépo <small>(Béopy, Optimot…)</small>
 
-Pour Bépo et ses variantes c’est plus délicat car il faut déplacer des
-**lettres**, ce qui oblige à changer de technique de saisie quand on passe d’un
-clavier standard à un clavier ergonomique. Pour minimiser la gêne et conserver
-[W]{.kbd} sous l’auriculaire droit, il faut passer [Shift]{.kbd} sous un pouce —
-ce qui n’est pas un changement anodin non plus.
-
-Les variantes de Bépo ont toutes le même problème, lié à la présence de deux
-lettres sur la 7<sup>e</sup> colonne du clavier ISO. Optimot se targue d’être
-conçu « pour tous les claviers » mais a les mêmes limitations — et détaille même
-sur son site quelles adaptations effectuer pour chaque type de clavier.
+Pour Bépo et toutes ses variantes, c’est plus délicat car il faut déplacer des
+**lettres** qui sont sur la 7<sup>e</sup> colonne du clavier ISO : la technique
+de saisie diffère quand on passe d’un clavier standard à un clavier ergonomique.
+Pour minimiser la gêne et conserver [W]{.kbd} sous l’auriculaire droit, il faut
+passer [Shift]{.kbd} sous un pouce — ce qui n’est pas un changement anodin non
+plus.
 
 Par ailleurs, on ne pourra pas fusionner les symboles déplacés avec la couche
 AltGr, dont les meilleurs emplacements sont déjà pris pour des besoins
 typographiques : `Œ`, `Æ`, `Ù`, `€`, le tréma mort, tous sont sur les touches
 confortables en main gauche. Il faut donc définir un layer supplémentaire.
+
+Ce n’est pas *impossible*, mais c’est *nettement* plus difficile. Quitte à
+devoir procéder à des adaptations, [Bépolar][] nous semble être une meilleure
+option.
 
 ### L’approche Ergonaute <small>(Ergo‑L, Erglace, Lafayette, Bépolar…)</small>
 
@@ -238,7 +238,7 @@ Et c’est tout.
     <th></th>
     <th> AZERTY </th>
     <th> Bépo   </th>
-    <th> Ergo‑L </th>
+    <th> Ergo‑L ⁽¹⁾ </th>
   </tr>
   <tr>
     <td style="padding: 1em 0;"> [full-size][] </td>
@@ -262,7 +262,7 @@ Et c’est tout.
   </tr>
   <tr>
     <td> [3×6][] </td>
-    <td> non compatible ⁽¹⁾ </td>
+    <td> non compatible ⁽²⁾ </td>
     <td><ul>
       <li> `W`, `Ç`, `%` </li>
       <li> tiret sur un layer </li>
@@ -275,8 +275,8 @@ Et c’est tout.
   </tr>
   <tr>
     <td> [3×5][] </td>
-    <td> non compatible ⁽¹⁾ </td>
-    <td> non compatible ⁽¹⁾ </td>
+    <td> non compatible ⁽²⁾ </td>
+    <td> non compatible ⁽²⁾ </td>
     <td><ul>
       <li> [layer-taps][LT] </li>
       <li> [homerow-mods][HRM] </li>
@@ -287,10 +287,13 @@ Et c’est tout.
 <!-- do not remove the empty line above -->
 :::
 
-⁽¹⁾ On considère qu’une disposition est « non compatible » avec une géométrie de
+⁽¹⁾ Ergo‑L ou toute autre disposition [1DFH][] : Erglace, Bépolar,
+QWERTY-Lafayette, Colemak French Touch…
+
+⁽²⁾ On considère qu’une disposition est « non compatible » avec une géométrie de
 clavier quand les lettres courantes du français ne peuvent plus tenir dans le
 seul layer principal. C’est le cas d’AZERTY dès qu’on n’a plus de rangée de
-chiffres, et de Bépo (et ses variantes) dès qu’on a moins de 2 colonnes sous
+chiffres, et de Bépo (et ses variantes) dès qu’on a moins de deux colonnes sous
 l’auriculaire droit.
 
 
@@ -366,6 +369,7 @@ quasi inutilisable en AZERTY.
 [LT]:        ./arsenik/#layer-taps
 [1DFH]:      /presentation/#dfh-1u-distance-from-home
 [dactylo]:   /articles/apprendre_a_taper/
+[Bépolar]:   /lafayette/#b%C3%A9polar
 
 [Sofle]:     https://github.com/josefadamcik/SofleKeyboard
 [Corne]:     https://github.com/foostan/crkbd
