@@ -69,6 +69,11 @@ author = "authors"
         parent  = "Alternatives"
         weight  = 3
     [[menus.main]]
+        name    = "Hypergol ?!"
+        pageRef = "/alternatives/hypergol"
+        parent  = "Alternatives"
+        weight  = 4
+    [[menus.main]]
         name    = "Claviers"
         pageRef = "/claviers"
         weight  = 3

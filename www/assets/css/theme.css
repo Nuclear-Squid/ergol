@@ -367,6 +367,12 @@ header + nav ul ul {
   }
 }
 
+/* keyboard layout selection */
+#layout option:disabled {
+  color: var(--fg-accent);
+  font-size: 1.2em;
+}
+
 
 /**
  * ╭───────────────────────────────────────────────────────────────╮
