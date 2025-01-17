@@ -46,6 +46,19 @@ grâce à [notre page dédiée][dactylo].
 <p> [Installation…][installation] </p>
 </nav>
 
+Usage basique
+--------------------------------------------------------------------------------
+
+Par défaut, la disposition Ergo-L permet d'accéder directement aux lettres, aux chiffres (sur la plus haute ligne du clavier), ainsi qu'aux signes de ponctuation les plus utilisés ([.]{.odk} et [,]{.odk}).
+
+Comme pour n'importe quelle disposition classique, maintenir [AltGr]{.odk} permet aussi de modifier les touches. Par exemple, la touche [a]{.odk} devient un [\{]{.odk}.
+
+La touche étoile ([★]{.odk}), est une touche morte permettant de modifier les touches. Par exemple, la touche [s]{.odk} devient un [é]{.odk}.
+
+La touche alpha ([α]{.odk}) (placée sur la touche [g]{.odk}), est une touche morte permettant d’atteindre toutes les lettres du grec. Elle est activée par la touche [★]{.odk}. La touche [b]{.odk} est alors modifiée en [β]{.odk}.
+
+[Plus de précisions sur les possibilités d'Ergo‑L]({{< ref "presentation#impeccable-en-français" >}})
+
 
 Témoignages
 --------------------------------------------------------------------------------
