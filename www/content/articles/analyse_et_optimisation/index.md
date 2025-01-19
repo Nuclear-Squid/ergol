@@ -905,7 +905,7 @@ Ergonautes est fantastique. 🚀
 [Nuclear Squid]:           https://github.com/Nuclear-Squid
 [Moussx]:                  https://github.com/gagbo
 [Meriem]:                  https://mastodon.xyz/@meriem
-[Adrienm7]:                https://hypertexte.beseven.fr
+[Adrienm7]:                https://ergopti.fr
 [aurelberra]:              https://github.com/aurelberra
 [Xiloynaha]:               https://github.com/cypriani
 [Ju__]:                    https://github.com/PetitWombat
