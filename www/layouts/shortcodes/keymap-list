@@ -1,0 +1,49 @@
+{{ $default_layout := "ergol" }}
+{{ $keymaps := dict
+  "en" (dict
+    "colemak"     "Colemak"
+    "colemak-dh"  "Colemak-DH"
+    "dvorak"      "Dvorak"
+    "ISRT"        "ISRT"
+    "MTGAP"       "MTGAP"
+    "qwerty"      "Qwerty"
+    "sturdy"      "Sturdy"
+    "workman"     "Workman"
+  )
+
+  "fr" (dict
+    "azerty"      "Azerty"
+    "lafayette"   "Lafayette"
+    "ergol"       "Ergo‑L"
+    "erglace"     "Erglace"
+    "colemak-french-touch" "Colemak French Touch"
+    "bepolar"     "Bépolar"
+    "bepo"        "Bépo"
+  )
+
+  "fr.contrib" (dict
+    "beopy"       "Béopy"
+    "beopy-l"     "Béopy‑L"
+    "ergaie"      "Ergaie"
+    "erglace_nuke"   "Erglace (nuke)"
+    "ergo_1dk"    "Ergopti-1dk"
+    "optergol"    "Optergol"
+  )
+
+  "fr.nonfree" (dict
+    "optimot"     "Optimot"
+  )
+}}
+
+<select id="layout">
+  {{ range $language, $keymaps_language := $keymaps }}
+    <option disabled>  [{{ $language }}]</option>
+    {{ range $json_name, $displayed_name := $keymaps_language }}
+      {{ if eq $default_layout $json_name }}
+        <option data-folder="{{$language}}" value="{{ $json_name }}" selected> {{ $displayed_name }} </option>
+      {{ else }}
+        <option data-folder="{{$language}}" value="{{ $json_name }}"> {{ $displayed_name }} </option>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</select>

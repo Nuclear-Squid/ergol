@@ -64,7 +64,14 @@ function getKeySequence(keyMap, dkDict, str = '') {
     } else if (char in dkDict) {
       // available with a dead key
       const dk = dkDict[char][0];
-      rv.push(getKeyList(keyMap, dk.id)[0]);
+      const dkId = getKeyList(keyMap, dk.id)[0];
+      if (dkId) {
+        rv.push(dkId);
+      } else {
+        // Fetch dead key in main dead key
+        rv.push(getKeyList(keyMap, '**')[0]);
+        rv.push(getKeyList(keyMap, dkDict[dk.id][0].base)[0]);
+      }
       rv.push(getKeyList(keyMap, dk.base)[0]);
     } else {
       // not available

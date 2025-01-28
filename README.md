@@ -39,20 +39,28 @@ English and better than Qwerty for programming. [Check the stats !][1]
 Layout
 --------------------------------------------------------------------------------
 
-![base layout](www/static/img/ergol_fr.svg)
+![base layout](www/content/presentation/ergol_fr.svg)
 
-The dead <kbd>★</kbd> key gives access to all acute accents, grave accents, cedillas, digraphs and quote signs you’ll need to write in proper French:
+The dead <kbd>★</kbd> key gives access to all acute accents, grave accents,
+cedillas, digraphs and quote signs you’ll need to write in proper French:
 
-![dead key layout](www/static/img/ergol_1dk.svg)
+![dead key layout](www/content/presentation/ergol_1dk.svg)
 
 … and the AltGr layer is fully dedicated to programming symbols.
 
-![altgr layout](www/static/img/ergol_altgr.svg)
+![altgr layout](www/content/presentation/ergol_altgr.svg)
 
-The default layout allows to write in English, French, German and Esperanto easily.
+The default layout allows to write in English, French, German and Esperanto
+easily.
 
 [More information on the website](https://ergol.org) (in French).
 
+
+Availability
+--------------------------------------------------------------------------------
+
+Kalamine is available on Debian Unstable. It is automatically installed
+via the `xkb-data` package.
 
 Install
 --------------------------------------------------------------------------------
@@ -65,7 +73,7 @@ their guide), you can just run the following command:
 pipx install kalamine
 ```
 
-Download the [layouts/ergol.toml][4] file in this repo and build the layout :
+Download the [keymaps/ergol.toml][4] file in this repo and build the layout :
 
 ```bash
 kalamine build ergol.toml
@@ -78,7 +86,7 @@ and you should be good to go !
 
 [2]: https://github.com/OneDeadKey/kalamine
 [3]: https://github.com/OneDeadKey/kalamine#installing-distributable-layouts
-[4]: https://github.com/Nuclear-Squid/ergol/blob/master/layouts/ergol.toml
+[4]: https://github.com/Nuclear-Squid/ergol/blob/master/keymaps/ergol.toml
 [5]: https://github.com/pypa/pipx?tab=readme-ov-file#install-pipx
 
 
@@ -98,11 +106,26 @@ Then switch to Ergo‑L using the following command:
 setxkbmap fr -variant ergol  # Switch your keyboard layout to ergol
 ```
 
+_Troubleshooting with ubuntu / wayland_
+
+There is a weird issue where Ergo-L works fine with some applications
+(phpstorm, gnome,...) but not on others (libreoffice, terminator). The deadkey
+remain for two chars instead of only one. (ex: `a[deadkey]sen` should display
+`aéen` but it displays `aéèn` instead.).
+
+This issue is solved by adding at the end of `/etc/environment` the following lines:
+
+```bash
+INPUT_METHOD=ibus
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+```
 
 Make Your Own !
 --------------------------------------------------------------------------------
 
-If you wish to modify the layout, the `layouts/*.{toml,yaml}` are human-readable
+If you wish to modify the layout, the `keymaps/*.{toml,yaml}` are human-readable
 ASCII arts of the final layout. You can easily edit them, then run `make` (or
 `make watch`) at the root of the repo to generate the `.json` files used to
 benchmark layouts on the [stats page][1].
@@ -141,7 +164,9 @@ command generates the `json` stat file for this specific corpus.
 [Hugo](https://gohugo.io/) can be used to serve the site, it automatically
 watches and live-reload the pages upon file changes, however you still need to
 have `make watch` running to ensure that the `.json` files are generated upon
-modifying human-friendly layouts in `layouts/*.{to,ya}ml`.
+modifying human-friendly layouts in `keymaps/*.{to,ya}ml`.
+
+Some pages require [pandoc](https://pandoc.org/) for proper rendering.
 
 You can thus run your local instance of the Ergo‑L website either by running
 `hugo server` in the [`www/`](www/) directory, or _via_:

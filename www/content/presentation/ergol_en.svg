@@ -92,8 +92,8 @@
         <text x="15" y="24" class="deadKey">★</text>
       </g>
       <g transform="translate(630)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.134);"/>
-        <text x="12.8" y="20.6" class="level2">F</text>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.107);"/>
+        <text x="12.8" y="20.6" class="level2">Y</text>
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
     </g>
@@ -122,10 +122,9 @@
         <text x="38.0" y="43.4" class="level3">ê</text>
       </g>
       <g transform="translate(330)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.139);"/>
-        <text x="12.8" y="43.4" class="level1">,</text>
-        <text x="12.8" y="20.6" class="level2">;</text>
-        <text x="38.0" y="43.4" class="level3">·</text>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.134);"/>
+        <text x="12.8" y="20.6" class="level2">F</text>
+        <text x="38.0" y="43.4" class="level3"> </text>
       </g>
     </g>
     <g class="right">
@@ -204,9 +203,10 @@
         <text x="38.0" y="43.4" class="level3"> </text>
       </g>
       <g transform="translate(570)">
-        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.107);"/>
-        <text x="12.8" y="20.6" class="level2">Y</text>
-        <text x="38.0" y="43.4" class="level3"> </text>
+        <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.139);"/>
+        <text x="12.8" y="43.4" class="level1">,</text>
+        <text x="12.8" y="20.6" class="level2">;</text>
+        <text x="38.0" y="43.4" class="level3">·</text>
       </g>
       <g transform="translate(630)">
         <rect width="52" height="52" rx="5" ry="5" style="fill: rgba(127, 127, 255, 0.04);"/>

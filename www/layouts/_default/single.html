@@ -1,18 +1,18 @@
 {{ define "main" }}
 
   {{ $date := .Date }}
-  {{- if $date -}}
-    <time>{{ $date.Format (.Site.Params.dateform | default "2006-01-02") }}</time>
-  {{- end -}}
-
-  {{ .Content }}
-
   {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
-  {{- if $author -}}
+
+  {{ if $author }}
     <p style="text-align: right;">
       – <a href="{{ $author.url }}">{{ $author.name }}</a>
+    {{ if $date }}
+      – <time>{{ $date.Format (.Site.Params.dateform | default "2006-01-02") }}</time>
+    {{ end }}
     </p>
-  {{- end -}}
+  {{ end -}}
+
+  {{ .Content }}
 
   {{ with .Params.comments }}
     {{ partial "comments.html" . }}

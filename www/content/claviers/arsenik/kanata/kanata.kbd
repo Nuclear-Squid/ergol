@@ -1,0 +1,55 @@
+;; Every section should enable one and only one `include`
+;; -- enable each feature by un-commenting the related line.
+
+
+;;-----------------------------------------------------------------------------
+;; Key arrangement: Mac or PC, with or without angle mod?
+
+;; (include defsrc_pc.kbd)  ;; PC, standard finger assignment
+;; (include defsrc_mac.kbd)  ;; Mac, standard finger assignment
+(include defsrc_pc_anglemod.kbd)  ;; PC, ZXCVB are shifted to the left
+;; (include defsrc_mac_anglemod.kbd)  ;; Mac, ZXCVB are shifted to the left
+
+
+;;-----------------------------------------------------------------------------
+;; `Base` layer: standard or dual keys? (layer-taps, homerow mods?)
+
+(defvar
+  tto 300 ;; tap-timeout
+  hto 300 ;; hold-timeout
+)
+
+;; (include deflayer_base.kbd)  ;; standard keyboard behavior
+;; (include deflayer_base_lt.kbd)  ;; layer-taps on both thumb keys
+(include deflayer_base_lt_hrm.kbd)  ;; layer-taps + home-row mods
+
+;; Note: not enabling layer-taps here makes the rest of the file useless.
+
+
+;;-----------------------------------------------------------------------------
+;; Num-Navigation layer (requires layer-taps):
+;;  - left: arrow keys + Tab/S-Tab
+;;  - right: numpad
+;;  - thumbs: Delete/Escape
+
+;; numeric separators for Ergo‑L (= Qwerty/Ergo‑L conversion)
+(defalias
+  , .
+  . n
+  : AG-.
+  - AG-k
+  / AG-l
+)
+
+;; Live-reload (`lrld`) the configuration with Space+Backspace.
+;; This will re-parse everything except for linux-dev,
+;; i.e. you cannot live-reload and switch keyboard devices.
+
+(deflayer navigation
+  tab  home up   end  pgup   lrld   @-  7   8   9   @/
+  caps lft  down rght pgdn          @:  4   5   6   0
+  XX voldwn mute volu S-tab   _     @.  1   2   3   @,
+            del               _            esc
+)
+
+;; vim: set ft=lisp

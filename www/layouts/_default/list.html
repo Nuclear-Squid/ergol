@@ -1,13 +1,53 @@
 {{ define "main" }}
   {{ .Content }}
-  {{ range sort .Pages "Date" "desc" }}
-    <article>
-      <header>
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-        <time>{{ time.Format ":date_medium" .Date }}</time>
-      </header>
-      {{ .Summary }}
-      <nav class="more"><a href="{{ .RelPermalink }}">Lire la suite…</a></nav>
-    </article>
+  {{ if not .Params.hideSummaryOfChildPages }}
+    {{ range sort .Pages "Date" "desc" }}
+      <article>
+        <header>
+          {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+          {{ $abstract := or .Params.abstract .Params.redirect_to .RelPermalink }}
+          <h3>{{ .LinkTitle }}</h3>
+          <p class="author">
+            {{ if in .Params.tags "conférences" }}
+              conférence de <a href="{{ $author.url }}">{{ $author.name }}</a> –
+              {{ if .Params.domain }}
+                <a href="{{ $abstract }}">{{.Params.domain }}</a> –
+              {{ end }}
+            {{ else if in .Params.tags "presse" }}
+              {{ if .Params.domain }}
+                article de <a href="{{ $abstract }}">{{.Params.domain }}</a> –
+              {{ end }}
+            {{ else if .Params.redirect_to }}
+              {{ if .Params.domain }}
+                billet de <a href="{{ $abstract }}">{{.Params.domain }}</a> –
+              {{ end }}
+            {{ else if $author }}
+              par <a href="{{ $author.url }}">{{ $author.name }}</a> –
+            {{ end }}
+            <time>{{ time.Format "2006-01-02" .Date }}</time>
+          </p>
+        </header>
+        {{ if .Params.redirect_to }}
+          {{ .Content }}
+          <nav class="more">
+            {{ if in .Params.tags "conférences" }}
+              <a href="{{ .Params.redirect_to }}" class="icon icon-talk">Voir le diaporama</a>
+              {{ if .Params.video }}
+                – <a href="{{ .Params.video }}" class="icon icon-video">Voir la vidéo</a>
+              {{ end }}
+            {{ else if .Params.domain }}
+              <a href="{{ .Params.redirect_to }}" class="icon icon-article">Lire l’article sur {{.Params.domain }}</a>
+            {{ else }}
+              <a href="{{ .Params.redirect_to }}" class="icon icon-article">Lire l’article</a>
+            {{ end }}
+          </nav>
+        {{ else }}
+          {{ .Summary }}
+          <nav class="more">
+            <a href="{{ .RelPermalink }}">Lire la suite…</a>
+          </nav>
+        {{ end }}
+      </article>
+    {{ end }}
   {{ end }}
 {{ end }}

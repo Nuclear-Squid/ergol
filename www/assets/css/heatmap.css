@@ -71,3 +71,11 @@ th {
 .row td {
   width: 4em;
 }
+
+stats-canvas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 750px;
+    margin: auto;
+}
