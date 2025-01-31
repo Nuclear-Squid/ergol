@@ -28,11 +28,11 @@ fonctionalités des claviers mécaniques programmables au sein de la disposition
 *techniquement faisable* et que ça fait progresser l’ergonomie ou
 l’optimisation de la disposition, alors on y a droit.
 
-La disposition est implémentée gràce a un pilote Kanata ou QMK prévu pour être
+La disposition est implémentée grâce à un pilote [Kanata] ou [QMK] prévu pour être
 utilisé sur un ordinateur en Ergo‑L.
 
 Pour accélérer le développement de la dispo, nous utilisons un [brute-forceur]
-maison, qui ne cherche pas à concevoir la meilleur disposition possible sur la
+maison, qui ne cherche pas à concevoir la meilleure disposition possible sur la
 base d’une note globale hasardeuse, mais liste toutes les dispositions
 possibles qui adhèrent à des critères simples (pas moins de 12% de charge sur
 un index, pas plus de 0.2% de SFU sur un auriculaire…). On reste sur la méthode
@@ -58,7 +58,7 @@ stagger, comme le Ferris).
 ![Un exemple de clavier « hummingbird »](hummingbird.jpg){width="25em"}
 :::
 
-Retirer 4 touches sur le clavier nous force donc à trouver des nouvelles places
+Retirer 4 touches sur le clavier nous force donc à trouver de nouvelles places
 pour les 4 lettres les moins fréquentes en français et anglais (`z`, `x`, `k`
 et `j`), et pour ça, nous avons décidé de les placer sur la touche typo. On
 considère que l’effort nécessaire pour taper ces lettres en deux touches est
@@ -72,7 +72,7 @@ Il reste encore à savoir comment gérer proprement les touches manquantes en
 Le [E]{.kbd} et « touche magique » sous un pouce
 --------------------------------------------------------------------------------
 
-Puisque nous avons prévu la disposition pour des claviers programables, alors
+Puisque nous avons prévu la disposition pour des claviers programmables, alors
 on peut se permettre de mettre des lettres sous les pouces. Le `e` étant la
 lettre la plus fréquente en français et anglais, c’est celle-ci qui a été
 retenue. Nous avons cependant remarqué qu’avoir le `e` sous le pouce
@@ -109,7 +109,7 @@ lettres suivantes :
 | Magic | `O` | `★` | `Y` | `T` | `.` | `,` | `U’` | `I` | `R` | `A` | `T` | `D` | `E`           |
 
 
-### Les configurations de pouces recommandés
+### Les configurations de pouces recommandées
 
 Bien que la dispo soit proposée avec une configuration de pouces précise, vous
 êtes libre d’adapter cette configuration comme bon vous semble. Il y a cependant
@@ -144,7 +144,7 @@ Les auto-fills
 --------------------------------------------------------------------------------
 
 Les auto-fills sont une fonctionnalité exclusive à Hypergol, leur objectif est
-d’éliminer les mauvaises redirections et économiser quelques touches.
+d’éliminer les mauvaises redirections et d’économiser quelques touches.
 
 
 ### Un exemple concret
@@ -160,7 +160,7 @@ directement `qu`. Mais cela peut causer des problèmes, notamment pour écrire
 plutôt qu’à une touche `Qu`.
 
 Une pression sur la touche `q` va immédiatement écrire un `q` et surveiller
-la touche suivante. Si la touche suivante est fait partie de `aeio’é`, alors on
+la touche suivante. Si la touche suivante fait partie de `aeio’é`, alors on
 rajoute un `u` juste avant d’écrire la lettre voulue (et si la touche ne fait
 pas partie de la liste, alors on continue comme si de rien n’était). On peut
 donc facilement écrire `Que` ou `cinq` sans problème. Ça reste plus compliqué
@@ -193,10 +193,10 @@ c’est probablement la partie la plus complexe de la disposition. Cette
 fonctionnalité permet de transformer la dispo en un hybride entre un clavier
 standard et un clavier de sténotypie.
 
-L’idée est qu’on peut taper un combo (deux touches spécifiques actionnées en
+L’idée est que l’on peut taper un combo (deux touches spécifiques actionnées en
 même temps) pour écrire un mot ou morceau de mot. Comme pour les auto-fills, la
 touche suivante va être surveillée ; mais cette fois, au lieu de rajouter une
-seule lettre, on rentre dans une machine a états qui va écrire le reste du mot
+seule lettre, on rentre dans une machine à états qui va écrire le reste du mot
 et potentiellement continuer la séquence.
 
 Par exemple, appuyer sur [S]{.kbd} et [F]{.kbd} (de Qwerty) en même temps va
@@ -210,7 +210,7 @@ Par exemple, appuyer sur [S]{.kbd} et [F]{.kbd} (de Qwerty) en même temps va
 :::
 
 (Comme pour les auto-fills, écrire n’importe quelle autre lettre va sortir de
-la machine a états et écrire la touche comme si de rien n’était.)
+la machine à états et écrire la touche comme si de rien n’était.)
 
 À l’heure actuelle, c’est le seul combo étendu de la dispo. Il sert surtout de
 « proof of concept » et bien que l’expérience soit satisfaisante, nous n’en
@@ -223,8 +223,8 @@ régler avant ça.
 
 Attention ! Hypergol est en plein développement et n’est pas encore utilisable
 au quotidien : il y a des bugs dans les pilotes, notre analyseur ne sait pas
-gérer ce type de dispositions, il manque des fonctionnalités dans beaucoup
-d’applis/frameworks pour claviers programmables qu’on doit implémenter
+gérer ce type de disposition, il manque des fonctionnalités dans beaucoup
+d’applis/frameworks pour claviers programmables que l’on doit implémenter
 nous-mêmes, il faut travailler sur le [brute-forceur] maison pour qu’il puisse
 repérer les mauvaises redirections (et proposer des auto-fills), la disposition
 peut encore radicalement bouger — et nous ne sommes à l’abri ni de découvrir
@@ -244,7 +244,7 @@ l’instant, car :
 En revanche, si aucun des points précédemment cités ne vous fait peur et que
 vous voulez faire partie des alpha-testeurs, n’hésitez pas à venir sur le
 [serveur Discord d’Ergo‑L], où on développe la disposition. On serait ravi
-d’avoir des nouvelles idées de choses à rajouter à la disposition ou de l’aide
+d’avoir de nouvelles idées de choses à rajouter à la disposition ou de l’aide
 avec les parties techniques !
 
 
@@ -255,3 +255,5 @@ avec les parties techniques !
 [brute-forceur]:            https://github.com/nuclear-Squid/klayopt
 [magic sturdy]:             https://github.com/Ikcelaks/keyboard_layouts/blob/main/magic_sturdy/magic_sturdy.md
 [alt repeat]:               https://docs.qmk.fm/features/repeat_key#alternate-repeating
+[Kanata]:                   https://github.com/jtroo/kanata
+[QMK]:                      https://qmk.fm/
