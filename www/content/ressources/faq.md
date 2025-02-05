@@ -55,6 +55,26 @@ Avec certains bureaux (Gnome notamment), la touche Typo [★]{.odk} ne fonctionn
 que si Ergo‑L est défini comme diposition par défaut, c’est-à-dire en haut de
 la liste des préférences claviers.
 
+#### La touche [★]{.odk} affecte les deux prochains caractères
+Sur certains systèmes comme Ubuntu 24.04, la touche typo ([★]{.odk}) affecte les
+deux frappes suivantes au lieu de la seule touche suivante dans certains
+programmes (ie. Firefox). C’est un
+[bug connu](https://gitlab.gnome.org/GNOME/gtk/-/issues/7201) de Gnome.
+
+Pour y remédier, il faut modifier votre fichier `/etc/environment` pour y
+ajouter les lignes suivantes
+```bash
+INPUT_METHOD=ibus
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+```
+
+> **NB** : Il est possible que les guillemets français [« »]{.kbd} ne fonctionne
+> plus dans Firefox ; un autre bug dont le fix est publié mais pas encore dépolyé
+> partout.
+
+
 #### Pourquoi la touche [★]{.odk} fonctionne-t-elle en la maintenant pressée, alors que c’est une [touche morte] ?
 
 Bien que la touche [★]{.odk} soit qualifiée de [touche morte], elle est
