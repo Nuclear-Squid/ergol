@@ -63,7 +63,8 @@ programmes (ie. Firefox). C’est un
 [bug connu](https://gitlab.gnome.org/GNOME/gtk/-/issues/7201) de Gnome.
 
 Pour y remédier, il faut modifier votre fichier `/etc/environment` pour y
-ajouter les lignes suivantes
+ajouter les lignes suivantes :
+
 ```bash
 INPUT_METHOD=ibus
 GTK_IM_MODULE=ibus
