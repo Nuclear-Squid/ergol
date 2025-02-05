@@ -56,6 +56,7 @@ que si Ergo‑L est défini comme diposition par défaut, c’est-à-dire en hau
 la liste des préférences claviers.
 
 #### La touche [★]{.odk} affecte les deux prochains caractères
+
 Sur certains systèmes comme Ubuntu 24.04, la touche typo ([★]{.odk}) affecte les
 deux frappes suivantes au lieu de la seule touche suivante dans certains
 programmes (ie. Firefox). C’est un
