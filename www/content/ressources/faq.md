@@ -62,8 +62,9 @@ deux frappes suivantes au lieu de la seule touche suivante dans certains
 programmes (ie. Firefox). C’est un
 [bug connu](https://gitlab.gnome.org/GNOME/gtk/-/issues/7201) de Gnome.
 
-Pour y remédier, il faut modifier votre fichier `/etc/environment` pour y
-ajouter les lignes suivantes :
+Pour y remédier, il faut modifier votre fichier `~/.profile` (ou
+`/etc/environment` si vous voulez que le changement s’applique à toutes les
+sessions) et y ajouter les lignes suivantes :
 
 ```bash
 INPUT_METHOD=ibus
@@ -73,9 +74,15 @@ XMODIFIERS=@im=ibus
 ```
 
 > **NB** : Il est possible que les guillemets français [« »]{.kbd} ne fonctionne
-> plus dans Firefox ; un autre bug dont le fix est publié mais pas encore dépolyé
-> partout.
+> plus dans Firefox _cf_ le paragraphe suivant
 
+
+#### Pourquoi les guillemets français [« »]{.kbd} ne fonctionnent pas dans certaines applications
+
+Il s’agit d’[un bug](https://github.com/xkbcommon/libxkbcommon/issues/435)
+introduit dans libxkbcommon 1.6, et corrigé dans la version 1.7. Aucun
+contournement n’est proposé pour le moment ; le bug sera corrigé lorsque les
+versions ≥1.7 seront déployées dans votre distribution. 
 
 #### Pourquoi la touche [★]{.odk} fonctionne-t-elle en la maintenant pressée, alors que c’est une [touche morte] ?
 
