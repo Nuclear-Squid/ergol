@@ -77,7 +77,7 @@ XMODIFIERS=@im=ibus
 > plus dans Firefox _cf_ le paragraphe suivant
 
 
-#### Pourquoi les guillemets français [« »]{.kbd} ne fonctionnent pas dans certaines applications
+#### Pourquoi les guillemets français [« »]{.kbd} ne fonctionnent pas dans certaines applications ?
 
 Il s’agit d’[un bug](https://github.com/xkbcommon/libxkbcommon/issues/435)
 introduit dans libxkbcommon 1.6, et corrigé dans la version 1.7. Aucun
