@@ -80,7 +80,7 @@ XMODIFIERS=@im=ibus
 #### Pourquoi les guillemets français [« »]{.kbd} ne fonctionnent pas dans certaines applications ?
 
 Il s’agit d’[un bug](https://github.com/xkbcommon/libxkbcommon/issues/435)
-introduit dans libxkbcommon 1.6, et corrigé dans la version 1.7. Aucun
+introduit dans libxkbcommon 1.6 et corrigé dans la version 1.7. Aucun
 contournement n’est proposé pour le moment ; le bug sera corrigé lorsque les
 versions ≥1.7 seront déployées dans votre distribution. 
 
