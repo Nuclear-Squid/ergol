@@ -83,7 +83,8 @@ XMODIFIERS=@im=ibus
 Il s’agit d’[un bug](https://github.com/xkbcommon/libxkbcommon/issues/435)
 introduit dans libxkbcommon 1.6 et corrigé dans la version 1.7. Aucun
 contournement n’est proposé pour le moment ; le bug sera corrigé lorsque les
-versions ≥1.7 seront déployées dans votre distribution. 
+versions ≥1.7 seront déployées dans votre distribution (cf.
+[Repology.org](https://repology.org/project/libxkbcommon/versions)).
 
 #### Pourquoi la touche [★]{.odk} fonctionne-t-elle en la maintenant pressée, alors que c’est une [touche morte] ?
 
