@@ -84,11 +84,23 @@ Des pilotes incluant l’[angle-mod][] seront proposés. Il est d’ores et déj
 possible d’appliquer cet angle-mod et bien d’autres fonctionnalités via
 [kanata][] et la configuration [Arsenik][].
 
+
 Résolution de problèmes
 --------------------------------------------------------------------------------
 
 Vous avez des questions ou des problèmes avec les pilotes ? Consultez notre
 [FAQ] !
+
+
+Astuces
+--------------------------------------------------------------------------------
+
+### Disposition clavier par défaut sur Windows
+
+- Rechercher dans le menu Démarrer « Paramètres avancés de clavier »
+- Dans « Remplacer la méthode d’entrée par défaut » : choisir sa dispo préférée
+  dans le menu déroulant
+
 
 Licence
 --------------------------------------------------------------------------------
