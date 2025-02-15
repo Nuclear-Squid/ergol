@@ -26,6 +26,46 @@ systèmes.)
 Exécuter l’installeur et relancer la session. La disposition de clavier
 apparaît dans la barre de langues (indicateur de la barre des tâches).
 
+### Windows – méthode alternative avec pilote signé : [ergol_msklc.zip][]
+
+MSKLC (Microsoft Keyboard Layout Creator) permet d’avoir des pilotes mieux
+reconnus car signé par Microsoft, mais pour lequel, après installation, il
+faudra ajouter manuellement la disposition clavier dans la liste des
+dispositions disponibles.
+
+Après téléchargement, dézipper l’archive au complet et exécuter `setup.exe`.
+Suivre les instructions d’installation et fermer puis relancer la session
+utilisateur.
+
+<details>
+
+<summary>Ajouter la disposition installée dans la liste (Windows 10)</summary>
+
+- Dans le menu Démarrer, rechercher « Modifier les paramètres de langue et de
+  clavier »
+
+  ![](windows10/windows10_1.webp)
+  
+- Cliquer sur « Options » sur « Français »
+
+  ![](windows10/windows10_2.webp)
+
+- « Ajouter un clavier »
+  
+  ![](windows10/windows10_3.webp)
+
+- Il devrait y avoir Ergo‑L dans la liste, cliquer dessus
+  
+  ![](windows10/windows10_4.webp)
+
+- Ergo‑L est maintenant ajouté, on devrait voir en bas à droite une icone
+  « FRA » ou « FRA FR » pour choisir le clavier s’il y en a plusieurs dans la
+  liste
+
+  ![](windows10/windows10_5.webp)
+
+</details>
+
 ### macOS : [ergol.keylayout][]
 
 Enregistrer dans `/Library/Keyboard Layouts` et relancer la session.  La
@@ -100,6 +140,7 @@ Licence
 [cavalier.pdf]:      cavalier.pdf
 [ergol_nomade.zip]:  https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_nomade.zip
 [ergol_kbd.exe]:     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_kbd.exe
+[ergol_msklc.zip]:   https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_msklc.zip
 [ergol.keylayout]:   https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.keylayout
 [ergol.xkb_symbols]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols
 [XKalamine]:         https://github.com/OneDeadKey/kalamine#xkalamine
