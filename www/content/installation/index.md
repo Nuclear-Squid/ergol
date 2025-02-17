@@ -97,8 +97,8 @@ Astuces
 
 ### Disposition clavier par défaut sur Windows
 
-- Rechercher dans le menu Démarrer « Paramètres avancés de clavier »
-- Dans « Remplacer la méthode d’entrée par défaut » : choisir sa dispo préférée
+1. Rechercher dans le menu Démarrer « Paramètres avancés de clavier »
+2. Dans « Remplacer la méthode d’entrée par défaut » : choisir sa dispo préférée
   dans le menu déroulant
 
 
