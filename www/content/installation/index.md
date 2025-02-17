@@ -41,24 +41,24 @@ utilisateur.
 
 <summary>Ajouter la disposition installée dans la liste (Windows 10)</summary>
 
-- Dans le menu Démarrer, rechercher « Modifier les paramètres de langue et de
+1. Dans le menu Démarrer, rechercher « Modifier les paramètres de langue et de
   clavier »
 
   ![](windows10/windows10_1.webp)
   
-- Cliquer sur « Options » sur « Français »
+2. Cliquer sur « Options » sur « Français »
 
   ![](windows10/windows10_2.webp)
 
-- « Ajouter un clavier »
+3. « Ajouter un clavier »
   
   ![](windows10/windows10_3.webp)
 
-- Il devrait y avoir Ergo‑L dans la liste, cliquer dessus
+4. Il devrait y avoir Ergo‑L dans la liste, cliquer dessus
   
   ![](windows10/windows10_4.webp)
 
-- Ergo‑L est maintenant ajouté, on devrait voir en bas à droite une icone
+5. Ergo‑L est maintenant ajouté, on devrait voir en bas à droite une icône
   « FRA » ou « FRA FR » pour choisir le clavier s’il y en a plusieurs dans la
   liste
 
