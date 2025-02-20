@@ -184,6 +184,7 @@ Beaucoup l’ignorent, ou laissent leur éditeur de texte la gérer pour eux. Er
 de soigner la typographie sans aucun effort supplémentaire :
 
 - [Shift]{.kbd}‑[Espace]{.kbd} = espace insécable fine
+- [Shift]{.kbd}‑[AltGr]{.kbd}‑[Espace]{.kbd} = espace insécable
 - [★]{.odk} [Espace]{.kbd} = apostrophe typographique
 - [★]{.odk} [D]{.kbd}[B]{.kbd}[V]{.kbd}[-]{.kbd} = tiret bas, cadratin,
   demi-cadratin, insécable
