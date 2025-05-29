@@ -73,7 +73,7 @@ QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 ```
 
-> **NB** : Cette solution peut cependant bloquer l’accès aux cratères
+> **NB** : Cette solution peut cependant bloquer l’accès aux caractères
 > [« »]{.kbd} dans certains logiciels (_e.g._ Firefox) dans certaines
 > configurations (cf. paragraphe suivant).
 
