@@ -86,7 +86,7 @@ and you should be good to go !
 
 [2]: https://github.com/OneDeadKey/kalamine
 [3]: https://github.com/OneDeadKey/kalamine#installing-distributable-layouts
-[4]: https://github.com/Nuclear-Squid/ergol/blob/master/keymaps/ergol.toml
+[4]: https://github.com/Nuclear-Squid/ergol/blob/main/keymaps/fr/ergol.toml
 [5]: https://github.com/pypa/pipx?tab=readme-ov-file#install-pipx
 
 
