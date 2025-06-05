@@ -62,9 +62,8 @@ deux frappes suivantes au lieu de la seule touche suivante dans certains
 programmes (ex: Firefox). C’est un
 [bug connu](https://gitlab.gnome.org/GNOME/gtk/-/issues/7201) de Gnome.
 
-Pour y remédier, il faut modifier votre fichier `~/.profile` (ou
-`/etc/environment` si vous voulez que le changement s’applique à toutes les
-sessions) et y ajouter les lignes suivantes :
+Pour y remédier, il faut modifier le fichier `/etc/environment` et y ajouter
+les lignes suivantes :
 
 ```bash
 INPUT_METHOD=ibus
