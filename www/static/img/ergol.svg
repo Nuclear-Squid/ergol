@@ -645,6 +645,7 @@
           <text x="38.0" y="20.6" class="level4">≠</text>
           <text x="38.0" y="43.4" class="level5"> </text>
         </g>
+        <text x="38.0" y="43.4" class="level5">ñ</text>
       </g>
     </g>
     <g class="right">
@@ -759,6 +760,7 @@
             <text x="38.0" y="20.6" class="dk_mark">◌</text>
             <text x="38.0" y="20.6" class="dk_char">,</text>
           </g>
+          <text x="38.0" y="43.4" class="level5">ß</text>
         </g>
       </g>
       <g id="KeyC" class="letterKey" transform="translate(255)">
