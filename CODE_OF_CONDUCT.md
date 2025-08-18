@@ -70,8 +70,7 @@ Modération
    autres membres de la communauté. Si un·e modérateurice cause une situation
    inappropriée, moins de tolérance lui sera accordée qu’aux autres.
 
-L’équipe de modération est composée de [Nuclear Squid], [Ashenfae], [Trilowy],
-[Nivopol].
+L’équipe de modération est composée de [Nuclear Squid], [Ashenfae], [Trilowy].
 
 
 Savoir-vivre
