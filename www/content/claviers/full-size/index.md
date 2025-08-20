@@ -59,7 +59,7 @@ sont pas symétriques et ont une colonne de touches de plus sous l’auriculaire
 droit pour se rapprocher des claviers ANSI.
 
 Les volumes vendus n’ont pas été suffisants pour que les coûts baissent assez
-pour devenir le nouveau standard, mais techniquement l’objecrif a été atteint :
+pour devenir le nouveau standard, mais techniquement l’objectif a été atteint :
 des claviers ortholinéaires simples et efficaces.
 
 ![X-Bows Nature (source : [site officiel][X-Bows])](xbows.png)
