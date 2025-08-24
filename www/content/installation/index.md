@@ -15,6 +15,10 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 Téléchargement
 --------------------------------------------------------------------------------
 
+### Note pour les utilisateurices de claviers programmables
+
+On recommande très fortement d’installer le driver sur l’ordinateur et de laisser Le clavier en QWERTY dans QMK/ZMK/Vial. C’est le driver qui s'occuper de la disposition, Ergo‑l ou autre. La seule modification quasi indispensable c’est d’avoir AltGr sur une touche de pouce accessible pour accéder aux symboles.
+
 ### Pilotes nomades : [ergol_nomade.zip][]
 
 Une archive ZIP contenant les pilotes ne nécessitant pas de droits
