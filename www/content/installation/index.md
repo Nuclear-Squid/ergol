@@ -110,6 +110,17 @@ setxkbmap custom
 D’autres méthodes d’installation sont possibles, en passant le [fichier
 source][] à [XKalamine][].
 
+### Claviers personnalisés / ergonomiques
+
+La bonne façon d’utiliser un clavier ergonomique est d’appliquer la disposition
+côté PC (comme vu plus haut) et de ne configurer que les touches spéciales de
+son clavier (Entrée, Backspace, Shift, AltGr, Alt, Ctrl…).
+
+Programmer son clavier pour qu’il émule Ergol sur un PC configuré en Azerty (ou
+autre disposition) est **beaucoup** plus compliqué. Cela n’a donc peu d’intérêt,
+sauf besoin très spécifique.
+
+
 ### Aide-mémoire : [cavalier.pdf][]
 
 Une aide pour apprendre la dispo. À imprimer, plier et placer sur son bureau !
