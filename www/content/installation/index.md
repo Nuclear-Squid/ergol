@@ -17,7 +17,7 @@ Téléchargement
 
 ### Note pour les utilisateurices de claviers programmables
 
-On recommande très fortement d’installer le driver sur l’ordinateur et de laisser Le clavier en QWERTY dans QMK/ZMK/Vial. C’est le driver qui s'occuper de la disposition, Ergo‑l ou autre. La seule modification quasi indispensable c’est d’avoir AltGr sur une touche de pouce accessible pour accéder aux symboles.
+Il est très fortement recommandé d’installer le driver sur l’ordinateur et de laisser le clavier en QWERTY dans QMK/ZMK/Vial. C’est le driver qui s'occupe de la disposition, Ergo‑l ou autre, pas le clavier programmable. La seule modification quasi indispensable est d’avoir AltGr sur une touche de pouce accessible pour accéder aux symboles.
 
 ### Pilotes nomades : [ergol_nomade.zip][]
 
