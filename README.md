@@ -46,7 +46,7 @@ cedillas, digraphs and quote signs you’ll need to write in proper French:
 
 ![dead key layout](www/content/presentation/ergol_1dk.svg)
 
- . . . and the AltGr layer is fully dedicated to programming symbols.
+… and the AltGr layer is fully dedicated to programming symbols.
 
 ![altgr layout](www/content/presentation/ergol_altgr.svg)
 
