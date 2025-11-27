@@ -109,7 +109,7 @@ setxkbmap fr -variant ergol  # Switch your keyboard layout to ergol
 _Troubleshooting with ubuntu / wayland_
 
 There is a weird issue where Ergo-L works fine with some applications
-(phpstorm, gnome . . . ) but not on others (libreoffice, terminator). The deadkey
+(phpstorm, gnome…) but not on others (libreoffice, terminator). The deadkey
 remains for two chars instead of only one. (Ex.: `a[deadkey]sen` should display
 `aéen` but it displays `aéèn` instead.)
 
