@@ -15,11 +15,13 @@ footer = "réfrigéré par [x-keyboard](https://onedeadkey.github.io/x-keyboard)
 
 ## Comparaison à Ergo-L
 
-Erglace abandonne l'accès facile aux raccourcis usuels (Ctrl+C, Ctrl+V...) pour atteindre des statistiques légèrement meilleures, en particulier un SFB plus bas, autour les 1%. Le [SFB][1] correspond aux enchaînements de deux caractères qui utilisent le même doigt, ce qui ralentit la vitesse de frappe.
+Erglace abandonne l'accès facile aux raccourcis usuels (Ctrl+C, Ctrl+V...) pour atteindre des statistiques légèrement meilleures, en particulier un SFB plus bas, autour de 0.8% en français et 1.1% en anglais. Le [SFB][1] correspond aux enchaînements de deux caractères qui utilisent le même doigt, ce qui ralentit la vitesse de frappe.
 
-La principale différence est qu'Erglace cherche à minimiser les [redirections][2], c'est-à-dire les enchaînements de trois caractères d'une même main avec un changement de direction, mouvement considéré comme inconfortable. Pour ce faire, toutes les voyelles se retrouvent d'un côté, comme en Bépo, ce qui favorise l'alternance des mains. Le désavantage est que la disposition a moins de [roulements][3], c'est-à-dire des enchaînements de trois lettres d'une main dans une même direction, qui sont appréciables.
+La principale différence, c’est qu’Erglace favorise les alternances, alors qu’Ergo-L favorise les [roulements][2], c'est-à-dire des enchaînements de trois lettres d'une main dans une même direction, considérés comme appréciables. Là où Ergo-L peut avoir de longs enchaînements avec une même main, Erglace va chercher à alterner des séquences de une ou deux lettres, pour équilibrer la frappe.
 
-Autre différence, Erglace est compatible nativement avec les hummingbirds. Ces claviers ont la particularité d’avoir 3 touches par doigt, sauf pour l’auriculaire et l’extension de l’index qui n’en ont que 2, afin de limiter les déplacements peu confortables. La conséquence est que certaines lettres (`Z`, `K`, `Q` et `J`) ne sont plus accessibles directement. C’est la touche morte qui permet d’accéder à ces lettres, avec en plus la lettre `Y` pour résoudre un [ciseau][4] inconfortable (`yo` et `oy`).
+Une des conséquences de l’alternance, c’est qu'Erglace cherche à minimiser les [redirections][3], c'est-à-dire les enchaînements de trois caractères d'une même main avec un changement de direction, mouvement considéré comme inconfortable. Pour ce faire, toutes les voyelles se retrouvent d'un côté, comme en Bépo.
+
+Dernière spécificité, comme toutes les dispositions, Erglace a des [ciseaux][4], donc un bigramme nécessitant un changement de rangée inconfortable. Le positionnement de `Y` d’Erglace augmente malheureusement le nombre de ciseaux, en anglais notamment, et il est très difficile de le mettre à une autre place. Pour combler ce point, la lettre est présente aussi sur la touche morte, normalement dédiée aux accents. Cette astuce permet de transformer des ciseaux en enchaînements confortables.
 
 En dehors de ces points, Erglace garde les principes d'Ergo-L (1DFH, touche morte...), et reprend d'ailleurs la même couche de symboles.
 
@@ -27,9 +29,9 @@ En dehors de ces points, Erglace garde les principes d'Ergo-L (1DFH, touche mort
 
 Pour la majorité de gens, Ergo-L convient mieux, mais certains profils pourraient préférer Erglace :
 
-- Les bépoètes et utilisateurs d'Optimot, habitués à avoir les voyelles d'un côté, qui sont déroutés par l'apprentissage d'Ergo-L
 - Les personnes privilégiant l’alternance des mains plutôt que les roulements et surtout les longs enchaînements d’une même main. Aujourd'hui, la communauté Ergo-L préfère les roulements à la redirection
-- Les rares personnes qui trouvent qu'Ergo-L a trop de redirections ou de SFB
+- Les bépoètes et utilisateurs d'Optimot, habitués à avoir les voyelles d'un côté, qui sont déroutés par l'apprentissage d'Ergo-L
+
 
 La disposition a quelques défauts qu'il faut garder à l'esprit :
 
@@ -42,7 +44,7 @@ La disposition a quelques défauts qu'il faut garder à l'esprit :
 Les explications détaillées des choix fait lors de la conception sont disponibles sur le [GitHub de la disposition][5], et sont mises à jour au fur et à mesure des changements.
 
 [1]: /ressources/glossaire#SFB
-[2]: /ressources/glossaire#redirection
-[3]: /ressources/glossaire#roulement
+[2]: /ressources/glossaire#roulement
+[3]: /ressources/glossaire#redirection
 [4]: /ressources/glossaire#ciseau
 [5]: https://github.com/Lysquid/Erglace/blob/main/NOTES.md
