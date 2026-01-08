@@ -39,7 +39,7 @@ clavier
 
 : [ergol-memo](https://ddirecte.org/ergol-memo.html) : pour **chercher facilement** comment taper certains caractères
 
-Un bug à signaler, une amélioration à proposer ?
+Un bug à signaler, une amélioration à proposer ?
 
 : Les questions liées aux **pilotes** et au **site web** sont à formuler sur le
 [dépôt de code Ergo‑L](https://github.com/Nuclear-Squid/ErgoL) — en français ou
