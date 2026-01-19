@@ -21,15 +21,15 @@ La principale différence, c’est qu’Erglace favorise les alternances, alors 
 
 Une des conséquences de l’alternance, c’est qu'Erglace cherche à minimiser les [redirections][3], c'est-à-dire les enchaînements de trois caractères d'une même main avec un changement de direction, mouvement considéré comme inconfortable. Pour ce faire, toutes les voyelles se retrouvent d'un côté, comme en Bépo.
 
-Dernière spécificité, comme toutes les dispositions, Erglace a des [ciseaux][4], donc un bigramme nécessitant un changement de rangée inconfortable. Le positionnement de `Y` d’Erglace augmente malheureusement le nombre de ciseaux, en anglais notamment, et il est très difficile de le mettre à une autre place. Pour combler ce point, la lettre est présente aussi sur la touche morte, normalement dédiée aux accents. Cette astuce permet de transformer des ciseaux en enchaînements confortables.
+Dernière spécificité, comme toutes les dispositions, Erglace a des [ciseaux][4], donc un bigramme nécessitant un changement de rangée inconfortable. Le positionnement de `Y` d’Erglace augmente malheureusement le nombre de ciseaux, en anglais notamment. Malheureusement, il est très difficile de le mettre à une autre place sans impacter fortement les avantages de la disposition. Pour combler ce point, la lettre est présente aussi sur la touche morte, normalement dédiée aux accents. Cette astuce permet de transformer des ciseaux en enchaînements confortables.
 
 En dehors de ces points, Erglace garde les principes d'Ergo-L (1DFH, touche morte...), et reprend d'ailleurs la même couche de symboles.
 
 ## Comment choisir ?
 
-Pour la majorité de gens, Ergo-L convient mieux, mais certains profils pourraient préférer Erglace :
+Ergo-L est une excellente disposition, mais certains profils pourraient préférer Erglace :
 
-- Les personnes privilégiant l’alternance des mains plutôt que les roulements et surtout les longs enchaînements d’une même main. Aujourd'hui, la communauté Ergo-L préfère les roulements à la redirection
+- Les personnes privilégiant l’alternance des mains plutôt que les roulements et surtout les longs enchaînements d’une même main
 - Les bépoètes et utilisateurs d'Optimot, habitués à avoir les voyelles d'un côté, qui sont déroutés par l'apprentissage d'Ergo-L
 
 
@@ -41,10 +41,11 @@ La disposition a quelques défauts qu'il faut garder à l'esprit :
 
 ## Conception
 
-Les explications détaillées des choix fait lors de la conception sont disponibles sur le [GitHub de la disposition][5], et sont mises à jour au fur et à mesure des changements.
+Les explications détaillées des choix faits lors de la conception sont disponibles sur le [GitHub de la disposition][5], et sont mises à jour au fur et à mesure des changements.
+
 
 [1]: /ressources/glossaire#SFB
 [2]: /ressources/glossaire#roulement
 [3]: /ressources/glossaire#redirection
 [4]: /ressources/glossaire#ciseau
-[5]: https://github.com/Lysquid/Erglace/blob/main/NOTES.md
+[5]: https://github.com/cmoinard/Erglace
