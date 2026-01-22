@@ -4,7 +4,7 @@ locale      = "fr"
 variant     = "erglace"
 description = "French (Erglace)"
 author      = "Lysquid"
-url         = "https://github.com/Lysquid/Erglace"
+url         = "https://github.com/cmoinard/Erglace"
 geometry    = "ERGO"
 version     = "0.6.13"
 
