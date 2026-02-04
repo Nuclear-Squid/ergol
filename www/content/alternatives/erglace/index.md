@@ -11,7 +11,7 @@ footer = "réfrigéré par [x-keyboard](https://onedeadkey.github.io/x-keyboard)
 
 {{<x-keyboard name="Erglace"
               data="erglace" class="odk"
-              href="https://github.com/Lysquid/Erglace">}}
+              href="https://github.com/cmoinard/Erglace">}}
 
 ## Comparaison à Ergo-L
 
