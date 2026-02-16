@@ -46,8 +46,8 @@ Programmation
 
 On ne les remappe pas, tout simplement. Ergo‑L a été pensé dès le départ avec
 une compatibilité avec les <i lang="en">vim motions</i>. Pour en savoir plus,
-lire le très bon [article]({{< ref "articles/vim_pour_les_ergonautes" >}}) que
-Kazé a écrit sur le sujet.
+lire l’[article]({{< ref "articles/vim_pour_les_ergonautes" >}}) que Kazé a
+écrit sur le sujet.
 
 
 Pilotes
