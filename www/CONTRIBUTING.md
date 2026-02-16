@@ -112,7 +112,7 @@ feuille de style.
 
 ### Désignation des touches
 
-Les touches physiques sont incluses dans des balises `<kbd>`, les caractères
+Les touches physiques sont incluses dans des balises `<kbd>`, et les caractères
 produits dans des balises `<code>`. On parle donc de la touche <kbd>F</kbd> pour
 désigner celle qui produit un `N` en Ergo‑L.
 

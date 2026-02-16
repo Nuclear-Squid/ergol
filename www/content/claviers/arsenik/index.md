@@ -47,7 +47,7 @@ sans aucun délai susceptible de ralentir la saisie**, et les touches associées
 en *tap* sont beaucoup moins susceptibles d’être actionnées par erreur.
 
 Ces détails de synchronisation sont importants. En particulier, la durée de
-temporisation est sensible : 300 ms est une bonne valeur pour débuter, on pourra
+temporisation est sensible : 300 ms est une bonne valeur pour débuter. On pourra
 la réduire doucement au fil de la progression.
 
 ### Homerow-mods
@@ -93,7 +93,7 @@ Claviers de <i lang="en">laptop</i>
 
 [Kanata][] est un logiciel libre et multiplateforme permettant de redéfinir le
 comportement des touches du clavier. Il permet notamment l’application de
-l’angle-mod, la définition de layers, la configuration de layer-taps et
+l’angle mod, la définition de layers, la configuration de layer-taps et
 homerow-mods — et, plus généralement, de faire une grande partie de ce que font
 les <i lang="en">firmwares</i> de claviers programmables comme QMK et ZMK.
 
@@ -101,30 +101,30 @@ Une configuration Kanata personnalisable est proposée ici : [arsenik.zip][]
 
 Cette configuration a pour but de faire découvrir Arsenik étape par étape :
 
-1. <i lang="en">Angle-mod</i>
+1. <i lang="en">Angle mod</i>
 2. <i lang="en">Layer-taps</i>
 3. <i lang="en">Homerow-mods</i>
 
-Par défaut, seul l’angle-mod est appliqué ; à vous d’activer les layer-taps et
+Par défaut, seul l’angle mod est appliqué ; à vous d’activer les layer-taps et
 les homerow-mods à votre rythme.
 
 ### 1. <i lang="en">Angle-mod</i>
 
-On applique un [angle-mod][], c’est-à-dire une permutation circulaire sur les 6
+On applique un [angle mod][], c’est-à-dire une permutation circulaire sur les six
 touches de gauche de la rangée inférieure, afin de mieux respecter l’angle des
 poignets et de se rapprocher d’une disposition ortholinéaire :
 
 ![Ergo‑L sur un clavier ISO](./ergol_iso.svg)
 
-![Ergo‑L avec l’angle-mod](./ergol_isoa.svg)
+![Ergo‑L avec l’angle mod](./ergol_isoa.svg)
 
 Les barres d’espace des laptops ayant généralement une largeur de 5u, cet
-angle-mod symétrise aussi le placement des deux autres touches de pouces, qui se
+angle mod symétrise aussi le placement des deux autres touches de pouce, qui se
 retrouvent dans l’alignement des majeurs.
 
 ### 2. <i lang="en">Layer-taps</i>
 
-Une fois habitué à l’angle-mod, il est temps d’activer les layer-taps :
+Une fois l'habitude prise de l’angle mod, il est temps d’activer les layer-taps :
 
 - [AltGr]{.kbd} fait [Entrée]{.kbd} en tap ;
 - [Alt]{.kbd} fait [Backspace]{.kbd} en tap ;
@@ -252,7 +252,7 @@ dispositions comme Azerty, Qwerty et tous les arrangements du Qwerty ANSI
 [Arsenik]:       https://github.com/OneDeadKey/arsenik
 [Miryoku]:       https://github.com/manna-harbour/miryoku
 [kanata]:        https://github.com/jtroo/kanata
-[angle-mod]:     https://colemakmods.github.io/ergonomic-mods/angle.html
+[angle mod]:     https://colemakmods.github.io/ergonomic-mods/angle.html
 [precondition]:  https://precondition.github.io/home-row-mods
 [combo-mods]:    https://jasoncarloscox.com/writing/combo-mods/
 [Callum-mods]:   https://github.com/qmk/qmk_firmware/blob/user-keymaps-still-present/users/callum/readme.md

@@ -13,8 +13,8 @@ params.domain      = "JdLL 2023"
 Reprendre le contrôle d’un geste quotidien : la frappe au clavier.
 
 La question de l’ergonomie est vaste et subjective : chaque physique est
-différent, et chaque petit inconfort, à force de répétition peut devenir
-douloureux chez certains mais pas chez d'autres.
+différent, et chaque petit inconfort à force de répétition peut devenir
+douloureux chez certaines personnes mais pas chez d'autres.
 
 Mais si l'on peut passer un temps conséquent à chercher à optimiser chaque geste
 du quotidien afin d’en minimiser l'inconfort, cela pose parfois des problèmes
@@ -27,7 +27,7 @@ delà du clavier, ne serait-ce que la disposition des touches qui a été optimi
 par nos soins pour notre usage (qui ne sera pas le même pour un programmeur, une
 scientifique, un joueur ou une autrice…).
 
-Ainsi, je vais présenter dans cette conférence, mon retour d’expérience sur un
+Ainsi, je vais présenter, dans cette conférence, mon retour d’expérience sur un
 cas précis : le clavier. Et même si j’aime bien bricoler, je n’ai jamais eu la
 patience de souder moi-même toutes les touches d'un clavier. De la même manière,
 je n'ai pas eu le courage de reprogrammer mon clavier là où une ligne dans un

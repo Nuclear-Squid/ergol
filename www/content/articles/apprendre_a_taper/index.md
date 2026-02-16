@@ -11,8 +11,8 @@ période. Heureusement, il existe de nombreux sites ou techniques que l’on peu
 utiliser pour réduire le plus possible ce temps d’apprentissage !
 
 Après avoir changé *neuf fois* de disposition de clavier en 3,5 ans  (Colemak,
-puis 8 versions majeures d’Ergo‑L), j’ai compilé dans cet article toutes les
-techniques que j’ai accumulées au fil du temps pour apprendre un nouveau layout.
+puis huit versions majeures d’Ergo‑L), j’ai compilé dans cet article toutes les
+techniques que j’ai accumulées au fil du temps pour apprendre un nouveau _layout_.
 
 <!--more-->
 
@@ -34,11 +34,11 @@ la dispo :
 
 ### Être léger sur les touches
 
-Ça ne sert à rien d’appuyer fort sur les touches, en utilisant juste la quantité
-d’effort pour actionner les touches vous utiliserez beaucoup moins d’énergie et
+Ça ne sert à rien d’appuyer fort sur les touches. En utilisant juste la quantité
+d’effort pour actionner les touches, vous utiliserez beaucoup moins d’énergie et
 ça vous laissera plus de marge pour taper vite par moments. Si vous avez un
 clavier mécanique, un bon exercice est d’essayer d’actionner les touches sans
-appuyer à fond (éviter le « bottom out »)
+appuyer à fond (éviter le « bottom out »).
 
 ### Garder un rythme semi-constant
 
@@ -49,13 +49,13 @@ frappes entre elles, ce qui peut causer des erreurs de timing.
 
 Non seulement ça évite de se tromper dans le nombre de caractères à effacer pour
 arriver à l’erreur (ou pire, d’utiliser la *souris*), mais ça vous permet de
-réessayer d’écrire le mot entièrement et de l’apprendre correctement. C’est aussi
-souvent beaucoup plus efficace que [Backspace]{.kbd} seul, vu qu’on efface des
-mots complets – et à haute vitesse, on voit souvent les erreurs tard.
+réessayer d’écrire le mot entièrement et de l’apprendre correctement. C’est aussi,
+souvent, beaucoup plus efficace que [Backspace]{.kbd} seul, vu qu’on efface des
+mots complets – et à haute vitesse, on voit les erreurs tard.
 
 ### Surtout : soigner la précision !
 
-Bouger les doigts vite c’est rigolo, mais si on fait pleins d’erreurs ça ne sert à
+Bouger les doigts vite c’est rigolo, mais si on fait plein d’erreurs ça ne sert à
 rien. On va souvent plus vite en ralentissant les doigts et faisant moins
 d’erreurs qu’en bourrinant comme un malade mais en faisant une erreur par mot.
 
@@ -66,7 +66,7 @@ Les premiers pas
 Ça y est, c’est le grand jour, vous avez décidé d’apprendre une disposition
 ergonomique. Vous avez installé le pilote, déplacé les touches ou mis des jolis
 autocollants sur votre clavier pour avoir les nouvelles lettres au bon endroit
-et vous êtes prêt à vous lancer !
+et vous êtes prêt·e à vous lancer !
 
 ![Le clavier « Corne » de l’Ergonaute @Babyforce](joli_clavier_crop.webp)
 
@@ -98,20 +98,20 @@ avec quelques lettres, et on rajoute des lettres possibles quand on commence à
 gagner en confiance. Travailler les « n‑grammes » (enchaînements de `n` lettres)
 est parfois recommandé à ce stade, mais d’après mon expérience ils ne sont pas
 assez variés pour apprendre une disposition efficacement : on apprend les
-quelques enchaînements demandés plutôt que le layout.
+quelques enchainements demandés plutôt que le _layout_.
 
 Pour les premiers pas avec une nouvelle disposition, vous pouvez rester dans
-votre disposition d’origine au quotidien et vous entraîner périodiquement sur
-le site que vous préférez dans la liste ci-dessus. Il vaut mieux s’entraîner
-20–30 minutes par jour pendant une semaine que passer 4 heures sur le site
+votre disposition d’origine au quotidien et vous entrainer périodiquement sur
+le site que vous préférez dans la liste ci-dessus. Il vaut mieux s’entrainer
+20 à 30 minutes par jour pendant une semaine que passer 4 heures sur le site
 d’un coup. La deuxième méthode va être épuisante et vous risquez de vite
-oublier votre entraînement (un peu comme étudier la veille d’un examen).
+oublier votre entrainement (un peu comme étudier la veille d’un examen).
 
-Selon moi, il n’y a pas besoin d’apprendre l’entièreté du layout sur
+Selon moi, il n’y a pas besoin d’apprendre l’entièreté du _layout_ sur
 ces sites – les 12 lettres les plus fréquentes suffisent, le reste peut
 s’apprendre sur le tas –, mais certain·e·s restent jusqu’au bout, souvent pour
 le challenge, pour travailler la précision ou juste pour gagner
-en confiance. En général, on passe une semaine ou deux à s’entraîner comme ça.
+en confiance. En général, on passe une semaine ou deux à s’entrainer comme ça.
 
 À ce stade, le plus important est d’apprendre la dispo avec les *doigts*, pas
 avec la *tête* : si vous devez réfléchir à chacune des touches que vous
@@ -150,15 +150,15 @@ de les travailler de temps en temps.
 très pratiques pour bosser les mots-clés courants et les enchaînements de
 symboles avec [AltGr]{.kbd}.)
 
-### « *Gotta go fast !* »
+### « *Gotta go fast!* »
 
-Ci-dessous, je vous ai mis un de mes exercices où j’ai tapé très vite. Ça m’a
+Ci-dessous, je vous ai mis un des exercices où j’ai tapé très vite. Ça m’a
 demandé beaucoup d’effort mais, quand même, 80 mots par minute c’est vraiment
 rapide ! C’est cool, non ?
 
 ![Un test où j’ai tapé *très vite*](monkeytype_bad.png)
 
-Non, c’est **à chier**. Le score en mots par minute à beau être élevé, la
+Non, c’est **à chier**. Le score en mots par minute a beau être élevé, la
 précision est **très** basse : 90,5 % ça peut paraitre beaucoup, mais ça implique
 qu’un dixième des frappes au clavier étaient erronées. Ces 10 % d’erreurs m’ont
 coûté beaucoup plus que 10 % de vitesse, parce que j’ai dû retourner en arrière
@@ -185,7 +185,7 @@ disposition que pour les entraînements, et de ne changer de disposition qu’un
 fois que vous avez pris confiance. 35–40 mots par minute est en général une
 vitesse amplement suffisante pour le monde réel, mais certain·e·s font le
 changement plus tôt : on oublie vite sa disposition précédente et ça peut être
-moins frustrant de taper lentement avec le nouveau layout que de faire des
+moins frustrant de taper lentement avec le nouveau _layout_ que de faire des
 erreurs avec l’ancien.
 
 
@@ -195,9 +195,9 @@ Vers l’infini et au‑delà !
 Ça y est, c’est le grand jour, vous avez décidé d’utiliser votre nouvelle
 disposition à temps plein. Vous vous sentez à l’aise, vous tapez suffisamment
 vite, vous avez même quelques jolis screenshots de stats Monkeytype. Bien
-joué ! Vous avez réussi le plus dur de l’entraînement, mais c’est à partir de
+joué ! Vous avez réussi le plus dur de l’entrainement, mais c’est à partir de
 là que les exercices deviennent vraiment marrants. Dans cette section, je vais
-vous montrer quelques entraînements que j’aime beaucoup pour passer vite au
+vous montrer quelques entrainements que j’aime beaucoup pour passer vite au
 niveau supérieur.
 
 ### Travailler les n‑grammes
@@ -255,7 +255,7 @@ respectivement 1 mot et 3 mots.
 Conclusion (TL;DR)
 --------------------------------------------------------------------------------
 
-Vous connaissez donc maintenant ma méthode pour apprendre un nouveau layout.
+Vous connaissez donc maintenant ma méthode pour apprendre un nouveau _layout_.
 Pour résumer :
 
 1. On commence par apprendre les bases avec [Duck Typist][] ou [Keybr][].

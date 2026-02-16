@@ -59,7 +59,7 @@ la liste des préférences claviers.
 
 Sur certains systèmes comme Ubuntu 24.04, la touche typo ([★]{.odk}) affecte les
 deux frappes suivantes au lieu de la seule touche suivante dans certains
-programmes (ex: Firefox). C’est un
+programmes (ex. : Firefox). C’est un
 [bug connu](https://gitlab.gnome.org/GNOME/gtk/-/issues/7201) de Gnome.
 
 Pour y remédier, il faut modifier le fichier `/etc/environment` et y ajouter
@@ -102,7 +102,7 @@ Exemple pour Ergo‑L :
 
 #### J’utilise Wezterm et la touche [★]{.odk} imprime un `o`. Que faire ?
 
-C’est une [régression connue][wezterm-bug], [un patch est en
+C’est une [régression connue][wezterm-bug], et [un patch est en
 cours][wezterm-patch].
 
 

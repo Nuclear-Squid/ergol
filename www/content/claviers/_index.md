@@ -113,7 +113,7 @@ vers l’extérieur de la paume. À prendre en compte lors du choix.
 
 C’est affaire de goûts : les géométries 3D (Kinesis, MoErgo, Dactyl, Skeletyl…)
 ont leurs adeptes. Elles réduisent très significativement l’inconfort lié aux
-« ciseaux » (= bigrammes avec changement inconfortables de rangée) et permettent
+« ciseaux » (= bigrammes avec changement inconfortable de rangée) et permettent
 d’accéder à plus de touches qu’un clavier plat sans causer de déviations
 ulnaires.
 
@@ -126,14 +126,14 @@ sous un pouce).
 
 Les claviers grand public sont tous à membrane, mais la plupart des
 utilisateurices de claviers ergonomiques ne jurent que par les contacts
-mécaniques. Et pour cause : on peut choisir exactement le toucher que l’on veut,
-le confort et de l’agrément d’utilisation sont incomparables. La quasi totalité
+mécaniques. Et pour cause : on peut choisir exactement le toucher que l’on veut.
+Le confort et l’agrément d’utilisation sont incomparables. La quasi totalité
 des claviers ergonomiques utilisent ce type de contacts.
 
-On a deux principaux standards de contacts mécaniques :
+On a deux principaux standard de contacts mécaniques :
 
 - les contacts MX sont les plus courants : course de 4 mm, empreinte standard de
-  19,05×19,05 mm, on trouve une très grande variété de modèles et de profils de
+  19,05×19,05 mm, très grande variété de modèles et de profils de
   <i lang="en">keycaps</i> (cabochons) compatibles ;
 - les contacts Choc sont prisés par les amateurices de « <i lang="en">low
   profile</i> » : course de 2 mm, empreinte réduite de 18×17 mm, moins de
@@ -305,7 +305,7 @@ Conseils d’achat
 Pour apprendre Ergo‑L ou n’importe quelle disposition de clavier, votre clavier
 actuel suffit. Même s’il est imprimé en AZERTY ! L’ergonomie clavier débute avec
 l’[apprentissage de la dactylographie][dactylo] : si vous ne savez pas taper à
-10 doigts sans regarder, aucun clavier ergonomique ne vous sera utile.
+dix doigts sans regarder, aucun clavier ergonomique ne vous sera utile.
 
 Avec des logiciels libres comme [Kanata][] et en utilisant [Arsenik][] comme
 base, vous pouvez aussi obtenir un gain d’ergonomie très proche du meilleur
@@ -328,7 +328,7 @@ musculo-squelettiques.
 ![[Sofle][], 58 touches (4×6+5)](compacts/4x6_ergol.svg)
 
 C’est de loin le type de clavier ergonomique le plus vendu. Cette géométrie
-fonctionne avec tous les layouts francophones :
+fonctionne avec tous les _layouts_ francophones :
 
 - **triviale en Ergo‑L** et Lafayette — aucune adaptation requise, chiffres en
   direct ;

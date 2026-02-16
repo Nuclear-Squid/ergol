@@ -24,7 +24,7 @@ systèmes.)
 ### Windows : [ergol_kbd.exe][]
 
 Exécuter l’installeur et relancer la session. La disposition de clavier
-apparaît dans la barre de langues (indicateur de la barre des tâches).
+apparait dans la barre de langues (indicateur de la barre des tâches).
 
 ### Windows – méthode alternative avec pilote signé : [ergol_msklc.zip][]
 
@@ -58,7 +58,7 @@ utilisateur.
   
    ![](windows10/windows10_4.webp)
 
-5. Ergo‑L est maintenant ajouté, on devrait voir en bas à droite une icône
+5. Ergo‑L est maintenant ajouté. On devrait voir en bas à droite une icône
    « FRA » ou « FRA FR » pour choisir le clavier s’il y en a plusieurs dans la
    liste
 
@@ -71,7 +71,7 @@ utilisateur.
 Enregistrer dans `/Library/Keyboard Layouts` et relancer la session.  La
 disposition de clavier est disponible dans les préférences sous « Clavier »,
 « Méthodes de saisie », `+` (ajouter une nouvelle disposition), et enfin «
-Autres » .
+Autres ».
 
 On peut aussi l’enregistrer dans `~/Library/Keyboard Layouts`
 (pour le seul utilisateur courant), mais la disposition ne sera pas
@@ -114,13 +114,13 @@ source][] à [XKalamine][].
 Une aide pour apprendre la dispo. À imprimer, plier et placer sur son bureau !
 
 
-Variante en A (« <i lang="en">angle-mod</i> »)
+Variante en A (« <i lang="en">angle mod</i> »)
 --------------------------------------------------------------------------------
 
 ![](angle_mod.svg)
 
-Des pilotes incluant l’[angle-mod][] seront proposés. Il est d’ores et déjà
-possible d’appliquer cet angle-mod et bien d’autres fonctionnalités via
+Des pilotes incluant l’[angle mod][] seront proposés. Il est d’ores et déjà
+possible d’appliquer cet angle mod et bien d’autres fonctionnalités via
 [kanata][] et la configuration [Arsenik][].
 
 
@@ -159,5 +159,5 @@ Licence
 
 [Arsenik]:           /claviers/arsenik/
 [kanata]:            https://github.com/jtroo/kanata
-[angle-mod]:         https://colemakmods.github.io/ergonomic-mods/angle.html
+[angle mod]:         https://colemakmods.github.io/ergonomic-mods/angle.html
 [FAQ]:               /ressources/faq

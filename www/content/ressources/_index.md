@@ -15,7 +15,7 @@ Cartographie des dispositions clavier
 
 : Une planète de pionniers : [Bépo](/bepo)
 
-: Préparer votre voyage avec le **[comparatif](/alternatives#tableau-comparatif)**
+: Préparez votre voyage avec le **[comparatif](/alternatives#tableau-comparatif)**
 
 [Glossaire](/ressources/glossaire)
 

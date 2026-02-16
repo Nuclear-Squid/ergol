@@ -134,7 +134,7 @@ Colemak FT, Bépolar et Lafayette s’adressent aux utilisateurs de Colemak,
 Bépo et QWERTY, respectivement, qui souhaitent profiter de l’approche 1DFH avec
 le minimum d’effort. Leur ergonomie est très satisfaisante mais leur confort
 n’est pas au niveau d’Ergo‑L, ces dispositions ayant cherché à rester aussi
-proches que possible de leurs aînées.
+proches que possible de leurs ainées.
 
 La contrepartie, c’est la [touche morte][] qu’il faut apprendre, et qui ajoute
 entre 2,5 % et 4,0 % de frappes supplémentaires en français — soit une perte de
@@ -196,7 +196,7 @@ https://discord.com/channels/794732334879473684/794734985122152478/1200680341363
 
 **De notre point de vue :**
 
-- Bépo est intéressant pour du français littéraire sur un clavier full-size,
+- Bépo est intéressant pour du français littéraire sur un clavier _full-size_,
   mais attention aux douleurs (auriculaires notamment) ;
 - pour les Bépoètes qui n’ont pas de douleurs, Optimot apporte une optimisation
   *très* supérieure en français et est bien plus utilisable en anglais ;

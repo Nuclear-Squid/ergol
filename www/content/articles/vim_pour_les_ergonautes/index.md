@@ -17,11 +17,11 @@ supérieure à ce que n’importe quelle disposition de clavier peut offrir : 
 
 <!-- ![objectivité totale (allégorie), par @fnuttens](lafayette.jpg) -->
 
-Depuis 6 semaines je fais le test d’écrire en Ergo‑L au quotidien. Comment cela
+Depuis six semaines, je fais le test d’écrire en Ergo‑L au quotidien. Comment cela
 affecte-t-il ma productivité avec Vim ? Quelles sont les adaptations à faire
 pour Ergo‑L ? Y a-t-il une vie après HJKL ?
 
-<i lang="en">TL;DR</i> : Vim fonctionne parfaitement en Ergo‑L, il suffit de ne
+<i lang="en">TL;DR</i> : Vim fonctionne parfaitement en Ergo‑L. Il suffit de ne
 **PAS** remapper HJKL.
 
 <!--more-->
@@ -115,7 +115,7 @@ C’est la raison pour laquelle Ergo‑L, comme toutes les dispositions qui
 utilisent la couche de symboles Lafayette, a `+` et `-` en AltGr sur ces deux
 touches. L’action de `+` et `-` étant très proche de `j` et `k`, c’est
 utilisable sans aucun mapping : on a le même confort qu’en Qwerty ou Azerty pour
-ces deux actions, il suffit de presser <kbd>AltGr</kbd>.
+ces deux actions. Il suffit de presser <kbd>AltGr</kbd>.
 
 Mais il ne faut pas se contenter de ces deux touches pour les déplacements
 verticaux. Vim propose notamment :
@@ -187,7 +187,7 @@ J’aime taper dans Vmi sans faire de fautes.
 … il suffit de faire `TVxp`.
 
 De base, ces déplacements sont limités à la ligne courante. Des greffons comme
-[clever-f][] ou [Fanf,ingTastic;][FfTt]  étendent ce comportement au document
+[clever-f][] ou [Fanf,ingTastic;][FfTt] étendent ce comportement au document
 entier tout en proposant des améliorations ergonomiques, et en conservant la
 logique `f` `F` `t` `T`.
 

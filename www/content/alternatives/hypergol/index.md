@@ -34,8 +34,8 @@ utilisé sur un ordinateur en Ergo‑L.
 Pour accélérer le développement de la dispo, nous utilisons un [brute-forceur]
 maison, qui ne cherche pas à concevoir la meilleure disposition possible sur la
 base d’une note globale hasardeuse, mais liste toutes les dispositions
-possibles qui adhèrent à des critères simples (pas moins de 12% de charge sur
-un index, pas plus de 0.2% de SFU sur un auriculaire…). On reste sur la méthode
+possibles qui adhèrent à des critères simples (pas moins de 12 % de charge sur
+un index, pas plus de 0.2 % de SFU sur un auriculaire…). On reste sur la méthode
 d’optimisation classique des Ergonautes, mais ça accélère le travail de
 recherche (surtout avec les fonctionnalités d’Hypergol qui rendent la
 conception encore plus compliquée).
@@ -49,13 +49,13 @@ La géométrie « Hummingbird »
 --------------------------------------------------------------------------------
 
 Chez les Ergonautes, nous sommes convaincu·e·s des apports de la philosophie
-[1DFH] en terme de confort et d’ergonomie. Cependant, il reste des touches
-assez inconfortables dans le pavé de 3x10 central, comme les touches [Z]{.kbd},
+[1DFH] en termes de confort et d’ergonomie. Cependant, il reste des touches
+assez inconfortables dans le pavé de 3×10 central, comme les touches [Z]{.kbd},
 [B]{.kbd}, [N]{.kbd} et [/]{.kbd} (sur un clavier ergonomique avec un gros
 stagger, comme le Ferris).
 
 :::{style="display: flex; justify-content: center"}
-![Un exemple de clavier « hummingbird »](hummingbird.jpg){width="25em"}
+![Un exemple de clavier « hummingbird ».](hummingbird.jpg){width="25em"}
 :::
 
 Retirer 4 touches sur le clavier nous force donc à trouver de nouvelles places
@@ -66,7 +66,7 @@ négligeable par rapport à l’emplacement où ces lettres peuvent être placé
 les ciseaux qui peuvent exister.
 
 Il reste encore à savoir comment gérer proprement les touches manquantes en
-[AltGr]{.kbd}, on travaille sur la question.
+[AltGr]{.kbd}. On travaille sur la question.
 
 
 Le [E]{.kbd} et « touche magique » sous un pouce
@@ -81,12 +81,12 @@ drastiquement le taux de roulements de la disposition. On compte faire des
 recherches pour trouver la lettre optimale à cette position.
 
 Passer une lettre sous un pouce permet de récupérer une place dans le pavé de
-3x10 pour le `é` ; et puisque nous n’avons plus besoin de mettre le tiret sous
+3×10 pour le `é` ; et puisque nous n’avons plus besoin de mettre le tiret sous
 le `e` comme en Ergo‑L, on peut le mettre derrière la touche typo et repasser
 l’apostrophe typographique en direct. Cela permet de réduire drastiquement
-l’usage de cette touche typo, qui passe de ~4% à ~1% en français.
+l’usage de cette touche typo, qui passe de ~4 % à ~1 % en français.
 
-La « touche magique » (inspirée de [Magic Sturdy], et marqué par un `⛧` dans la
+La « touche magique » (inspirée de [Magic Sturdy], et marquée par un `⛧` dans la
 l’image de la dispo) est une touche dont le comportement dépend de la touche
 précédente — un peu comme l’inverse d’une touche morte. Elle se comporte comme
 une touche « [alt repeat] » de QMK : elle répète les symboles fréquemment
@@ -100,7 +100,7 @@ magique. Cela permet d’obtenir un score de SFU très bas (estimé à 0,3 %
 en français et 0,4 % en anglais) tout en se laissant assez de marge de manœuvre
 pour limiter les ciseaux, LSB et mauvaises redirections.
 
-La touche magique agit comme une touche repeat par défaut, sauf pour les
+La touche magique agit comme une touche _repeat_ par défaut, sauf pour les
 lettres suivantes :
 
 |       |     |     |     |     |     |     |      |     |     |     |     |     |               |
@@ -120,7 +120,7 @@ Nous recommandons d’utiliser la configuration d’[Arsenik] ou [Selenium]
 recommandons de placer la touche magique sur le pouce opposé du `e` (car il est
 fréquemment doublé en anglais) et sur le même pouce que l’espace (pour éviter
 les SFB `e` -> `espace`). Idéalement, l’espace devrait être accessible par les
-deux pouces pour pouvoir faire un enchaînement `magic` -> `espace` sans avoir
+deux pouces pour pouvoir faire un enchainement `magic` -> `espace` sans avoir
 un SFB ou SKB.
 
 Si vous avez 4 touches sous les pouces, une bonne option sur la nouvelle touche
@@ -143,7 +143,7 @@ sur cette question, mais la solution peut prendre encore du temps.
 Les auto-fills
 --------------------------------------------------------------------------------
 
-Les auto-fills sont une fonctionnalité exclusive à Hypergol, leur objectif est
+Les auto-fills sont une fonctionnalité exclusive à Hypergol. Leur objectif est
 d’éliminer les mauvaises redirections et d’économiser quelques touches.
 
 
@@ -164,7 +164,7 @@ la touche suivante. Si la touche suivante fait partie de `aeio’é`, alors on
 rajoute un `u` juste avant d’écrire la lettre voulue (et si la touche ne fait
 pas partie de la liste, alors on continue comme si de rien n’était). On peut
 donc facilement écrire `Que` ou `cinq` sans problème. Ça reste plus compliqué
-d’écrire `Qatar` mais pour l’instant, on considère que faire typo -> `q` insère
+d’écrire `Qatar`, mais pour l’instant on considère que faire typo -> `q` insère
 un `q` sans l’auto-fill.
 
 

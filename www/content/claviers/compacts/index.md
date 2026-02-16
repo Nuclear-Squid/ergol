@@ -152,7 +152,7 @@ Certainement le 3×5 le plus simple à prendre en main.
 Pour qui ?
 --------------------------------------------------------------------------------
 
-TL;DR : les [4×6][] conviendront toujours, quel que soit le layout utilisé, à
+TL;DR : les [4×6][] conviendront toujours, quel que soit le _layout_ utilisé, à
 condition d’avoir *au moins* trois touches par pouce.
 
 **Les Ergonautes peuvent utiliser tous ces claviers sans souci** : leur

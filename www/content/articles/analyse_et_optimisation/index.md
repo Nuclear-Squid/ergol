@@ -8,7 +8,7 @@ tags = ["communauté", "technique", "outils"]
 Optimiser une disposition de clavier, ça consiste en quoi ?
 
 À l’époque de Dvorak et Bépo la réponse était simple, mais ce domaine a
-complètement explosé ces 20 dernières années suite au développement de
+complètement explosé ces vingt dernières années suite au développement de
 dispositions anglophones comme Colemak, Workman, MTGAP, ISRT, Sturdy…
 
 Pour que chacun·e puisse comprendre en quoi Ergo‑L se distingue et quels sont
@@ -216,7 +216,7 @@ métriques sur les principaux critères :
 
 **Chacune de ces métriques est importante** : chez les Ergonautes, on considère
 que la qualité ressentie d’une disposition est reflétée par sa pire métrique,
-voire son pire achoppement, bien plus que par une moyenne (fût-elle pondérée) de
+voire son pire achoppement, bien plus que par une moyenne (fut-elle pondérée) de
 toutes ces métriques.
 
 **Ces métriques sont faites pour mettre en évidence des défauts**, et ne sont
@@ -259,7 +259,7 @@ C’est notamment le cas de Workman, qui a grandement inspiré Ergo‑L :
 
 — [Kevin DeLoach][kdeloach], disposition [Workman][]
 
-C’est un constat qui a également été fait par certains Bépoètes qui ont proposé
+C’est un constat qui a également été fait par certain·e·s Bépoètes qui ont proposé
 des améliorations très significatives de Bépo. C’est notamment le cas de
 l’auteur de Béop :
 
@@ -519,7 +519,7 @@ globale est voué à l’échec. Il faut procéder autrement.
 Avant de se lancer dans l’élaboration d’une disposition de clavier, il est
 vivement recommandé de chercher un maximum d’informations sur le sujet. Les
 mille et une variantes de Bépo qui ont fleuri laissent penser que la plupart des
-adeptes francophones d’ergonomie clavier sont restés sur les principes Dvorak,
+adeptes francophones d’ergonomie clavier sont resté·e·s sur les principes Dvorak,
 qui, datant des années 1930, concernaient les machines à écrire.
 
 Or, beaucoup de choses ont changé depuis une petite vingtaine d’années, avec
@@ -670,7 +670,7 @@ d’horizon des autres analyseurs parmi les plus connus et les plus utiles.
 
 [CarpalX][] est un analyseur et optimiseur en Perl, proposé par [Martin
 Krzywinski][] sous licence non libre (CC-BY-NC-SA 4.0). Le [code
-source][CarpalX-source] est disponible sur son site, la dernière modification
+source][CarpalX-source] est disponible sur son site. La dernière modification
 (version 0.12) remonte à 2015.
 
 CarpalX a un intérêt historique mais, comme [mentionné plus haut][l’approche
@@ -682,7 +682,7 @@ d’Ergo‑L.
 
 [KLA][] est un analyseur libre en PHP et JavaScript, proposé par [Patrick
 Gillespie][patorjk] sous licence libre (MIT). Le [code source][KLA-source] est
-disponible sur GitHub, la dernière modification remonte à 2019.
+disponible sur GitHub. La dernière modification remonte à 2019.
 
 [KLAnext][] est un fork non libre de KLA par [Ian Douglas][]. Ce fork est
 lui-même dérivé de [KLAtest][] ([source][KLAtest-source]) par [Xay Vong][],
@@ -712,7 +712,7 @@ connaissance, c’est la version de KLA la plus utilisée. C’est aussi la vers
 qui a été la mieux maintenue : son développement ne s’est arrêté qu’en mai 2021.
 
 Toutefois, sur les [5 critères indispensables][métriques indispensables] à nos
-yeux, seul le SFU est analysé par KLA. Attention à ne pas perdre de vue les 4
+yeux, seul le SFU est analysé par KLA. Attention à ne pas perdre de vue les quatre
 autres !
 
 ### Colemak-DH
@@ -746,7 +746,7 @@ Contrairement à KLAnext, il introduit la notion de roulement sous la forme de
 « bigramme de doigts voisins », une notion plus restrictive que la définition
 du roulement qu’on propose ici, et qui, étrangement, exclut l’index —
 probablement pour éviter de favoriser les LSB, un défaut rédhibitoire chez
-Colemak dont Colemak‑DH cherche a se débarrasser.
+Colemak dont Colemak‑DH cherche à se débarrasser.
 
 **Attention** : les ciseaux ne sont pas pris en compte par cette métrique, ce
 qui peut donner des résultats surprenants ! Aucun souci sur Colemak-DH, puisque
@@ -789,7 +789,7 @@ lettres sur deux colonnes supplémentaires afin de moins recourir aux touches
 mortes.
 
 C’est vraiment l’analyseur de référence pour nous. On le recommande vivement !
-Et le projet est activement maintenu, le dernier commit datant de moins de 6
+Et le projet est activement maintenu, le dernier commit datant de moins de six
 mois à l’heure où j’écris ces lignes.
 
 ### Kalamine 🚀

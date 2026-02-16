@@ -6,13 +6,13 @@
 Une disposition de clavier ergonomique optimisée pour le français, l’anglais et
 le code.
 
-- Disposition **optimisée pour le français _et_ l’anglais**;
+- Disposition **optimisée pour le français _et_ l’anglais**.
 - Couche AltGr optionnelle, optimisée pour l’enchaînement des symboles de
-  programmation;
+  programmation.
 - **Conservation des raccourcis usuels** : <kbd>Ctrl-{Q,A,S,Z,X,V}</kbd>
-  (<kbd>Ctrl-C</kbd> est décalé, mais reste faisable d’une main);
+  (<kbd>Ctrl-C</kbd> est décalé, mais reste faisable d’une main).
 - Support de tous les caractères spéciaux utilisés en français (diacritiques,
-  majuscules accentuées, lettres entrelacées, symboles de ponctuation…);
+  majuscules accentuées, lettres entrelacées, symboles de ponctuation…).
 - **Chiffres en accès direct**.
 
 
@@ -31,7 +31,7 @@ TL;DR:
 * use the AltGr layer for programming symbols.
 
 This layout claims to be better than Bépo for French, better than Dvorak for
-English and better than Qwerty for programming. [Check the stats !][1]
+English and better than Qwerty for programming. [Check the stats!][1]
 
 [1]: https://ergol.org/stats/#/ergol/iso/en+fr
 
@@ -66,14 +66,14 @@ Install
 --------------------------------------------------------------------------------
 
 You’ll need the latest version of [Kalamine][2] to build your own layout. We
-*highly* recommend using [pipx][5], once you have it installed (by following
+*highly* recommend using [pipx][5]. Once you have it installed (by following
 their guide), you can just run the following command:
 
 ```bash
 pipx install kalamine
 ```
 
-Download the [keymaps/ergol.toml][4] file in this repo and build the layout :
+Download the [keymaps/ergol.toml][4] file in this repo and build the layout:
 
 ```bash
 kalamine build ergol.toml
@@ -82,7 +82,7 @@ kalamine build ergol.toml
 You’ll get a `dist` folder containing all the drivers.
 
 Then, to install Ergo‑L, follow the [install section of Kalamine’s repo][3],
-and you should be good to go !
+and you should be good to go!
 
 [2]: https://github.com/OneDeadKey/kalamine
 [3]: https://github.com/OneDeadKey/kalamine#installing-distributable-layouts
@@ -109,9 +109,9 @@ setxkbmap fr -variant ergol  # Switch your keyboard layout to ergol
 _Troubleshooting with ubuntu / wayland_
 
 There is a weird issue where Ergo-L works fine with some applications
-(phpstorm, gnome,...) but not on others (libreoffice, terminator). The deadkey
-remain for two chars instead of only one. (ex: `a[deadkey]sen` should display
-`aéen` but it displays `aéèn` instead.).
+(phpstorm, gnome…) but not on others (libreoffice, terminator). The deadkey
+remains for two chars instead of only one. (Ex.: `a[deadkey]sen` should display
+`aéen` but it displays `aéèn` instead.)
 
 This issue is solved by adding at the end of `/etc/environment` the following lines:
 
@@ -122,7 +122,7 @@ QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 ```
 
-Make Your Own !
+Make Your Own!
 --------------------------------------------------------------------------------
 
 If you wish to modify the layout, the `keymaps/*.{toml,yaml}` are human-readable
@@ -131,7 +131,7 @@ ASCII arts of the final layout. You can easily edit them, then run `make` (or
 benchmark layouts on the [stats page][1].
 
 This repo contains all of the code for the [Ergo‑L website](https://ergol.org),
-so you can run the page locally to try your prototypes !
+so you can run the page locally to try your prototypes!
 
 ### Edit Corpora
 
@@ -161,8 +161,8 @@ command generates the `json` stat file for this specific corpus.
 
 ### Run a Local Server
 
-[Hugo](https://gohugo.io/) can be used to serve the site, it automatically
-watches and live-reload the pages upon file changes, however you still need to
+[Hugo](https://gohugo.io/) can be used to serve the site. It automatically
+watches and live-reloads the pages upon file changes. However you still need to
 have `make watch` running to ensure that the `.json` files are generated upon
 modifying human-friendly layouts in `keymaps/*.{to,ya}ml`.
 
@@ -180,6 +180,6 @@ The stats page is now accessible on
 <http://localhost:1313/stats/#/ergol/ol60/fr>!
 
 **Note:** This solution supports live-reload for most parts. While it’s not a
-problem while editing the content, some stats are not fully refreshed with
+problem when editing the content, some stats are not fully refreshed with
 live-reload. You may have to manually refresh the stats page after editing a
 layout or a corpus to have the correct version of them.

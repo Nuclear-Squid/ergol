@@ -42,7 +42,7 @@ lettres `m` `z` `w` `ç`.
 ![Ergo‑L sur un clavier compact (type OLKB Planck).](ergol_1dfh.svg)
 
 C’est pour suivre cette approche que l’immense majorité des claviers
-ergonomiques actuels ne propose que 6 colonnes de touches par main, ce qui est :
+ergonomiques actuels ne propose que six colonnes de touches par main, ce qui est :
 
 - compliqué avec AZERTY, qui a les touches [Ù]{.kbd} et <kbd>^</kbd> en
 6<sup>e</sup> colonne et oblige à déplacer [Entrée]{.kbd} et [Backspace]{.kbd} ;
@@ -71,7 +71,7 @@ comme Colemak et Workman permettent de conserver ces raccourcis tout en obtenant
 de meilleures métriques.
 
 Ergo‑L suit cette approche [Colemak][]/[Workman][] et, comme eux, s’autorise un
-changement : le [C]{.kbd} est ainsi déplacé pour favoriser les enchaînements,
+changement : le [C]{.kbd} est ainsi déplacé pour favoriser les enchainements,
 mais [Ctrl]{.kbd}‑[C]{.kbd} reste faisable d’une main à gauche.
 
 
@@ -84,7 +84,7 @@ Ergo‑L veille à réduire autant que possible :
 - **la charge des doigts faibles**, surtout celle de l’auriculaire droit,
   responsable de [Entrée]{.kbd} et [Backspace]{.kbd} sur la plupart des
   claviers ;
-- **le taux de bigrammes de même doigt**, un type d’enchaînement très
+- **le taux de bigrammes de même doigt**, un type d’enchainement très
   inconfortable, notamment à haute vitesse de saisie.
 
 Ergo‑L privilégie le confort à la vitesse : on peut taper vite avec n’importe
@@ -100,7 +100,7 @@ développée pendant l’entre-deux-guerres pour les machines à écrire, qui on
 d’importantes contraintes physiques dont les claviers modernes sont exemptés :
 typiquement, appuyer sur deux touches côte à côte est un excellent moyen de
 coincer les marteaux. Cela implique qu’il fallait privilégier les alternances de
-mains aux <abbr title="Enchaînements de deux touches actionnées par deux doigts
+mains aux <abbr title="Enchainements de deux touches actionnées par deux doigts
 différents d’une même main, comme 'df' en AZERTY">roulements</abbr>, alors que
 ces derniers sont très confortables sur un clavier d’ordinateur.
 
@@ -110,7 +110,7 @@ variantes la reprennent sans chercher à la mettre à jour.
 
 Dvorak et Bépo ne sont optimisés que pour une seule langue (anglais et français,
 respectivement) et sont très inconfortables dans l’autre. Pourtant, à une
-exception près, les 9 lettres les plus fréquentes sont les mêmes en français
+exception près, les neuf lettres les plus fréquentes sont les mêmes en français
 (`esanitruo`) et en anglais (`etaohnisr`) :
 
 :::{ style="overflow: scroll;" }
@@ -122,7 +122,7 @@ exception près, les 9 lettres les plus fréquentes sont les mêmes en français
 :::
 
 Ergo‑L place donc ces lettres aux emplacements les plus confortables (au sens de
-[Workman][]) et fait en sorte qu’aucun enchaînement fréquent en français ou en
+[Workman][]) et fait en sorte qu’aucun enchainement fréquent en français ou en
 anglais ne soit rédhibitoire. Comme en [Colemak][], on cherche à limiter le plus
 possible le taux de bigrammes de même doigt, en favorisant les roulements au
 même titre que les alternances de mains.
@@ -191,7 +191,7 @@ de soigner la typographie sans aucun effort supplémentaire :
 - [★]{.odk} [majuscule] = majuscule accentuée
 
 Les ponctuations hautes (`:` `;` `?` `!`) sont en [Shift]{.kbd} pour faciliter leur
-enchaînement avec l’insécable fine : on maintient [Shift]{.kbd}, on presse
+enchainement avec l’insécable fine : on maintient [Shift]{.kbd}, on presse
 [Espace]{.kbd} puis la ponctuation, on relâche [Shift]{.kbd}.
 
 
@@ -201,26 +201,26 @@ En français, les huit lettres les plus fréquentes (`esanitru`) sont toutes
 réparties sur la position de repos des doigts, et le reste des lettres
 fréquentes est réparti sur les autres touches faciles d’accès.
 
-Une grande attention à été portée aux enchaînements de lettres.
+Une grande attention à été portée aux enchainements de lettres.
 
-- Les voyelles s’enchaînent fréquemment avec toutes les consonnes importantes,
+- Les voyelles s’enchainent fréquemment avec toutes les consonnes importantes,
   donc elles sont soit :
     - placées sur les auriculaires, avec des lettres peu fréquentes autour,
       comme [Q]{.kbd}[A]{.kbd}[Z]{.kbd} et [Y]{.kbd}[U]{.kbd}[K]{.kbd} ;
-    - empilées sur des doigts plus forts pour celles qui ne s’enchaînent pas
+    - empilées sur des doigts plus forts pour celles qui ne s’enchainent pas
       ensemble, comme [E]{.kbd}[O]{.kbd} et [★]{.odk}[I]{.kbd}.
 - Le placement des lettres sur les positions de repos maximise les roulements
   vers l’intérieur et minimise les redirections, qui sont source d’erreur à
   haute vitesse.
 - Le reste des lettres fréquentes est placé de sorte à minimiser les
-  bigrammes de même doigt (par exemple, [D]{.kbd} et [G]{.kbd} s’enchaînent très
+  bigrammes de même doigt (par exemple, [D]{.kbd} et [G]{.kbd} s’enchainent très
   souvent avec [N]{.kbd} ou [R]{.kbd}, mais très peu avec [T]{.kbd}).
 - La touche morte est placée sur la main opposée à [E]{.kbd}[A]{.kbd}[C]{.kbd},
   qui sont les lettres le plus souvent diacritées en français.
 
 ![[Fréquence d’utilisation des touches en français.](/stats/#/Ergo‑L//fr)](ergol_fr.svg)
 
-Pratiquement aucun enchaînement courant en français ne demande trop d’effort.
+Pratiquement aucun enchainement courant en français ne demande trop d’effort.
 
 
 Efficace en anglais
@@ -232,11 +232,11 @@ Ergo‑L porte la même attention au confort de la saisie de texte en anglais qu
 français, et doit donc faire quelques compromis pour faire cohabiter les deux
 langues. Certaines lettres sont beaucoup plus fréquentes dans une langue que dans
 l’autre (comme le [U]{.kbd} et la touche [★]{.odk} en français et le [H]{.kbd} en
-anglais) et les enchaînements courants peuvent être très différents.
+anglais) et les enchainements courants peuvent être très différents.
 
 Ergo‑L optimise le plus possible la saisie de texte anglais et français sans
 causer de problèmes rédhibitoires dans une de ces deux langues. Par exemple,
-l’enchaînement `TH` (*le* bigramme le plus fréquent en anglais, avec 3,2 %
+l’enchainement `TH` (*le* bigramme le plus fréquent en anglais, avec 3,2 %
 d’occurences) est très confortable, mais le [H]{.kbd} occupe une place dont on
 peut se dispenser en français. De même, [U]{.kbd} et [★]{.odk} sont très
 fréquents en français, mais peu fréquents en anglais, ce qui a été pris en
@@ -265,13 +265,13 @@ accent circonflexe mort.
 
 Cette approche est suffisante pour la saisie occasionnelle de caractères spéciaux.
 Pour des usages plus réguliers, plutôt que de chercher à couvrir tous les cas
-possibles nous avons préféré faire en sorte que la disposition soit simple à
+possibles, nous avons préféré faire en sorte que la disposition soit simple à
 personnaliser.
 
 Le [dépôt GitHub d’Ergo‑L](https://github.com/Nuclear-Squid/ErgoL) contient le
 fichier source de la disposition – un fichier TOML facile à lire et modifier –
 ainsi que des instructions pour construire une disposition personnalisée ou
-évaluer la qualité des enchaînements d’une variante. Remplacer les caractères
+évaluer la qualité des enchainements d’une variante. Remplacer les caractères
 de la touche morte par ceux dont vous avez besoin devrait être relativement
 simple, et le résultat sera bien plus efficace que n’importe quelle disposition
 de clavier cherchant à couvrir toutes les langues !
@@ -313,7 +313,7 @@ une meilleure solution.
 ### Couche Symboles
 
 Ergo‑L propose une couche Symboles optionelle accessible par [AltGr]{.kbd} et
-optimisée pour le placement et les enchaînements de symboles de programmation.
+optimisée pour le placement et les enchainements de symboles de programmation.
 
 ![La couche Symboles d’Ergo‑L.](ergol_altgr.svg)
 
@@ -323,7 +323,7 @@ regroupés par « blocs ». On y retrouve :
 - les délimiteurs `()` `{}` `[]` `<>` `^$`
   <small>(note : `^` et `$` marquent le début et la fin de ligne dans les
   expressions régulières)</small> ;
-- les délimiteurs de chaînes de caractères `'` `` ` `` `"` ;
+- les délimiteurs de chaines de caractères `'` `` ` `` `"` ;
 - les symboles arithmétiques `+` `-` `/` `*` ;
 - les ponctuations `!` `;` `:` `?`
   <small>(note : `;` `:` sont à leur emplacement en QWERTY européen)</small> ;
@@ -331,14 +331,14 @@ regroupés par « blocs ». On y retrouve :
   rangée plus bas.
 
 Comme pour l’emplacement des lettres de la disposition, une grande attention a
-été portée au placement des symboles de programmation et aux enchaînements
+été portée au placement des symboles de programmation et aux enchainements
 courants. Les symboles peu courants (``~@#%^`|``) sont loin des positions de
-repos et la grande majorité des enchaînements de symboles de programmation se
+repos et la grande majorité des enchainements de symboles de programmation se
 fait soit avec une alternance de main (`~/`, `);`, `</>`, `+=`, `['']`, etc.)
 soit avec un roulement (`>=`, `/*`, `";`, `()`, `\"`, etc.).
 
 Comme pour la saisie de texte en français ou anglais, la couche Symboles
-d’Ergo‑L ne contient pratiquement aucun enchaînement inconfortable.
+d’Ergo‑L ne contient pratiquement aucun enchainement inconfortable.
 
 
 ### Compatibilité avec Vim

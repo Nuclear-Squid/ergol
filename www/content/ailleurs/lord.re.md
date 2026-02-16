@@ -14,7 +14,7 @@ Et voilà, on est en Janvier 2025 et ça fait donc maintenant un an que j'utilis
 mais un petit rappel s'impose.
 
 Il s'agit d'une **disposition clavier ergonomique**. Un peu comme **bépo** en
-son temps (près de vingts ans mine de rien), le but est donc de dégager cette
-inepties qu'est **azerty** pour un truc bien plus réfléchit et travaillé. _Le
+son temps (près de vingt ans mine de rien). Le but est donc de dégager cette
+ineptie qu'est **azerty** pour un truc bien plus réfléchi et travaillé. _Le
 but premier est donc l'ergonomie maximale pour le français mais sans non plus
 pénaliser l'ergonomie lorsqu'on écrit en anglais ou lorsqu'on programme._

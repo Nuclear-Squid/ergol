@@ -25,7 +25,7 @@ Analyse et optimisation
 [SFB <i lang="en">(same-finger bigram)</i>]{#sfb}
 
 : Aussi appelé « bigramme de même doigt » : enchainement de deux touches
-différentes avec le même doigt. C’est source d’inconfort ou d’erreurs, notamment
+différentes avec le même doigt. C’est une source d’inconfort ou d’erreurs, notamment
 à haute vitesse.
 
 [SFU <i lang="en">(same-finger usage)</i>]{#sfu}
@@ -35,7 +35,7 @@ bigrammes. Plus le taux est bas, mieux c’est.
 
 [SKB <i lang="en">(same-key bigram)</i>]{#skb}
 
-: Répétition de même touche, par exemple pour produire `nn` avec n’importe
+: Répétition de la même touche, par exemple pour produire `nn` avec n’importe
 quelle disposition de clavier, ou `és` en Ergo‑L.
 
 [SKU <i lang="en">(same-key usage)</i>]{#sku}
@@ -76,13 +76,13 @@ divers sports.
 
 [Roulement intérieur]{#roulement}
 
-: Deux touches ou plus enchaînées sur une même main, dans le sens de
-l’auriculaire vers l’index. C’est l’enchaînement considéré comme le plus
+: Deux touches ou plus enchainées sur une même main, dans le sens de
+l’auriculaire vers l’index. C’est l’enchainement considéré comme le plus
 confortable qui soit.
 
 Roulement extérieur
 
-: Deux touches ou plus enchaînées sur une même main, dans le sens de l’index
+: Deux touches ou plus enchainées sur une même main, dans le sens de l’index
 vers l’auriculaire.
 
 ### Trigrammes
@@ -103,13 +103,13 @@ vers l’auriculaire.
 
 [Redirection]{#redirection}
 
-: Trois touches enchaînées sur une même main avec un changement de direction,
+: Trois touches enchainées sur une même main avec un changement de direction,
 e.g. [D]{.kbd}[S]{.kbd}[F]{.kbd} ou [K]{.kbd}[J]{.kbd}[L]{.kbd} en Azerty ou
 Qwerty.
 
 Mauvaise redirection
 
-: Une redirection où l’index n’intervient pas. L’un des pires enchaînements
+: Une redirection où l’index n’intervient pas. L’un des pires enchainements
 faisables sur un clavier, sinon le pire.
 
 
@@ -159,7 +159,7 @@ de la technologie du clavier pour développer des dispositions de clavier.
     un clavier et brille particulièrement sur les petits claviers ergonomiques
     en diminuant la distance que les doigts ont à parcourir.
 
-    Noter qu’une [touche morte] peut également être considérée comme définissant
+    Notez qu’une [touche morte] peut également être considérée comme définissant
     une couche, au même titre qu’un [modificateur].
 
     <!-- TODO: liens vers les couches typo et symboles -->
@@ -314,7 +314,7 @@ XCompose
 
 : Une __[spécification][XCompose]__ de Compose pour les systèmes basés sur X11 et
 Wayland. Il existe plusieurs implémentations: `XIM` (référence), `xkbcommon`,
-`Gtk`, `Qt`, `ibus`, etc. Noter qu’il existe des différences entre ces
+`Gtk`, `Qt`, `ibus`, etc. Notez qu’il existe des différences entre ces
 implémentations.
 
 : Un __format__ pour configuer la méthode de saisie XCompose.
@@ -379,7 +379,7 @@ associées à des noms anglais pour faciliter leur utilisation. Exemples : `a`
     _identifier_ les touches physiques mais pour configurer le _résultat_ obtenu
     en pressant une touche. Ainsi, la _touche_ [Q]{.kbd} d’un clavier imprimé
     QWERTY peut être configurée pour produire le[^keysym-genre] keysym `q` ou
-    `a` sur la couche de base, et les keysyms `Q` ou `A` sur la couche masjcule,
+    `a` sur la couche de base, et les keysyms `Q` ou `A` sur la couche majuscule,
     etc.
 
 : Il existe différents types de keysyms :

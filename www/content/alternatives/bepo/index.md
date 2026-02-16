@@ -48,7 +48,7 @@ Par ailleurs, la charge des doigts est mal répartie :
 - une grande partie des touches doublées se trouve sous l’auriculaire droit —
   et souvent en extension !
 
-C’est notamment le cas du `m` : 13e lettre la plus fréquente en français (2.7 %
+C’est notamment le cas du `m` : 13<sup>e</sup> lettre la plus fréquente en français (2.7 %
 de fréquence, soit plus que tous les caractères accentués cumulés), fréquemment
 doublé et en extension latérale sur l’auriculaire droit. Cela favorise
 grandement les déviations ulnaires, qui sont la principale cause de
@@ -246,7 +246,7 @@ au prix d’une certaine complexité des pilotes de clavier :
   l’autre « complète » mais dont le comportement est présenté comme moins
   fiable ;
 - le pilote Linux, théoriquement inclus à XKB, se base sur des définitions de
-  touches mortes qu’il faut ajouter manuellement côté utilisateur.
+  touches mortes qu’il faut ajouter manuellement côté utilisateur ou utilisatrice.
 
 
 ### Ergo‑L {id="typographie-ergol"}
@@ -301,7 +301,7 @@ De par son ancienneté, [Bépo][] a vu naître [de nombreuses variantes
 libres](https://bepo.fr/wiki/Variantes_du_b%C3%A9po) qui ont repris la
 philosophie initiale :
 
-- toutes les voyelles à gauche (approche Dvorak) ;
+- toutes les voyelles sont à gauche (approche Dvorak) ;
 - les lettres sont étalées sur toutes les colonnes du clavier ;
 - les chiffres restent en Shift.
 
@@ -332,7 +332,7 @@ beaucoup trop élevé à notre avis — à comparer aux 6.9 % pour Ergo‑L. *
 **De notre point de vue**, les deux dispositions portent bien leur nom :
 
 - Optimot est une **opti**misation de Bépo qui apportera un gain de confort aux
-  utilisateurs satisfaits de Bépo ;
+  personnes satisfaites de Bépo ;
 - Ergo‑L est **ergo**nomique avant tout, et apportera une solution radicale aux
   personnes qui ont des difficultés avec Bépo.
 
