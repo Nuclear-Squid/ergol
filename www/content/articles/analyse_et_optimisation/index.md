@@ -861,7 +861,7 @@ Ergonautes est fantastique. 🚀
 [comparateur]:             /alternatives/#tableau-comparatif
 [optimot-en]:              /alternatives/#bépo-et-ses-variantes
 [adaptations]:             /claviers/#les-limitations-de-bépo-béopy-optimot
-[cdl2023-slides]:          /slides/capitoledulibre2023
+[cdl2023-slides]:          /ailleurs/cdl2023_ergol
 [cdl2023-video]:           https://www.youtube.com/watch?v=96RikfmBY-U
 [soyez pas cons]:          https://www.youtube.com/watch?v=96RikfmBY-U&t=2017s
 [serveur Discord]:         https://discord.gg/5xR5K3nAFX
