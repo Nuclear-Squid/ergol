@@ -38,6 +38,18 @@ de moteurs-fusées.
 - Ook, ook. Ook !
 :::
 
+
+Programmation
+--------------------------------------------------------------------------------
+
+#### Comment je remappe mes touches dans vim/neovim ?
+
+On ne les remappe pas, tout simplement. Ergo‑L a été pensé dès le départ avec
+une compatibilité avec les <i lang="en">vim motions</i>. Pour en savoir plus,
+lire l’[article]({{< ref "articles/vim_pour_les_ergonautes" >}}) que Kazé a
+écrit sur le sujet.
+
+
 Pilotes
 --------------------------------------------------------------------------------
 
