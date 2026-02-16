@@ -109,7 +109,7 @@ cours][wezterm-patch].
 
 ### Windows
 
-#### Les touches mortes chainées ne marchent
+#### Les touches mortes chainées ne marchent pas ?
 
 Les touches mortes chainées ne sont malheureusement pas reconnues par certaines
 applications, notamment [Firefox][firefox-cdk] avant la version 131 et [Wezterm][wezterm-cdk]. 
