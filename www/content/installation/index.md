@@ -120,7 +120,6 @@ Programmer son clavier pour qu’il émule Ergol sur un PC configuré en Azerty 
 autre disposition) est **beaucoup** plus compliqué. Cela n’a donc peu d’intérêt,
 sauf besoin très spécifique.
 
-
 ### Aide-mémoire : [cavalier.pdf][]
 
 Une aide pour apprendre la dispo. À imprimer, plier et placer sur son bureau !
