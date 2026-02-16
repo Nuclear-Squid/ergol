@@ -117,7 +117,7 @@ côté PC (comme vu plus haut) et de ne configurer que les touches spéciales de
 son clavier (Entrée, Backspace, Shift, AltGr, Alt, Ctrl…).
 
 Programmer son clavier pour qu’il émule Ergol sur un PC configuré en Azerty (ou
-autre disposition) est **beaucoup** plus compliqué. Cela n’a donc peu d’intérêt,
+autre disposition) est **beaucoup** plus compliqué. Cela a donc peu d’intérêt,
 sauf besoin très spécifique.
 
 ### Aide-mémoire : [cavalier.pdf][]
