@@ -108,10 +108,13 @@ cours][wezterm-patch].
 
 ### Windows
 
-#### Les touches mortes chainées ne marchent pas dans Firefox ?
+#### Les touches mortes chainées ne marchent pas ?
 
 Les touches mortes chainées ne sont malheureusement pas reconnues par certaines
 applications, notamment [Firefox][firefox-cdk] avant la version 131 et [Wezterm][wezterm-cdk]. 
+
+Il a été remarqué que [WinCompose] empêche le bon fonctionnement de la double
+touche morte (pour faire le tréma par exemple) avec le pilote MSKLC.
 
 #### La touche [AltGr]{.kbd} cause des problèmes dans certaines applis. Comment corriger ça ?
 
@@ -138,8 +141,8 @@ valeur du raccourci Global auto-type.
 [QWERTY-Lafayette]: /lafayette/#qwerty-lafayette
 [XKalamine]:        https://github.com/OneDeadKey/kalamine#xkalamine
 [xkb-custom]:       https://github.com/OneDeadKey/kalamine#linux-root-xkb_symbols
-
-[firefox-cdk]:       https://bugzilla.mozilla.org/show_bug.cgi?id=1910287
-[wezterm-cdk]:       https://github.com/wez/wezterm/issues/5866
-[wezterm-bug]:       https://github.com/wez/wezterm/commit/b8d93edce6267b09d8926f13de9620ad1ae5ea1f
-[wezterm-patch]:     https://github.com/wez/wezterm/pull/4991
+[firefox-cdk]:      https://bugzilla.mozilla.org/show_bug.cgi?id=1910287
+[wezterm-cdk]:      https://github.com/wez/wezterm/issues/5866
+[wezterm-bug]:      https://github.com/wez/wezterm/commit/b8d93edce6267b09d8926f13de9620ad1ae5ea1f
+[wezterm-patch]:    https://github.com/wez/wezterm/pull/4991
+[WinCompose]:       https://github.com/samhocevar/wincompose
