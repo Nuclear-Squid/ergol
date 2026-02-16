@@ -123,8 +123,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const lessonLetters = rawLetters.concat(deadkeyLetters).join('');
     const newLettersCount = gLessonLevel == STARTING_LEVEL ? STARTING_LEVEL : INCLUDE_NEW_LETTERS;
     const newLetters = rawLetters.slice(-newLettersCount).join('');
-    const lessonRe = new RegExp(`^[${lessonLetters}]*[${newLetters}][${lessonLetters}]*$`)
-    const lessonFilter = word => lessonRe.test(word)
+    const lessonRe = new RegExp(`^[${lessonLetters}]*[${newLetters}][${lessonLetters}]*$`.replace(/-/g, '\\-'));
+    const lessonFilter = word => lessonRe.test(word);
 
     gLessonWords = [];
     for (const dict of [
