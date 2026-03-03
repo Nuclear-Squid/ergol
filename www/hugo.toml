@@ -123,7 +123,7 @@ author = "authors"
     taxonomy = ["html"]
     term     = ["html"]
 
-[extra.mastodon]
-host = "diaspodon.fr"
-username = "CedC"
-
+[params.extra.mastodon]
+enable = true
+host = "eldritch.cafe"
+username = "ergonautes"
