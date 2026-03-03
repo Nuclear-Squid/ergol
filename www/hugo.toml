@@ -122,3 +122,8 @@ author = "authors"
     section  = ["html"]
     taxonomy = ["html"]
     term     = ["html"]
+
+[extra.mastodon]
+host = "diaspodon.fr"
+username = "CedC"
+
