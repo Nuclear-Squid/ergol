@@ -13,9 +13,8 @@
   {{ end -}}
 
   {{ .Content }}
-
-  {{ with .Params.comments }}
-    {{ partial "comments.html" . }}
+  {{ if .Params.fediverse }}
+    {{ partial "comments.html" .}}
   {{ end }}
 
 {{ end }}
