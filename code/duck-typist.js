@@ -292,7 +292,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   gGeometry.addEventListener('change', event => {
     localStorage.setItem('geometry', gGeometry.value);
-    gKeyboard.geometry = gGeometry.value;
+    if (gGeometry.value === 'hidden') {
+      gKeyboard.style.display = 'none';
+    } else {
+      gKeyboard.style.display = 'block';
+      gKeyboard.geometry = gGeometry.value;
+    }
   });
 
   gKeyList.addEventListener('click', event => {
