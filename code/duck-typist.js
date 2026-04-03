@@ -52,6 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const gGeometry = document.querySelector('#geometry');
   const gLayout   = document.querySelector('#layout');
   const gDict     = document.querySelector('#dict');
+  const gEmulate  = document.querySelector('#emulate');
 
   const gKeyList  = document.querySelector('.key_list');
   const gStatus   = document.querySelector('.status');
@@ -314,7 +315,12 @@ window.addEventListener('DOMContentLoaded', () => {
   // highlight keyboard keys and emulate the selected layout
   gInput.onkeydown = event => {
     pressedKeys[event.code] = true;
-    const value = gKeyboard.keyDown(event);
+    let value;
+    if (gEmulate.value === "true") {
+      value = gKeyboard.keyDown(event);
+    } else if (event.key.length === 1) {
+      value = event.key;
+    }
 
     if (value) {
       goNextChar(value);
