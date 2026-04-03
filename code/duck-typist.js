@@ -268,10 +268,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const geometry = localStorage.getItem('geometry');
     const level    = localStorage.getItem(`${gLayout.value}.level`);
     const quacks   = localStorage.getItem(`${gLayout.value}.quacks`);
+    const emulate  = localStorage.getItem('emulate');
 
     if (layout)   gLayout.value   = layout;
     if (dict)     gDict.value     = dict;
     if (geometry) gGeometry.value = geometry;
+    if (emulate)  gEmulate.value  = emulate;
     gLessonLevel = level  ? Number(level)  : STARTING_LEVEL;
     gQuackCount  = quacks ? Number(quacks) : 1;
 
@@ -301,6 +303,10 @@ window.addEventListener('DOMContentLoaded', () => {
       gLessonLevel = event.target.dataset.level;
       setLessonLevel();
     }
+  });
+
+  gEmulate.addEventListener('change', event => {
+    localStorage.setItem('emulate', gEmulate.value);
   });
 
   loadLayout();
