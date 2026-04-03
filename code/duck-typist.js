@@ -320,11 +320,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // highlight keyboard keys and emulate the selected layout
   gInput.onkeydown = event => {
-    pressedKeys[event.code] = true;
     let value;
     if (gEmulate.value === "true") {
+      pressedKeys[event.code] = true;
       value = gKeyboard.keyDown(event);
-    } else if (event.key.length === 1) {
+    } else if (event.key.length === 1 && event.key !== '\x00') {
+      // The pressed key corresponds to a letter or symbol (the dead key makes '\x00' on chrome)
       value = event.key;
     }
 
@@ -337,6 +338,8 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   gInput.addEventListener('keyup', event => {
+    if (gEmulate.value === "false") return;
+
     if (pressedKeys[event.code]) { // expected behavior
       gKeyboard.keyUp(event);
       delete pressedKeys[event.code];
