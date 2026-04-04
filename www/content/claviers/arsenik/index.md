@@ -241,8 +241,8 @@ dispositions comme Azerty, Qwerty et tous les arrangements du Qwerty ANSI
 
 [NavNum]:        ../compacts/#layer-navnum
 [Selenium]:      #variante-selenium
-[arsenik.zip]:   arsenik.zip
-[selenium.zip]:  selenium.zip
+[arsenik.zip]:   https://github.com/OneDeadKey/arsenik/releases/download/0.2.0/arsenik-0.2.0.zip
+[selenium.zip]:  https://github.com/onedeadkey/selenium/
 
 [Preonic]:       https://olkb.com/collections/preonic
 [Planck]:        https://olkb.com/collections/planck
