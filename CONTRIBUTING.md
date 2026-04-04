@@ -9,7 +9,7 @@ La contribution s’articule essentiellement autour de deux types de tickets Git
 
 - Ouvrez des [issues](issues) :
   - [bug] pour rapporter un problème ;
-  - [feat] pour exprimer un souhait de fonctionnalité ;
+  - [feat] pour exprimer un souhait de fonctionnalité, sous la forme d’une [*user story*](https://fr.wikipedia.org/wiki/R%C3%A9cit_utilisateur) ;
   - pour une demande d’assistance, merci d’utiliser Mastodon ou Discord.
 
 - N’hésitez pas à ouvrir des [pull requests (PR)](pulls) :
