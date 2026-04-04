@@ -27,13 +27,17 @@ La contribution s’articule essentiellement autour de deux types de tickets Git
 
 ## Mainteneurs et mainteneuses
 
-Les personnes en charge de la maintenance du projet ont des tâches supplémentaires :
+Si vous êtes en charge de la maintenance du projet, vous avez des tâches supplémentaires.
 
-- faire de l’ordre dans les tickets : triage, étiquetage, détection des doublons…
-- faire des revues de code :
-  - indiquez clairement quand vous commencez une revue de code
-  - si la PR est simple, squashez tous les commits en un seul (bouton « squash & rebase ») et rédigez vous-même un message de commit adéquat
+- Mettre de l’ordre dans les tickets : triage, étiquetage, détection des doublons…
+
+- Effectuer des revues de code :
+  - indiquez clairement quand vous commencez une revue de code ;
+  - si vous validez une PR simple, squashez tous les commits en un seul (bouton « squash & rebase ») et rédigez vous-même un message de commit adéquat si besoin est ;
+  - sachez accepter les améliorations incrémentales : si une PR résout une partie d’un problème sans dégrader le reste du projet, c’est bon à prendre, et ça encourage à faire un *follow-up* ;
   - soyez souples : *in fine*, ce qui compte c’est la contribution, pas comment elle a été faite.
+
+- Aider les contributeur’ices à monter en compétence. Outre les revues de code, vos propres PR et votre communication sur les tickets doivent pouvoir servir d’exemple.
 
 
 ## Pas d’IA générative
@@ -43,4 +47,3 @@ Les personnes en charge de la maintenance du projet ont des tâches supplémenta
 - ni pour communiquer sur les tickets
 
 On valorise l’intelligence collective pour créer des outils et transmettre des connaissances liées à l’ergonomie clavier. Merci de respecter le temps de nos contributeur’ices en ne leur soumettant que du contenu généré par vous-mêmes — sans aide de l’IA.
-
