@@ -33,7 +33,7 @@ Si vous êtes en charge de la maintenance du projet, vous avez des tâches suppl
 
 - Effectuer des revues de code :
   - indiquez clairement quand vous commencez une revue de code ;
-  - si vous validez une PR simple, squashez tous les commits en un seul (bouton « squash & rebase ») et rédigez vous-même un message de commit adéquat si besoin est ;
+  - si vous validez une PR simple, squashez tous les commits en un seul (bouton « squash & merge ») et rédigez vous-même un message de commit adéquat si besoin est ;
   - sachez accepter les améliorations incrémentales : si une PR résout une partie d’un problème sans dégrader le reste du projet, c’est bon à prendre, et ça encourage à faire un *follow-up* ;
   - soyez souples : *in fine*, ce qui compte c’est la contribution, pas comment elle a été faite.
 
