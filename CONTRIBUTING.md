@@ -12,10 +12,10 @@ La contribution s’articule essentiellement autour de deux types de tickets Git
   - [feat] pour exprimer un souhait de fonctionnalité, sous la forme d’une [*user story*](https://fr.wikipedia.org/wiki/R%C3%A9cit_utilisateur) ;
   - pour une demande d’assistance, merci d’utiliser Mastodon ou Discord.
 
-- N’hésitez pas à ouvrir des [pull requests (PR)](pulls) :
+- Proposez des [pull requests (PR)](pulls) :
   - beaucoup de sujets ne requièrent pas ou peu de compétences logicielles (documentation, contenu web, configurations de claviers…) et peuvent se faire directement depuis l’interface web de GitHub ;
   - faites des commits incrémentaux, mieux vaut trop que pas assez ;
-  - si votre PR devient complexe, merci de regrouper vos commits de façon logique avant de solliciter une revue — ou mieux, scindez en plusieurs PR ;
+  - si votre PR devient complexe, merci de regrouper vos commits de façon logique *avant* de solliciter une revue — ou mieux, scindez en plusieurs PR ;
   - une fois que la revue de code a commencé, ne faites plus aucun *rebase* ni *force-push*.
 
 - Veillez à garder les discussions aussi claires que possible :
@@ -32,8 +32,9 @@ Si vous êtes en charge de la maintenance du projet, vous avez des tâches suppl
 - Mettre de l’ordre dans les tickets : triage, étiquetage, détection des doublons…
 
 - Effectuer des revues de code :
-  - indiquez clairement quand vous commencez une revue de code ;
-  - si vous validez une PR simple, squashez tous les commits en un seul (bouton « squash & merge ») et rédigez vous-même un message de commit adéquat si besoin est ;
+  - adaptez vos exigences à l’enjeu de la PR, les tickets simples sont l’occasion de mentorer des personnes moins expérimentées ;
+  - si vous validez une PR simple, squashez tous les commits en un seul (bouton « squash & merge ») — rédigez vous-même un message de commit adéquat si besoin est ;
+  - si vous validez une PR complexe, assurez-vous que la branche contient bien une suite de commits logiques, et ajoutez-les à `main` avec « rebase & merge » ;
   - sachez accepter les améliorations incrémentales : si une PR résout une partie d’un problème sans dégrader le reste du projet, c’est bon à prendre, et ça encourage à faire un *follow-up* ;
   - soyez souples : *in fine*, ce qui compte c’est la contribution, pas comment elle a été faite.
 
