@@ -39,7 +39,7 @@ La disposition a quelques défauts qu'il faut garder à l'esprit :
 
 Erglace est essentiellement le travail de [Lysquid], qui a détaillé ses choix de conception sur le [GitHub de la disposition][4]. Il considère son travail achevé, et la disposition a déjà ses adeptes.
 
-Quelques d’Ergonautes ont cherché à résoudre le principal défaut de cette disposition, qui est la redirection `AIE` (annulaire, auriculaire, majeur).
+Quelques Ergonautes ont cherché à résoudre le principal défaut de cette disposition, qui est la redirection `AIE` (annulaire, auriculaire, majeur).
 
 - [Nuclear-Squid] a développé une [variante <kbd>A</kbd><kbd>I</kbd><kbd>E</kbd>][erglace_nuke]. La redirection est résolue, mais fait apparaître un ciseau sur le digramme `YO`, qui est rédhibitoire en anglais (Optimot souffre du même problème). Pour contourner le problème, il a expérimenté un `Y` en touche morte comme sur ses projets Hummingbird, tout en reconnaissant que ça n’était pas une solution.
 
