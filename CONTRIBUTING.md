@@ -61,4 +61,4 @@ Si vous êtes en charge de la maintenance du projet, vous avez des tâches suppl
 - ni pour aider à la revue de PR
 - ni pour communiquer sur les tickets
 
-On valorise l’intelligence collective pour créer des outils et transmettre des connaissances liées à l’ergonomie clavier. Merci de respecter le temps de nos contributeur·ices en ne leur soumettant que du contenu généré par vous-mêmes — sans aide de l’IA.
+On valorise l’intelligence collective pour créer des outils et transmettre des connaissances liées à l’ergonomie clavier. Merci de respecter le temps de nos contributeur·ices en ne leur soumettant que du contenu créé par vous-mêmes — sans aide de l’IA.
