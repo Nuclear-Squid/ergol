@@ -100,7 +100,13 @@ window.addEventListener('DOMContentLoaded', () => {
     return fetch(`../keymaps/${selected.dataset.folder}/${gLayout.value}.json`)
       .then(response => response.json())
       .then(layout => {
-        gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, gGeometry.value);
+        if (gGeometry.value === 'hidden') {
+          // Initialize x-keyboard to default layout but hide it
+          gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, 'iso');
+          gKeyboard.style.display = 'none';
+        } else {
+          gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, gGeometry.value);
+        }
         gKeyboard.theme = 'hints';
         gKeyLayout = layout;
       });
