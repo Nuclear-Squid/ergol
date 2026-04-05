@@ -321,7 +321,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // highlight keyboard keys and emulate the selected layout
   gInput.onkeydown = event => {
     let value = undefined;
-    if (gEmulate.value === "true") {
+    if (gEmulate.value === 'emulated') {
       pressedKeys[event.code] = true;
       value = gKeyboard.keyDown(event);
     } else if (event.key.length === 1 && event.key !== '\x00') {
@@ -339,7 +339,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   gInput.addEventListener('keyup', event => {
-    if (gEmulate.value === "false") {
+    if (gEmulate.value === 'native') {
       return;
     }
     if (pressedKeys[event.code]) { // expected behavior
