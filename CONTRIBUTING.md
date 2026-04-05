@@ -2,7 +2,7 @@
 
 Les contributions sont accessibles à toutes et tous. Nos projets portent sur l’ergonomie clavier, et beaucoup de sujets ne requièrent pas ou peu de compétences logicielles : documentation, contenu web, dispositions et configurations de claviers…
 
-Toute contribution est bienvenue : vous ne pouvez rien casser, et nos mainteneur’euses sont là pour vous aider !
+Toute contribution est bienvenue : vous ne pouvez rien casser, et nos mainteneur·euses sont là pour vous aider !
 
 
 ## Contributeurs et contributrices
@@ -48,7 +48,7 @@ Si vous êtes en charge de la maintenance du projet, vous avez des tâches suppl
   - ne fusionnez *aucune* PR sans avoir testé vous-même le résultat. Les tests de CI sont
   nécessaires mais non suffisants.
 
-- Aider les contributeur’ices à monter en compétence :
+- Aider les contributeur·ices à monter en compétence :
   - dans les revues de code, privilégiez les suggestions de code aux demandes abstraites ;
   - dans vos PR, écrivez le code que vous aimeriez avoir en revue, et demandez une revue à un·e
   camarade (avoir des droits de merge ne dispense pas d’une revue tierce) ;
@@ -61,4 +61,4 @@ Si vous êtes en charge de la maintenance du projet, vous avez des tâches suppl
 - ni pour aider à la revue de PR
 - ni pour communiquer sur les tickets
 
-On valorise l’intelligence collective pour créer des outils et transmettre des connaissances liées à l’ergonomie clavier. Merci de respecter le temps de nos contributeur’ices en ne leur soumettant que du contenu généré par vous-mêmes — sans aide de l’IA.
+On valorise l’intelligence collective pour créer des outils et transmettre des connaissances liées à l’ergonomie clavier. Merci de respecter le temps de nos contributeur·ices en ne leur soumettant que du contenu généré par vous-mêmes — sans aide de l’IA.
