@@ -41,14 +41,13 @@ Erglace est essentiellement le travail de [Lysquid], qui a détaillé ses choix 
 
 Quelques Ergonautes ont cherché à résoudre le principal défaut de cette disposition, qui est la redirection `AIE` (annulaire, auriculaire, majeur).
 
-- [Nuclear-Squid] a développé une [variante <kbd>A</kbd><kbd>I</kbd><kbd>E</kbd>][erglace_nuke]. La redirection est résolue, mais fait apparaître un ciseau sur le digramme `YO`, qui est rédhibitoire en anglais (Optimot souffre du même problème). Pour contourner le problème, il a expérimenté un `Y` en touche morte comme sur ses projets Hummingbird, tout en reconnaissant que ça n’était pas une solution.
+- [Nuclear-Squid] a développé une [variante <kbd>A</kbd><kbd>I</kbd><kbd>E</kbd>][erglace_nuke]. La redirection est résolue, mais fait apparaître un ciseau sur le digramme `YO`, qui est rédhibitoire en anglais (Optimot souffre du même problème). Pour contourner le problème, il a expérimenté un `Y` en touche morte comme sur ses projets Hummingbird, tout en reconnaissant que ça n’était pas une solution. Un autre souci concerne le digramme `WR`, fréquent en anglais et en programmation, qui devient un SFB d’auriculaire.
 
-- [MacDamien] a poursuivi avec [Ergaie]. Il n’a pas cherché à corriger le ciseau `YO`, considérant que l’anglais n’était pas un objectif central de son travail. Il a aussi fait un miroir de la disposition : les voyelles sont toutes à droite, ce qui permet d’avoir les raccourcis <kbd>Ctrl</kbd>-<kbd>X</kbd><kbd>C</kbd><kbd>V</kbd> en main gauche.
+- [MacDamien] a poursuivi avec [Ergaie]. Il n’a pas cherché à corriger le ciseau `YO`, considérant que l’anglais n’était pas un objectif central de son travail. Il a aussi fait un miroir de la disposition : les voyelles sont toutes à droite, ce qui permet d’avoir les raccourcis <kbd>Ctrl</kbd>-<kbd>X</kbd><kbd>C</kbd><kbd>V</kbd> en main gauche. Le digramme `WR` devient plus confortable.
 
-- [JF] a continué avec sa [variante][erglace_jf] aussi. Il n’a pas cherché à corriger le digramme `YO` non plus, considérant que le `Y` en touche morte de Nuclear-Squid était une solution acceptable. Il a implémenté d’autres améliorations mineures à la disposition. C’est la variante la plus activement développée aujourd’hui, bien que la version de Lysquid reste la plus utilisée.
+- [JF] a continué avec sa [variante][erglace_jf] aussi. Il n’a pas cherché à corriger le digramme `YO` non plus, considérant que le `Y` en touche morte de Nuclear-Squid était une solution acceptable. Le digramme `WR` reste un SFB d’auriculaire, mais d’autres améliorations mineures ont été apportées à la disposition. C’est la variante la plus activement développée aujourd’hui, bien que la version de Lysquid reste la plus utilisée.
 
-D’autres utilisateurs ont adopté des solutions plus radicales, comme [Wismill] qui a déplacé la
-touche morte sous un pouce — ce qui limite donc sa solution aux claviers programmables.
+D’autres utilisateurs ont adopté des solutions plus radicales, comme [Wismill] qui a déplacé la touche morte sous un pouce. Ce n’est donc pas utilisable sur tous les OS, mais il y a des solutions pour l’implémenter, soit avec un clavier programmable, soit avec des fonctionnalités xkb récentes.
 
 **Erglace est une alternative prometteuse**, qui mérite qu’on travaille à résoudre les quelques petits problèmes restants. Il est déjà bien meilleur que Bépo ou Optimot en l’état, et peut donc convenir à beaucoup d’utilisateurs et utilisatrices.
 
