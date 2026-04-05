@@ -1,8 +1,8 @@
 # Contribution
 
-Nos projets portent sur l’ergonomie clavier, et beaucoup de sujets ne requièrent pas ou peu de compétences logicielles : documentation, contenu web, dispositions et configurations de claviers…
+Les contributions sont accessibles à toutes et tous. Nos projets portent sur l’ergonomie clavier, et beaucoup de sujets ne requièrent pas ou peu de compétences logicielles : documentation, contenu web, dispositions et configurations de claviers…
 
-Les contributions sont accessibles à toutes et tous, et toute contribution est bienvenue : vous ne pouvez rien casser, et nos mainteneur’euses sont là pour vous aider !
+Toute contribution est bienvenue : vous ne pouvez rien casser, et nos mainteneur’euses sont là pour vous aider !
 
 
 ## Contributeurs et contributrices
