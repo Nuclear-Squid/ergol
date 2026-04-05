@@ -320,7 +320,7 @@
         <rect class="" width="52" height="52" rx="5" ry="5" />
         <g class="key">
           <text class="level1" width="22" height="22" x="12.8" y="43.4">1</text>
-          <text class="level2" width="22" height="22" x="12.8" y="20.6">!</text>
+          <text class="level2" width="22" height="22" x="12.8" y="20.6">€</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">₁</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">¹</text>
           <text class="level5" width="22" height="22" x="38" y="43.4"></text>
@@ -410,22 +410,22 @@
         <rect class="" width="52" height="52" rx="5" ry="5" />
         <g class="key">
           <text class="level1" width="22" height="22" x="12.8" y="43.4">9</text>
-          <text class="level2" width="22" height="22" x="12.8" y="20.6">(</text>
+          <text class="level2" width="22" height="22" x="12.8" y="20.6">«</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">₉</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">⁹</text>
           <text class="level5" width="22" height="22" x="38" y="43.4">“</text>
-          <text class="level6" width="22" height="22" x="38" y="20.6">«</text>
+          <text class="level6" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="numberKey" finger="r4" id="Digit0" transform="translate(600, 0)">
         <rect class="" width="52" height="52" rx="5" ry="5" />
         <g class="key">
           <text class="level1" width="22" height="22" x="12.8" y="43.4">0</text>
-          <text class="level2" width="22" height="22" x="12.8" y="20.6">)</text>
+          <text class="level2" width="22" height="22" x="12.8" y="20.6">»</text>
           <text class="level3" width="22" height="22" x="38" y="43.4">₀</text>
           <text class="level4" width="22" height="22" x="38" y="20.6">⁰</text>
           <text class="level5" width="22" height="22" x="38" y="43.4">”</text>
-          <text class="level6" width="22" height="22" x="38" y="20.6">»</text>
+          <text class="level6" width="22" height="22" x="38" y="20.6"></text>
         </g>
       </g>
       <g class="pinkyKey" finger="r5" id="Minus" transform="translate(660, 0)">
