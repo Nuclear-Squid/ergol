@@ -155,7 +155,7 @@ lettres.
 
 ![](angle_mod.svg)
 
-Cela permet aussi d’avoir, à la place de [<]{.kbd} permutté au centre du
+Cela permet aussi d’avoir, à la place de [<]{.kbd} permuté au centre du
 clavier, une touche [Retour arrière]{.kbd} plus proche pour effacer plus
 facilement du texte.
 
