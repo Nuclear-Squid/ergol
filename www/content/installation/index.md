@@ -123,9 +123,17 @@ La bonne façon d’utiliser un clavier ergonomique est d’appliquer la disposi
 côté PC (comme vu plus haut) et de ne configurer que les touches spéciales de
 son clavier (Entrée, Backspace, Shift, AltGr, Alt, Ctrl…).
 
+Par opposition, on appelle « émuler » un layout — par exemple « émuler Ergo‑L »
+— le fait d’avoir le layout dans le clavier et l’ordinateur configuré
+dans une autre dispostion qu’Ergo‑L, déjà disponible de base dans l’OS comme
+QWERTY ou Azerty.
+
 Programmer son clavier pour qu’il émule Ergo‑L sur un PC configuré en Azerty (ou
-autre disposition) est **beaucoup** plus compliqué. Cela a donc peu d’intérêt,
-sauf besoin très spécifique.
+autre disposition) est **beaucoup** plus compliqué.
+
+Il vaut mieux n’avoir recours à l’émulation qu’en cas de **dernier ressort** :
+ordinateur totalement verrouillé (même pour le pilote nomade), administration
+de nombreuses machines, ou autres besoins spécifiques.
 
 Ceci étant dit, une version basique de l’émulation d’Ergo‑L au-dessus d’Azerty
 ou Qwerty Intl est faite ici sur [ZMK pour le Quacken][émulation ZMK] et peut
