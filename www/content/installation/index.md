@@ -84,11 +84,11 @@ de symboles.
 
 ### Linux : [ergol.xkb_symbols][]
 
-Ergo‑L est déjà inclus dans toutes les distributions Linux dotées de
-`xkeyboard-config` en [version 2.42 ou
-ultérieure](https://repology.org/project/xkeyboard-config/versions),
-Ergo‑L est actuellement disponible dans toutes les distributions Linux dotées de `xkeyboard-config` en [version 2.42 ou ultérieure](https://repology.org/project/xkeyboard-config/versions), notamment Arch, Debian 13, Fedora 41, Gentoo, Manjaro,
-OpenMandriva 6.0, OpenSUSE Tumbleweed, Slackware Current, Ubuntu 24.10.
+Ergo‑L est disponible de base dans toutes les distributions Linux dotées
+de `xkeyboard-config` en [version 2.42 ou
+ultérieure](https://repology.org/project/xkeyboard-config/versions), notamment
+Arch, Debian 13, Fedora 41, Gentoo, Manjaro, OpenMandriva 6.0, OpenSUSE
+Tumbleweed, Slackware Current, Ubuntu 24.10.
 <!-- Il a aussi été inclus dans Ubuntu 24.04 LTS (rétro-portage). -->
 
 :::{.highlight}
