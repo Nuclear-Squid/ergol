@@ -18,7 +18,7 @@ La contribution s’articule essentiellement autour de deux types de tickets Git
 - Proposez des [pull requests (PR)](pulls) :
   - beaucoup de corrections peuvent être proposées directement depuis l’interface web de GitHub ;
   - faites des commits incrémentaux, mieux vaut trop que pas assez ;
-  - si votre PR devient complexe, merci de regrouper vos commits de façon logique *avant* de solliciter une revue — ou mieux, scindez-la en plusieurs PR ;
+  - si votre PR devient complexe, squashez vos commits par unités logiques [et décrivez-les][conventional commits] *avant* de solliciter une revue — ou mieux, scindez-la en plusieurs PR ;
   - une fois que la revue de code a commencé, ne faites plus aucun *rebase* ni *force-push* ;
   - suivez les demandes de la personne qui fait la revue de code.
 
@@ -26,8 +26,9 @@ La contribution s’articule essentiellement autour de deux types de tickets Git
   - évitez les hors-sujets et tout ce qui peut générer du bruit de fond ;
   - répondez directement aux questions qu’on vous pose — si vous tenez à faire une réponse longue, commencez par un `TL;DR:` ;
   - les tickets GitHub sont là pour proposer des solutions. On ne commente un ticket que pour contribuer
-  à sa résolution, en non pour donner son opinion.
+  à sa résolution, et non pour donner son opinion.
 
+[conventional commits]: https://www.conventionalcommits.org/en/v1.0.0/
 [récit utilisateur]: https://fr.wikipedia.org/wiki/Récit_utilisateur
 [Mastodon]: https://piaille.fr/@ergol
 [Discord]: https://discord.gg/5xR5K3nAFX
@@ -41,7 +42,7 @@ Si vous êtes en charge de la maintenance du projet, vous avez des tâches suppl
 
 - Effectuer des revues de code :
   - adaptez vos exigences à l’enjeu de la PR, les tickets simples sont l’occasion de mentorer des personnes moins expérimentées ;
-  - si vous validez une PR simple, squashez tous les commits en un seul (bouton « squash & merge ») — rédigez vous-même un message de commit adéquat si besoin est ;
+  - si vous validez une PR simple, squashez tous les commits en un seul (bouton « squash & merge ») et rédigez vous-même le [message de commit][conventional commits] si besoin est ;
   - si vous validez une PR complexe, assurez-vous que la branche contient bien une suite de commits logiques, et ajoutez-les à `main` avec « rebase & merge » ;
   - sachez accepter les améliorations incrémentales : si une PR résout une partie d’un problème sans dégrader le reste du projet, c’est bon à prendre, et ça encourage à faire un *follow-up* ;
   - soyez souples : *in fine*, ce qui compte c’est la contribution, pas comment elle a été faite ;
