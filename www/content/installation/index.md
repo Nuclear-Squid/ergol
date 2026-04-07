@@ -220,13 +220,13 @@ Licence
 [fichier source]:              /keymaps/fr/ergol.toml
 [cavalier.pdf]:                cavalier.pdf
 [ergol_nomade.zip]:            https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_nomade.zip
-[ergol_kbd.exe]:               https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_kbd.exe
+[ergol_kbd.exe]:               https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_kbd.exe
 [ergol.keylayout]:             https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.keylayout
 [ergol.xkb_symbols]:           https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols
-[ergol_nomade_angle_mod.zip]:  https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_nomade_angle_mod.zip
-[ergol_kbd_angle_mod.exe]:     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_kbd_angle_mod.exe
-[ergol_angle_mod.xkb_symbols]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_angle_mod.xkb_symbols
-[ergol_angle_mod.keylayout]:   https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_angle_mod.keylayout
+[ergol_nomade_angle_mod.zip]:  https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_nomade_angle_mod.zip
+[ergol_kbd_angle_mod.exe]:     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_kbd_angle_mod.exe
+[ergol_angle_mod.xkb_symbols]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod.xkb_symbols
+[ergol_angle_mod.keylayout]:   https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod.keylayout
 [XKalamine]:                   https://github.com/OneDeadKey/kalamine#xkalamine
 [Karabiner]:                   https://karabiner-elements.pqrs.org
 [émulation ZMK]:               https://github.com/Nuclear-Squid/zmk-keyboard-quacken/pull/54
