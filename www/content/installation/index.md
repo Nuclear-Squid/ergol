@@ -12,16 +12,30 @@ footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 {{<x-keyboard name="Ergo‑L" data="ergol" class="odk">}}
 
 
-Téléchargement
+Note aux utilisateurices de claviers programmables
 --------------------------------------------------------------------------------
 
-### Note pour les utilisateurices de claviers programmables
+Il y a deux façons d’utiliser Ergo‑L sur un clavier programmable :
 
-Il est très fortement recommandé d’installer le driver sur l’ordinateur et de
-laisser le clavier en QWERTY dans QMK/ZMK/Vial. C’est le driver qui s’occupe de
-la disposition, Ergo‑L ou autre, pas le clavier programmable. La seule
-modification quasi indispensable est d’avoir AltGr sur une touche de pouce
-accessible pour accéder aux symboles.
+- soit on laisse le clavier en Qwerty dans QMK/ZMK/Vial, et c’est le pilote côté
+  ordi qui s’occupe de la disposition (liens de téléchargement plus bas) ;
+- soit on cherche à émuler Ergo‑L côté QMK/ZMK/Vial, pour avoir la disposition
+  sur un ordi qui reste configuré en Azerty.
+
+La première méthode est vivement recommandée. On peut alors configurer son
+clavier très facilement, il faut juste avoir AltGr sur une touche de pouce pour
+accéder aux symboles.
+
+L’émulation est **beaucoup** plus compliquée, et n’est pertinente qu’en **dernier
+ressort** : ordinateur totalement verrouillé (même pour le pilote nomade),
+administration de nombreuses machines, ou autre besoin spécifique. Une émulation
+basique d’Ergo‑L au-dessus d’Azerty ou Qwerty-Intl est expérimentée sur
+[le firmware ZMK du Quacken][Quacken ZMK], elle sera proposée à d’autres
+claviers via le projet [Ækeynox].
+
+
+Téléchargement
+--------------------------------------------------------------------------------
 
 ### Pilotes nomades : [ergol_nomade.zip][]
 
@@ -35,7 +49,6 @@ Exécuter l’installeur et relancer la session. La disposition de clavier
 apparait dans la barre de langues (indicateur de la barre des tâches).
 
 <details>
-
 <summary>Ajouter la disposition installée dans la liste (Windows 10)</summary>
 
 Note : il n’est normalement pas nécessaire de faire ces étapes avec le pilote
@@ -45,17 +58,17 @@ installé ci-dessus.
    clavier »
 
    ![](windows10/windows10_1.webp)
-  
+
 2. Cliquer sur « Options » sur « Français »
 
    ![](windows10/windows10_2.webp)
 
 3. « Ajouter un clavier »
-  
+
    ![](windows10/windows10_3.webp)
 
 4. Il devrait y avoir Ergo‑L dans la liste, cliquer dessus
-  
+
    ![](windows10/windows10_4.webp)
 
 5. Ergo‑L est maintenant ajouté. On devrait voir en bas à droite une icône
@@ -65,6 +78,21 @@ installé ci-dessus.
    ![](windows10/windows10_5.webp)
 
 </details>
+
+<details>
+<summary>Disposition clavier par défaut</summary>
+
+1. Rechercher dans le menu Démarrer « Paramètres avancés de clavier »
+
+   ![](windows10/search.png)
+
+2. Dans « Remplacer la méthode d’entrée par défaut » : choisir sa dispo préférée
+  dans le menu déroulant
+
+   ![](windows10/input.png)
+
+</details>
+
 
 ### macOS : [ergol.keylayout][]
 
@@ -84,19 +112,20 @@ de symboles.
 
 ### Linux : [ergol.xkb_symbols][]
 
-Ergo‑L est disponible de base dans toutes les distributions Linux dotées
-de `xkeyboard-config` en [version 2.42 ou
-ultérieure](https://repology.org/project/xkeyboard-config/versions), notamment
-Arch, Debian 13, Fedora 41, Gentoo, Manjaro, OpenMandriva 6.0, OpenSUSE
-Tumbleweed, Slackware Current, Ubuntu 24.10.
-<!-- Il a aussi été inclus dans Ubuntu 24.04 LTS (rétro-portage). -->
+Ergo‑L est déjà inclus dans toutes les distributions Linux dotées de `xkeyboard-config`
+en [version 2.42 ou ultérieure](https://repology.org/project/xkeyboard-config/versions),
+ce qui inclut notamment Arch, Debian 13, Fedora 41, Gentoo, Manjaro, OpenMandriva 6.0,
+OpenSUSE Tumbleweed, Slackware Current, Ubuntu 24.04.
 
 :::{.highlight}
 ⚠️ Ne choisissez la variante ISO qu’après avoir pris connaissance de ce que ça
 implique dans la [section « angle mod »](#variante-en-a-angle-mod).
 :::
 
-Pour les autres distributions, copier ce pilote dans `xkb/symbols/custom` :
+<details>
+<summary>Installation pour d’autres distributions</summary>
+
+Si Ergo‑L n’est pas disponible nativement, copier ce pilote dans `xkb/symbols/custom` :
 
 ```bash
 sudo wget -O ${XKB_CONFIG_ROOT:-/usr/share/X11/xkb}/symbols/custom \
@@ -116,28 +145,7 @@ setxkbmap custom
 
 D’autres méthodes d’installation sont possibles, en passant le [fichier
 source][] à [XKalamine][].
-
-### Claviers personnalisés / ergonomiques
-
-La bonne façon d’utiliser un clavier ergonomique est d’appliquer la disposition
-côté PC (comme vu plus haut) et de ne configurer que les touches spéciales de
-son clavier (Entrée, Backspace, Shift, AltGr, Alt, Ctrl…).
-
-Par opposition, on appelle « émuler » un layout — par exemple « émuler Ergo‑L »
-— le fait d’avoir le layout dans le clavier et l’ordinateur configuré
-dans une autre dispostion qu’Ergo‑L, déjà disponible de base dans l’OS comme
-QWERTY ou Azerty.
-
-Programmer son clavier pour qu’il émule Ergo‑L sur un PC configuré en Azerty (ou
-autre disposition) est **beaucoup** plus compliqué.
-
-Il vaut mieux n’avoir recours à l’émulation qu’en cas de **dernier ressort** :
-ordinateur totalement verrouillé (même pour le pilote nomade), administration
-de nombreuses machines, ou autres besoins spécifiques.
-
-Ceci étant dit, une version basique de l’émulation d’Ergo‑L au-dessus d’Azerty
-ou Qwerty Intl est faite ici sur [ZMK pour le Quacken][émulation ZMK] et peut
-servir de base pour être adaptée à d’autres claviers.
+</details>
 
 ### Aide-mémoire : [cavalier.pdf][]
 
@@ -201,16 +209,6 @@ Vous avez des questions ou des problèmes avec les pilotes ? Consultez notre
 [FAQ] !
 
 
-Astuces
---------------------------------------------------------------------------------
-
-### Disposition clavier par défaut sur Windows
-
-1. Rechercher dans le menu Démarrer « Paramètres avancés de clavier »
-2. Dans « Remplacer la méthode d’entrée par défaut » : choisir sa dispo préférée
-  dans le menu déroulant
-
-
 Licence
 --------------------------------------------------------------------------------
 
@@ -233,5 +231,7 @@ Licence
 
 [Arsenik]:                     /claviers/arsenik/
 [kanata]:                      https://github.com/jtroo/kanata
+[Ækeynox]:                     https://github.com/OneDeadKey/zmk-config-aekeynox
+[Quacken ZMK]:                 https://github.com/Nuclear-Squid/zmk-keyboard-quacken
 [angle mod]:                   https://colemakmods.github.io/ergonomic-mods/angle.html
 [FAQ]:                         /ressources/faq
