@@ -91,8 +91,13 @@ utilisateur.
 <summary>Disposition clavier par défaut</summary>
 
 1. Rechercher dans le menu Démarrer « Paramètres avancés de clavier »
+
+   ![](windows10/search.png)
+
 2. Dans « Remplacer la méthode d’entrée par défaut » : choisir sa dispo préférée
   dans le menu déroulant
+
+   ![](windows10/input.png)
 
 </details>
 
