@@ -52,6 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const gGeometry = document.querySelector('#geometry');
   const gLayout   = document.querySelector('#layout');
   const gDict     = document.querySelector('#dict');
+  const gEmulate  = document.querySelector('#emulate');
 
   const gKeyList  = document.querySelector('.key_list');
   const gStatus   = document.querySelector('.status');
@@ -267,10 +268,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const geometry = localStorage.getItem('geometry');
     const level    = localStorage.getItem(`${gLayout.value}.level`);
     const quacks   = localStorage.getItem(`${gLayout.value}.quacks`);
+    const emulate  = localStorage.getItem('emulate');
 
     if (layout)   gLayout.value   = layout;
     if (dict)     gDict.value     = dict;
     if (geometry) gGeometry.value = geometry;
+    if (emulate)  gEmulate.value  = emulate;
     gLessonLevel = level  ? Number(level)  : STARTING_LEVEL;
     gQuackCount  = quacks ? Number(quacks) : 1;
 
@@ -302,6 +305,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  gEmulate.addEventListener('change', event => {
+    localStorage.setItem('emulate', gEmulate.value);
+  });
+
   loadLayout();
 
   /**
@@ -313,8 +320,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // highlight keyboard keys and emulate the selected layout
   gInput.onkeydown = event => {
-    pressedKeys[event.code] = true;
-    const value = gKeyboard.keyDown(event);
+    let value = undefined;
+    if (gEmulate.value === 'emulated') {
+      pressedKeys[event.code] = true;
+      value = gKeyboard.keyDown(event);
+    } else if (event.key.length === 1 && event.key !== '\x00') {
+      // The pressed key corresponds to a letter or symbol
+      // (the dead key makes '\x00' on Chrome)
+      value = event.key;
+    }
 
     if (value) {
       goNextChar(value);
@@ -325,6 +339,9 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   gInput.addEventListener('keyup', event => {
+    if (gEmulate.value === 'native') {
+      return;
+    }
     if (pressedKeys[event.code]) { // expected behavior
       gKeyboard.keyUp(event);
       delete pressedKeys[event.code];
