@@ -84,6 +84,14 @@
     .mixed .level5 { display: block; }
     .mixed .level5 { transform: translate(0px, -22.8px); }
 
+    /* show secondary 1dk chars on hover */
+    .level5.secondary,
+    .level6.secondary { display: none; }
+    :root:hover .level5.secondary,
+    :root:hover .level6.secondary { display: block; }
+    .altgr .level5.secondary,
+    .altgr .level6.secondary { display: none !important; }
+
     /* show AltGr */
     .altgr .level3,
     .altgr .level4 { display: block; }
@@ -319,7 +327,7 @@
           <text x="12.8" y="20.6" class="level2">€</text>
           <text x="38.0" y="43.4" class="level3">₁</text>
           <text x="38.0" y="20.6" class="level4">¹</text>
-          <text x="38.0" y="43.4" class="level5">„</text>
+          <text x="38.0" y="43.4" class="level5 secondary">„</text>
         </g>
       </g>
       <g id="Digit2" class="numberKey" transform="translate(120)">
@@ -329,8 +337,8 @@
           <text x="12.8" y="20.6" class="level2">«</text>
           <text x="38.0" y="43.4" class="level3">₂</text>
           <text x="38.0" y="20.6" class="level4">²</text>
-          <text x="38.0" y="43.4" class="level5">“</text>
-          <text x="38.0" y="20.6" class="level6">‘</text>
+          <text x="38.0" y="43.4" class="level5 secondary">“</text>
+          <text x="38.0" y="20.6" class="level6 secondary">‘</text>
         </g>
       </g>
       <g id="Digit3" class="numberKey" transform="translate(180)">
@@ -340,8 +348,8 @@
           <text x="12.8" y="20.6" class="level2">»</text>
           <text x="38.0" y="43.4" class="level3">₃</text>
           <text x="38.0" y="20.6" class="level4">³</text>
-          <text x="38.0" y="43.4" class="level5">”</text>
-          <text x="38.0" y="20.6" class="level6">’</text>
+          <text x="38.0" y="43.4" class="level5 secondary">”</text>
+          <text x="38.0" y="20.6" class="level6 secondary">’</text>
         </g>
       </g>
       <g id="Digit4" class="numberKey" transform="translate(240)">
@@ -351,6 +359,7 @@
           <text x="12.8" y="20.6" class="level2">$</text>
           <text x="38.0" y="43.4" class="level3">₄</text>
           <text x="38.0" y="20.6" class="level4">⁴</text>
+          <text x="38.0" y="43.4" class="level5 secondary">¢</text>
         </g>
       </g>
       <g id="Digit5" class="numberKey" transform="translate(300)">
@@ -360,6 +369,7 @@
           <text x="12.8" y="20.6" class="level2">%</text>
           <text x="38.0" y="43.4" class="level3">₅</text>
           <text x="38.0" y="20.6" class="level4">⁵</text>
+          <text x="38.0" y="43.4" class="level5 secondary">‰</text>
         </g>
       </g>
     </g>
@@ -389,6 +399,7 @@
           <text x="12.8" y="20.6" class="level2">*</text>
           <text x="38.0" y="43.4" class="level3">₈</text>
           <text x="38.0" y="20.6" class="level4">⁸</text>
+          <text x="38.0" y="43.4" class="level5 secondary">§</text>
         </g>
       </g>
       <g id="Digit9" class="numberKey" transform="translate(540)">
@@ -398,6 +409,7 @@
           <text x="12.8" y="20.6" class="level2">#</text>
           <text x="38.0" y="43.4" class="level3">₉</text>
           <text x="38.0" y="20.6" class="level4">⁹</text>
+          <text x="38.0" y="43.4" class="level5 secondary">¶</text>
         </g>
       </g>
       <g id="Digit0" class="numberKey" transform="translate(600)">
@@ -407,6 +419,7 @@
           <text x="12.8" y="20.6" class="level2">@</text>
           <text x="38.0" y="43.4" class="level3">₀</text>
           <text x="38.0" y="20.6" class="level4">⁰</text>
+          <text x="38.0" y="43.4" class="level5 secondary">°</text>
         </g>
       </g>
       <g id="Minus" class="pinkyKey" transform="translate(660)">
@@ -414,6 +427,8 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="43.4" class="level1">/</text>
           <text x="12.8" y="20.6" class="level2">_</text>
+          <text x="38.0" y="43.4" class="level5 secondary">÷</text>
+          <text x="38.0" y="20.6" class="level6 secondary">–</text>
         </g>
       </g>
       <g id="Equal" class="pinkyKey" transform="translate(720)">
@@ -423,6 +438,8 @@
           <text x="12.8" y="43.4" class="level1">=</text>
           <text x="12.8" y="20.6" class="level2">+</text>
         </g>
+          <text x="38.0" y="43.4" class="level5 secondary">≠</text>
+          <text x="38.0" y="20.6" class="level6 secondary">±</text>
       </g>
       <g id="IntlYen" class="pinkyKey" transform="translate(780)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -519,7 +536,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">M</text>
           <text x="38.0" y="43.4" class="level3">&amp;</text>
-          <text x="38.0" y="43.4" class="level5">µ</text>
+          <text x="38.0" y="43.4" class="level5 secondary">µ</text>
         </g>
       </g>
       <g id="KeyI" class="letterKey" transform="translate(510)">
@@ -643,7 +660,7 @@
           <text x="12.8" y="20.6" class="level2">F</text>
           <text x="38.0" y="43.4" class="level3">=</text>
           <text x="38.0" y="20.6" class="level4">≠</text>
-          <text x="38.0" y="43.4" class="level5"> </text>
+          <text x="38.0" y="43.4" class="level5 secondary">ñ</text>
         </g>
       </g>
     </g>
@@ -759,6 +776,7 @@
             <text x="38.0" y="20.6" class="dk_mark">◌</text>
             <text x="38.0" y="20.6" class="dk_char">,</text>
           </g>
+          <text x="38.0" y="43.4" class="level5 secondary">ß</text>
         </g>
       </g>
       <g id="KeyC" class="letterKey" transform="translate(255)">
@@ -771,7 +789,7 @@
             <text x="38.0" y="20.6" class="dk_mark">◌</text>
             <text x="38.0" y="20.6" class="dk_char">˛</text>
           </g>
-          <text x="38.0" y="43.4" class="level5"> </text>
+          <text x="38.0" y="43.4" class="level5 secondary">‑</text>
         </g>
       </g>
       <g id="KeyV" class="letterKey" transform="translate(315)">
@@ -779,6 +797,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">V</text>
           <text x="38.0" y="43.4" class="level3">_</text>
+          <text x="38.0" y="43.4" class="level5 secondary">–</text>
         </g>
       </g>
       <g id="KeyB" class="letterKey" transform="translate(375)">
@@ -786,6 +805,7 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="20.6" class="level2">B</text>
           <text x="38.0" y="43.4" class="level3">#</text>
+          <text x="38.0" y="43.4" class="level5 secondary">—</text>
         </g>
       </g>
     </g>
@@ -796,7 +816,7 @@
           <text x="12.8" y="43.4" class="level1">.</text>
           <text x="12.8" y="20.6" class="level2">:</text>
           <text x="38.0" y="43.4" class="level3">|</text>
-          <text x="38.0" y="43.4" class="level5">…</text>
+          <text x="38.0" y="43.4" class="level5 secondary">…</text>
         </g>
       </g>
       <g id="KeyM" class="letterKey" transform="translate(495)">
@@ -805,7 +825,6 @@
           <text x="12.8" y="20.6" class="level2">H</text>
           <text x="38.0" y="43.4" class="level3">!</text>
           <text x="38.0" y="20.6" class="level4">¬</text>
-          <text x="38.0" y="43.4" class="level5"> </text>
         </g>
       </g>
       <g id="Comma" class="letterKey" transform="translate(555)">
@@ -817,7 +836,7 @@
             <text x="38.0" y="20.6" class="dk_mark">◌</text>
             <text x="38.0" y="20.6" class="dk_char">¸</text>
           </g>
-          <g class="level5 non_diacritic deadKey">
+          <g class="level5 non_diacritic deadKey secondary">
             <text x="38.0" y="43.4" class="dk_mark">﹍</text>
             <text x="38.0" y="43.4" class="dk_char">α</text>
           </g>
@@ -829,7 +848,7 @@
           <text x="12.8" y="43.4" class="level1">,</text>
           <text x="12.8" y="20.6" class="level2">;</text>
           <text x="38.0" y="43.4" class="level3">:</text>
-          <text x="38.0" y="43.4" class="level5">·</text>
+          <text x="38.0" y="43.4" class="level5 secondary">·</text>
         </g>
       </g>
       <g id="Slash" class="letterKey" transform="translate(675)">
