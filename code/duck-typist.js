@@ -32,7 +32,7 @@ const ALL_30_KEYS = [
   'KeyD', 'KeyK',
   'KeyS', 'KeyL',
   'KeyA', 'Semicolon',
-  'KeyV', 'KeyM',  
+  'KeyV', 'KeyM',
   'KeyE', 'KeyI',
   'KeyW', 'KeyO',
   'KeyR', 'KeyU',
@@ -101,7 +101,13 @@ window.addEventListener('DOMContentLoaded', () => {
     return fetch(`../keymaps/${selected.dataset.folder}/${gLayout.value}.json`)
       .then(response => response.json())
       .then(layout => {
-        gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, gGeometry.value);
+        if (gGeometry.value === 'none') {
+          // Initialize x-keyboard to default layout but hide it
+          gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, 'iso');
+          gKeyboard.style.display = 'none';
+        } else {
+          gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, gGeometry.value);
+        }
         gKeyboard.theme = 'hints';
         gKeyLayout = layout;
       });
@@ -295,7 +301,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   gGeometry.addEventListener('change', event => {
     localStorage.setItem('geometry', gGeometry.value);
-    gKeyboard.geometry = gGeometry.value;
+    if (gGeometry.value === 'none') {
+      gKeyboard.style.display = 'none';
+    } else {
+      gKeyboard.style.display = 'block';
+      gKeyboard.geometry = gGeometry.value;
+    }
   });
 
   gKeyList.addEventListener('click', event => {
