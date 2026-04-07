@@ -437,9 +437,9 @@
         <g class="key" text-anchor="middle">
           <text x="12.8" y="43.4" class="level1">=</text>
           <text x="12.8" y="20.6" class="level2">+</text>
-        </g>
           <text x="38.0" y="43.4" class="level5 secondary">≠</text>
           <text x="38.0" y="20.6" class="level6 secondary">±</text>
+        </g>
       </g>
       <g id="IntlYen" class="pinkyKey" transform="translate(780)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -565,6 +565,7 @@
             <text x="38.0" y="43.4" class="dk_mark">◌</text>
             <text x="38.0" y="43.4" class="dk_char">¨</text>
           </g>
+          <text x="38.0" y="20.6" class="level6 secondary">¡</text>
         </g>
       </g>
       <g id="KeyP" class="letterKey" transform="translate(630)">
@@ -790,6 +791,7 @@
             <text x="38.0" y="20.6" class="dk_char">˛</text>
           </g>
           <text x="38.0" y="43.4" class="level5 secondary">‑</text>
+          <text x="38.0" y="20.6" class="level6 secondary">¿</text>
         </g>
       </g>
       <g id="KeyV" class="letterKey" transform="translate(315)">
