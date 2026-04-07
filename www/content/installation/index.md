@@ -107,8 +107,8 @@ La disposition de clavier ainsi installée est disponible dans le gestionnaire d
 préférences du bureau sous un nom générique (« A user-defined custom Layout »,
 « Une disposition définie par l'utilisateur », etc.).
 
-Si l’on sait que notre Desktop Environment utilise XOrg (X11) et pas Wayland,
-on peut aussi l’activer directement en ligne de commande :
+Si votre environnement de bureau utilise encore XOrg (X11) et pas Wayland,
+Ergo‑L peut aussi être activé directement en ligne de commande :
 
 ```bash
 setxkbmap custom
@@ -137,7 +137,7 @@ de nombreuses machines, ou autres besoins spécifiques.
 
 Ceci étant dit, une version basique de l’émulation d’Ergo‑L au-dessus d’Azerty
 ou Qwerty Intl est faite ici sur [ZMK pour le Quacken][émulation ZMK] et peut
-servir de base pour être adapté à d’autres claviers.
+servir de base pour être adaptée à d’autres claviers.
 
 ### Aide-mémoire : [cavalier.pdf][]
 
@@ -146,26 +146,27 @@ Une aide pour apprendre la dispo. À imprimer, plier et placer sur son bureau 
 
 Variante en A (« <i lang="en">angle mod</i> »)
 --------------------------------------------------------------------------------
+### Principe
 
 L’[angle mod][] est une permutation de touches sur les claviers **ISO
 uniquement** (clavier ayant la touche [<]{.kbd} en bas à gauche sur Azerty).
 
-Les doigts **ne change pas** de lettre sur laquelle ils sont assignés :
+L’assignation doigt/touche reste la même : 
 
 - [Z]{.kbd} se fait toujours avec l’auriculaire gauche,
 - [X]{.kbd} avec l’annulaire,
 - [-]{.kbd} avec le majeur
 - et [V]{.kbd} et [B]{.kbd} avec l’index.
 
-Mais on gagne en confort en ayant le poignet gauche plus aligné avec le
-mouvement que font les doigts, en déplaçant les touches qui produisent ces
-lettres.
+L’idée est uniquement de gagner en confort : le poignet gauche s’aligne
+avec le mouvement des doigts, il forme un A avec le poignet droit,
+et les touches de la rangée du bas s’atteignent en repliant les doigts —
+comme on le fait déjà avec la main droite.
 
 ![](angle_mod.svg)
 
-Cela permet aussi d’avoir, à la place de [<]{.kbd} permuté au centre du
-clavier, une touche [Retour arrière]{.kbd} plus proche pour effacer plus
-facilement du texte.
+Cela permet aussi d’avoir une touche [Backspace]{.kbd}au centre du clavier,
+permettant d’effacer du texte sans quitter la position dactylo.
 
 Si vous avez bien pris connaissance du fonctionnement de l’angle mod, voici les
 pilotes pour :
