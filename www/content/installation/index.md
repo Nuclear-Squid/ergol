@@ -146,6 +146,7 @@ Une aide pour apprendre la dispo. À imprimer, plier et placer sur son bureau 
 
 Variante en A (« <i lang="en">angle mod</i> »)
 --------------------------------------------------------------------------------
+
 ### Principe
 
 L’[angle mod][] est une permutation de touches sur les claviers **ISO
@@ -158,18 +159,30 @@ L’assignation doigt/touche reste la même :
 - [-]{.kbd} avec le majeur
 - et [V]{.kbd} et [B]{.kbd} avec l’index.
 
-L’idée est uniquement de gagner en confort : le poignet gauche s’aligne
-avec le mouvement des doigts, il forme un A avec le poignet droit,
-et les touches de la rangée du bas s’atteignent en repliant les doigts —
-comme on le fait déjà avec la main droite.
+L’idée est uniquement de gagner en confort : le poignet gauche s’aligne avec le
+mouvement des doigts, il forme un A avec le poignet droit, et les touches de la
+rangée du bas s’atteignent en repliant les doigts, comme on le fait déjà avec
+la main droite.
 
 ![](angle_mod.svg)
 
-Cela permet aussi d’avoir une touche [Backspace]{.kbd}au centre du clavier,
+Cela permet aussi d’avoir une touche [Backspace]{.kbd} au centre du clavier,
 permettant d’effacer du texte sans quitter la position dactylo.
 
-Si vous avez bien pris connaissance du fonctionnement de l’angle mod, voici les
-pilotes pour :
+### Utilisation avec Kanata
+
+La façon recommandée de profiter de l’angle-mod consiste à utiliser [kanata][]
+et la configuration [Arsenik][]. Outre l’angle-med, cela donne accès à d’autres
+fonctionnalités avancées qui peuvent s’activer à la carte :
+
+- <kbd>Entrée</kbd> et <kbd>Backspace</kbd> sous les pouces
+- <i lang="en">homerow-mods</i> : <kbd>Shift</kbd> sous le pouce gauche,
+  <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>OS</kbd> en position de repos.
+
+### Utilisation avec un pilote dédié
+
+Pour les postes où l’utilisation de kanata n’est pas possible, des pilotes sont
+proposés :
 
 - Windows : [ergol_kbd_angle_mod.exe][]
 - Linux :
@@ -179,9 +192,6 @@ pilotes pour :
     Linux](#linux-ergol.xkb_symbols) avec [ergol_angle_mod.xkb_symbols][]
 - macOS : [ergol_angle_mod.keylayout][]
 - pilotes nomades : [ergol_nomade_angle_mod.zip][]
-
-Il est aussi possible d’appliquer cet angle mod et bien d’autres
-fonctionnalités via [kanata][] et la configuration [Arsenik][].
 
 
 Résolution de problèmes
