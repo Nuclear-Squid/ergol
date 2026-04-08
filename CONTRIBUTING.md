@@ -21,9 +21,9 @@ La contribution s’articule essentiellement autour de deux types de tickets Git
 ### Proposer des [pull requests] (PR)
 
 - Beaucoup de corrections peuvent être proposées directement depuis l’interface web de GitHub.
-- Faites des commits incrémentaux, mieux vaut trop que pas assez.
+- Si votre PR est simple, empilez des commits incrémentaux (ils seront squashés avant le merge). Mieux vaut trop que pas assez.
 - Si votre PR devient complexe, squashez vos commits par unités logiques [et décrivez-les][conventional commits] *avant* de solliciter une revue — ou mieux, scindez-la en plusieurs PR.
-- Une fois que la revue de code a commencé, ne faites plus aucun *rebase* ni *force-push*.
+- Une fois que la revue de code a commencé, ne faites plus aucun *rebase* ni *force-push* : uniquement des commits incrémentaux.
 - Suivez les demandes de la personne qui fait la revue de code.
 
 ### Garder les discussions aussi claires que possible
