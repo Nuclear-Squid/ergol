@@ -180,7 +180,7 @@ permettant d’effacer du texte sans quitter la position dactylo.
 ### Utilisation avec Kanata
 
 La façon recommandée de profiter de l’angle-mod consiste à utiliser [kanata][]
-et la configuration [Arsenik][]. Outre l’angle-med, cela donne accès à d’autres
+et la configuration [Arsenik][]. Outre l’angle-mod, cela donne accès à d’autres
 fonctionnalités avancées qui peuvent s’activer à la carte :
 
 - <kbd>Entrée</kbd> et <kbd>Backspace</kbd> sous les pouces
