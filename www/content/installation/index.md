@@ -192,14 +192,14 @@ fonctionnalités avancées qui peuvent s’activer à la carte :
 Pour les postes où l’utilisation de kanata n’est pas possible, des pilotes sont
 proposés :
 
-- Windows : [ergol_kbd_angle_mod.exe][]
+- Windows : [ergol_angle_mod_kbd.exe][]
 - Linux :
   - Si présente de base dans l’OS, utiliser la « variante ISO » ou
     « <i lang="en">ISO variant</i> ».
   - Sinon suivre les instructions de la [section d’installation
     Linux](#linux-ergol.xkb_symbols) avec [ergol_angle_mod.xkb_symbols][]
 - macOS : [ergol_angle_mod.keylayout][]
-- pilotes nomades : [ergol_nomade_angle_mod.zip][]
+- pilotes nomades : [ergol_angle_mod_nomade.zip][]
 
 
 Résolution de problèmes
@@ -217,12 +217,12 @@ Licence
 
 [fichier source]:              /keymaps/fr/ergol.toml
 [cavalier.pdf]:                cavalier.pdf
-[ergol_nomade.zip]:            https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_nomade.zip
+[ergol_nomade.zip]:            https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_nomade.zip
 [ergol_kbd.exe]:               https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_kbd.exe
-[ergol.keylayout]:             https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.keylayout
-[ergol.xkb_symbols]:           https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols
-[ergol_nomade_angle_mod.zip]:  https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_nomade_angle_mod.zip
-[ergol_kbd_angle_mod.exe]:     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_kbd_angle_mod.exe
+[ergol.keylayout]:             https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol.keylayout
+[ergol.xkb_symbols]:           https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol.xkb_symbols
+[ergol_angle_mod_nomade.zip]:  https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod_nomade.zip
+[ergol_angle_mod_kbd.exe]:     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod_kbd.exe
 [ergol_angle_mod.xkb_symbols]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod.xkb_symbols
 [ergol_angle_mod.keylayout]:   https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod.keylayout
 [XKalamine]:                   https://github.com/OneDeadKey/kalamine#xkalamine
