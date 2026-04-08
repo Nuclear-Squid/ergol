@@ -266,7 +266,7 @@ blockquote + hr {
 #banner {
   min-height: 50px;
   box-sizing: border-box;
-  background: left var(--main-padding) center no-repeat url(../favicon.svg);
+  background: left var(--main-padding) center no-repeat url(../favicon_light_dark.svg);
   background-size: 50px;
   background-color: var(--bg-banner);
   padding: .5em 0 0.5em calc(var(--main-padding) + 64px);
