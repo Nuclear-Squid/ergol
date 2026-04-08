@@ -45,6 +45,7 @@ Triage, étiquetage, détection des doublons…
 
 - Adaptez vos exigences à l’enjeu de la PR : les tickets simples sont l’occasion de mentorer des personnes moins expérimentées.
 - Si vous validez une PR simple :
+  - résolvez vous-même les éventuels conflits de merge ;
   - squashez tous les commits (bouton « squash & merge ») ;
   - rédigez vous-même le [message de commit][conventional commits] si besoin est.
 - Si vous validez une PR complexe :
