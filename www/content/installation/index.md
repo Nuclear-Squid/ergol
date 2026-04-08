@@ -48,19 +48,11 @@ systèmes.)
 Exécuter l’installeur et relancer la session. La disposition de clavier
 apparait dans la barre de langues (indicateur de la barre des tâches).
 
-### Windows – méthode alternative avec pilote signé : [ergol_msklc.zip][]
-
-MSKLC (Microsoft Keyboard Layout Creator) permet d’avoir des pilotes mieux
-reconnus car signé par Microsoft, mais pour lequel, après installation, il
-faudra ajouter manuellement la disposition clavier dans la liste des
-dispositions disponibles.
-
-Après téléchargement, dézipper l’archive au complet et exécuter `setup.exe`.
-Suivre les instructions d’installation, puis fermer et relancer la session
-utilisateur.
-
 <details>
 <summary>Ajouter la disposition installée dans la liste (Windows 10)</summary>
+
+Note : il n’est normalement pas nécessaire de faire ces étapes avec le pilote
+installé ci-dessus.
 
 1. Dans le menu Démarrer, rechercher « Modifier les paramètres de langue et de
    clavier »
@@ -104,10 +96,10 @@ utilisateur.
 
 ### macOS : [ergol.keylayout][]
 
-Enregistrer dans `/Library/Keyboard Layouts` et relancer la session.  La
-disposition de clavier est disponible dans les préférences sous « Clavier »,
-« Méthodes de saisie », `+` (ajouter une nouvelle disposition), et enfin «
-Autres ».
+Télécharger et enregistrer le fichier keylayout en lien ci-dessus dans
+`/Library/Keyboard Layouts` et relancer la session. La disposition de clavier
+est disponible dans les préférences système sous « Clavier », « Méthodes de
+saisie », `+` (ajouter une nouvelle disposition), et enfin « Autres ».
 
 On peut aussi l’enregistrer dans `~/Library/Keyboard Layouts`
 (pour le seul utilisateur courant), mais la disposition ne sera pas
@@ -122,8 +114,13 @@ de symboles.
 
 Ergo‑L est déjà inclus dans toutes les distributions Linux dotées de `xkeyboard-config`
 en [version 2.42 ou ultérieure](https://repology.org/project/xkeyboard-config/versions),
-ce qui inclut notamment Arch, Debian 13, Fedora 41, Gentoo, Manjaro, OpenMandriva 6.0, OpenSUSE Tumbleweed, Slackware
-Current, Ubuntu 24.04.
+ce qui inclut notamment Arch, Debian 13, Fedora 41, Gentoo, Manjaro, OpenMandriva 6.0,
+OpenSUSE Tumbleweed, Slackware Current, Ubuntu 24.04.
+
+:::{.highlight}
+⚠️ Ne choisissez la variante ISO qu’après avoir pris connaissance de ce que ça
+implique dans la [section « angle mod »](#variante-en-a-angle-mod).
+:::
 
 <details>
 <summary>Installation pour d’autres distributions</summary>
@@ -136,9 +133,11 @@ https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_
 ```
 
 La disposition de clavier ainsi installée est disponible dans le gestionnaire de
-préférences du bureau sous un nom générique (« custom layout », « disposition
-personnalisée », etc.). Sous XOrg on peut aussi l’activer directement en ligne
-de commande :
+préférences du bureau sous un nom générique (« A user-defined custom Layout »,
+« Une disposition définie par l'utilisateur », etc.).
+
+Si votre environnement de bureau utilise encore XOrg (X11) et pas Wayland,
+Ergo‑L peut aussi être activé directement en ligne de commande :
 
 ```bash
 setxkbmap custom
@@ -156,11 +155,51 @@ Une aide pour apprendre la dispo. À imprimer, plier et placer sur son bureau 
 Variante en A (« <i lang="en">angle mod</i> »)
 --------------------------------------------------------------------------------
 
+### Principe
+
+L’[angle mod][] est une permutation de touches sur les claviers **ISO
+uniquement** (clavier ayant la touche [<]{.kbd} en bas à gauche sur Azerty).
+
+L’assignation doigt/touche reste la même : 
+
+- [Z]{.kbd} se fait toujours avec l’auriculaire gauche,
+- [X]{.kbd} avec l’annulaire,
+- [-]{.kbd} avec le majeur
+- et [V]{.kbd} et [B]{.kbd} avec l’index.
+
+L’idée est uniquement de gagner en confort : le poignet gauche s’aligne avec le
+mouvement des doigts, il forme un A avec le poignet droit, et les touches de la
+rangée du bas s’atteignent en repliant les doigts, comme on le fait déjà avec
+la main droite.
+
 ![](angle_mod.svg)
 
-Des pilotes incluant l’[angle mod][] seront proposés. Il est d’ores et déjà
-possible d’appliquer cet angle mod et bien d’autres fonctionnalités via
-[kanata][] et la configuration [Arsenik][].
+Cela permet aussi d’avoir une touche [Backspace]{.kbd} au centre du clavier,
+permettant d’effacer du texte sans quitter la position dactylo.
+
+### Utilisation avec Kanata
+
+La façon recommandée de profiter de l’angle-mod consiste à utiliser [kanata][]
+et la configuration [Arsenik][]. Outre l’angle-med, cela donne accès à d’autres
+fonctionnalités avancées qui peuvent s’activer à la carte :
+
+- <kbd>Entrée</kbd> et <kbd>Backspace</kbd> sous les pouces
+- <i lang="en">homerow-mods</i> : <kbd>Shift</kbd> sous le pouce gauche,
+  <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>OS</kbd> en position de repos.
+
+### Utilisation avec un pilote dédié
+
+Pour les postes où l’utilisation de kanata n’est pas possible, des pilotes sont
+proposés :
+
+- Windows : [ergol_angle_mod_kbd.exe][]
+- Linux :
+  - Si présente de base dans l’OS, utiliser la « variante ISO » ou
+    « <i lang="en">ISO variant</i> ».
+  - Sinon suivre les instructions de la [section d’installation
+    Linux](#linux-ergol.xkb_symbols) avec [ergol_angle_mod.xkb_symbols][]
+- macOS : [ergol_angle_mod.keylayout][]
+- pilotes nomades : [ergol_angle_mod_nomade.zip][]
 
 
 Résolution de problèmes
@@ -176,19 +215,23 @@ Licence
 [WTFPL](http://wtfpl.net/) – Do What the Fuck You Want to Public License.
 
 
-[fichier source]:    /keymaps/fr/ergol.toml
-[cavalier.pdf]:      cavalier.pdf
-[ergol_nomade.zip]:  https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_nomade.zip
-[ergol_kbd.exe]:     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_kbd.exe
-[ergol_msklc.zip]:   https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol_msklc.zip
-[ergol.keylayout]:   https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.keylayout
-[ergol.xkb_symbols]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.0/ergol.xkb_symbols
-[XKalamine]:         https://github.com/OneDeadKey/kalamine#xkalamine
-[Karabiner]:         https://karabiner-elements.pqrs.org
+[fichier source]:              /keymaps/fr/ergol.toml
+[cavalier.pdf]:                cavalier.pdf
+[ergol_nomade.zip]:            https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_nomade.zip
+[ergol_kbd.exe]:               https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_kbd.exe
+[ergol.keylayout]:             https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol.keylayout
+[ergol.xkb_symbols]:           https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol.xkb_symbols
+[ergol_angle_mod_nomade.zip]:  https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod_nomade.zip
+[ergol_angle_mod_kbd.exe]:     https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod_kbd.exe
+[ergol_angle_mod.xkb_symbols]: https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod.xkb_symbols
+[ergol_angle_mod.keylayout]:   https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.1/ergol_angle_mod.keylayout
+[XKalamine]:                   https://github.com/OneDeadKey/kalamine#xkalamine
+[Karabiner]:                   https://karabiner-elements.pqrs.org
+[émulation ZMK]:               https://github.com/Nuclear-Squid/zmk-keyboard-quacken/pull/54
 
-[Arsenik]:           /claviers/arsenik/
-[Ækeynox]:           https://github.com/OneDeadKey/zmk-config-aekeynox
-[Quacken ZMK]:       https://github.com/Nuclear-Squid/zmk-keyboard-quacken
-[kanata]:            https://github.com/jtroo/kanata
-[angle mod]:         https://colemakmods.github.io/ergonomic-mods/angle.html
-[FAQ]:               /ressources/faq
+[Arsenik]:                     /claviers/arsenik/
+[kanata]:                      https://github.com/jtroo/kanata
+[Ækeynox]:                     https://github.com/OneDeadKey/zmk-config-aekeynox
+[Quacken ZMK]:                 https://github.com/Nuclear-Squid/zmk-keyboard-quacken
+[angle mod]:                   https://colemakmods.github.io/ergonomic-mods/angle.html
+[FAQ]:                         /ressources/faq
