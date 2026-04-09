@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-128 -128 256 256">
+  <!--
+    - This SVG icon is designed to be easy to edit as text:
+    - it should work fine in any web browser, both in dark and light mode,
+    - but it will raise issues with some SVG tools (editors, converters...).
+    - If you just need the final image, use 'favicon.svg' instead:
+    - it's the same image, without CSS variables and <defs> elements.
+    -->
 
   <style>
     :root {
