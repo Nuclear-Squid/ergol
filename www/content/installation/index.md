@@ -160,7 +160,7 @@ Variante en A (« <i lang="en">angle mod</i> »)
 L’[angle mod][] est une permutation de touches sur les claviers **ISO
 uniquement** (clavier ayant la touche [<]{.kbd} en bas à gauche sur Azerty).
 
-L’assignation doigt/touche reste la même : 
+L’assignation doigt/touche reste la même :
 
 - [Z]{.kbd} se fait toujours avec l’auriculaire gauche,
 - [X]{.kbd} avec l’annulaire,
@@ -192,14 +192,14 @@ fonctionnalités avancées qui peuvent s’activer à la carte :
 Pour les postes où l’utilisation de kanata n’est pas possible, des pilotes sont
 proposés :
 
-- Windows : [ergol_angle_mod_kbd.exe][]
-- Linux :
-  - Si présente de base dans l’OS, utiliser la « variante ISO » ou
-    « <i lang="en">ISO variant</i> ».
-  - Sinon suivre les instructions de la [section d’installation
-    Linux](#linux-ergol.xkb_symbols) avec [ergol_angle_mod.xkb_symbols][]
-- macOS : [ergol_angle_mod.keylayout][]
 - pilotes nomades : [ergol_angle_mod_nomade.zip][]
+- Windows : [ergol_angle_mod_kbd.exe][]
+- macOS : [ergol_angle_mod.keylayout][]
+- Linux :
+  - si présente de base dans l’OS, utiliser la « variante ISO » ou
+    « <i lang="en">ISO variant</i> » ;
+  - sinon suivre les instructions de la [section d’installation
+    Linux](#linux-ergol.xkb_symbols) avec [ergol_angle_mod.xkb_symbols][].
 
 
 Résolution de problèmes
