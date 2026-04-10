@@ -48,6 +48,8 @@ systèmes.)
 Exécuter l’installeur et relancer la session. La disposition de clavier
 apparait dans la barre de langues (indicateur de la barre des tâches).
 
+L’installeur support Windows 32 et 64-bit Intel, ainsi que 64-bit ARM.
+
 <details>
 <summary>Ajouter la disposition installée dans la liste (Windows 10)</summary>
 
