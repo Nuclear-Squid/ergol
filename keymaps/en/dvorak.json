@@ -1,5 +1,5 @@
 {
-  "name": "dvorak-us",
+  "name": "dvorak",
   "description": "American Dvorak layout",
   "geometry": "ansi",
   "keymap": {

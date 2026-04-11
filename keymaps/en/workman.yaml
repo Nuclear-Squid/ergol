@@ -1,6 +1,8 @@
-name: workman-us
+name: workman
+variant: workman
 description: American Workman layout
 geometry: ANSI
+locale: en
 
 base: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓

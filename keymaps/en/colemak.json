@@ -1,5 +1,5 @@
 {
-  "name": "colemak-us",
+  "name": "colemak",
   "description": "American Colemak layout",
   "geometry": "ansi",
   "keymap": {

@@ -1,7 +1,9 @@
 name: ISRT
+variant: ISRT
 description: ISRT layout
 url: https://notgate.github.io/layout/
 geometry: ANSI
+locale: en
 
 base: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓

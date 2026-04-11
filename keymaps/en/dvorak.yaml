@@ -1,6 +1,8 @@
-name: dvorak-us
+name: dvorak
+variant: dvorak
 description: American Dvorak layout
 geometry: ANSI
+locale: en
 
 base: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
