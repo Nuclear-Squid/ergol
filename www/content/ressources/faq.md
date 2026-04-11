@@ -88,6 +88,11 @@ XMODIFIERS=@im=ibus
 > [« »]{.kbd} dans certains logiciels (_e.g._ Firefox) dans certaines
 > configurations (cf. paragraphe suivant).
 
+#### Pourquoi [★]{.odk}+[Espace]{.kbd} et [Shift]{.kbd}+[Espace]{.kbd} ne font pas l’apostrophe typographique et l’espace insécable fine ?
+
+Il est probable qu’un raccourci clavier avec [Espace]{.kbd} intercepte à tort
+ces combinaisons de touches (par exemple un raccourci pour changer de
+disposition clavier).
 
 #### Pourquoi les guillemets français [« »]{.kbd} ne fonctionnent pas dans certaines applications ?
 
