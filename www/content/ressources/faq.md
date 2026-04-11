@@ -92,7 +92,8 @@ XMODIFIERS=@im=ibus
 
 Il est probable qu’un raccourci clavier avec [Espace]{.kbd} intercepte à tort
 ces combinaisons de touches (par exemple un raccourci pour changer de
-disposition clavier).
+disposition clavier). Pour y remédier, il faut soit désactiver le raccourci, 
+soit changer la combination de touches en évitant [Espace]{.kbd}.
 
 #### Pourquoi les guillemets français [« »]{.kbd} ne fonctionnent pas dans certaines applications ?
 
