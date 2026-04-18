@@ -1,7 +1,9 @@
 name: bépo
+variant: bepo
 description: French Dvorak-style layout
 url: https://bepo.fr/
 geometry: ISO
+locale: fr
 
 full: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓

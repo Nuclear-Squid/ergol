@@ -1,6 +1,8 @@
-name: colemak-us
+name: colemak
+variant: colemak
 description: American Colemak layout
 geometry: ANSI
+locale: en
 
 base: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓

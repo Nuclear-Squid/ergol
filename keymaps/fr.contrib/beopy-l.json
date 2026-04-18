@@ -1,6 +1,6 @@
 {
   "name": "Béopy 1DFH",
-  "description": "Béopy adapté avec la philosophie ergo‑l",
+  "description": "Béopy adapté avec la philosophie Ergo‑L",
   "geometry": "ergo",
   "keymap": {
     "Digit1": [ "1", "€", "₁", "¹" ],

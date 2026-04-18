@@ -1,6 +1,8 @@
-name: qwerty-us-intl
+name: qwerty-intl
+variant: qwerty
 description: American QWERTY layout, international variant
 geometry: ANSI
+locale: en
 
 base: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓

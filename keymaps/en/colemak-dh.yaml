@@ -1,6 +1,8 @@
 name: colemak-dh
+variant: colemak-dh
 description: American Colemak layout (DH variant)
 geometry: ANSI
+locale: en
 
 base: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓

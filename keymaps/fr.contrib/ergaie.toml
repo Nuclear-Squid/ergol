@@ -6,7 +6,7 @@ description = "French (Ergaie)"
 author      = "MacDamien"
 url         = "https://github.com/MacDamien/Ergaie"
 geometry    = "ERGO"
-version     = "0.1.9.8"
+version     = "0.1.9"
 
 base = '''
 ╭╌╌╌╌╌┰─────┬─────┬─────┬─────┬─────┰─────┬─────┬─────┬─────┬─────┰╌╌╌╌╌┬╌╌╌╌╌╮

@@ -1,6 +1,8 @@
 name: MTGAP
+variant: MTGAP
 description: MTGAP layout
 geometry: ANSI
+locale: en
 
 base: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓

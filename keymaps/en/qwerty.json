@@ -1,5 +1,5 @@
 {
-  "name": "qwerty-us-intl",
+  "name": "qwerty-intl",
   "description": "American QWERTY layout, international variant",
   "geometry": "ansi",
   "keymap": {
