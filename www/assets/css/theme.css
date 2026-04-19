@@ -219,7 +219,7 @@ figure img {
   max-width: 100%;
 }
 
-img {
+img, stats-canvas {
   max-width: 100%;
 }
 
