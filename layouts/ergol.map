@@ -11,7 +11,7 @@ shiftr              keycode 16 = +Q
 altgr               keycode 16 = asciicircum     # ^
 shiftl altgr        keycode 16 = dead_circumflex # ^
 shiftr altgr        keycode 16 = dead_circumflex # ^
-ctrll               keycode 16 = acircumflex     # à
+ctrll               keycode 16 = acircumflex     # â
 shiftl ctrll        keycode 16 = Acircumflex     # Â
 shiftr ctrll        keycode 16 = Acircumflex     # Â
 
