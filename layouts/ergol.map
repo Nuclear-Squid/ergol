@@ -348,7 +348,8 @@ shiftr              keycode 12 = underscore
 shiftl              keycode 13 = plus
 shiftr              keycode 13 = plus
 
-
+# 1dk + space → right single quotation mark                                                 
+ctrll               keycode 57 = U+2019     # ’
 
 
 ### Source: fr-bepo-latin9.map (nécessaire ?)
