@@ -247,7 +247,7 @@ shiftr altgr        keycode 51 = dead_cedilla
 
                     keycode 52 = comma
 shiftl              keycode 52 = semicolon
-shiftl              keycode 52 = semicolon
+shiftr              keycode 52 = semicolon
 altgr               keycode 52 = colon
 ctrll               keycode 52 = U+00B7     # ·
 
