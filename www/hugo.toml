@@ -29,8 +29,8 @@ author = "authors"
         source = "../corpus"
         target = "static/corpus"
     [[module.mounts]]
-        source = "../layouts"
-        target = "static/layouts"
+        source = "../keymaps"
+        target = "static/keymaps"
     [[module.mounts]]
         source = "static"
         target = "static"
@@ -69,6 +69,11 @@ author = "authors"
         parent  = "Alternatives"
         weight  = 3
     [[menus.main]]
+        name    = "Hypergol ?!"
+        pageRef = "/alternatives/hypergol"
+        parent  = "Alternatives"
+        weight  = 4
+    [[menus.main]]
         name    = "Claviers"
         pageRef = "/claviers"
         weight  = 3
@@ -91,9 +96,17 @@ author = "authors"
         pageRef = "/stats"
         weight  = 4
     [[menus.main]]
-        name    = "Glossaire"
-        pageRef = "/glossaire"
+        name    = "FAQ / Ressources"
+        pageRef = "/ressources"
         weight  = 5
+    [[menus.main]]
+        name    = "FAQ"
+        pageRef = "/ressources/faq"
+        parent  = "FAQ / Ressources"
+    [[menus.main]]
+        name    = "Glossaire"
+        pageRef = "/ressources/glossaire"
+        parent  = "FAQ / Ressources"
     [[menus.main]]
         name    = "Apprendre"
         pageRef = "/dactylo"

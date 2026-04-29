@@ -8,9 +8,13 @@
 
   {{ range first 10 (where site.RegularPages "Section" "articles") }}
     <article>
+    {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
       <header>
         <h3>{{ .LinkTitle }}</h3>
-        <time><a href="{{ .RelPermalink }}">{{ time.Format ":date_medium" .Date }}</a></time>
+        <p class="author">
+          par <a href="{{ $author.url }}">{{ $author.name }}</a> –
+          <time>{{ time.Format "2006-01-02" .Date }}</time>
+        </p>
       </header>
       {{ .Summary }}
       <nav class="more"><a href="{{ .RelPermalink }}">Lire la suite…</a></nav>

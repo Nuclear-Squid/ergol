@@ -1,0 +1,46 @@
+{{- with resources.Get "css/comments.css" }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- with resources.Get "js/purify.min.js" }}
+  {{- if eq hugo.Environment "development" }}
+    <script src="{{ relURL .RelPermalink }}" type="text/javascript"></script>
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <script src="{{ relURL .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous" type="text/javascript"></script>
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+<section id="comments" class="article-content">
+  <h2>Commentaires</h2>
+  <p>Avec un compte sur le Fediverse ou Mastodon, vous pouvez répondre à ce <a
+      href="https://{{ .host }}/@{{ .username }}/{{ .id }}">post</a>. Mastodon étant décentralisé, vous pouvez utiliser
+    votre compte existant hébergé sur un autre serveur Mastodon ou une plateforme compatible si vous n'avez pas de
+    compte sur celui-ci.</p>
+
+  <p id="mastodon-comments-list"><button id="load-comment">Charger les commentaires</button></p>
+  <div id="comments-wrapper">
+    <noscript>
+      <p>Charger les commentaires nécessite JavaScript. Essayez d'activer Javascript et rechargez la page, ou visitez <a
+          href="https://{{ .host }}/@{{ .username }}/{{ .id }}">le post original</a> sur Mastodon.</p>
+    </noscript>
+  </div>
+
+  {{- with resources.Get "js/comments.js" | js.Build (dict "params" (dict "host" .host "id" .id))  }}
+    {{- if eq hugo.Environment "development" }}
+      <script src="{{ relURL .RelPermalink }}" type="text/javascript"></script>
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <script src="{{ relURL .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous" type="text/javascript"></script>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+
+</section>

@@ -23,23 +23,25 @@ const MIN_PRECISION  = 98;  // percentage of correct keys
 const MIN_CPM_SPEED  = 100; // characters per minute
 const MIN_WIN_STREAK = 5;
 
-const STARTING_LEVEL = 4;   // number of keys to begin with
-const MIN_WORD_COUNT = 42;  // nim number or words/ngrams we want for a lesson
+const STARTING_LEVEL = 4;      // number of keys to begin with
+const MIN_WORD_COUNT = 42;     // nim number or words/ngrams we want for a lesson
+const INCLUDE_NEW_LETTERS = 2; // at least of the n last letters should be included in each word
+
 const ALL_30_KEYS = [
   'KeyF', 'KeyJ',
   'KeyD', 'KeyK',
   'KeyS', 'KeyL',
   'KeyA', 'Semicolon',
+  'KeyV', 'KeyM',
   'KeyE', 'KeyI',
   'KeyW', 'KeyO',
-  'KeyV', 'KeyM',
-  'KeyG', 'KeyH',
-  'KeyQ', 'KeyP',
   'KeyR', 'KeyU',
-  'KeyT', 'KeyY',
-  'KeyB', 'KeyN',
+  'KeyG', 'KeyH',
   'KeyC', 'Comma',
   'KeyX', 'Period',
+  'KeyT', 'KeyY',
+  'KeyB', 'KeyN',
+  'KeyQ', 'KeyP',
   'KeyZ', 'Slash',
 ];
 
@@ -50,6 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const gGeometry = document.querySelector('#geometry');
   const gLayout   = document.querySelector('#layout');
   const gDict     = document.querySelector('#dict');
+  const gEmulate  = document.querySelector('#emulate');
 
   const gKeyList  = document.querySelector('.key_list');
   const gStatus   = document.querySelector('.status');
@@ -94,10 +97,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // fetch a kalamine keyboard layout
   const fetchLayout = () => {
-    return fetch(`../layouts/${gLayout.value}.json`)
+    const selected = gLayout.querySelector(`option[value="${gLayout.value}"`);
+    return fetch(`../keymaps/${selected.dataset.folder}/${gLayout.value}.json`)
       .then(response => response.json())
       .then(layout => {
-        gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, gGeometry.value);
+        if (gGeometry.value === 'none') {
+          // Initialize x-keyboard to default layout but hide it
+          gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, 'iso');
+          gKeyboard.style.display = 'none';
+        } else {
+          gKeyboard.setKeyboardLayout(layout.keymap, layout.deadkeys, gGeometry.value);
+        }
         gKeyboard.theme = 'hints';
         gKeyLayout = layout;
       });
@@ -117,9 +127,11 @@ window.addEventListener('DOMContentLoaded', () => {
         .filter(letter => letter in odk)
         .map(letter => odk[letter]);
 
-    const lessonLetters = rawLetters.concat(deadkeyLetters);
-    const lessonFilter = word =>
-      Array.from(word).every(letter => lessonLetters.indexOf(letter) >= 0);
+    const lessonLetters = rawLetters.concat(deadkeyLetters).join('');
+    const newLettersCount = gLessonLevel == STARTING_LEVEL ? STARTING_LEVEL : INCLUDE_NEW_LETTERS;
+    const newLetters = rawLetters.slice(-newLettersCount).join('');
+    const lessonRe = new RegExp(`^[${lessonLetters}]*[${newLetters}][${lessonLetters}]*$`.replace(/-/g, '\\-'));
+    const lessonFilter = word => lessonRe.test(word);
 
     gLessonWords = [];
     for (const dict of [
@@ -213,7 +225,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const words = gLesson.querySelectorAll('.space').length + 1;
     const chars = gLesson.children.length;
     const cpm = Math.round(chars / elapsed);
-    const wpm = Math.round(words / elapsed);
+    const wpm = Math.round(cpm / 5);
     const prc = 100 - Math.round(1000 * errors / chars) / 10;
     gStatus.innerHTML = `${wpm} wpm, ${cpm} cpm <progress value="${cpm}" max="${MIN_CPM_SPEED}">${cpm}</progress>, ${prc} % <progress value="${prc}" max="${MIN_PRECISION}">${prc}%</progress>`;
 
@@ -262,10 +274,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const geometry = localStorage.getItem('geometry');
     const level    = localStorage.getItem(`${gLayout.value}.level`);
     const quacks   = localStorage.getItem(`${gLayout.value}.quacks`);
+    const emulate  = localStorage.getItem('emulate');
 
     if (layout)   gLayout.value   = layout;
     if (dict)     gDict.value     = dict;
     if (geometry) gGeometry.value = geometry;
+    if (emulate)  gEmulate.value  = emulate;
     gLessonLevel = level  ? Number(level)  : STARTING_LEVEL;
     gQuackCount  = quacks ? Number(quacks) : 1;
 
@@ -287,7 +301,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   gGeometry.addEventListener('change', event => {
     localStorage.setItem('geometry', gGeometry.value);
-    gKeyboard.geometry = gGeometry.value;
+    if (gGeometry.value === 'none') {
+      gKeyboard.style.display = 'none';
+    } else {
+      gKeyboard.style.display = 'block';
+      gKeyboard.geometry = gGeometry.value;
+    }
   });
 
   gKeyList.addEventListener('click', event => {
@@ -295,6 +314,10 @@ window.addEventListener('DOMContentLoaded', () => {
       gLessonLevel = event.target.dataset.level;
       setLessonLevel();
     }
+  });
+
+  gEmulate.addEventListener('change', event => {
+    localStorage.setItem('emulate', gEmulate.value);
   });
 
   loadLayout();
@@ -308,8 +331,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // highlight keyboard keys and emulate the selected layout
   gInput.onkeydown = event => {
-    pressedKeys[event.code] = true;
-    const value = gKeyboard.keyDown(event);
+    let value = undefined;
+    if (gEmulate.value === 'emulated') {
+      pressedKeys[event.code] = true;
+      value = gKeyboard.keyDown(event);
+    } else if (event.key.length === 1 && event.key !== '\x00') {
+      // The pressed key corresponds to a letter or symbol
+      // (the dead key makes '\x00' on Chrome)
+      value = event.key;
+    }
 
     if (value) {
       goNextChar(value);
@@ -320,6 +350,9 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   gInput.addEventListener('keyup', event => {
+    if (gEmulate.value === 'native') {
+      return;
+    }
     if (pressedKeys[event.code]) { // expected behavior
       gKeyboard.keyUp(event);
       delete pressedKeys[event.code];

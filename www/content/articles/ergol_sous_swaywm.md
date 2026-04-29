@@ -16,7 +16,7 @@ Cet article vous guide étape par étape pour configurer Ergo-L sur votre systè
 ## Prérequis
 
 Afin de pouvoir configurer Ergo-L avec SwayWM, le pilote doit être installé sur votre machine.
-Veuillez vous référer à la partie [Installation][1] du site pour cela. 
+Veuillez vous référer à la partie [Installation][1] du site pour cela.
 
 ## Trouver vos fichiers de configuration
 

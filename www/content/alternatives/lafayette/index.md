@@ -51,7 +51,7 @@ Colemak French Touch
 
 {{<x-keyboard name="Colemak French Touch"
               data="colemak-french-touch" class="odk"
-              href="https://github.com/cedricr/colemak-french-touch">}}
+              href="https://codeberg.org/cedricr/colemak-french-touch">}}
 
 Inspiré de QWERTY-[Lafayette][], Colemak French Touch applique le même principe
 d’adaptation au français grâce à une [touche morte][2]. On obtient ainsi très
@@ -98,7 +98,7 @@ La disposition est _plus confortable_ que Bépo en français, et _meilleure_ que
 Bépo pour l’anglais et la programmation avec sa [couche [AltGr]{.kbd}][3]
 commune à Ergo-L.
 
-C’est un bon moyen, pour un bépoète, de tester l’approche 1DFH avec un temps
+C’est un bon moyen, pour un ou une bépoète, de tester l’approche 1DFH avec un temps
 d’apprentissage record.
 
 

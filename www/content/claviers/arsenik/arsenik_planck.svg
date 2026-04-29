@@ -127,7 +127,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">S</text>
-        <text x="12.8" y="43.4" class="layerMod">⌘</text>
+        <text x="12.8" y="43.4" class="layerMod">⌥</text>
         <text x="38.0" y="20.6" class="layerSym">(</text>
         <text x="38.0" y="43.4" class="layerNav">←</text>
       </g>
@@ -135,7 +135,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">E</text>
-        <text x="12.8" y="43.4" class="layerMod">⌥</text>
+        <text x="12.8" y="43.4" class="layerMod">⌘</text>
         <text x="38.0" y="20.6" class="layerSym">)</text>
         <text x="38.0" y="43.4" class="layerNav">↓</text>
       </g>
@@ -173,7 +173,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">T</text>
-        <text x="12.8" y="43.4" class="layerMod">⌥</text>
+        <text x="12.8" y="43.4" class="layerMod">⌘</text>
         <text x="38.0" y="20.6" class="layerSym">-</text>
         <text x="38.0" y="43.4" class="layerNav">5</text>
       </g>
@@ -181,7 +181,7 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="26" height="26" rx="2" ry="2" class="dualKey"/>
         <text x="12.8" y="20.6" class="level2">I</text>
-        <text x="12.8" y="43.4" class="layerMod">⌘</text>
+        <text x="12.8" y="43.4" class="layerMod">⌥</text>
         <text x="38.0" y="20.6" class="layerSym">/</text>
         <text x="38.0" y="43.4" class="layerNav">6</text>
       </g>

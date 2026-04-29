@@ -1,0 +1,81 @@
+###
+# An ergonomic QWERTY variant for French:
+#   - all accented chars can be made with the dead key and the 3×10 main keys;
+#   - all programming symbols can be made with AltGr and the 3×10 main keys;
+#   - on a full-size ISO keyboard, AltGr is handy but not required;
+#   - suitable for all compact keyboards (40%, 42 keys, 34 keys…).
+##
+
+name = "Qwerty-Lafayette"
+name8 = "Qwerty-L"
+locale = "fr"
+variant = "lafayette"
+author = "Fabien Cazenave (:kazé)"
+description = "French (Qwerty-Lafayette)"
+url = "https://github.com/fabi1cazenave/qwerty-lafayette"
+geometry = "ERGO"
+version = "0.9.0"
+
+# To follow the 1DFH principle, all diacritics require a single dead key (1dk):
+#   - 1dk + vowel         = grave accent / alt   (à, è, ù, ç, ï, œ, æ, ñ, ß)
+#   - 1dk + key left      = acute accent         (é)
+#   - 1dk + key below     = circumflex accent    (â, ê, ŷ, û, î, ô)
+#   - 1dk + 1dk + vowel   = diaeresis            (ä, ë, ÿ, ü, ï, ö)
+# Other common typographic symbols have been added as well:
+#   - 1dk + number        = symbol or quote sign („, “, ”)
+#   - 1dk + left index    = dash / underscore    (-, _, —, –)
+
+base = '''
+╭╌╌╌╌╌┰─────┬─────┬─────┬─────┬─────┰─────┬─────┬─────┬─────┬─────┰╌╌╌╌╌┬╌╌╌╌╌╮
+┆ ~   ┃ ! „ │ @ “ │ # ” │ $ ¢ │ % ‰ ┃ ^   │ &   │ *   │ (   │ )   ┃ _   ┆ + ± ┆
+┆ `   ┃ 1 ¡ │ 2 « │ 3 » │ 4 £ │ 5 € ┃ 6 ¥ │ 7 ¤ │ 8 § │ 9 ¶ │ 0 ° ┃ - — ┆ = ≠ ┆
+╰╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+·     ┃ Q   │ W   │ E   │ R   │ T   ┃ Y   │ U   │ I   │ O   │ P   ┃ {   ┆ }   ┆
+·     ┃   æ │   é │   è │     │     ┃     │   ù │   ï │   œ │     ┃ [   ┆ ]   ┆
+·     ┠─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+·     ┃ A   │ S   │ D   │ F ª │ G – ┃ H   │ J   │ K   │ L   │**   ┃ "   ┆ |   ┆
+·     ┃   à │   ß │   ê │   - │   – ┃   ŷ │   û │   î │   ô │  *¨ ┃ '   ┆ \   ┆
+╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
+┆ >   ┃ Z   │ X   │ C   │ V _ │ B — ┃ N   │ M º │ ; • │ :   │ ? ÷ ┃           ·
+┆ <   ┃   â │   × │   ç │   _ │   — ┃   ñ │   µ │ , · │ . … │ / ¿ ┃           ·
+╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚ · · · · · ·
+'''
+
+# The AltGr layer focuses on the 28 programming symbols:
+#   - 10 symbols over the numbers
+#   - 2×8 symbols on the extra pinky keys (base and shift layers)
+#   - 2 symbols on the lower-right key (/?)
+#   -> the 3×10 alpha pad can fit these 28 symbols + ; and :
+# Rationale:
+#   - {()}<> signs on ASDFWE (= most comfortable positions)
+#   - 1st row: most frequent chars from the number row ($%^&* below 45678)
+#              (last-minute change: @^ are swapped to match Ergo‑L 1.0)
+#   - 2nd row: arithmetical signs
+#   - 3rd row: shell / punctuation signs
+# Efficiency:
+#   - no symbols outside of the 3×10 alpha pad
+#   - no symbol that must be doubled is under a pinky
+#   - most digrams seem comfortable to type
+
+altgr = '''
+╭╌╌╌╌╌┰─────┬─────┬─────┬─────┬─────┰─────┬─────┬─────┬─────┬─────┰╌╌╌╌╌┬╌╌╌╌╌╮
+┆     ┃   ¹ │   ² │   ³ │   ⁴ │   ⁵ ┃   ⁶ │   ⁷ │   ⁸ │   ⁹ │   ⁰ ┃     ┆     ┆
+┆     ┃   ₁ │   ₂ │   ₃ │   ₄ │   ₅ ┃   ₆ │   ₇ │   ₈ │   ₉ │   ₀ ┃     ┆     ┆
+╰╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+·     ┃  *^ │   ≤ │   ≥ │  *¤ │   ‰ ┃  *˚ │     │   × │  *´ │  *` ┃     ┆     ┆
+·     ┃   ^ │   < │   > │   $ │   % ┃   @ │   & │   * │   ' │   ` ┃     ┆     ┆
+·     ┠─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┼╌╌╌╌╌┤
+·     ┃  *ˇ │   ⁽ │   ⁾ │  *˙ │   ≠ ┃  */ │   ± │  *¯ │   ÷ │  *” ┃     ┆     ┆
+·     ┃   { │   ( │   ) │   } │   = ┃   \ │   + │   - │   / │   " ┃     ┆     ┆
+╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
+┆     ┃  *~ │  *, │  *˛ │   – │     ┃   ¦ │   ¬ │  *¸ │   : │  *˘ ┃           ·
+┆     ┃   ~ │   [ │   ] │   _ │   # ┃   | │   ! │   ; │   : │   ? ┃           ·
+╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚ · · · · · ·
+'''
+
+[spacebar]
+shift       = "\u202f"  # NARROW NO-BREAK SPACE
+altgr       = "\u0020"  # SPACE
+altgr_shift = "\u00a0"  # NO-BREAK SPACE
+1dk         = "\u2019"  # RIGHT SINGLE QUOTATION MARK
+1dk_shift   = "\u2019"  # RIGHT SINGLE QUOTATION MARK

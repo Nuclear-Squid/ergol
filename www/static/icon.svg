@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-128 -128 256 256">
+  <!--
+    - This SVG icon is designed to be easy to edit as text:
+    - it should work fine in any web browser, both in dark and light mode,
+    - but it will raise issues with some SVG tools (editors, converters...).
+    - If you just need the final image, use 'favicon.svg' instead:
+    - it's the same image, without CSS variables and <defs> elements.
+    -->
+
+  <style>
+    :root {
+      color-scheme: light dark;
+      --rocket: #343048;
+      --border: #edebf0;
+    }
+
+    @media (prefers-color-scheme: dark) { :root {
+      --rocket: #edebf0;
+      --border: #343048;
+    }}
+
+    .star {
+      fill:   var(--border);
+      stroke: none;
+    }
+
+    .rocket, .gas {
+      fill:   var(--rocket);
+      stroke: var(--border);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .rocket {
+      stroke-width: 4px;
+    }
+
+    .gas {
+      stroke-width: 2px;
+    }
+  </style>
+
+  <defs>
+    <path id="oif-segment" stroke="var(--border)" stroke-width="1.25"
+      d="M74.363-55.96a96 96 0 0 0-12.776-22.795 100 100 90 0 0-92.302-16.446
+         100 100 90 0 0-25.833 12.79 96 96 0 0 1 2.34-.951A96 96 0 0 1
+         66.76-21.727a96 96 0 0 1 3.588 44.171 96 96 0 0 0 4.015-78.403z"/>
+
+    <path id="drop"
+      d="M0,0
+          C-10,0  -22,8  -22,20
+          C-22,30  -7,50   0,70
+          C7,50    22,30  22,20
+          C22,8    10,0    0,0z"/>
+  </defs>
+
+  <g transform="scale(1.09)">
+    <use href="#oif-segment" fill="#14b830" transform="rotate(0)"   />
+    <use href="#oif-segment" fill="#9b36e2" transform="rotate(72)"  />
+    <use href="#oif-segment" fill="#e83030" transform="rotate(144)" />
+    <use href="#oif-segment" fill="#0088cc" transform="rotate(216)" />
+    <use href="#oif-segment" fill="#f4c025" transform="rotate(288)" />
+  </g>
+
+  <g transform="rotate(36)">
+    <!-- Rocket -->
+    <path class="rocket"
+      d="M0-141
+       A820,820 0 0 1 72,103
+       A270,270 0 0 0 0,16.5
+       A270,270 0 0 0 -72,103
+       A820,820 0 0 1 0-141"/>
+
+    <!-- Star -->
+    <path transform="translate(0-36) scale(1.5)" class="star"
+      d="M0-16 3.652-4.76h11.817l-9.56 6.944 3.65 11.24L0 6.474l-9.561 6.947
+          3.652-11.24-9.56-6.943h11.817L0-16z"/>
+
+    <use href="#drop" class="gas"  transform="translate(0 40) scale(1.3 1.4)" />
+    <use href="#drop" class="star" transform="translate(0 39) scale(0.8 0.7)" />
+  </g>
+
+</svg>

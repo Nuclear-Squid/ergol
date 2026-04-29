@@ -152,7 +152,7 @@ Certainement le 3×5 le plus simple à prendre en main.
 Pour qui ?
 --------------------------------------------------------------------------------
 
-TL;DR : les [4×6][] conviendront toujours, quel que soit le layout utilisé, à
+TL;DR : les [4×6][] conviendront toujours, quel que soit le _layout_ utilisé, à
 condition d’avoir *au moins* trois touches par pouce.
 
 **Les Ergonautes peuvent utiliser tous ces claviers sans souci** : leur
@@ -170,9 +170,8 @@ placer [Entrée]{.kbd} et [Backspace]{.kbd} sous les index, permettant ainsi de
 laisser les touches [Shift]{.kbd} inchangées sous les auriculaires, et seront plus
 intuitifs.
 
-**En Bépo**, les [4×6][] et [3×6][] sont envisageables. L’effort d’adaptation
-est nettement plus significatif, y compris pour les variantes qui se proclament
-conçues « pour tous les claviers, sans adaptation » :
+**En Bépo** (Béopy, Optimot…), les [4×6][] et [3×6][] sont envisageables.
+L’effort d’adaptation est nettement plus significatif :
 
 - une couche de symboles doit être définie en plus de la couche [AltGr]{.kbd} ;
 - pour déplacer le moins possible les lettres de la 7<sup>e</sup> colonne du

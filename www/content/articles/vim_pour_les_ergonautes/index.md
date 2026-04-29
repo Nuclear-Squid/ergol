@@ -5,13 +5,6 @@ author = "kaze"
 tags = ["communauté", "vim"]
 +++
 
-<style>
-  /* blockquote { border-left: 2px solid var(--fg-accent); padding-left: 1em; } */
-  blockquote { background-color: var(--bg-accent); margin: 0; padding: .5em 2em .5em 3em; position: relative; }
-  blockquote::before { content: "»"; font-size: 2em; position: absolute; top: 0.7em; left: 0.5em; }
-  cite { display: block; text-align: right; text-wrap: balance; font-style: normal; }
-</style>
-
 J’anime des [ateliers récurrents sur Vim][tupperVim] depuis une douzaine
 d’années. Je suis également l’auteur de [Qwerty-Lafayette][] et un contributeur
 actif d’Ergo‑L depuis deux ou trois ans.
@@ -24,11 +17,11 @@ supérieure à ce que n’importe quelle disposition de clavier peut offrir : 
 
 <!-- ![objectivité totale (allégorie), par @fnuttens](lafayette.jpg) -->
 
-Depuis 6 semaines je fais le test d’écrire en Ergo‑L au quotidien. Comment cela
+Depuis six semaines, je fais le test d’écrire en Ergo‑L au quotidien. Comment cela
 affecte-t-il ma productivité avec Vim ? Quelles sont les adaptations à faire
 pour Ergo‑L ? Y a-t-il une vie après HJKL ?
 
-<i lang="en">TL;DR</i> : Vim fonctionne parfaitement en Ergo‑L, il suffit de ne
+<i lang="en">TL;DR</i> : Vim fonctionne parfaitement en Ergo‑L. Il suffit de ne
 **PAS** remapper HJKL.
 
 <!--more-->
@@ -101,19 +94,19 @@ configurations d’applications.
 La vie après HJKL
 --------------------------------------------------------------------------------
 
-<blockquote>
-Après une semaine de test y a pas photo : ne pas utiliser [h]{.kbd} et
-[l]{.kbd} c'est le pied !
+:::{.highlight}
+> Après une semaine de test y a pas photo : ne pas utiliser [h]{.kbd} et
+> [l]{.kbd} c'est le pied !
+>
+> Le fait de ne pas remapper les touches par défaut en Ergo‑L est **LE**
+> <i lang="en">game changer</i> : ça facilite énormément l’apprentissage sans
+> avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? ».
+>
+> J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
+> avec mes mappings Bépo hasardeux.
 
-Le fait de ne pas remapper les touches par défaut en Ergo‑L est **LE**
-<i lang="en">game changer</i> : ça facilite énormément l’apprentissage sans
-avoir à se dire « ah mais ce truc, ça se fait comment avec mes mappings ? ».
-
-J’ai plus progressé en Vim en quelques jours grâce à ça qu’en quelques années
-avec mes mappings Bépo hasardeux.
-
-<cite>— [Vincent Jousse](vjousse), auteur de [*Vim pour les humains*][vimebook]</cite>
-</blockquote>
+— [Vincent Jousse](vjousse), auteur de [*Vim pour les humains*][vimebook]
+:::
 
 ### Déplacements verticaux
 
@@ -122,7 +115,7 @@ C’est la raison pour laquelle Ergo‑L, comme toutes les dispositions qui
 utilisent la couche de symboles Lafayette, a `+` et `-` en AltGr sur ces deux
 touches. L’action de `+` et `-` étant très proche de `j` et `k`, c’est
 utilisable sans aucun mapping : on a le même confort qu’en Qwerty ou Azerty pour
-ces deux actions, il suffit de presser <kbd>AltGr</kbd>.
+ces deux actions. Il suffit de presser <kbd>AltGr</kbd>.
 
 Mais il ne faut pas se contenter de ces deux touches pour les déplacements
 verticaux. Vim propose notamment :
@@ -194,7 +187,7 @@ J’aime taper dans Vmi sans faire de fautes.
 … il suffit de faire `TVxp`.
 
 De base, ces déplacements sont limités à la ligne courante. Des greffons comme
-[clever-f][] ou [Fanf,ingTastic;][FfTt]  étendent ce comportement au document
+[clever-f][] ou [Fanf,ingTastic;][FfTt] étendent ce comportement au document
 entier tout en proposant des améliorations ergonomiques, et en conservant la
 logique `f` `F` `t` `T`.
 

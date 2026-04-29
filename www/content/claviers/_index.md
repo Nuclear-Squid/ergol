@@ -113,7 +113,7 @@ vers l’extérieur de la paume. À prendre en compte lors du choix.
 
 C’est affaire de goûts : les géométries 3D (Kinesis, MoErgo, Dactyl, Skeletyl…)
 ont leurs adeptes. Elles réduisent très significativement l’inconfort lié aux
-« ciseaux » (= digrammes avec changement inconfortables de rangée) et permettent
+« ciseaux » (= bigrammes avec changement inconfortable de rangée) et permettent
 d’accéder à plus de touches qu’un clavier plat sans causer de déviations
 ulnaires.
 
@@ -126,18 +126,18 @@ sous un pouce).
 
 Les claviers grand public sont tous à membrane, mais la plupart des
 utilisateurices de claviers ergonomiques ne jurent que par les contacts
-mécaniques. Et pour cause : on peut choisir exactement le toucher que l’on veut,
-le confort et de l’agrément d’utilisation sont incomparables. La quasi totalité
+mécaniques. Et pour cause : on peut choisir exactement le toucher que l’on veut.
+Le confort et l’agrément d’utilisation sont incomparables. La quasi totalité
 des claviers ergonomiques utilisent ce type de contacts.
 
-On a deux principaux standards de contacts mécaniques :
+On a deux principaux standard de contacts mécaniques :
 
 - les contacts MX sont les plus courants : course de 4 mm, empreinte standard de
-  19,05×19,05 mm, on trouve une très grande variété de modèles et de profils de
+  19,05×19,05 mm, très grande variété de modèles et de profils de
   <i lang="en">keycaps</i> (cabochons) compatibles ;
-- les contacts Choc sont prisés par les amateurices de profils « <i
-  lang="en">low profile</i> : course de 2 mm, empreinte réduite de 18×17 mm,
-  moins de variété de modèles — et beaucoup moins de choix pour les keycaps.
+- les contacts Choc sont prisés par les amateurices de « <i lang="en">low
+  profile</i> » : course de 2 mm, empreinte réduite de 18×17 mm, moins de
+  variété de modèles — et beaucoup moins de choix pour les keycaps.
 
 Le contact est généralement déclenché (actuation) à mi-course. La force
 d’actuation est souvent autour de 60 g, mais peut descendre à 35 g voire moins
@@ -190,21 +190,21 @@ remplacement de la touche AltGr.
 
 ### Les limitations de Bépo <small>(Béopy, Optimot…)</small>
 
-Pour Bépo et ses variantes c’est plus délicat car il faut déplacer des
-**lettres**, ce qui oblige à changer de technique de saisie quand on passe d’un
-clavier standard à un clavier ergonomique. Pour minimiser la gêne et conserver
-[W]{.kbd} sous l’auriculaire droit, il faut passer [Shift]{.kbd} sous un pouce —
-ce qui n’est pas un changement anodin non plus.
-
-Les variantes de Bépo ont toutes le même problème, lié à la présence de deux
-lettres sur la 7<sup>e</sup> colonne du clavier ISO. Optimot se targue d’être
-conçu « pour tous les claviers » mais a les mêmes limitations — et détaille même
-sur son site quelles adaptations effectuer pour chaque type de clavier.
+Pour Bépo et toutes ses variantes, c’est plus délicat car il faut déplacer des
+**lettres** qui sont sur la 7<sup>e</sup> colonne du clavier ISO : la technique
+de saisie diffère quand on passe d’un clavier standard à un clavier ergonomique.
+Pour minimiser la gêne et conserver [W]{.kbd} sous l’auriculaire droit, il faut
+passer [Shift]{.kbd} sous un pouce — ce qui n’est pas un changement anodin non
+plus.
 
 Par ailleurs, on ne pourra pas fusionner les symboles déplacés avec la couche
 AltGr, dont les meilleurs emplacements sont déjà pris pour des besoins
 typographiques : `Œ`, `Æ`, `Ù`, `€`, le tréma mort, tous sont sur les touches
 confortables en main gauche. Il faut donc définir un layer supplémentaire.
+
+Ce n’est pas *impossible*, mais c’est *nettement* plus difficile. Quitte à
+devoir procéder à des adaptations, [Bépolar][] nous semble être une meilleure
+option.
 
 ### L’approche Ergonaute <small>(Ergo‑L, Erglace, Lafayette, Bépolar…)</small>
 
@@ -238,7 +238,7 @@ Et c’est tout.
     <th></th>
     <th> AZERTY </th>
     <th> Bépo   </th>
-    <th> Ergo‑L </th>
+    <th> Ergo‑L ⁽¹⁾ </th>
   </tr>
   <tr>
     <td style="padding: 1em 0;"> [full-size][] </td>
@@ -262,7 +262,7 @@ Et c’est tout.
   </tr>
   <tr>
     <td> [3×6][] </td>
-    <td> non compatible ⁽¹⁾ </td>
+    <td> non compatible ⁽²⁾ </td>
     <td><ul>
       <li> `W`, `Ç`, `%` </li>
       <li> tiret sur un layer </li>
@@ -275,8 +275,8 @@ Et c’est tout.
   </tr>
   <tr>
     <td> [3×5][] </td>
-    <td> non compatible ⁽¹⁾ </td>
-    <td> non compatible ⁽¹⁾ </td>
+    <td> non compatible ⁽²⁾ </td>
+    <td> non compatible ⁽²⁾ </td>
     <td><ul>
       <li> [layer-taps][LT] </li>
       <li> [homerow-mods][HRM] </li>
@@ -287,10 +287,13 @@ Et c’est tout.
 <!-- do not remove the empty line above -->
 :::
 
-⁽¹⁾ On considère qu’une disposition est « non compatible » avec une géométrie de
+⁽¹⁾ Ergo‑L ou toute autre disposition [1DFH][] : Erglace, Bépolar,
+QWERTY-Lafayette, Colemak French Touch…
+
+⁽²⁾ On considère qu’une disposition est « non compatible » avec une géométrie de
 clavier quand les lettres courantes du français ne peuvent plus tenir dans le
 seul layer principal. C’est le cas d’AZERTY dès qu’on n’a plus de rangée de
-chiffres, et de Bépo (et ses variantes) dès qu’on a moins de 2 colonnes sous
+chiffres, et de Bépo (et ses variantes) dès qu’on a moins de deux colonnes sous
 l’auriculaire droit.
 
 
@@ -302,7 +305,7 @@ Conseils d’achat
 Pour apprendre Ergo‑L ou n’importe quelle disposition de clavier, votre clavier
 actuel suffit. Même s’il est imprimé en AZERTY ! L’ergonomie clavier débute avec
 l’[apprentissage de la dactylographie][dactylo] : si vous ne savez pas taper à
-10 doigts sans regarder, aucun clavier ergonomique ne vous sera utile.
+dix doigts sans regarder, aucun clavier ergonomique ne vous sera utile.
 
 Avec des logiciels libres comme [Kanata][] et en utilisant [Arsenik][] comme
 base, vous pouvez aussi obtenir un gain d’ergonomie très proche du meilleur
@@ -325,7 +328,7 @@ musculo-squelettiques.
 ![[Sofle][], 58 touches (4×6+5)](compacts/4x6_ergol.svg)
 
 C’est de loin le type de clavier ergonomique le plus vendu. Cette géométrie
-fonctionne avec tous les layouts francophones :
+fonctionne avec tous les _layouts_ francophones :
 
 - **triviale en Ergo‑L** et Lafayette — aucune adaptation requise, chiffres en
   direct ;
@@ -366,6 +369,7 @@ quasi inutilisable en AZERTY.
 [LT]:        ./arsenik/#layer-taps
 [1DFH]:      /presentation/#dfh-1u-distance-from-home
 [dactylo]:   /articles/apprendre_a_taper/
+[Bépolar]:   /lafayette/#b%C3%A9polar
 
 [Sofle]:     https://github.com/josefadamcik/SofleKeyboard
 [Corne]:     https://github.com/foostan/crkbd

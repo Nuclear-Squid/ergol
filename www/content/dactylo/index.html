@@ -80,12 +80,38 @@ footer = """
     color: gray;
   }
 
+  #tutorial {
+    max-width: 60em;
+  }
+  #openTutorial {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #openTutorial button {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--fg-accent);
+    border: 3px solid var(--fg-accent-border);
+    border-radius: 100%;
+    height: 2em;
+    width: 2em;
+  }
+
   @media (prefers-color-scheme: dark) {
     #lesson { color: white; }
     .error  { color: #f44; }
     .fixed  { color: #9e1; }
   }
 </style>
+
+<script defer>
+  window.onload = () => {
+    if (!localStorage.getItem('showTutorial')) {
+      tutorial.showModal();
+      localStorage.setItem('showTutorial', false);
+    }
+  };
+</script>
 
 <div>
   <h2><span class="key_list"></span><span class="quacks">🦆</span></h2>
@@ -99,7 +125,7 @@ footer = """
   <x-keyboard></x-keyboard>
   <p style="text-align: right;">
     <span style="float: left;">
-      {{< layout-list >}}
+      {{< keymap-list >}}
       <select id="dict">
         <option value="fr,french_1k">Français 1k</option>
         <option value="fr,french_10k" selected>Français 10k</option>
@@ -107,12 +133,83 @@ footer = """
         <option value="en,english_10k">English 10k</option>
       </select>
     </span>
+    <select id="emulate">
+      <option value="emulated">Émuler la disposition</option>
+      <option value="native">Disposition système</option>
+    </select>
     <select id="geometry">
       <option value="iso" selected>ISO</option>
       <option value="ansi">ANSI</option>
       <option value="ol60">TMx</option>
       <option value="ol50">4×6</option>
       <option value="ol40">3×6</option>
+      <option value="none">aucun</option>
     </select>
   </p>
 </div>
+
+<div id="openTutorial">
+  <button command="show-modal" commandfor="tutorial" title="Aide">?</button>
+</div>
+
+<dialog id="tutorial">
+  <h2>Fonctionnement de Duck Typist</h2>
+
+  <ul>
+    <li>
+      Duck Typist sert à apprendre une nouvelle disposition clavier en
+      <b>dactylographie</b>.
+      <ul>
+        <li>
+          La dactylographie exige que les doigts soient placés sur la ligne de
+          repos (aussi appelée <i lang="en">homerow</i>), avec les index sur les
+          touches ayant des ergots (<kbd>F</kbd> et <kbd>J</kbd> en Azerty).
+        </li>
+        <li>
+          Les couleurs sur le clavier en-dessous de la leçon indiquent quel
+          doigt doit taper quelle touche (l’index gauche tape les touches
+          oranges, le majeur les touches vertes, etc.).
+        </li>
+      </ul>
+    </li>
+    <li>
+      Si l’on réussit à taper à plus de 98% de précision et 20 wpm
+      (<i lang="en">words per minute</i> ou mots par minute, 1 mot = 5
+      caractères), on gagne un canard (🦆 en haut à droite).
+    </li>
+    <li>
+      Trop de fautes (plus de 2) et on perd un canard, donc il vaut mieux
+      s’appliquer sur <b>la précision</b>, quitte à aller plus lentement. La
+      vitesse viendra d’elle-même par la suite — moins de fautes = moins de
+      perte de temps pour les corriger.
+    </li>
+    <li>Au bout de 4 canards gagnés, on débloque les 2 lettres suivantes.</li>
+    <li>
+      La progression est sauvegardée directement dans le navigateur web (si vous
+      n’effacez pas vos données de navigation).
+    </li>
+    <li>
+      Si besoin, on peut forcer le nombre de lettres à inclure en cliquant sur
+      la lettre en haut. Cela permet de reprendre la progression sur un autre
+      ordinateur par exemple.
+    </li>
+    <li>
+      Pour cacher le clavier visuel, sélectionner « aucun » dans la liste des
+      géométries.
+    </li>
+    <li>
+      Pour aller plus loin sur l’apprentissage d’une nouvelle disposition, lire
+      l’article « <a href="/articles/apprendre_a_taper/">Apprendre une
+      disposition de clavier</a> ».
+    </li>
+    <li>
+      Une fois cette boite de dialogue fermée, on peut retrouver ses conseils en
+      cliquant sur le bouton « ? » en bas à droite.
+    </li>
+  </ul>
+  <p>Bon apprentissage !</p>
+
+  <form method="dialog">
+    <button>Fermer</button>
+  </form>
+</dialog>

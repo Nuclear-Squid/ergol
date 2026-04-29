@@ -14,5 +14,34 @@
 <meta property="og:description"  content="{{ .Site.Params.description }}">
 <link type="image/svg+xml"       rel="icon"    href="{{ absURL "favicon.svg" }}"        sizes="any">
 <link type="application/rss+xml" rel=alternate href="{{ absURL "articles/index.xml" }}" title="Ergo‑L">
-{{ partial "head/js.html" . }}
-{{ partial "head/css.html" . }}
+
+{{ if .Params.redirect_to }}
+  <meta http-equiv="refresh" content="0; url={{ .Params.redirect_to }}">
+{{ end }}
+
+{{ $opts := dict "format" "cjs" }}
+{{ if hugo.IsProduction }}
+  {{ $opts = merge $opts (dict "minify" true) }}
+{{ end }}
+
+{{ template "InsertJs" (dict "opts" $opts "collection" .Params.JsScripts "type" "text/javascript") }}
+{{ template "InsertJs" (dict "opts" $opts "collection" .Params.JsModules "type" "module") }}
+
+{{ define "InsertJs" }}
+  {{ $opts := .opts }}
+  {{ $type := .type }}
+  {{ range .collection }}
+    {{- with resources.Get . }}
+      {{- with . | js.Build (merge $opts (dict "targetPath" .RelPermalink)) }}
+        <script src="{{ .RelPermalink }}" type="{{ $type }}"></script>
+      {{- end }}
+    {{- end }}
+  {{ end }}
+{{ end }}
+
+{{ range (.Params.cssSheets | append "css/theme.css") }}
+  {{ with resources.Get . | minify }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+{{ end }}
+
