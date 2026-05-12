@@ -37,20 +37,20 @@ Comportement
    sur leur temps libre, pour rendre service à la communauté : développement,
    design, rédaction, modération… Aucune injonction ni aucune invective
    concernant leur travail ne sera entendable.
-6. Veillez à éviter la critique non structurée et personnelle.
-7. Peu importe qui vous êtes, si vous avez le sentiment d’avoir été harcelé·e ou
+5. Veillez à éviter la critique non structurée et personnelle.
+6. Peu importe qui vous êtes, si vous avez le sentiment d’avoir été harcelé·e ou
    mis·e dans une situation inconfortable par un membre de la communauté,
    contactez immédiatement l’équipe de modération : nous tenons à ce que tout le
    monde se sente à l’aise, et nous sommes là pour vous aider.
-8. Les comportements malveillants comme le spam, le troll, l’injure, la
+7. Les comportements malveillants comme le spam, le troll, l’injure, la
    provocation, la condescendance, l’agressivité passive, la diffamation ou tout
    autre mécanisme d’accaparement de l’attention ne sont pas les bienvenus.
-9. Pas d’autopromotion sauvage — ni en discussion publique, ni par message
+8. Pas d’autopromotion sauvage — ni en discussion publique, ni par message
    privé.
-10. Le serveur [Discord] dispose d’un canal dédié à la vente de matériel.
+9. Le serveur [Discord] dispose d’un canal dédié à la vente de matériel.
    L’utilisation de messages privés pour recommander ou vendre du matériel n’est
    pas tolérée et doit être signalée immédiatement à l’équipe de modération.
-11. [La liberté d’expression n’autorise personne à être toxique.](https://xkcd.com/1357/)
+10. [La liberté d’expression n’autorise personne à être toxique.](https://xkcd.com/1357/)
 
 
 Modération
