@@ -34,8 +34,9 @@ Comportement
    peuvent être propres à chacun·e. Il y a rarement une bonne réponse pour tout
    le monde.
 4. Respectez le travail des contributeur·ices. Ces personnes font de leur mieux,
-   sur leur temps libre, pour proposer des outils à la communauté. Aucune
-   injonction ni aucune invective concernant leur travail ne sera entendable.
+   sur leur temps libre, pour rendre service à la communauté : développement,
+   design, rédaction, modération… Aucune injonction ni aucune invective
+   concernant leur travail ne sera entendable.
 5. Veillez à éviter la critique non structurée et personnelle.
 6. Peu importe qui vous êtes, si vous avez le sentiment d’avoir été harcelé·e ou
    mis·e dans une situation inconfortable par un membre de la communauté,
