@@ -82,10 +82,11 @@ Savoir-vivre
 
 - **Les Ergonautes prennent soin les un·es des autres.** Comportez-vous de
   façon agréable, faites en sorte qu’on ait plaisir à discuter avec vous.
-- Évitez de jouer avec des sujets offensants ou sensibles, surtout si c’est hors
-  sujet : trop souvent cela occasionne des disputes inutiles, blesse des
-  personnes, abime la confiance mutuelle — parfois au point où des
-  participant·es doivent quitter la communauté.
+- Évitez de jouer avec des sujets offensants, sensibles, ou que vous ne tiendriez
+  pas sur votre lieu de travail, surtout si c’est hors sujet : trop souvent cela
+  occasionne des disputes inutiles, blesse des personnes, abime la confiance
+  mutuelle, crée de la gêne — parfois au point où des participant·es préfèrent
+  quitter la communauté.
 - Si quelqu’un·e relève quelque chose que vous avez dit ou fait, ne soyez pas
   sur la défensive : arrêtez simplement de faire ce qui vous a été reproché et
   présentez des excuses. Même si vous pensez avoir été mal interprété·e ou
