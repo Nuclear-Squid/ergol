@@ -175,7 +175,9 @@ tresse de masse du câble… parfait pour causer de la diaphonie, ça.
 
 Mais ça n’est pas le seul problème. On sort l’oscilloscope pour creuser.
 
-![oscillogramme de l’I²C du 25.11](i2c_2511.png)
+![oscillogramme de l’I²C du 25.11 en monobloc](flex_25_11_unibody.png)
+
+![oscillogramme de l’I²C du 25.11 en split](flex_25_11_split.png)
 
 OK, vu. Ça ne fonctionne pas sur notre clavier parce que l’impédance de l’ensemble câble +
 connecteur est trop élevée : les signaux ont des temps de montée trop longs — d’où cette forme en
@@ -184,7 +186,9 @@ lame de couteau. En split, l’horloge n’a même pas le temps d’atteindre le
 Je trouve un composant un peu cher mais qui corrige ça activement : le [LTC4311]. On fait partir un
 lot 25.12 avec ce composant, et pouf, magie, tout fonctionne comme dans un rêve :
 
-![oscillogramme de l’I²C du 25.12](i2c_2512.png)
+![oscillogramme de l’I²C du 25.12 en monobloc](flex_25_12_unibody.png)
+
+![oscillogramme de l’I²C du 25.12 en split](flex_25_12_split.png)
 
 Avec ce composant, on pourrait même avoir des mètres de câble entre les deux demi-claviers ! Bon,
 problème résolu, mais ça coûte cher… on essaye donc une méthode plus simple : diminuer les
@@ -271,8 +275,9 @@ d’un doigt à l’autre. Beaucoup de concepteurs de claviers se focalisent sur
 lang="en">stagger</i> de l’auriculaire, mais on s’est aperçu que c’est souvent l’*annulaire* qui
 manque de <i lang="en">stagger</i> : l’écart annulaire/auriculaire est généralement suffisant.
 
-On a donc testé un ajustement de géométrie sur le 25.12. Un petit millimètre… mais qui fait une
-différence assez nette, les doigts se posent désormais *pile* au centre des touches. Adopté !
+On a donc testé un ajustement de géométrie sur le 25.12 : un dixième d’unité soit 1.7 mm… mais qui
+fait une différence assez nette, les annulaires et auriculaires se posent désormais *pile* au centre
+des touches. Adopté !
 
 
 Alternatives envisagées
