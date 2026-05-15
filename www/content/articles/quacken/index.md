@@ -114,9 +114,10 @@ d’électronique, donc tout va bien se passer ? (Mouahahaha, <i lang="en">fam
 Géométrie radi(c)ale
 ----------------------------------------------------------------------------------------------------
 
-Les claviers de fabricants mainstream sont forcément des compromis pour rassurer au plus grand
-nombre, c’est une nécessité commerciale. On va donc faire l’inverse : une géométrie vraiment
-poussée, pour un clavier qu’on va se fabriquer collectivement afin de réduire les coûts.
+Les fabricants mainstream de claviers ergonomiques doivent fairn des compromis sur la géométrie pour
+rassurer leurs éventuels acheteurs, quitte à dégrader l’ergonomie : c’est un impératif commercial.
+Notre objectif est de faire exactement l’inverse : une géométrie sans compromis, pour un clavier
+qu’on va fabriquer collectivement afin de réduire les coûts.
 
 On est fan de claviers (très) compacts, la magie du [1DFH] permettant d’aller vers des géométries
 qui tombent bien sous les doigts : un bon <i lang="en">stagger</i> vertical pour compenser les
