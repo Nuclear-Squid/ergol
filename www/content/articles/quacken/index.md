@@ -1,6 +1,6 @@
 +++
 title = "Quacken : an 1"
-date = 2026-05-11T08:00:00+01:00
+date = 2026-05-15T08:00:00+01:00
 author = "kaze"
 tags = ["communauté", "matériel"]
 +++
@@ -14,13 +14,34 @@ présentait au [Capitole du Libre], pour le proposer à prix libre sur la [bouti
 y a quelques jours, après des centaines d’heures de travail cumulées, on livrait le premier lot
 qu’on a fabriqué pour les Ergonautes.
 
-Je vous raconte.
+Je vous raconte la naissance du [Quacken].
 
+[Nuclear-Squid]:           https://github.com/Nuclear-Squid
+[conception électronique]: https://github.com/Nuclear-Squid/quacken
+[firmware ZMK]:            https://github.com/Nuclear-Squid/zmk-keyboard-quacken
+
+[TeXitoi]: https://github.com/TeXitoi
+[Seraf]:   https://github.com/severindupouy
+[Ash]:     https://github.com/Ashenfae
+
+[JDLL 2026]:          https://jdll.org
 [Capitole du Libre]:  https://cfp.capitoledulibre.org/cdl-2025/talk/PHPTKK/
 [boutique HelloAsso]: https://www.helloasso.com/associations/les-ergonautes/boutiques/quacken
-[Nuclear-Squid]:      https://github.com/Nuclear-Squid
-[TeXitoi]:            https://github.com/TeXitoi
-[Ash]:                https://github.com/Ashenfae
+[annonce Mastodon]:   https://eldritch.cafe/@ergonautes/115933914956646384
+[Ækeynox-QMK]:        https://github.com/OneDeadKey/qmk-config-aekeynox
+[Ækeynox-ZMK]:        https://github.com/OneDeadKey/zmk-config-aekeynox
+[Selenium]:           https://onedeadkey.github.io/selenium
+[Quacken]:            https://onedeadkey.github.io/quacken
+
+[1DFH]:       /presentation/#dfh-1u-distance-from-home
+[Arsenik]:    /claviers/arsenik
+[Ferris]:     https://github.com/pierrechevalier83/ferris/
+[uf2]:        https://github.com/microsoft/uf2
+[I²C]:        https://fr.wikipedia.org/wiki/I2C
+[ZMK Studio]: https://zmk.dev/docs/features/studio
+[RP2040]:     https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html
+[Ergogen]:    https://ergogen.xyz
+[PacoVelobs]: https://mamot.fr/@PacoVelobs/
 
 <!--more-->
 
@@ -89,13 +110,6 @@ contrôleur soit intégré au circuit imprimé (PCB), et non sur un socket ProMi
 font la plupart des designs DIY. C’est nettement plus compliqué, mais Nuke fait des études
 d’électronique, donc tout va bien se passer ? (Mouahahaha, <i lang="en">famous last words…</i>.)
 
-[Arsenik]:    /claviers/arsenik
-[Ferris]:     https://github.com/pierrechevalier83/ferris/
-[uf2]:        https://github.com/microsoft/uf2
-[I²C]:        https://fr.wikipedia.org/wiki/I2C
-[ZMK Studio]: https://zmk.dev/docs/features/studio
-[RP2040]:     https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html
-
 
 Géométrie radi(c)ale
 ----------------------------------------------------------------------------------------------------
@@ -134,9 +148,6 @@ On le fait fabriquer… et **ça marche !** La géométrie fonctionne exacteme
 finira par le baptiser « Quacken Flex ». À partir de là, les ajustements se feront millimètre par
 millimètre.
 
-[Ergogen]:    https://ergogen.xyz
-[PacoVelobs]: https://mamot.fr/@PacoVelobs/
-
 
 Positions médianes
 ----------------------------------------------------------------------------------------------------
@@ -172,7 +183,7 @@ Mise au point, fabrication, expédition
 
 La mise au point a été laborieuse. L’aide de [TeXitoi] et d’un de mes clients électroniciens aura
 été décisive. Il aura fallu quatre prototypes avant d’arriver à une version fonctionnelle…
-[J’en ai fait un article complet.](/articles/mise_au_point_du_quacken)
+[J’en ai fait un article complet.](/articles/la_mise_au_point_du_quacken)
 
 Quand on a enfin reçu les PCB finalisés, il a fallu en assembler la majorité : clipser les switches
 selon la configuration choisie, faire souder les switches par des pros, mettre les keycaps, flasher
@@ -182,11 +193,13 @@ Puis vient le temps de l’expédition — bon sang, c’est complètement fou l
 se trouve c’est un vrai métier ?!? Comme pour le reste, on apprend sur le tas. On se dit qu’on a
 bien fait de limiter les commandes. On aurait même dû en prendre beaucoup moins…
 
-Comme promis, une fois les expéditions effectuées, on a publié les sources du clavier : pas
-seulement le [firmware ZMK], mais aussi toute la [conception électronique] de Nuke, le routage, etc.
+Comme prévu, une fois les expéditions effectuées, on a publié les sources du clavier : pas seulement
+le [firmware ZMK], mais aussi toute la [conception électronique] de Nuke, le routage, etc.
 
 Au total, on a englouti des centaines d’heures dans le projet. On a clairement sous-estimé la part
-liée à la logistique. :-)
+liée aux commandes et à la logistique. Jamais on n’aurait pu y arriver sans [Ash], qui non seulement
+s’est tapé la gestion de toutes les commandes et toutes les appros, mais qui *en plus* est venu’
+m’aider à assembler et emballer les claviers.
 
 
 Modèle économique <i lang="en">open-hardware</i>
@@ -248,14 +261,12 @@ Le prix libre a très bien fonctionné : la générosité des uns a compensé 
 autres. Ça nous a permis de livrer des Quacken au meilleur prix possible pour le plus grand nombre,
 tout en faisant un peu de marge pour payer les prochains protos.
 
-On a eu aussi des dons. Et des messages de soutien. Ça nous met la larme à l’œil. C’est dommage que
+On a eu aussi des dons. Et des messages de soutien. Ça nous met la larme à l’œil. Quel dommage que
 les belles personnes soient si discrètes, alors que les sacs à merde accaparent autant l’attention !
 J’aimerais pouvoir contribuer à changer ça, au moins au sein de notre communauté.
 
 À celles et ceux qui nous ont soutenus dans toute cette aventure : c’est pour vous qu’on bosse, et
-qu’on a plaisir à le faire. Merci à vous. <3
-
-[annonce Mastodon]:   https://eldritch.cafe/@ergonautes/115933914956646384
+qu’on a plaisir à le faire. Merci à vous. ❤️
 
 
 Bon à quel point ?
@@ -294,7 +305,7 @@ l’implémentation [Ækeynox-ZMK], qui permet de configurer Selenium sur plusie
 camarade [Seraf] bosse sur l’implémentation [Ækeynox-QMK], pour les claviers QMK. Les contributions
 à ces projets sont bienvenues !
 
-On a plein de choses prévues, mais je m’interdis de les annoncer. Ça sortira quand ça sera prêt,
-comme pour tout bon projet libre.
+On a plein de choses prévues, mais je m’interdis désormais de les annoncer. Ça sortira quand ça
+sera prêt, comme pour tout bon projet libre.
 
 Merci à toutes les personnes qui nous ont soutenus. <i lang="en">Happy typing !</i>

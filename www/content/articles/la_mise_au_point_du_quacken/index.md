@@ -1,6 +1,6 @@
 +++
 title = "La mise au point du Quacken"
-date = 2026-05-11T10:00:00+01:00
+date = 2026-05-15T10:00:00+01:00
 author = "kaze"
 tags = ["communauté", "matériel"]
 +++
@@ -21,9 +21,23 @@ point, quelles galères on a rencontré, quelles solutions on a trouvé.
 [Nuclear-Squid]: https://github.com/Nuclear-Squid
 [TeXitoi]:       https://github.com/TeXitoi
 [Ash]:           https://github.com/Ashenfae
+[Tam]:           https://github.com/MathildeMousset
 [PacoVelobs]:    https://mamot.fr/@PacoVelobs
 [Dénes Bán]:     https://zealot.hu
 [Absolem]:       https://zealot.hu/absolem
+[Ergogen]:       https://ergogen.xyz
+[firmware ZMK]:  https://github.com/Nuclear-Squid/zmk-keyboard-quacken
+
+[Ferris]:     https://github.com/pierrechevalier83/ferris
+[Keymini]:    https://github.com/TeXitoi/keymini
+[Keyberon]:   https://github.com/TeXitoi/keyberon
+[uf2]:        https://github.com/microsoft/uf2
+[I²C]:        https://fr.wikipedia.org/wiki/I2C
+[Qwiic]:      https://www.sparkfun.com/qwiic
+[ZMK Studio]: https://zmk.dev/docs/features/studio
+[RP2040]:     https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html
+[LTC4311]:    https://www.analog.com/en/products/ltc4311.html
+
 <!--more-->
 
 <style>
@@ -103,7 +117,7 @@ contrôleur. Inratable.
 Côté géométrie, on voit assez vite qu’il y a des améliorations possibles. Je fais quelques maquettes
 SVG, et après quelques itérations, on finit par tomber sur cette géométrie :
 
-![Esquisse FreeCAD du PCB du Quacken](freecad.png)
+![Esquisse FreeCAD du PCB du Quacken](../quacken/freecad.png)
 
 On décide de faire un PCB avec cette géométrie — non pas sur une base Pro Micro comme pour le Zero,
 mais en intégrant directement le micro-contrôleur. La géométrie est validée avec enthousiasme !
@@ -213,16 +227,16 @@ rallonger le temps d’attente pour attendre la stabilisation du cristal à 12.0
 
 Du moins, sur le modèle 25.11. Parce que sur le 25.12 : rien. Nada. Nib. Le clavier communique
 bien en mode <i lang="en">bootloader</i>, mais dès qu’il rebascule en mode HID : plus rien ne
-passe. C’est fou comment l’électronique, ça irrite. Gniiiiiiiii.
+passe. C’est fou comment l’électronique, ça irrite.
 
 Étrangement, on constate qu’avec [Keyberon], la communication passe bien. On hésite. Et si le
 problème, c’était ZMK ? Ne serait-ce pas là une excuse imparable pour faire du Rust embarqué, plutôt
 que de l’électronique ?
 
 Après avoir montré le routage à mon client électronicien, il me recommande de minimiser les
-longueurs de piste, et en séparant mieux les lignes QSPI (qui relient le RP2040 à la mémoire Flash)
-de celles du cristal, pour éviter la diaphonie. Je me dis qu’il chipote. Ça fait 30 ans que je bosse
-avec lui, il a toujours été du genre à chipoter. Sauf que, étonamment, il a raison. Un peu comme si
+longueurs de piste et de mieux séparer les lignes du cristal de celles du QSPI (qui relient le
+RP2040 à la mémoire Flash). Je me dis qu’il chipote. Ça fait 30 ans que je bosse avec lui, il a
+toujours été du genre à chipoter. Sauf que, étonamment, il a raison. Un peu comme si
 l’électronique, c’était un vrai métier. Qui aurait pu prédire ?!?
 
 Nuke refait le routage encore une fois, en mode parano. Tout le bloc RP2040 + cristal + Flash
@@ -240,7 +254,7 @@ de ZMK.
 
 Une autre difficulté est que le RP2040 est mal supporté par ZMK. La situation s’améliore, là encore
 avec les versions 4.x de Zephyr, mais on essuie des plâtres… On remonte des bugs, l’équipe ZMK est
-réactive, et le bug qu’on a relevé est corrigé dans une branche dédiée au support HWMv2 de Zephyr
+réactive, et une correction est implémentée dans une branche dédiée au support HWMv2 de Zephyr
 (<i lang="en">hardware model v2</i>).
 
 Tout cela fera partie de la <i lang="en">release</i> 0.4 de ZMK. Pour l’instant, on a épinglé un <i
@@ -249,7 +263,7 @@ lang="en">commit</i> bien précis pour avoir cette branche HWMv2.
 ### Géométrie
 
 On a été satisfait de la géométrie dès le tout premier prototype (25.10), mais quitte à devoir faire
-des nouveaux protos pour tester les corrections électroniques, on en profite pour tester des
+des nouveaux protos pour tester les corrections électroniques, on en a profité pour tester des
 ajustements.
 
 Avec Ergogen, le <i lang="en">stagger</i> et le <i lang="en">splay</i> se définissent en relatif
@@ -280,15 +294,15 @@ Problème : les connecteurs typs JST ne sont donnés que pour une trentaine de
 déconnexion ; et on a beau chercher, on ne trouve que deux autres connecteurs capables de supporter
 les 1 000 à 10 000 cycles des connecteurs Jack.
 
-- Le RJ (RJ11 ou RJ45) : simple, éprouvé, utilisé sur le KeyboardIO Model01, mais trop encombrant
-  pour le Quacken ;
-- L’USB (mini, micro, USB-C) : éprouvé, mais risque de confusion avec le port USB de liaison au PC,
-  et le càble est trop rigide (effet de ressort entre les deux moitiés de clavier).
+- RJ11/RJ45 : simple, éprouvé, utilisé sur le KeyboardIO Model01, mais trop encombrant pour le
+  Quacken ;
+- USB : éprouvé, mais risque de confusion avec le port USB de liaison au PC, et le càble est trop
+  rigide (effet de ressort entre les deux moitiés de clavier).
 
-<i lang="en">Long story short :</i> c’est beaucoup plus simple de faire des claviers à double
-contrôleur. On s’y est refusé pour des questions de coût et de complexité pour les utilisateur’ices.
-Et pour une solution mono-contrôleur… le connecteur Jack 3.5 mm est le plus adapté mécaniquement,
-tout en étant *acceptable* électriquement.
+<i lang="en">Long story short :</i> ça serait beaucoup plus simple de faire des claviers à double
+contrôleur, mais on s’y est refusé pour des questions de coût et de complexité pour les
+utilisateur’ices. On reste donc sur une solution mono-contrôleur… et là, le connecteur Jack 3.5 mm
+est le plus adapté mécaniquement, tout en étant *acceptable* électriquement.
 
 Un connecteur magnétique 4 points type Pogo serait idéal, mais en attendant : <i lang="en">in TRRS
 ws trust</i>.
@@ -299,15 +313,15 @@ Nuke déteste ST en général et leur écosystème logiciel en particulier : b
 sur de la génération de <i lang="en">boilerplate</i> plutôt que sur des abstractions logicielles,
 et non libre par-dessus le marché…
 
-Accessoirement, les puces STM32 n’ont pas de <i lang="en">bootloader</i> UF2, qui permet de flasher
-par un simple glisser-déposer. Pour le Quacken, qu’on veut accessible au plus grand nombre, c’est un
-problème.
+Accessoirement, les puces STM32 n’ont pas de <i lang="en">bootloader</i> [UF2], qui permet de
+flasher par un simple glisser-déposer. Pour le Quacken, qu’on veut accessible au plus grand nombre,
+c’est un problème.
 
 Cela étant dit : si vous envisagez de faire votre propre projet embarqué (clavier ou autre), sachez
 que les contrôleurs STM32 peuvent se passer d’un cristal externe (en se calant sur l’horloge du
-contrôleur USB hôte), et qu’ils intègrent leur propre mémoire Flash, anisi qu certaines résistances
-et capacités pour la protection du circuit. C’est donc **beaucoup** plus simple à mettre en œuvre et
-à intégrer qu’un RP2040.
+contrôleur USB hôte), et qu’ils intègrent leur propre mémoire Flash, anisi que certaines résistances
+et capacités de protection du circuit. C’est donc *beaucoup* plus simple à mettre en œuvre et à
+intégrer qu’un RP2040.
 
 On ne regrette absolument pas notre choix du RP2040, mais voilà, vous êtes prévenus. :-)
 
@@ -323,10 +337,14 @@ On n’aime pas STM32 mais ayé, on a compris l’intérêt : ça évite beauc
 C’est probablement un choix raisonnable — donc pas pour nous.
 
 Électroniquement, la conception d’un clavier est très simple, même avec un contrôleur intégré. Le
-routage, par contre, c’est un métier. Il y a mille pièges à éviter. On en a expérimenté
-quelques-uns. Chaque erreur de routage suffit à causer un dysfonctionnement.
+routage, par contre, est critique. Il y a mille pièges à éviter, on en a expérimenté quelques-uns.
+Chaque erreur de routage suffit à causer un dysfonctionnement.
 
 Encore un grand merci à [TeXitoi] pour son aide décisive tout au long de ce projet. <3
+
+[Nuclear-Squid] a publié tout son travail [sur son dépôt](https://github.com/Nuclear-Squid/Quacken) :
+la géométrie Ergogen (incluant les composants spécifiques pour le Quacken), la conception KiCad et
+le routage. On va essayer d’améliorer encore le routage au fil des versions à venir.
 
 On espère que notre expérience va baliser un peu le chemin, et que le design électronique du Quacken
 pourra être réutilisé pour plein d’autres Poticlaviers. Puisse le Quacken avoir une descendance
