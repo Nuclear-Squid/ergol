@@ -34,6 +34,17 @@ li li a[href] { color: var(--fg-main); }
 code { font-family: monospace; }
 </style>
 
+:::{.highlight style="max-width: 32em;"}
+- [Un clavier unique pour les cliqueter tous]
+- [Géométrie radi(c)ale]
+- [Positions médianes]
+- [Présentation au Capitole du Libre]
+- [Mise au point, fabrication, expédition]
+- [Modèle économique <i lang="en">open-hardware</i>]
+- [Bon à quel point ?]
+- [La suite ?]
+:::
+
 
 Un clavier unique pour les cliqueter tous
 ----------------------------------------------------------------------------------------------------
@@ -156,142 +167,12 @@ Petite déception : tout le monde ou presque a commandé son Quacken en config
 pensait que les positions médianes feraient fureur, ça a été un énorme flop. :-D
 
 
-Mise au point
+Mise au point, fabrication, expédition
 ----------------------------------------------------------------------------------------------------
 
-C’est la version 25.10 qui a été présentée au CdL ; il aura fallu trois prototypes supplémentaires,
-25.11, 25.12, 26.01, pour arriver à un modèle pleinement fonctionnel. L’électronique, c’est un
-métier ! Heureusement, on a eu l’aide du camarade [TeXitoi] et d’un de mes clients électroniciens
-pour avancer.
-
-### Communication I²C
-
-Sur les 5 exemplaires de la version 25.10 dont on disposait, on en a splitté un seul… et ça n’a pas
-fonctionné. En plein rush du CdL on n’a pas trop eu le temps de creuser, on s’est dit que j’avais dû
-endommager le PCB en le sciant avec un outil inadapté.
-
-Malheureusement, les 5 prototypes du lot 25.11 confirment les craintes. Là encore, le clavier
-fonctionne parfaitement en monobloc (c’est mon <i lang="en">daily driver</i>), mais en split : rien.
-La communication [I²C] ne passe tout simplement plus. Bon sang, comment on a fait pour foirer un
-truc aussi simple que l’I²C ?
-
-Premier suspect : les connecteurs TRRS. De fait, quand on remplace ces connecteurs et le càble TRRS
-par 4 fils soudés directeument sur les PCB, magie, ça tombe en marche ! On réalise que suite à une
-erreur sur un composant KiCad, on c’est l’horloge à 400 kHz et non la masse qui était reliée à la
-tresse de masse du câble… forcément, ça fonctionne moins bien. Mais ça n’est pas le seul problème.
-On sort l’oscilloscope pour creuser.
-
-![oscillogramme de l’I²C du 25.10](i2c_2510.png)
-
-En théorie, l’I²C est prévu pour être utilisé directement sur un PCB, pas sur un câble externe. En
-pratique, ça se fait quand même : le TRRS est assez classique dans le milieu des claviers, et il y a
-même un standard pour ça en électronique (le [Qwiic]). Ça ne fonctionne pas sur notre clavier parce
-que l’impédance de l’ensemble câble + connecteur est trop élevée : les signaux, supposément carrés,
-ont des temps de montée trop longs, d’où cette forme en lame de couteaux.
-
-Je trouve un composant un peu cher mais qui corrige ça activement : le [LTC4311]. On fait partir un
-lot 25.12 avec ce composant, et pouf, magie, tout fonctionne comme dans un rêve :
-
-![oscillogramme de l’I²C du 25.11](i2c_2511.png)
-
-Avec ce composant, on pourrait même avoir des mètres de câble entre les deux demi-claviers ! Bon,
-problème résolu, mais ça coûte cher… on essaye donc une méthode plus simple : diminuer les
-résistances de pull-up. En me renseignant un peu, je vois que pour faire passer de l’I²C sur de
-« grandes » distances (quelques dizaines de cm), il est assez courant d’utiliser des pull-up de
-1 kΩ au lieu de 4.7 kΩ. Le seul inconvénient c’est que ça tire un peu de courant sur le RP2040, ce
-qui augmente un peu sa consommation, mais rien de gênant pour un clavier filaire.
-
-On déssoude le LTC4311, on teste avec les petites résistances, ça fonctionne bien, on valide.
-Tout ça pour ça !
-
-On fait donc partir un lot 25.12 avec ces modifications pour valider. Le chat échaudé, l’eau froide,
-tout ça. Simple vérification de routine, non ?
-
-Non.
-
-### Synchronisation USB
-
-[Tam] avait remarqué que le 25.11 perdait parfois la connexion USB. Il faut débrancher et rebrancher
-pour que ça retombe en marche. Pas dramatique mais pénible. Et le problème ne se produit qu’à son
-bureau : chez elle, ça fonctionne. Relou.
-
-On a vu que ça ressemble à un problème qui affecte le Corne v4, lui aussi basé sur du RP2040. La
-sensibilité au bruit électromagnétique est suspectée. Certains utilisateurs du Corne ont « résolu »
-le problème en mettant du scotch métallique par-dessus le RP2040 pour faire office de cage de
-Faraday.
-
-En fouillant les forums Zephyr et le code ZMK, je vois qu’il existe une option qui permet de
-rallonger le temps d’attente pour attendre la stabilisation du cristal à 12.000 MHz, qui assure la
-synchronisation pour la connexion USB. On se dit qu’on a dû prendre un cristal de mauvaise qualité,
-je trouve dans le code ZMK une variable qui permet d’attendre plus longtemps pour la stabilisation,
-ça résout le problème chez Tam, parfait.
-
-Du moins, sur le modèle 25.11. Parce que sur le 25.12 : rien. Nada. Nib. Le clavier communique
-parfaitement en mode <i lang="en">bootloader</i>, mais dès qu’il rebascule en mode HID : plus rien
-ne passe. C’est fou comment l’électronique, ça irrite.
-
-Après avoir montré le routage à mon client électronicien, il me recommande de faire un routage
-différent, en minimisant les longueurs de piste, et en séparant mieux les lignes QSPI (qui relient
-le RP2040 à la mémoire Flash) de celles du cristal, pour éviter la diaphonie. Je me dis qu’il
-chipote. Ça fait 30 ans que je bosse avec lui, il a toujours été du genre à chipoter. Sauf que, bien
-évidemment, il a raison.
-
-Nuke refait le routage encore une fois, en mode parano. Tout le bloc RP2040 + cristal + Flash
-devient aussi compact que possible. On fait partir le lot 26.01 : la parano a payé, tout fonctionne
-enfin comme on le voulait. On peut même supprimer la tempo de stabilisation de l’oscillateur.
-
-Cette version sera baptisée Oscar, en référence à ces histoires d’oscillateur. C’est celle qui sera
-fabriquée en série pour les Ergonautes.
-
-### STM32
-
-Nuke déteste ST en général et leur écosystème logiciel en particulier : basé sur Eclipse, reposant
-sur de la génération de <i lang="en">boilerplate</i> plutôt que sur des abstractions logicielles,
-et non libre par-dessus le marché…
-
-Accessoirement, les puces STM32 n’ont pas de <i lang="en">bootloader</i> UF2, qui permet de flasher
-par un simple glisser-déposer. Pour le Quacken, qu’on veut accessible au plus grand nombre, c’est un
-problème.
-
-Cela étant dit : si vous envisagez de faire votre propre projet embarqué (clavier ou autre), sachez
-que les contrôleurs STM32 peuvent se passer d’un cristal externe (en se calant sur l’horloge du
-contrôleur USB hôte), et qu’ils intègrent leur propre mémoire Flash, et même certaines résistances
-et capacités pour la protection du circuit. C’est donc **beaucoup** plus simple à mettre en œuvre et
-à intégrer qu’un RP2040.
-
-On ne regrette absolument pas notre choix du RP2040, mais voilà, vous êtes prévenus. :-)
-
-### Firmware
-
-Le [firmware ZMK] a été une aventure aussi. L’<i lang="en">IO expander</i> qu’on a choisi nécessite
-une version récente de Zephyr, qui n’est disponible que dans la branche `main` (nightly/instable)
-de ZMK.
-
-Une autre difficulté est que le RP2040 est mal supporté par ZMK. La situation s’améliore, là encore
-avec les versions 4.x de Zephyr, mais on essuie des plâtres… On remonte des bugs, l’équipe ZMK est
-réactive, et le bug qu’on a relevé est corrigé dans une branche dédiée au support HWMv2 de Zephyr
-(<i lang="en">hardware model v2</i>).
-
-Tout cela fera partie de la <i lang="en">release</i> 0.4 de ZMK. Pour l’instant, on a épinglé un <i
-lang="en">commit</i> bien précis pour avoir cette branche HWMv2.
-
-### Géométrie
-
-On a été satisfait de la géométrie dès le tout premier prototype (25.10), mais quitte à devoir faire
-des nouveaux protos pour tester les corrections électroniques, on en profite pour tester des
-ajustements.
-
-Avec Ergogen, le <i lang="en">stagger</i> et le <i lang="en">splay</i> se définissent en relatif
-d’un doigt à l’autre. Beaucoup de concepteurs de claviers se focalisent sur le <i
-lang="en">stagger</i> de l’auriculaire, mais on s’est aperçu que c’est souvent l’*annulaire* qui
-manque de <i lang="en">stagger</i> : l’écart annulaire/auriculaire est généralement suffisant.
-
-On a donc testé un ajustement de géométrie sur le 25.12. Un petit millimètre… mais qui fait une
-différence assez nette, les doigts se posent désormais *pile* au centre des touches. Adopté !
-
-
-Fabrication, configuration, expédition
-----------------------------------------------------------------------------------------------------
+La mise au point a été laborieuse. L’aide de [TeXitoi] et d’un de mes clients électroniciens aura
+été décisive. Il aura fallu quatre prototypes avant d’arriver à une version fonctionnelle…
+[J’en ai fait un article complet.](/articles/mise_au_point_du_quacken)
 
 Quand on a enfin reçu les PCB finalisés, il a fallu en assembler la majorité : clipser les switches
 selon la configuration choisie, faire souder les switches par des pros, mettre les keycaps, flasher
@@ -353,7 +234,7 @@ nôtres, on a annoncé qu’on publierait les sources [après la livraison des c
 
 Ça a été difficile à admettre pour certains Ergonautes. On le comprend bien.
 
-Ça a même viré au harcèlement pour obtenir les sources. On le comprend moins. Ça a été
+Ça a même viré au harcèlement pour obtenir les sources plus tôt. On le comprend moins. Ça a été
 particulièrement difficile à vivre pour l’équipe. J’écrirai peut-être à ce sujet un jour.
 
 *In fine*, 24h après la publication des sources, la première personne qui annonce « envisager » de
