@@ -33,15 +33,16 @@ Je vous raconte la naissance du [Quacken].
 [Selenium]:           https://onedeadkey.github.io/selenium
 [Quacken]:            https://onedeadkey.github.io/quacken
 
-[1DFH]:       /presentation/#dfh-1u-distance-from-home
-[Arsenik]:    /claviers/arsenik
-[Ferris]:     https://github.com/pierrechevalier83/ferris/
-[uf2]:        https://github.com/microsoft/uf2
-[I²C]:        https://fr.wikipedia.org/wiki/I2C
-[ZMK Studio]: https://zmk.dev/docs/features/studio
-[RP2040]:     https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html
-[Ergogen]:    https://ergogen.xyz
-[PacoVelobs]: https://mamot.fr/@PacoVelobs/
+[1DFH]:        /presentation/#dfh-1u-distance-from-home
+[Arsenik]:     /claviers/arsenik
+[Ferris]:      https://github.com/pierrechevalier83/ferris/
+[uf2]:         https://github.com/microsoft/uf2
+[I²C]:         https://fr.wikipedia.org/wiki/I2C
+[ZMK Studio]:  https://zmk.dev/docs/features/studio
+[RP2040]:      https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html
+[Ergogen]:     https://ergogen.xyz
+[PacoVelobs]:  https://mamot.fr/@PacoVelobs/
+[Hummingbird]: https://github.com/PJE66/hummingbird
 
 <!--more-->
 
@@ -145,6 +146,10 @@ on ajuste, on compare. Après quelques itérations, on finit par tomber sur cett
 - des touches de pouce en arc de cercle, la touche la plus rentrée étant dans l’axe de la colonne de
   repos de l’index (et non celle du majeur comme sur un clavier ISO).
 
+![Quacken en configuration Chouette (monobloc)](chouette_flex.png)
+
+![Quacken en configuration Pinson (split+tenting)](pinson_tenting.png)
+
 On le fait fabriquer… et **ça marche !** La géométrie fonctionne exactement comme on le voulait. On
 finira par le baptiser « Quacken Flex ». À partir de là, les ajustements se feront millimètre par
 millimètre.
@@ -153,7 +158,19 @@ millimètre.
 Positions médianes
 ----------------------------------------------------------------------------------------------------
 
-TODO
+Trois des six colonnes du Quacken peuvent se monter de deux façons différentes :
+
+- standard, avec trois touches ;
+- médiane, avec deux touches décalées de 0.3 unités.
+
+![6e colonne en position standard (gauche) ou médiane (droite)](positions_medianes.png)
+
+Ce décalage de 0.3u, combiné au <i lang="en">stagger</i> des colonnes, permet d’avoir une colonne
+qui est *pile* à mi-hauteur de sa colonne adjacente. C’est très agréable pour les extensions
+d’auriculaires, et ça permet aussi d’explorer des configurations plus exotiques, proche de l’esprit
+[Hummingbird].
+
+TODO: sélecteur de configurations
 
 
 Présentation au Capitole du Libre
@@ -233,7 +250,7 @@ puisse utiliser, étudier, modifier et produire ce clavier.
 
 Si le clavier devient populaire, beaucoup de gens se contenteront de la troisième option. Ça ne
 soutient pas le projet et ça nous aide pas à faire descendre les prix des PCB, mais ça contribue à
-péter le business des claviers à 400 €, c’est toujours ça de pris !
+péter le business des claviers à 400 €, c’est toujours ça de pris ! ✊
 
 ### Les limites du modèle
 
@@ -288,7 +305,7 @@ connaisse, mais j’ai un penchant pour la simplicité ; pour [Ash], à l’in
 meilleur clavier 2D : c’est son clavier de vadrouille préféré, mais iel reste fidèle à son Glove80
 pour le bureau.
 
-Bref. Essayez-le, et dites-nous. :-)
+Bref. Essayez-le, et dites-nous. 😊
 
 
 La suite ?
@@ -309,4 +326,6 @@ camarade [Seraf] bosse sur l’implémentation [Ækeynox-QMK], pour les claviers
 On a plein de choses prévues, mais je m’interdis désormais de les annoncer. Ça sortira quand ça
 sera prêt, comme pour tout bon projet libre.
 
-Merci à toutes les personnes qui nous ont soutenus. <i lang="en">Happy typing !</i>
+Encore merci à toutes les personnes qui nous ont soutenus. 🙏
+
+<i lang="en">Happy typing !</i>

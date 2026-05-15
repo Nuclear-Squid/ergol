@@ -101,9 +101,10 @@ géométrie et l’idée des positions médianes.
 
 Ça a très bien fonctionné. Du premier coup. Tellement simple ! Ergogen c’est du génie.
 
-<!-- photo de la Chouette -->
+![Quacken Zero en configuration Chouette](../quacken/chouette_zero.png)
 
-<!-- photo du Martinet -->
+![Quacken Zero en configuration Martinet](../quacken/martinet_zero.png)
+
 
 On achète des contrôleurs RP2040 au format Pro Micro. On commence par faire un pilote <i
 lang="en">bare metal</i> en Rust avec le framework [Keyberon] du camarade [TeXitoi], parce qu’on
@@ -114,8 +115,8 @@ dissocier la <i lang="en">board</i> (= le contrôleur) du <i lang="en">shield</i
 clavier). On décrit le routage du clavier, et on peut compiler son firmware pour n’importe quel
 contrôleur. Inratable.
 
-Côté géométrie, on voit assez vite qu’il y a des améliorations possibles. Je fais quelques maquettes
-SVG, et après quelques itérations, on finit par tomber sur cette géométrie :
+Côté géométrie, on voit assez vite qu’il y a des améliorations possibles. Je fais une série de
+maquettes, et après quelques itérations, on converge vers cette géométrie :
 
 ![Esquisse FreeCAD du PCB du Quacken](../quacken/freecad.png)
 
@@ -138,9 +139,9 @@ L’idée pour le Quacken Flex est d’avoir un clavier splittable. On l’imagi
 C’est une conception <i lang="en">diodeless</i>, chaque switch est relié directement à une IO du
 contrôleur (à gauche) ou de l’IO expander (à droite).
 
-<!-- photo de la Chouette -->
+![Quacken Flex en configuration Chouette (monobloc)](../quacken/chouette_flex.png)
 
-<!-- photo du Martinet -->
+![Quacken Flex en configuration Pinson (split+tenting)](../quacken/pinson_tenting.png)
 
 Le STM32F est couramment utilisé pour ce genre de choses. C’est notamment le cas du [Ferris] (split)
 et du [Keymini] (monobloc), deux claviers qu’on aime beaucoup ; mais on lui préfère le RP2040, plus
@@ -328,7 +329,7 @@ contrôleur USB hôte), et qu’ils intègrent leur propre mémoire Flash, anisi
 et capacités de protection du circuit. C’est donc *beaucoup* plus simple à mettre en œuvre et à
 intégrer qu’un RP2040.
 
-On ne regrette absolument pas notre choix du RP2040, mais voilà, vous êtes prévenus. :-)
+On ne regrette absolument pas notre choix du RP2040, mais voilà, vous êtes prévenus. 🙂
 
 
 Conclusion
@@ -345,7 +346,7 @@ C’est probablement un choix raisonnable — donc pas pour nous.
 routage, par contre, est critique. Il y a mille pièges à éviter, on en a expérimenté quelques-uns.
 Chaque erreur de routage suffit à causer un dysfonctionnement.
 
-Encore un grand merci à [TeXitoi] pour son aide décisive tout au long de ce projet. <3
+Encore un grand merci à [TeXitoi] pour son aide décisive tout au long de ce projet. 🙏
 
 [Nuclear-Squid] a publié tout son travail [sur son dépôt](https://github.com/Nuclear-Squid/Quacken) :
 la géométrie Ergogen (incluant les composants spécifiques pour le Quacken), la conception KiCad et
