@@ -276,7 +276,7 @@ connaisse, mais j’ai un penchant pour la simplicité ; pour [Ash], à l’in
 meilleur clavier 2D : c’est son clavier de vadrouille préféré, mais iel reste fidèle à son Glove80
 pour le bureau.
 
-Bref. Eessayez-le, et dites-nous. :-)
+Bref. Essayez-le, et dites-nous. :-)
 
 
 La suite ?
