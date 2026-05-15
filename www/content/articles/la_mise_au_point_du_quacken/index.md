@@ -101,9 +101,9 @@ géométrie et l’idée des positions médianes.
 
 Ça a très bien fonctionné. Du premier coup. Tellement simple ! Ergogen c’est du génie.
 
-![Quacken Zero en configuration Chouette](../quacken/chouette_zero.png)
+![Quacken Zero en configuration Chouette](../quacken/chouette_zero.jpeg)
 
-![Quacken Zero en configuration Martinet](../quacken/martinet_zero.png)
+![Quacken Zero en configuration Martinet](../quacken/martinet_zero.jpeg)
 
 
 On achète des contrôleurs RP2040 au format Pro Micro. On commence par faire un pilote <i
@@ -139,9 +139,9 @@ L’idée pour le Quacken Flex est d’avoir un clavier splittable. On l’imagi
 C’est une conception <i lang="en">diodeless</i>, chaque switch est relié directement à une IO du
 contrôleur (à gauche) ou de l’IO expander (à droite).
 
-![Quacken Flex en configuration Chouette (monobloc)](../quacken/chouette_flex.png)
+![Quacken Flex en configuration Chouette (monobloc)](../quacken/chouette_flex.jpeg)
 
-![Quacken Flex en configuration Pinson (split+tenting)](../quacken/pinson_tenting.png)
+![Quacken Flex en configuration Pinson (split+tenting)](../quacken/pinson_tenting.jpeg)
 
 Le STM32F est couramment utilisé pour ce genre de choses. C’est notamment le cas du [Ferris] (split)
 et du [Keymini] (monobloc), deux claviers qu’on aime beaucoup ; mais on lui préfère le RP2040, plus
@@ -229,6 +229,14 @@ c’est forcément la faute au matériel, non ?
 En fouillant les forums Zephyr et le code ZMK, je vois qu’il existe une option qui permet de
 rallonger le temps d’attente pour attendre la stabilisation du cristal à 12.000 MHz.
 Ça résout le problème chez Tam, parfait.
+
+```c
+&xosc {
+    // Ensure the 12MHz oscillator has enough time to stabilize properly.
+    // Required by Flex 25.xx, should be useless with Flex 26.01.
+    startup-delay-multiplier = <64>;
+}
+```
 
 Du moins, sur le modèle 25.11. Parce que sur le 25.12 : rien. Nada. Nib. Le clavier communique
 bien en mode <i lang="en">bootloader</i>, mais dès qu’il rebascule en mode HID : plus rien ne

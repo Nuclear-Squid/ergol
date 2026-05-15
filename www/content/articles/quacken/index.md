@@ -14,6 +14,8 @@ présentait au [Capitole du Libre], pour le proposer à prix libre sur la [bouti
 y a quelques jours, après des centaines d’heures de travail cumulées, on livrait le premier lot
 qu’on a fabriqué pour les Ergonautes.
 
+![Quacken en configuration Corbeau](quacken.png)
+
 Je vous raconte la naissance du [Quacken].
 
 [Nuclear-Squid]:           https://github.com/Nuclear-Squid
@@ -146,9 +148,9 @@ on ajuste, on compare. Après quelques itérations, on finit par tomber sur cett
 - des touches de pouce en arc de cercle, la touche la plus rentrée étant dans l’axe de la colonne de
   repos de l’index (et non celle du majeur comme sur un clavier ISO).
 
-![Quacken en configuration Chouette (monobloc)](chouette_flex.png)
+![Quacken en configuration Chouette (monobloc)](chouette_flex.jpeg)
 
-![Quacken en configuration Pinson (split+tenting)](pinson_tenting.png)
+![Quacken en configuration Pinson (split+tenting)](pinson_tenting.jpeg)
 
 On le fait fabriquer… et **ça marche !** La géométrie fonctionne exactement comme on le voulait. On
 finira par le baptiser « Quacken Flex ». À partir de là, les ajustements se feront millimètre par
@@ -163,7 +165,7 @@ Trois des six colonnes du Quacken peuvent se monter de deux façons différentes
 - standard, avec trois touches ;
 - médiane, avec deux touches décalées de 0.3 unités.
 
-![6e colonne en position standard (gauche) ou médiane (droite)](positions_medianes.png)
+![6e colonne en position standard (gauche) ou médiane (droite)](positions_medianes.jpeg)
 
 Ce décalage de 0.3u, combiné au <i lang="en">stagger</i> des colonnes, permet d’avoir une colonne
 qui est *pile* à mi-hauteur de sa colonne adjacente. C’est très agréable pour les extensions
