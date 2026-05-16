@@ -122,3 +122,8 @@ author = "authors"
     section  = ["html"]
     taxonomy = ["html"]
     term     = ["html"]
+
+[params.extra.mastodon]
+enable = true
+host = "eldritch.cafe"
+username = "ergonautes"
