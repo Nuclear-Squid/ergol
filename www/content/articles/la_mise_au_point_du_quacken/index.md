@@ -310,7 +310,7 @@ les 1 000 à 10 000 cycles des connecteurs Jack.
 
 - RJ11/RJ45 : simple, éprouvé, utilisé sur le KeyboardIO Model01, mais trop encombrant pour le
   Quacken ;
-- USB : éprouvé, mais risque de confusion avec le port USB de liaison au PC, et le càble est trop
+- USB : éprouvé, mais risque de confusion avec le port USB de liaison au PC, et le câble est trop
   rigide (effet de ressort entre les deux moitiés de clavier).
 
 <i lang="en">Long story short :</i> ça serait beaucoup plus simple de faire des claviers à double
