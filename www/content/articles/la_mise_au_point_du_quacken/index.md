@@ -1,6 +1,6 @@
 +++
 title = "La mise au point du Quacken"
-date = 2026-05-15T10:00:00+01:00
+date = 2026-05-16T10:00:00+01:00
 author = "kaze"
 tags = ["communauté", "matériel"]
 +++
