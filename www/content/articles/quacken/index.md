@@ -123,10 +123,12 @@ Notre objectif est de faire exactement l’inverse : une géométrie sans comp
 qu’on va fabriquer collectivement afin de réduire les coûts.
 
 On est fan de claviers (très) compacts, la magie du [1DFH] permettant d’aller vers des géométries
-qui tombent bien sous les doigts : un bon <i lang="en">stagger</i> vertical pour compenser les
-différences de longueur des doigts, un <i lang="en">splay</i> prononcé pour laisser les auriculaires
-s’étendre vers l’extérieur, et surtout : des touches de pouces placées sur un arc de cercle, pour
-avoir enfin trois vraies touches par pouce.
+qui tombent bien sous les doigts : un bon <i lang="en"><abbr
+  title="décalage vertical entre deux colonnes adjacentes">stagger</abbr></i> pour compenser les
+différences de longueur des doigts, un <i lang="en"><abbr
+  title="angle entre deux colonnes adjacentes">splay</abbr></i> prononcé pour laisser les
+auriculaires s’étendre vers l’extérieur, et surtout : des touches de pouces placées sur un arc de
+cercle, pour avoir enfin trois vraies touches par pouce.
 
 On réalise un premier proto monobloc sur base ProMicro avec [Ergogen], un outil incroyable que nous
 avait montré l’ami [PacoVelobs]. On le baptise Quacken Zero. C’est notre tout premier poticlavier !
