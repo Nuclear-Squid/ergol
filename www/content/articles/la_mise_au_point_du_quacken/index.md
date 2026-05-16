@@ -319,7 +319,7 @@ utilisateur’ices. On reste donc sur une solution mono-contrôleur… et là, l
 est le plus adapté mécaniquement, tout en étant *acceptable* électriquement.
 
 Un connecteur magnétique 4 points type Pogo serait idéal, mais en attendant : <i lang="en">in TRRS
-ws trust</i>.
+we trust</i>.
 
 ### Passer à STM32 ?
 
