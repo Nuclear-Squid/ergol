@@ -331,8 +331,8 @@ flasher par un simple glisser-déposer. Pour le Quacken, qu’on veut accessible
 c’est un problème.
 
 Cela étant dit : si vous envisagez de faire votre propre projet embarqué (clavier ou autre), sachez
-que les contrôleurs STM32 peuvent se passer d’un cristal externe (en se calant sur l’horloge du
-contrôleur USB hôte), et qu’ils intègrent leur propre mémoire Flash, anisi que certaines résistances
+que les contrôleurs STM32 peuvent se passer d’un cristal externe (en se calant sur le débit de
+données de l’USB), et qu’ils intègrent leur propre mémoire Flash, anisi que certaines résistances
 et capacités de protection du circuit. C’est donc *beaucoup* plus simple à mettre en œuvre et à
 intégrer qu’un RP2040.
 
