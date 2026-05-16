@@ -203,7 +203,7 @@ personnes intéressées de faire le montage nous-mêmes, à prix libre évidemme
 l’option.
 
 Petite déception : tout le monde ou presque a commandé son Quacken en configuration 42 touches. On
-pensait que les positions médianes feraient fureur, ça a été un énorme flop. :-D
+pensait que les positions médianes feraient fureur, ça a été un énorme flop. 😅
 
 
 Mise au point, fabrication, expédition
