@@ -117,7 +117,7 @@ d’électronique, donc tout va bien se passer ? (Mouahahaha, <i lang="en">fam
 Géométrie radi(c)ale
 ----------------------------------------------------------------------------------------------------
 
-Les fabricants mainstream de claviers ergonomiques doivent fairn des compromis sur la géométrie pour
+Les fabricants mainstream de claviers ergonomiques doivent faire des compromis sur la géométrie pour
 rassurer leurs éventuels acheteurs, quitte à dégrader l’ergonomie : c’est un impératif commercial.
 Notre objectif est de faire exactement l’inverse : une géométrie sans compromis, pour un clavier
 qu’on va fabriquer collectivement afin de réduire les coûts.
