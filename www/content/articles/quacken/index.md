@@ -14,8 +14,6 @@ présentait au [Capitole du Libre], pour le proposer à prix libre sur la [bouti
 y a quelques jours, après des centaines d’heures de travail cumulées, on livrait le premier lot
 qu’on a fabriqué pour les Ergonautes.
 
-![Quacken en configuration Corbeau](quacken.png)
-
 Je vous raconte la naissance du [Quacken].
 
 [Nuclear-Squid]:           https://github.com/Nuclear-Squid
@@ -47,6 +45,8 @@ Je vous raconte la naissance du [Quacken].
 [Hummingbird]: https://github.com/PJE66/hummingbird
 
 <!--more-->
+
+![Quacken en configuration Corbeau](quacken.png)
 
 <style>
 .highlight,
@@ -172,7 +172,15 @@ qui est *pile* à mi-hauteur de sa colonne adjacente. C’est très agréable po
 d’auriculaires, et ça permet aussi d’explorer des configurations plus exotiques, proche de l’esprit
 [Hummingbird].
 
-TODO: sélecteur de configurations
+<iframe style="width: 100%; aspect-ratio: 3/2; border: none;"
+    src="https://onedeadkey.github.io/quacken/keeb.html"></iframe>
+
+Chaque configuration porte un nom d’oiseau. La Chouette (<i lang="en">Owl</i>) est à nos yeux une
+bonne façon d’utiliser six colonnes sur un clavier, mais beaucoup d’utilisateur’ices lui préfèrent
+les configurations classiques 3×6 (Corbeau / <i lang="en">Raven</i>) ou 3×5 (Huppe / <i
+lang="en">Hoppoe</i>).
+
+Tous les choix sont valides : *votre clavier, vos règles !*
 
 
 Présentation au Capitole du Libre
