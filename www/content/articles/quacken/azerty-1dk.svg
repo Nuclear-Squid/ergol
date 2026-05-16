@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 0 720 240">
+  <style xmlns="http://www.w3.org/1999/xhtml" type="text/css">
+    :root {
+      color-scheme: light dark;
+      --bg-color:  #fff;
+      --fg-color:  #666;
+      --dead-key:  red;
+      --layer-odk: green;
+      --color-odk: #5d58;
+      --layer-sym: blue;
+      --color-sym: #99f8;
+    }
+
+    @media (prefers-color-scheme: dark) { :root {
+      --bg-color:  #444;
+      --bg-color:  #383838;
+      --fg-color:  #ccc;
+      --dead-key:  #f44;
+      --layer-odk: #9e3;
+      --color-odk: #9e38;
+      --color-odk: #30630e;
+      --layer-sym: #99f;
+      --color-sym: #99f8;
+    }}
+
+    .deadKey  { fill: var(--dead-key); }
+    .layerOdk { fill: var(--layer-odk); }
+    .colorOdk { fill: var(--color-odk); }
+    .layerSym { fill: var(--layer-sym); }
+    .colorSym { fill: var(--color-sym); }
+
+    rect {
+      fill: var(--bg-color);
+      stroke: #666;
+      stroke-width: .5px;
+    }
+    text {
+      fill: var(--fg-color);
+      font: normal 20px sans-serif;
+      text-align: center;
+      text-anchor: middle;
+    }
+
+    #row_AD { transform: translate(64px,   4px); }
+    #row_AC { transform: translate(64px,  64px); }
+    #row_AB { transform: translate(64px, 124px); }
+    #row_AA { transform: translate(64px, 184px); }
+    .left   { transform: translate(-15px, 0); }
+    .right  { transform: translate(+15px, 0); }
+
+    .layer  { font-size: 14px; font-weight: bold; }
+    .layeSym { font-weight: normal; }
+  </style>
+
+  <g id="row_AD">
+    <g class="left">
+      <g id="KeyQ" transform="translate(0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">A</text>
+        <text x="38.0" y="20.6" class="layerSym">^</text>
+        <text x="38.0" y="43.4" class="layerOdk">à</text>
+      </g>
+      <g id="KeyW" transform="translate(60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Z</text>
+        <text x="38.0" y="20.6" class="layerSym">&lt;</text>
+        <text x="38.0" y="43.4" class="layerOdk">é</text>
+      </g>
+      <g id="KeyE" transform="translate(120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">E</text>
+        <text x="38.0" y="20.6" class="layerSym">&gt;</text>
+        <text x="38.0" y="43.4" class="layerOdk">è</text>
+      </g>
+      <g id="KeyR" transform="translate(180)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">R</text>
+        <text x="38.0" y="20.6" class="layerSym">$</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="KeyT" transform="translate(240)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">T</text>
+        <text x="38.0" y="20.6" class="layerSym">%</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+    </g>
+    <g class="right">
+      <g id="KeyY" transform="translate(300)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Y</text>
+        <text x="38.0" y="20.6" class="layerSym">@</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="KeyU" transform="translate(360)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">U</text>
+        <text x="38.0" y="20.6" class="layerSym">&amp;</text>
+        <text x="38.0" y="43.4" class="layerOdk">ù</text>
+      </g>
+      <g id="KeyI" transform="translate(420)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">I</text>
+        <text x="38.0" y="20.6" class="layerSym">*</text>
+        <text x="38.0" y="43.4" class="layerOdk">ï</text>
+      </g>
+      <g id="KeyO" transform="translate(480)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">O</text>
+        <text x="38.0" y="20.6" class="layerSym">'</text>
+        <text x="38.0" y="43.4" class="layerOdk">œ</text>
+      </g>
+      <g id="KeyP" transform="translate(540)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">P</text>
+        <text x="38.0" y="20.6" class="layerSym">`</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+    </g>
+  </g>
+
+  <g id="row_AC">
+    <g class="left">
+      <g id="KeyA" transform="translate(0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">Q</text>
+        <text x="38.0" y="20.6" class="layerSym">{</text>
+        <text x="38.0" y="43.4" class="layerOdk">â</text>
+      </g>
+      <g id="KeyS" transform="translate(60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">S</text>
+        <text x="38.0" y="20.6" class="layerSym">(</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="KeyD" transform="translate(120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">D</text>
+        <text x="38.0" y="20.6" class="layerSym">)</text>
+        <text x="38.0" y="43.4" class="layerOdk">ê</text>
+      </g>
+      <g id="KeyF" transform="translate(180)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">F</text>
+        <text x="38.0" y="20.6" class="layerSym">}</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="KeyG" transform="translate(240)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">G</text>
+        <text x="38.0" y="20.6" class="layerSym">=</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+    </g>
+    <g class="right">
+      <g id="KeyH" transform="translate(300)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">H</text>
+        <text x="38.0" y="20.6" class="layerSym">\</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="KeyJ" transform="translate(360)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">J</text>
+        <text x="38.0" y="20.6" class="layerSym">+</text>
+        <text x="38.0" y="43.4" class="layerOdk">û</text>
+      </g>
+      <g id="KeyK" transform="translate(420)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">K</text>
+        <text x="38.0" y="20.6" class="layerSym">-</text>
+        <text x="38.0" y="43.4" class="layerOdk">î</text>
+      </g>
+      <g id="KeyL" transform="translate(480)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">L</text>
+        <text x="38.0" y="20.6" class="layerSym">/</text>
+        <text x="38.0" y="43.4" class="layerOdk">ô</text>
+      </g>
+      <g id="Semicolon" transform="translate(540)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">M</text>
+        <text x="38.0" y="20.6" class="layerSym">"</text>
+        <text x="38.0" y="43.4" class="layerOdk">'</text>
+      </g>
+      <g id="Quote" transform="translate(600)">
+        <rect width="52" height="52" rx="5" ry="5" class="colorOdk"/>
+        <text x="12.8" y="20.6" class="level2 deadKey">★</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+    </g>
+  </g>
+
+  <g id="row_AB">
+    <g class="left">
+      <g id="KeyZ" transform="translate(0)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">W</text>
+        <text x="38.0" y="20.6" class="layerSym">~</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="KeyX" transform="translate(60)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">X</text>
+        <text x="38.0" y="20.6" class="layerSym">[</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="KeyC" transform="translate(120)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">C</text>
+        <text x="38.0" y="20.6" class="layerSym">]</text>
+        <text x="38.0" y="43.4" class="layerOdk">ç</text>
+      </g>
+      <g id="KeyV" transform="translate(180)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">V</text>
+        <text x="38.0" y="20.6" class="layerSym">_</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="KeyB" transform="translate(240)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">B</text>
+        <text x="38.0" y="20.6" class="layerSym">#</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+    </g>
+    <g class="right">
+      <g id="KeyN" transform="translate(300)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="20.6" class="level2">N</text>
+        <text x="38.0" y="20.6" class="layerSym">|</text>
+        <text x="38.0" y="43.4" class="layerOdk">ñ</text>
+      </g>
+      <g id="KeyM" transform="translate(360)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">,</text>
+        <text x="12.8" y="20.6" class="level2">?</text>
+        <text x="38.0" y="20.6" class="layerSym">!</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="Comma" transform="translate(420)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">;</text>
+        <text x="12.8" y="20.6" class="level2">.</text>
+        <text x="38.0" y="20.6" class="layerSym">;</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="Period" transform="translate(480)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">:</text>
+        <text x="12.8" y="20.6" class="level2">/</text>
+        <text x="38.0" y="20.6" class="layerSym">:</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+      <g id="Slash" transform="translate(540)">
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <text x="12.8" y="43.4" class="level1">!</text>
+        <text x="12.8" y="20.6" class="level2">§</text>
+        <text x="38.0" y="20.6" class="layerSym">?</text>
+        <text x="38.0" y="43.4" class="layerOdk"></text>
+      </g>
+    </g>
+  </g>
+
+  <g id="row_AA">
+    <g transform="translate(90)">
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <text x="20.5" y="42.8" class="layer">shift</text>
+    </g>
+    <g transform="translate(180)">
+      <rect width="232" height="52" rx="5" ry="5"/>
+    </g>
+    <g transform="translate(420)">
+      <rect width="82" height="52" rx="5" ry="5" class="colorSym"/>
+      <text x="20.5" y="42.8" class="layer">altgr</text>
+    </g>
+  </g>
+
+</svg>

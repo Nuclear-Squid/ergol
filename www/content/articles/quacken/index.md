@@ -34,6 +34,7 @@ Je vous raconte la naissance du [Quacken].
 [Quacken]:            https://onedeadkey.github.io/quacken
 
 [1DFH]:        /presentation/#dfh-1u-distance-from-home
+[Bépolar]:     /lafayette/#bépolar
 [Arsenik]:     /claviers/arsenik
 [Ferris]:      https://github.com/pierrechevalier83/ferris/
 [uf2]:         https://github.com/microsoft/uf2
@@ -65,7 +66,14 @@ code { font-family: monospace; }
 - [Présentation au Capitole du Libre]
 - [Mise au point, fabrication, expédition]
 - [Modèle économique <i lang="en">open-hardware</i>]
-- [Bon à quel point ?]
+  - [Libre et bénévole]
+  - [Les limites du modèle]
+  - [Les vertus du prix libre]
+- [Pour qui ?]
+  - [Pour les dactylographes expérimenté’es]
+  - [Pour Ergo‑L et QWERTY-Lafayette]
+  - [Pour AZERTY et Bépo]
+  - [Pas pour le grand public]
 - [La suite ?]
 :::
 
@@ -300,8 +308,10 @@ sont des personnes discrètes et bienveillantes, on a beaucoup de chance d’avo
 qu’on a plaisir à le faire. Merci à vous. ❤️
 
 
-Bon à quel point ?
+Pour qui ?
 ----------------------------------------------------------------------------------------------------
+
+### Pour les dactylographes expérimenté’es
 
 Ça fait six mois que j’ai un Quacken Flex au boulot. Tous les lundis, j’arrive au taf, je
 m’installe, je commence à répondre aux courriels sur mon Poticlavier.
@@ -312,11 +322,55 @@ ouais, quand même ! ». À chaque fois.
 Ça fait 20 ans que j’ai commencé cet intérêt spécifique sur les claviers ergonomiques, et je suis
 *surpris* tous les lundi par l’efficacité du Quacken. C’est à ce niveau-là.
 
-Bien sûr, quand on fait soi-même son clavier, on manque d’objectivité ; et ça reste un clavier assez
-ambitieux, pas un modèle grand public. Je trouve que c’est de loin le meilleur clavier que je
-connaisse, mais j’ai un penchant pour la simplicité ; pour [Ash], à l’inverse, ça n’est que le
-meilleur clavier 2D : c’est son clavier de vadrouille préféré, mais iel reste fidèle à son Glove80
-pour le bureau.
+Bien sûr, quand on fait soi-même son clavier, on manque d’objectivité. Je trouve que c’est de loin
+le meilleur clavier que je connaisse, mais j’ai un penchant pour la simplicité ; pour [Ash], à
+l’inverse, ça n’est que le meilleur clavier 2D : c’est son clavier de vadrouille préféré, mais iel
+reste fidèle à son Glove80 pour le bureau.
+
+De façon plus objective : la grande majorité des retours ont été extrêmement positifs. C’est un
+clavier atypique, qui peut nécessiter un temps d’adaptation ; mais on voit déjà des adeptes acheter
+leur deuxième voire troisième Quacken. 😊
+
+### Pour Ergo‑L et QWERTY-Lafayette
+
+Ce clavier, comme tous les claviers compacts, se prête particulièrement bien aux dispositions [1DFH]
+comme Ergo‑L ou QWERTY-Lafayette. On l’a conçu pour être le <i lang="en">flagship</i> de ces
+dispositions de clavier.
+
+L’implémentation [Ækeynox-ZMK] permet même d’**émuler** Ergo‑L ou QWERTY-Lafayette sur un ordinateur
+configuré en AZERTY ou QWERTY-intl. J’utilise cette émulation au quotidien en clientèle, et, à part
+pour quelques caractères exotiques, l’utilisation est quasiment transparente.
+
+### Pour AZERTY et Bépo
+
+Pour ces dispositions de clavier, nos proposons des *adaptations* avec le firmware [Ækeynox-ZMK].
+
+- Pour un ordinateur configuré en Bépo, le Quacken émule [Bépolar], ce qui permet de l’utiliser en
+  3×5 et de résoudre le principal problème de Bépo : la surcharge de l’auriculaire droit.
+- Pour un ordinateur configuré en AZERTY, le Quacken émule AZERTY-1dk (a.k.a. « Kazerty »), une
+  adaptation type Lafayette d’AZERTY avec une seule touche morte sur la 6e colonne.
+
+![AZERTY-1dk](azerty-1dk.svg)
+
+C’est une solution qu’on recommande aux personnes sachant déjà taper en dactylo stricte ; dans le
+cas contraire, mieux vaut apprendre directement Ergo‑L ou QWERTY-Lafayette.
+
+### Pas pour le grand public
+
+Le Quacken n’est pas un clavier grand public.
+
+Parmi les retours négatifs qu’on a eus au Capitole du Libre, beaucoup d’adeptes du TypeMatrix n’ont
+pas su l’utiliser, parfois à cause de l’absence de marquage, parfois par manque de rigueur en
+dactylo. Notamment, on a vu quelques personnes utiliser l’annulaire sur la 5e colonne : ça *passe*
+sur un TypeMatrix ou un Planck, mais c’est rédhibitoire sur le Quacken.
+
+Ça n’est pas un clavier de <i lang="en">gaming</i> non plus. L’absence de rangée de chiffres
+pourrait être un problème pour certains usages.
+
+Malgré tout, on le croit accessible à toutes celles et ceux qui tapent en dactylo stricte, ou qui
+sont prêts à apprendre. On a vu des gens l’acheter pour apprendre Ergo‑L et en être très contents —
+même si on préfère recommander d’apprendre la dactylo *avant* d’acheter un clavier ergonomique. Le
+fait que le Quacken soit monobloc par défaut simplifie beaucoup de choses.
 
 Bref. Essayez-le, et dites-nous. 😊
 
