@@ -289,9 +289,10 @@ Le prix libre a très bien fonctionné : la générosité des uns a compensé 
 autres. Ça nous a permis de livrer des Quacken au meilleur prix possible pour le plus grand nombre,
 tout en faisant un peu de marge pour payer les prochains protos.
 
-On a eu aussi des dons. Et des messages de soutien. Ça nous met la larme à l’œil. Quel dommage que
-les belles personnes soient si discrètes, alors que les sacs à merde accaparent autant l’attention !
-J’aimerais pouvoir contribuer à changer ça, au moins au sein de notre communauté.
+Outre les ventes, on a eu aussi des dons. Et des messages de soutien, beaucoup. On a été surpris, et
+très émus, de recevoir autant de soutien. Avec la fatigue, on a pu être blessés par des comportements
+toxiques, mais sur tout le projet ils ont été très rares. L’immense majorité des Ergonautes sont des
+personnes discrètes et bienveillantes, on a beaucoup de chance d’avoir une telle communauté.
 
 À celles et ceux qui nous ont soutenus dans toute cette aventure : c’est pour vous qu’on bosse, et
 qu’on a plaisir à le faire. Merci à vous. ❤️
