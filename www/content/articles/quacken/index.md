@@ -291,8 +291,8 @@ tout en faisant un peu de marge pour payer les prochains protos.
 
 Outre les ventes, on a eu aussi des dons. Et des messages de soutien, beaucoup. On a été surpris, et
 très émus, de recevoir autant de soutien. Avec la fatigue, on a pu être blessés par des comportements
-toxiques, mais sur tout le projet ils ont été très rares. L’immense majorité des Ergonautes sont des
-personnes discrètes et bienveillantes, on a beaucoup de chance d’avoir une telle communauté.
+toxiques, mais sur l’ensemble du projet ils ont été très rares. L’immense majorité des Ergonautes
+sont des personnes discrètes et bienveillantes, on a beaucoup de chance d’avoir une telle communauté.
 
 À celles et ceux qui nous ont soutenus dans toute cette aventure : c’est pour vous qu’on bosse, et
 qu’on a plaisir à le faire. Merci à vous. ❤️
