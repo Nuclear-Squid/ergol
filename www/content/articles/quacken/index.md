@@ -172,7 +172,7 @@ qui est *pile* à mi-hauteur de sa colonne adjacente. C’est très agréable po
 d’auriculaires, et ça permet aussi d’explorer des configurations plus exotiques, proche de l’esprit
 [Hummingbird].
 
-<iframe style="width: 100%; aspect-ratio: 3/2; border: none;"
+<iframe style="width: 100%; aspect-ratio: 2/1; border: none;"
     src="https://onedeadkey.github.io/quacken/keeb.html"></iframe>
 
 Chaque configuration porte un nom d’oiseau. La Chouette (<i lang="en">Owl</i>) est à nos yeux une
