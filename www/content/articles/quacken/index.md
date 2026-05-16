@@ -138,7 +138,7 @@ moins. C’est un bon clavier, je l’utilise encore (c’est mon clavier second
 On se rend vite compte d’une chose : avec ce type de géométrie, c’est tout ou rien, il n’y a pas
 d’entre-deux. Ça tombe bien, les compromis c’est pas notre truc. On se remet donc à la planche à
 dessin (dans mon cas : du SVG fait avec Vim). On imprime des maquettes, on pose les doigts dessus,
-on ajuste, on compare. Après quelques itérations, on finit par tomber sur cette géométrie :
+on ajuste, on compare. Après quelques itérations, on converge vers cette géométrie :
 
 ![Esquisse FreeCAD du PCB du Quacken](freecad.png)
 
