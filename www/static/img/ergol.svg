@@ -20,6 +20,8 @@
       --bg-number:        hsl(295, 100%, 95%);
       --bg-letter:        hsl(222, 100%, 95%);
       --bg-home:          hsl(222, 100%, 90%);
+      /* 1dk */
+      --bg-odk:           #7e7;
     }
 
     @media (prefers-color-scheme: dark) { :root {
@@ -37,6 +39,8 @@
       --bg-number:        hsl(280, 10%, 34%);
       --bg-letter:        hsl(220, 15%, 35%);
       --bg-home:          hsl(225, 30%, 30%);
+      /* 1dk */
+      --bg-odk:           #484;
     }}
 
     rect, path {
@@ -91,6 +95,10 @@
     :root:hover .level6.secondary { display: block; }
     .altgr .level5.secondary,
     .altgr .level6.secondary { display: none !important; }
+
+    /* highlight the dead key */
+    .mixed #odk,
+    .odk #odk { fill: var(--bg-odk); }
 
     /* show AltGr */
     .altgr .level3,
@@ -552,8 +560,8 @@
         <rect width="52" height="52" rx="5" ry="5"/>
         <g class="key" text-anchor="middle">
           <g class="level1 non_diacritic deadKey">
-            <text x="12.8" y="43.4" class="dk_mark">﹍</text>
-            <text x="12.8" y="43.4" class="dk_char">★</text>
+            <rect width="26" height="26" rx="5" ry="5" y="26" id="odk"/>
+            <text x="12.8" y="47.4" class="dk_char">★</text>
           </g>
           <text x="12.8" y="20.6" class="level2">!</text>
           <text x="38.0" y="43.4" class="level3">'</text>
