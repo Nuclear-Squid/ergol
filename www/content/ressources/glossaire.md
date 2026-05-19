@@ -10,7 +10,42 @@ title = "Glossaire"
   code { font-family: monospace; }
   .footnotes { font-size: smaller; }
   .footnotes li p { margin: 0.2em 0; }
+  table { margin: 0 auto; border-collapse: collapse; }
+  td { border: 1px solid var(--fg-banner-border); }
+  th { border: 1px solid var(--fg-banner-border); }
+  th { background-color: var(--bg-banner); font-weight: normal; }
+  td:first-child { font-size: 1.8em; height: 1.1em; }
 </style>
+
+
+Touches spéciales
+--------------------------------------------------------------------------------
+
++-------------+----------------------+-----------------------------------------+
+| picto       | en                   | fr                                      |
++:===========:+======================+=========================================+
+|             | Space                | Espace                                  |
++-------------+----------------------+-----------------------------------------+
+| ⏎           | Enter, Return        | Entrée, Retour chariot (?)              |
++-------------+----------------------+-----------------------------------------+
+| ⌫           | BackSpace            | Effacement, Retour arrière (?)          |
++-------------+----------------------+-----------------------------------------+
+| ⌦           | Delete               | Suppr.                                  |
++-------------+----------------------+-----------------------------------------+
+| ⇧           | Shift                | Maj.                                    |
++-------------+----------------------+-----------------------------------------+
+| ⇪           | CapsLock             | Verr.Maj.                               |
++-------------+----------------------+-----------------------------------------+
+| ↹           | Tab                  | Tab                                     |
++-------------+----------------------+-----------------------------------------+
+| ⎋           | Escape (Esc)         | Échappement (Échap.)                    |
++-------------+----------------------+-----------------------------------------+
+| ⌘           | Command              | Commande                                |
++-------------+----------------------+-----------------------------------------+
+| ⌥           | Option               | Option                                  |
++-------------+----------------------+-----------------------------------------+
+| ^           | Control              | Contrôle                                |
++-------------+----------------------+-----------------------------------------+
 
 
 Analyse et optimisation
@@ -187,6 +222,7 @@ prononciation.
 [touche morte]:      #touche-morte-def
 [diacritiques-wiki]: https://fr.wikipedia.org/wiki/Diacritique
 [diacritiques]:      #diacritique-def
+
 
 ### Windows
 
