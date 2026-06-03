@@ -1,0 +1,48 @@
+diff --git a/keymaps/fr/ergol/ergol_angle_mod.xkb_symbols b/keymaps/fr/ergol/ergol_angle_mod.xkb_symbols
+index d7da283..e45e5d2 100644
+--- a/keymaps/fr/ergol/ergol_angle_mod.xkb_symbols
++++ b/keymaps/fr/ergol/ergol_angle_mod.xkb_symbols
+@@ -24,8 +24,8 @@
+ //       ┃ A   │ S   │ E   │ N   │ F   ┃ L   │ R   │ T   │ I   │ U   ┃ "   ┆ |   ┆
+ //       ┃   à │   é │   è │   ê │   ñ ┃   ( │   ) │   î │   ï │   ù ┃ '   ┆ \   ┆
+ // ╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
+-// ┆ Z   ┃ X   │ ? ¿ │ V   │ B   │ >   ┃ :   │ H   │ G   │ ; • │ K   ┃
+-// ┆   æ ┃   ß │ - ‑ │   – │   — │ <   ┃ . … │     │  *µ │ , · │     ┃
++// ┆ Z   ┃ X   │ ? ¿ │ V   │ B   │ Del ┃ :   │ H   │ G   │ ; • │ K   ┃
++// ┆   æ ┃   ß │ - ‑ │   – │   — │ Bsp ┃ . … │     │  *µ │ , · │     ┃
+ // ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚
+ //
+ // AltGr layer
+@@ -89,7 +89,7 @@ xkb_symbols "ergol" {
+     key <AB02> {[ minus           , question        , bracketright    , dead_ogonek     , U2011           , questiondown    ]}; // - ? ] ˛ ‑ ¿
+     key <AB03> {[ v               , V               , underscore      , endash          , endash          , VoidSymbol      ]}; // v V _ – –
+     key <AB04> {[ b               , B               , numbersign      , VoidSymbol      , emdash          , VoidSymbol      ]}; // b B #   —
+-    key <AB05> {[ less            , greater         , VoidSymbol      , VoidSymbol      , VoidSymbol      , VoidSymbol      ]}; // < >
++    key <AB05> {[ BackSpace       , BackSpace       , Delete          , Delete          , VoidSymbol      , VoidSymbol      ]}; // bsp bsp del del
+     key <AB06> {[ period          , colon           , bar             , brokenbar       , ellipsis        , VoidSymbol      ]}; // . : | ¦ …
+     key <AB07> {[ h               , H               , exclam          , notsign         , VoidSymbol      , VoidSymbol      ]}; // h H ! ¬
+     key <AB08> {[ g               , G               , semicolon       , dead_cedilla    , dead_greek      , VoidSymbol      ]}; // g G ; ¸ µ
+diff --git a/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod.xkb_keymap b/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod.xkb_keymap
+index dd39536..43882a0 100644
+--- a/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod.xkb_keymap
++++ b/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod.xkb_keymap
+@@ -30,8 +30,8 @@ xkb_keymap {
+   //       ┃ A   │ S   │ E   │ N   │ F   ┃ L   │ R   │ T   │ I   │ U   ┃ "   ┆ |   ┆
+   //       ┃   à │   é │   è │   ê │   ñ ┃   ( │   ) │   î │   ï │   ù ┃ '   ┆ \   ┆
+   // ╭╌╌╌╌╌╂─────┼─────┼─────┼─────┼─────╂─────┼─────┼─────┼─────┼─────╂╌╌╌╌╌┴╌╌╌╌╌╯
+-  // ┆ Z   ┃ X   │ ? ¿ │ V   │ B   │ >   ┃ :   │ H   │ G   │ ; • │ K   ┃
+-  // ┆   æ ┃   ß │ - ‑ │   – │   — │ <   ┃ . … │     │  *µ │ , · │     ┃
++  // ┆ Z   ┃ X   │ ? ¿ │ V   │ B   │ Del ┃ :   │ H   │ G   │ ; • │ K   ┃
++  // ┆   æ ┃   ß │ - ‑ │   – │   — │ Bsp ┃ . … │     │  *µ │ , · │     ┃
+   // ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚
+ 
+   // AltGr layer
+@@ -109,7 +109,7 @@ xkb_keymap {
+     key <AB02> {[ minus           , question        , U2011           , questiondown    ],[ bracketright    , dead_ogonek     ]}; // - ? ‑ ¿ ] ˛
+     key <AB03> {[ v               , V               , endash          , VoidSymbol      ],[ underscore      , endash          ]}; // v V –   _ –
+     key <AB04> {[ b               , B               , emdash          , VoidSymbol      ],[ numbersign      , VoidSymbol      ]}; // b B —   #
+-    key <AB05> {[ less            , greater         , VoidSymbol      , VoidSymbol      ],[ VoidSymbol      , VoidSymbol      ]}; // < >
++    key <AB05> {[ BackSpace       , BackSpace       , Delete          , Delete          ],[ VoidSymbol      , VoidSymbol      ]}; // bsp bsp del del
+     key <AB06> {[ period          , colon           , ellipsis        , VoidSymbol      ],[ bar             , brokenbar       ]}; // . : …   | ¦
+     key <AB07> {[ h               , H               , VoidSymbol      , VoidSymbol      ],[ exclam          , notsign         ]}; // h H     ! ¬
+     key <AB08> {[ g               , G               , dead_greek      , VoidSymbol      ],[ semicolon       , dead_cedilla    ]}; // g G µ   ; ¸

@@ -1,0 +1,82 @@
+diff --git a/keymaps/fr/ergol/ergol_angle_mod.keylayout b/keymaps/fr/ergol/ergol_angle_mod.keylayout
+index 42698c3..36b5c3f 100644
+--- a/keymaps/fr/ergol/ergol_angle_mod.keylayout
++++ b/keymaps/fr/ergol/ergol_angle_mod.keylayout
+@@ -9,7 +9,7 @@
+   License       : WTFPL - Do What The Fuck You Want Public License
+   Reference     : https://developer.apple.com/library/archive/technotes/tn2056/_index.html
+ 
+-  French (Ergo-L)
++  French (Ergo-L, angle-mod)
+ 
+   Logical layer (Apple keycodes)
+   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
+@@ -44,7 +44,7 @@
+   ┆   ~ ┃   [ │ - ] │   _ │   # │ <   ┃ . | │   ! │   ; │ , : │   ? ┃
+   ╰╌╌╌╌╌┸─────┴─────┴─────┴─────┴─────┸─────┴─────┴─────┴─────┴─────┚
+   -->
+-<keyboard group="0" id="0" name="French (Ergo-L)" maxout="1">
++<keyboard group="0" id="0" name="French (Ergo-L, angle-mod)" maxout="1">
+   <layouts>
+     <layout first="0" last="17" modifiers="commonModifiers" mapSet="ANSI" />
+   </layouts>
+@@ -123,9 +123,9 @@
+       <key code="33"  output="[" />
+       <key code="30"  output="]" />
+       <key code="39"  output="'" />
+-      <key code="50"  output="`" />
++      <key code="10"  output="`" />
+       <key code="42"  output="\" />
+-      <key code="10"  action="lsgt_z" />
++      <key code="50"  action="lsgt_z" />
+ 
+       <!-- Space bar -->
+       <key code="49"  action="spce_x0020" />
+@@ -250,9 +250,9 @@
+       <key code="33"  output="{" />
+       <key code="30"  output="}" />
+       <key code="39"  output="&#x0022;" />
+-      <key code="50"  output="~" />
++      <key code="10"  output="~" />
+       <key code="42"  output="|" />
+-      <key code="10"  action="lsgt_Z" />
++      <key code="50"  action="lsgt_Z" />
+ 
+       <!-- Space bar -->
+       <key code="49"  action="spce_x202f" />
+@@ -377,9 +377,9 @@
+       <key code="33"  output="[" />
+       <key code="30"  output="]" />
+       <key code="39"  output="'" />
+-      <key code="50"  output="`" />
++      <key code="10"  output="`" />
+       <key code="42"  output="\" />
+-      <key code="10"  action="lsgt_Z" />
++      <key code="50"  action="lsgt_Z" />
+ 
+       <!-- Space bar -->
+       <key code="49"  action="spce_x0020" />
+@@ -504,9 +504,9 @@
+       <key code="33"  output="&#x0010;" />
+       <key code="30"  output="&#x0010;" />
+       <key code="39"  output="&#x0010;" />
+-      <key code="50"  output="&#x0010;" />
++      <key code="10"  output="&#x0010;" />
+       <key code="42"  output="&#x0010;" />
+-      <key code="10"  output="~" />
++      <key code="50"  output="~" />
+ 
+       <!-- Space bar -->
+       <key code="49"  action="spce_x0020" />
+@@ -631,9 +631,9 @@
+       <key code="33"  output="&#x0010;" />
+       <key code="30"  output="&#x0010;" />
+       <key code="39"  output="&#x0010;" />
+-      <key code="50"  output="&#x0010;" />
++      <key code="10"  output="&#x0010;" />
+       <key code="42"  output="&#x0010;" />
+-      <key code="10"  action="dead_tilde" />
++      <key code="50"  action="dead_tilde" />
+ 
+       <!-- Space bar -->
+       <key code="49"  action="spce_x00a0" />
