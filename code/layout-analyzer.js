@@ -149,8 +149,16 @@ window.addEventListener('DOMContentLoaded', () => {
     return charTable;
   };
 
-  // display a percentage value
-  const fmtPercent = (num, p) => `${Math.round(10 ** p * num) / 10 ** p}%`;
+  // Format percentage according to locale, with given maximum precision
+  const fmtPercent = (num, p) => Intl.NumberFormat(
+      undefined,
+      {
+        // minimumFractionDigits: p,
+        maximumFractionDigits: p,
+        style: "unit",
+        unit: "percent",
+      }
+    ).format(num);
   const showPercent = (sel, num, precision, parentId) => {
     const element = parentId
       ? document.querySelector(parentId).shadowRoot

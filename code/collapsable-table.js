@@ -99,6 +99,14 @@ class CollapsableTable extends HTMLElement {
 
   updateTableData(tableSelector, title, values, precision) {
     const table = this.shadowRoot.querySelector(tableSelector);
+    // Format number according to locale; use fixed precision to align numbers
+    const fmtFixed = (num, p) => Intl.NumberFormat(
+      undefined,
+      {
+        minimumFractionDigits: p,
+        maximumFractionDigits: p,
+      }
+    ).format(num);
 
     table.innerHTML =
       `<tr><th colspan='2'>${title}</td></tr>` +
@@ -107,7 +115,7 @@ class CollapsableTable extends HTMLElement {
         .sort(([_, freq1], [__, freq2]) => freq2 - freq1)
         .map(
           ([digram, freq]) =>
-            `<tr><td>${digram}</td><td>${freq.toFixed(precision)}</td></tr>`,
+            `<tr><td>${digram}</td><td>${fmtFixed(freq, precision)}</td></tr>`,
         )
         .join('');
 

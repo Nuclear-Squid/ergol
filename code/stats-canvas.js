@@ -94,7 +94,16 @@ class StatsCanvas extends HTMLElement {
     };
 
     const sumUpBar = bar => bar.good + bar.meh + bar.bad;
-    const fmtPercent = (num, p) => `${Math.round(10 ** p * num) / 10 ** p}%`;
+    // Format percentage according to locale; use fixed precision to align numbers
+    const fmtPercent = (num, p) => Intl.NumberFormat(
+      undefined,
+      {
+        minimumFractionDigits: p,
+        maximumFractionDigits: p,
+        style: "unit",
+        unit: "percent",
+      }
+    ).format(num);
 
     canvasContext.save();
     let absoluteColumnIndex = 0;
