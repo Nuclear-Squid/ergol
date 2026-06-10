@@ -393,7 +393,7 @@ window.addEventListener('DOMContentLoaded', () => {
       values: totalSfuSkuPerFinger,
       maxValue: 4,
       precision: 2,
-      flipVertically: true,
+      flipVertically: false,
       detailedValues: true,
     });
 
