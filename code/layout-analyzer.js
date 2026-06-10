@@ -507,7 +507,11 @@ window.addEventListener('DOMContentLoaded', () => {
       maxValue: 25,
       precision: 1
     });
-    showPercentAll('#load small', loadGroups.map(sumUpBarGroup), 1);
+    loadGroups.map(sumUpBarGroup).forEach(
+      (value, idx) => document
+        .querySelectorAll(`#load-hands span:nth-child(${idx+1}`)
+        .forEach(obj => obj.innerHTML = fmtPercent(value, 1))
+    );
 
     showPercent('#unsupported-all', totalUnsupportedChars, 3, '#Achoppements');
 
