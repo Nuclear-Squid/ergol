@@ -405,6 +405,7 @@ window.addEventListener('DOMContentLoaded', () => {
     showPercent('#sfu-all',        sum(ngrams.sfb),     2, '#Achoppements');
     showPercent('#extensions-all', sum(ngrams.lsb),     2, '#Achoppements');
     showPercent('#scissors-all',   sum(ngrams.scissor), 2, '#Achoppements');
+    showPercent('#extended-scissors-all', sum(ngrams.extendedScissor), 2, '#Achoppements');
 
     showPercent('#inward-all',  sum(ngrams.inwardRoll),  1, '#Bigrammes');
     showPercent('#outward-all', sum(ngrams.outwardRoll), 1, '#Bigrammes');
@@ -414,6 +415,7 @@ window.addEventListener('DOMContentLoaded', () => {
     achoppements.updateTableData('#sfu-digrams',    'SFU',        ngrams.sfb, 2);
     achoppements.updateTableData('#extended-rolls', 'LSB',        ngrams.lsb, 2,);
     achoppements.updateTableData('#scissors',       'ciseaux',    ngrams.scissor, 2);
+    achoppements.updateTableData('#extended-scissors', 'ciseaux en extension', ngrams.extendedScissor, 2);
 
     const bigrammes = document.getElementById('Bigrammes');
     bigrammes.updateTableData('#sku-digrams', 'SKU', ngrams.skb, 2);
