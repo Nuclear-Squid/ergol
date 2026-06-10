@@ -10,6 +10,7 @@ class StatsCanvas extends HTMLElement {
     };
 
     this.totalWidth = 800
+    this.totalHeight = 120
     this.columnWidth = this.totalWidth / 11;
     this.columnPadding = 8;
   }
@@ -36,11 +37,13 @@ class StatsCanvas extends HTMLElement {
       </style>
     `;
 
-    const canvas = document.createElement('canvas');
-    canvas.width = this.totalWidth;
-    canvas.height = 120;
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    // svg.setAttribute('width', this.totalWidth);
+    svg.setAttribute('width', "auto");
+    svg.setAttribute('height', this.totalHeight);
+    svg.setAttribute('viewBox', `0 0 ${this.totalWidth} ${this.totalHeight}`);
 
-    shadow.appendChild(canvas);
+    shadow.appendChild(svg);
     shadow.appendChild(document.createElement('table'));
   }
 
@@ -60,16 +63,18 @@ class StatsCanvas extends HTMLElement {
     detailedValues = false
   }={}) {
     const table = this.shadowRoot.querySelector('table');
-    const canvas = this.shadowRoot.querySelector('canvas');
-    const canvasContext = canvas.getContext('2d');
+    const svg = this.shadowRoot.querySelector('svg');
 
-    canvasContext.clearRect(0, 0, canvas.width, canvas.height); // clear canvas
+    // Clear SVG
+    while (svg.firstChild) {
+      svg.removeChild(svg.firstChild);
+    }
 
     const nbColumns = values.map(group => group.length).reduce((acc, e) => acc + e, 0);
     const nbSeparators = values.length - 1;
     this.columnWidth = this.totalWidth / (nbColumns + nbSeparators / 2);
 
-    const scale = canvas.height / maxValue;
+    const scale = this.totalHeight / maxValue;
 
     const renderBarPart = (groupIndex, columnIndex, column, flipVerically) => {
       let renderedBarHeight = 0;
@@ -78,18 +83,26 @@ class StatsCanvas extends HTMLElement {
       if (flipVertically) colors.reverse();
 
       for (const [quality, color] of colors) {
-        canvasContext.fillStyle = color;
         renderedBarHeight += column[quality];
 
         const startPosX =
             groupIndex * this.columnWidth / 2
           + columnIndex * this.columnWidth + this.columnPadding / 2;
 
-        const startPosY = canvas.height - renderedBarHeight * scale;
+        const startPosY = this.totalHeight - renderedBarHeight * scale;
         const width = this.columnWidth - this.columnPadding;
         const height = column[quality] * scale;
 
-        canvasContext.fillRect(startPosX, startPosY, width, height);
+        const barPart = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        barPart.setAttribute('x', startPosX);
+        barPart.setAttribute('width', width);
+        barPart.setAttribute('y', startPosY);
+        barPart.setAttribute('height', height);
+        barPart.setAttribute('fill', color);
+        const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+        title.textContent = quality;
+        barPart.appendChild(title);
+        svg.appendChild(barPart);
       }
     };
 
@@ -105,7 +118,6 @@ class StatsCanvas extends HTMLElement {
       }
     ).format(num);
 
-    canvasContext.save();
     let absoluteColumnIndex = 0;
 
     values.forEach((group, groupIndex) => {
@@ -144,8 +156,6 @@ class StatsCanvas extends HTMLElement {
         values.map(group => group.map(bar => fmtPercent(sumUpBar(bar), precision)))
       );
     }
-
-    canvasContext.restore();
   }
 }
 customElements.define('stats-canvas', StatsCanvas)
