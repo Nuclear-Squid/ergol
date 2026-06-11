@@ -524,7 +524,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // keyboard state: these <select> element IDs match the x-keyboard properties
   // -- but the `layout` property requires a JSON fetch
-  const IDs = ['layout', 'geometry', 'corpus'];
+  const IDs = ['layout', 'geometry', 'corpus', 'layers'];
   const setProp = (key, value) => {
     if (key === 'layout') {
       if (value) {
@@ -581,7 +581,7 @@ window.addEventListener('DOMContentLoaded', () => {
       IDs.map(prop => state[prop]).join('/').replace(/\/+$/, '');
   };
   const applyHashState = () => {
-    const hash = window.location.hash || '/ergol//en+fr';
+    const hash = window.location.hash || '/ergol//en+fr/altgr';
     const hashState = hash.split('/').slice(1);
     IDs.forEach((key, i) => {
       setProp(key, hashState[i] || '');

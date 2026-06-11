@@ -133,6 +133,24 @@ function newKeyboardLayout(keyMap = {}, deadKeys = {}, geometry = '') {
   let pendingDK;
   let platform = '';
 
+  // Add 1DK levels
+  const odk = deadKeys['**'];
+  if (odk !== undefined) {
+    keyMap = Object.fromEntries(
+      Object.entries(keyMap).map(([key, levels]) => {
+        if (levels.length < 4) {
+          levels = levels.concat(new Array(4 - levels.length));
+        }
+        levels = Array.from(levels);
+        if (levels.length <= 4) {
+          levels.push(odk[levels[0]]);
+          levels.push(odk[levels[1]]);
+        }
+        return [key, levels];
+      })
+    );
+  }
+
   return {
     get keyMap() {
       return keyMap;
@@ -374,12 +392,15 @@ const keyLevel = (level, label, position) => {
   const symbol = symbols[label] || '';
   const content = symbol || (label || '').slice(-1);
   let className = '';
-  if (level > 4) {
+  let levelPrefix = 'level';
+  if (level < 0) {
     className = 'dk';
+    levelPrefix = 'dk';
+    level = -level;
   } else if (isDeadKey(label)) {
     className = `deadKey ${symbol.startsWith(' ') ? 'diacritic' : ''}`;
   }
-  return text(content, `level${level} ${className}`, attrs);
+  return text(content, `${levelPrefix}${level} ${className}`, attrs);
 };
 
 // In order not to overload the `alt` layers visually (AltGr & dead keys),
@@ -410,17 +431,20 @@ function drawKey(element, keyMap) {
    * So if the lowercase version of the `shift` layer does not match the `base`
    * layer, we'll show the lowercase letter (e.g. Greek 'ς').
    */
-  const [l1, l2, l3, l4] = keyChars;
+  const [l1, l2, l3, l4, l5, l6] = keyChars;
   const base = l1.toUpperCase() !== l2 ? l1 : '';
   const shift = base || l2.toLowerCase() === l1 ? l2 : l1;
   const salt = altUpperChar(l3, l4);
+  const sodk = altUpperChar(l5, l6);
   element.innerHTML = `
     ${keyLevel(1, base, { x: 0.28, y: 0.79 })}
     ${keyLevel(2, shift, { x: 0.28, y: 0.41 })}
     ${keyLevel(3, l3, { x: 0.7, y: 0.79 })}
     ${keyLevel(4, salt, { x: 0.7, y: 0.41 })}
-    ${keyLevel(5, '', { x: 0.7, y: 0.79 })}
-    ${keyLevel(6, '', { x: 0.7, y: 0.41 })}
+    ${keyLevel(5, l5, { x: 0.7, y: 0.79 })}
+    ${keyLevel(6, sodk, { x: 0.7, y: 0.41 })}
+    ${keyLevel(-1, '', { x: 0.7, y: 0.79 })}
+    ${keyLevel(-2, '', { x: 0.7, y: 0.41 })}
   `;
 }
 
@@ -441,8 +465,8 @@ function drawDK(element, keyMap, deadKey) {
   const alt0 = deadKey[keyChars[0]];
   const alt1 = deadKey[keyChars[1]];
 
-  drawChar(element.querySelector('.level5'), alt0);
-  drawChar(element.querySelector('.level6'), altUpperChar(alt0, alt1));
+  drawChar(element.querySelector('.dk1'), alt0);
+  drawChar(element.querySelector('.dk2'), altUpperChar(alt0, alt1));
 }
 
 /**
@@ -943,8 +967,8 @@ const themes = `
   }
 
   /* dimmed AltGr + bold dead keys */
-  .level3, .level4 { fill: ${KEY_COLOR_L3}; opacity: .5; }
-  .level5, .level6 { fill: ${KEY_COLOR_L5}; }
+  .level3, .level4      { fill: ${KEY_COLOR_L3}; opacity: .5; }
+  .level5, .level6, .dk { fill: ${KEY_COLOR_L5}; }
   .deadKey {
     fill: ${DEAD_KEY_COLOR};
     font-size: 14px;
@@ -954,17 +978,39 @@ const themes = `
     font-weight: bolder;
   }
 
+  .layers-odk .level3,
+  .layers-odk .level4       { display: none; }
+  .layers-odk.altgr .level3,
+  .layers-odk.altgr .level4 { display: block; }
+
+  .layers-altgr .level5,
+  .layers-altgr .level6 { display: none; }
+
+  .layers-mixed .level5 { transform: translate(0, -22.8px); }
+  .layers-mixed .level6 { display: none; }
+
   /* hide Level4 (Shift+AltGr) unless AltGr is pressed */
   .level4        { display: none; }
   .altgr .level4 { display: block; }
 
+  .altgr .level5,
+  .altgr .level6 { display: none; }
+
+  /* hide Level6 (Shift+AltGr) */
+  .level6        { display: none; }
+
+  /* hide dk1 and dk2 unless a dead key is pressed */
+  .dk1, .dk2     { display: none; }
+  .dk .dk1,
+  .dk .dk2       { display: block; }
+
   /* highlight AltGr + Dead Keys */
   .dk .level1, .altgr .level1,
   .dk .level2, .altgr .level2 { opacity: 0.25; }
-  .dk .level5, .altgr .level3,
-  .dk .level6, .altgr .level4 { opacity: 1; }
-  .dk .level3,
-  .dk .level4 { display: none; }
+  .dk .dk1, .altgr .level3,
+  .dk .dk2, .altgr .level4 { opacity: 1; }
+  .dk .level3, .dk level4,
+  .dk .level5, .dk level6 { display: none; }
 
   @media (prefers-color-scheme: dark) {
     rect, path { stroke: #777; fill: #4d4d4d; }
@@ -972,7 +1018,7 @@ const themes = `
     g:target rect, .press rect, g:target path, .press path { fill: #558; }
     text { fill: #bbb; }
     .level3, .level4 { fill: #99f; }
-    .level5, .level6 { fill: #6d6; }
+    .level5, .level6, .dk { fill: #6d6; }
     .deadKey { fill: #f44; }
 
     [theme="reach"] .pinkyKey  rect { fill: hsl(  0, 20%, 30%); }
@@ -1069,11 +1115,13 @@ class Keyboard extends HTMLElement {
     this.root = this.attachShadow({ mode: 'open' });
     this.root.appendChild(template.content.cloneNode(true));
     this._state = {
-      geometry: this.getAttribute('geometry') || '',
+      layers: this.getAttribute('layers') || 'altgr',
+      geometry: this.getAttribute('geometry') || 'iso',
       platform: this.getAttribute('platform') || '',
       theme: this.getAttribute('theme') || '',
       layout: newKeyboardLayout(),
     };
+    this.layers = this._state.layers;
     this.geometry = this._state.geometry;
     this.platform = this._state.platform;
     this.theme = this._state.theme;
@@ -1114,6 +1162,24 @@ class Keyboard extends HTMLElement {
     });
   }
 
+  get layers() {
+    return this._state.layers;
+  }
+
+  set layers(value) {
+    const supportedLayers = ['odk', 'mixed', 'altgr'];
+    if (!value && !supportedLayers.includes(value)) {
+      return;
+    }
+    const svg = this.root.querySelector('svg');
+    const mkClass = suffix => `layers-${suffix}`
+    if (this._state.layers) {
+      svg.classList.remove(mkClass(this._state.layers));
+    }
+    this._state.layers = value;
+    svg.classList.add(mkClass(this._state.layers));
+  }
+
   get geometry() {
     return this._state.geometry;
   }
@@ -1135,15 +1201,15 @@ class Keyboard extends HTMLElement {
      *     OL40 = OLKB Planck
      */
     const supportedShapes = {
-      alt: 'alt intlYen',
-      ks: 'alt intlYen ks',
-      jis: 'iso intlYen intlRo jis',
-      abnt: 'iso intlBackslash intlRo',
-      iso: 'iso intlBackslash',
-      ansi: '',
-      ol60: 'ergo ol60',
-      ol50: 'ergo ol50',
-      ol40: 'ergo ol40',
+      alt: ['alt', 'intlYen'],
+      ks: ['alt', 'intlYen', 'ks'],
+      jis: ['iso', 'intlYen', 'intlRo', 'jis'],
+      abnt: ['iso', 'intlBackslash', 'intlRo'],
+      iso: ['iso', 'intlBackslash'],
+      ansi: [],
+      ol60: ['ergo', 'ol60'],
+      ol50: ['ergo', 'ol50'],
+      ol40: ['ergo', 'ol40'],
     };
     if (value && !(value in supportedShapes)) {
       return;
@@ -1151,8 +1217,14 @@ class Keyboard extends HTMLElement {
     this._state.geometry = value;
     const geometry = value || this.layout.geometry || 'ansi';
     const shape = supportedShapes[geometry];
-    this.root.querySelector('svg').className.baseVal = shape;
-    setFingerAssignment(this.root, !shape.startsWith('iso'));
+    const svg = this.root.querySelector('svg');
+    Object.values(supportedShapes).forEach(
+      classes => classes.forEach(cls =>
+        svg.classList.remove(cls)
+      )
+    );
+    shape.forEach(cls => svg.classList.add(cls));
+    setFingerAssignment(this.root, !shape.includes('iso'));
   }
 
   get platform() {
@@ -1181,9 +1253,7 @@ class Keyboard extends HTMLElement {
     this._state.layout = value;
     this._state.layout.platform = this.platform;
     this.geometry = this._state.geometry;
-    Array.from(this.root.querySelectorAll('.key')).forEach(key =>
-      drawKey(key, value.keyMap),
-    );
+    this.draw();
   }
 
   get fingerAssignments() {
@@ -1205,6 +1275,15 @@ class Keyboard extends HTMLElement {
     return Array
       .from(this.root.querySelectorAll('[id]'))
       .filter(element => !element.id.startsWith('row_'));
+  }
+
+  /**
+   * Drawing
+   */
+  draw() {
+    Array.from(this.root.querySelectorAll('.key')).forEach(key =>
+      drawKey(key, this._state.layout.keyMap),
+    );
   }
 
   /**
