@@ -5,7 +5,7 @@
  *    </div>
  *    <form>
  *      <fieldset><input type="radio" name="layers"/>…</fieldset>
- *      <fieldset><input type="radio" name="geopetry"/>…</fieldset>
+ *      <fieldset><input type="radio" name="geometry"/>…</fieldset>
  *    </form>
  *    <dialog>
  *      <input placeholder="…"/>
@@ -40,12 +40,12 @@ window.addEventListener('DOMContentLoaded', () => {
    *  - the first class can be used as the x-keyboard geometry.
    */
   const geometryClasses = {
-    'ISO-A': ['iso', 'intlBackslash', 'am'], // am = angle-mod CSS hack
-    'ISO':   ['iso', 'intlBackslash'],       // default / pre-selected value
-    'ANSI':  ['ansi'],
-    'TMx':   ['ol60', 'ergo'],
-    '4×6':   ['ol50', 'ergo'],
-    '3×6':   ['ol40', 'ergo'],
+    'iso-a': ['iso', 'intlBackslash', 'am'], // am = angle-mod CSS hack
+    'iso':   ['iso', 'intlBackslash'],       // default / pre-selected value
+    'ansi':  ['ansi'],
+    'ol60':  ['ol60', 'ergo'],
+    'ol50':  ['ol50', 'ergo'],
+    'ol40':  ['ol40', 'ergo'],
   };
 
 for (const keeb of document.querySelectorAll('.keyboard')) {
