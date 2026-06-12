@@ -184,40 +184,6 @@ window.addEventListener('DOMContentLoaded', () => {
     return "bad";
   };
 
-  // display a finger/frequency table and bar graph
-  const showFingerData = (sel, values, maxValue, precision) => {
-    const canvas = document.querySelector(`${sel} canvas`);
-    const table = document.querySelector(`${sel} table`);
-
-    canvas.width = 1000;
-    canvas.height = 100;
-    const ctx = canvas.getContext('2d');
-    ctx.save();
-    const headingColor = getComputedStyle(
-      document.querySelector('h1'),
-    ).getPropertyValue('color');
-    ctx.fillStyle = impreciseData ? headingColor : '#88f';
-    const width = canvas.width / 11;
-    const margin = 20;
-    const scale = 100 / maxValue;
-
-    let cols = '';
-    Object.values(values).forEach((value, i) => {
-      const idx = i >= 4 ? i + 2 : i + 1;
-      cols +=
-        (i === 4 ? '<td></td>' : '') +
-        `<td>${fmtPercent(value, precision)}</td>`;
-      ctx.fillRect(
-        idx * width + margin / 2,
-        canvas.height - value * scale,
-        width - margin / 2,
-        value * scale,
-      );
-    });
-    ctx.restore();
-    table.innerHTML = `<tr><td></td>${cols}<td></td></tr>`;
-  };
-
   // Returns a custom iterator, similar to Rust’s std::slice::Windows.
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators
   // https://doc.rust-lang.org/std/primitive.slice.html#method.windows
