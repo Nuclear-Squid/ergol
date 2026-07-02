@@ -69,6 +69,8 @@ la liste des préférences claviers.
 
 #### La touche [★]{.odk} affecte les deux prochains caractères
 
+##### Pour les applications GTK
+
 Sur certains systèmes comme Ubuntu 24.04, la touche typo ([★]{.odk}) affecte les
 deux frappes suivantes au lieu de la seule touche suivante dans certains
 programmes (ex. : Firefox). C’est un
@@ -87,6 +89,15 @@ XMODIFIERS=@im=ibus
 > **NB** : Cette solution peut cependant bloquer l’accès aux caractères
 > [« »]{.kbd} dans certains logiciels (_e.g._ Firefox) dans certaines
 > configurations (cf. paragraphe suivant).
+
+##### Pour les applications Electron
+
+Malgré le changement ci-dessus, il se peut que les applications qui utilisent
+Electron (comme l'application Signal Desktop, par exemple) rencontrent
+toujours le même soucis.
+
+Dans ce cas, vous pouvez essayer de lancer l'application en question avec le
+paramètre `--disable-features=WaylandTextInputV3`.
 
 #### Pourquoi [★]{.odk}+[Espace]{.kbd} et [Shift]{.kbd}+[Espace]{.kbd} ne font pas l’apostrophe typographique et l’espace insécable fine ?
 
