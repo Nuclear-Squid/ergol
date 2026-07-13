@@ -121,15 +121,25 @@ certains.
 Les étapes qui suivent nécessitent d’être sur Windows pour être réalisée.
 
 - Les exécutables sont faits à partir de [Ahk2Exe] et de l’[icône Ergo‑L] :
-  - TODO : expliquer en détail les étapes
-  - `ergol/ergol_angle_mod_nomade/ergol_angle_mod.ahk` =>
-    `ergol/ergol_angle_mod_nomade/ergol_angle_mod.exe`
-  - `ergol/ergol_nomade/ergol.ahk` => `ergol/ergol_nomade/ergol.exe`
+  - Il faut utiliser la version d’[Ahk2Exe du 12 février 2024], les plus
+    récentes génèrent un exe qualifié de virus
+  - Lancer Ahk2Exe.exe
+    - Source (script file) : choisir `ergol/ergol_nomade/ergol.ahk`
+    - Custom Icon (.ico file) : télécharger l’[icône Ergo‑L sur le site] et
+      l’utiliser
+    - Base File (.bin, .exe) : choisir `v1.1.37.01c0 U32 Ahk2Exe.exe`
+  - Cliquer sur Convert, un `ergol.exe` sera généré
+  - Refaire les mêmes étapes avec
+    `ergol/ergol_angle_mod_nomade/ergol_angle_mod.ahk` pour créer
+    `ergol_angle_mod.exe`
 
 Ne pas utiliser AHK 2.0 car plante si on tape trop vite (à voir si ça a été
 corrigé depuis ?). La version AHK 1.1 (version précise : 1.1.37.01 à confirmer)
 est annoncée comme dépréciée mais c’est ce qu’utilise Ahk2Exe et est
 recommandée pour Ergo‑L.
+
+Note : en attendant la correction de Kalamine, il faut rajouter à la main le
+mapping pour la touche Alt (cf les anciens scripts AHK pour s’inspirer).
 
 
 ### KbdEdit
@@ -264,9 +274,11 @@ Il faut que la release Github soit publiée avant de merger la PR qui change les
 liens vers les pilotes pour ne pas casser le site web.
 
 
-[Ahk2Exe]:                  https://github.com/AutoHotkey/Ahk2Exe
-[Kalamine]:                 https://github.com/OneDeadKey/kalamine
-[KbdEdit]:                  https://www.kbdedit.com/
-[icône Ergo‑L]:             https://ergol.org/favicon.ico
-[releases Github d’Ergo‑L]: https://github.com/Nuclear-Squid/ergol/releases
-[semver]:                   https://semver.org/
+[Ahk2Exe]:                    https://github.com/AutoHotkey/Ahk2Exe
+[Ahk2Exe du 12 février 2024]: https://github.com/AutoHotkey/Ahk2Exe/releases/tag/Ahk2Exe1.1.37.01c0
+[icône Ergo‑L sur le site]:   https://ergol.org/favicon.ico
+[Kalamine]:                   https://github.com/OneDeadKey/kalamine
+[KbdEdit]:                    https://www.kbdedit.com/
+[icône Ergo‑L]:               https://ergol.org/favicon.ico
+[releases Github d’Ergo‑L]:   https://github.com/Nuclear-Squid/ergol/releases
+[semver]:                     https://semver.org/
