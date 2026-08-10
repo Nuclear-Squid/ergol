@@ -120,12 +120,12 @@ certains.
 
 Les étapes qui suivent nécessitent d’être sur Windows pour être réalisée.
 
-- Les exécutables sont faits à partir de [Ahk2Exe] et de l’[icône Ergo‑L] :
+- Les exécutables sont faits à partir de [Ahk2Exe] et de l’icône Ergo‑L :
   - Il faut utiliser la version d’[Ahk2Exe du 12 février 2024], les plus
     récentes génèrent un exe qualifié de virus
   - Lancer Ahk2Exe.exe
     - Source (script file) : choisir `ergol/ergol_nomade/ergol.ahk`
-    - Custom Icon (.ico file) : télécharger l’[icône Ergo‑L sur le site] et
+    - Custom Icon (.ico file) : télécharger l’[icône Ergo‑L] sur le site et
       l’utiliser
     - Base File (.bin, .exe) : choisir `v1.1.37.01c0 U32 Ahk2Exe.exe`
   - Cliquer sur Convert, un `ergol.exe` sera généré
@@ -276,9 +276,8 @@ liens vers les pilotes pour ne pas casser le site web.
 
 [Ahk2Exe]:                    https://github.com/AutoHotkey/Ahk2Exe
 [Ahk2Exe du 12 février 2024]: https://github.com/AutoHotkey/Ahk2Exe/releases/tag/Ahk2Exe1.1.37.01c0
-[icône Ergo‑L sur le site]:   https://ergol.org/favicon.ico
+[icône Ergo‑L]:               https://ergol.org/favicon.ico
 [Kalamine]:                   https://github.com/OneDeadKey/kalamine
 [KbdEdit]:                    https://www.kbdedit.com/
-[icône Ergo‑L]:               https://ergol.org/favicon.ico
 [releases Github d’Ergo‑L]:   https://github.com/Nuclear-Squid/ergol/releases
 [semver]:                     https://semver.org/
