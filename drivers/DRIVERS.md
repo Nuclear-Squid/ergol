@@ -138,8 +138,10 @@ corrigé depuis ?). La version AHK 1.1 (version précise : 1.1.37.01 à conf
 est annoncée comme dépréciée mais c’est ce qu’utilise Ahk2Exe et est
 recommandée pour Ergo‑L.
 
-Note : en attendant la correction de Kalamine, il faut rajouter à la main le
-mapping pour la touche Alt (cf les anciens scripts AHK pour s’inspirer).
+Note : en attendant les corrections/évolutions de Kalamine, il faut rajouter à
+la main le mapping pour la touche Alt, quelques corrections pour avoir Ctrl sur
+les symboles, et traduire les scripts pour AHK v2 (cf les anciens scripts AHK
+pour s’inspirer).
 
 
 ### KbdEdit
