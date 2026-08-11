@@ -44,7 +44,7 @@ d’administration, qui peuvent fonctionner depuis une clé USB. (Pour tous les
 systèmes.)
 
 Note : les scripts AHK peuvent être lancés sur Windows à l’aide
-d’[AutoHotkey][] v1 ou v2. Les .exe n’ont pas besoin de AHK pour fonctionner.
+d’[AutoHotkey][] v1.1 ou v2.0. Les .exe n’ont pas besoin de AHK pour fonctionner.
 
 ### Windows : [ergol_kbd.exe][]
 
