@@ -137,10 +137,19 @@ cours][wezterm-patch].
 
 ### Windows
 
+#### La touche morte ne fonctionne pas correctement
+
+Certains logiciels peuvent interférer avec le bon fonctionnement du pilote
+clavier. Essayez de fermer les applications pour trouver laquelle cause le
+souci.
+
+Par exemple [Quick Access Popup][quick-access-popup-bug] intercepte et modifie
+le comportement de la touche morte et ne peut être corrigé côté pilote.
+
 #### Les touches mortes chainées ne marchent pas ?
 
 Les touches mortes chainées ne sont malheureusement pas reconnues par certaines
-applications, notamment [Firefox][firefox-cdk] avant la version 131 et [Wezterm][wezterm-cdk]. 
+applications, notamment [Firefox][firefox-cdk] avant la version 131 et [Wezterm][wezterm-cdk].
 
 Il a été remarqué que [WinCompose] empêche le bon fonctionnement de la double
 touche morte (pour faire le tréma par exemple) avec le pilote MSKLC.
@@ -165,13 +174,14 @@ valeur du raccourci Global auto-type.
 
 
 
-[glossaire]:        /ressources/glossaire
-[touche morte]:     /ressources/glossaire#touche-morte-def
-[QWERTY-Lafayette]: /lafayette/#qwerty-lafayette
-[XKalamine]:        https://github.com/OneDeadKey/kalamine#xkalamine
-[xkb-custom]:       https://github.com/OneDeadKey/kalamine#linux-root-xkb_symbols
-[firefox-cdk]:      https://bugzilla.mozilla.org/show_bug.cgi?id=1910287
-[wezterm-cdk]:      https://github.com/wez/wezterm/issues/5866
-[wezterm-bug]:      https://github.com/wez/wezterm/commit/b8d93edce6267b09d8926f13de9620ad1ae5ea1f
-[wezterm-patch]:    https://github.com/wez/wezterm/pull/4991
-[WinCompose]:       https://github.com/samhocevar/wincompose
+[glossaire]:              /ressources/glossaire
+[touche morte]:           /ressources/glossaire#touche-morte-def
+[QWERTY-Lafayette]:       /lafayette/#qwerty-lafayette
+[XKalamine]:              https://github.com/OneDeadKey/kalamine#xkalamine
+[xkb-custom]:             https://github.com/OneDeadKey/kalamine#linux-root-xkb_symbols
+[firefox-cdk]:            https://bugzilla.mozilla.org/show_bug.cgi?id=1910287
+[quick-access-popup-bug]: https://forum.quickaccesspopup.com/showthread.php?tid=3207)
+[wezterm-cdk]:            https://github.com/wez/wezterm/issues/5866
+[wezterm-bug]:            https://github.com/wez/wezterm/commit/b8d93edce6267b09d8926f13de9620ad1ae5ea1f
+[wezterm-patch]:          https://github.com/wez/wezterm/pull/4991
+[WinCompose]:             https://github.com/samhocevar/wincompose
