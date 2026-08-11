@@ -1,7 +1,7 @@
-diff --git a/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod.ahk b/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod.ahk
+diff --git a/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk b/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk
 index 8453b4d..d0ce8e6 100644
---- a/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod.ahk
-+++ b/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod.ahk
+--- a/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk
++++ b/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk
 @@ -111,6 +111,14 @@ SendKey(base, deadkeymap) {
    }
  }

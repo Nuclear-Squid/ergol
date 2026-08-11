@@ -93,9 +93,9 @@ Le TOML d’Ergo‑L est versionné dans [keymaps/fr/ergol.toml](./keymaps/fr/er
   ```sh
   mv dist/ergol.keylayout ergol/ergol_angle_mod.keylayout
   mv dist/ergol.xkb_symbols ergol/ergol_angle_mod.xkb_symbols
-  mv dist/ergol.ahk ergol/ergol_angle_mod_nomade/ergol_angle_mod.ahk
+  mv dist/ergol.ahk ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk
   mv dist/ergol.xkb_keymap ergol/ergol_angle_mod_nomade/ergol_angle_mod.xkb_keymap
-  mv ergol/ergol.ahk ergol/ergol_nomade/
+  mv ergol/ergol.ahk ergol/ergol_nomade/ergol_AHKv1.ahk
   mv ergol/ergol.xkb_keymap ergol/ergol_nomade/
   ```
 - Copier le fichier suivant :
@@ -112,10 +112,10 @@ certains.
 
 ### AHK
 
-- Éditer `ergol/ergol_angle_mod_nomade/ergol_angle_mod.ahk` pour rajouter
+- Éditer `ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk` pour rajouter
   Backspace sur la touche `B` et Delete en Shift+`B` :
   ```sh
-  git apply ../../drivers/ergol_angle_mod.ahk.patch
+  git apply ../../drivers/ergol_angle_mod_AHKv1.ahk.patch
   ```
 
 Les étapes qui suivent nécessitent d’être sur Windows pour être réalisée.
@@ -124,13 +124,13 @@ Les étapes qui suivent nécessitent d’être sur Windows pour être réalisée
   - Il faut utiliser la version d’[Ahk2Exe du 12 février 2024], les plus
     récentes génèrent un exe qualifié de virus
   - Lancer Ahk2Exe.exe
-    - Source (script file) : choisir `ergol/ergol_nomade/ergol.ahk`
+    - Source (script file) : choisir `ergol/ergol_nomade/ergol_AHKv1.ahk`
     - Custom Icon (.ico file) : télécharger l’[icône Ergo‑L] sur le site et
       l’utiliser
     - Base File (.bin, .exe) : choisir `v1.1.37.01c0 U32 Ahk2Exe.exe`
   - Cliquer sur Convert, un `ergol.exe` sera généré
   - Refaire les mêmes étapes avec
-    `ergol/ergol_angle_mod_nomade/ergol_angle_mod.ahk` pour créer
+    `ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk` pour créer
     `ergol_angle_mod.exe`
 
 Ne pas utiliser AHK 2.0 car plante si on tape trop vite (à voir si ça a été
@@ -224,14 +224,16 @@ ergol_angle_mod.xkb_symbols
 ergol_angle_mod_kbd.exe
 ergol_angle_mod_nomade.zip
 ├── ergol.toml
-├── ergol_angle_mod.ahk
 ├── ergol_angle_mod.exe
+├── ergol_angle_mod_AHKv1.ahk
+├── ergol_angle_mod_AHKv2.ahk
 ├── ergol_angle_mod.keylayout
 └── ergol_angle_mod.xkb_keymap
 ergol_kbd.exe
 ergol_nomade.zip
-├── ergol.ahk
 ├── ergol.exe
+├── ergol_AHKv1.ahk
+├── ergol_AHKv2.ahk
 ├── ergol.keylayout
 ├── ergol.toml
 └── ergol.xkb_keymap
