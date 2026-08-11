@@ -4,9 +4,9 @@ Cette documentation est à destination des maintainers du repository Git
 d’Ergo‑L.
 
 
-## Versionning
+## Versionnement
 
-En tout 1er lieu, il faut déterminer quelle sera la nouvelle version des
+En tout premier lieu, il faut déterminer quelle sera la nouvelle version des
 pilotes.
 
 Les pilotes Ergo‑L suivent le principe de [semver] par rapport à la disposition
@@ -15,8 +15,8 @@ clavier Ergo‑L. C’est-à-dire :
 - La version *major* va incrémenter s’il y a un changement qui casse la couche
   alpha d’Ergo‑L (par exemple si on intervertit les lettres `A` et `B`) ou la
   couche 1DK pour les caractères accentués. Ce genre de changement nécessite un
-  réapprentissage conséquent pour l’ergonaute. À priori on ne devrait jamais
-  être dans ce cas-ci pour Ergo‑L, la disposition étant finie.
+  réapprentissage conséquent pour l’Ergonaute. À priori on ne devrait jamais
+  être dans ce cas-ci pour Ergo‑L, la disposition étant finalisée.
 - La version *minor* va incrémenter s’il y a un changement léger du placement
   de touches dans les couches secondaires (Altgr, Shift+Altgr, 1DK sur les
   caractères non accentués) ou un ajout ne changeant pas la façon de faire les
@@ -140,7 +140,7 @@ recommandée pour Ergo‑L.
 
 Note : en attendant les corrections/évolutions de Kalamine, il faut rajouter à
 la main le mapping pour la touche Alt, quelques corrections pour avoir Ctrl sur
-les symboles, et traduire les scripts pour AHK v2 (cf les anciens scripts AHK
+les symboles, et traduire les scripts pour AHK v2.0 (cf. les anciens scripts AHK
 pour s’inspirer).
 
 
