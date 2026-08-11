@@ -1,0 +1,30 @@
+diff --git a/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk b/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk
+index 8453b4d..d0ce8e6 100644
+--- a/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk
++++ b/keymaps/fr/ergol/ergol_angle_mod_nomade/ergol_angle_mod_AHKv1.ahk
+@@ -111,6 +111,14 @@ SendKey(base, deadkeymap) {
+   }
+ }
+ 
++SendBackspace() {
++  Send {BS}
++}
++
++SendDelete() {
++  Send {delete}
++}
++
+ 
+ ;-------------------------------------------------------------------------------
+ ; Base
+@@ -226,8 +234,8 @@ SendKey(base, deadkeymap) {
+  SC2f::SendKey("U+0062", {"**": "U+2014", "*/": "U+0180", "*˙": "U+1e03", "*µ": "U+03b2", "*¤": "U+0e3f"}) ; b
+ +SC2f::SendKey("U+0042", {"*/": "U+0243", "*˙": "U+1e02", "*µ": "U+0392", "*¤": "U+20b1"}) ; B
+ 
+- SC30::SendKey("U+003c", {"*~": "U+2272", "*/": "U+226e"}) ; <
+-+SC30::SendKey("U+003e", {"*~": "U+2273", "*/": "U+226f"}) ; >
++ SC30::SendBackspace() ;
+++SC30::SendDelete() ;
+ 
+  SC31::SendKey("U+002e", {"**": "U+2026"}) ; .
+ +SC31::SendKey("U+003a", {}) ; :
