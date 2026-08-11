@@ -43,6 +43,9 @@ Une archive ZIP contenant les pilotes ne nécessitant pas de droits
 d’administration, qui peuvent fonctionner depuis une clé USB. (Pour tous les
 systèmes.)
 
+Note : les scripts AHK peuvent être lancés sur Windows à l’aide
+d’[AutoHotkey][] v1 ou v2. Les .exe n’ont pas besoin de AHK pour fonctionner.
+
 ### Windows : [ergol_kbd.exe][]
 
 Exécuter l’installeur et relancer la session. La disposition de clavier
@@ -231,6 +234,7 @@ Licence
 [Karabiner]:                   https://karabiner-elements.pqrs.org
 [émulation ZMK]:               https://github.com/Nuclear-Squid/zmk-keyboard-quacken/pull/54
 
+[AutoHotkey]:                  https://www.autohotkey.com/
 [Arsenik]:                     /claviers/arsenik/
 [kanata]:                      https://github.com/jtroo/kanata
 [Ækeynox]:                     https://github.com/OneDeadKey/zmk-config-aekeynox
