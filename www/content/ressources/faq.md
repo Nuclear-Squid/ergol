@@ -173,10 +173,6 @@ onglet Integration > encart System-wide hot keys, et changer ou supprimer la
 valeur du raccourci Global auto-type.
 
 
-
-valeur du raccourci Global auto-type.
-
-
 [glossaire]:              /ressources/glossaire
 [touche morte]:           /ressources/glossaire#touche-morte-def
 [QWERTY-Lafayette]:       /lafayette/#qwerty-lafayette
