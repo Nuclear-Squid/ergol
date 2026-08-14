@@ -103,7 +103,7 @@ paramètre `--disable-features=WaylandTextInputV3`.
 
 Il est probable qu’un raccourci clavier avec [Espace]{.kbd} intercepte à tort
 ces combinaisons de touches (par exemple un raccourci pour changer de
-disposition clavier). Pour y remédier, il faut soit désactiver le raccourci, 
+disposition clavier). Pour y remédier, il faut soit désactiver le raccourci,
 soit changer la combination de touches en évitant [Espace]{.kbd}.
 
 #### Pourquoi les guillemets français [« »]{.kbd} ne fonctionnent pas dans certaines applications ?
@@ -149,7 +149,7 @@ le comportement de la touche morte et ne peut être corrigé côté pilote.
 #### Les touches mortes chainées ne fonctionnent pas ?
 
 Les touches mortes chainées ne sont malheureusement pas reconnues par certaines
-applications, notamment [Firefox][firefox-cdk] avant la version 131 et [Wezterm][wezterm-cdk].
+applications, notamment [Wezterm][wezterm-cdk].
 
 Il a été remarqué que [WinCompose] empêche le bon fonctionnement de la double
 touche morte (pour faire le tréma par exemple) avec le pilote MSKLC.
@@ -178,7 +178,6 @@ valeur du raccourci Global auto-type.
 [QWERTY-Lafayette]:       /lafayette/#qwerty-lafayette
 [XKalamine]:              https://github.com/OneDeadKey/kalamine#xkalamine
 [xkb-custom]:             https://github.com/OneDeadKey/kalamine#linux-root-xkb_symbols
-[firefox-cdk]:            https://bugzilla.mozilla.org/show_bug.cgi?id=1910287
 [quick-access-popup-bug]: https://forum.quickaccesspopup.com/showthread.php?tid=3207
 [wezterm-cdk]:            https://github.com/wez/wezterm/issues/5866
 [wezterm-bug]:            https://github.com/wez/wezterm/commit/b8d93edce6267b09d8926f13de9620ad1ae5ea1f
