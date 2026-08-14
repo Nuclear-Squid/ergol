@@ -61,7 +61,7 @@ Si vous avez installé votre disposition avec [Xkalamine], cela peut arriver
 après une mise à jour. Il vous suffit de la réinstaller avec [XKalamine]. Notez
 qu’il existe d’[autres méthodes][xkb-custom] plus robustes.
 
-#### La touche [★]{.odk} ne fonctionne pas. Que ce passe-t-il ?
+#### La touche [★]{.odk} ne fonctionne pas. Que se passe-t-il ?
 
 Avec certains bureaux (Gnome notamment), la touche Typo [★]{.odk} ne fonctionne
 que si Ergo‑L est défini comme diposition par défaut, c’est-à-dire en haut de
@@ -137,10 +137,19 @@ cours][wezterm-patch].
 
 ### Windows
 
-#### Les touches mortes chainées ne marchent pas ?
+#### La touche [★]{.odk} ne fonctionne pas. Que se passe-t-il ?
+
+Certains logiciels peuvent interférer avec le bon fonctionnement du pilote
+clavier. Essayez de fermer les applications pour trouver laquelle cause le
+souci.
+
+Par exemple [Quick Access Popup][quick-access-popup-bug] intercepte et modifie
+le comportement de la touche morte et ne peut être corrigé côté pilote.
+
+#### Les touches mortes chainées ne fonctionnent pas ?
 
 Les touches mortes chainées ne sont malheureusement pas reconnues par certaines
-applications, notamment [Firefox][firefox-cdk] avant la version 131 et [Wezterm][wezterm-cdk]. 
+applications, notamment [Firefox][firefox-cdk] avant la version 131 et [Wezterm][wezterm-cdk].
 
 Il a été remarqué que [WinCompose] empêche le bon fonctionnement de la double
 touche morte (pour faire le tréma par exemple) avec le pilote MSKLC.
@@ -164,14 +173,14 @@ onglet Integration > encart System-wide hot keys, et changer ou supprimer la
 valeur du raccourci Global auto-type.
 
 
-
-[glossaire]:        /ressources/glossaire
-[touche morte]:     /ressources/glossaire#touche-morte-def
-[QWERTY-Lafayette]: /lafayette/#qwerty-lafayette
-[XKalamine]:        https://github.com/OneDeadKey/kalamine#xkalamine
-[xkb-custom]:       https://github.com/OneDeadKey/kalamine#linux-root-xkb_symbols
-[firefox-cdk]:      https://bugzilla.mozilla.org/show_bug.cgi?id=1910287
-[wezterm-cdk]:      https://github.com/wez/wezterm/issues/5866
-[wezterm-bug]:      https://github.com/wez/wezterm/commit/b8d93edce6267b09d8926f13de9620ad1ae5ea1f
-[wezterm-patch]:    https://github.com/wez/wezterm/pull/4991
-[WinCompose]:       https://github.com/samhocevar/wincompose
+[glossaire]:              /ressources/glossaire
+[touche morte]:           /ressources/glossaire#touche-morte-def
+[QWERTY-Lafayette]:       /lafayette/#qwerty-lafayette
+[XKalamine]:              https://github.com/OneDeadKey/kalamine#xkalamine
+[xkb-custom]:             https://github.com/OneDeadKey/kalamine#linux-root-xkb_symbols
+[firefox-cdk]:            https://bugzilla.mozilla.org/show_bug.cgi?id=1910287
+[quick-access-popup-bug]: https://forum.quickaccesspopup.com/showthread.php?tid=3207
+[wezterm-cdk]:            https://github.com/wez/wezterm/issues/5866
+[wezterm-bug]:            https://github.com/wez/wezterm/commit/b8d93edce6267b09d8926f13de9620ad1ae5ea1f
+[wezterm-patch]:          https://github.com/wez/wezterm/pull/4991
+[WinCompose]:             https://github.com/samhocevar/wincompose
