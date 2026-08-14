@@ -72,8 +72,8 @@ la liste des préférences claviers.
 ##### Pour les applications GTK
 
 Sur certains systèmes comme Ubuntu 24.04, la touche typo ([★]{.odk}) affecte les
-deux frappes suivantes au lieu de la seule touche suivante dans certains
-programmes (ex. : Firefox). C’est un
+deux frappes suivantes au lieu de la seule touche suivante dans certaines
+applications. C’est un
 [bug connu](https://gitlab.gnome.org/GNOME/gtk/-/issues/7201) de Gnome.
 
 Pour y remédier, il faut modifier le fichier `/etc/environment` et y ajouter
@@ -87,8 +87,8 @@ XMODIFIERS=@im=ibus
 ```
 
 > **NB** : Cette solution peut cependant bloquer l’accès aux caractères
-> [« »]{.kbd} dans certains logiciels (_e.g._ Firefox) dans certaines
-> configurations (cf. paragraphe suivant).
+> [« »]{.kbd} dans certains logiciels dans certaines configurations
+> (cf. paragraphe suivant).
 
 ##### Pour les applications Electron
 
