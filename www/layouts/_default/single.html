@@ -1,7 +1,7 @@
 {{ define "main" }}
 
   {{ $date := .Date }}
-  {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+  {{ $author := index hugo.Data.authors (.Params.author | default "default") }}
 
   {{ if $author }}
     <p style="text-align: right;">

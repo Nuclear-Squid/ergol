@@ -1,12 +1,14 @@
 # baseURL = "https://ergol.org"
 relativeURLs = false  # our 404 page does not support relative URLs
-languageCode = "fr"
+locale = "fr"
 title = "Ergo‑L"
 
 [params]
 subtitle = "Ergonomie optimisée pour le français, l’anglais, le code."
 description = "Une disposition de clavier ergonomique de type Colemak, optimisée pour le français, l’anglais et le code."
 
+[security]
+allowContent = ['text/html', 'text/markdown']
 [security.exec]
 allow = ["pandoc"]
 
