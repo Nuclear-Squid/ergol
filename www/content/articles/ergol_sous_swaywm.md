@@ -76,4 +76,4 @@ Pour appliquer les modifications effectuées, il suffit de recharger la configur
 
 
 
-[1]: https://ergol.org/installation
+[1]: {{< relref "installation" >}}

@@ -192,11 +192,11 @@ d’apprendre [Bépolar][]… voire Ergo‑L. ;-)
 [NavNum]:    #layer-navnum
 [lt]:        #layer-taps
 [hrm]:       #homerow-mods
-[full-size]: /claviers/full-size
-[ErgoDox]:   /claviers/full-size/#géométrie-ergodox
-[dactylo]:   /articles/apprendre_a_taper/
-[Bépolar]:   /lafayette#bépolar
-[1DFH]:      /presentation/#dfh-1u-distance-from-home
+[full-size]: {{< relref "claviers/full-size" >}}
+[ErgoDox]:   {{< relref "claviers/full-size/#géométrie-ergodox" >}}
+[dactylo]:   {{< relref "articles/apprendre_a_taper/" >}}
+[Bépolar]:   {{< relref "lafayette#bépolar" >}}
+[1DFH]:      {{< relref "presentation/#dfh-1u-distance-from-home" >}}
 
 [Sofle]:     https://github.com/josefadamcik/SofleKeyboard
 [Lily58]:    https://github.com/kata0510/Lily58
@@ -210,9 +210,9 @@ d’apprendre [Bépolar][]… voire Ergo‑L. ;-)
 [Chocofi]:   https://github.com/pashutk/chocofi
 [Atreus]:    https://atreus.technomancy.us/
 
-[Arsenik]:       ../arsenik
-[layer-taps]:    ../arsenik#layer-taps
-[homerow-mods]:  ../arsenik#homerow-mods
+[Arsenik]:       {{< relref "claviers/arsenik" >}}
+[layer-taps]:    {{< relref "claviers/arsenik#layer-taps" >}}
+[homerow-mods]:  {{< relref "claviers/arsenik#homerow-mods" >}}
 
 [Miryoku]:       https://github.com/manna-harbour/miryoku
 [precondition]:  https://precondition.github.io/home-row-mods

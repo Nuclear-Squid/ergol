@@ -11,17 +11,17 @@ Une panne dans la propulsion ?
 :::{.highlight}
 Cartographie des dispositions clavier
 
-: Notre constellation : **[Ergo‑L](/presentation)**, [Erglace](/erglace), [QWERTY-Lafayette](/lafayette)
+: Notre constellation : **[Ergo‑L]({{< relref "presentation" >}})**, [Erglace]({{< relref "erglace" >}}), [QWERTY-Lafayette]({{< relref "lafayette" >}})
 
-: Une planète de pionniers : [Bépo](/bepo)
+: Une planète de pionniers : [Bépo]({{< relref "bepo" >}})
 
-: Préparez votre voyage avec le **[comparatif](/alternatives#tableau-comparatif)**
+: Préparez votre voyage avec le **[comparatif]({{< relref "alternatives#tableau-comparatif" >}})**
 
-[Glossaire](/ressources/glossaire)
+[Glossaire]({{< relref "ressources/glossaire" >}})
 
 : Ne naviguez pas à vue, utilisez le radar des **définitions** des termes difficiles
 
-[Foire aux questions](/ressources/faq)
+[Foire aux questions]({{< relref "ressources/faq" >}})
 
 : Accédez à toute la sagesse des Ergonautes avec les réponses aux **questions
 fréquentes**
@@ -32,7 +32,7 @@ fréquentes**
 
 Les outils
 
-: [DuckTypist](/dactylo) : pour **apprendre** à votre rythme nos dispositions
+: [DuckTypist]({{< relref "dactylo" >}}) : pour **apprendre** à votre rythme nos dispositions
 clavier
 
 : [Kalamine] : pour **personaliser** facilement votre disposition clavier

@@ -358,18 +358,18 @@ Attention, il sera nettement plus difficile d’accès en Bépo (Béopy, Optimot
 quasi inutilisable en AZERTY.
 
 
-[full-size]: ./full-size
-[compacts]:  ./compacts
-[NavNum]:    ./compacts/#layer-navnum
-[4×6]:       ./compacts/#kbd_4x6
-[3×6]:       ./compacts/#kbd_3x6
-[3×5]:       ./compacts/#kbd_3x5
-[Arsenik]:   ./arsenik
-[HRM]:       ./arsenik/#homerow-mods
-[LT]:        ./arsenik/#layer-taps
-[1DFH]:      /presentation/#dfh-1u-distance-from-home
-[dactylo]:   /articles/apprendre_a_taper/
-[Bépolar]:   /lafayette/#b%C3%A9polar
+[full-size]: {{< relref "claviers/full-size" >}}
+[compacts]:  {{< relref "claviers/compacts" >}}
+[NavNum]:    {{< relref "claviers/compacts/#layer-navnum" >}}
+[4×6]:       {{< relref "claviers/compacts/#kbd_4x6" >}}
+[3×6]:       {{< relref "claviers/compacts/#kbd_3x6" >}}
+[3×5]:       {{< relref "claviers/compacts/#kbd_3x5" >}}
+[Arsenik]:   {{< relref "claviers/arsenik" >}}
+[HRM]:       {{< relref "claviers/arsenik/#homerow-mods" >}}
+[LT]:        {{< relref "claviers/arsenik/#layer-taps" >}}
+[1DFH]:      {{< relref "presentation/#dfh-1u-distance-from-home" >}}
+[dactylo]:   {{< relref "articles/apprendre_a_taper/" >}}
+[Bépolar]:   {{< relref "lafayette/#b%C3%A9polar" >}}
 
 [Sofle]:     https://github.com/josefadamcik/SofleKeyboard
 [Corne]:     https://github.com/foostan/crkbd

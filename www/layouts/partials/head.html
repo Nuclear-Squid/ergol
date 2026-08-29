@@ -32,7 +32,7 @@
   {{ $type := .type }}
   {{ range .collection }}
     {{- with resources.Get . }}
-      {{- with . | js.Build (merge $opts (dict "targetPath" .RelPermalink)) }}
+      {{- with . | js.Build $opts }}
         <script src="{{ .RelPermalink }}" type="{{ $type }}"></script>
       {{- end }}
     {{- end }}

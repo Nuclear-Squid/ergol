@@ -3,7 +3,7 @@
   <div style="width: 100%; padding-top: 34%; position: relative;">
     <object type="image/svg+xml"
             {{ with .Get "class" }} class="{{ . }}" {{ end }}
-            {{ with .Get "data" }} data="/img/{{ . }}.svg" {{ end }}
+            {{ with .Get "data" }} data="{{ (printf "img/%s.svg" .) | relURL }}" {{ end }}
       style="position: absolute; top: 0; left: 0; width: 100%;"></object>
   </div>
 
@@ -36,17 +36,17 @@
     {{ with .Get "data" }}
     <dialog>
       <input spellcheck="false" placeholder="zone de saisie {{ $name }}" />
-      <x-keyboard src="/keymaps/fr/{{ . }}.json"></x-keyboard>
+      <x-keyboard src="{{ (printf "keymaps/fr/%s.json" .) | relURL }}"></x-keyboard>
     </dialog>
     {{ end }}
     <nav>
       {{ with .Get "href" }}
-        <a href="{{ . }}"><span>⇣</span> Installer</a>
+        <a href="{{ . | relURL }}"><span>⇣</span> Installer</a>
       {{ end }}
       {{ with .Get "data" }}
         <button disabled>⇪ Tester</button>
-        <a href="/stats/#/{{ . }}//en+fr"><span>𝚺</span> Stats</a>
-        <a href="/dactylo/#{{ . }}"><span>⌨</span> Apprendre</a><!-- 🎓 -->
+        <a href="{{ (printf "stats/#/%s//en+fr" .) | relURL }}"><span>𝚺</span> Stats</a>
+        <a href="{{ (printf "dactylo/#%s" .) | relURL }}"><span>⌨</span> Apprendre</a><!-- 🎓 -->
       {{ end }}
     </nav>
   {{ end }}

@@ -129,7 +129,7 @@ choisie.
 [MoErgo]:       https://www.moergo.com/
 [Moonlander]:   https://www.zsa.io/moonlander
 
-[compacts]: ../compacts
-[4×6]:      ../compacts/#kbd_4x6
-[3×6]:      ../compacts/#kbd_3x6
-[dactylo]:  /articles/apprendre_a_taper/
+[compacts]: {{< relref "claviers/compacts" >}}
+[4×6]:      {{< relref "claviers/compacts/#kbd_4x6" >}}
+[3×6]:      {{< relref "claviers/compacts/#kbd_3x6" >}}
+[dactylo]:  {{< relref "articles/apprendre_a_taper/" >}}

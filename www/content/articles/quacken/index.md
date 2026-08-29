@@ -33,9 +33,9 @@ Je vous raconte la naissance du [Quacken].
 [Selenium]:           https://onedeadkey.github.io/selenium
 [Quacken]:            https://onedeadkey.github.io/quacken
 
-[1DFH]:        /presentation/#dfh-1u-distance-from-home
-[Bépolar]:     /lafayette/#bépolar
-[Arsenik]:     /claviers/arsenik
+[1DFH]:        {{< relref "presentation/#dfh-1u-distance-from-home" >}}
+[Bépolar]:     {{< relref "lafayette/#bépolar" >}}
+[Arsenik]:     {{< relref "claviers/arsenik" >}}
 [Ferris]:      https://github.com/pierrechevalier83/ferris/
 [uf2]:         https://github.com/microsoft/uf2
 [I²C]:         https://fr.wikipedia.org/wiki/I2C
@@ -221,7 +221,7 @@ Mise au point, fabrication, expédition
 
 La mise au point a été laborieuse. L’aide de [TeXitoi] et d’un de mes clients électroniciens aura
 été décisive. Il aura fallu quatre prototypes avant d’arriver à une version fonctionnelle…
-[J’en ai fait un article complet.](/articles/la_mise_au_point_du_quacken)
+[J’en ai fait un article complet.]({{< relref "articles/la_mise_au_point_du_quacken" >}})
 
 Quand on a enfin reçu les PCB finalisés, il a fallu en assembler la majorité : clipser les switches
 selon la configuration choisie, faire souder les switches par des pros, mettre les keycaps, flasher
@@ -246,7 +246,7 @@ Modèle économique <i lang="en">open-hardware</i>
 ### Libre et bénévole
 
 Le projet est développé par trois personnes sans revenu fixe, qui travaillent bénévolement : [Ash],
-[Nuclear-Squid], moi-même. [On est constitué en asso](/articles/1901/) pour gérer les frais liés au
+[Nuclear-Squid], moi-même. [On est constitué en asso]({{< relref "articles/1901/" >}}) pour gérer les frais liés au
 projet. On n’a pas de but lucratif, on utilise juste l’argent des dons et des ventes pour financer
 le projet, notamment :
 
