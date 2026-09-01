@@ -79,7 +79,7 @@ Avec un peu d’habitude en [4×6][], on réalise que les chiffres sont plus
 accessibles en [NavNum][] que sur la rangée du haut, qui devient superflue.
 
 ### Géométrie
- 
+
 ![[Corne][], 42 touches (3×6+3)](3x6_ergol.svg)
 
 Sans la rangée de chiffres, toutes les touches du clavier peuvent être activées
