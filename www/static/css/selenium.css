@@ -1,0 +1,57 @@
+:root {
+  color-scheme: light dark;
+}
+
+rect {
+  fill: #fff;
+  stroke: #666;
+  stroke-width: .5px;
+}
+.glyph {
+  transform: scale(0.4) translate(-24px, -36px);
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+text {
+  fill: #444;
+  font: normal 20px sans-serif;
+  text-align: center;
+  text-anchor: middle;
+}
+use {
+  stroke: #444;
+}
+
+.specialKey rect { fill: #e4e4e4; }
+.specialKey text { font-size: 14px; }
+.shortcut        { font-size: 11px; }
+.mod             { font-size: 14px; }
+
+.dual { transform: translateY(26px); }
+.dual, .mod .dual { fill: #f4f4f4; }
+
+text.mod  { fill: #333; }
+text.sym  { fill: #66f; }
+text.nav  { fill: #e83; }
+use.nav { stroke: #e83; }
+
+.nav rect.mod { fill: #e83; }
+.nav text.mod { fill: brown; }
+.sym rect.mod { fill: #77d; }
+.sym text.mod { fill: navy; }
+
+.level1, .level2 { opacity: 0.8; }
+text.sym         { opacity: 0.6; }
+
+@media (prefers-color-scheme: dark) {
+  .specialKey rect { fill: #333; }
+  rect             { fill: #444; }
+  text             { fill: #bbb; }
+  use            { stroke: #bbb; }
+  text.mod         { fill: #eee; }
+  text.sym         { fill: #99f; }
+  .dual,
+  .mod .dual       { fill: #666; }
+}

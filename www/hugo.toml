@@ -93,6 +93,12 @@ author = "authors"
         name    = "Arsenik"
         pageRef = "/claviers/arsenik"
         parent  = "Claviers"
+        weight  = 3
+    [[menus.main]]
+        name    = "Selenium"
+        pageRef = "/claviers/selenium"
+        parent  = "Claviers"
+        weight  = 4
     [[menus.main]]
         name    = "Analyseur"
         pageRef = "/stats"
