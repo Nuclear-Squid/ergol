@@ -36,6 +36,7 @@ Je vous raconte la naissance du [Quacken].
 [1DFH]:        {{< relref "presentation/#dfh-1u-distance-from-home" >}}
 [Bépolar]:     {{< relref "lafayette/#bépolar" >}}
 [Arsenik]:     {{< relref "claviers/arsenik" >}}
+[asso-1901]:   {{< relref "articles/1901/" >}}
 [Ferris]:      https://github.com/pierrechevalier83/ferris/
 [uf2]:         https://github.com/microsoft/uf2
 [I²C]:         https://fr.wikipedia.org/wiki/I2C
@@ -246,7 +247,7 @@ Modèle économique <i lang="en">open-hardware</i>
 ### Libre et bénévole
 
 Le projet est développé par trois personnes sans revenu fixe, qui travaillent bénévolement : [Ash],
-[Nuclear-Squid], moi-même. [On est constitué en asso]({{< relref "articles/1901/" >}}) pour gérer les frais liés au
+[Nuclear-Squid], moi-même. [On est constitué en asso][asso-1901] pour gérer les frais liés au
 projet. On n’a pas de but lucratif, on utilise juste l’argent des dons et des ventes pour financer
 le projet, notamment :
 

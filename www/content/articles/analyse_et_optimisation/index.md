@@ -615,7 +615,7 @@ Les itérations de développement ont été facilitées par :
 
 - [x‑keyboard][], pour tester nos <i lang="en">layouts</i> ;
 - [kalamine][], pour générer et installer les pilotes ;
-- [notre analyseur maison]({{< relref "stats" >}}).
+- [notre analyseur maison][].
 
 On a développé notre propre analyseur pour plusieurs raisons :
 
@@ -815,9 +815,9 @@ importants, notamment :
 - et surtout, le support des touches mortes ! À notre connaissance, c’est le
   seul analyseur qui dispose de cette fonctionnalité.
 
-On espère qu’en mettant [notre analyseur maison]({{< relref "stats" >}}) à disposition dans
-Kalamine il pourra servir à d’autres projets qu’Ergo‑L et les dispositions de la
-famille Lafayette. Et il est toujours en développement actif, notamment pour les
+On espère qu’en mettant [notre analyseur maison][] à disposition dans Kalamine
+il pourra servir à d’autres projets qu’Ergo‑L et les dispositions de la famille
+Lafayette. Et il est toujours en développement actif, notamment pour les
 projets Erglace et Hypergol.
 
 
@@ -838,9 +838,10 @@ Conclusion
 :::
 
 Une dernière recommandation : l’ergonomie passe avant l’optimisation. Quand on
-dit qu’Ergo‑L est « [ergonomique avant tout]({{< relref "" >}}) », ça n’est pas un simple
-slogan, c’est *littéralement* ce qu’on a fait : *d’abord* caler l’ergonomie
-([1DFH], raccourcis clavier…), *puis* optimiser les mouvements de doigts.
+dit qu’Ergo‑L est « [ergonomique avant tout]({{< relref "" >}}) », ça n’est pas
+un simple slogan, c’est *littéralement* ce qu’on a fait : *d’abord* caler
+l’ergonomie ([1DFH], raccourcis clavier…), *puis* optimiser les mouvements de
+doigts.
 
 Un grand merci à [Nuclear Squid][], non seulement pour avoir initié et dirigé le
 projet Ergo‑L, mais plus prosaïquement pour sa contribution à la rédaction des
@@ -862,6 +863,7 @@ Ergonautes est fantastique. 🚀
 [optimot-en]:              {{< relref "alternatives/#bépo-et-ses-variantes" >}}
 [adaptations]:             {{< relref "claviers/#les-limitations-de-bépo-béopy-optimot" >}}
 [cdl2023-slides]:          {{< relref "ailleurs/cdl2023_ergol" >}}
+[notre analyseur maison]:  {{< relref "stats" >}}
 [cdl2023-video]:           https://www.youtube.com/watch?v=96RikfmBY-U
 [soyez pas cons]:          https://www.youtube.com/watch?v=96RikfmBY-U&t=2017s
 [serveur Discord]:         https://discord.gg/5xR5K3nAFX

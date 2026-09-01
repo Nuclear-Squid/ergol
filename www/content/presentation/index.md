@@ -51,12 +51,13 @@ ergonomiques actuels ne propose que six colonnes de touches par main, ce qui est
 déplacer également ;
 - trivial avec Ergo‑L, qui a été conçu pour ça.
 
-Les [claviers ergonomiques]({{< relref "claviers" >}}) modernes cherchent à limiter le nombre total de
-touches, en utilisant différents *layers* pour amener les touches excentrées
-sous les doigts, plutôt que l’inverse. Nous avons donc décidé de n’utiliser
-aucune touche en dehors du pavé de 3×10 touches centrales pour les lettres et
-les symboles de programmation. Ergo‑L est ainsi compatible avec les claviers les
-plus compacts (33 touches au minimum) sans ajustement majeur.
+Les [claviers ergonomiques]({{< relref "claviers" >}}) modernes cherchent à
+limiter le nombre total de touches, en utilisant différents *layers* pour
+amener les touches excentrées sous les doigts, plutôt que l’inverse. Nous avons
+donc décidé de n’utiliser aucune touche en dehors du pavé de 3×10 touches
+centrales pour les lettres et les symboles de programmation. Ergo‑L est ainsi
+compatible avec les claviers les plus compacts (33 touches au minimum) sans
+ajustement majeur.
 
 
 ### Adapté à la bureautique
@@ -146,14 +147,14 @@ charge des doigts que sur le taux de bigrammes de même doigt :
 :::
 
 [azerty-fr]: {{< relref "stats/#/azerty//fr" >}}
-[bepo-fr]: {{< relref "stats/#/bepo//fr" >}}
-[ergol-fr]: {{< relref "stats/#/ergol//fr" >}}
+[bepo-fr]:   {{< relref "stats/#/bepo//fr" >}}
+[ergol-fr]:  {{< relref "stats/#/ergol//fr" >}}
 [dvorak-fr]: {{< relref "stats/#/dvorak//fr" >}}
 [qwerty-fr]: {{< relref "stats/#/qwerty//fr" >}}
 
 [azerty-en]: {{< relref "stats/#/azerty//en" >}}
-[bepo-en]: {{< relref "stats/#/bepo//en" >}}
-[ergol-en]: {{< relref "stats/#/ergol//en" >}}
+[bepo-en]:   {{< relref "stats/#/bepo//en" >}}
+[ergol-en]:  {{< relref "stats/#/ergol//en" >}}
 [dvorak-en]: {{< relref "stats/#/dvorak//en" >}}
 [qwerty-en]: {{< relref "stats/#/qwerty//en" >}}
 
@@ -172,8 +173,9 @@ Ergo‑L utilise une touche morte [★]{.odk} de type [Lafayette][] pour tous le
 caractères accentués, diacritiques et signes de ponctuation spéciaux. Actionner
 cette touche Typo donne accès à **tous** ces symboles dans le pavé de
 3×10 touches, **sans** utiliser [AltGr]{.kbd}. Cela occasionne [de 2,5 % à
-4,0 % de frappes supplémentaires]({{< relref "bepo/#typographie-ergol" >}}) pour un texte
-francophone, ce qui nous semble négligeable comparé au gain de confort obtenu.
+4,0 % de frappes supplémentaires]({{< relref "bepo/#typographie-ergol" >}})
+pour un texte francophone, ce qui nous semble négligeable comparé au gain de
+confort obtenu.
 
 ![La touche morte d’Ergo‑L.](ergol_1dk.svg)
 

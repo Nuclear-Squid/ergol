@@ -55,8 +55,8 @@ grandement les déviations ulnaires, qui sont la principale cause de
 développement de troubles musculo-squelettiques associés à la saisie au clavier.
 
 Beaucoup de Bépoètes ont recours à des [claviers
-spécifiques]({{< relref "claviers/full-size" >}}), souvent très onéreux, pour réduire
-l’inconfort de ces touches placées sous l’auriculaire en extension.
+spécifiques]({{< relref "claviers/full-size" >}}), souvent très onéreux, pour
+réduire l’inconfort de ces touches placées sous l’auriculaire en extension.
 
 Enfin, par inspiration [Dvorak][], Bépo a renoncé aux raccourcis clavier
 positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
@@ -67,7 +67,8 @@ positionnels [Ctrl]{.kbd}‑[Z]{.kbd}[X]{.kbd}[C]{.kbd}[V]{.kbd}.
 Ergo‑L se veut [ergonomique avant tout][]. À ce titre, il suit une approche
 [1DFH][] stricte, plaçant les 26 lettres et les 4 principales ponctuations dans
 le pavé central de 3×10 touches, garantissant une compatibilité parfaite avec
-[tous les claviers]({{< relref "claviers" >}}) de 33 à 105 touches, ergonomiques ou non.
+[tous les claviers]({{< relref "claviers" >}}) de 33 à 105 touches,
+ergonomiques ou non.
 
 Cette approche permet aussi de garder les chiffres en direct, rendant le pavé
 numérique inutile. On peut ainsi utiliser des claviers compacts qui favorisent
@@ -99,19 +100,43 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
     <th> Ergo‑L </th>
   </tr>
   <tr>
-    <td> <a href="{{< relref "stats/#/bepo//fr" >}}"><img src="./charge_bepo_fr.png" /></a> </td>
+    <td>
+      <a href="{{< relref "stats/#/bepo//fr" >}}">
+        <img src="./charge_bepo_fr.png" />
+      </a>
+    </td>
     <th> fr </th>
-    <td> <a href="{{< relref "stats/#/ergol//fr" >}}"><img src="./charge_ergol_fr.png"/></a> </td>
+    <td>
+      <a href="{{< relref "stats/#/ergol//fr" >}}">
+        <img src="./charge_ergol_fr.png"/>
+      </a>
+    </td>
   </tr>
   <tr>
-    <td> <a href="{{< relref "stats/#/bepo//en+fr" >}}"><img src="./charge_bepo_en_fr.png"/></a> </td>
+    <td>
+      <a href="{{< relref "stats/#/bepo//en+fr" >}}">
+        <img src="./charge_bepo_en_fr.png"/>
+      </a>
+    </td>
     <th> fr‑en </th>
-    <td> <a href="{{< relref "stats/#/ergol//en+fr" >}}"><img src="./charge_ergol_en_fr.png"/></a> </td>
+    <td>
+      <a href="{{< relref "stats/#/ergol//en+fr" >}}">
+        <img src="./charge_ergol_en_fr.png"/>
+      </a>
+    </td>
   </tr>
   <tr>
-    <td> <a href="{{< relref "stats/#/bepo//en" >}}"><img src="./charge_bepo_en.png" /></a> </td>
+    <td>
+      <a href="{{< relref "stats/#/bepo//en" >}}">
+        <img src="./charge_bepo_en.png" />
+      </a>
+    </td>
     <th> en </th>
-    <td> <a href="{{< relref "stats/#/ergol//en" >}}"><img src="./charge_ergol_en.png"/></a> </td>
+    <td>
+      <a href="{{< relref "stats/#/ergol//en" >}}">
+        <img src="./charge_ergol_en.png"/>
+      </a>
+    </td>
   </tr>
 
   <tr style="text-align: right; font-size: 10px;">
@@ -221,14 +246,14 @@ même doigt :
 :::
 
 [azerty-fr]: {{< relref "stats/#/azerty//fr" >}}
-[bepo-fr]: {{< relref "stats/#/bepo//fr" >}}
-[ergol-fr]: {{< relref "stats/#/ergol//fr" >}}
+[bepo-fr]:   {{< relref "stats/#/bepo//fr" >}}
+[ergol-fr]:  {{< relref "stats/#/ergol//fr" >}}
 [dvorak-fr]: {{< relref "stats/#/dvorak//fr" >}}
 [qwerty-fr]: {{< relref "stats/#/qwerty//fr" >}}
 
 [azerty-en]: {{< relref "stats/#/azerty//en" >}}
-[bepo-en]: {{< relref "stats/#/bepo//en" >}}
-[ergol-en]: {{< relref "stats/#/ergol//en" >}}
+[bepo-en]:   {{< relref "stats/#/bepo//en" >}}
+[ergol-en]:  {{< relref "stats/#/ergol//en" >}}
 [dvorak-en]: {{< relref "stats/#/dvorak//en" >}}
 [qwerty-en]: {{< relref "stats/#/qwerty//en" >}}
 
@@ -302,7 +327,8 @@ touches répétées sous les auriculaires.
 ![La couche Symboles d’Ergo‑L.](../../presentation/ergol_altgr.svg)
 
 La touche [AltGr]{.kbd} reste facultative, les symboles étant également
-disponibles [aux emplacements du QWERTY ANSI]({{< relref "presentation#héritage-qwerty-us" >}}),
+disponibles [aux emplacements du QWERTY
+ANSI]({{< relref "presentation#héritage-qwerty-us" >}}),
 une disposition de clavier perçue comme efficace pour cet usage.
 
 

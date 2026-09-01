@@ -11,7 +11,9 @@ Une panne dans la propulsion ?
 :::{.highlight}
 Cartographie des dispositions clavier
 
-: Notre constellation : **[Ergo‑L]({{< relref "presentation" >}})**, [Erglace]({{< relref "erglace" >}}), [QWERTY-Lafayette]({{< relref "lafayette" >}})
+: Notre constellation : **[Ergo‑L]({{< relref "presentation" >}})**,
+[Erglace]({{< relref "erglace" >}}),
+[QWERTY-Lafayette]({{< relref "lafayette" >}})
 
 : Une planète de pionniers : [Bépo]({{< relref "bepo" >}})
 
