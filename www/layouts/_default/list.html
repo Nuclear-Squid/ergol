@@ -4,7 +4,7 @@
     {{ range sort .Pages "Date" "desc" }}
       <article>
         <header>
-          {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+          {{ $author := index hugo.Data.authors (.Params.author | default "default") }}
           {{ $abstract := or .Params.abstract .Params.redirect_to .RelPermalink }}
           <h3>{{ .LinkTitle }}</h3>
           <p class="author">
