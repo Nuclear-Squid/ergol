@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 836 340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 836 300">
+  <style><![CDATA[{{ .style }}
 
-  <style>
-    #left  { transform: translate(  4px, 60px); }
-    #right { transform: translate(480px, 60px); }
+    #left  { transform: translate(  4px, 15px); }
+    #right { transform: translate(480px, 15px); }
 
     /* column stagger */
 
@@ -22,111 +22,24 @@
 
     /* XXX these thumb clusters have been positioned with magic numbers */
 
-    .thb_1 { transform: translate( 90px, 205px); }
-    .thb_2 { transform: translate(150px, 190px); }
     .thb_3 { transform: translate(210px, 190px); }
     .thb_4 { transform: translate(280px, 191px); }
     .thb_5 { transform: translate(360px, 182px); }
     .thb_4 g { transform: rotate(12deg); }
     .thb_5 g { transform: rotate(24deg); }
 
-    .thb_0 { transform: translate(210px, 205px); }
-    .thb_9 { transform: translate(150px, 190px); }
     .thb_8 { transform: translate( 90px, 190px); }
     .thb_7 { transform: translate( 20px, 201px); }
     .thb_6 { transform: translate(-57px, 201px); }
     .thb_7 g { transform: rotate(-12deg); }
     .thb_6 g { transform: rotate(-24deg); }
 
-    /* CSS theme, should be factorized somehow */
+  ]]></style>
 
-    :root {
-      color-scheme: light dark;
-    }
-
-    rect {
-      fill: #fff;
-      stroke: #666;
-      stroke-width: .5px;
-    }
-    .glyph {
-      transform: scale(0.4) translate(-24px, -36px);
-      stroke-width: 3px;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-    }
-    text {
-      fill: #444;
-      font: normal 20px sans-serif;
-      text-align: center;
-      text-anchor: middle;
-    }
-    use {
-      stroke: #444;
-    }
-
-    .specialKey rect { fill: #e4e4e4; }
-    .specialKey text { font-size: 14px; }
-    .shortcut        { font-size: 11px; }
-    .mod             { font-size: 14px; }
-
-    .dual { transform: translateY(26px); }
-    .dual, .mod .dual { fill: #f4f4f4; }
-
-    text.mod  { fill: #333; }
-    text.sym  { fill: #66f; }
-    text.nav  { fill: #e83; }
-    use.nav { stroke: #e83; }
-
-    .nav rect.mod { fill: #e83; }
-    .nav text.mod { fill: brown; }
-    .sym rect.mod { fill: #77d; }
-    .sym text.mod { fill: navy; }
-
-    .level1, .level2 { opacity: 0.8; }
-    text.sym         { opacity: 0.6; }
-
-    @media (prefers-color-scheme: dark) {
-      .specialKey rect { fill: #333; }
-      rect             { fill: #444; }
-      text             { fill: #bbb; }
-      use            { stroke: #bbb; }
-      text.mod         { fill: #eee; }
-      text.sym         { fill: #99f; }
-      .dual,
-      .mod .dual       { fill: #666; }
-    }
-  </style>
-
-  <defs>
-    <path class="glyph" id="glyph_backspace" d="M22,19l10,10 M22,29l10-10 M6,24l10,13h26v-26h-26z"/>
-    <path class="glyph" id="glyph_delete"    d="M16,19l10,10 M16,29l10-10 M42,24l-10,13h-26v-26h26z"/>
-    <path class="glyph" id="glyph_return"    d="M42,13V27H6 m8-8l-8,8l8,8"/>
-    <path class="glyph" id="glyph_space"     d="M42,24V32H6V24"/>
-    <path class="glyph" id="glyph_escape"    d="M24,24l-18-18 m0,10v-10h10 M24,6A18,18,0,1,1,6,24"/>
-    <path class="glyph" id="glyph_up"        d="M24,42v-36 m-8,6l8-8l8,8"/>
-    <path class="glyph" id="glyph_down"      d="M24,6v36 m-8,-6l8,8l8-8"/>
-    <path class="glyph" id="glyph_pgup"      d="M16,32h16 M16,24h16 M24,42v-36 m-8,6l8-8l8,8"/>
-    <path class="glyph" id="glyph_pgdown"    d="M16,16h16 M16,24h16 M24,6v36 m-8,-6l8,8l8-8"/>
-    <path class="glyph" id="glyph_left"      d="M42,24h-36 m6-8l-8,8l8,8"/>
-    <path class="glyph" id="glyph_right"     d="M6,24h36 m-6-8l8,8l-8,8"/>
-    <path class="glyph" id="glyph_tab"       d="M6,24h27 m-6-8l8,8l-8,8 M42,12V36"/>
-    <path class="glyph" id="glyph_btab"      d="M42,24h-27 m6-8l-8,8l8,8 M6,12V36"/>
-    <path class="glyph" id="glyph_home"      d="M42,42l-28-28 m0,10v-10h10 m8-8h-26v26"/>
-    <path class="glyph" id="glyph_end"       d="M6,6l28,28 m0-10v10h-10 m-8,8h26v-26"/>
-    <path class="glyph" id="glyph_prev"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M26,16l-8,8l8,8"/>
-    <path class="glyph" id="glyph_next"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M22,16l8,8l-8,8"/>
-    <path class="glyph" id="glyph_shift"     d="M23,7l14,20h-7v16h-14v-16h-7l14,-20"/>
-    <path class="glyph" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
-  </defs>
+  {{ .defs }}
 
   <g id="left">
     <g class="col_L specialKey">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <use x="26" y="30" href="#glyph_escape"/>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <use x="26" y="30" href="#glyph_tab"/>
@@ -142,11 +55,6 @@
     </g>
 
     <g class="col_1">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">1</text>
-        <text x="12.8" y="20.6" class="level2">€</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Q</text>
@@ -168,11 +76,6 @@
     </g>
 
     <g class="col_2">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">2</text>
-        <text x="12.8" y="20.6" class="level2">«</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">C</text>
@@ -194,11 +97,6 @@
     </g>
 
     <g class="col_3">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">3</text>
-        <text x="12.8" y="20.6" class="level2">»</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">O</text>
@@ -221,11 +119,6 @@
     </g>
 
     <g class="col_4">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">4</text>
-        <text x="12.8" y="20.6" class="level2">$</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">P</text>
@@ -247,11 +140,6 @@
     </g>
 
     <g class="col_5">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">5</text>
-        <text x="12.8" y="20.6" class="level2">%</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">W</text>
@@ -272,45 +160,28 @@
       </g>
     </g>
 
-    <g class="thb_1 specialKey">
-      <g>
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="26" y="30">Cmd</text>
-      </g>
-    </g>
-    <g class="thb_2 specialKey">
+    <g class="thb_3 specialKey">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="26" y="30">Alt</text>
       </g>
     </g>
-    <g class="thb_3 specialKey nav">
-      <g>
-        <rect class="mod" width="52" height="52" rx="5" ry="5"/>
-        <text class="mod" x="26" y="30">Nav</text>
-      </g>
-    </g>
     <g class="thb_4 specialKey">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="26" y="30">⎵</text>
+        <text x="26" y="30">Ctrl</text>
       </g>
     </g>
     <g class="thb_5 specialKey">
       <g>
         <rect width="52" height="82" rx="5" ry="5"/>
-        <text x="26" y="45">Ctrl</text>
+        <text x="26" y="45">Cmd</text>
       </g>
     </g>
   </g>
 
   <g id="right">
     <g class="col_6">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">6</text>
-        <text x="12.8" y="20.6" class="level2">^</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">J</text>
@@ -333,11 +204,6 @@
     </g>
 
     <g class="col_7">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">7</text>
-        <text x="12.8" y="20.6" class="level2">&amp;</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">M</text>
@@ -359,11 +225,6 @@
     </g>
 
     <g class="col_8">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">8</text>
-        <text x="12.8" y="20.6" class="level2">*</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">D</text>
@@ -385,11 +246,6 @@
     </g>
 
     <g class="col_9">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">9</text>
-        <text x="12.8" y="20.6" class="level2">#</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="43.4" class="level1">★</text>
@@ -413,11 +269,6 @@
     </g>
 
     <g class="col_0">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="12.8" y="43.4" class="level1">0</text>
-        <text x="12.8" y="20.6" class="level2">@</text>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <text x="12.8" y="20.6" class="level2">Y</text>
@@ -439,10 +290,6 @@
     </g>
 
     <g class="col_R specialKey">
-      <g transform="translate(0 -60)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <use x="26" y="30" href="#glyph_delete"/>
-      </g>
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
         <use x="26" y="30" href="#glyph_backspace"/>
@@ -457,10 +304,10 @@
       </g>
     </g>
 
-    <g class="thb_6 specialKey">
+    <g class="thb_6 specialKey nav">
       <g>
-        <rect width="52" height="82" rx="5" ry="5"/>
-        <text x="26" y="45">Ctrl</text>
+        <rect class="mod" width="52" height="82" rx="5" ry="5"/>
+        <text class="mod" x="26" y="45">Nav</text>
       </g>
     </g>
     <g class="thb_7 specialKey">
@@ -473,18 +320,6 @@
       <g>
         <rect class="mod" width="52" height="52" rx="5" ry="5"/>
         <text class="mod" x="26" y="30">AltGr</text>
-      </g>
-    </g>
-    <g class="thb_9 specialKey">
-      <g>
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="26" y="30">Alt</text>
-      </g>
-    </g>
-    <g class="thb_0 specialKey">
-      <g>
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="26" y="30">Cmd</text>
       </g>
     </g>
   </g>

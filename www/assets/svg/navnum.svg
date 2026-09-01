@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 180">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-75 0 780 180">
+  <style><![CDATA[{{ .style }}
 
-  <style>
     #left  { transform: translateX(  4px); }
     #right { transform: translateX(334px); }
 
@@ -16,88 +16,11 @@
     .col_9 { transform: translateX(180px); }
     .col_0 { transform: translateX(240px); }
 
-    /* CSS theme, should be factorized somehow */
+    .level1, .level2 { opacity: 0.5; }
 
-    :root {
-      color-scheme: light dark;
-    }
+  ]]></style>
 
-    rect {
-      fill: #fff;
-      stroke: #666;
-      stroke-width: .5px;
-    }
-    .glyph {
-      transform: scale(0.4) translate(-24px, -36px);
-      stroke-width: 3px;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      fill: none;
-    }
-    text {
-      fill: #444;
-      font: normal 20px sans-serif;
-      text-align: center;
-      text-anchor: middle;
-    }
-    use {
-      stroke: #444;
-    }
-
-    .specialKey rect { fill: #e4e4e4; }
-    .specialKey text { font-size: 14px; }
-    .shortcut        { font-size: 11px; }
-    .mod             { font-size: 14px; }
-
-    .dual { transform: translateY(26px); }
-    .dual, .mod .dual { fill: #f4f4f4; }
-
-    text.mod  { fill: #333; }
-    text.sym  { fill: #66f; }
-    text.nav  { fill: #e83; }
-    use.nav { stroke: #e83; }
-
-    .nav rect.mod { fill: #e83; }
-    .nav text.mod { fill: brown; }
-    .sym rect.mod { fill: #77d; }
-    .sym text.mod { fill: navy; }
-
-    .level1, .level2 { opacity: 0.8; }
-    text.sym         { opacity: 0.6; }
-
-    @media (prefers-color-scheme: dark) {
-      .specialKey rect { fill: #333; }
-      rect             { fill: #444; }
-      text             { fill: #bbb; }
-      use            { stroke: #bbb; }
-      text.mod         { fill: #eee; }
-      text.sym         { fill: #99f; }
-      .dual,
-      .mod .dual       { fill: #666; }
-    }
-  </style>
-
-  <defs>
-    <path class="glyph" id="glyph_backspace" d="M22,19l10,10 M22,29l10-10 M6,24l10,13h26v-26h-26z"/>
-    <path class="glyph" id="glyph_delete"    d="M16,19l10,10 M16,29l10-10 M42,24l-10,13h-26v-26h26z"/>
-    <path class="glyph" id="glyph_return"    d="M42,13V27H6 m8-8l-8,8l8,8"/>
-    <path class="glyph" id="glyph_space"     d="M42,24V32H6V24"/>
-    <path class="glyph" id="glyph_escape"    d="M24,24l-18-18 m0,10v-10h10 M24,6A18,18,0,1,1,6,24"/>
-    <path class="glyph" id="glyph_up"        d="M24,42v-36 m-8,6l8-8l8,8"/>
-    <path class="glyph" id="glyph_down"      d="M24,6v36 m-8,-6l8,8l8-8"/>
-    <path class="glyph" id="glyph_pgup"      d="M16,32h16 M16,24h16 M24,42v-36 m-8,6l8-8l8,8"/>
-    <path class="glyph" id="glyph_pgdown"    d="M16,16h16 M16,24h16 M24,6v36 m-8,-6l8,8l8-8"/>
-    <path class="glyph" id="glyph_left"      d="M42,24h-36 m6-8l-8,8l8,8"/>
-    <path class="glyph" id="glyph_right"     d="M6,24h36 m-6-8l8,8l-8,8"/>
-    <path class="glyph" id="glyph_tab"       d="M6,24h27 m-6-8l8,8l-8,8 M42,12V36"/>
-    <path class="glyph" id="glyph_btab"      d="M42,24h-27 m6-8l-8,8l8,8 M6,12V36"/>
-    <path class="glyph" id="glyph_home"      d="M42,42l-28-28 m0,10v-10h10 m8-8h-26v26"/>
-    <path class="glyph" id="glyph_end"       d="M6,6l28,28 m0-10v10h-10 m-8,8h26v-26"/>
-    <path class="glyph" id="glyph_prev"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M26,16l-8,8l8,8"/>
-    <path class="glyph" id="glyph_next"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M22,16l8,8l-8,8"/>
-    <path class="glyph" id="glyph_shift"     d="M23,7l14,20h-7v16h-14v-16h-7l14,-20"/>
-    <path class="glyph" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
-  </defs>
+  {{ .defs }}
 
   <g id="left">
     <g class="col_1">

@@ -325,7 +325,9 @@ musculo-squelettiques.
 
 ### Pour débuter : le [4×6][]
 
-![[Sofle][], 58 touches (4×6+5)](compacts/4x6_ergol.svg)
+{{% keymap src="4x6_ergol" alt="Sofle" %}}
+    [Sofle], 58 touches (4×6+5)
+{{% /keymap %}}
 
 C’est de loin le type de clavier ergonomique le plus vendu. Cette géométrie
 fonctionne avec tous les _layouts_ francophones :
@@ -343,7 +345,9 @@ touches sous les doigts, plutôt que de déplacer ses doigts.
 
 ### Valeur sûre : le [42 touches][3×6]
 
-![[Corne][], 42 touches (3×6+3)](compacts/3x6_ergol.svg)
+{{% keymap src="3x6_ergol" alt="Selenium-2TK" %}}
+    [Corne], 42 touches (3×6+3),<br>configuration [Selenium-EZ]
+{{% /keymap %}}
 
 Cette géométrie, avec [3×6][] touches par main et 3 touches par pouce,
 correspond au plus grand clavier possible qui respecte l’approche [1DFH][] :
@@ -370,6 +374,8 @@ quasi inutilisable en AZERTY.
 [1DFH]:      {{< relref "presentation/#dfh-1u-distance-from-home" >}}
 [dactylo]:   {{< relref "articles/apprendre_a_taper/" >}}
 [Bépolar]:   {{< relref "lafayette/#b%C3%A9polar" >}}
+
+[Selenium-EZ]: ./selenium
 
 [Sofle]:     https://github.com/josefadamcik/SofleKeyboard
 [Corne]:     https://github.com/foostan/crkbd
