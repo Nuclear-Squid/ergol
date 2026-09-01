@@ -152,72 +152,17 @@ Cela permet d’avoir [Shift]{.kbd} sous le pouce gauche, supprimant ainsi le
 dernier cas d’extension des auriculaires.
 
 
-Claviers compacts
+Claviers compacts programmables
 --------------------------------------------------------------------------------
 
-### Claviers avec barre d’espace centrale
-
-Arsenik est très naturel sur des claviers comme le [Planck][], le [Preonic][],
-le [Reviung][]…
+Arsenik est très naturel sur des claviers à barre d’espace centrale comme le
+[Planck][], le [Preonic][], le [Reviung][]…
 
 ![Arsenik sur un Planck](arsenik_planck.svg)
 
-### Claviers splittés
-
-Sur un clavier splitté on a au moins deux touches par pouce. Une solution simple
-consiste à doubler la touche [NavNum]{.kbd} :
-
-![Arsenik sur un [Ferris][]](../compacts/3x5_ergol.svg)
-
-On peut également scinder la couche NumNav en une couche numérique et une couche
-de navigation, ou ajouter une couche pour les touches F1-F12, ou une couche pour
-l’émulation souris…
-
-
-<!--
-Variante « Selenium »
---------------------------------------------------------------------------------
-
-Les claviers disposant de  deux touches par pouce donnent facilement accès à 4
-layers. On peut en profiter pour séparer le layer [NavNum][] en un layer de
-navigation et un layer numérique.
-
-![Selenium sur un [Ferris][]](selenium.svg)
-
-### Layer « Navigation »
-
-- en main gauche : Tab/S-Tab, précédent/suivant, raccourcis Qwerty usuels
-- en main droite : déplacements vimistes, page up/down, home/end, défilement
-
-Cette couche est très orientée pour un usage technique :
-
-- profiter des déplacements « HJKL » de Vim dans n’importe quelle application ;
-- faire défiler les suggestions de complétion avec Tab/S-Tab sur les deux doigts
-  forts en homerow (comme les JK de Vim).
-
-La paire Tab/S-Tab est pratique aussi pour changer de fenêtre avec [Alt]{.kbd},
-d’application avec [Cmd]{.kbd}, d’onglet avec [Ctrl]{.kbd}.
-
-### Layer « NumRow »
-
-- sur la rangée médiane : chiffres
-- sur la rangée supérieure : [Shift]{.kbd} + chiffres
-- sur la rangée inférieure :
-  - à gauche, touche Typo + chiffres
-  - à droite, séparateurs décimaux et de nombres
-
-Cette couche est pensée pour les personnes qui préfèrent taper des nombres à dix
-doigts plutôt qu’à trois doigts (pavé numérique), mais elle facilite aussi une
-typographie soignée. À noter : la touche [Espace]{.kbd} devient
-[Shift]{.kbd}+[Espace]{.kbd} dans ce layer.
-
-### Pourquoi les noms « Arsenik » et « Selenium » ?
-
-C’est une référence aux numéros atomiques de ces deux éléments : 33 et 34
-respectivement, correspondant au nombre de touches utilisées. La dualité
-arsenic/selenium est une référence cinématographique. <img style="height: 1em"
-src="evolution.svg">
--->
+Sur les claviers splittés, ou même les claviers monoblocs sans barre d’espace
+centrale, [Selenium] est plus approprié. Les deux <i lang="en">keymaps</i>
+sont quasi-identiques, seuls les <i lang="en">clusters</i> de pouces diffèrent.
 
 
 Pour qui ?
@@ -242,9 +187,8 @@ dispositions comme Azerty, Qwerty et tous les arrangements du Qwerty ANSI
 
 
 [NavNum]:        {{< relref "claviers/compacts/#layer-navnum" >}}
-[Selenium]:      #variante-selenium
+[Selenium]:      {{< relref "claviers/selenium" >}}
 [arsenik.zip]:   https://github.com/OneDeadKey/arsenik/releases/download/0.2.0/arsenik-0.2.0.zip
-[selenium.zip]:  https://github.com/onedeadkey/selenium/
 
 [Preonic]:       https://olkb.com/collections/preonic
 [Planck]:        https://olkb.com/collections/planck

@@ -31,12 +31,16 @@ lettres (en direct) et tous les symboles (via [AltGr]{.kbd}), on n’a besoin qu
 d’un seul layer pour disposer de toutes les touches manquantes : les touches
 de déplacement et le pavé numérique.
 
-![couche « NavNum »](navnum.svg)
+{{% keymap src="navnum" alt="couche « NavNum »" %}}
+    couche « NavNum »
+{{% /keymap %}}
 
 Pour celles et ceux qui utilisent les touches de fonction, un demi-layer peut
 être dédié :
 
-![couche « F1…12 »](func.svg)
+{{% keymap src="func" alt="couche « F1…12 »" %}}
+    couche « F1…12 »
+{{% /keymap %}}
 
 
 [4×6]{id="kbd_4x6"} : facile et polyvalent
@@ -50,7 +54,9 @@ C’est le format de clavier le plus courant, et pour cause !
 - 6 colonnes par main : [Entrée]{.kbd} [Backspace]{.kbd} [Delete]{.kbd} sont au
   même endroit que sur un clavier standard, mais plus proches.
 
-![[Sofle][], 58 touches (4×6+5)](4x6_ergol.svg)
+{{% keymap src="4x6_ergol" alt="Sofle" %}}
+    [Sofle], 58 touches (4×6+5)
+{{% /keymap %}}
 
 En Ergo‑L c’est le clavier ergonomique qui est le plus facile à prendre en main
 — bien plus simple que les claviers ergonomiques [full-size][], et plus adapté à
@@ -80,7 +86,9 @@ accessibles en [NavNum][] que sur la rangée du haut, qui devient superflue.
 
 ### Géométrie
 
-![[Corne][], 42 touches (3×6+3),<br>configuration [Selenium-EZ]](3x6_ergol.svg)
+{{% keymap src="3x6_ergol" alt="Selenium-2TK" %}}
+    [Corne], 34 touches (3×6+3),<br>configuration [Selenium-EZ]
+{{% /keymap %}}
 
 Sans la rangée de chiffres, toutes les touches du clavier peuvent être activées
 en maintenant n’importe quelle touche de pouce. On peut ainsi se contenter de
@@ -109,7 +117,9 @@ gain de confort est tel qu’il est impossible de revenir en arrière.
 
 ### Géométrie
 
-![[Ferris][], 34 touches (3×5+2),<br>configuration [Selenium-2TK]](3x5_ergol.svg)
+{{% keymap src="3x5_ergol" alt="Selenium-2TK" %}}
+    [Ferris], 34 touches (3×5+2),<br>configuration [Selenium-2TK]
+{{% /keymap %}}
 
 Sur ce modèle, le fort décalage vertical des doigts, en particulier de
 l’auriculaire (<i lang="en">pinky stagger</i>), favorise une position plus

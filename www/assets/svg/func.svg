@@ -1,23 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 180">
-
-  <style>
-    :root {
-      color-scheme: light dark;
-    }
-    rect {
-      stroke: #666;
-      stroke-width: .5px;
-    }
-    text {
-      font: normal 20px sans-serif;
-      text-align: center;
-      text-anchor: middle;
-    }
-    .hrm  { transform: translateY(26px); }
-    .text { transform: translateX(-3px); font-size: 11px; }
-    .func { transform: translateX(-1px); font-size: 14px; }
-
-    /* geometry */
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-75 0 780 180">
+  <style><![CDATA[{{ .style }}
 
     #left  { transform: translateX(  4px); }
     #right { transform: translateX(334px); }
@@ -34,26 +16,10 @@
     .col_9 { transform: translateX(180px); }
     .col_0 { transform: translateX(240px); }
 
-    /* color theme */
+    .level1, .level2 { opacity: 0.5; }
+    .func { transform: translateX(-1px); font-size: 14px; }
 
-    .level1, .level2 { opacity: 0.7; }
-
-    rect { fill: #fff; }
-    text { fill: #666; }
-    .hrm { fill: #ddd; }
-    .mod { fill: #333; }
-    .sym { fill: blue; }
-    .nav { fill: #e83; }
-
-    @media (prefers-color-scheme: dark) {
-      rect { fill: #444; }
-      text { fill: #888; }
-      .hrm { fill: #666; }
-      .mod { fill: #eee; }
-      .sym { fill: #99f; }
-      .nav { fill: #e83; }
-    }
-  </style>
+  ]]></style>
 
   <g id="left">
     <g class="col_1">
