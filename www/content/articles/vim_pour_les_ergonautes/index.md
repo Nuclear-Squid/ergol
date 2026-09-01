@@ -77,7 +77,7 @@ clavier de laptop.
 C’est ce que l’on propose avec [Arsenik][], qui donne une couche [NavNum][] avec
 un appui long sur la barre d’espace :
 
-![Pavé de flèches à gauche, pavé numérique à droite](/claviers/compacts/navnum.svg)
+![Pavé de flèches à gauche, pavé numérique à droite](../../claviers/compacts/navnum.svg)
 
 Personnellement j’ai opté pour un layer de navigation plus vimiste, avec les
 flèches en <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> et <kbd>Esc</kbd>
@@ -301,8 +301,8 @@ première heure, utilisateur avancé de Vim et Kakoune, à qui l’on doit
 l’essentiel de cette couche AltGr — et en particulier son adaptation pour Vim.
 
 
-[Arsenik]:    /claviers/arsenik
-[NavNum]:     /claviers/compacts/#layer-navnum
+[Arsenik]:    {{< relref "claviers/arsenik" >}}
+[NavNum]:     {{< relref "claviers/compacts/#layer-navnum" >}}
 
 [JdLL]:       https://jdll.org
 [vjousse]:    https://mastodon.social/@vjousse@mamot.fr/112886863404314065

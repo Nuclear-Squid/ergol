@@ -100,9 +100,9 @@ touches notées 3, et en orange celles notées 4 ou plus — ce qui inclut les
 touches trop excentrées pour être évaluées par Workman, et qui enfreignent le
 principe [1DFH][], auquel nous autres Ergonautes sommes si attaché·e·s.
 
-![[Charge des doigts d’Ergo‑L.](/stats/#/ergol//en+fr)](ergol.png)
+![[Charge des doigts d’Ergo‑L.]({{< relref "stats/#/ergol//en+fr" >}})](ergol.png)
 
-![[Charge des doigts de Bépo.](/stats/#/bepo//en+fr)](bepo.png)
+![[Charge des doigts de Bépo.]({{< relref "stats/#/bepo//en+fr" >}})](bepo.png)
 
 ### Les bigrammes
 
@@ -125,9 +125,9 @@ complètement ces SFB et SKB, mais on fait en sorte de les placer
 préférentiellement sur les doigts forts, en évitant tout particulièrement les
 auriculaires.
 
-![[Répartition des SFB et SKB d’Ergo‑L.](/stats/#/ergol//en+fr)](ergol_sfu.png)
+![[Répartition des SFB et SKB d’Ergo‑L.]({{< relref "stats/#/ergol//en+fr" >}})](ergol_sfu.png)
 
-![[Répartition des SFB et SKB de Bépo.](/stats/#/bepo//en+fr)](bepo_sfu.png)
+![[Répartition des SFB et SKB de Bépo.]({{< relref "stats/#/bepo//en+fr" >}})](bepo_sfu.png)
 
 Lors d’un enchainement rapide de deux touches, il est fréquent (voire
 systématique) que la deuxième touche soit pressée avant que la première ne soit
@@ -615,7 +615,7 @@ Les itérations de développement ont été facilitées par :
 
 - [x‑keyboard][], pour tester nos <i lang="en">layouts</i> ;
 - [kalamine][], pour générer et installer les pilotes ;
-- [notre analyseur maison](/stats).
+- [notre analyseur maison][].
 
 On a développé notre propre analyseur pour plusieurs raisons :
 
@@ -805,7 +805,7 @@ Le générateur est écrit en Python, l’analyseur en JavaScript, et l’ensemb
 code source est proposé sous licence libre (MIT).
 
 ![<i lang="en">Heatmap</i> francophone d’Ergo‑L dans
-[Kalamine].](/presentation/ergol_fr.svg)
+[Kalamine].](../../presentation/ergol_fr.svg)
 
 Il n’est pas encore au niveau d’Oxeylyzer mais il a pour nous des avantages
 importants, notamment :
@@ -815,9 +815,9 @@ importants, notamment :
 - et surtout, le support des touches mortes ! À notre connaissance, c’est le
   seul analyseur qui dispose de cette fonctionnalité.
 
-On espère qu’en mettant [notre analyseur maison](/stats) à disposition dans
-Kalamine il pourra servir à d’autres projets qu’Ergo‑L et les dispositions de la
-famille Lafayette. Et il est toujours en développement actif, notamment pour les
+On espère qu’en mettant [notre analyseur maison][] à disposition dans Kalamine
+il pourra servir à d’autres projets qu’Ergo‑L et les dispositions de la famille
+Lafayette. Et il est toujours en développement actif, notamment pour les
 projets Erglace et Hypergol.
 
 
@@ -838,9 +838,10 @@ Conclusion
 :::
 
 Une dernière recommandation : l’ergonomie passe avant l’optimisation. Quand on
-dit qu’Ergo‑L est « [ergonomique avant tout](/) », ça n’est pas un simple
-slogan, c’est *littéralement* ce qu’on a fait : *d’abord* caler l’ergonomie
-([1DFH], raccourcis clavier…), *puis* optimiser les mouvements de doigts.
+dit qu’Ergo‑L est « [ergonomique avant tout]({{< relref "" >}}) », ça n’est pas
+un simple slogan, c’est *littéralement* ce qu’on a fait : *d’abord* caler
+l’ergonomie ([1DFH], raccourcis clavier…), *puis* optimiser les mouvements de
+doigts.
 
 Un grand merci à [Nuclear Squid][], non seulement pour avoir initié et dirigé le
 projet Ergo‑L, mais plus prosaïquement pour sa contribution à la rédaction des
@@ -854,14 +855,15 @@ sans compter les échanges sur Discord. Gros boulot ! La communauté des
 Ergonautes est fantastique. 🚀
 
 
-[1DFH]:                    /presentation/#dfh-1u-distance-from-home
-[Erglace]:                 /erglace
-[Colemak French Touch]:    /lafayette/#colemak-french-touch
-[claviers compacts]:       /claviers/compacts
-[comparateur]:             /alternatives/#tableau-comparatif
-[optimot-en]:              /alternatives/#bépo-et-ses-variantes
-[adaptations]:             /claviers/#les-limitations-de-bépo-béopy-optimot
-[cdl2023-slides]:          /ailleurs/cdl2023_ergol
+[1DFH]:                    {{< relref "presentation/#dfh-1u-distance-from-home" >}}
+[Erglace]:                 {{< relref "erglace" >}}
+[Colemak French Touch]:    {{< relref "lafayette/#colemak-french-touch" >}}
+[claviers compacts]:       {{< relref "claviers/compacts" >}}
+[comparateur]:             {{< relref "alternatives/#tableau-comparatif" >}}
+[optimot-en]:              {{< relref "alternatives/#bépo-et-ses-variantes" >}}
+[adaptations]:             {{< relref "claviers/#les-limitations-de-bépo-béopy-optimot" >}}
+[cdl2023-slides]:          {{< relref "ailleurs/cdl2023_ergol" >}}
+[notre analyseur maison]:  {{< relref "stats" >}}
 [cdl2023-video]:           https://www.youtube.com/watch?v=96RikfmBY-U
 [soyez pas cons]:          https://www.youtube.com/watch?v=96RikfmBY-U&t=2017s
 [serveur Discord]:         https://discord.gg/5xR5K3nAFX

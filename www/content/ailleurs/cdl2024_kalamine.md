@@ -13,7 +13,8 @@ Et si faire une disposition clavier était aussi simple que de la dessiner ?
 
 C’est le cas !
 
-Avec [Kalamine](), domptez votre clavier et apprenez à faire :
+Avec [Kalamine](https://github.com/OneDeadKey/kalamine), domptez votre clavier
+et apprenez à faire :
 
 - une couche AltGr custom pour compléter votre bon vieil AZERTY
 - une disposition où `XÆA` est un super roulement pour nommer votre enfant comme

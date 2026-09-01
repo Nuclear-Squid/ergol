@@ -239,7 +239,7 @@ dispositions comme Azerty, Qwerty et tous les arrangements du Qwerty ANSI
 [AltGr]{.kbd} à une couche de symboles dédiée.
 
 
-[NavNum]:        ../compacts/#layer-navnum
+[NavNum]:        {{< relref "claviers/compacts/#layer-navnum" >}}
 [Selenium]:      #variante-selenium
 [arsenik.zip]:   https://github.com/OneDeadKey/arsenik/releases/download/0.2.0/arsenik-0.2.0.zip
 [selenium.zip]:  https://github.com/onedeadkey/selenium/

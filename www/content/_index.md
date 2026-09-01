@@ -5,10 +5,10 @@ title = "Ergonomique avant tout."
 cssSheets = ["/css/keebs.css"]
 jsModules = ["/js/x-keyboard.js"]
 jsScripts = ["/js/keebs.js"]
-footer = "[Flux RSS](/articles/index.xml)"
+footer = "[Flux RSS](articles/index.xml)"
 +++
 
-{{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/installation">}}
+{{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="installation">}}
 
 :::{.highlight}
 - [Pour le confort][confort]
@@ -90,18 +90,18 @@ Témoignages
 — dans la presse, dans des billets de blogs, dans des conférences…
 
 
-[presentation]: /presentation/
-[installation]: /installation/
-[optimisation]: /presentation/#plus-optimisé-que-dvorak-et-bépo
-[typographie]:  /presentation/#impeccable-en-français
-[confort]:      /presentation/#ergonomique-avant-tout
-[code]:         /presentation/#redoutable-pour-le-code
-[1dfh]:         /presentation/#dfh-1u-distance-from-home
+[presentation]: {{< relref "presentation/" >}}
+[installation]: {{< relref "installation/" >}}
+[optimisation]: {{< relref "presentation/#plus-optimisé-que-dvorak-et-bépo" >}}
+[typographie]:  {{< relref "presentation/#impeccable-en-français" >}}
+[confort]:      {{< relref "presentation/#ergonomique-avant-tout" >}}
+[code]:         {{< relref "presentation/#redoutable-pour-le-code" >}}
+[1dfh]:         {{< relref "presentation/#dfh-1u-distance-from-home" >}}
 
-[stats]:     /stats/
-[dactylo]:   /dactylo/#ergol
-[claviers]:  /claviers/
-[ailleurs]:  /ailleurs/
+[stats]:     {{< relref "stats/" >}}
+[dactylo]:   {{< relref "dactylo/#ergol" >}}
+[claviers]:  {{< relref "claviers/" >}}
+[ailleurs]:  {{< relref "ailleurs/" >}}
 
 [Lafayette]: https://qwerty-lafayette.org
 [Bépo]:      https://bepo.fr

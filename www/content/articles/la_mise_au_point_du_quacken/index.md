@@ -15,8 +15,9 @@ s’attendait à quelque chose de très simple. Or, non : tout ce qui a pu mer
 qui aurait dû fonctionner d’emblée a commencé par merder aussi. De l’idée au Quacken Flex 26.01,
 la route a été longue…
 
-Au-delà de [la petite histoire du Quacken](/articles/quacken), voilà comment ce clavier a été mis au
-point, quelles galères on a rencontré, quelles solutions on a trouvé.
+Au-delà de [la petite histoire du Quacken]({{< relref "articles/quacken" >}}),
+voilà comment ce clavier a été mis au point, quelles galères on a rencontré,
+quelles solutions on a trouvé.
 
 [Nuclear-Squid]: https://github.com/Nuclear-Squid
 [TeXitoi]:       https://github.com/TeXitoi

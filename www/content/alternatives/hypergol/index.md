@@ -248,7 +248,7 @@ d’avoir de nouvelles idées de choses à rajouter à la disposition ou de l’
 avec les parties techniques !
 
 
-[1DFH]:                     /presentation#dfh-1u-distance-from-home
+[1DFH]:                     {{< relref "presentation#dfh-1u-distance-from-home" >}}
 [Arsenik]:                  https://github.com/OneDeadKey/arsenik
 [Selenium]:                 https://github.com/OneDeadKey/arsenik
 [serveur Discord d’Ergo‑L]: https://discord.gg/5xR5K3nAFX

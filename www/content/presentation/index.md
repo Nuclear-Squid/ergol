@@ -8,7 +8,7 @@ jsScripts = ["/js/keebs.js"]
 footer = "propulsé par [x-keyboard](https://onedeadkey.github.io/x-keyboard)"
 +++
 
-{{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="/installation">}}
+{{<x-keyboard name="Ergo‑L" data="ergol" class="odk" href="installation">}}
 
 :::{.highlight}
 - [Ergonomique avant tout !]
@@ -51,12 +51,13 @@ ergonomiques actuels ne propose que six colonnes de touches par main, ce qui est
 déplacer également ;
 - trivial avec Ergo‑L, qui a été conçu pour ça.
 
-Les [claviers ergonomiques](/claviers) modernes cherchent à limiter le nombre total de
-touches, en utilisant différents *layers* pour amener les touches excentrées
-sous les doigts, plutôt que l’inverse. Nous avons donc décidé de n’utiliser
-aucune touche en dehors du pavé de 3×10 touches centrales pour les lettres et
-les symboles de programmation. Ergo‑L est ainsi compatible avec les claviers les
-plus compacts (33 touches au minimum) sans ajustement majeur.
+Les [claviers ergonomiques]({{< relref "claviers" >}}) modernes cherchent à
+limiter le nombre total de touches, en utilisant différents *layers* pour
+amener les touches excentrées sous les doigts, plutôt que l’inverse. Nous avons
+donc décidé de n’utiliser aucune touche en dehors du pavé de 3×10 touches
+centrales pour les lettres et les symboles de programmation. Ergo‑L est ainsi
+compatible avec les claviers les plus compacts (33 touches au minimum) sans
+ajustement majeur.
 
 
 ### Adapté à la bureautique
@@ -138,12 +139,24 @@ charge des doigts que sur le taux de bigrammes de même doigt :
 </style>
 
 :::{.sfu style="overflow: scroll;" }
-|      |  AZERTY                       |  Bépo                       |  Ergo‑L                       |  Dvorak                       |  QWERTY                       |
-|    -:|:-----------------------------:|:---------------------------:|:-----------------------------:|:-----------------------------:|:-----------------------------:|
-|**fr**| [7,97 %](/stats/#/azerty//fr) | [2,55 %](/stats/#/bepo//fr) | [1,22 %](/stats/#/ergol//fr) | [3,31 %](/stats/#/dvorak//fr) | [7,16 %](/stats/#/qwerty//fr) |
-|**en**| [6,31 %](/stats/#/azerty//en) | [3,01 %](/stats/#/bepo//en) | [1,20 %](/stats/#/ergol//en) | [2,62 %](/stats/#/dvorak//en) | [5,76 %](/stats/#/qwerty//en) |
-: Taux de bigrammes de même doigt en français et anglais, extrait de la [page de comparaison avec Bépo](/bepo).
+|      |  AZERTY             |  Bépo             |  Ergo‑L            |  Dvorak             |  QWERTY             |
+|    -:|:-------------------:|:-----------------:|:------------------:|:-------------------:|:-------------------:|
+|**fr**| [7.97 %][azerty-fr] | [2.55 %][bepo-fr] | [1.22 %][ergol-fr] | [3.31 %][dvorak-fr] | [7.16 %][qwerty-fr] |
+|**en**| [6.31 %][azerty-en] | [3.01 %][bepo-en] | [1.20 %][ergol-en] | [2.62 %][dvorak-en] | [5.76 %][qwerty-en] |
+: Taux de bigrammes de même doigt en français et anglais, extrait de la [page de comparaison avec Bépo]({{< relref "bepo" >}}).
 :::
+
+[azerty-fr]: {{< relref "stats/#/azerty//fr" >}}
+[bepo-fr]:   {{< relref "stats/#/bepo//fr" >}}
+[ergol-fr]:  {{< relref "stats/#/ergol//fr" >}}
+[dvorak-fr]: {{< relref "stats/#/dvorak//fr" >}}
+[qwerty-fr]: {{< relref "stats/#/qwerty//fr" >}}
+
+[azerty-en]: {{< relref "stats/#/azerty//en" >}}
+[bepo-en]:   {{< relref "stats/#/bepo//en" >}}
+[ergol-en]:  {{< relref "stats/#/ergol//en" >}}
+[dvorak-en]: {{< relref "stats/#/dvorak//en" >}}
+[qwerty-en]: {{< relref "stats/#/qwerty//en" >}}
 
 
 Impeccable en français
@@ -160,8 +173,9 @@ Ergo‑L utilise une touche morte [★]{.odk} de type [Lafayette][] pour tous le
 caractères accentués, diacritiques et signes de ponctuation spéciaux. Actionner
 cette touche Typo donne accès à **tous** ces symboles dans le pavé de
 3×10 touches, **sans** utiliser [AltGr]{.kbd}. Cela occasionne [de 2,5 % à
-4,0 % de frappes supplémentaires](/bepo/#typographie-ergol) pour un texte
-francophone, ce qui nous semble négligeable comparé au gain de confort obtenu.
+4,0 % de frappes supplémentaires]({{< relref "bepo/#typographie-ergol" >}})
+pour un texte francophone, ce qui nous semble négligeable comparé au gain de
+confort obtenu.
 
 ![La touche morte d’Ergo‑L.](ergol_1dk.svg)
 
@@ -218,7 +232,7 @@ Une grande attention à été portée aux enchainements de lettres.
 - La touche morte est placée sur la main opposée à [E]{.kbd}[A]{.kbd}[C]{.kbd},
   qui sont les lettres le plus souvent diacritées en français.
 
-![[Fréquence d’utilisation des touches en français.](/stats/#/Ergo‑L//fr)](ergol_fr.svg)
+![[Fréquence d’utilisation des touches en français.]({{< relref "stats/#/Ergo‑L//fr" >}})](ergol_fr.svg)
 
 Pratiquement aucun enchainement courant en français ne demande trop d’effort.
 
@@ -242,7 +256,7 @@ peut se dispenser en français. De même, [U]{.kbd} et [★]{.odk} sont très
 fréquents en français, mais peu fréquents en anglais, ce qui a été pris en
 compte pour leur placement.
 
-![[Fréquence d’utilisation des touches en anglais.](/stats/#/Ergo‑L//en)](ergol_en.svg)
+![[Fréquence d’utilisation des touches en anglais.]({{< relref "stats/#/Ergo‑L//en" >}})](ergol_en.svg)
 
 Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de
 nombreuses dispositions dédiées exclusivement à l’anglais soient plus efficaces
@@ -370,7 +384,7 @@ mieux réputées, mais on en a choisi une dont on comprend tous les mots.
  !   │               Balises pour les liens :                │
  !   ╰───────────────────────────────────────────────────────╯
 -->
-[1DFH]:      /presentation#dfh-1u-distance-from-home
+[1DFH]:      {{< relref "presentation#dfh-1u-distance-from-home" >}}
 [WTFPL]:     http://wtfpl.net
 [dvorak]:    https://fr.wikipedia.org/wiki/Disposition_Dvorak
 [bépo]:      https://bepo.fr

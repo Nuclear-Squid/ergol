@@ -220,7 +220,7 @@ Licence
 [WTFPL](http://wtfpl.net/) – Do What the Fuck You Want to Public License.
 
 
-[fichier source]:              /keymaps/fr/ergol.toml
+[fichier source]:              ../keymaps/fr/ergol.toml
 [cavalier.pdf]:                cavalier.pdf
 [ergol_nomade.zip]:            https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.2/ergol_nomade.zip
 [ergol_kbd.exe]:               https://github.com/Nuclear-Squid/ergol/releases/download/ergol-v1.0.2/ergol_kbd.exe
@@ -235,9 +235,9 @@ Licence
 [émulation ZMK]:               https://github.com/Nuclear-Squid/zmk-keyboard-quacken/pull/54
 
 [AutoHotkey]:                  https://www.autohotkey.com/
-[Arsenik]:                     /claviers/arsenik/
+[Arsenik]:                     {{< relref "claviers/arsenik/" >}}
 [kanata]:                      https://github.com/jtroo/kanata
 [Ækeynox]:                     https://github.com/OneDeadKey/zmk-config-aekeynox
 [Quacken ZMK]:                 https://github.com/Nuclear-Squid/zmk-keyboard-quacken
 [angle mod]:                   https://colemakmods.github.io/ergonomic-mods/angle.html
-[FAQ]:                         /ressources/faq
+[FAQ]:                         {{< relref "ressources/faq" >}}

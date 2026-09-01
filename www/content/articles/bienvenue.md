@@ -28,7 +28,7 @@ L’aventure commence. Bienvenue chez les Ergonautes !
 
 
 [1]: https://discord.gg/5xR5K3nAFX
-[2]: /alternatives
+[2]: {{< relref "alternatives" >}}
 [3]: https://github.com/orgs/OneDeadKey/repositories
 [4]: https://github.com/Nuclear-Squid/ErgoL
 [5]: https://gohugo.io/

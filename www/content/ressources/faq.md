@@ -46,7 +46,7 @@ Programmation
 
 On ne les remappe pas, tout simplement. Ergo‑L a été pensé dès le départ avec
 une compatibilité avec les <i lang="en">vim motions</i>. Pour en savoir plus,
-lire l’[article]({{< ref "articles/vim_pour_les_ergonautes" >}}) que Kazé a
+lire l’[article]({{< relref "articles/vim_pour_les_ergonautes" >}}) que Kazé a
 écrit sur le sujet.
 
 
@@ -173,9 +173,9 @@ onglet Integration > encart System-wide hot keys, et changer ou supprimer la
 valeur du raccourci Global auto-type.
 
 
-[glossaire]:              /ressources/glossaire
-[touche morte]:           /ressources/glossaire#touche-morte-def
-[QWERTY-Lafayette]:       /lafayette/#qwerty-lafayette
+[glossaire]:              {{< relref "ressources/glossaire" >}}
+[touche morte]:           {{< relref "ressources/glossaire#touche-morte-def" >}}
+[QWERTY-Lafayette]:       {{< relref "lafayette/#qwerty-lafayette" >}}
 [XKalamine]:              https://github.com/OneDeadKey/kalamine#xkalamine
 [xkb-custom]:             https://github.com/OneDeadKey/kalamine#linux-root-xkb_symbols
 [quick-access-popup-bug]: https://forum.quickaccesspopup.com/showthread.php?tid=3207

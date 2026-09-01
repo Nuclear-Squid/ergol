@@ -6,11 +6,11 @@ hideSummaryOfChildPages = true
 +++
 
 :::{.highlight}
-- [Ergo‑L ou Bépo ?](/bepo/)
+- [Ergo‑L ou Bépo ?]({{< relref "bepo/" >}})
   <br> Avantages et inconvénients des deux dispositions.
-- [Erglace !](/erglace/)
+- [Erglace !]({{< relref "erglace/" >}})
   <br> Une approche moderne du Dvorak à la française.
-- [Lafayette ★](/lafayette/)
+- [Lafayette ★]({{< relref "lafayette/" >}})
   <br> Des adaptations [1DFH][] de QWERTY, Colemak et Bépo.
 :::
 
@@ -121,7 +121,8 @@ temps d’apprentissage minime.
 dispositions partagent une même approche ergonomique : [1DFH][] et [couche
 Symboles optimisée][symboles], garantissant ainsi l’absence d’extensions de
 doigts (donc de déviations ulnaires) et une compatibilité exemplaire avec [tous
-les claviers](/claviers), ergonomiques ou non, de 33 à 105 touches.
+les claviers]({{< relref "claviers" >}}), ergonomiques ou non, de 33 à 105
+touches.
 
 - Ergo‑L est le projet le plus abouti, destiné au plus grand nombre, bien plus
   optimisé que Bépo en français et que Dvorak en anglais, tout en gardant un
@@ -189,8 +190,8 @@ https://discord.com/channels/794732334879473684/794734985122152478/1200680341363
 > français.
 
 [(?)]:     #optimot_en
-[optimot]: /stats/#/optimot//en+fr
-[heatmap]: /stats/#/optimot/ol60/en
+[optimot]: {{< relref "stats/#/optimot//en+fr" >}}
+[heatmap]: {{< relref "stats/#/optimot/ol60/en" >}}
 
 ---
 
@@ -205,19 +206,19 @@ https://discord.com/channels/794732334879473684/794734985122152478/1200680341363
   [Erglace][] n’aura que des avantages sur Bépo et Optimot, y compris sur leurs
   propres métriques.
 
-[ergo‑l]:     /
-[bépo]:       /bepo
-[erglace]:    /erglace
-[lafayette]:  /lafayette/#qwerty-lafayette
-[colemak ft]: /lafayette/#colemak-french-touch
-[bépolar]:    /lafayette/#bépolar
-[azerty]:     /stats/#/azerty//en+fr
+[ergo‑l]:     {{< relref "" >}}
+[bépo]:       {{< relref "bepo" >}}
+[erglace]:    {{< relref "erglace" >}}
+[lafayette]:  {{< relref "lafayette/#qwerty-lafayette" >}}
+[colemak ft]: {{< relref "lafayette/#colemak-french-touch" >}}
+[bépolar]:    {{< relref "lafayette/#bépolar" >}}
+[azerty]:     {{< relref "stats/#/azerty//en+fr" >}}
 
-[1DFH]:                /presentation#dfh-1u-distance-from-home
-[touche morte]:        /presentation#caractères-accentués
-[symboles]:            /presentation#couche-symboles
-[défauts d’ergonomie]: /bepo/#ergonomie
+[1DFH]:                {{< relref "presentation#dfh-1u-distance-from-home" >}}
+[touche morte]:        {{< relref "presentation#caractères-accentués" >}}
+[symboles]:            {{< relref "presentation#couche-symboles" >}}
+[défauts d’ergonomie]: {{< relref "bepo/#ergonomie" >}}
 
-[compatibilité délicate]:   /claviers/#les-limitations-de-bépo-béopy-optimot
-[note globale sur KLAnext]: /articles/analyse_et_optimisation/#lapproche-optimot
+[compatibilité délicate]:   {{< relref "claviers/#les-limitations-de-bépo-béopy-optimot" >}}
+[note globale sur KLAnext]: {{< relref "articles/analyse_et_optimisation/#lapproche-optimot" >}}
 [licence non libre]:        https://github.com/Nuclear-Squid/ergol/blob/main/keymaps/fr.nonfree/LICENSE.md
