@@ -69,7 +69,7 @@ En monobloc, le [Preonic][] est simple et efficace. Parfait pour débuter.
 
 **Attention** : cette géométrie de clavier a besoin d’*au moins* trois touches
 par pouce. Les claviers 4×6+2 comme le ZSA Voyager reposent sur l’utilisation de
-[homerow-mods][], qui ne sont pas du tout à la portée des débutant·e·s.
+[homerow-mods][], qui ne sont pas du tout à la portée des néophytes.
 
 
 [3×6]{id="kbd_3x6"} : [1DFH][] par essence
@@ -80,7 +80,7 @@ accessibles en [NavNum][] que sur la rangée du haut, qui devient superflue.
 
 ### Géométrie
 
-![[Corne][], 42 touches (3×6+3)](3x6_ergol.svg)
+![[Corne][], 42 touches (3×6+3),<br>configuration [Selenium-EZ]](3x6_ergol.svg)
 
 Sans la rangée de chiffres, toutes les touches du clavier peuvent être activées
 en maintenant n’importe quelle touche de pouce. On peut ainsi se contenter de
@@ -109,7 +109,7 @@ gain de confort est tel qu’il est impossible de revenir en arrière.
 
 ### Géométrie
 
-![[Ferris][], 34 touches (3×5+2) et beaucoup de *stagger*](3x5_ergol.svg)
+![[Ferris][], 34 touches (3×5+2),<br>configuration [Selenium-2TK]](3x5_ergol.svg)
 
 Sur ce modèle, le fort décalage vertical des doigts, en particulier de
 l’auriculaire (<i lang="en">pinky stagger</i>), favorise une position plus
@@ -213,6 +213,10 @@ d’apprendre [Bépolar][]… voire Ergo‑L. ;-)
 [Arsenik]:       {{< relref "claviers/arsenik" >}}
 [layer-taps]:    {{< relref "claviers/arsenik#layer-taps" >}}
 [homerow-mods]:  {{< relref "claviers/arsenik#homerow-mods" >}}
+
+[Selenium]:      ../selenium
+[Selenium-EZ]:   ../selenium
+[Selenium-2TK]:  ../selenium
 
 [Miryoku]:       https://github.com/manna-harbour/miryoku
 [precondition]:  https://precondition.github.io/home-row-mods

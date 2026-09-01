@@ -2,12 +2,8 @@
 title = "Arsenik"
 +++
 
-Une adaptation de [Miryoku][] sur 33 touches, pour les claviers de <i
+Une <i lang="en">keymap</i> sur 33 touches, pour les claviers de <i
 lang="en">laptop</i> et les claviers compacts.
-
-:::{style="text-align: center;" }
-🚧 en construction 🚧
-:::
 
 ![](./arsenik_ortho.svg)
 
@@ -17,8 +13,14 @@ lang="en">laptop</i> et les claviers compacts.
 Fonctionnement
 -------------------------------------------------------------------------------
 
-[Arsenik][] conserve la base de l’approche [Miryoku][] : layer-taps sous les
-pouces et homerow-mods sous les doigts.
+[Arsenik] conserve la base de l’approche [Miryoku], en utilisant deux types de
+touches duales :
+
+- des [layer-taps](#layer-taps) sous les pouces,
+- des [homerow-mods](#homerow-mods) sous les positions de repos des doigts.
+
+La particularité d’Arsenik est de pouvoir fonctionner sur n’importe quel clavier
+ANSI ou ISO, et de permettre un [apprentissage pas-à-pas](#claviers-de-laptop).
 
 ### Layer-taps
 
@@ -199,7 +201,7 @@ d’application avec [Cmd]{.kbd}, d’onglet avec [Ctrl]{.kbd}.
 ### Layer « NumRow »
 
 - sur la rangée médiane : chiffres
-- sur la rangée supérieure : [Shift]{.kbd} + chiffres 
+- sur la rangée supérieure : [Shift]{.kbd} + chiffres
 - sur la rangée inférieure :
   - à gauche, touche Typo + chiffres
   - à droite, séparateurs décimaux et de nombres
