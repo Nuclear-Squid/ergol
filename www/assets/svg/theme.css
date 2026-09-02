@@ -20,21 +20,14 @@
 }}
 
 rect, path {
-  /* fill:   var(--bg-normal); */
   stroke: var(--fg-normal-border);
   stroke-width: .5px;
 }
 
-use              { fill: var(--bg-normal);  }
-use.specialKey,
-.specialKey rect,
-.specialKey path { fill: var(--bg-special); }
-use.numberKey,
-.numberKey  rect { fill: var(--bg-number);  }
-use.letterKey,
-.letterKey  rect { fill: var(--bg-letter);  }
-use.homeKey,
-.homeKey    rect { fill: var(--bg-home);    }
+.specialKey { fill: var(--bg-special); }
+.numberKey  { fill: var(--bg-number);  }
+.letterKey  { fill: var(--bg-letter);  }
+.homeKey    { fill: var(--bg-home);    }
 
 .row_0 { transform: translateY(-60px); }
 .row_1 { transform: translateY(  0px); }
