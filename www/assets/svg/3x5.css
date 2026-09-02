@@ -1,11 +1,13 @@
 /* 3x5 geometry (Ferris-liks) */
 
-.left,  #left  { transform: translate(  4px, 10px); }
-.right, #right { transform: translate(480px, 10px); }
+.left  { transform: translate(  4px, 10px); }
+.right { transform: translate(480px, 10px); }
 
 .thb_1, .thb_2, .thb_5, .thb_5l,
 .thb_0, .thb_9, .thb_6, .thb_6l,
 .row_0, .col_L, .col_R { display: none; }
+
+.dual, .hrm { display: block; }
 
 /* column stagger */
 
