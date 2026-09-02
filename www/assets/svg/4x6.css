@@ -1,7 +1,7 @@
 /* 4x6 geometry (Sofle-like) */
 
-.left,  #left  { transform: translate(  4px, 40px); }
-.right, #right { transform: translate(480px, 40px); }
+.left  { transform: translate(  4px, 40px); }
+.right { transform: translate(480px, 40px); }
 
 .thb_5, .thb_6 { display: none; }
 

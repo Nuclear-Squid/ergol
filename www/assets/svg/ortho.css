@@ -1,0 +1,16 @@
+.left  { transform: translateX(  4px); }
+.right { transform: translateX(334px); }
+
+.col_1 { transform: translateX(  0px); }
+.col_2 { transform: translateX( 60px); }
+.col_3 { transform: translateX(120px); }
+.col_4 { transform: translateX(180px); }
+.col_5 { transform: translateX(240px); }
+
+.col_6 { transform: translateX(  0px); }
+.col_7 { transform: translateX( 60px); }
+.col_8 { transform: translateX(120px); }
+.col_9 { transform: translateX(180px); }
+.col_0 { transform: translateX(240px); }
+
+.col_L, .col_R, .row_0 { display: none; }

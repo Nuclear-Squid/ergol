@@ -1,3 +1,8 @@
+.row_0 { transform: translateY(-60px); }
+.row_1 { transform: translateY(  0px); }
+.row_2 { transform: translateY( 60px); }
+.row_3 { transform: translateY(120px); }
+
 :root {
   color-scheme: light dark;
 }
@@ -24,14 +29,21 @@ use {
   stroke: #444;
 }
 
-.specialKey rect { fill: #e4e4e4; }
-.specialKey text { font-size: 14px; }
-.shortcut        { font-size: 11px; }
-.mod             { font-size: 14px; }
+.specialKey rect  { fill: #e4e4e4; }
+.specialKey text  { font-size: 14px; }
+.mod, .hrm, .func { font-size: 14px; }
+.shortcut         { font-size: 11px; }
+
+.func {
+  transform: translateX(-1px);
+  display: none;
+}
 
 .dual { transform: translateY(26px); }
 .dual, .mod .dual { fill: #f4f4f4; }
+.dual, .hrm { display: none; }
 
+text.hrm,
 text.mod  { fill: #333; }
 text.sym  { fill: #66f; }
 text.nav  { fill: #e83; }
@@ -50,6 +62,7 @@ text.sym         { opacity: 0.6; }
   rect             { fill: #444; }
   text             { fill: #bbb; }
   use            { stroke: #bbb; }
+  text.hrm,
   text.mod         { fill: #eee; }
   text.sym         { fill: #99f; }
   .dual,
