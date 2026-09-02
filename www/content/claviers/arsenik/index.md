@@ -5,7 +5,7 @@ title = "Arsenik"
 Une <i lang="en">keymap</i> sur 33 touches, pour les claviers de <i
 lang="en">laptop</i> et les claviers compacts.
 
-![](./arsenik_ortho.svg)
+{{% keymap src="arsenik_hrm" alt="Arsenik, saveur HRM" /%}}
 
 <!--more-->
 
