@@ -17,9 +17,9 @@ plutôt que déplacer les doigts. Le gain de confort est **très** significatif.
 }
 </style>
 :::{.toc .highlight}
-- [4×6][] <br> [![](4x6.svg)][4×6] <br> facile et polyvalent
-- [3×6][] <br> [![](3x6.svg)][3×6] <br> 1DFH par essence
-- [3×5][] <br> [![](3x5.svg)][3×5] <br> la <i lang="en">red pill</i>
+- [4×6] <br> {{< keymap src="4x6_blank" alt="4x6" href="#kbd_4x6" />}} <br> facile et polyvalent
+- [3×6] <br> {{< keymap src="3x6_blank" alt="3x6" href="#kbd_3x6" />}} <br> 1DFH par essence
+- [3×5] <br> {{< keymap src="3x5_blank" alt="3x5" href="#kbd_3x5" />}} <br> la <i lang="en">red pill</i>
 :::
 
 
