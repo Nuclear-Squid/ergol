@@ -17,9 +17,9 @@ hideSummaryOfChildPages = true
 :::{.toc .highlight}
 - [full-size][] : les claviers historiques
 - [compacts][] : les géométries ergonomiques par excellence !
-  - [![](compacts/4x6.svg)][4×6] <br> [4×6][]
-  - [![](compacts/3x6.svg)][3×6] <br> [3×6][]
-  - [![](compacts/3x5.svg)][3×5] <br> [3×5][]
+  - {{< keymap src="4x6_blank" alt="4x6" href="./compacts/#kbd_4x6" />}} <br> [4×6]
+  - {{< keymap src="3x6_blank" alt="3x6" href="./compacts/#kbd_3x6" />}} <br> [3×6]
+  - {{< keymap src="3x5_blank" alt="3x5" href="./compacts/#kbd_3x5" />}} <br> [3×5]
 - [Arsenik][] : pour utiliser un clavier standard comme un 3×5
 :::
 

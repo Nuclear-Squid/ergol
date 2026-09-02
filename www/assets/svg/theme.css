@@ -1,0 +1,31 @@
+/* color theme */
+
+:root {
+  --fg-normal-border: #666;
+  --bg-normal:        #fff;
+  --bg-special:       #bbb;
+  --bg-number:        hsl(295,  50%, 80%);
+  --bg-letter:        hsl(222, 100%, 84%);
+  --bg-home:          hsl(222, 100%, 74%);
+}
+
+@media (prefers-color-scheme: dark) { :root {
+  --fg-normal-border: #666;
+  --bg-normal:        #4d4d4d;
+  --bg-special:       #444;
+  --bg-number:        hsl(280, 10%, 34%);
+  --bg-letter:        hsl(220, 15%, 35%);
+  --bg-home:          hsl(225, 30%, 30%);
+}}
+
+rect, path {
+  fill:   var(--bg-normal);
+  stroke: var(--fg-normal-border);
+  stroke-width: .5px;
+}
+
+.specialKey rect,
+.specialKey path { fill: var(--bg-special); }
+.numberKey  rect { fill: var(--bg-number);  }
+.letterKey  rect { fill: var(--bg-letter);  }
+.homeKey    rect { fill: var(--bg-home);    }

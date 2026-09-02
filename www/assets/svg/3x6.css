@@ -1,0 +1,34 @@
+/* 3x5 geometry (Corne-like) */
+
+#left  { transform: translate(  4px, 15px); }
+#right { transform: translate(480px, 15px); }
+
+/* column stagger */
+
+.col_L { transform: translate(  0px, 22.5px); }
+.col_1 { transform: translate( 60px, 22.5px); }
+.col_2 { transform: translate(120px,  7.5px); }
+.col_3 { transform: translate(180px,  0.0px); }
+.col_4 { transform: translate(240px,  7.5px); }
+.col_5 { transform: translate(300px, 15.0px); }
+
+.col_6 { transform: translate(  0px, 15.0px); }
+.col_7 { transform: translate( 60px,  7.5px); }
+.col_8 { transform: translate(120px,  0.0px); }
+.col_9 { transform: translate(180px,  7.5px); }
+.col_0 { transform: translate(240px, 22.5px); }
+.col_R { transform: translate(300px, 22.5px); }
+
+/* XXX these thumb clusters have been positioned with magic numbers */
+
+.thb_3 { transform: translate(210px, 190px); }
+.thb_4 { transform: translate(280px, 191px); }
+.thb_5 { transform: translate(360px, 182px); }
+.thb_4 g { transform: rotate(12deg); }
+.thb_5 g { transform: rotate(24deg); }
+
+.thb_8 { transform: translate( 90px, 190px); }
+.thb_7 { transform: translate( 20px, 201px); }
+.thb_6 { transform: translate(-57px, 201px); }
+.thb_7 g { transform: rotate(-12deg); }
+.thb_6 g { transform: rotate(-24deg); }
