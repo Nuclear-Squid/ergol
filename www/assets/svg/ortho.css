@@ -14,3 +14,15 @@
 .col_0 { transform: translateX(240px); }
 
 .col_L, .col_R, .row_0 { display: none; }
+
+.thb_left  { transform: translate(110px, 195px); }
+.thb_space { transform: translate(200px, 195px); }
+.thb_right { transform: translate(440px, 195px); }
+
+.thb_3 { transform: translate(120px, 195px); }
+.thb_4 { transform: translate(180px, 195px); }
+.thb_5 { transform: translate(240px, 195px); }
+
+.thb_6 { transform: translate(  0px, 195px); }
+.thb_7 { transform: translate( 60px, 195px); }
+.thb_8 { transform: translate(120px, 195px); }

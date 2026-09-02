@@ -40,7 +40,7 @@ use {
 }
 
 .dual { transform: translateY(26px); }
-.dual, .mod .dual { fill: #f4f4f4; }
+.dual, .mod .dual, .mod rect.mod{ fill: #f4f4f4; }
 .dual, .hrm { display: none; }
 
 text.hrm,
@@ -66,5 +66,6 @@ text.sym         { opacity: 0.6; }
   text.mod         { fill: #eee; }
   text.sym         { fill: #99f; }
   .dual,
+  .mod rect.mod,
   .mod .dual       { fill: #666; }
 }

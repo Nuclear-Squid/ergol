@@ -4,8 +4,7 @@ title = "Selenium"
 
 Une extension d’[Arsenik] pour les claviers ergonomiques.
 
-![](./selenium_ortho.svg)
-
+{{% keymap src="selenium_hrm" alt="Selenium, saveur HRM" /%}}
 
 <!--more-->
 

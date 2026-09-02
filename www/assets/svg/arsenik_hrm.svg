@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45 0 720 255">
+  <style><![CDATA[ {{ .style }} {{ .ortho }}
+
+    .dual, .hrm { display: block; }
+
+  ]]></style>
+
+  {{ .defs }}
+
+  {{ .keys }}
+
+  <g class="thb_left specialKey mod">
+    <g>
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <rect width="41" height="26" rx="2" ry="2" class="dual mod"/>
+      <text x="20.5" y="43.4" class="mod">shift</text>
+      <use  x="61.5" y="43.4" class="nav"    href="#glyph_delete"/>
+      <use  x="20.5" y="18.6" class="level2" href="#glyph_backspace"/>
+    </g>
+  </g>
+  <g class="thb_space specialKey nav">
+    <g>
+      <rect width="232" height="52" rx="5" ry="5"/>
+      <rect width="41"  height="26" rx="2" ry="2" class="dual mod"/>
+      <text x="20.5" y="43.4" class="mod">nav</text>
+      <use  x="20.5" y="18.6" class="level2" href="#glyph_space"/>
+    </g>
+  </g>
+  <g class="thb_right specialKey sym">
+    <g>
+      <rect width="82" height="52" rx="5" ry="5"/>
+      <rect width="41" height="26" rx="2" ry="2" class="dual mod"/>
+      <text x="20.5" y="43.4" class="mod">altgr</text>
+      <use  x="61.5" y="43.4" class="nav"    href="#glyph_escape"/>
+      <use  x="20.5" y="18.6" class="level2" href="#glyph_return"/>
+    </g>
+  </g>
+
+</svg>

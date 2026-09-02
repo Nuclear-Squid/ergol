@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-45 0 720 255">
+  <style><![CDATA[ {{ .style }} {{ .ortho }}
+
+    .dual, .hrm { display: block; }
+
+  ]]></style>
+
+  {{ .defs }}
+
+  {{ .keys }}
+
+  <g class="left">
+    <g class="thb_3 specialKey mod">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="24" height="52" rx="2" ry="2" class="mod"/>
+        <text x="-26"  y="18.0" class="mod" transform="rotate(-90)">shift</text>
+        <use  x="38.0" y="43.4" class="nav" href="#glyph_caps"/>
+      </g>
+    </g>
+    <g class="thb_4 specialKey nav">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dual mod"/>
+        <use  x="12.8" y="18.6" class="level2" href="#glyph_backspace"/>
+        <use  x="38.0" y="43.4" class="nav"    href="#glyph_delete"/>
+        <text x="12.8" y="43.4" class="mod">nav</text>
+      </g>
+    </g>
+    <g class="thb_5 specialKey mod">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dual mod"/>
+        <use  x="12.8" y="18.6" class="level2" href="#glyph_tab"/>
+        <use  x="38.0" y="43.4" class="nav"    href="#glyph_btab"/>
+        <text x="12.8" y="43.4" class="mod">fn</text>
+      </g>
+    </g>
+  </g>
+
+  <g class="right">
+    <g class="thb_6 specialKey mod">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dual mod"/>
+        <use  x="12.8" y="18.6" class="level2" href="#glyph_return"/>
+        <text x="12.8" y="43.6" class="mod">fn</text>
+      </g>
+    </g>
+    <g class="thb_7 specialKey nav">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="26" height="26" rx="2" ry="2" class="dual mod"/>
+        <use  x="12.8" y="18.6" class="level2" href="#glyph_space"/>
+        <text x="12.8" y="43.4" class="mod">nav</text>
+      </g>
+    </g>
+    <g class="thb_8 specialKey sym">
+      <g>
+        <rect width="52" height="52" rx="5" ry="5"/>
+        <rect width="24" height="52" rx="2" ry="2" class="mod"/>
+        <text x="-26"  y="18.0" class="mod" transform="rotate(-90)">sym</text>
+        <text x="38.0" y="43.4" class="nav shortcut">altgr</text>
+      </g>
+    </g>
+  </g>
+
+</svg>
