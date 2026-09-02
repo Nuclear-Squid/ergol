@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -20 836 340">
+  <style><![CDATA[ {{ .theme }} {{ .geometry }} ]]></style>
+
+  <defs>
+    <rect width="52" height="52" rx="5" ry="5" id="key"/>
+    <rect width="52" height="82" rx="5" ry="5" id="longKey"/>
+  </defs>
+
+  <g class="left">
+    <g class="col_L">
+      <use href="#key" class="row_0 specialKey" />
+      <use href="#key" class="row_1 specialKey" />
+      <use href="#key" class="row_2 specialKey" />
+      <use href="#key" class="row_3 specialKey" />
+    </g>
+    <g class="col_1">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 homeKey"  />
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+    <g class="col_2">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 homeKey"  />
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+    <g class="col_3">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 homeKey"  />
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+    <g class="col_4">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 homeKey"  />
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+    <g class="col_5">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 letterKey"/>
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+
+    <g class="thb_1">
+      <g><use href="#key" class="specialKey"/></g>
+    </g>
+    <g class="thb_2">
+      <g><use href="#key" class="specialKey"/></g>
+    </g>
+    <g class="thb_3">
+      <g><use href="#key" class="specialKey"/></g>
+    </g>
+    <g class="thb_4">
+      <g><use href="#key" class="homeKey"/></g>
+    </g>
+    <g class="thb_5">
+      <g><use href="#key" class="specialKey"/></g>
+    </g>
+    <g class="thb_5l">
+      <g><use href="#longKey" class="specialKey"/></g>
+    </g>
+  </g>
+
+  <g class="right">
+    <g class="col_6">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 letterKey"/>
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+    <g class="col_7">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 homeKey  "/>
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+    <g class="col_8">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 homeKey"  />
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+    <g class="col_9">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 homeKey"  />
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+    <g class="col_0">
+      <use href="#key" class="row_0 numberKey"/>
+      <use href="#key" class="row_1 letterKey"/>
+      <use href="#key" class="row_2 homeKey"  />
+      <use href="#key" class="row_3 letterKey"/>
+    </g>
+    <g class="col_R">
+      <use href="#key" class="row_0 specialKey" />
+      <use href="#key" class="row_1 specialKey" />
+      <use href="#key" class="row_2 specialKey" />
+      <use href="#key" class="row_3 specialKey" />
+    </g>
+
+    <g class="thb_6l">
+      <g><use href="#longKey" class="specialKey"/></g>
+    </g>
+    <g class="thb_6">
+      <g><use href="#key" class="specialKey"/></g>
+    </g>
+    <g class="thb_7">
+      <g><use href="#key" class="homeKey"/></g>
+    </g>
+    <g class="thb_8">
+      <g><use href="#key" class="specialKey"/></g>
+    </g>
+    <g class="thb_9">
+      <g><use href="#key" class="specialKey"/></g>
+    </g>
+    <g class="thb_0">
+      <g><use href="#key" class="specialKey"/></g>
+    </g>
+  </g>
+
+</svg>

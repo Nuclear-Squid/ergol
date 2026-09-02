@@ -3,7 +3,7 @@
 
   {{ .defs }}
 
-  <g id="left">
+  <g class="left">
     <g class="col_L specialKey">
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -137,7 +137,7 @@
         <text x="26" y="30">Ctrl</text>
       </g>
     </g>
-    <g class="thb_5 specialKey">
+    <g class="thb_5l specialKey">
       <g>
         <rect width="52" height="82" rx="5" ry="5"/>
         <text x="26" y="45">Cmd</text>
@@ -145,7 +145,7 @@
     </g>
   </g>
 
-  <g id="right">
+  <g class="right">
     <g class="col_6">
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -269,7 +269,7 @@
       </g>
     </g>
 
-    <g class="thb_6 specialKey nav">
+    <g class="thb_6l specialKey nav">
       <g>
         <rect class="mod" width="52" height="82" rx="5" ry="5"/>
         <text class="mod" x="26" y="45">Nav</text>

@@ -1,11 +1,9 @@
-{{- $src := (printf "%s%s" (.Get "type") "_blank") -}}
-{{- $svg := resources.Get (printf "svg/%s.svg" $src)
-  | resources.ExecuteAsTemplate (printf "img/%s.svg" $src) (dict
-    "theme" (resources.Get "svg/theme.css").Content
-    "kb4x6" (resources.Get "svg/4x6.css"  ).Content
-    "kb3x6" (resources.Get "svg/3x6.css"  ).Content
-    "kb3x5" (resources.Get "svg/3x5.css"  ).Content) -}}
+{{- $type := .Get "type" -}}
+{{- $svg := resources.Get "svg/blank.svg"
+  | resources.ExecuteAsTemplate (printf "img/%s_blank.svg" $type) (dict
+    "geometry" (resources.Get (printf "svg/%s.css" $type)).Content
+    "theme"    (resources.Get "svg/theme.css").Content) -}}
 
 <a href="{{ .Get "href" }}">
-  <img src="{{ $svg.RelPermalink }}" alt="clavier {{ .Get "type" }}">
+  <img src="{{ $svg.RelPermalink }}" alt="clavier {{ $type }}">
 </a>
