@@ -6,6 +6,10 @@ Une extension d’[Arsenik] pour les claviers ergonomiques.
 
 {{% keymap src="selenium_hrm" alt="Selenium, saveur HRM" /%}}
 
+:::{style="text-align: center;" }
+🚧 en construction 🚧
+:::
+
 <!--more-->
 
 
@@ -36,13 +40,21 @@ déclencher de raccourcis intempestifs.
 Configurable
 -------------------------------------------------------------------------------
 
-TODO
+[Plus d’infos sur la page Selenium.](https://onedeadkey.github.io/selenium)
+
+(TODO)
 
 
 Ækeynox
 -------------------------------------------------------------------------------
 
-TODO
+Ækeynox est l’implémentation QMK / ZMK des <i lang="en">keymaps</i> Arsenik et
+Selenium. Plus d’infos sur les pages GitHub :
+
+- [Ækeynox ZMK](https://github.com/OneDeadKey/zmk-config-aekeynox)
+- [Ækeynox QMK](https://github.com/OneDeadKey/qmk-config-aekeynox)
+
+(TODO)
 
 
 [compacts]:  ../compacts
