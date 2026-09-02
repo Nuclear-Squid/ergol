@@ -1,0 +1,18 @@
+{{- $src := .Get "src" -}}
+{{- $svg := resources.Get (printf "svg/%s.svg" $src)
+  | resources.ExecuteAsTemplate (printf "img/%s.svg" $src) (dict
+    "style" (resources.Get "svg/style.css").Content
+    "theme" (resources.Get "svg/theme.css").Content
+    "kb4x6" (resources.Get "svg/4x6.css"  ).Content
+    "kb3x6" (resources.Get "svg/3x6.css"  ).Content
+    "kb3x5" (resources.Get "svg/3x5.css"  ).Content
+    "defs"  (resources.Get "svg/defs.svg" ).Content) -}}
+
+{{ if len .Inner }}
+  <figure>
+    <img src="{{ $svg.RelPermalink }}" alt="{{ .Get "alt" }}">
+    <figcaption aria-hidden="true">{{ .Inner }}</figcaption>
+  </figure>
+{{ else }}
+  <img src="{{ $svg.RelPermalink }}" alt="{{ .Get "alt" }}">
+{{ end }}
