@@ -1,7 +1,11 @@
-/* 3x5 geometry (Corne-like) */
+/* 3x6 geometry (Corne-like) */
 
-#left  { transform: translate(  4px, 15px); }
-#right { transform: translate(480px, 15px); }
+.left  { transform: translate(  4px, 15px); }
+.right { transform: translate(480px, 15px); }
+
+.thb_1, .thb_2, .thb_6,
+.thb_0, .thb_9, .thb_5,
+.row_0 { display: none; }
 
 /* column stagger */
 
@@ -21,14 +25,14 @@
 
 /* XXX these thumb clusters have been positioned with magic numbers */
 
-.thb_3 { transform: translate(210px, 190px); }
-.thb_4 { transform: translate(280px, 191px); }
-.thb_5 { transform: translate(360px, 182px); }
-.thb_4 g { transform: rotate(12deg); }
-.thb_5 g { transform: rotate(24deg); }
+.thb_3  { transform: translate(210px, 190px); }
+.thb_4  { transform: translate(280px, 191px); }
+.thb_5l { transform: translate(360px, 182px); }
+.thb_4  g { transform: rotate(12deg); }
+.thb_5l g { transform: rotate(24deg); }
 
-.thb_8 { transform: translate( 90px, 190px); }
-.thb_7 { transform: translate( 20px, 201px); }
-.thb_6 { transform: translate(-57px, 201px); }
-.thb_7 g { transform: rotate(-12deg); }
-.thb_6 g { transform: rotate(-24deg); }
+.thb_8  { transform: translate( 90px, 190px); }
+.thb_7  { transform: translate( 20px, 201px); }
+.thb_6l { transform: translate(-57px, 201px); }
+.thb_7  g { transform: rotate(-12deg); }
+.thb_6l g { transform: rotate(-24deg); }

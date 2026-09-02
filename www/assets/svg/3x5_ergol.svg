@@ -3,7 +3,7 @@
 
   {{ .defs }}
 
-  <g id="left">
+  <g class="left">
     <g class="col_1">
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -116,7 +116,7 @@
       </g>
     </g>
 
-    <g class="thb_4 specialKey mod">
+    <g class="thb_3 specialKey mod">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dual mod"/>
@@ -124,7 +124,7 @@
         <use  x="26" y="18.6" href="#glyph_tab"/>
       </g>
     </g>
-    <g class="thb_5 specialKey nav">
+    <g class="thb_4 specialKey nav">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dual mod"/>
@@ -134,7 +134,7 @@
     </g>
   </g>
 
-  <g id="right">
+  <g class="right">
     <g class="col_6">
       <g transform="translate(0 0)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -249,7 +249,7 @@
       </g>
     </g>
 
-    <g class="thb_6 specialKey nav">
+    <g class="thb_7 specialKey nav">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dual mod"/>
@@ -257,7 +257,7 @@
         <use  x="26" y="18.6" href="#glyph_space"/>
       </g>
     </g>
-    <g class="thb_7 specialKey sym">
+    <g class="thb_8 specialKey sym">
       <g>
         <rect width="52" height="52" rx="5" ry="5"/>
         <rect width="52" height="26" rx="2" ry="2" class="dual mod"/>

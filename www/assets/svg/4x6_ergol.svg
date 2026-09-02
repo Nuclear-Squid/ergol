@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 836 340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -20 836 340">
   <style><![CDATA[ {{ .style }} {{ .kb4x6 }} ]]></style>
 
   {{ .defs }}
 
-  <g id="left">
+  <g class="left">
     <g class="col_L specialKey">
       <g transform="translate(0 -60)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -178,7 +178,7 @@
         <text x="26" y="30">⎵</text>
       </g>
     </g>
-    <g class="thb_5 specialKey">
+    <g class="thb_5l specialKey">
       <g>
         <rect width="52" height="82" rx="5" ry="5"/>
         <text x="26" y="45">Ctrl</text>
@@ -186,7 +186,7 @@
     </g>
   </g>
 
-  <g id="right">
+  <g class="right">
     <g class="col_6">
       <g transform="translate(0 -60)">
         <rect width="52" height="52" rx="5" ry="5"/>
@@ -339,7 +339,7 @@
       </g>
     </g>
 
-    <g class="thb_6 specialKey">
+    <g class="thb_6l specialKey">
       <g>
         <rect width="52" height="82" rx="5" ry="5"/>
         <text x="26" y="45">Ctrl</text>
