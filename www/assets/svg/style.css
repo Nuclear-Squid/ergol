@@ -31,8 +31,9 @@ use {
 
 .specialKey rect  { fill: #e4e4e4; }
 .specialKey text  { font-size: 14px; }
-.mod, .hrm, .func { font-size: 14px; }
+.specialKey .shortcut,
 .shortcut         { font-size: 11px; }
+.mod, .hrm, .func { font-size: 14px; }
 
 .func {
   transform: translateX(-1px);
