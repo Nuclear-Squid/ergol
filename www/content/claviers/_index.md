@@ -376,8 +376,8 @@ quasi inutilisable en AZERTY.
 [dactylo]:   {{< relref "articles/apprendre_a_taper/" >}}
 [Bépolar]:   {{< relref "lafayette/#b%C3%A9polar" >}}
 
-[Selenium]:    ./selenium
-[Selenium-EZ]: ./selenium
+[Selenium]:    {{< relref "claviers/selenium" >}}
+[Selenium-EZ]: {{< relref "claviers/selenium" >}}
 
 [Sofle]:     https://github.com/josefadamcik/SofleKeyboard
 [Corne]:     https://github.com/foostan/crkbd
