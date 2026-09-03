@@ -20,7 +20,8 @@ Fonctionnement
 
 - le <i lang="en">layer</i> de navigation [NavNum]
 - le <i lang="en">layer</i> de symboles, identique à la couche AltGr d’Ergo‑L
-- les touches duales : layer-taps sous les pouces, homerow-mods sous les doigts
+- les touches duales : [layer-taps] sous les pouces, [homerow-mods] sous les
+  doigts
 
 La différence est que Selenium tire partie des <i lang="en">clusters</i> de
 pouces des claviers ergonomiques : là où un modèle ANSI ou ISO n’a que trois
@@ -40,7 +41,7 @@ déclencher de raccourcis intempestifs.
 Configurable
 -------------------------------------------------------------------------------
 
-[Plus d’infos sur la page Selenium.](https://onedeadkey.github.io/selenium)
+[Plus d’infos sur la page Selenium.][Selenium]
 
 (TODO)
 
@@ -57,25 +58,9 @@ Selenium. Plus d’infos sur les pages GitHub :
 (TODO)
 
 
-[compacts]:  ../compacts
-[NavNum]:    ../compacts/#layer-navnum
-[4×6]:       ../compacts/#kbd_4x6
-[3×6]:       ../compacts/#kbd_3x6
-[3×5]:       ../compacts/#kbd_3x5
-[Arsenik]:   ../arsenik
-[Selenium]:  https://onedeadkey.github.io/selenium
-[HRM]:       ../arsenik/#homerow-mods
-[LT]:        ../arsenik/#layer-taps
-[1DFH]:      /presentation/#dfh-1u-distance-from-home
-[dactylo]:   /articles/apprendre_a_taper/
-[Bépolar]:   /lafayette/#b%C3%A9polar
+[Arsenik]:       {{< relref "claviers/arsenik" >}}
+[layer-taps]:    {{< relref "claviers/arsenik#layer-taps" >}}
+[homerow-mods]:  {{< relref "claviers/arsenik#homerow-mods" >}}
+[NavNum]:        {{< relref "claviers/compacts/#layer-navnum" >}}
 
-[Sofle]:     https://github.com/josefadamcik/SofleKeyboard
-[Corne]:     https://github.com/foostan/crkbd
-[Preonic]:   https://olkb.com/collections/preonic
-[Planck]:    https://olkb.com/collections/planck
-[Model100]:  https://shop.keyboard.io/products/model-100
-[Atreus]:    https://atreus.technomancy.us/
-[Ferris]:    https://github.com/pierrechevalier83/ferris
-[TMx]:       https://www.typematrix.com/
-[kanata]:    https://github.com/jtroo/kanata
+[Selenium]:  https://onedeadkey.github.io/selenium

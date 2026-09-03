@@ -202,6 +202,7 @@ d’apprendre [Bépolar][]… voire Ergo‑L. ;-)
 [NavNum]:    #layer-navnum
 [lt]:        #layer-taps
 [hrm]:       #homerow-mods
+
 [full-size]: {{< relref "claviers/full-size" >}}
 [ErgoDox]:   {{< relref "claviers/full-size/#géométrie-ergodox" >}}
 [dactylo]:   {{< relref "articles/apprendre_a_taper/" >}}
@@ -223,10 +224,9 @@ d’apprendre [Bépolar][]… voire Ergo‑L. ;-)
 [Arsenik]:       {{< relref "claviers/arsenik" >}}
 [layer-taps]:    {{< relref "claviers/arsenik#layer-taps" >}}
 [homerow-mods]:  {{< relref "claviers/arsenik#homerow-mods" >}}
-
-[Selenium]:      ../selenium
-[Selenium-EZ]:   ../selenium
-[Selenium-2TK]:  ../selenium
+[Selenium]:      {{< relref "claviers/selenium" >}}
+[Selenium-EZ]:   {{< relref "claviers/selenium" >}}
+[Selenium-2TK]:  {{< relref "claviers/selenium" >}}
 
 [Miryoku]:       https://github.com/manna-harbour/miryoku
 [precondition]:  https://precondition.github.io/home-row-mods
