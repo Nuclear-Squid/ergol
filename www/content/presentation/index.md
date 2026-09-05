@@ -146,17 +146,17 @@ charge des doigts que sur le taux de bigrammes de même doigt :
 : Taux de bigrammes de même doigt en français et anglais, extrait de la [page de comparaison avec Bépo]({{< relref "bepo" >}}).
 :::
 
-[azerty-fr]: {{< relref "stats/#/azerty//fr" >}}
-[bepo-fr]:   {{< relref "stats/#/bepo//fr" >}}
-[ergol-fr]:  {{< relref "stats/#/ergol//fr" >}}
-[dvorak-fr]: {{< relref "stats/#/dvorak//fr" >}}
-[qwerty-fr]: {{< relref "stats/#/qwerty//fr" >}}
+[azerty-fr]: {{< relref "stats/#/azerty/iso/fr" >}}
+[bepo-fr]:   {{< relref "stats/#/bepo/iso/fr" >}}
+[ergol-fr]:  {{< relref "stats/#/ergol/iso/fr" >}}
+[dvorak-fr]: {{< relref "stats/#/dvorak/iso/fr" >}}
+[qwerty-fr]: {{< relref "stats/#/qwerty/iso/fr" >}}
 
-[azerty-en]: {{< relref "stats/#/azerty//en" >}}
-[bepo-en]:   {{< relref "stats/#/bepo//en" >}}
-[ergol-en]:  {{< relref "stats/#/ergol//en" >}}
-[dvorak-en]: {{< relref "stats/#/dvorak//en" >}}
-[qwerty-en]: {{< relref "stats/#/qwerty//en" >}}
+[azerty-en]: {{< relref "stats/#/azerty/iso/en" >}}
+[bepo-en]:   {{< relref "stats/#/bepo/iso/en" >}}
+[ergol-en]:  {{< relref "stats/#/ergol/iso/en" >}}
+[dvorak-en]: {{< relref "stats/#/dvorak/iso/en" >}}
+[qwerty-en]: {{< relref "stats/#/qwerty/iso/en" >}}
 
 
 Impeccable en français
@@ -232,7 +232,7 @@ Une grande attention à été portée aux enchainements de lettres.
 - La touche morte est placée sur la main opposée à [E]{.kbd}[A]{.kbd}[C]{.kbd},
   qui sont les lettres le plus souvent diacritées en français.
 
-![[Fréquence d’utilisation des touches en français.]({{< relref "stats/#/Ergo‑L//fr" >}})](ergol_fr.svg)
+![[Fréquence d’utilisation des touches en français.]({{< relref "stats/#/Ergo‑L/iso/fr" >}})](ergol_fr.svg)
 
 Pratiquement aucun enchainement courant en français ne demande trop d’effort.
 
@@ -256,7 +256,7 @@ peut se dispenser en français. De même, [U]{.kbd} et [★]{.odk} sont très
 fréquents en français, mais peu fréquents en anglais, ce qui a été pris en
 compte pour leur placement.
 
-![[Fréquence d’utilisation des touches en anglais.]({{< relref "stats/#/Ergo‑L//en" >}})](ergol_en.svg)
+![[Fréquence d’utilisation des touches en anglais.]({{< relref "stats/#/Ergo‑L/iso/en" >}})](ergol_en.svg)
 
 Ergo‑L a donc une ergonomie comparable en français et en anglais. Bien que de
 nombreuses dispositions dédiées exclusivement à l’anglais soient plus efficaces

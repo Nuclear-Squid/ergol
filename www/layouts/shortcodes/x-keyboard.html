@@ -45,7 +45,7 @@
       {{ end }}
       {{ with .Get "data" }}
         <button disabled>⇪ Tester</button>
-        <a href="{{ (printf "stats/#/%s//en+fr" .) | relURL }}"><span>𝚺</span> Stats</a>
+        <a href="{{ (printf "stats/#/%s/iso/en+fr" .) | relURL }}"><span>𝚺</span> Stats</a>
         <a href="{{ (printf "dactylo/#%s" .) | relURL }}"><span>⌨</span> Apprendre</a><!-- 🎓 -->
       {{ end }}
     </nav>
