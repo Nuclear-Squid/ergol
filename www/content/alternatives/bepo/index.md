@@ -101,39 +101,39 @@ ainsi que [Ctrl]{.kbd}‑[Q]{.kbd}[A]{.kbd}[S]{.kbd} sont préservés, mais le
   </tr>
   <tr>
     <td>
-      <a href="{{< relref "stats/#/bepo//fr" >}}">
+      <a href="{{< relref "stats/#/bepo/iso/fr" >}}">
         <img src="./charge_bepo_fr.png" />
       </a>
     </td>
     <th> fr </th>
     <td>
-      <a href="{{< relref "stats/#/ergol//fr" >}}">
+      <a href="{{< relref "stats/#/ergol/iso/fr" >}}">
         <img src="./charge_ergol_fr.png"/>
       </a>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="{{< relref "stats/#/bepo//en+fr" >}}">
+      <a href="{{< relref "stats/#/bepo/iso/en+fr" >}}">
         <img src="./charge_bepo_en_fr.png"/>
       </a>
     </td>
     <th> fr‑en </th>
     <td>
-      <a href="{{< relref "stats/#/ergol//en+fr" >}}">
+      <a href="{{< relref "stats/#/ergol/iso/en+fr" >}}">
         <img src="./charge_ergol_en_fr.png"/>
       </a>
     </td>
   </tr>
   <tr>
     <td>
-      <a href="{{< relref "stats/#/bepo//en" >}}">
+      <a href="{{< relref "stats/#/bepo/iso/en" >}}">
         <img src="./charge_bepo_en.png" />
       </a>
     </td>
     <th> en </th>
     <td>
-      <a href="{{< relref "stats/#/ergol//en" >}}">
+      <a href="{{< relref "stats/#/ergol/iso/en" >}}">
         <img src="./charge_ergol_en.png"/>
       </a>
     </td>
@@ -245,17 +245,17 @@ même doigt :
 : Taux de bigrammes de même doigt en français et anglais.
 :::
 
-[azerty-fr]: {{< relref "stats/#/azerty//fr" >}}
-[bepo-fr]:   {{< relref "stats/#/bepo//fr" >}}
-[ergol-fr]:  {{< relref "stats/#/ergol//fr" >}}
-[dvorak-fr]: {{< relref "stats/#/dvorak//fr" >}}
-[qwerty-fr]: {{< relref "stats/#/qwerty//fr" >}}
+[azerty-fr]: {{< relref "stats/#/azerty/iso/fr" >}}
+[bepo-fr]:   {{< relref "stats/#/bepo/iso/fr" >}}
+[ergol-fr]:  {{< relref "stats/#/ergol/iso/fr" >}}
+[dvorak-fr]: {{< relref "stats/#/dvorak/iso/fr" >}}
+[qwerty-fr]: {{< relref "stats/#/qwerty/iso/fr" >}}
 
-[azerty-en]: {{< relref "stats/#/azerty//en" >}}
-[bepo-en]:   {{< relref "stats/#/bepo//en" >}}
-[ergol-en]:  {{< relref "stats/#/ergol//en" >}}
-[dvorak-en]: {{< relref "stats/#/dvorak//en" >}}
-[qwerty-en]: {{< relref "stats/#/qwerty//en" >}}
+[azerty-en]: {{< relref "stats/#/azerty/iso/en" >}}
+[bepo-en]:   {{< relref "stats/#/bepo/iso/en" >}}
+[ergol-en]:  {{< relref "stats/#/ergol/iso/en" >}}
+[dvorak-en]: {{< relref "stats/#/dvorak/iso/en" >}}
+[qwerty-en]: {{< relref "stats/#/qwerty/iso/en" >}}
 
 **De notre point de vue** : l’optimisation de Bépo est faite au détriment de
 l’anglais et de l’ergonomie, et elle est (très) inférieure à celle que propose

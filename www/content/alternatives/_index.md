@@ -190,7 +190,7 @@ https://discord.com/channels/794732334879473684/794734985122152478/1200680341363
 > français.
 
 [(?)]:     #optimot_en
-[optimot]: {{< relref "stats/#/optimot//en+fr" >}}
+[optimot]: {{< relref "stats/#/optimot/iso/en+fr" >}}
 [heatmap]: {{< relref "stats/#/optimot/ol60/en" >}}
 
 ---
@@ -212,7 +212,7 @@ https://discord.com/channels/794732334879473684/794734985122152478/1200680341363
 [lafayette]:  {{< relref "lafayette/#qwerty-lafayette" >}}
 [colemak ft]: {{< relref "lafayette/#colemak-french-touch" >}}
 [bépolar]:    {{< relref "lafayette/#bépolar" >}}
-[azerty]:     {{< relref "stats/#/azerty//en+fr" >}}
+[azerty]:     {{< relref "stats/#/azerty/iso/en+fr" >}}
 
 [1DFH]:                {{< relref "presentation#dfh-1u-distance-from-home" >}}
 [touche morte]:        {{< relref "presentation#caractères-accentués" >}}

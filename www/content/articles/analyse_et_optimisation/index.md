@@ -100,9 +100,9 @@ touches notées 3, et en orange celles notées 4 ou plus — ce qui inclut les
 touches trop excentrées pour être évaluées par Workman, et qui enfreignent le
 principe [1DFH][], auquel nous autres Ergonautes sommes si attaché·e·s.
 
-![[Charge des doigts d’Ergo‑L.]({{< relref "stats/#/ergol//en+fr" >}})](ergol.png)
+![[Charge des doigts d’Ergo‑L.]({{< relref "stats/#/ergol/iso/en+fr" >}})](ergol.png)
 
-![[Charge des doigts de Bépo.]({{< relref "stats/#/bepo//en+fr" >}})](bepo.png)
+![[Charge des doigts de Bépo.]({{< relref "stats/#/bepo/iso/en+fr" >}})](bepo.png)
 
 ### Les bigrammes
 
@@ -125,9 +125,9 @@ complètement ces SFB et SKB, mais on fait en sorte de les placer
 préférentiellement sur les doigts forts, en évitant tout particulièrement les
 auriculaires.
 
-![[Répartition des SFB et SKB d’Ergo‑L.]({{< relref "stats/#/ergol//en+fr" >}})](ergol_sfu.png)
+![[Répartition des SFB et SKB d’Ergo‑L.]({{< relref "stats/#/ergol/iso/en+fr" >}})](ergol_sfu.png)
 
-![[Répartition des SFB et SKB de Bépo.]({{< relref "stats/#/bepo//en+fr" >}})](bepo_sfu.png)
+![[Répartition des SFB et SKB de Bépo.]({{< relref "stats/#/bepo/iso/en+fr" >}})](bepo_sfu.png)
 
 Lors d’un enchainement rapide de deux touches, il est fréquent (voire
 systématique) que la deuxième touche soit pressée avant que la première ne soit

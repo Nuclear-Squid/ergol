@@ -581,7 +581,7 @@ window.addEventListener('DOMContentLoaded', () => {
       IDs.map(prop => state[prop]).join('/').replace(/\/+$/, '');
   };
   const applyHashState = () => {
-    const hash = window.location.hash || '/ergol//en+fr/altgr';
+    const hash = window.location.hash || '/ergol/iso/en+fr/altgr';
     const hashState = hash.split('/').slice(1);
     IDs.forEach((key, i) => {
       setProp(key, hashState[i] || '');

@@ -62,6 +62,6 @@ D’autres utilisateurs ont adopté des solutions plus radicales, comme [Wismill
 [JF]:            https://github.com/cmoinard
 [Wismill]:       https://github.com/wismill
 
-[erglace_nuke]:  {{< relref "stats/#/erglace_nuke//en+fr" >}}
-[erglace_jf]:    {{< relref "stats/#/erglace_jf//en+fr" >}}
-[ergaie]:        {{< relref "stats/#/ergaie//en+fr" >}}
+[erglace_nuke]:  {{< relref "stats/#/erglace_nuke/iso/en+fr" >}}
+[erglace_jf]:    {{< relref "stats/#/erglace_jf/iso/en+fr" >}}
+[ergaie]:        {{< relref "stats/#/ergaie/iso/en+fr" >}}
