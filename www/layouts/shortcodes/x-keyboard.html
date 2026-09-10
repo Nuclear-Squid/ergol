@@ -1,37 +1,50 @@
-{{ $name := .Get "name" }}
+{{- $src := .Get "data" -}}
+{{- $svg := resources.Get (printf "keylayouts/%s.svg" $src)
+  | resources.ExecuteAsTemplate (printf "img/%s.svg" $src) (dict
+    "style" (resources.Get "keylayouts/style.css").Content
+    "keys"  (resources.Get "keylayouts/_keys.svg").Content
+    "defs"  (resources.Get "keylayouts/_defs.svg").Content
+  ) -}}
+
 <div class="keyboard">
   <div style="width: 100%; padding-top: 34%; position: relative;">
-    <object type="image/svg+xml"
-            {{ with .Get "class" }} class="{{ . }}" {{ end }}
-            {{ with .Get "data" }} data="{{ (printf "img/%s.svg" .) | relURL }}" {{ end }}
+    <object type="image/svg+xml" class="{{ .Get "class" }}"
+            data="{{ $svg.RelPermalink }}"
       style="position: absolute; top: 0; left: 0; width: 100%;"></object>
   </div>
 
   <form>
     <fieldset class="layers" hidden>
-      <input type="radio" name="layers" label="Typo"  value="odk" checked
-        title="caractères obtenus par la touche « Typo » (vue simplifiée)">
-      <input type="radio" name="layers" label="Typo+Symboles"   value="mixed"
-        title="caractères obtenus par les touches « Typo » et « Symboles »">
-      <input type="radio" name="layers" label="Symboles" value="altgr"
-        title="caractères obtenus par la touche « Symboles »">
+      <input type="radio" name="layers" value="odk" checked
+        title="caractères obtenus par la touche « Typo » (vue simplifiée)"
+        label="Typo">
+      <input type="radio" name="layers" value="mixed"
+        title="caractères obtenus par les touches « Typo » et « Symboles »"
+        label="Typo+Symboles">
+      <input type="radio" name="layers" value="altgr"
+        title="caractères obtenus par la touche « Symboles »"
+        label="Symboles">
     </fieldset>
     <fieldset class="geometry">
-      <input type="radio" name="geometry" label="3×6"   value="ol40"
-        title="géométrie 40 % type OLKB Planck">
-      <input type="radio" name="geometry" label="4×6"   value="ol50"
-        title="géométrie 50 % type OLKB Preonic">
-      <input type="radio" name="geometry" label="TMx"   value="ol60"
-        title="géométrie 60 % type TypeMatrix">
-      <input type="radio" name="geometry" label="ANSI"  value="ansi"
-        title="géométrie américaine">
-      <input type="radio" name="geometry" label="ISO"   value="iso" checked
-        title="géométrie européenne">
-      <input type="radio" name="geometry" label="ISO-A" value="iso-a"
-        title="géométrie européenne avec variante en « A »">
+      <input type="radio" name="geometry" value="ol40"
+        title="géométrie 1DFH type Arsenik"
+        label="1DFH">
+      <input type="radio" name="geometry" value="ol60"
+        title="géométrie 60 % type TypeMatrix"
+        label="60%">
+      <input type="radio" name="geometry" value="ansi"
+        title="géométrie américaine"
+        label="ANSI">
+      <input type="radio" name="geometry" value="iso" checked
+        title="géométrie européenne"
+        label="ISO">
+      <input type="radio" name="geometry" value="iso-a"
+        title="géométrie européenne avec variante en « A »"
+        label="ISO-A">
     </fieldset>
   </form>
 
+  {{ $name := .Get "name" }}
   {{ if $name }}
     {{ with .Get "data" }}
     <dialog>

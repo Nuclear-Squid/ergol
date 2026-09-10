@@ -1,8 +1,8 @@
 {{- $type := .Get "type" -}}
-{{- $svg := resources.Get "svg/blank.svg"
+{{- $svg := resources.Get "keymaps/blank.svg"
   | resources.ExecuteAsTemplate (printf "img/%s_blank.svg" $type) (dict
-    "geometry" (resources.Get (printf "svg/%s.css" $type)).Content
-    "theme"    (resources.Get "svg/theme.css").Content) -}}
+    "geometry" (resources.Get (printf "keymaps/%s.css" $type)).Content
+    "theme"    (resources.Get "keymaps/theme.css").Content) -}}
 
 <a href="{{ .Get "href" }}">
   <img src="{{ $svg.RelPermalink }}" alt="clavier {{ $type }}">
