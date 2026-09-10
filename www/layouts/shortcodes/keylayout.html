@@ -1,0 +1,9 @@
+{{- $src := .Get "src" -}}
+{{- $svg := resources.Get (printf "keylayouts/%s.svg" $src)
+  | resources.ExecuteAsTemplate (printf "img/%s.svg" $src) (dict
+    "style" (resources.Get "keylayouts/style.css").Content
+    "keys"  (resources.Get "keylayouts/_keys.svg").Content
+    "defs"  (resources.Get "keylayouts/_defs.svg").Content
+  ) -}}
+
+<img src="{{ $svg.RelPermalink }}" alt="{{ .Get "alt" }}">

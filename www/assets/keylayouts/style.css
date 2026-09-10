@@ -1,0 +1,397 @@
+/**
+ * Geometries
+ * same as https://github.com/OneDeadKey/x-keyboard
+ */
+
+.row_AE { transform: translate(4px,   4px); }
+.row_AD { transform: translate(4px,  64px); }
+.row_AC { transform: translate(4px, 124px); }
+.row_AB { transform: translate(4px, 184px); }
+.row_AA { transform: translate(4px, 244px); }
+.iso #Backslash { transform: translate(765px,  60px); }
+.alt #Backslash { transform: translate(780px, -60px); }
+
+/* swap Alt/Meta for macOS */
+[platform="gnu"] #MetaLeft,
+[platform="win"] #MetaLeft,  #AltLeft   { transform: translateX( 75px); }
+[platform="gnu"] #AltLeft,
+[platform="win"] #AltLeft,   #MetaLeft  { transform: translateX(150px); }
+[platform="gnu"] #AltRight,
+[platform="win"] #AltRight,  #MetaRight { transform: translateX(600px); }
+[platform="gnu"] #MetaRight,
+[platform="win"] #MetaRight, #AltRight  { transform: translateX(675px); }
+
+/* Angle Mod */
+.am {
+  #KeyZ          { transform: translateX( 74px); }
+  #KeyX          { transform: translateX(134px); }
+  #KeyC          { transform: translateX(194px); }
+  #KeyV          { transform: translateX(254px); }
+  #KeyB          { transform: translateX(314px); }
+  #IntlBackslash { transform: translateX(374px); }
+}
+
+/* Ortholinear */
+.ergo {
+  #ShiftLeft { transform: translate(240px, 60px); }
+  #AltRight  { transform: translate(555px,  0px); }
+  #Tab       { transform: translate( 15px, 30px); }
+}
+.ol60 {
+  .left   { transform: translateX(-75px); }
+  .right  { transform: translateX( 15px); }
+  #Space  { transform: translateX(270px); }
+  .row_AE { transform: translate(94px,   4px); }
+  .row_AD { transform: translate(64px,  64px); }
+  .row_AC { transform: translate(49px, 124px); }
+  .row_AB { transform: translate(19px, 184px); }
+  #Escape        { transform: translate(367.5px,  30px); }
+  #Enter         { transform: translate(322.5px,  30px); }
+  #Backspace     { transform: translate(277.5px,  90px); }
+  #Backquote     { transform: translate(  0.0px,  30px); }
+  #IntlBackslash { transform: translate( 75.0px, -30px); }
+  #Minus         { transform: translate(660.0px,  30px); }
+  #Equal         { transform: translate(720.0px,  30px); }
+  #BracketLeft   { transform: translate(690.0px,  30px); }
+  #BracketRight  { transform: translate(750.0px,  30px); }
+  #Quote         { transform: translate(705.0px,  30px); }
+  #Backslash     { transform: translate(750.0px,  90px); }
+}
+.ol40 {
+  .left   { transform: translateX(-15px); }
+  .right  { transform: translateX( 15px); }
+  #Space  { transform: translateX(330px); }
+  .row_AD { transform: translate(56.5px,  34px); }
+  .row_AC { transform: translate(41.5px,  94px); }
+  .row_AB { transform: translate(11.5px, 154px); }
+  .row_AA { transform: translate(-3.5px, 214px); }
+  #Escape    { transform: translate( 67.5px, 120px); }
+  #Backspace { transform: translate(742.5px,  60px); }
+  #Enter     { transform: translate(  705px,  30px); }
+}
+
+/**
+ * Color Themes
+ * same as https://github.com/OneDeadKey/x-keyboard
+ */
+
+svg, :root {
+  color-scheme: light dark;
+
+  --key-txt:    #333;
+  --key-fg:     #666;
+  --key-bg:     #f8f8f8;
+  --special-bg: #e4e4e4;
+  --target-bg:  #aad;
+  --hint-bg:    #a33;
+  --press-bg:   #335;
+  --press-fg:   #fff;
+
+  --altgr-txt:  blue;
+  --1dk-txt:    green;
+  --dk-txt:     red;
+
+  --bar-bg:    hsl(-90deg, 100%, 90%);
+  --col0-bg:   hsl(-90deg, 100%, 90%);
+  --col1-bg:   hsl(200deg, 100%, 85%);
+  --col2-bg:   hsl(136deg, 100%, 85%);
+  --col3-bg:   hsl( 60deg, 100%, 85%);
+  --col4-bg:   hsl( 30deg, 100%, 90%);
+  --col4-bg:   hsl(-20deg, 100%, 90%);
+
+  --pinky-bg:  hsl(-90deg,  70%, 90%);
+  --number-bg: hsl(295deg, 100%, 95%);
+  --letter-bg: hsl(222deg, 100%, 95%);
+  --home-bg:   hsl(222deg, 100%, 90%);
+}
+
+@media (prefers-color-scheme: dark) { svg, :root {
+  --key-txt:    #bbb;
+  --key-fg:     #777;
+  --key-bg:     #4d4d4d;
+  --special-bg: #333;
+  --target-bg:  #558;
+  --press-bg:   #449;
+
+  --altgr-txt:  #99f;
+  --1dk-txt:    #6d6;
+  --dk-txt:     #f44;
+
+  --bar-bg:    hsl(-90deg, 25%, 35%);
+  --col0-bg:   hsl(-90deg, 25%, 50%);
+  --col1-bg:   hsl(225deg, 25%, 40%);
+  --col2-bg:   hsl(135deg, 25%, 40%);
+  --col3-bg:   hsl( 40deg, 27%, 48%);
+  --col4-bg:   hsl(330deg, 25%, 53%);
+
+  --pinky-bg:  hsl(-90deg, 10%, 40%);
+  --number-bg: hsl(280deg, 10%, 34%);
+  --letter-bg: hsl(220deg, 15%, 35%);
+  --home-bg:   hsl(225deg, 30%, 30%);
+}}
+
+rect, path {
+  fill:   var(--key-bg);
+  stroke: var(--key-fg);
+  stroke-width: .5px;
+}
+.specialKey,
+.specialKey rect,
+.specialKey path { fill: var(--special-bg); }
+/* .specialKey text { fill: var(--special-fg); } */
+
+g:target rect, .press rect,
+g:target path, .press path { fill: var(--target-bg); }
+
+text {
+  font: normal 20px sans-serif;
+  fill: var(--key-txt);
+  text-shadow: 1px 1px var(--key-bg);
+  text-align: center;
+}
+.level3, .level4      { fill: var(--altgr-txt); }
+.level5, .level6, .dk { fill: var(--1dk-txt); }
+.deadKey              { fill: var(--dk-txt); }
+
+/* XXX: duplicate */
+.level3 text,
+.level4 text,
+.level3, .level4 { fill: var(--altgr-txt); }
+.level5 text,
+.level6 text,
+.level5, .level6 { fill: var(--1dk-txt); }
+
+[theme="hints"] {
+  [finger="m1"] rect { fill: var(--bar-bg);  }
+  [finger="l2"] rect,
+  [finger="r2"] rect { fill: var(--col4-bg); }
+  [finger="l3"] rect,
+  [finger="r3"] rect { fill: var(--col3-bg); }
+  [finger="l4"] rect,
+  [finger="r4"] rect { fill: var(--col2-bg); }
+  [finger="l5"] rect,
+  [finger="r5"] rect { fill: var(--col1-bg); }
+
+  [finger="l5"].pinkyKey rect { fill: url(#outerLeft); }
+  [finger="l2"].innerKey rect { fill: url(#innerLeft); }
+  [finger="r2"].innerKey rect { fill: url(#innerRight); }
+  [finger="r5"].pinkyKey rect { fill: url(#outerRight); }
+
+  .specialKey rect,
+  .specialKey path { fill: var(--special-bg); } /* duplicate? */
+  .press      rect { fill: var(--press-bg);   }
+  .press      text { fill: var(--press-fg);   }
+  .hint       rect { fill: var(--hint-bg);    }
+  .hint text {
+    font-weight: bold;
+    fill: var(--press-fg);
+  }
+}
+
+[theme="reach"] {
+  /* .pinkyKey  rect { fill: var(--pinky-bg);  } disabled on ergol.org */
+  .numberKey rect { fill: var(--number-bg); }
+  .letterKey rect { fill: var(--letter-bg); }
+  .homeKey   rect { fill: var(--home-bg);   }
+  .press     rect { fill: var(--bar-bg);    } /* duplicate? */
+}
+
+/**
+ * Standard Keyboard Geometries: ANSI, ISO, ABNT, ALT
+ * same as https://github.com/OneDeadKey/x-keyboard
+ */
+
+#Escape { display: none; }
+
+/* Backslash + Enter */
+#Enter path.alt,
+#Enter     .iso,
+#Backslash .iso,
+.alt #Enter rect.ansi,
+.iso #Enter rect.ansi,
+.iso #Enter text.ansi,
+.alt #Backslash .ansi,
+.iso #Backslash .ansi { display: none; }
+#Enter text.ansi,
+.alt #Enter     .alt,
+.iso #Enter     .iso,
+.iso #Backslash .iso { display: block; }
+
+/* Backspace + IntlYen */
+#IntlYen, #Backspace .alt,
+.intlYen  #Backspace .ansi { display: none; }
+.intlYen  #Backspace .alt,
+.intlYen  #IntlYen { display: block; }
+
+/* ShiftLeft + IntlBackslash */
+#IntlBackslash, #ShiftLeft .iso,
+.intlBackslash  #ShiftLeft .ansi { display: none; }
+.intlBackslash  #ShiftLeft .iso,
+.intlBackslash  #IntlBackslash { display: block; }
+
+/* ShiftRight + IntlRo */
+#IntlRo, #ShiftRight .abnt,
+.intlRo  #ShiftRight .ansi { display: none; }
+.intlRo  #ShiftRight .abnt,
+.intlRo  #IntlRo { display: block; }
+
+/**
+ * Ortholinear Keyboard Geometries: TypeMatrix (60%), 1DFH (40%)
+ * same as https://github.com/OneDeadKey/x-keyboard
+ */
+
+.specialKey   .ergo,
+.specialKey   .ol60,
+.specialKey   .ol40,
+#Space        .ol60,
+#Space        .ol40,
+#Space        .ergo,
+#Backquote    .ol60,
+#BracketRight .ol60,
+#Equal        .ol60,
+.ergo #CapsLock,
+.ergo #Space      .ansi,
+.ergo #Space      rect,
+.ergo #Backslash  rect,
+.ergo .specialKey rect,
+.ergo .specialKey text,
+.ol40 .pinkyKey,
+.ol40 .row_AE .numberKey { display: none; }
+
+.ergo #Escape,
+.ol60 #IntlBackslash,
+.ol60 #Space        .ol60,
+.ol40 #Space        .ol40,
+.ol60 #Backquote    .ol60,
+.ol60 #BracketRight .ol60,
+.ol60 #Backslash    .ol60,
+.ol60 #Equal        .ol60,
+.ol60 .specialKey   .ol60,
+.ol40 .specialKey   .ol40,
+.ergo .specialKey   .ergo { display: block; }
+
+/**
+ * Korean + Japanese Input Systems
+ * same as https://github.com/OneDeadKey/x-keyboard
+ */
+
+#NonConvert, #Convert, #KanaMode,
+#Lang1, #Lang2,
+#Space .jis,
+#Space .ks,
+.ks  #Space .ansi,
+.ks  #Space .jis,
+.jis #Space .ansi,
+.jis #Space .ks { display: none; }
+.ks  #Space .ks,
+.jis #NonConvert, .jis #Convert, .jis #KanaMode,
+.ks #Lang1, .ks #Lang2,
+.jis #Space .jis { display: block; }
+
+#Backquote .jis,
+#CapsLock  .jis,
+.jis #Backquote .ansi,
+.jis #CapsLock  .ansi { display: none; }
+.jis #Backquote .jis,
+.jis #CapsLock .jis { display: block; }
+
+#Space text,
+#Lang1 text,
+#Lang2 text,
+#Convert text,
+#NonConvert text,
+.jis #CapsLock text { font-size: 14px; }
+#KanaMode text,
+.jis #Backquote text { font-size: 10px; }
+
+/**
+ * Windows / MacOSX / Linux modifiers
+ * same as https://github.com/OneDeadKey/x-keyboard
+ */
+
+.specialKey .win,
+.specialKey .gnu {
+  display: none;
+  font-size: 14px;
+}
+
+/* display MacOSX by default */
+[platform="gnu"] .specialKey .win,
+[platform="gnu"] .specialKey .mac,
+[platform="win"] .specialKey .gnu,
+[platform="win"] .specialKey .mac { display: none; }
+[platform="mac"] .specialKey .mac,
+[platform="gnu"] .specialKey .gnu,
+[platform="win"] .specialKey .win { display: block; }
+
+/* only show the left Shift and right Option key for ergo layouts */
+.ergo {
+  #MetaLeft,
+  #MetaRight,
+  #ControlLeft,
+  #ControlRight,
+  #ContextMenu,
+  #AltLeft,
+  #ShiftRight,
+  #AltRight .win,
+  #AltRight .gnu { display: none; }
+  #AltRight,
+  #AltRight .mac { display: block; }
+}
+
+/**
+ * Keymap Layers
+ * XXX: differs from https://github.com/OneDeadKey/x-keyboard
+ */
+
+/* hide level3-6 by default */
+.level3, .level4, .level5, .level6 { display: none; }
+
+/* show 1dk */
+.odk .level5,
+.odk .level6 { display: block; }
+
+/* show 1dk and AltGr */
+.mixed .level3,
+.mixed .level5 { display: block; }
+.mixed .level5 { transform: translate(0px, -22.8px); }
+
+/* show AltGr */
+.altgr .level3,
+.altgr .level4 { display: block; }
+
+/* dimmed AltGr + bold dead keys */
+.deadKey {
+  font-size: 14px;
+}
+.diacritic {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+/* highlight AltGr + Dead Keys */
+.dk .level1, .altgr .level1,
+.dk .level2, .altgr .level2 { opacity: 0.25; }
+.dk .dk1, .altgr .level3,
+.dk .dk2, .altgr .level4 { opacity: 1; }
+.dk .level3, .dk .level4,
+.dk .level5, .dk .level6 { display: none; }
+
+/* still hacky (experimental at best) */
+.deadKey text {
+  fill: var(--fg-deadkey);
+  font-size: 22px;
+}
+.diacritic .dk_mark { opacity: 0.7; }
+.diacritic .dk_char { font-weight: bolder; }
+.non_diacritic .dk_mark { transform: translate(0px, 1px); opacity: 0.9; }
+.non_diacritic .dk_char { transform: translate(0px, -2px); }
+
+/* show secondary 1dk chars on hover */
+.level5.secondary,
+.level6.secondary { display: none; }
+:root:hover .level5.secondary,
+:root:hover .level6.secondary { display: block; }
+.altgr .level5.secondary,
+.altgr .level6.secondary { display: none !important; }
+
