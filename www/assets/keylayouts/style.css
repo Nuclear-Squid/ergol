@@ -116,7 +116,7 @@ svg, :root {
 
   --altgr-txt:  #99f;
   --1dk-txt:    #6d6;
-  --dk-txt:     #f44;
+  --dk-txt:     #f77;
 
   --bar-bg:    hsl(-90deg, 25%, 35%);
   --col0-bg:   hsl(-90deg, 25%, 50%);
@@ -160,17 +160,16 @@ use {
   stroke: var(--key-txt);
 }
 
-.level3, .level4      { fill: var(--altgr-txt); }
-.level5, .level6, .dk { fill: var(--1dk-txt); }
-.deadKey              { fill: var(--dk-txt); }
-
-/* XXX: duplicate */
 .level3 text,
 .level4 text,
 .level3, .level4 { fill: var(--altgr-txt); }
+
 .level5 text,
 .level6 text,
 .level5, .level6 { fill: var(--1dk-txt); }
+
+.deadKey text,
+.deadKey { fill: var(--dk-txt); }
 
 [theme="hints"] {
   [finger="m1"] rect { fill: var(--bar-bg);  }
@@ -371,15 +370,6 @@ use {
 .altgr .level3,
 .altgr .level4 { display: block; }
 
-/* dimmed AltGr + bold dead keys */
-.deadKey {
-  font-size: 14px;
-}
-.diacritic {
-  font-size: 20px;
-  font-weight: bolder;
-}
-
 /* highlight AltGr + Dead Keys */
 .dk .level1, .altgr .level1,
 .dk .level2, .altgr .level2 { opacity: 0.25; }
@@ -389,12 +379,8 @@ use {
 .dk .level5, .dk .level6 { display: none; }
 
 /* still hacky (experimental at best) */
-.deadKey text {
-  fill: var(--fg-deadkey);
-  font-size: 22px;
-}
-.diacritic .dk_mark { opacity: 0.7; }
-.diacritic .dk_char { font-weight: bolder; }
+.diacritic     .dk_mark { opacity: 0.7; }
+.diacritic     .dk_char { font-weight: bolder; }
 .non_diacritic .dk_mark { transform: translate(0px, 1px); opacity: 0.9; }
 .non_diacritic .dk_char { transform: translate(0px, -2px); }
 
@@ -403,6 +389,5 @@ use {
 .level6.secondary { display: none; }
 :root:hover .level5.secondary,
 :root:hover .level6.secondary { display: block; }
-.altgr .level5.secondary,
-.altgr .level6.secondary { display: none !important; }
-
+.altgr      .level5.secondary,
+.altgr      .level6.secondary { display: none !important; }
