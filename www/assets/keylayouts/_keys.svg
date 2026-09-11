@@ -1,142 +1,105 @@
   <!-- Non-Alpha / Non-ISO keys -->
   <g class="row_AE" text-anchor="middle">
     <g class="left">
-      <g id="Escape" class="specialKey" finger="l5">
+      <g id="Escape" class="specialKey">
         <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="16.4" y="42.8" class="ergo">⎋</text>
+        <use x="20" y="40" href="#glyph_escape"/>
       </g>
     </g>
     <g class="right">
-      <g id="IntlYen" class="pinkyKey" finger="r5" transform="translate(780)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-      </g>
-      <g id="Backspace" class="specialKey" finger="r5" transform="translate(780)">
-        <rect width="112" height="52" class="ansi" rx="5" ry="5"/>
-        <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
-        <rect width="52" height="52" x="60" class="alt" rx="5" ry="5"/>
-        <text x="16.4" y="42.8" class="ansi">⌫</text>
-        <text x="16.4" y="42.8" class="ergo">⌫</text>
-        <text x="16.4" y="42.8" class="alt" transform="translate(60)">⌫</text>
+      <g id="Backspace" class="specialKey" transform="translate(780)">
+        <rect width="112" height="52" rx="5" ry="5" class="ansi"/>
+        <rect width="67"  height="52" rx="5" ry="5" class="ergo"/>
+        <use x="20" y="40" href="#glyph_backspace"/>
       </g>
     </g>
   </g>
   <g class="row_AD" text-anchor="middle">
     <g class="left">
-      <g id="Tab" class="specialKey" finger="l5">
+      <g id="Tab" class="specialKey">
         <rect width="82" height="52" rx="5" ry="5"/>
-        <rect width="67" height="52" class="ol40" rx="5" ry="5"/>
-        <rect width="52" height="52" x="15" class="ol60" rx="5" ry="5"/>
-        <text x="16.4" y="42.8">↹</text>
-        <text x="16.4" y="42.8" class="ol40">↹</text>
-        <text x="16.4" y="42.8" class="ol60" transform="translate(15)">↹</text>
+        <rect width="67" height="52" rx="5" ry="5" class="ol40"/>
+        <rect width="52" height="52" rx="5" ry="5" class="ol60"/>
+        <use x="20" y="40" href="#glyph_tab"/>
       </g>
     </g>
   </g>
   <g class="row_AC" text-anchor="middle">
     <g class="left">
-      <g id="CapsLock" class="specialKey" finger="l5">
+      <g id="CapsLock" class="specialKey">
         <rect width="97" height="52" rx="5" ry="5"/>
-        <text x="16.4" y="42.8" class="ansi">⇪</text>
-        <text x="23" y="42.8" class="jis">英数</text>
+        <use x="20" y="40" href="#glyph_caps"/>
       </g>
     </g>
     <g class="right">
-      <g id="Enter" class="specialKey" finger="r5" transform="translate(765)">
-        <path d="M50-60h72a5 5 0 0 1 5 5V47a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5h35a5 5 1 0 0 5-5v-50a5 5 0 0 1 5-5z" class="alt"/>
+      <g id="Enter" class="specialKey" transform="translate(765)">
         <path d="M50-60h72a5 5 0 0 1 5 5V47a5 5 0 0 1-5 5H65a5 5 0 0 1-5-5V-3a5 5 1 0 0-5-5h-5a5 5 0 0 1-5-5v-42a5 5 0 0 1 5-5z" class="iso"/>
-        <rect width="127" height="52" class="ansi" rx="5" ry="5"/>
-        <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="16.4" y="42.8" class="ansi alt ergo">⏎</text>
-        <text x="16.4" y="42.8" class="iso" transform="translate(60)">⏎</text>
+        <rect width="127" height="52" rx="5" ry="5" class="ansi"/>
+        <rect width="67"  height="52" rx="5" ry="5" class="ergo"/>
+        <use x="80" y="40" href="#glyph_enter" class="iso"/>
+        <use x="20" y="40" href="#glyph_enter" class="ansi"/>
+        <use x="20" y="40" href="#glyph_enter" class="ergo"/>
       </g>
     </g>
   </g>
   <g class="row_AB" text-anchor="middle">
     <g class="left">
-      <g id="ShiftLeft" class="specialKey" finger="l5">
-        <rect width="127" height="52" class="ansi alt" rx="5" ry="5"/>
-        <rect width="67" height="52" class="iso" rx="5" ry="5"/>
-        <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="16.4" y="42.8">⇧</text>
-        <text x="16.4" y="42.8" class="ergo">⇧</text>
+      <g id="ShiftLeft" class="specialKey">
+        <rect width="127" height="52" rx="5" ry="5" class="ansi"/>
+        <rect width="82"  height="52" rx="5" ry="5" class="ergo"/>
+        <rect width="67"  height="52" rx="5" ry="5" class="iso"/>
+        <use x="20" y="40" href="#glyph_shift"/>
       </g>
     </g>
     <g class="right">
-      <g id="IntlRo" class="pinkyKey" finger="r5" transform="translate(735)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-      </g>
-      <g id="ShiftRight" class="specialKey" finger="r5" transform="translate(735)">
-        <rect width="157" height="52" class="ansi" rx="5" ry="5"/>
-        <rect width="97" height="52" x="60" class="abnt" rx="5" ry="5"/>
-        <text x="16.4" y="42.8" class="ansi">⇧</text>
-        <text x="16.4" y="42.8" class="abnt" transform="translate(60)">⇧</text>
+      <g id="ShiftRight" class="specialKey" transform="translate(735)">
+        <rect width="157" height="52" rx="5" ry="5"/>
+        <use x="20" y="40" href="#glyph_shift"/>
       </g>
     </g>
   </g>
   <g class="row_AA" text-anchor="middle">
     <g class="left">
-      <g id="ControlLeft" class="specialKey" finger="l5">
+      <g id="ControlLeft" class="specialKey">
         <rect width="67" height="52" rx="5" ry="5"/>
         <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="11" y="42.8" class="win gnu" text-anchor="start">Ctrl</text>
+        <text x="11.0" y="42.8" class="win gnu" text-anchor="start">Ctrl</text>
         <text x="16.4" y="42.8" class="mac">⌃</text>
       </g>
-      <g id="MetaLeft" class="specialKey" finger="l1" transform="translate(75)">
+      <g id="MetaLeft" class="specialKey" transform="translate(75)">
         <rect width="67" height="52" rx="5" ry="5"/>
         <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="11" y="42.8" class="win" text-anchor="start">Win</text>
-        <text x="11" y="42.8" class="gnu" text-anchor="start">Super</text>
+        <text x="11.0" y="42.8" class="win" text-anchor="start">Win</text>
+        <text x="11.0" y="42.8" class="gnu" text-anchor="start">Super</text>
         <text x="16.4" y="42.8" class="mac">⌘</text>
       </g>
-      <g id="AltLeft" class="specialKey" finger="l1" transform="translate(150)">
+      <g id="AltLeft" class="specialKey" transform="translate(150)">
         <rect width="67" height="52" rx="5" ry="5"/>
         <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="11" y="42.8" class="win gnu" text-anchor="start">Alt</text>
+        <text x="11.0" y="42.8" class="win gnu" text-anchor="start">Alt</text>
         <text x="16.4" y="42.8" class="mac">⌥</text>
-      </g>
-      <g id="Lang2" class="specialKey" finger="l1" transform="translate(225)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="20" y="42.8">한자</text>
-      </g>
-      <g id="NonConvert" class="specialKey" finger="l1" transform="translate(225)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="26" y="42.8">無変換</text>
       </g>
     </g>
     <g class="right">
-      <g id="Convert" class="specialKey" finger="r1" transform="translate(480)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="26" y="42.8">変換</text>
-      </g>
-      <g id="KanaMode" class="specialKey" finger="r1" transform="translate(540)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="26" y="20">カタカナ</text>
-        <text x="26" y="32">ひらがな</text>
-        <text x="26" y="44">ローマ字</text>
-      </g>
-      <g id="Lang1" class="specialKey" finger="r1" transform="translate(540)">
-        <rect width="52" height="52" rx="5" ry="5"/>
-        <text x="20" y="42.8">한/영</text>
-      </g>
-      <g id="AltRight" class="specialKey" finger="r1" transform="translate(600)">
+      <g id="AltRight" class="specialKey" transform="translate(600)">
         <rect width="67" height="52" rx="5" ry="5"/>
         <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="11" y="42.8" class="win gnu" text-anchor="start">Alt</text>
+        <text x="11.0" y="42.8" class="win gnu" text-anchor="start">AltGr</text>
         <text x="16.4" y="42.8" class="mac">⌥</text>
       </g>
-      <g id="MetaRight" class="specialKey" finger="r1" transform="translate(690)">
+      <g id="MetaRight" class="specialKey" transform="translate(690)">
         <rect width="67" height="52" rx="5" ry="5"/>
-        <text x="11" y="42.8" class="win" text-anchor="start">Win</text>
-        <text x="11" y="42.8" class="gnu" text-anchor="start">Super</text>
+        <text x="11.0" y="42.8" class="win" text-anchor="start">Win</text>
+        <text x="11.0" y="42.8" class="gnu" text-anchor="start">Super</text>
         <text x="16.4" y="42.8" class="mac">⌘</text>
       </g>
-      <g id="ContextMenu" class="specialKey" finger="r5" transform="translate(750)">
+      <g id="ContextMenu" class="specialKey" transform="translate(750)">
         <rect width="67" height="52" rx="5" ry="5"/>
         <text x="16.4" y="42.8">☰</text>
       </g>
-      <g id="ControlRight" class="specialKey" finger="r5" transform="translate(825)">
+      <g id="ControlRight" class="specialKey" transform="translate(825)">
         <rect width="67" height="52" rx="5" ry="5"/>
-        <text x="11" y="42.8" class="win gnu" text-anchor="start">Ctrl</text>
+        <text x="11.0" y="42.8" class="win gnu" text-anchor="start">Ctrl</text>
         <text x="16.4" y="42.8" class="mac">⌃</text>
       </g>
     </g>

@@ -35,12 +35,12 @@
 .ergo {
   #ShiftLeft { transform: translate(240px, 60px); }
   #AltRight  { transform: translate(555px,  0px); }
-  #Tab       { transform: translate( 15px, 30px); }
 }
 .ol60 {
   .left   { transform: translateX(-75px); }
   .right  { transform: translateX( 15px); }
   #Space  { transform: translateX(270px); }
+  #Tab    { transform: translate(30px,  30px); }
   .row_AE { transform: translate(94px,   4px); }
   .row_AD { transform: translate(64px,  64px); }
   .row_AC { transform: translate(49px, 124px); }
@@ -61,6 +61,7 @@
   .left   { transform: translateX(-15px); }
   .right  { transform: translateX( 15px); }
   #Space  { transform: translateX(330px); }
+  #Tab    { transform: translate(15.0px,  30px); }
   .row_AD { transform: translate(56.5px,  34px); }
   .row_AC { transform: translate(41.5px,  94px); }
   .row_AB { transform: translate(11.5px, 154px); }
@@ -81,7 +82,7 @@ svg, :root {
   --key-txt:    #333;
   --key-fg:     #666;
   --key-bg:     #f8f8f8;
-  --special-bg: #e4e4e4;
+  --special-fg: #444;
   --target-bg:  #aad;
   --hint-bg:    #a33;
   --press-bg:   #335;
@@ -130,7 +131,7 @@ svg, :root {
   --home-bg:   hsl(225deg, 30%, 30%);
 }}
 
-rect, path {
+rect, path.iso, path.alt {
   fill:   var(--key-bg);
   stroke: var(--key-fg);
   stroke-width: .5px;
@@ -138,7 +139,6 @@ rect, path {
 .specialKey,
 .specialKey rect,
 .specialKey path { fill: var(--special-bg); }
-/* .specialKey text { fill: var(--special-fg); } */
 
 g:target rect, .press rect,
 g:target path, .press path { fill: var(--target-bg); }
@@ -149,6 +149,17 @@ text {
   text-shadow: 1px 1px var(--key-bg);
   text-align: center;
 }
+.glyph {
+  transform: scale(0.4) translate(-24px, -36px);
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+use {
+  stroke: var(--key-txt);
+}
+
 .level3, .level4      { fill: var(--altgr-txt); }
 .level5, .level6, .dk { fill: var(--1dk-txt); }
 .deadKey              { fill: var(--dk-txt); }
