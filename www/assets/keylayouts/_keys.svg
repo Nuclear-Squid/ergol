@@ -3,14 +3,17 @@
     <g class="left">
       <g id="Escape" class="specialKey">
         <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
-        <use x="20" y="40" href="#glyph_escape"/>
+        <use  x="20" y="40" href="#glyph_escape"/>
+        <text x="11" y="42" class="title">Esc.</text>
       </g>
     </g>
     <g class="right">
       <g id="Backspace" class="specialKey" transform="translate(780)">
         <rect width="112" height="52" rx="5" ry="5" class="ansi"/>
         <rect width="67"  height="52" rx="5" ry="5" class="ergo"/>
-        <use x="20" y="40" href="#glyph_backspace"/>
+        <use  x="20" y="40" href="#glyph_backspace"/>
+        <text x="11" y="42" class="title ansi">Backspace</text>
+        <text x="11" y="42" class="title ergo">Bksp.</text>
       </g>
     </g>
   </g>
@@ -20,7 +23,8 @@
         <rect width="82" height="52" rx="5" ry="5"/>
         <rect width="67" height="52" rx="5" ry="5" class="ol40"/>
         <rect width="52" height="52" rx="5" ry="5" class="ol60"/>
-        <use x="20" y="40" href="#glyph_tab"/>
+        <use  x="20" y="40" href="#glyph_tab"/>
+        <text x="11" y="42" class="title">Tab</text>
       </g>
     </g>
   </g>
@@ -28,7 +32,8 @@
     <g class="left">
       <g id="CapsLock" class="specialKey">
         <rect width="97" height="52" rx="5" ry="5"/>
-        <use x="20" y="40" href="#glyph_caps"/>
+        <use  x="20" y="40" href="#glyph_caps"/>
+        <text x="11" y="42" class="title">Caps Lock</text>
       </g>
     </g>
     <g class="right">
@@ -36,9 +41,11 @@
         <path d="M50-60h72a5 5 0 0 1 5 5V47a5 5 0 0 1-5 5H65a5 5 0 0 1-5-5V-3a5 5 1 0 0-5-5h-5a5 5 0 0 1-5-5v-42a5 5 0 0 1 5-5z" class="iso"/>
         <rect width="127" height="52" rx="5" ry="5" class="ansi"/>
         <rect width="67"  height="52" rx="5" ry="5" class="ergo"/>
-        <use x="80" y="40" href="#glyph_enter" class="iso"/>
-        <use x="20" y="40" href="#glyph_enter" class="ansi"/>
-        <use x="20" y="40" href="#glyph_enter" class="ergo"/>
+        <use  x="80" y="40" href="#glyph_enter" class="iso"/>
+        <use  x="20" y="40" href="#glyph_enter" class="ansi"/>
+        <use  x="20" y="40" href="#glyph_enter" class="ergo"/>
+        <text x="71" y="42" class="title iso">Enter</text>
+        <text x="11" y="42" class="title ansi ergo">Enter</text>
       </g>
     </g>
   </g>
@@ -48,13 +55,15 @@
         <rect width="127" height="52" rx="5" ry="5" class="ansi"/>
         <rect width="82"  height="52" rx="5" ry="5" class="ergo"/>
         <rect width="67"  height="52" rx="5" ry="5" class="iso"/>
-        <use x="20" y="40" href="#glyph_shift"/>
+        <use  x="20" y="40" href="#glyph_shift"/>
+        <text x="11" y="42" class="title">Shift</text>
       </g>
     </g>
     <g class="right">
       <g id="ShiftRight" class="specialKey" transform="translate(735)">
         <rect width="157" height="52" rx="5" ry="5"/>
-        <use x="20" y="40" href="#glyph_shift"/>
+        <use  x="20" y="40" href="#glyph_shift"/>
+        <text x="11" y="42" class="title">Shift</text>
       </g>
     </g>
   </g>
@@ -63,44 +72,44 @@
       <g id="ControlLeft" class="specialKey">
         <rect width="67" height="52" rx="5" ry="5"/>
         <rect width="67" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="11.0" y="42.8" class="win gnu" text-anchor="start">Ctrl</text>
-        <text x="16.4" y="42.8" class="mac">⌃</text>
+        <text x="11" y="42" class="win gnu">Ctrl</text>
+        <text x="16" y="42" class="mac">⌃</text>
       </g>
       <g id="MetaLeft" class="specialKey" transform="translate(75)">
         <rect width="67" height="52" rx="5" ry="5"/>
         <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="11.0" y="42.8" class="win" text-anchor="start">Win</text>
-        <text x="11.0" y="42.8" class="gnu" text-anchor="start">Super</text>
-        <text x="16.4" y="42.8" class="mac">⌘</text>
+        <text x="11" y="42" class="win">Win</text>
+        <text x="11" y="42" class="gnu">Super</text>
+        <text x="16" y="42" class="mac">⌘</text>
       </g>
       <g id="AltLeft" class="specialKey" transform="translate(150)">
         <rect width="67" height="52" rx="5" ry="5"/>
         <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="11.0" y="42.8" class="win gnu" text-anchor="start">Alt</text>
-        <text x="16.4" y="42.8" class="mac">⌥</text>
+        <text x="11" y="42" class="win gnu">Alt</text>
+        <text x="16" y="42" class="mac">⌥</text>
       </g>
     </g>
     <g class="right">
       <g id="AltRight" class="specialKey" transform="translate(600)">
         <rect width="67" height="52" rx="5" ry="5"/>
         <rect width="82" height="52" class="ergo" rx="5" ry="5"/>
-        <text x="11.0" y="42.8" class="win gnu" text-anchor="start">AltGr</text>
-        <text x="16.4" y="42.8" class="mac">⌥</text>
+        <text x="11" y="42" class="win gnu">AltGr</text>
+        <text x="16" y="42" class="mac">⌥</text>
       </g>
       <g id="MetaRight" class="specialKey" transform="translate(690)">
         <rect width="67" height="52" rx="5" ry="5"/>
-        <text x="11.0" y="42.8" class="win" text-anchor="start">Win</text>
-        <text x="11.0" y="42.8" class="gnu" text-anchor="start">Super</text>
-        <text x="16.4" y="42.8" class="mac">⌘</text>
+        <text x="11" y="42" class="win">Win</text>
+        <text x="11" y="42" class="gnu">Super</text>
+        <text x="16" y="42" class="mac">⌘</text>
       </g>
       <g id="ContextMenu" class="specialKey" transform="translate(750)">
         <rect width="67" height="52" rx="5" ry="5"/>
-        <text x="16.4" y="42.8">☰</text>
+        <text x="11" y="42" class="win gnu mac">Menu</text>
       </g>
       <g id="ControlRight" class="specialKey" transform="translate(825)">
         <rect width="67" height="52" rx="5" ry="5"/>
-        <text x="11.0" y="42.8" class="win gnu" text-anchor="start">Ctrl</text>
-        <text x="16.4" y="42.8" class="mac">⌃</text>
+        <text x="11" y="42" class="win gnu">Ctrl</text>
+        <text x="16" y="42" class="mac">⌃</text>
       </g>
     </g>
   </g>
