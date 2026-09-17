@@ -207,43 +207,25 @@ use {
 }
 
 /**
- * Standard Keyboard Geometries: ANSI, ISO, ABNT, ALT
- * same as https://github.com/OneDeadKey/x-keyboard
+ * Standard Keyboard Geometries: ANSI, ISO
+ * similar to https://github.com/OneDeadKey/x-keyboard
+ * but ABNT, ALT, JIS and KS geometries have been dropped
  */
 
 #Escape { display: none; }
 
 /* Backslash + Enter */
-#Enter path.alt,
 #Enter     .iso,
 #Backslash .iso,
-.alt #Enter rect.ansi,
-.iso #Enter rect.ansi,
-.iso #Enter text.ansi,
-.alt #Backslash .ansi,
 .iso #Backslash .ansi { display: none; }
-#Enter text.ansi,
-.alt #Enter     .alt,
 .iso #Enter     .iso,
 .iso #Backslash .iso { display: block; }
-
-/* Backspace + IntlYen */
-#IntlYen, #Backspace .alt,
-.intlYen  #Backspace .ansi { display: none; }
-.intlYen  #Backspace .alt,
-.intlYen  #IntlYen { display: block; }
 
 /* ShiftLeft + IntlBackslash */
 #IntlBackslash, #ShiftLeft .iso,
 .intlBackslash  #ShiftLeft .ansi { display: none; }
 .intlBackslash  #ShiftLeft .iso,
 .intlBackslash  #IntlBackslash { display: block; }
-
-/* ShiftRight + IntlRo */
-#IntlRo, #ShiftRight .abnt,
-.intlRo  #ShiftRight .ansi { display: none; }
-.intlRo  #ShiftRight .abnt,
-.intlRo  #IntlRo { display: block; }
 
 /**
  * Ortholinear Keyboard Geometries: TypeMatrix (60%), 1DFH (40%)
@@ -281,48 +263,16 @@ use {
 .ergo .specialKey   .ergo { display: block; }
 
 /**
- * Korean + Japanese Input Systems
- * same as https://github.com/OneDeadKey/x-keyboard
- */
-
-#NonConvert, #Convert, #KanaMode,
-#Lang1, #Lang2,
-#Space .jis,
-#Space .ks,
-.ks  #Space .ansi,
-.ks  #Space .jis,
-.jis #Space .ansi,
-.jis #Space .ks { display: none; }
-.ks  #Space .ks,
-.jis #NonConvert, .jis #Convert, .jis #KanaMode,
-.ks #Lang1, .ks #Lang2,
-.jis #Space .jis { display: block; }
-
-#Backquote .jis,
-#CapsLock  .jis,
-.jis #Backquote .ansi,
-.jis #CapsLock  .ansi { display: none; }
-.jis #Backquote .jis,
-.jis #CapsLock .jis { display: block; }
-
-#Space text,
-#Lang1 text,
-#Lang2 text,
-#Convert text,
-#NonConvert text,
-.jis #CapsLock text { font-size: 14px; }
-#KanaMode text,
-.jis #Backquote text { font-size: 10px; }
-
-/**
  * Windows / MacOSX / Linux modifiers
  * same as https://github.com/OneDeadKey/x-keyboard
  */
 
+.specialKey .title,
 .specialKey .win,
 .specialKey .gnu {
   display: none;
   font-size: 14px;
+  text-anchor: start;
 }
 
 /* display MacOSX by default */
@@ -354,6 +304,8 @@ use {
  * XXX: differs from https://github.com/OneDeadKey/x-keyboard
  */
 
+#Space text { font-size: 14px; }
+
 /* hide level3-6 by default */
 .level3, .level4, .level5, .level6 { display: none; }
 
@@ -384,6 +336,11 @@ use {
 .non_diacritic .dk_mark { transform: translate(0px, 1px); opacity: 0.9; }
 .non_diacritic .dk_char { transform: translate(0px, -2px); }
 
+/**
+ * Show Details on Hover
+ * specific to ergol.org
+ */
+
 /* show secondary 1dk chars on hover */
 .level5.secondary,
 .level6.secondary { display: none; }
@@ -391,3 +348,24 @@ use {
 :root:hover .level6.secondary { display: block; }
 .altgr      .level5.secondary,
 .altgr      .level6.secondary { display: none !important; }
+
+/* show special key labels on hover */
+#Enter      .title,
+#Enter      .title.iso,
+#Backspace  .title,
+.specialKey .title,
+:root:hover #Enter      use,
+:root:hover #Backspace  use,
+:root:hover .specialKey use { display: none; }
+#Enter      use,
+.specialKey use,
+:root:hover      #Enter .title,
+:root:hover .iso #Enter .title.iso,
+:root:hover #Backspace  .title,
+:root:hover .specialKey .title { display: block; }
+.ergo #Backspace .ansi,
+.ansi #Backspace .ergo,
+.iso  #Backspace .ergo,
+.ansi #Enter .iso,
+.ergo #Enter .iso,
+.iso  #Enter .ansi { display: none !important; }
