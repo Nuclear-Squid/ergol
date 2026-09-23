@@ -12,22 +12,23 @@
   )
 
   "fr" (dict
-    "azerty"      "Azerty"
-    "lafayette"   "Lafayette"
-    "ergol"       "Ergo‑L"
-    "erglace"     "Erglace"
+    "azerty"               "Azerty"
+    "azerty(afnor)"        "Azerty (AFNOR)"
+    "lafayette"            "Lafayette"
+    "ergol"                "Ergo‑L"
+    "erglace"              "Erglace"
     "colemak-french-touch" "Colemak French Touch"
-    "bepolar"     "Bépolar"
-    "bepo"        "Bépo"
+    "bepolar"              "Bépolar"
+    "bepo"                 "Bépo"
   )
 
   "fr.contrib" (dict
-    "beopy"       "Béopy"
-    "beopy-l"     "Béopy‑L"
-    "ergaie"      "Ergaie"
-    "erglace_jf"  "Erglace (jf)"
+    "beopy"          "Béopy"
+    "beopy-l"        "Béopy‑L"
+    "ergaie"         "Ergaie"
+    "erglace_jf"     "Erglace (jf)"
     "erglace_nuke"   "Erglace (nuke)"
-    "kazerty"     "Kazerty"
+    "kazerty"        "Kazerty"
   )
 
   "fr.nonfree" (dict
